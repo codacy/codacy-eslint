@@ -1,27 +1,26 @@
 import { CLIEngine, Linter } from "eslint"
 import { defaultOptions } from "./eslintDefaultOptions"
-import { Codacyrc, Pattern } from "./model/CodacyInput"
+import { Codacyrc, Pattern, ParameterValue } from "./model/CodacyInput"
 import { toolName } from "./toolMetadata"
 import { patternIdToEslint } from "./model/Patterns"
-import { cloneDeep, flatten } from "lodash"
+import { cloneDeep, isEmpty, partition, fromPairs } from "lodash"
 
 function patternsToRules(
   patterns: Pattern[]
 ): { [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions } {
-  let result: {
-    [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
-  } = {}
-  patterns.forEach(pattern => {
+  let pairs = patterns.map(pattern => {
     let patternId = patternIdToEslint(pattern.patternId)
     if (pattern.parameters) {
-      let options: {[name: string]: any} = {}
-      pattern.parameters.forEach(p => options[p.name] = p.value)
-      result[patternId] = ["error", options]
+      let [unnamedParameters, namedParameters] = partition(pattern.parameters, p => p.name === "unnamedParam")
+      let namedOptions = fromPairs(namedParameters.map(p => [p.name, p.value]))
+      let unnamedOptions = unnamedParameters.map(p => p.value)
+      return [patternId, isEmpty(namedOptions) ? ["error", ...unnamedOptions] : ["error", ...unnamedOptions, namedOptions]]
     } else {
-      result[patternId] = "error"
+      return [patternId, "error"]
     }
   })
-  return result
+
+  return fromPairs(pairs)
 }
 
 function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
