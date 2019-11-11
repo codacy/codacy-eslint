@@ -1,4 +1,4 @@
-import { parseTimeout, defaultTimeout } from "../parseTimeout"
+import { parseTimeoutSeconds, defaultTimeout } from "../parseTimeoutSeconds"
 import { CLIEngine } from "eslint"
 import { CodacyResult } from "../model/CodacyResult"
 import { Level } from "../model/PatternsEntry"

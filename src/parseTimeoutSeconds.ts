@@ -1,6 +1,6 @@
 export const defaultTimeout = 15 * 60
 
-export function parseTimeout(timeoutString?: string): number {
+export function parseTimeoutSeconds(timeoutString?: string): number {
   if(!timeoutString) return defaultTimeout
   let l = timeoutString
             .split(' ')

@@ -1,3 +1,5 @@
+import { relative } from 'path'
+
 export class CodacyResult {
   readonly filename: string
   readonly message: string
@@ -9,5 +11,11 @@ export class CodacyResult {
     this.message = message
     this.patternId = patternId
     this.line = line
+  }
+
+  relativeTo(directory: string): CodacyResult {
+    let newFilename = relative(directory, this.filename)
+
+    return new CodacyResult(newFilename, this.message, this.patternId, this.line)
   }
 }
