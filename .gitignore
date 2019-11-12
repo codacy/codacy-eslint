@@ -2,3 +2,4 @@ node_modules
 .metals
 dist
 tsconfig.tsbuildinfo
+.DS_Store

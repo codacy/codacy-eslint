@@ -1,13 +1,30 @@
-FROM node:13.1.0-alpine
+ARG NODE_IMAGE_VERSION=13.1.0-alpine
+
+FROM node:$NODE_IMAGE_VERSION
+# as builder
+WORKDIR /workdir
 
 COPY package*.json ./
 
-# RUN npm install
-
-COPY node_modules node_modules
+RUN npm install
 
 COPY . .
 
 RUN npm run compile
 
-CMD ["node", "dist/index.js"]
+# RUN npm test
+
+# FROM node:$NODE_IMAGE_VERSION
+# 
+# COPY --from=builder dist dist
+# COPY package*.json ./
+# COPY docs /docs
+# 
+# RUN npm install --production
+
+COPY docs /docs
+
+RUN adduser -u 2004 -D docker
+RUN chown -R docker:docker /docs
+
+CMD ["node", "dist/src/index.js"]

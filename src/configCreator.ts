@@ -1,92 +1,51 @@
-import { Codacyrc, Pattern } from "./model/CodacyInput";
-import { CLIEngine, Linter } from "eslint";
+import { CLIEngine, Linter } from "eslint"
+import { defaultOptions } from "./eslintDefaultOptions"
+import { Codacyrc, Pattern } from "./model/CodacyInput"
+import { toolName } from "./toolMetadata"
+import { patternIdToEslint } from "./model/Patterns"
+import { cloneDeep, flatten } from "lodash"
 
-export function configCreator(codacyInput?: Codacyrc): [CLIEngine.Options, string[]?] {
-  let options = createOptions(codacyInput)
-  var files: string[] | undefined = undefined
-  if (codacyInput && codacyInput.files) codacyInput.files
-  return [options, files]
+function patternsToRules(
+  patterns: Pattern[]
+): { [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions } {
+  let result: {
+    [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+  } = {}
+  patterns.forEach(pattern => {
+    let patternId = patternIdToEslint(pattern.patternId)
+    if (pattern.parameters) {
+      let options = pattern.parameters.map(p => p.value)
+      result[patternId] = ["error", ...options]
+    } else {
+      result[patternId] = "error"
+    }
+  })
+  return result
 }
 
 function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
-  let defaultOptions: CLIEngine.Options = {
-    baseConfig: {
-      plugins: [
-        "angular",
-        "babel",
-        "backbone",
-        "compat",
-        "chai-friendly",
-        "flowtype",
-        "html",
-        "import",
-        "jsx-a11y",
-        "lodash",
-        "lodash-fp",
-        "meteor",
-        "mocha",
-        "mongodb",
-        "no-unsafe-innerhtml",
-        "node",
-        "promise",
-        "react",
-        "react-hooks",
-        "security",
-        "standard",
-        "vue",
-        "@typescript-eslint",
-        "relay"],
-      parser: "babel-eslint",
-      parserOptions: {
-        ecmaFeatures: { "jsx": true },
-        ecmaVersion: 2018,
-        sourceType: "module"
-      },
-      overrides: [
-        {
-          files: ["**/*.ts", "**/*.tsx"],
-          env: { browser: true, es6: true, node: true },
-          extends: [
-            "eslint:recommended",
-            "plugin:react/recommended",
-            "plugin:@typescript-eslint/eslint-recommended",
-            "plugin:@typescript-eslint/recommended"
-          ],
-          parser: "@typescript-eslint/parser",
-          parserOptions: {
-            ecmaFeatures: { jsx: true },
-            ecmaVersion: 2018,
-            sourceType: "module",
-            project: "./tsconfig.json"
-          },
-          plugins: ["react", "@typescript-eslint"],
-          settings: { react: { version: "detect" } }
-        }
-      ]
-    }
-  }
-
   if (codacyInput && codacyInput.tools) {
-    let eslintTool = codacyInput.tools.find(tool => tool.name === "ESLint")
+    let eslintTool = codacyInput.tools.find(tool => tool.name === toolName)
     if (eslintTool) {
       let patterns = eslintTool.patterns
-      return {
-        rules: patternsToRules(patterns)
+      let result = cloneDeep(defaultOptions)
+      if(result.baseConfig) {
+        result.baseConfig.extends = [] // TODO: Maintain base configurations without rules
+        result.baseConfig.overrides.extends = []
+        result.baseConfig.rules = patternsToRules(patterns)
       }
+      result.useEslintrc = false
+      // console.error(result)
+      return result
     }
   }
   return defaultOptions
 }
 
-function patternsToRules(patterns: Pattern[]): { [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions } {
-  let result: { [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions } = {}
-  patterns.forEach(pattern => {
-    if (pattern.parameters) {
-      let options = pattern.parameters.map(p => p.value)
-      result[pattern.patternId] = ['error', options]
-    } else {
-      result[pattern.patternId] = ['error']
-    }
-  });
-  return result
+export function configCreator(
+  codacyInput?: Codacyrc
+): [CLIEngine.Options, string[]?] {
+  let options = createOptions(codacyInput)
+  let files = codacyInput && codacyInput.files ? codacyInput.files : undefined
+  return [options, files]
 }

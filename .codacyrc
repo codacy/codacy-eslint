@@ -1,0 +1,12 @@
+{
+  "tools": [
+    {
+      "name": "ESLint",
+      "patterns": [
+        {
+          "patternId": "require-yield"
+        }
+      ]
+    }
+  ]
+}

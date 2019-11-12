@@ -2,37 +2,41 @@
   "name": "codacy-eslint",
   "version": "0.0.1",
   "description": "Eslint Tool for Codacy",
-  "main": "index.js",
-  "scripts": {
-    "compile": "tsc",
-    "test": "mocha"
-  },
-  "directories": {
-    "src": "./src",
-    "test": "./src"
+  "keywords": [
+    "codacy",
+    "eslint",
+    "javascript",
+    "linter",
+    "typescript"
+  ],
+  "homepage": "https://github.com/codacy/codacy-eslint#readme",
+  "bugs": {
+    "url": "https://github.com/codacy/codacy-eslint/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codacy/codacy-eslint.git"
   },
-  "keywords": [
-    "codacy",
-    "eslint",
-    "linter",
-    "javascript"
-  ],
-  "author": "Lorenzo Gabriele <lorenzolespaul@gmail.com>",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/codacy/codacy-eslint/issues"
+  "author": "Lorenzo Gabriele <lorenzolespaul@gmail.com>",
+  "main": "index.js",
+  "directories": {
+    "src": "./src",
+    "test": "./src"
   },
-  "homepage": "https://github.com/codacy/codacy-eslint#readme",
+  "scripts": {
+    "compile": "tsc",
+    "test": "mocha"
+  },
+  "prettier": {
+    "semi": false
+  },
   "dependencies": {
     "@hapi/eslint-plugin-hapi": "^4.3.4",
     "@lwc/eslint-plugin-lwc": "^0.8.0",
-    "@types/node": "^12.12.6",
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
+    "@types/node": "^12.12.7",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-angular": "^0.5.0",
@@ -48,7 +52,6 @@
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-config-react": "^1.1.7",
     "eslint-config-simplifield": "^10.0.1",
-    "eslint-config-standard": "^14.1.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-winedirect": "^1.1.0",
     "eslint-config-xo": "^0.27.2",
@@ -62,9 +65,10 @@
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-cypress": "^2.7.0",
     "eslint-plugin-drupal": "^0.3.1",
-    "eslint-plugin-ember": "^7.4.1",
+    "eslint-plugin-ember": "^7.5.0",
     "eslint-plugin-flowtype": "^4.3.0",
     "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jasmine": "^2.10.1",
     "eslint-plugin-jest": "^22.21.0",
     "eslint-plugin-json": "^1.4.0",
@@ -89,11 +93,11 @@
     "eslint-plugin-vue": "^6.0.0",
     "eslint-plugin-wdio": "^5.13.2",
     "eslint-plugin-xss": "^0.1.9",
-    "fp-ts": "^2.1.1",
     "lint-staged": "^9.4.2",
     "npm": "^6.13.0",
-    "prettier": "^1.18.2",
-    "webpack": "^4.41.2",
+    "prettier": "^1.19.1",
+    "standard": "^14.3.1",
+    "typescript": "^3.7.2",
     "xml2js": "^0.4.22"
   },
   "devDependencies": {
@@ -102,7 +106,9 @@
     "@types/simple-mock": "^0.8.1",
     "mocha": "^6.2.2",
     "simple-mock": "^0.8.0",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.7.2"
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
