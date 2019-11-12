@@ -14,8 +14,9 @@ function patternsToRules(
   patterns.forEach(pattern => {
     let patternId = patternIdToEslint(pattern.patternId)
     if (pattern.parameters) {
-      let options = pattern.parameters.map(p => p.value)
-      result[patternId] = ["error", ...options]
+      let options: {[name: string]: any} = {}
+      pattern.parameters.forEach(p => options[p.name] = p.value)
+      result[patternId] = ["error", options]
     } else {
       result[patternId] = "error"
     }
@@ -35,7 +36,6 @@ function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
         result.baseConfig.rules = patternsToRules(patterns)
       }
       result.useEslintrc = false
-      // console.error(result)
       return result
     }
   }

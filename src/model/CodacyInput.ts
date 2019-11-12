@@ -1,4 +1,4 @@
-export type ParameterValue = string | number
+export type ParameterValue = any
 
 export class Parameter {
   readonly name: string
