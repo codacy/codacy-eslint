@@ -16,10 +16,12 @@ async function run() {
 
   let [options, files] = configCreator(codacyrc)
 
+  options.cwd = "/src"
+
   let fileToAnalyze = files ? files : ["/src/**"]
 
   let engine = new CLIEngine(options)
-  
+
   let eslintResults = engine.executeOnFiles(fileToAnalyze)
 
   let codacyResults = convertResults(eslintResults)

@@ -1,8 +1,6 @@
 ARG NODE_IMAGE_VERSION=13.1.0-alpine
 
-FROM node:$NODE_IMAGE_VERSION
-# as builder
-WORKDIR /workdir
+FROM node:$NODE_IMAGE_VERSION as builder
 
 COPY package*.json ./
 
@@ -12,15 +10,15 @@ COPY . .
 
 RUN npm run compile
 
-# RUN npm test
+RUN npm test
 
-# FROM node:$NODE_IMAGE_VERSION
-# 
-# COPY --from=builder dist dist
-# COPY package*.json ./
-# COPY docs /docs
-# 
-# RUN npm install --production
+FROM node:$NODE_IMAGE_VERSION
+
+COPY --from=builder dist dist
+COPY package*.json ./
+COPY docs /docs
+
+RUN npm install --production
 
 COPY docs /docs
 
