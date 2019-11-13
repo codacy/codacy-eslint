@@ -1,17 +1,23 @@
-Enforce consistent spacing inside array brackets
+---
+pageClass: rule-details
+sidebarDepth: 0
+title: vue/array-bracket-spacing
+description: enforce consistent spacing inside array brackets
+---
+# vue/array-bracket-spacing
+> enforce consistent spacing inside array brackets
 
-This rule is the same rule as core array-bracket-spacing rule but it applies to the expressions in `<template>`.
+- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
-```
-//Bad:
-var arr = [ 'foo', 'bar' ];
-var [ x, y ] = z;
-var arr = [ 'foo', 'bar'];
+This rule is the same rule as core [array-bracket-spacing] rule but it applies to the expressions in `<template>`.
 
-//Good:
-var arr = ['foo', 'bar'];
-var [x, y] = z;
-var arr = ['foo', 'bar'];
-```
+## :books: Further reading
 
-[Source](https://eslint.vuejs.org/rules/array-bracket-spacing.html#vue-array-bracket-spacing)
+- [array-bracket-spacing]
+
+[array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
+
+## :mag: Implementation
+
+- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/array-bracket-spacing.js)
+- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/array-bracket-spacing.js)

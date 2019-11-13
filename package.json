@@ -18,7 +18,6 @@
     "url": "git+https://github.com/codacy/codacy-eslint.git"
   },
   "license": "Apache-2.0",
-  "author": "Lorenzo Gabriele <lorenzolespaul@gmail.com>",
   "main": "index.js",
   "directories": {
     "src": "./src",
@@ -35,6 +34,7 @@
     "@hapi/eslint-plugin-hapi": "^4.3.4",
     "@lwc/eslint-plugin-lwc": "^0.8.0",
     "@types/node": "^12.12.7",
+    "@types/node-fetch": "^2.5.3",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "babel-eslint": "^10.0.3",
@@ -94,6 +94,7 @@
     "eslint-plugin-wdio": "^5.13.2",
     "eslint-plugin-xss": "^0.1.9",
     "lint-staged": "^9.4.2",
+    "node-fetch": "^2.6.0",
     "npm": "^6.13.0",
     "prettier": "^1.19.1",
     "standard": "^14.3.1",

@@ -1,19 +1,23 @@
-Enforce consistent spacing before and after the arrow in arrow functions
+---
+pageClass: rule-details
+sidebarDepth: 0
+title: vue/arrow-spacing
+description: enforce consistent spacing before and after the arrow in arrow functions
+---
+# vue/arrow-spacing
+> enforce consistent spacing before and after the arrow in arrow functions
 
-This rule is the same rule as core arrow-spacing rule but it applies to the expressions in `<template>`.
+- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
-```
-//Bad: 
-{
-"before": false, "after": false }
-(a)=>{
-}
+This rule is the same rule as core [arrow-spacing] rule but it applies to the expressions in `<template>`.
 
-//Good: 
-{
-"before": true, "after": true }
-(a) => {
-}
-```
+## :books: Further reading
 
-[Source](https://eslint.vuejs.org/rules/arrow-spacing.html#vue-arrow-spacing)
+- [arrow-spacing]
+
+[arrow-spacing]: https://eslint.org/docs/rules/arrow-spacing
+
+## :mag: Implementation
+
+- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/arrow-spacing.js)
+- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/arrow-spacing.js)

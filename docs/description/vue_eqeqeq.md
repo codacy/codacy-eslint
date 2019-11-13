@@ -1,20 +1,23 @@
-Require the use of === and !==
+---
+pageClass: rule-details
+sidebarDepth: 0
+title: vue/eqeqeq
+description: require the use of `===` and `!==`
+---
+# vue/eqeqeq
+> require the use of `===` and `!==`
 
-This rule is the same rule as core eqeqeq rule but it applies to the expressions in `<template>`.
+- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
-```
-//Bad:
-	a == b 
-	foo == true
-	bananas != 1
-	value == undefined
-	
-//Good:
-	typeof foo === 'undefined'
-	'hello' !== 'world'
-	0 === 0
-	true === true
-	foo === null
-```
+This rule is the same rule as core [eqeqeq] rule but it applies to the expressions in `<template>`.
 
-[Source](https://eslint.vuejs.org/rules/eqeqeq.html#vue-eqeqeq)
+## :books: Further reading
+
+- [eqeqeq]
+
+[eqeqeq]: https://eslint.org/docs/rules/eqeqeq
+
+## :mag: Implementation
+
+- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/eqeqeq.js)
+- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/eqeqeq.js)

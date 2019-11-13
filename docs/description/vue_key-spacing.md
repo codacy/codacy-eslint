@@ -1,51 +1,23 @@
-Enforce consistent spacing between keys and values in object literal properties
+---
+pageClass: rule-details
+sidebarDepth: 0
+title: vue/key-spacing
+description: enforce consistent spacing between keys and values in object literal properties
+---
+# vue/key-spacing
+> enforce consistent spacing between keys and values in object literal properties
 
-This rule is the same rule as core key-spacing rule but it applies to the expressions in `<template>`.
+- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
-```
-//Good with "beforeColon" false and "afterColon" true
-var obj = { "foo": (42) };
+This rule is the same rule as core [key-spacing] rule but it applies to the expressions in `<template>`.
 
-foo = { thisLineWouldBeTooLong:
-    soUseAnotherLine };
+## :books: Further reading
 
-//Bad with allign with "align": "value" 
-var obj = {
-    a: value,
-    bcde:  42,
-    fg :   foo()
-};
+- [key-spacing]
 
-//Good with allign with "align": "value"
-var obj = {
-    a:    value,
-    bcde: 42,
+[key-spacing]: https://eslint.org/docs/rules/key-spacing
 
-    fg: foo(),
-    h:  function() {
-        return this.a;
-    },
-    ijkl: 'Non-consecutive lines form a new group'
-};
+## :mag: Implementation
 
-var obj = { a: "foo", longPropertyName: "bar" };
-
-//Bad with allign with "align": "Colon" 
-var obj = {
-    one:   1,
-    "two": 2,
-    three:  3 
-};
-
-//Good with allign with "align": "Colon"
-var obj = {
-    foobar   : 42,
-    bat      : (2 * 2),
-    "default": fn(),
-
-    fn : function() {},
-    abc: value
-};
-```
-
-[Source](https://eslint.vuejs.org/rules/key-spacing.html#vue-key-spacing)
+- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/key-spacing.js)
+- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/key-spacing.js)

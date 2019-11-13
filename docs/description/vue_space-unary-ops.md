@@ -1,17 +1,23 @@
-Enforce consistent spacing before or after unary operators
+---
+pageClass: rule-details
+sidebarDepth: 0
+title: vue/space-unary-ops
+description: enforce consistent spacing before or after unary operators
+---
+# vue/space-unary-ops
+> enforce consistent spacing before or after unary operators
 
-This rule is the same rule as core space-unary-ops rule but it applies to the expressions in `<template>`.
+- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
-```
-//Bad:
-typeof!foo;
-void{foo:0};
-new[foo][0];
+This rule is the same rule as core [space-unary-ops] rule but it applies to the expressions in `<template>`.
 
-//Good:
-delete foo.bar;
-new Foo;
-void 0;
-```
+## :books: Further reading
 
-[Source](https://eslint.vuejs.org/rules/space-unary-ops.html#vue-space-unary-ops)
+- [space-unary-ops]
+
+[space-unary-ops]: https://eslint.org/docs/rules/space-unary-ops
+
+## :mag: Implementation
+
+- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/space-unary-ops.js)
+- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/space-unary-ops.js)

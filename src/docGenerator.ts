@@ -1,15 +1,12 @@
+import fs from "fs"
+import fetch from 'node-fetch'
+import { promisify } from "util"
 import { defaultEngine } from "./eslintDefaultOptions"
-import {
-  fromEslintCategoryToLevel,
-  Patterns,
-  PatternsEntry,
-  fromEslintCategoryToCategory,
-  patternIdToCodacy,
-  Category,
-  Level
-} from "./model/Patterns"
-import { toolName, toolVersion } from "./toolMetadata"
 import { DescriptionEntry } from "./model/Description"
+import { Category, fromEslintCategoryToCategory, fromEslintCategoryToLevel, Level, patternIdToCodacy, Patterns, PatternsEntry } from "./model/Patterns"
+import { toolName, toolVersion } from "./toolMetadata"
+
+let writeFile = promisify(fs.writeFile)
 
 export function generatePatterns(): Patterns {
   let rules = defaultEngine.getRules()
@@ -57,3 +54,24 @@ export function generateDescription(): DescriptionEntry[] {
   )
   return descriptionEntries.filter(x => x != null) as DescriptionEntry[]
 }
+
+function patternIdsWithoutPrefix(prefix: string): Array<string> {
+  let longPrefix = prefix + "/"
+  let rules = defaultEngine.getRules()
+  let patternIds = Array.from(rules.entries()).map(e => e[0])
+  let filteredPatternIds = patternIds.filter(patternId => patternId.startsWith(longPrefix))
+  return filteredPatternIds.map(patternId => patternId.substring(longPrefix.length))
+}
+
+export function downloadDocs(prefix: string, urlFromPatternId: (patternId:string) => string) {
+  let patterns = patternIdsWithoutPrefix(prefix)
+  let promises = patterns.map(async pattern => {
+    let url: string = urlFromPatternId(pattern)
+    let result = await fetch(url)
+    let text = await result.text()
+    console.log(text)
+    writeFile("docs/description/" + prefix + "_" + pattern + ".md", text)
+  })
+  return Promise.all(promises)
+}
+ 
