@@ -1,8 +1,8 @@
-import { configCreator } from "./configCreator"
-import { parseCodacyrcFile, readJsonFile } from "./fileUtils"
-import { convertResults, resultString } from "./formatter"
-import { parseTimeoutSeconds } from "./parseTimeoutSeconds"
 import { CLIEngine } from "eslint"
+import { configCreator } from "./configCreator"
+import { convertResults, resultString } from "./convertResults"
+import { parseCodacyrcFile, readJsonFile } from "./fileUtils"
+import { parseTimeoutSeconds } from "./parseTimeoutSeconds"
 
 let timeoutHandle = setTimeout(() => {
   console.error("Timeout occurred. Exiting.")

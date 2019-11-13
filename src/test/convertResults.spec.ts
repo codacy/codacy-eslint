@@ -1,4 +1,4 @@
-import { convertResults } from "../formatter"
+import { convertResults } from "../convertResults"
 import { deepEqual } from "assert"
 import { CLIEngine } from "eslint"
 import { CodacyResult } from "../model/CodacyResult"
