@@ -26,4 +26,8 @@ describe("docGenerator", () => {
     return downloadDocs("lodash", pattern => `https://raw.githubusercontent.com/wix/eslint-plugin-lodash/master/docs/rules/${pattern}.md`)
   })
 
+  it("should generate node description files", () => {
+    return downloadDocs("node", pattern => `https://raw.githubusercontent.com/mysticatea/eslint-plugin-node/master/docs/rules/${pattern.split("_").join("/")}.md`)
+  })
+
 })
