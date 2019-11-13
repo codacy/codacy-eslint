@@ -1,8 +1,8 @@
 //#Patterns: computed-property-spacing
 
-//#Warn: computed-property-spacing
+//#Info: computed-property-spacing
 obj[foo ] 
-//#Warn: computed-property-spacing
+//#Info: computed-property-spacing
 obj[ 'foo'] 
 
 

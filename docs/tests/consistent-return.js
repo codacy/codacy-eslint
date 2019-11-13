@@ -6,7 +6,7 @@ function doSomething(condition) {
     if (condition) {
         return true;
     } else {
-	//#Err: consistent-return
+	//#Info: consistent-return
         return;      
     }
 }

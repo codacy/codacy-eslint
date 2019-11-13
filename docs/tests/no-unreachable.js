@@ -4,6 +4,6 @@
 function fn() { 
 	x = 1; 
 	return x;
-	//#Warn: no-unreachable
+	//#Err: no-unreachable
 	x = 3; 
 }

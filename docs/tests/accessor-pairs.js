@@ -1,7 +1,7 @@
 //#Patterns: accessor-pairs
 
-//#Err: accessor-pairs
-var o = {                       /*error Getter is not present*/
+var o = {
+  //#Info: accessor-pairs
   set a(value) {
     this.val = value;
   }

@@ -1,6 +1,6 @@
 //#Patterns: no-cond-assign
 
-//#Warn: no-cond-assign 
+//#Err: no-cond-assign 
 if (user.jobTitle = "manager") { 
 }
 

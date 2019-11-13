@@ -2,5 +2,5 @@
 
 function foo() {
 } 
-//#Warn: no-func-assign
+//#Err: no-func-assign
 foo = bar;

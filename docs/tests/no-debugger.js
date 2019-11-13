@@ -1,4 +1,4 @@
 //#Patterns: no-debugger
 
-//#Info: no-debugger
+//#Err: no-debugger
 debugger;

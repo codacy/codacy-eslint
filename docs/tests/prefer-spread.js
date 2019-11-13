@@ -1,10 +1,10 @@
 //#Patterns: prefer-spread
 
-//#Info: prefer-spread
+//#Warn: prefer-spread
 foo.apply(undefined, args); 
-//#Info: prefer-spread
+//#Warn: prefer-spread
 foo.apply(null, args);
-//#Info: prefer-spread
+//#Warn: prefer-spread
 obj.foo.apply(obj, args);
 
 foo.apply(obj, args);

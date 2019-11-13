@@ -4,6 +4,6 @@
 try { // code 
 } 
 catch (e) { 
-//#Warn: no-ex-assign
+//#Err: no-ex-assign
 e = 10; 
 }

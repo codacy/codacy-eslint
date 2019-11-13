@@ -5,7 +5,7 @@ function foo(n) {
     if (n <= 0) {
         return;
     }
-    //#Err: no-caller
+    //#Info: no-caller
     arguments.callee(n - 1);
 }
 

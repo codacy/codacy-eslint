@@ -3,6 +3,6 @@
 
 var a = 3; 
 function b() { 
-	//#Warn: no-shadow
+	//#Info: no-shadow
 	var a = 10; 
 }

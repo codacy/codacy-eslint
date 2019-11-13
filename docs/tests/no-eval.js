@@ -5,5 +5,5 @@ var obj = {
 	x: "foo" 
 }, 
 key = "x", 
-//#Warn: no-eval
+//#Info: no-eval
 value = eval("obj." + key);

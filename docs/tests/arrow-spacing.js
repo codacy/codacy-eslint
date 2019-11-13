@@ -2,5 +2,5 @@
 
 var a;
 var b;
-//#Info: arrow-spacing
+//#Warn: arrow-spacing
 a =>b; 

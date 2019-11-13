@@ -1,13 +1,13 @@
 //#Patterns: no-inner-declarations
 
 if (test) {
-    //#Warn: no-inner-declarations
+    //#Err: no-inner-declarations
     function doSomething() { }       
 }
 
 function doSomethingElse() {
     if (test) {
-	//#Warn: no-inner-declarations
+	//#Err: no-inner-declarations
         function doAnotherThing() { } 
     }
 }

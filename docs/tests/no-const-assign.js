@@ -3,5 +3,5 @@
 
 
  const a = 0;
-//#Err: no-const-assign
+//#Warn: no-const-assign
  a = 1; 

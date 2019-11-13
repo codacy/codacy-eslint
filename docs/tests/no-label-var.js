@@ -3,7 +3,7 @@
 
 var x = foo; 
 function bar() { 
-	//#Warn: no-label-var
+	//#Info: no-label-var
 	x:  
 	for (;;) { 
 		break x; 

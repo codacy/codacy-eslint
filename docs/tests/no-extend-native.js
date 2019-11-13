@@ -1,6 +1,6 @@
 //#Patterns: no-extend-native
 
-//#Warn: no-extend-native
+//#Info: no-extend-native
 Object.prototype.extra = 55;
 
 // loop through some userIds

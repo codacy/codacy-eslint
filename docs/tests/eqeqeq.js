@@ -1,12 +1,12 @@
 //#Patterns: eqeqeq
 
-//#Warn: eqeqeq
+//#Info: eqeqeq
 if (x == 42) {
 } 
-//#Warn: eqeqeq
+//#Info: eqeqeq
 if ("" == text) {
 } 
-//#Warn: eqeqeq
+//#Info: eqeqeq
 if (obj.getStuff() != undefined) {
 } 
 

@@ -1,7 +1,7 @@
 //#Patterns: no-implied-eval
 
 
-//#Warn: no-implied-eval
+//#Info: no-implied-eval
 setTimeout("alert('Hi!');", 100);
 
 setTimeout(function() {

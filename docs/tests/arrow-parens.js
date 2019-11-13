@@ -1,6 +1,6 @@
 //#Patterns: arrow-parens
 
-//#Info: arrow-parens
+//#Warn: arrow-parens
 if (a => 2) {
 }
 

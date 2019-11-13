@@ -4,7 +4,7 @@
       "name": "ESLint",
       "patterns": [
         {
-          "patternId": "require-yield"
+          "patternId": "react_no-did-update-set-state"
         }
       ]
     }

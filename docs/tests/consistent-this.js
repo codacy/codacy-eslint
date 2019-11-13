@@ -2,7 +2,7 @@
 
 
 var self; 
-//#Warn: consistent-this
+//#Info: consistent-this
 var bar = this;
 
 function f() {

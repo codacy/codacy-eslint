@@ -1,6 +1,6 @@
 //#Patterns: valid-jsdoc
-//#Issue: {"severity": "Info", "line": 7, "patternId": "valid-jsdoc"}
-//#Issue: {"severity": "Info", "line": 14, "patternId": "valid-jsdoc"}
+//#Issue: {"severity": "Err", "line": 7, "patternId": "valid-jsdoc"}
+//#Issue: {"severity": "Err", "line": 14, "patternId": "valid-jsdoc"}
 
 /**                                 //error Missing JSDoc parameter description for 'num1'.
  * A description

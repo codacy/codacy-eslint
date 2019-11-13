@@ -2,6 +2,6 @@
 
 
 function doSomething(data) {
-	//#Warn: no-undefined 
+	//#Info: no-undefined 
 	var undefined = "hi"; 
  }

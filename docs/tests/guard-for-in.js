@@ -1,7 +1,7 @@
 //#Patterns: guard-for-in
 
 
-//#Warn: guard-for-in
+//#Info: guard-for-in
 for (key in foo) { doSomething(key); }
 
 for (key in foo) {

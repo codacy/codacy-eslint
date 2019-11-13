@@ -1,23 +1,23 @@
 //#Patterns: prefer-const
 
 // it's initialized and never reassigned.
-//#Info: prefer-const
+//#Warn: prefer-const
 let a = 3;
 console.log(a);
 
 let b;
-//#Info: prefer-const
+//#Warn: prefer-const
 b = 0;
 console.log(b);
 
 // `i` is redefined (not reassigned) on each loop step.
-//#Info: prefer-const
+//#Warn: prefer-const
 for (let c in [1, 2, 3]) {
   console.log(c);
 }
 
 // `d` is redefined (not reassigned) on each loop step.
-//#Info: prefer-const
+//#Warn: prefer-const
 for (let d of [1, 2, 3]) {
   console.log(d);
 }

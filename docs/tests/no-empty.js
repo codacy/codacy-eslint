@@ -1,6 +1,6 @@
 //#Patterns: no-empty
 
-//#Info: no-empty
+//#Err: no-empty
 if (foo) { }
 
 try {

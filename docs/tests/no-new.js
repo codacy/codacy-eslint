@@ -1,7 +1,7 @@
 //#Patterns: no-new
 
 
-//#Warn: no-new
+//#Info: no-new
 new Thing();
 
 var person = new Person();

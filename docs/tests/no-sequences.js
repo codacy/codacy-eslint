@@ -1,16 +1,16 @@
 //#Patterns: no-sequences
 
 
-//#Err: no-sequences
+//#Info: no-sequences
 foo = doSomething, val;
 
-//#Err: no-sequences
+//#Info: no-sequences
 if (doSomething(), !!test); 
 
-//#Err: no-sequences
+//#Info: no-sequences
 switch (val = foo(), val) {} 
 
-//#Err: no-sequences
+//#Info: no-sequences
 while (val = foo(), val < 42); 
 
 do {} while ((doSomething(), !!test));

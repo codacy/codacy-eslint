@@ -2,6 +2,6 @@
 
 
 function bar() { 
-//#Warn: no-div-regex
+//#Info: no-div-regex
 return /=foo/; 
 }

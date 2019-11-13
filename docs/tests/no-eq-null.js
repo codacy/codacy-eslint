@@ -1,6 +1,6 @@
 //#Patterns: no-eq-null
 
-//#Warn: no-eq-null
+//#Info: no-eq-null
 if (foo == null) { 
 	bar();
 }

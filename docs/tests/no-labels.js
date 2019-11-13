@@ -1,9 +1,9 @@
 //#Patterns: no-labels
 
-//#Warn: no-labels
+//#Info: no-labels
 outer: while (true) { 
 		while (true) {
-			//#Warn: no-labels
+			//#Info: no-labels
 			break outer;
 		}
  }

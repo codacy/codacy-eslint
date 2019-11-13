@@ -1,14 +1,14 @@
 //#Patterns: yoda
 
-//#Warn: yoda
+//#Info: yoda
 if ("red" === color) { // ...
 }
 
-//#Warn: yoda
+//#Info: yoda
 if (true == flag) {
     // ...
 }
-//#Warn: yoda
+//#Info: yoda
 if (5 > count) {
     // ...
 }

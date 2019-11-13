@@ -3,16 +3,16 @@
 "use strict";
 
 (function() {
-    //#Err: no-invalid-this
+    //#Info: no-invalid-this
     this.a = 0;
-    //#Err: no-invalid-this
+    //#Info: no-invalid-this
     baz(() => this);  
 })();
 
 function foo() {
-    //#Err: no-invalid-this
+    //#Info: no-invalid-this
     this.a = 0;
-    //#Err: no-invalid-this
+    //#Info: no-invalid-this
     baz(() => this);
 }
 

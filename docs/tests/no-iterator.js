@@ -1,6 +1,6 @@
 //#Patterns: no-iterator
 
-//#Warn: no-iterator
+//#Info: no-iterator
 Foo.prototype.__iterator__ = function() { 
 	return new FooIterator(this); 
 }

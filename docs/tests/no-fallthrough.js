@@ -1,6 +1,6 @@
 //#Patterns: no-fallthrough
 
-//#Issue: {"severity": "Warn", "line": 8, "patternId": "no-fallthrough"}
+//#Issue: {"severity": "Info", "line": 8, "patternId": "no-fallthrough"}
 
 switch(foo) {
   case 1:

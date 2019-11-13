@@ -1,10 +1,10 @@
 //#Patterns: strict : {"unnamedParam":"function"}
 
-//#Info: strict
+//#Err: strict
 "use strict";
 
 var bar = function() {
-    //#Info: strict
+    //#Err: strict
     "use strict";
     return;
 };

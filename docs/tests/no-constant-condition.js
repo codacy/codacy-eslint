@@ -1,6 +1,6 @@
 //#Patterns: no-constant-condition
 
-//#Warn: no-constant-condition
+//#Err: no-constant-condition
 if (false) { 
 doSomethingUnfinished(); 
 }

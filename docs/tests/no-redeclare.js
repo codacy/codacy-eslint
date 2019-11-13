@@ -2,5 +2,5 @@
 
 
 var a = 3;
-//#Warn: no-redeclare 
+//#Info: no-redeclare 
 var a = 10;

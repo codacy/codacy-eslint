@@ -1,11 +1,11 @@
 //#Patterns: object-shorthand
 
 var foo = {
-	//#Info: object-shorthand
+	//#Warn: object-shorthand
 	x: function() {},  
-	//#Info: object-shorthand
+	//#Warn: object-shorthand
 	y: function *() {}, 
-	//#Info: object-shorthand
+	//#Warn: object-shorthand
 	z: z               
 };
 

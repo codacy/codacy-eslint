@@ -1,7 +1,7 @@
 //#Patterns: no-undef
 
-//#Warn: no-undef
+//#Info: no-undef
 var a = someFunction(); 
 
-//#Warn: no-undef
+//#Info: no-undef
  b = 10; 
