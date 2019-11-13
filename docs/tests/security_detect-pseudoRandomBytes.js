@@ -2,6 +2,6 @@
 
 var crypto = require("crypto");
 
-//#Warn: security_detect-pseudoRandomBytes
+//#Info: security_detect-pseudoRandomBytes
 crypto.pseudoRandomBytes(256, function() {
 });
