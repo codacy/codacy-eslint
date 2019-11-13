@@ -23,53 +23,57 @@ describe("docGenerator", () => {
 
   let githubBaseUrl = "https://raw.githubusercontent.com"
 
+  it("should generate eslint description files", () => {
+    return downloadDocs(
+      pattern =>
+        `${githubBaseUrl}/eslint/eslint/blob/master/docs/rules/${pattern}.md`
+    )
+  })
+
   it("should generate vue description files", () => {
     return downloadDocs(
-      "vue",
       pattern =>
-        `${githubBaseUrl}/vuejs/eslint-plugin-vue/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/vuejs/eslint-plugin-vue/master/docs/rules/${pattern}.md`,
+      "vue"
     )
   })
 
   it("should generate react description files", () => {
     return downloadDocs(
-      "react",
       pattern =>
-        `${githubBaseUrl}/yannickcr/eslint-plugin-react/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/yannickcr/eslint-plugin-react/master/docs/rules/${pattern}.md`,
+      "react"
     )
   })
 
   it("should generate lodash description files", () => {
     return downloadDocs(
-      "lodash",
       pattern =>
-        `${githubBaseUrl}/wix/eslint-plugin-lodash/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/wix/eslint-plugin-lodash/master/docs/rules/${pattern}.md`,
+      "lodash"
     )
   })
 
   it("should generate node description files", () => {
-    return downloadDocs(
-      "node",
-      pattern => {
-        let patternFoldered = pattern.split("_").join("/")
-        return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
-      }
-    )
+    return downloadDocs(pattern => {
+      let patternFoldered = pattern.split("_").join("/")
+      return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
+    }, "node")
   })
 
   it("should generate promise description files", () => {
     return downloadDocs(
-      "promise",
       pattern =>
-        `${githubBaseUrl}/xjamundx/eslint-plugin-promise/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/xjamundx/eslint-plugin-promise/master/docs/rules/${pattern}.md`,
+      "promise"
     )
   })
 
   it("should generate backbone description files", () => {
     return downloadDocs(
-      "backbone",
       pattern =>
-        `${githubBaseUrl}/ilyavolodin/eslint-plugin-backbone/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/ilyavolodin/eslint-plugin-backbone/master/docs/rules/${pattern}.md`,
+      "backbone"
     )
-  })  
+  })
 })

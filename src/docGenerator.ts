@@ -1,9 +1,17 @@
 import fs from "fs"
-import fetch from 'node-fetch'
+import fetch from "node-fetch"
 import { promisify } from "util"
 import { defaultEngine } from "./eslintDefaultOptions"
 import { DescriptionEntry } from "./model/Description"
-import { Category, fromEslintCategoryToCategory, fromEslintCategoryToLevel, Level, patternIdToCodacy, Patterns, PatternsEntry } from "./model/Patterns"
+import {
+  Category,
+  fromEslintCategoryToCategory,
+  fromEslintCategoryToLevel,
+  Level,
+  patternIdToCodacy,
+  Patterns,
+  PatternsEntry
+} from "./model/Patterns"
 import { toolName, toolVersion } from "./toolMetadata"
 
 let writeFile = promisify(fs.writeFile)
@@ -59,20 +67,36 @@ function patternIdsWithoutPrefix(prefix: string): Array<string> {
   let longPrefix = prefix + "/"
   let rules = defaultEngine.getRules()
   let patternIds = Array.from(rules.entries()).map(e => e[0])
-  let filteredPatternIds = patternIds.filter(patternId => patternId.startsWith(longPrefix))
-  return filteredPatternIds.map(patternId => patternId.substring(longPrefix.length))
+  let filteredPatternIds = patternIds.filter(patternId =>
+    patternId.startsWith(longPrefix)
+  )
+  return filteredPatternIds.map(patternId =>
+    patternId.substring(longPrefix.length)
+  )
 }
 
-export function downloadDocs(prefix: string, urlFromPatternId: (patternId:string) => string) {
-  let patterns = patternIdsWithoutPrefix(prefix)
+function eslintPatternIds(): Array<string> {
+  let rules = defaultEngine.getRules()
+  return Array.from(rules.entries()).map(e => e[0])
+}
+
+export function downloadDocs(
+  urlFromPatternId: (patternId: string) => string,
+  prefix: string | undefined = undefined
+) {
+  let patterns = prefix ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
   let promises: Promise<void>[] = patterns.map(async pattern => {
     let url: string = urlFromPatternId(pattern)
     let result = await fetch(url)
-    if(result.ok) {
+    if (result.ok) {
       let text = await result.text()
-      return writeFile("docs/description/" + prefix + "_" + patternIdToCodacy(pattern) + ".md", text)
-    }
-    else Promise.resolve()
+      let filename =
+        "docs/description/" +
+        (prefix ? prefix + "_" : "") +
+        patternIdToCodacy(pattern) +
+        ".md"
+      return writeFile(filename, text)
+    } else return Promise.resolve()
   })
   return Promise.all(promises)
 }
