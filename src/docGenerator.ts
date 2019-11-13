@@ -65,13 +65,14 @@ function patternIdsWithoutPrefix(prefix: string): Array<string> {
 
 export function downloadDocs(prefix: string, urlFromPatternId: (patternId:string) => string) {
   let patterns = patternIdsWithoutPrefix(prefix)
-  let promises = patterns.map(async pattern => {
+  let promises: Promise<void>[] = patterns.map(async pattern => {
     let url: string = urlFromPatternId(pattern)
     let result = await fetch(url)
-    let text = await result.text()
-    console.log(text)
-    writeFile("docs/description/" + prefix + "_" + pattern + ".md", text)
+    if(result.ok) {
+      let text = await result.text()
+      return writeFile("docs/description/" + prefix + "_" + patternIdToCodacy(pattern) + ".md", text)
+    }
+    else Promise.resolve()
   })
   return Promise.all(promises)
 }
- 

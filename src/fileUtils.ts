@@ -1,8 +1,5 @@
-import fs from "fs"
-import { promisify } from "util"
 import { Codacyrc } from "./model/CodacyInput"
-
-let readFile = promisify(fs.readFile)
+import { readFile } from "./promisified"
 
 export async function readJsonFile(file: string): Promise<string | undefined> {
   try {
