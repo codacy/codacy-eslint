@@ -1,9 +1,4 @@
-import { equal } from "assert"
-import {
-  generatePatterns,
-  generateDescription,
-  downloadDocs
-} from "../docGenerator"
+import { downloadDocs, generateDescription, generatePatterns } from "../docGenerator"
 import { writeFile } from "../promisified"
 
 describe("docGenerator", () => {
