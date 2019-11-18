@@ -18,10 +18,10 @@
     "url": "git+https://github.com/codacy/codacy-eslint.git"
   },
   "license": "Apache-2.0",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "directories": {
     "src": "./src",
-    "test": "./src"
+    "test": "./src/test"
   },
   "scripts": {
     "compile": "tsc",
@@ -117,6 +117,14 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "mocha": {
+    "extension": [
+      "ts"
+    ],
+    "spec": "src/test/**/*.spec.ts",
+    "require": "ts-node/register",
+    "timeout": 10000
   },
   "lint-staged": {
     "*.{ts,js,css,json,md}": [
