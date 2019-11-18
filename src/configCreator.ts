@@ -11,10 +11,18 @@ function patternsToRules(
   let pairs = patterns.map(pattern => {
     let patternId = patternIdToEslint(pattern.patternId)
     if (pattern.parameters) {
-      let [unnamedParameters, namedParameters] = partition(pattern.parameters, p => p.name === "unnamedParam")
+      let [unnamedParameters, namedParameters] = partition(
+        pattern.parameters,
+        p => p.name === "unnamedParam"
+      )
       let namedOptions = fromPairs(namedParameters.map(p => [p.name, p.value]))
       let unnamedOptions = unnamedParameters.map(p => p.value)
-      return [patternId, isEmpty(namedOptions) ? ["error", ...unnamedOptions] : ["error", ...unnamedOptions, namedOptions]]
+      return [
+        patternId,
+        isEmpty(namedOptions)
+          ? ["error", ...unnamedOptions]
+          : ["error", ...unnamedOptions, namedOptions]
+      ]
     } else {
       return [patternId, "error"]
     }
@@ -29,7 +37,7 @@ function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
     if (eslintTool) {
       let patterns = eslintTool.patterns
       let result = cloneDeep(defaultOptions)
-      if(result.baseConfig) {
+      if (result.baseConfig) {
         result.baseConfig.extends = [] // TODO: Maintain base configurations without rules
         result.baseConfig.overrides.extends = []
         result.baseConfig.rules = patternsToRules(patterns)

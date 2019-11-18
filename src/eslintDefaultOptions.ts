@@ -1,12 +1,12 @@
 import { CLIEngine } from "eslint"
 
-let baseConfigs: string[] = ["standard", "plugin:security/recommended"] 
+let baseConfigs: string[] = ["standard", "plugin:security/recommended"]
 let typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended"
 ]
 
-export let  defaultOptions: CLIEngine.Options = {
+export let defaultOptions: CLIEngine.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
