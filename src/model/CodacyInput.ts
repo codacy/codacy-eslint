@@ -4,8 +4,7 @@ export class Parameter {
   readonly name: string
   readonly value: ParameterValue
 
-
-	constructor(name: string, value: ParameterValue) {
+  constructor(name: string, value: ParameterValue) {
     this.name = name
     this.value = value
   }
@@ -34,8 +33,8 @@ export class Tool {
 export class Codacyrc {
   readonly files?: string[]
   readonly tools?: Tool[]
-  
-  constructor(files: string[], tools: Tool[]) {
+
+  constructor(files?: string[], tools?: Tool[]) {
     this.files = files
     this.tools = tools
   }

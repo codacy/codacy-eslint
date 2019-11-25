@@ -14,19 +14,23 @@ async function run() {
 
   let codacyrc = jsonFile ? parseCodacyrcFile(jsonFile) : undefined
 
-  let [options, files] = configCreator(codacyrc)
+  let srcDirPath = "/src"
 
-  options.cwd = "/src"
+  let [options, files] = await configCreator(srcDirPath, codacyrc)
 
-  let fileToAnalyze = files ? files : ["/src/**"]
+  options.resolvePluginsRelativeTo = "."
+
+  options.cwd = srcDirPath
+
+  let filesToAnalyze = files ? files : ["/src/**"]
 
   let engine = new CLIEngine(options)
 
-  let eslintResults = engine.executeOnFiles(fileToAnalyze)
+  let eslintResults = engine.executeOnFiles(filesToAnalyze)
 
   let codacyResults = convertResults(eslintResults)
 
-  let relativeCodacyResults = codacyResults.map(r => r.relativeTo("/src"))
+  let relativeCodacyResults = codacyResults.map(r => r.relativeTo(srcDirPath))
 
   let lines = resultString(relativeCodacyResults)
 

@@ -4,6 +4,7 @@ import { Codacyrc, Pattern, ParameterValue } from "./model/CodacyInput"
 import { toolName } from "./toolMetadata"
 import { patternIdToEslint } from "./model/Patterns"
 import { cloneDeep, isEmpty, partition, fromPairs } from "lodash"
+import { allFilesNames } from "./allFiles"
 
 function patternsToRules(
   patterns: Pattern[]
@@ -31,7 +32,10 @@ function patternsToRules(
   return fromPairs(pairs)
 }
 
-function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
+async function createOptions(
+  srcDirPath: string,
+  codacyInput?: Codacyrc
+): Promise<CLIEngine.Options> {
   if (codacyInput && codacyInput.tools) {
     let eslintTool = codacyInput.tools.find(tool => tool.name === toolName)
     if (eslintTool) {
@@ -46,13 +50,17 @@ function createOptions(codacyInput?: Codacyrc): CLIEngine.Options {
       return result
     }
   }
-  return defaultOptions
+  let fileNames = await allFilesNames(srcDirPath)
+  if (fileNames.find(name => name.startsWith(".eslintrc")) != undefined)
+    return {}
+  else return defaultOptions
 }
 
-export function configCreator(
+export async function configCreator(
+  srcDirPath: string,
   codacyInput?: Codacyrc
-): [CLIEngine.Options, string[]?] {
-  let options = createOptions(codacyInput)
+): Promise<[CLIEngine.Options, string[]?]> {
+  let options = createOptions(srcDirPath, codacyInput)
   let files = codacyInput && codacyInput.files ? codacyInput.files : undefined
-  return [options, files]
+  return [await options, files]
 }

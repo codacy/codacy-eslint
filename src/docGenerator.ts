@@ -77,7 +77,7 @@ function patternIdsWithoutPrefix(prefix: string): Array<string> {
 
 function eslintPatternIds(): Array<string> {
   let rules = defaultEngine.getRules()
-  return Array.from(rules.entries()).map(e => e[0])
+  return Array.from(rules.keys()).filter(e => !e.includes("/"))
 }
 
 export function downloadDocs(

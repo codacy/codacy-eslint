@@ -1,18 +1,26 @@
-import { downloadDocs, generateDescription, generatePatterns } from "../docGenerator"
+import {
+  downloadDocs,
+  generateDescription,
+  generatePatterns
+} from "../docGenerator"
 import { writeFile } from "../promisified"
+import { EOL } from "os"
 
 describe("docGenerator", () => {
   it("should generate patterns.json", () => {
     let patterns = generatePatterns()
 
-    return writeFile("docs/patterns.json", JSON.stringify(patterns, null, 2))
+    return writeFile(
+      "docs/patterns.json",
+      JSON.stringify(patterns, null, 2) + EOL
+    )
   })
   it("should generate description.json", () => {
     let patterns = generateDescription()
 
-    writeFile(
+    return writeFile(
       "docs/description/description.json",
-      JSON.stringify(patterns, null, 2)
+      JSON.stringify(patterns, null, 2) + EOL
     )
   })
 
