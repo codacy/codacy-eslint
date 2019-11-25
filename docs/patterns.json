@@ -1,6 +1,6 @@
 {
   "name": "ESLint",
-  "version": "6.6.0",
+  "version": "6.7.1",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -200,6 +200,11 @@
     {
       "patternId": "global-require",
       "level": "Warning",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "grouped-accessor-pairs",
+      "level": "Info",
       "category": "BestPractice"
     },
     {
@@ -448,6 +453,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "no-constructor-return",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "no-continue",
       "level": "Info",
       "category": "CodeStyle"
@@ -481,6 +491,11 @@
       "patternId": "no-dupe-class-members",
       "level": "Warning",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "no-dupe-else-if",
+      "level": "Error",
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-dupe-keys",
@@ -873,6 +888,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "no-setter-return",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "no-shadow",
       "level": "Info",
       "category": "CodeStyle"
@@ -1131,6 +1151,11 @@
       "patternId": "prefer-destructuring",
       "level": "Warning",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "prefer-exponentiation-operator",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "prefer-named-capture-group",
@@ -4208,6 +4233,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "@typescript-eslint_no-dynamic-delete",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_no-empty-function",
       "level": "Info",
       "category": "BestPractice"
@@ -4313,6 +4343,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_no-untyped-public-signature",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_no-unused-vars",
       "level": "Info",
       "category": "CodeStyle"
@@ -4398,7 +4433,17 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_restrict-template-expressions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_semi",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_space-before-function-paren",
       "level": "Info",
       "category": "CodeStyle"
     },

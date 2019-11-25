@@ -240,6 +240,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "grouped-accessor-pairs",
+    "title": "Grouped accessor pairs",
+    "description": "Require grouped accessor pairs in object literals and classes",
+    "timeToFix": 5
+  },
+  {
     "patternId": "guard-for-in",
     "title": "Guard for in",
     "description": "Require `for-in` loops to include an `if` statement",
@@ -534,6 +540,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-constructor-return",
+    "title": "No constructor return",
+    "description": "Disallow returning value from constructor",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-continue",
     "title": "No continue",
     "description": "Disallow `continue` statements",
@@ -573,6 +585,12 @@
     "patternId": "no-dupe-class-members",
     "title": "No dupe class members",
     "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "no-dupe-else-if",
+    "title": "No dupe else if",
+    "description": "Disallow duplicate conditions in if-else-if chains",
     "timeToFix": 5
   },
   {
@@ -710,7 +728,7 @@
   {
     "patternId": "no-implicit-globals",
     "title": "No implicit globals",
-    "description": "Disallow variable and `function` declarations in the global scope",
+    "description": "Disallow declarations in the global scope",
     "timeToFix": 5
   },
   {
@@ -1044,6 +1062,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-setter-return",
+    "title": "No setter return",
+    "description": "Disallow returning values from setters",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-shadow",
     "title": "No shadow",
     "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
@@ -1208,7 +1232,7 @@
   {
     "patternId": "no-useless-computed-key",
     "title": "No useless computed key",
-    "description": "Disallow unnecessary computed property keys in object literals",
+    "description": "Disallow unnecessary computed property keys in objects and classes",
     "timeToFix": 5
   },
   {
@@ -1353,6 +1377,12 @@
     "patternId": "prefer-destructuring",
     "title": "Prefer destructuring",
     "description": "Require destructuring from arrays and/or objects",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "prefer-exponentiation-operator",
+    "title": "Prefer exponentiation operator",
+    "description": "Disallow the use of `Math.pow` in favor of the `**` operator",
     "timeToFix": 5
   },
   {
@@ -5046,6 +5076,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-dynamic-delete",
+    "title": "@typescript eslint: No dynamic delete",
+    "description": "Bans usage of the delete operator with computed key expressions",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-empty-function",
     "title": "@typescript eslint: No empty function",
     "description": "Disallow empty functions",
@@ -5172,6 +5208,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-untyped-public-signature",
+    "title": "@typescript eslint: No untyped public signature",
+    "description": "Requires that all public method arguments and return type will be explicitly typed",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-unused-vars",
     "title": "@typescript eslint: No unused vars",
     "description": "Disallow unused variables",
@@ -5274,9 +5316,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_restrict-template-expressions",
+    "title": "@typescript eslint: Restrict template expressions",
+    "description": "Enforce template literal expressions to be of string type",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_semi",
     "title": "@typescript eslint: Semi",
     "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_space-before-function-paren",
+    "title": "@typescript eslint: Space before function paren",
+    "description": "Enforce consistent spacing before `function` definition opening parenthesis",
     "timeToFix": 5
   },
   {
