@@ -22,9 +22,9 @@ export class Pattern {
 
 export class Tool {
   readonly name: string
-  readonly patterns: Pattern[]
+  readonly patterns?: Pattern[]
 
-  constructor(name: string, patterns: Pattern[]) {
+  constructor(name: string, patterns?: Pattern[]) {
     this.name = name
     this.patterns = patterns
   }

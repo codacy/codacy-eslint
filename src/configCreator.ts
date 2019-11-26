@@ -38,7 +38,7 @@ async function createOptions(
 ): Promise<CLIEngine.Options> {
   if (codacyInput && codacyInput.tools) {
     let eslintTool = codacyInput.tools.find(tool => tool.name === toolName)
-    if (eslintTool) {
+    if (eslintTool && eslintTool.patterns) {
       let patterns = eslintTool.patterns
       let result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
