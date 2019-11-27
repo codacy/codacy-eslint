@@ -5,7 +5,7 @@ import { CodacyResult } from "../model/CodacyResult"
 
 describe("convertResults", () => {
   it("should convert a Eslint report into Codacy results", () => {
-    let report: CLIEngine.LintReport = {
+    const report: CLIEngine.LintReport = {
       results: [
         {
           filePath: "file.js",
@@ -41,8 +41,8 @@ describe("convertResults", () => {
       fixableWarningCount: 0
     }
 
-    let results = convertResults(report)
-    let expected: CodacyResult[] = [
+    const results = convertResults(report)
+    const expected: CodacyResult[] = [
       new CodacyResult("file.js", "Message 1", "rule1", 1),
       new CodacyResult("file.js", "Message 2", "rule2", 2)
     ]

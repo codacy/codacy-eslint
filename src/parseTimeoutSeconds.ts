@@ -2,13 +2,13 @@ export const defaultTimeout = 15 * 60
 
 export function parseTimeoutSeconds(timeoutString?: string): number {
   if (!timeoutString) return defaultTimeout
-  let l = timeoutString
+  const l = timeoutString
     .replace(".", " ")
     .split(" ")
     .filter(i => i) // remove empty strings
   if (l.length !== 2) return defaultTimeout
-  let number = parseInt(l[0])
-  let timeUnit = l[1]
+  const number = parseInt(l[0])
+  const timeUnit = l[1]
   if (isNaN(number)) return defaultTimeout
   switch (timeUnit) {
     case "second":

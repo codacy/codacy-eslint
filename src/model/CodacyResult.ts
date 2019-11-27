@@ -14,7 +14,7 @@ export class CodacyResult {
   }
 
   relativeTo(directory: string): CodacyResult {
-    let newFilename = relative(directory, this.filename)
+    const newFilename = relative(directory, this.filename)
 
     return new CodacyResult(newFilename, this.message, this.patternId, this.line)
   }

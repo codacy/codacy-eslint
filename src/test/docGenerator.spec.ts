@@ -8,7 +8,7 @@ import { EOL } from "os"
 
 describe("docGenerator", () => {
   it("should generate patterns.json", () => {
-    let patterns = generatePatterns()
+    const patterns = generatePatterns()
 
     return writeFile(
       "docs/patterns.json",
@@ -16,7 +16,7 @@ describe("docGenerator", () => {
     )
   })
   it("should generate description.json", () => {
-    let patterns = generateDescription()
+    const patterns = generateDescription()
 
     return writeFile(
       "docs/description/description.json",
@@ -24,7 +24,7 @@ describe("docGenerator", () => {
     )
   })
 
-  let githubBaseUrl = "https://raw.githubusercontent.com"
+  const githubBaseUrl = "https://raw.githubusercontent.com"
 
   it("should generate eslint description files", () => {
     return downloadDocs(
@@ -59,7 +59,7 @@ describe("docGenerator", () => {
 
   it("should generate node description files", () => {
     return downloadDocs(pattern => {
-      let patternFoldered = pattern.split("_").join("/")
+      const patternFoldered = pattern.split("_").join("/")
       return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
     }, "node")
   })

@@ -17,43 +17,45 @@ import {
 } from "./model/Patterns"
 import { toolName, toolVersion } from "./toolMetadata"
 
-let writeFile = promisify(fs.writeFile)
+const writeFile = promisify(fs.writeFile)
 
 export function generatePatterns(): Patterns {
-  let rules = defaultEngine.getRules()
-  let patterns = Array.from(rules.entries()).map(([patternId, ruleModule]) => {
-    let meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
-    let eslintCategory = meta && meta.docs ? meta.docs.category : undefined
-    let level: Level = fromEslintCategoryToLevel(eslintCategory)
-    let category: Category = patternId.includes("security")
-      ? "Security"
-      : fromEslintCategoryToCategory(eslintCategory)
-    let parameters =
-      meta && meta.schema
-        ? fromEslintSchemaToParameters(meta.schema)
-        : undefined
-    return new PatternsEntry(
-      patternIdToCodacy(patternId),
-      level,
-      category,
-      parameters && parameters.length > 0 ? parameters : undefined
-    )
-  })
-  let entries = patterns.filter(x => x !== null) as PatternsEntry[]
+  const rules = defaultEngine.getRules()
+  const patterns = Array.from(rules.entries()).map(
+    ([patternId, ruleModule]) => {
+      const meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
+      const eslintCategory = meta && meta.docs ? meta.docs.category : undefined
+      const level: Level = fromEslintCategoryToLevel(eslintCategory)
+      const category: Category = patternId.includes("security")
+        ? "Security"
+        : fromEslintCategoryToCategory(eslintCategory)
+      const parameters =
+        meta && meta.schema
+          ? fromEslintSchemaToParameters(meta.schema)
+          : undefined
+      return new PatternsEntry(
+        patternIdToCodacy(patternId),
+        level,
+        category,
+        parameters && parameters.length > 0 ? parameters : undefined
+      )
+    }
+  )
+  const entries = patterns.filter(x => x !== null) as PatternsEntry[]
   return new Patterns(toolName, toolVersion, entries)
 }
 
 export function generateDescription(): DescriptionEntry[] {
-  let rules = defaultEngine.getRules()
-  let descriptionEntries = Array.from(rules.entries()).map(
+  const rules = defaultEngine.getRules()
+  const descriptionEntries = Array.from(rules.entries()).map(
     ([patternId, ruleModule]) => {
-      let eslintDescription =
+      const eslintDescription =
         ruleModule && ruleModule.meta && ruleModule.meta.docs
           ? ruleModule.meta.docs.description
           : undefined
-      let capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
-      let description = eslintDescription ? capitalize(eslintDescription) : ""
-      let title = patternId
+      const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+      const description = eslintDescription ? capitalize(eslintDescription) : ""
+      const title = patternId
         .split("/")
         .map(s =>
           capitalize(s)
@@ -61,7 +63,7 @@ export function generateDescription(): DescriptionEntry[] {
             .join(" ")
         )
         .join(": ")
-      let timeToFix = 5
+      const timeToFix = 5
       return new DescriptionEntry(
         patternIdToCodacy(patternId),
         title,
@@ -82,7 +84,7 @@ function anyOfToArray(schema: JSONSchema4) {
 function fromEslintSchemaToParameters(
   schema: JSONSchema4 | JSONSchema4[]
 ): PatternsParameter[] {
-  let flattenSchema = <JSONSchema4[]>(
+  const flattenSchema = <JSONSchema4[]>(
     (<unknown>flatMapDeep(schema, anyOfToArray))
   )
 
@@ -92,21 +94,21 @@ function fromEslintSchemaToParameters(
   console.log(flattenSchema)
 
   if (Array.isArray(flattenSchema)) {
-    let [objects, nonObject] = partition(
+    const [objects, nonObject] = partition(
       flattenSchema,
       value => value && value.properties
     )
-    let namedParameters = flatMap(objects, o => {
-      let pairs = toPairs(o.properties)
+    const namedParameters = flatMap(objects, o => {
+      const pairs = toPairs(o.properties)
       return pairs.map(([k, v]) => {
-        let withDefault = v as WithDefault
+        const withDefault = v as WithDefault
         return new PatternsParameter(
           k,
           v && withDefault.default ? withDefault.default : undefined
         )
       })
     })
-    let unnamedParameters =
+    const unnamedParameters =
       nonObject.length === 0 ? [] : [new PatternsParameter("unnamedParam")]
     return namedParameters.concat(unnamedParameters)
   } else {
@@ -115,10 +117,10 @@ function fromEslintSchemaToParameters(
 }
 
 function patternIdsWithoutPrefix(prefix: string): Array<string> {
-  let longPrefix = prefix + "/"
-  let rules = defaultEngine.getRules()
-  let patternIds = Array.from(rules.entries()).map(e => e[0])
-  let filteredPatternIds = patternIds.filter(patternId =>
+  const longPrefix = prefix + "/"
+  const rules = defaultEngine.getRules()
+  const patternIds = Array.from(rules.entries()).map(e => e[0])
+  const filteredPatternIds = patternIds.filter(patternId =>
     patternId.startsWith(longPrefix)
   )
   return filteredPatternIds.map(patternId =>
@@ -127,7 +129,7 @@ function patternIdsWithoutPrefix(prefix: string): Array<string> {
 }
 
 function eslintPatternIds(): Array<string> {
-  let rules = defaultEngine.getRules()
+  const rules = defaultEngine.getRules()
   return Array.from(rules.keys()).filter(e => !e.includes("/"))
 }
 
@@ -135,13 +137,13 @@ export function downloadDocs(
   urlFromPatternId: (patternId: string) => string,
   prefix: string | undefined = undefined
 ) {
-  let patterns = prefix ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
-  let promises: Promise<void>[] = patterns.map(async pattern => {
-    let url: string = urlFromPatternId(pattern)
-    let result = await fetch(url)
+  const patterns = prefix ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
+  const promises: Promise<void>[] = patterns.map(async pattern => {
+    const url: string = urlFromPatternId(pattern)
+    const result = await fetch(url)
     if (result.ok) {
-      let text = await result.text()
-      let filename =
+      const text = await result.text()
+      const filename =
         "docs/description/" +
         (prefix ? prefix + "_" : "") +
         patternIdToCodacy(pattern) +

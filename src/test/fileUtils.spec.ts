@@ -4,7 +4,7 @@ import { Codacyrc } from '../model/CodacyInput'
 
 describe("main", () => {
   it("should parse a codacyrc file", () => {
-    let codacyrcFileContent = `{
+    const codacyrcFileContent = `{
       "files" : ["foo/bar/baz.js", "foo2/bar/baz.php"],
       "tools":[
         {
@@ -23,8 +23,8 @@ describe("main", () => {
         }
       ]
     }`
-    let parsed = parseCodacyrcFile(codacyrcFileContent)
-    let expected: Codacyrc = {
+    const parsed = parseCodacyrcFile(codacyrcFileContent)
+    const expected: Codacyrc = {
       "files": ["foo/bar/baz.js", "foo2/bar/baz.php"],
       "tools": [
         {
