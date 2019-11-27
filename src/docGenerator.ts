@@ -36,7 +36,7 @@ export function generatePatterns(): Patterns {
       patternIdToCodacy(patternId),
       level,
       category,
-      parameters
+      parameters && parameters.length > 0 ? parameters : undefined
     )
   })
   let entries = patterns.filter(x => x !== null) as PatternsEntry[]
@@ -85,6 +85,12 @@ function fromEslintSchemaToParameters(
   let flattenSchema = <JSONSchema4[]>(
     (<unknown>flatMapDeep(schema, anyOfToArray))
   )
+
+  console.log("schema: ")
+  console.log(schema)
+  console.log("flattenSchema: ")
+  console.log(flattenSchema)
+
   if (Array.isArray(flattenSchema)) {
     let [objects, nonObject] = partition(
       flattenSchema,
