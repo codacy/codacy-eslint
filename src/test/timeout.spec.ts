@@ -14,6 +14,10 @@ describe("parseTimeoutSeconds", () => {
     equal(parseTimeoutSeconds("1 hour"), 60 * 60)
     equal(parseTimeoutSeconds("1 hours"), 60 * 60)
   })
+  it("should parse timeout with dot", () => {
+    equal(parseTimeoutSeconds("1.hour"), 60 * 60)
+    equal(parseTimeoutSeconds("1 . second"), 1)
+  })
   it("should return defaultTimeout when timeout is not correct", () => {
     equal(parseTimeoutSeconds("blabla"), defaultTimeout)
     equal(parseTimeoutSeconds("blabla blabla"), defaultTimeout)

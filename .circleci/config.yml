@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   codacy: codacy/base@1.0.1
-  codacy_plugins_test: codacy/plugins-test@0.6.3
+  codacy_plugins_test: codacy/plugins-test@0.6.4
 
 jobs:
   publish_docker_local:

@@ -1,4 +1,4 @@
-import { CLIEngine } from "eslint"
+import { CLIEngine, Linter } from "eslint"
 import { CodacyResult } from "./model/CodacyResult"
 import { flatMap } from "lodash"
 import { patternIdToCodacy } from "./model/Patterns"
@@ -6,10 +6,13 @@ import { patternIdToCodacy } from "./model/Patterns"
 export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {
   return flatMap(report.results, result => {
     let filename = result.filePath
-    return result.messages.map(m => {
+    let pairs = result.messages
+      .map<[string | null, Linter.LintMessage]>(m => [m.ruleId, m])
+      .filter(t => t[0] !== null) as [string, Linter.LintMessage][]
+    return pairs.map(([ruleId, m]) => {
       let line = m.line
       let message = m.message
-      let patternId = patternIdToCodacy(<string>m.ruleId) // TODO: Remove unsafe cast
+      let patternId = patternIdToCodacy(ruleId)
       return new CodacyResult(filename, message, patternId, line)
     })
   })

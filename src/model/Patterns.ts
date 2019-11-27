@@ -71,9 +71,9 @@ export function patternIdToEslint(patternId: string): string {
 
 export class PatternsParameter {
   name: string
-  default: string
+  default?: string
 
-  constructor(name: string, d: string) {
+  constructor(name: string, d?: string) {
     this.name = name
     this.default = d
   }

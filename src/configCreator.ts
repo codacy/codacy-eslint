@@ -51,7 +51,7 @@ async function createOptions(
     }
   }
   let fileNames = await allFilesNames(srcDirPath)
-  if (fileNames.find(name => name.startsWith(".eslintrc")) != undefined)
+  if (fileNames.find(name => name.startsWith(".eslintrc")) !== undefined)
     return {}
   else return defaultOptions
 }

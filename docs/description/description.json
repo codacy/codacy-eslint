@@ -5100,6 +5100,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-extra-non-null-assertion",
+    "title": "@typescript eslint: No extra non null assertion",
+    "description": "Disallow extra non-null assertion",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-extra-parens",
     "title": "@typescript eslint: No extra parens",
     "description": "Disallow unnecessary parentheses",
@@ -5220,6 +5226,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-unused-vars-experimental",
+    "title": "@typescript eslint: No unused vars experimental",
+    "description": "Disallow unused variables and arguments.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-unused-expressions",
     "title": "@typescript eslint: No unused expressions",
     "description": "Disallow unused expressions",
@@ -5265,6 +5277,18 @@
     "patternId": "@typescript-eslint_prefer-namespace-keyword",
     "title": "@typescript eslint: Prefer namespace keyword",
     "description": "Require the use of the `namespace` keyword instead of the `module` keyword to declare custom TypeScript modules",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-nullish-coalescing",
+    "title": "@typescript eslint: Prefer nullish coalescing",
+    "description": "Enforce the usage of the nullish coalescing operator instead of logical chaining",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-optional-chain",
+    "title": "@typescript eslint: Prefer optional chain",
+    "description": "Prefer using concise optional chain expressions instead of chained logical ands",
     "timeToFix": 5
   },
   {
@@ -5319,6 +5343,12 @@
     "patternId": "@typescript-eslint_restrict-template-expressions",
     "title": "@typescript eslint: Restrict template expressions",
     "description": "Enforce template literal expressions to be of string type",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_return-await",
+    "title": "@typescript eslint: Return await",
+    "description": "Rules for awaiting returned promises",
     "timeToFix": 5
   },
   {
