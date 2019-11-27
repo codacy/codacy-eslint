@@ -1,6 +1,5 @@
 {
   "name": "codacy-eslint",
-  "version": "0.0.1",
   "description": "Eslint Tool for Codacy",
   "keywords": [
     "codacy",
