@@ -8,14 +8,8 @@
       "category": "BestPractice",
       "parameters": [
         {
-          "name": "getWithoutSet"
-        },
-        {
           "name": "setWithoutGet",
           "default": true
-        },
-        {
-          "name": "enforceForClassMembers"
         }
       ]
     },
@@ -35,15 +29,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "singleValue"
-        },
-        {
-          "name": "objectsInArrays"
-        },
-        {
-          "name": "arraysInArrays"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -51,12 +36,7 @@
     {
       "patternId": "array-callback-return",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowImplicit"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "array-element-newline",
@@ -83,9 +63,6 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
-        {
-          "name": "requireForBlockBody"
-        },
         {
           "name": "unnamedParam"
         }
@@ -127,9 +104,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "allowSingleLine"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -147,21 +121,7 @@
     {
       "patternId": "camelcase",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring"
-        },
-        {
-          "name": "ignoreImports"
-        },
-        {
-          "name": "properties"
-        },
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "capitalized-comments",
@@ -176,12 +136,7 @@
     {
       "patternId": "class-methods-use-this",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptMethods"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "comma-dangle",
@@ -199,9 +154,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "before"
-        },
-        {
           "name": "after",
           "default": true
         }
@@ -212,9 +164,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "exceptions"
-        },
         {
           "name": "unnamedParam"
         }
@@ -236,9 +185,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "enforceForClassMembers"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -246,12 +192,7 @@
     {
       "patternId": "consistent-return",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "treatUndefinedAsUnspecified"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "consistent-this",
@@ -281,12 +222,7 @@
     {
       "patternId": "default-case",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "commentPattern"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "default-param-last",
@@ -311,9 +247,6 @@
         {
           "name": "allowKeywords",
           "default": true
-        },
-        {
-          "name": "allowPattern"
         }
       ]
     },
@@ -368,9 +301,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "generators"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -380,9 +310,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "allowArrowFunctions"
-        },
         {
           "name": "unnamedParam"
         }
@@ -421,12 +348,7 @@
     {
       "patternId": "getter-return",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowImplicit"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "global-require",
@@ -476,15 +398,6 @@
         {
           "name": "min",
           "default": 2
-        },
-        {
-          "name": "max"
-        },
-        {
-          "name": "exceptions"
-        },
-        {
-          "name": "properties"
         }
       ]
     },
@@ -493,15 +406,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "properties"
-        },
-        {
-          "name": "onlyDeclarations"
-        },
-        {
-          "name": "ignoreDestructuring"
-        },
         {
           "name": "unnamedParam"
         }
@@ -523,45 +427,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "SwitchCase"
-        },
-        {
-          "name": "VariableDeclarator"
-        },
-        {
-          "name": "outerIIFEBody"
-        },
-        {
-          "name": "MemberExpression"
-        },
-        {
-          "name": "FunctionDeclaration"
-        },
-        {
-          "name": "FunctionExpression"
-        },
-        {
-          "name": "CallExpression"
-        },
-        {
-          "name": "ArrayExpression"
-        },
-        {
-          "name": "ObjectExpression"
-        },
-        {
-          "name": "ImportDeclaration"
-        },
-        {
-          "name": "flatTernaryExpressions"
-        },
-        {
-          "name": "ignoredNodes"
-        },
-        {
-          "name": "ignoreComments"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -571,33 +436,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "SwitchCase"
-        },
-        {
-          "name": "VariableDeclarator"
-        },
-        {
-          "name": "outerIIFEBody"
-        },
-        {
-          "name": "MemberExpression"
-        },
-        {
-          "name": "FunctionDeclaration"
-        },
-        {
-          "name": "FunctionExpression"
-        },
-        {
-          "name": "CallExpression"
-        },
-        {
-          "name": "ArrayExpression"
-        },
-        {
-          "name": "ObjectExpression"
-        },
         {
           "name": "unnamedParam"
         }
@@ -626,36 +464,7 @@
     {
       "patternId": "key-spacing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "align"
-        },
-        {
-          "name": "mode"
-        },
-        {
-          "name": "beforeColon"
-        },
-        {
-          "name": "afterColon"
-        },
-        {
-          "name": "singleLine"
-        },
-        {
-          "name": "multiLine"
-        },
-        {
-          "name": "singleLine"
-        },
-        {
-          "name": "multiLine"
-        },
-        {
-          "name": "align"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "keyword-spacing",
@@ -669,9 +478,6 @@
         {
           "name": "after",
           "default": true
-        },
-        {
-          "name": "overrides"
         }
       ]
     },
@@ -703,45 +509,6 @@
         {
           "name": "beforeBlockComment",
           "default": true
-        },
-        {
-          "name": "afterBlockComment"
-        },
-        {
-          "name": "beforeLineComment"
-        },
-        {
-          "name": "afterLineComment"
-        },
-        {
-          "name": "allowBlockStart"
-        },
-        {
-          "name": "allowBlockEnd"
-        },
-        {
-          "name": "allowClassStart"
-        },
-        {
-          "name": "allowClassEnd"
-        },
-        {
-          "name": "allowObjectStart"
-        },
-        {
-          "name": "allowObjectEnd"
-        },
-        {
-          "name": "allowArrayStart"
-        },
-        {
-          "name": "allowArrayEnd"
-        },
-        {
-          "name": "ignorePattern"
-        },
-        {
-          "name": "applyDefaultIgnorePatterns"
         }
       ]
     },
@@ -760,9 +527,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "exceptAfterSingleLine"
-        },
         {
           "name": "unnamedParam"
         }
@@ -793,96 +557,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "code"
-        },
-        {
-          "name": "comments"
-        },
-        {
-          "name": "tabWidth"
-        },
-        {
-          "name": "ignorePattern"
-        },
-        {
-          "name": "ignoreComments"
-        },
-        {
-          "name": "ignoreStrings"
-        },
-        {
-          "name": "ignoreUrls"
-        },
-        {
-          "name": "ignoreTemplateLiterals"
-        },
-        {
-          "name": "ignoreRegExpLiterals"
-        },
-        {
-          "name": "ignoreTrailingComments"
-        },
-        {
-          "name": "code"
-        },
-        {
-          "name": "comments"
-        },
-        {
-          "name": "tabWidth"
-        },
-        {
-          "name": "ignorePattern"
-        },
-        {
-          "name": "ignoreComments"
-        },
-        {
-          "name": "ignoreStrings"
-        },
-        {
-          "name": "ignoreUrls"
-        },
-        {
-          "name": "ignoreTemplateLiterals"
-        },
-        {
-          "name": "ignoreRegExpLiterals"
-        },
-        {
-          "name": "ignoreTrailingComments"
-        },
-        {
-          "name": "code"
-        },
-        {
-          "name": "comments"
-        },
-        {
-          "name": "tabWidth"
-        },
-        {
-          "name": "ignorePattern"
-        },
-        {
-          "name": "ignoreComments"
-        },
-        {
-          "name": "ignoreStrings"
-        },
-        {
-          "name": "ignoreUrls"
-        },
-        {
-          "name": "ignoreTemplateLiterals"
-        },
-        {
-          "name": "ignoreRegExpLiterals"
-        },
-        {
-          "name": "ignoreTrailingComments"
-        },
         {
           "name": "unnamedParam"
         }
@@ -934,9 +608,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "ignoreTopLevelFunctions"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -984,18 +655,6 @@
         {
           "name": "capIsNew",
           "default": true
-        },
-        {
-          "name": "newIsCapExceptions"
-        },
-        {
-          "name": "newIsCapExceptionPattern"
-        },
-        {
-          "name": "capIsNewExceptions"
-        },
-        {
-          "name": "capIsNewExceptionPattern"
         },
         {
           "name": "properties",
@@ -1062,15 +721,7 @@
     {
       "patternId": "no-bitwise",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allow"
-        },
-        {
-          "name": "int32Hint"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-buffer-constructor",
@@ -1126,12 +777,7 @@
     {
       "patternId": "no-console",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-const-assign",
@@ -1207,12 +853,7 @@
     {
       "patternId": "no-duplicate-imports",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "includeExports"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-else-return",
@@ -1228,12 +869,7 @@
     {
       "patternId": "no-empty",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowEmptyCatch"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-empty-character-class",
@@ -1243,12 +879,7 @@
     {
       "patternId": "no-empty-function",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-empty-pattern",
@@ -1263,12 +894,7 @@
     {
       "patternId": "no-eval",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowIndirect"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-ex-assign",
@@ -1278,12 +904,7 @@
     {
       "patternId": "no-extend-native",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptions"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-extra-bind",
@@ -1318,12 +939,7 @@
     {
       "patternId": "no-fallthrough",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "commentPattern"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-floating-decimal",
@@ -1338,12 +954,7 @@
     {
       "patternId": "no-global-assign",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptions"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-implicit-coercion",
@@ -1361,21 +972,13 @@
         {
           "name": "string",
           "default": true
-        },
-        {
-          "name": "allow"
         }
       ]
     },
     {
       "patternId": "no-implicit-globals",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "lexicalBindings"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-implied-eval",
@@ -1405,12 +1008,7 @@
     {
       "patternId": "no-invalid-regexp",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowConstructorFlags"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-invalid-this",
@@ -1429,17 +1027,8 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "skipComments"
-        },
-        {
           "name": "skipStrings",
           "default": true
-        },
-        {
-          "name": "skipTemplates"
-        },
-        {
-          "name": "skipRegExps"
         }
       ]
     },
@@ -1456,15 +1045,7 @@
     {
       "patternId": "no-labels",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowLoop"
-        },
-        {
-          "name": "allowSwitch"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-lone-blocks",
@@ -1484,21 +1065,7 @@
     {
       "patternId": "no-magic-numbers",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "detectObjects"
-        },
-        {
-          "name": "enforceConst"
-        },
-        {
-          "name": "ignore"
-        },
-        {
-          "name": "ignoreArrayIndexes"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-misleading-character-class",
@@ -1510,9 +1077,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "groups"
-        },
         {
           "name": "allowSamePrecedence",
           "default": true
@@ -1547,15 +1111,7 @@
     {
       "patternId": "no-multi-spaces",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptions"
-        },
-        {
-          "name": "ignoreEOLComments"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-multi-str",
@@ -1565,28 +1121,12 @@
     {
       "patternId": "no-multiple-empty-lines",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "max"
-        },
-        {
-          "name": "maxEOF"
-        },
-        {
-          "name": "maxBOF"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-native-reassign",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptions"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-negated-condition",
@@ -1666,12 +1206,7 @@
     {
       "patternId": "no-plusplus",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowForLoopAfterthoughts"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-process-env",
@@ -1745,24 +1280,6 @@
       "category": "BestPractice",
       "parameters": [
         {
-          "name": "object"
-        },
-        {
-          "name": "property"
-        },
-        {
-          "name": "message"
-        },
-        {
-          "name": "object"
-        },
-        {
-          "name": "property"
-        },
-        {
-          "name": "message"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -1829,14 +1346,8 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "builtinGlobals"
-        },
-        {
           "name": "hoist",
           "default": "functions"
-        },
-        {
-          "name": "allow"
         }
       ]
     },
@@ -1858,22 +1369,12 @@
     {
       "patternId": "no-sync",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowAtRootLevel"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-tabs",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowIndentationTabs"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-template-curly-in-string",
@@ -1898,25 +1399,12 @@
     {
       "patternId": "no-trailing-spaces",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "skipBlankLines"
-        },
-        {
-          "name": "ignoreComments"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-undef",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "typeof"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-undef-init",
@@ -1931,24 +1419,7 @@
     {
       "patternId": "no-underscore-dangle",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allow"
-        },
-        {
-          "name": "allowAfterThis"
-        },
-        {
-          "name": "allowAfterSuper"
-        },
-        {
-          "name": "allowAfterThisConstructor"
-        },
-        {
-          "name": "enforceInMethodNames"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-unexpected-multiline",
@@ -1984,28 +1455,12 @@
     {
       "patternId": "no-unsafe-negation",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "enforceForOrderingRelations"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-unused-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowShortCircuit"
-        },
-        {
-          "name": "allowTernary"
-        },
-        {
-          "name": "allowTaggedTemplates"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-unused-labels",
@@ -2045,12 +1500,7 @@
     {
       "patternId": "no-useless-computed-key",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "enforceForClassMembers"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-useless-concat",
@@ -2070,18 +1520,7 @@
     {
       "patternId": "no-useless-rename",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring"
-        },
-        {
-          "name": "ignoreImport"
-        },
-        {
-          "name": "ignoreExport"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-useless-return",
@@ -2101,15 +1540,7 @@
     {
       "patternId": "no-warning-comments",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "terms"
-        },
-        {
-          "name": "location"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "no-whitespace-before-property",
@@ -2126,9 +1557,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "overrides"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2150,12 +1578,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "arraysInObjects"
-        },
-        {
-          "name": "objectsInObjects"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -2163,15 +1585,7 @@
     {
       "patternId": "object-property-newline",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowAllPropertiesOnSameLine"
-        },
-        {
-          "name": "allowMultiplePropertiesPerLine"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "object-shorthand",
@@ -2219,9 +1633,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "overrides"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -2231,9 +1642,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "allowSingleLineBlocks"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2245,15 +1653,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "blankLine"
-        },
-        {
-          "name": "prev"
-        },
-        {
-          "name": "next"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -2263,9 +1662,6 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
-        {
-          "name": "allowNamedFunctions"
-        },
         {
           "name": "allowUnboundThis",
           "default": true
@@ -2280,9 +1676,6 @@
         {
           "name": "destructuring",
           "default": "any"
-        },
-        {
-          "name": "ignoreReadBeforeAssign"
         }
       ]
     },
@@ -2291,9 +1684,6 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
-        {
-          "name": "enforceForRenamedProperties"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2322,22 +1712,12 @@
     {
       "patternId": "prefer-promise-reject-errors",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowEmptyReject"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "prefer-reflect",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "exceptions"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "prefer-regex-literals",
@@ -2374,12 +1754,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "avoidEscape"
-        },
-        {
-          "name": "allowTemplateLiterals"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2452,9 +1826,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "before"
-        },
-        {
           "name": "after",
           "default": true
         }
@@ -2473,21 +1844,7 @@
     {
       "patternId": "sort-imports",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreCase"
-        },
-        {
-          "name": "memberSyntaxSortOrder"
-        },
-        {
-          "name": "ignoreDeclarationSort"
-        },
-        {
-          "name": "ignoreMemberSort"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "sort-keys",
@@ -2497,9 +1854,6 @@
         {
           "name": "caseSensitive",
           "default": true
-        },
-        {
-          "name": "natural"
         },
         {
           "name": "minKeys",
@@ -2513,12 +1867,7 @@
     {
       "patternId": "sort-vars",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreCase"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "space-before-blocks",
@@ -2546,9 +1895,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "exceptions"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -2556,12 +1902,7 @@
     {
       "patternId": "space-infix-ops",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "int32Hint"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "space-unary-ops",
@@ -2571,12 +1912,6 @@
         {
           "name": "words",
           "default": true
-        },
-        {
-          "name": "nonwords"
-        },
-        {
-          "name": "overrides"
         }
       ]
     },
@@ -2585,18 +1920,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "exceptions"
-        },
-        {
-          "name": "markers"
-        },
-        {
-          "name": "line"
-        },
-        {
-          "name": "block"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2617,9 +1940,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "before"
-        },
         {
           "name": "after",
           "default": true
@@ -2664,27 +1984,13 @@
     {
       "patternId": "use-isnan",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "enforceForSwitchCase"
-        },
-        {
-          "name": "enforceForIndexOf"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "valid-jsdoc",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [
-        {
-          "name": "prefer"
-        },
-        {
-          "name": "preferType"
-        },
         {
           "name": "requireReturn",
           "default": true
@@ -2696,9 +2002,6 @@
         {
           "name": "requireReturnDescription",
           "default": true
-        },
-        {
-          "name": "matchDescription"
         },
         {
           "name": "requireReturnType",
@@ -2713,12 +2016,7 @@
     {
       "patternId": "valid-typeof",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "requireStringLiterals"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "vars-on-top",
@@ -2730,9 +2028,6 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [
-        {
-          "name": "functionPrototypeMethods"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2759,12 +2054,6 @@
       "category": "BestPractice",
       "parameters": [
         {
-          "name": "exceptRange"
-        },
-        {
-          "name": "onlyEquality"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -2774,18 +2063,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "commonjs"
-        },
-        {
-          "name": "amd"
-        },
-        {
-          "name": "esmodule"
-        },
-        {
-          "name": "ignore"
-        },
         {
           "name": "caseSensitive",
           "default": true
@@ -2805,12 +2082,7 @@
     {
       "patternId": "import_namespace",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowComputed"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-namespace",
@@ -2840,25 +2112,12 @@
     {
       "patternId": "import_no-restricted-paths",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "zones"
-        },
-        {
-          "name": "basePath"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-internal-modules",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_group-exports",
@@ -2868,21 +2127,7 @@
     {
       "patternId": "import_no-relative-parent-imports",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "commonjs"
-        },
-        {
-          "name": "amd"
-        },
-        {
-          "name": "esmodule"
-        },
-        {
-          "name": "ignore"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-self-import",
@@ -2892,24 +2137,7 @@
     {
       "patternId": "import_no-cycle",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "commonjs"
-        },
-        {
-          "name": "amd"
-        },
-        {
-          "name": "esmodule"
-        },
-        {
-          "name": "ignore"
-        },
-        {
-          "name": "maxDepth"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-named-default",
@@ -2929,42 +2157,13 @@
     {
       "patternId": "import_no-anonymous-default-export",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowArray"
-        },
-        {
-          "name": "allowArrowFunction"
-        },
-        {
-          "name": "allowCallExpression"
-        },
-        {
-          "name": "allowAnonymousClass"
-        },
-        {
-          "name": "allowAnonymousFunction"
-        },
-        {
-          "name": "allowLiteral"
-        },
-        {
-          "name": "allowObject"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-unused-modules",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "unusedExports"
-        },
-        {
-          "name": "missingExports"
-        },
         {
           "name": "unnamedParam"
         }
@@ -2998,50 +2197,17 @@
     {
       "patternId": "import_max-dependencies",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "max"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-extraneous-dependencies",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "devDependencies"
-        },
-        {
-          "name": "optionalDependencies"
-        },
-        {
-          "name": "peerDependencies"
-        },
-        {
-          "name": "packageDir"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-absolute-path",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "commonjs"
-        },
-        {
-          "name": "amd"
-        },
-        {
-          "name": "esmodule"
-        },
-        {
-          "name": "ignore"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-nodejs-modules",
@@ -3056,25 +2222,12 @@
     {
       "patternId": "import_order",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "groups"
-        },
-        {
-          "name": "newlines-between"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_newline-after-import",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "count"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_prefer-default-export",
@@ -3104,47 +2257,17 @@
     {
       "patternId": "import_no-unassigned-import",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "devDependencies"
-        },
-        {
-          "name": "optionalDependencies"
-        },
-        {
-          "name": "peerDependencies"
-        },
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_no-useless-path-segments",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "commonjs"
-        },
-        {
-          "name": "noUselessIndex"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_dynamic-import-chunkname",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "importFunctions"
-        },
-        {
-          "name": "webpackChunknameFormat"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "import_exports-last",
@@ -3167,9 +2290,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "allowBatchAssign"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -3179,9 +2299,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "tryExtensions"
-        },
         {
           "name": "unnamedParam"
         }
@@ -3195,21 +2312,7 @@
     {
       "patternId": "node_no-deprecated-api",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "version"
-        },
-        {
-          "name": "ignoreModuleItems"
-        },
-        {
-          "name": "ignoreGlobalItems"
-        },
-        {
-          "name": "ignoreIndirectDependencies"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "node_no-exports-assign",
@@ -3219,159 +2322,52 @@
     {
       "patternId": "node_no-extraneous-import",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "convertPath"
-        },
-        {
-          "name": "resolvePaths"
-        },
-        {
-          "name": "tryExtensions"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-extraneous-require",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "convertPath"
-        },
-        {
-          "name": "resolvePaths"
-        },
-        {
-          "name": "tryExtensions"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-missing-import",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "tryExtensions"
-        },
-        {
-          "name": "resolvePaths"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-missing-require",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "tryExtensions"
-        },
-        {
-          "name": "resolvePaths"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unpublished-bin",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "convertPath"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unpublished-import",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "convertPath"
-        },
-        {
-          "name": "resolvePaths"
-        },
-        {
-          "name": "tryExtensions"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unpublished-require",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowModules"
-        },
-        {
-          "name": "convertPath"
-        },
-        {
-          "name": "resolvePaths"
-        },
-        {
-          "name": "tryExtensions"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unsupported-features_es-builtins",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "version"
-        },
-        {
-          "name": "ignores"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unsupported-features_es-syntax",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "version"
-        },
-        {
-          "name": "ignores"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unsupported-features_node-builtins",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "version"
-        },
-        {
-          "name": "ignores"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_prefer-global_buffer",
@@ -3461,40 +2457,18 @@
     {
       "patternId": "node_shebang",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "convertPath"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-hide-core-modules",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allow"
-        },
-        {
-          "name": "ignoreDirectDependencies"
-        },
-        {
-          "name": "ignoreIndirectDependencies"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-unsupported-features",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [
-        {
-          "name": "version"
-        },
-        {
-          "name": "ignores"
-        },
         {
           "name": "unnamedParam"
         }
@@ -3761,12 +2735,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "matchNames"
-        },
-        {
-          "name": "stripUnderscores"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -3784,15 +2752,7 @@
     {
       "patternId": "angular_directive-restrict",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "restrict"
-        },
-        {
-          "name": "explicit"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "angular_document-service",
@@ -3872,15 +2832,7 @@
     {
       "patternId": "angular_module-dependency-order",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "grouped"
-        },
-        {
-          "name": "prefix"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "angular_module-getter",
@@ -3920,12 +2872,7 @@
     {
       "patternId": "angular_no-directive-replace",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreReplaceFalse"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "angular_no-http-callback",
@@ -3950,22 +2897,12 @@
     {
       "patternId": "angular_no-private-call",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "angular_no-run-logic",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowParams"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "angular_no-service-method",
@@ -4098,15 +3035,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "singleValue"
-        },
-        {
-          "name": "objectsInArrays"
-        },
-        {
-          "name": "arraysInArrays"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -4165,18 +3093,6 @@
           "default": true
         },
         {
-          "name": "newIsCapExceptions"
-        },
-        {
-          "name": "newIsCapExceptionPattern"
-        },
-        {
-          "name": "capIsNewExceptions"
-        },
-        {
-          "name": "capIsNewExceptionPattern"
-        },
-        {
           "name": "properties",
           "default": true
         }
@@ -4185,15 +3101,7 @@
     {
       "patternId": "babel_camelcase",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring"
-        },
-        {
-          "name": "properties"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "babel_no-await-in-loop",
@@ -4214,30 +3122,13 @@
     {
       "patternId": "babel_no-unused-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowShortCircuit"
-        },
-        {
-          "name": "allowTernary"
-        },
-        {
-          "name": "allowTaggedTemplates"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "babel_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "arraysInObjects"
-        },
-        {
-          "name": "objectsInObjects"
-        },
         {
           "name": "unnamedParam"
         }
@@ -4259,12 +3150,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "avoidEscape"
-        },
-        {
-          "name": "allowTemplateLiterals"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -4277,12 +3162,7 @@
     {
       "patternId": "babel_valid-typeof",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "requireStringLiterals"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "backbone_collection-model",
@@ -4317,18 +3197,7 @@
     {
       "patternId": "backbone_initialize-on-top",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "View"
-        },
-        {
-          "name": "Model"
-        },
-        {
-          "name": "Collection"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "backbone_model-defaults",
@@ -4393,12 +3262,7 @@
     {
       "patternId": "backbone_no-view-qualified-jquery",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "identifiers"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "backbone_render-return",
@@ -4413,18 +3277,7 @@
     {
       "patternId": "chai-friendly_no-unused-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowShortCircuit"
-        },
-        {
-          "name": "allowTernary"
-        },
-        {
-          "name": "allowTaggedTemplates"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "flowtype_array-style-complex-type",
@@ -4504,18 +3357,7 @@
     {
       "patternId": "flowtype_no-unused-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowShortCircuit"
-        },
-        {
-          "name": "allowTernary"
-        },
-        {
-          "name": "allowTaggedTemplates"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "flowtype_no-weak-types",
@@ -4640,50 +3482,17 @@
     {
       "patternId": "jsx-a11y_alt-text",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "elements"
-        },
-        {
-          "name": "img"
-        },
-        {
-          "name": "object"
-        },
-        {
-          "name": "area"
-        },
-        {
-          "name": "input[type=\"image\"]"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_anchor-has-content",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "components"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_anchor-is-valid",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "components"
-        },
-        {
-          "name": "specialLink"
-        },
-        {
-          "name": "aspects"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_aria-activedescendant-has-tabindex",
@@ -4703,12 +3512,7 @@
     {
       "patternId": "jsx-a11y_aria-role",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreNonDOM"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_aria-unsupported-elements",
@@ -4723,34 +3527,12 @@
     {
       "patternId": "jsx-a11y_control-has-associated-label",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "labelAttributes"
-        },
-        {
-          "name": "controlComponents"
-        },
-        {
-          "name": "ignoreElements"
-        },
-        {
-          "name": "ignoreRoles"
-        },
-        {
-          "name": "depth"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_heading-has-content",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "components"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_html-has-lang",
@@ -4765,63 +3547,22 @@
     {
       "patternId": "jsx-a11y_img-redundant-alt",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "components"
-        },
-        {
-          "name": "words"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_interactive-supports-focus",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "tabbable"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_label-has-associated-control",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "labelComponents"
-        },
-        {
-          "name": "labelAttributes"
-        },
-        {
-          "name": "controlComponents"
-        },
-        {
-          "name": "assert"
-        },
-        {
-          "name": "depth"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_label-has-for",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "components"
-        },
-        {
-          "name": "required"
-        },
-        {
-          "name": "allowChildren"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_lang",
@@ -4831,18 +3572,7 @@
     {
       "patternId": "jsx-a11y_media-has-caption",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "audio"
-        },
-        {
-          "name": "video"
-        },
-        {
-          "name": "track"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_mouse-events-have-key-events",
@@ -4857,22 +3587,12 @@
     {
       "patternId": "jsx-a11y_no-autofocus",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreNonDOM"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_no-distracting-elements",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "elements"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_no-interactive-element-to-noninteractive-role",
@@ -4887,12 +3607,7 @@
     {
       "patternId": "jsx-a11y_no-noninteractive-element-interactions",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "handlers"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_no-noninteractive-element-to-interactive-role",
@@ -4907,15 +3622,7 @@
     {
       "patternId": "jsx-a11y_no-noninteractive-tabindex",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "roles"
-        },
-        {
-          "name": "tags"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_no-onchange",
@@ -4935,12 +3642,7 @@
     {
       "patternId": "jsx-a11y_no-static-element-interactions",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "handlers"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsx-a11y_role-has-required-aria-props",
@@ -4995,15 +3697,7 @@
     {
       "patternId": "lodash_collection-ordering",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "method"
-        },
-        {
-          "name": "useArray"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash_collection-return",
@@ -5046,9 +3740,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "onlyLiterals"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -5058,9 +3749,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "onlyLiterals"
-        },
         {
           "name": "unnamedParam"
         }
@@ -5149,12 +3837,7 @@
     {
       "patternId": "lodash_prefer-includes",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "includeNative"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash_prefer-invoke-map",
@@ -5174,15 +3857,7 @@
     {
       "patternId": "lodash_prefer-lodash-method",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoredMethods"
-        },
-        {
-          "name": "ignoredObjects"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash_prefer-lodash-typecheck",
@@ -5227,12 +3902,7 @@
     {
       "patternId": "lodash_prefer-some",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "includeNative"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash_prefer-startswith",
@@ -5257,12 +3927,7 @@
     {
       "patternId": "lodash_preferred-alias",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ingoreMethods"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash_prop-shorthand",
@@ -5332,12 +3997,7 @@
     {
       "patternId": "lodash-fp_no-for-each",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "noNative"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash-fp_no-partial-of-curried",
@@ -5372,12 +4032,7 @@
     {
       "patternId": "lodash-fp_prefer-constant",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "arrowFunctions"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash-fp_prefer-flat-map",
@@ -5397,22 +4052,12 @@
     {
       "patternId": "lodash-fp_prefer-identity",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "arrowFunctions"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash-fp_preferred-alias",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "overrides"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "lodash-fp_use-fp",
@@ -5442,18 +4087,7 @@
     {
       "patternId": "meteor_eventmap-params",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "eventParamName"
-        },
-        {
-          "name": "templateInstanceParamName"
-        },
-        {
-          "name": "preventDestructuring"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "meteor_prefix-eventmap-selectors",
@@ -5593,15 +4227,7 @@
     {
       "patternId": "mocha_prefer-arrow-callback",
       "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowNamedFunctions"
-        },
-        {
-          "name": "allowUnboundThis"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "mocha_no-async-describe",
@@ -5704,17 +4330,8 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "propTypeNames"
-        },
-        {
           "name": "rule",
           "default": "^(is|has)[A-Z]([A-Za-z0-9]?)+"
-        },
-        {
-          "name": "message"
-        },
-        {
-          "name": "validateNested"
         }
       ]
     },
@@ -5740,21 +4357,13 @@
     {
       "patternId": "react_default-props-match-prop-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowRequiredDefaults"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_destructuring-assignment",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "ignoreClassFields"
-        },
         {
           "name": "unnamedParam"
         }
@@ -5763,68 +4372,32 @@
     {
       "patternId": "react_display-name",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreTranspilerName"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_forbid-component-props",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "forbid"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_forbid-dom-props",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "forbid"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_forbid-elements",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "forbid"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_forbid-foreign-prop-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowInPropTypes"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_forbid-prop-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "forbid"
-        },
-        {
-          "name": "checkContextTypes"
-        },
-        {
-          "name": "checkChildContextTypes"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_jsx-boolean-value",
@@ -5862,12 +4435,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "allowMultiline"
-        },
-        {
-          "name": "spacing"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -5895,12 +4462,7 @@
     {
       "patternId": "react_jsx-filename-extension",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "extensions"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-first-prop-new-line",
@@ -5928,12 +4490,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "checkAttributes"
-        },
-        {
-          "name": "indentLogicalExpressions"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -5951,57 +4507,22 @@
     {
       "patternId": "react_jsx-key",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "checkFragmentShorthand"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "react_jsx-max-depth",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "max"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-max-props-per-line",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "maximum"
-        },
-        {
-          "name": "when"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-no-bind",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowArrowFunctions"
-        },
-        {
-          "name": "allowBind"
-        },
-        {
-          "name": "allowFunctions"
-        },
-        {
-          "name": "ignoreRefs"
-        },
-        {
-          "name": "ignoreDOMComponents"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_jsx-no-comment-textnodes",
@@ -6011,35 +4532,17 @@
     {
       "patternId": "react_jsx-no-duplicate-props",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "ignoreCase"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "react_jsx-no-literals",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "noStrings"
-        },
-        {
-          "name": "allowedStrings"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-no-target-blank",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "enforceDynamicLinks"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_jsx-no-useless-fragment",
@@ -6049,22 +4552,12 @@
     {
       "patternId": "react_jsx-one-expression-per-line",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-no-undef",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "allowGlobals"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "react_jsx-curly-brace-presence",
@@ -6079,15 +4572,7 @@
     {
       "patternId": "react_jsx-pascal-case",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowAllCaps"
-        },
-        {
-          "name": "ignore"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-fragments",
@@ -6117,37 +4602,12 @@
     {
       "patternId": "react_jsx-sort-default-props",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreCase"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-sort-props",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "callbacksLast"
-        },
-        {
-          "name": "shorthandFirst"
-        },
-        {
-          "name": "shorthandLast"
-        },
-        {
-          "name": "ignoreCase"
-        },
-        {
-          "name": "noSortAlphabetically"
-        },
-        {
-          "name": "reservedFirst"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-space-before-closing",
@@ -6162,21 +4622,7 @@
     {
       "patternId": "react_jsx-tag-spacing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "closingSlash"
-        },
-        {
-          "name": "beforeSelfClosing"
-        },
-        {
-          "name": "afterOpening"
-        },
-        {
-          "name": "beforeClosing"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_jsx-uses-react",
@@ -6191,30 +4637,7 @@
     {
       "patternId": "react_jsx-wrap-multilines",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "declaration"
-        },
-        {
-          "name": "assignment"
-        },
-        {
-          "name": "return"
-        },
-        {
-          "name": "arrow"
-        },
-        {
-          "name": "condition"
-        },
-        {
-          "name": "logical"
-        },
-        {
-          "name": "prop"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_no-access-state-in-setstate",
@@ -6284,12 +4707,7 @@
     {
       "patternId": "react_no-multi-comp",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreStateless"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_no-set-state",
@@ -6299,12 +4717,7 @@
     {
       "patternId": "react_no-string-refs",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "noTemplateLiterals"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_no-redundant-should-component-update",
@@ -6329,45 +4742,22 @@
     {
       "patternId": "react_no-unescaped-entities",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "forbid"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "react_no-unknown-property",
       "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "ignore"
-        }
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "react_no-unsafe",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "checkAliases"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_no-unused-prop-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "customValidators"
-        },
-        {
-          "name": "skipShapeProps"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_no-unused-state",
@@ -6402,28 +4792,12 @@
     {
       "patternId": "react_prefer-stateless-function",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignorePureComponents"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_prop-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignore"
-        },
-        {
-          "name": "customValidators"
-        },
-        {
-          "name": "skipUndeclared"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_react-in-jsx-scope",
@@ -6433,22 +4807,12 @@
     {
       "patternId": "react_require-default-props",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "forbidDefaultForRequired"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_require-optimization",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowDecorators"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "react_require-render-return",
@@ -6478,37 +4842,12 @@
     {
       "patternId": "react_sort-comp",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "order"
-        },
-        {
-          "name": "groups"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_sort-prop-types",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "requiredFirst"
-        },
-        {
-          "name": "callbacksLast"
-        },
-        {
-          "name": "ignoreCase"
-        },
-        {
-          "name": "noSortAlphabetically"
-        },
-        {
-          "name": "sortShapeProp"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "react_state-in-constructor",
@@ -6525,24 +4864,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "propTypes"
-        },
-        {
-          "name": "defaultProps"
-        },
-        {
-          "name": "childContextTypes"
-        },
-        {
-          "name": "contextTypes"
-        },
-        {
-          "name": "contextType"
-        },
-        {
-          "name": "displayName"
-        },
         {
           "name": "unnamedParam"
         }
@@ -6566,27 +4887,13 @@
     {
       "patternId": "react-hooks_exhaustive-deps",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "additionalHooks"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "singleValue"
-        },
-        {
-          "name": "objectsInArrays"
-        },
-        {
-          "name": "arraysInArrays"
-        },
         {
           "name": "unnamedParam"
         }
@@ -6612,9 +4919,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "ignore"
-        },
         {
           "name": "unnamedParam"
         }
@@ -6646,9 +4950,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "allowSingleLine"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -6656,21 +4957,7 @@
     {
       "patternId": "vue_camelcase",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring"
-        },
-        {
-          "name": "ignoreImports"
-        },
-        {
-          "name": "properties"
-        },
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_comma-dangle",
@@ -6692,12 +4979,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "ignores"
-        },
-        {
-          "name": "registeredComponentsOnly"
-        },
         {
           "name": "unnamedParam"
         }
@@ -6726,31 +5007,12 @@
     {
       "patternId": "vue_html-closing-bracket-newline",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "singleline"
-        },
-        {
-          "name": "multiline"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_html-closing-bracket-spacing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "startTag"
-        },
-        {
-          "name": "endTag"
-        },
-        {
-          "name": "selfClosingTag"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_html-end-tags",
@@ -6762,24 +5024,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "attribute"
-        },
-        {
-          "name": "baseIndent"
-        },
-        {
-          "name": "closeBracket"
-        },
-        {
-          "name": "switchCase"
-        },
-        {
-          "name": "alignAttributesVertically"
-        },
-        {
-          "name": "ignores"
-        },
         {
           "name": "unnamedParam"
         }
@@ -6801,15 +5045,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "html"
-        },
-        {
-          "name": "svg"
-        },
-        {
-          "name": "math"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -6822,36 +5057,7 @@
     {
       "patternId": "vue_key-spacing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "align"
-        },
-        {
-          "name": "mode"
-        },
-        {
-          "name": "beforeColon"
-        },
-        {
-          "name": "afterColon"
-        },
-        {
-          "name": "singleLine"
-        },
-        {
-          "name": "multiLine"
-        },
-        {
-          "name": "singleLine"
-        },
-        {
-          "name": "multiLine"
-        },
-        {
-          "name": "align"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_keyword-spacing",
@@ -6865,53 +5071,23 @@
         {
           "name": "after",
           "default": true
-        },
-        {
-          "name": "overrides"
         }
       ]
     },
     {
       "patternId": "vue_match-component-file-name",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "extensions"
-        },
-        {
-          "name": "shouldMatchCase"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_max-attributes-per-line",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "singleline"
-        },
-        {
-          "name": "multiline"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_multiline-html-element-content-newline",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreWhenEmpty"
-        },
-        {
-          "name": "ignores"
-        },
-        {
-          "name": "allowEmptyLines"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_mustache-interpolation-spacing",
@@ -6961,25 +5137,12 @@
     {
       "patternId": "vue_no-dupe-keys",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "groups"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-duplicate-attributes",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowCoexistClass"
-        },
-        {
-          "name": "allowCoexistStyle"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-empty-pattern",
@@ -6989,140 +5152,17 @@
     {
       "patternId": "vue_no-multi-spaces",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreProperties"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-parsing-error",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "abrupt-closing-of-empty-comment"
-        },
-        {
-          "name": "absence-of-digits-in-numeric-character-reference"
-        },
-        {
-          "name": "cdata-in-html-content"
-        },
-        {
-          "name": "character-reference-outside-unicode-range"
-        },
-        {
-          "name": "control-character-in-input-stream"
-        },
-        {
-          "name": "control-character-reference"
-        },
-        {
-          "name": "eof-before-tag-name"
-        },
-        {
-          "name": "eof-in-cdata"
-        },
-        {
-          "name": "eof-in-comment"
-        },
-        {
-          "name": "eof-in-tag"
-        },
-        {
-          "name": "incorrectly-closed-comment"
-        },
-        {
-          "name": "incorrectly-opened-comment"
-        },
-        {
-          "name": "invalid-first-character-of-tag-name"
-        },
-        {
-          "name": "missing-attribute-value"
-        },
-        {
-          "name": "missing-end-tag-name"
-        },
-        {
-          "name": "missing-semicolon-after-character-reference"
-        },
-        {
-          "name": "missing-whitespace-between-attributes"
-        },
-        {
-          "name": "nested-comment"
-        },
-        {
-          "name": "noncharacter-character-reference"
-        },
-        {
-          "name": "noncharacter-in-input-stream"
-        },
-        {
-          "name": "null-character-reference"
-        },
-        {
-          "name": "surrogate-character-reference"
-        },
-        {
-          "name": "surrogate-in-input-stream"
-        },
-        {
-          "name": "unexpected-character-in-attribute-name"
-        },
-        {
-          "name": "unexpected-character-in-unquoted-attribute-value"
-        },
-        {
-          "name": "unexpected-equals-sign-before-attribute-name"
-        },
-        {
-          "name": "unexpected-null-character"
-        },
-        {
-          "name": "unexpected-question-mark-instead-of-tag-name"
-        },
-        {
-          "name": "unexpected-solidus-in-tag"
-        },
-        {
-          "name": "unknown-named-character-reference"
-        },
-        {
-          "name": "end-tag-with-attributes"
-        },
-        {
-          "name": "duplicate-attribute"
-        },
-        {
-          "name": "end-tag-with-trailing-solidus"
-        },
-        {
-          "name": "non-void-html-element-start-tag-with-trailing-solidus"
-        },
-        {
-          "name": "x-invalid-end-tag"
-        },
-        {
-          "name": "x-invalid-namespace"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-reserved-keys",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "reserved"
-        },
-        {
-          "name": "groups"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-restricted-syntax",
@@ -7167,12 +5207,7 @@
     {
       "patternId": "vue_no-unused-components",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreWhenBindingPresent"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-unused-vars",
@@ -7182,12 +5217,7 @@
     {
       "patternId": "vue_no-use-v-if-with-v-for",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowUsingIterationVar"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-v-html",
@@ -7200,12 +5230,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "arraysInObjects"
-        },
-        {
-          "name": "objectsInObjects"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -7213,12 +5237,7 @@
     {
       "patternId": "vue_order-in-components",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "order"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_prop-name-casing",
@@ -7273,27 +5292,13 @@
     {
       "patternId": "vue_return-in-computed-property",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "treatUndefinedAsUnspecified"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_script-indent",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "baseIndent"
-        },
-        {
-          "name": "switchCase"
-        },
-        {
-          "name": "ignores"
-        },
         {
           "name": "unnamedParam"
         }
@@ -7302,28 +5307,12 @@
     {
       "patternId": "vue_singleline-html-element-content-newline",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreWhenNoAttributes"
-        },
-        {
-          "name": "ignoreWhenEmpty"
-        },
-        {
-          "name": "ignores"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_space-infix-ops",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "int32Hint"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_space-unary-ops",
@@ -7333,12 +5322,6 @@
         {
           "name": "words",
           "default": true
-        },
-        {
-          "name": "nonwords"
-        },
-        {
-          "name": "overrides"
         }
       ]
     },
@@ -7393,15 +5376,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "atComponent"
-        },
-        {
-          "name": "default"
-        },
-        {
-          "name": "named"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -7454,12 +5428,7 @@
     {
       "patternId": "vue_valid-v-on",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "modifiers"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "vue_valid-v-once",
@@ -7494,15 +5463,7 @@
     {
       "patternId": "@typescript-eslint_array-type",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "default"
-        },
-        {
-          "name": "readonly"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_await-thenable",
@@ -7517,21 +5478,13 @@
     {
       "patternId": "@typescript-eslint_ban-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "types"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_brace-style",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "allowSingleLine"
-        },
         {
           "name": "unnamedParam"
         }
@@ -7540,34 +5493,12 @@
     {
       "patternId": "@typescript-eslint_camelcase",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring"
-        },
-        {
-          "name": "ignoreImports"
-        },
-        {
-          "name": "properties"
-        },
-        {
-          "name": "allow"
-        },
-        {
-          "name": "genericType"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_class-name-casing",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowUnderscorePrefix"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_consistent-type-assertions",
@@ -7592,37 +5523,12 @@
     {
       "patternId": "@typescript-eslint_explicit-function-return-type",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowExpressions"
-        },
-        {
-          "name": "allowTypedFunctionExpressions"
-        },
-        {
-          "name": "allowHigherOrderFunctions"
-        },
-        {
-          "name": "allowDirectConstAssertionInArrowFunctions"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_explicit-member-accessibility",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "accessibility"
-        },
-        {
-          "name": "overrides"
-        },
-        {
-          "name": "ignoredMethodNames"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_func-call-spacing",
@@ -7650,45 +5556,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "SwitchCase"
-        },
-        {
-          "name": "VariableDeclarator"
-        },
-        {
-          "name": "outerIIFEBody"
-        },
-        {
-          "name": "MemberExpression"
-        },
-        {
-          "name": "FunctionDeclaration"
-        },
-        {
-          "name": "FunctionExpression"
-        },
-        {
-          "name": "CallExpression"
-        },
-        {
-          "name": "ArrayExpression"
-        },
-        {
-          "name": "ObjectExpression"
-        },
-        {
-          "name": "ImportDeclaration"
-        },
-        {
-          "name": "flatTernaryExpressions"
-        },
-        {
-          "name": "ignoredNodes"
-        },
-        {
-          "name": "ignoreComments"
-        },
-        {
           "name": "unnamedParam"
         }
       ]
@@ -7706,56 +5573,17 @@
     {
       "patternId": "@typescript-eslint_member-delimiter-style",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "multiline"
-        },
-        {
-          "name": "singleline"
-        },
-        {
-          "name": "overrides"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_member-naming",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "public"
-        },
-        {
-          "name": "protected"
-        },
-        {
-          "name": "private"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_member-ordering",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "default"
-        },
-        {
-          "name": "classes"
-        },
-        {
-          "name": "classExpressions"
-        },
-        {
-          "name": "interfaces"
-        },
-        {
-          "name": "typeLiterals"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-array-constructor",
@@ -7770,35 +5598,17 @@
     {
       "patternId": "@typescript-eslint_no-empty-function",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allow"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-empty-interface",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowSingleExtends"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-explicit-any",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "fixToUnknown"
-        },
-        {
-          "name": "ignoreRestArgs"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-extra-non-null-assertion",
@@ -7818,31 +5628,12 @@
     {
       "patternId": "@typescript-eslint_no-extraneous-class",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowConstructorOnly"
-        },
-        {
-          "name": "allowEmpty"
-        },
-        {
-          "name": "allowStaticOnly"
-        },
-        {
-          "name": "allowWithDecorator"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-floating-promises",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreVoid"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-for-in-array",
@@ -7852,43 +5643,12 @@
     {
       "patternId": "@typescript-eslint_no-inferrable-types",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreParameters"
-        },
-        {
-          "name": "ignoreProperties"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-magic-numbers",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "detectObjects"
-        },
-        {
-          "name": "enforceConst"
-        },
-        {
-          "name": "ignore"
-        },
-        {
-          "name": "ignoreArrayIndexes"
-        },
-        {
-          "name": "ignoreNumericLiteralTypes"
-        },
-        {
-          "name": "ignoreEnums"
-        },
-        {
-          "name": "ignoreReadonlyClassProperties"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-misused-new",
@@ -7898,28 +5658,12 @@
     {
       "patternId": "@typescript-eslint_no-misused-promises",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "checksConditionals"
-        },
-        {
-          "name": "checksVoidReturn"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-namespace",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowDeclarations"
-        },
-        {
-          "name": "allowDefinitionFiles"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-non-null-assertion",
@@ -7929,12 +5673,7 @@
     {
       "patternId": "@typescript-eslint_no-parameter-properties",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allows"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-require-imports",
@@ -7944,56 +5683,17 @@
     {
       "patternId": "@typescript-eslint_no-this-alias",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowDestructuring"
-        },
-        {
-          "name": "allowedNames"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-type-alias",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowAliases"
-        },
-        {
-          "name": "allowCallbacks"
-        },
-        {
-          "name": "allowConditionalTypes"
-        },
-        {
-          "name": "allowConstructors"
-        },
-        {
-          "name": "allowLiterals"
-        },
-        {
-          "name": "allowMappedTypes"
-        },
-        {
-          "name": "allowTupleTypes"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-condition",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowConstantLoopConditions"
-        },
-        {
-          "name": "ignoreRhs"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-qualifier",
@@ -8008,22 +5708,12 @@
     {
       "patternId": "@typescript-eslint_no-unnecessary-type-assertion",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "typesToIgnore"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-untyped-public-signature",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoredMethods"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-unused-vars",
@@ -8038,31 +5728,12 @@
     {
       "patternId": "@typescript-eslint_no-unused-vars-experimental",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoredNamesRegex"
-        },
-        {
-          "name": "ignoreArgsIfArgsAfterAreUsed"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-unused-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowShortCircuit"
-        },
-        {
-          "name": "allowTernary"
-        },
-        {
-          "name": "allowTaggedTemplates"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-use-before-define",
@@ -8107,15 +5778,7 @@
     {
       "patternId": "@typescript-eslint_prefer-nullish-coalescing",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreConditionalTests"
-        },
-        {
-          "name": "ignoreMixedLogicalExpressions"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_prefer-optional-chain",
@@ -8125,12 +5788,7 @@
     {
       "patternId": "@typescript-eslint_prefer-readonly",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "onlyInlineLambdas"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_prefer-regexp-exec",
@@ -8145,39 +5803,13 @@
     {
       "patternId": "@typescript-eslint_promise-function-async",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowAny"
-        },
-        {
-          "name": "allowedPromiseNames"
-        },
-        {
-          "name": "checkArrowFunctions"
-        },
-        {
-          "name": "checkFunctionDeclarations"
-        },
-        {
-          "name": "checkFunctionExpressions"
-        },
-        {
-          "name": "checkMethodDeclarations"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_quotes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "avoidEscape"
-        },
-        {
-          "name": "allowTemplateLiterals"
-        },
         {
           "name": "unnamedParam"
         }
@@ -8196,28 +5828,12 @@
     {
       "patternId": "@typescript-eslint_restrict-plus-operands",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "checkCompoundAssignments"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_restrict-template-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "allowBoolean"
-        },
-        {
-          "name": "allowNullable"
-        },
-        {
-          "name": "allowNumber"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_return-await",
@@ -8252,85 +5868,27 @@
     {
       "patternId": "@typescript-eslint_strict-boolean-expressions",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreRhs"
-        },
-        {
-          "name": "allowNullable"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_triple-slash-reference",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "lib"
-        },
-        {
-          "name": "path"
-        },
-        {
-          "name": "types"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_type-annotation-spacing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "before"
-        },
-        {
-          "name": "after"
-        },
-        {
-          "name": "overrides"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_typedef",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "arrayDestructuring"
-        },
-        {
-          "name": "arrowParameter"
-        },
-        {
-          "name": "memberVariableDeclaration"
-        },
-        {
-          "name": "objectDestructuring"
-        },
-        {
-          "name": "parameter"
-        },
-        {
-          "name": "propertyDeclaration"
-        },
-        {
-          "name": "variableDeclaration"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_unbound-method",
       "level": "Info",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "ignoreStatic"
-        }
-      ]
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_unified-signatures",
@@ -8355,15 +5913,7 @@
     {
       "patternId": "relay_generated-flow-types",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "fix"
-        },
-        {
-          "name": "haste"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "relay_no-future-added-value",

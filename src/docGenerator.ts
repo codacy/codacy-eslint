@@ -95,20 +95,16 @@ function fromEslintSchemaToParameters(
     )
     const namedParameters = flatMap(objects, o => {
       const pairs = toPairs(o.properties)
-      return pairs.map(([k, v]) => {
-        const withDefault = v as WithDefault
-        return new PatternsParameter(
-          k,
-          v && withDefault.default ? withDefault.default : undefined
-        )
+      const haveDefault = pairs.filter(
+        ([k, v]) => v && (v as WithDefault) && v.default
+      ) as [string, WithDefault][]
+      return haveDefault.map(([k, v]) => {
+        return new PatternsParameter(k, v.default)
       })
     })
-    const unnamedParameters =
-      nonObject.length === 0 ? [] : [new PatternsParameter("unnamedParam")]
-    return namedParameters.concat(unnamedParameters)
-  } else {
-    return [new PatternsParameter("unnamedParam")]
+    return namedParameters
   }
+  return []
 }
 
 function patternIdsWithoutPrefix(prefix: string): Array<string> {
