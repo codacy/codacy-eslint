@@ -88,11 +88,6 @@ function fromEslintSchemaToParameters(
     (<unknown>flatMapDeep(schema, anyOfToArray))
   )
 
-  console.log("schema: ")
-  console.log(schema)
-  console.log("flattenSchema: ")
-  console.log(flattenSchema)
-
   if (Array.isArray(flattenSchema)) {
     const [objects, nonObject] = partition(
       flattenSchema,
