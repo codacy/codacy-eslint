@@ -1969,73 +1969,73 @@
   },
   {
     "patternId": "node_no-unsupported-features_es-builtins",
-    "title": "Node: No unsupported features: Es builtins",
+    "title": "Node: [No unsupported features] Es builtins",
     "description": "Disallow unsupported ECMAScript built-ins on the specified version",
     "timeToFix": 5
   },
   {
     "patternId": "node_no-unsupported-features_es-syntax",
-    "title": "Node: No unsupported features: Es syntax",
+    "title": "Node: [No unsupported features] Es syntax",
     "description": "Disallow unsupported ECMAScript syntax on the specified version",
     "timeToFix": 5
   },
   {
     "patternId": "node_no-unsupported-features_node-builtins",
-    "title": "Node: No unsupported features: Node builtins",
+    "title": "Node: [No unsupported features] Node builtins",
     "description": "Disallow unsupported Node.js built-in APIs on the specified version",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_buffer",
-    "title": "Node: Prefer global: Buffer",
+    "title": "Node: [Prefer global] Buffer",
     "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_console",
-    "title": "Node: Prefer global: Console",
+    "title": "Node: [Prefer global] Console",
     "description": "Enforce either `console` or `require(\"console\")`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_process",
-    "title": "Node: Prefer global: Process",
+    "title": "Node: [Prefer global] Process",
     "description": "Enforce either `process` or `require(\"process\")`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_text-decoder",
-    "title": "Node: Prefer global: Text decoder",
+    "title": "Node: [Prefer global] Text decoder",
     "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_text-encoder",
-    "title": "Node: Prefer global: Text encoder",
+    "title": "Node: [Prefer global] Text encoder",
     "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_url-search-params",
-    "title": "Node: Prefer global: Url search params",
+    "title": "Node: [Prefer global] Url search params",
     "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-global_url",
-    "title": "Node: Prefer global: Url",
+    "title": "Node: [Prefer global] Url",
     "description": "Enforce either `URL` or `require(\"url\").URL`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-promises_dns",
-    "title": "Node: Prefer promises: Dns",
+    "title": "Node: [Prefer promises] Dns",
     "description": "Enforce `require(\"dns\").promises`",
     "timeToFix": 5
   },
   {
     "patternId": "node_prefer-promises_fs",
-    "title": "Node: Prefer promises: Fs",
+    "title": "Node: [Prefer promises] Fs",
     "description": "Enforce `require(\"fs\").promises`",
     "timeToFix": 5
   },

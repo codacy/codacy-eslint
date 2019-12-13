@@ -1,8 +1,8 @@
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep, toPairs } from "lodash"
 import fetch from "node-fetch"
-import { defaultEngine } from "./eslintDefaultOptions"
-import { DescriptionEntry } from "./model/Description"
+import { defaultEngine } from "../eslintDefaultOptions"
+import { DescriptionEntry } from "../model/Description"
 import {
   Category,
   fromEslintCategoryToCategory,
@@ -12,10 +12,9 @@ import {
   Patterns,
   PatternsEntry,
   PatternsParameter
-} from "./model/Patterns"
-import { toolName, toolVersion } from "./toolMetadata"
-import { writeFile } from "./fileUtils"
-import { capitalize, patternTitle } from "./docGeneratorStringUtils"
+} from "../model/Patterns"
+import { toolName, toolVersion } from "../toolMetadata"
+import { writeFile } from "../fileUtils"
 
 export function generatePatterns(): Patterns {
   const rules = defaultEngine.getRules()
@@ -41,6 +40,21 @@ export function generatePatterns(): Patterns {
   )
   const entries = patterns.filter(x => x !== null) as PatternsEntry[]
   return new Patterns(toolName, toolVersion, entries)
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+function patternTitle(patternId: string): string {
+  return patternId
+    .split("/")
+    .map(s =>
+      capitalize(s)
+        .split("-")
+        .join(" ")
+    )
+    .join(": ")
 }
 
 export function generateDescription(): DescriptionEntry[] {
@@ -111,24 +125,28 @@ function eslintPatternIds(): Array<string> {
   return Array.from(rules.keys()).filter(e => !e.includes("/"))
 }
 
+export function patternFilename(pattern: string, prefix: string): string {
+  return (
+    "docs/description/" +
+    (prefix.length > 0 ? prefix + "_" : "") +
+    patternIdToCodacy(pattern) +
+    ".md"
+  )
+}
+
 export function downloadDocs(
   urlFromPatternId: (patternId: string) => string,
   prefix: string = ""
-) {
+): Promise<string[]> {
   const patterns =
     prefix.length > 0 ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
-  const promises: Promise<void>[] = patterns.map(async pattern => {
+  const promises: Promise<string>[] = patterns.map(async pattern => {
     const url: string = urlFromPatternId(pattern)
     const result = await fetch(url)
     if (result.ok) {
       const text = await result.text()
-      const filename =
-        "docs/description/" +
-        (prefix.length > 0 ? prefix + "_" : "") +
-        patternIdToCodacy(pattern) +
-        ".md"
-      return writeFile(filename, text)
-    } else return Promise.resolve()
+      return text
+    } else return Promise.reject(`Failed to download docs for ${pattern}`)
   })
   return Promise.all(promises)
 }
