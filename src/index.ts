@@ -22,7 +22,7 @@ async function run() {
 
   options.cwd = srcDirPath
 
-  const filesToAnalyze = files ? files : ["/src/**"]
+  const filesToAnalyze = files.length > 0 ? files : ["/src/**"]
 
   const engine = new CLIEngine(options)
 

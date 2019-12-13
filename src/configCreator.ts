@@ -61,8 +61,8 @@ async function createOptions(
 export async function configCreator(
   srcDirPath: string,
   codacyInput?: Codacyrc
-): Promise<[CLIEngine.Options, string[]?]> {
+): Promise<[CLIEngine.Options, string[]]> {
   const options = createOptions(srcDirPath, codacyInput)
-  const files = codacyInput && codacyInput.files ? codacyInput.files : undefined
+  const files = codacyInput && codacyInput.files ? codacyInput.files : []
   return [await options, files]
 }
