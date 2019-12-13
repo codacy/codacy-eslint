@@ -1,8 +1,6 @@
-import fs from "fs"
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep, partition, toPairs } from "lodash"
 import fetch from "node-fetch"
-import { promisify } from "util"
 import { defaultEngine } from "./eslintDefaultOptions"
 import { DescriptionEntry } from "./model/Description"
 import {
@@ -16,8 +14,7 @@ import {
   PatternsParameter
 } from "./model/Patterns"
 import { toolName, toolVersion } from "./toolMetadata"
-
-const writeFile = promisify(fs.writeFile)
+import { writeFile } from "./fileUtils"
 
 export function generatePatterns(): Patterns {
   const rules = defaultEngine.getRules()
@@ -89,10 +86,7 @@ function fromEslintSchemaToParameters(
   )
 
   if (Array.isArray(flattenSchema)) {
-    const [objects, nonObject] = partition(
-      flattenSchema,
-      value => value && value.properties
-    )
+    const objects = flattenSchema.filter(value => value && value.properties)
     const namedParameters = flatMap(objects, o => {
       const pairs = toPairs(o.properties)
       const haveDefault = pairs.filter(
@@ -126,9 +120,10 @@ function eslintPatternIds(): Array<string> {
 
 export function downloadDocs(
   urlFromPatternId: (patternId: string) => string,
-  prefix: string | undefined = undefined
+  prefix: string = ""
 ) {
-  const patterns = prefix ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
+  const patterns =
+    prefix.length > 0 ? patternIdsWithoutPrefix(prefix) : eslintPatternIds()
   const promises: Promise<void>[] = patterns.map(async pattern => {
     const url: string = urlFromPatternId(pattern)
     const result = await fetch(url)
@@ -136,7 +131,7 @@ export function downloadDocs(
       const text = await result.text()
       const filename =
         "docs/description/" +
-        (prefix ? prefix + "_" : "") +
+        (prefix.length > 0 ? prefix + "_" : "") +
         patternIdToCodacy(pattern) +
         ".md"
       return writeFile(filename, text)

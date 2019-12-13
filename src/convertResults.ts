@@ -6,10 +6,9 @@ import { patternIdToCodacy } from "./model/Patterns"
 export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {
   return flatMap(report.results, result => {
     const filename = result.filePath
-    const pairs = result.messages.map(m => [m.ruleId, m]).filter(t => t[0]) as [
-      string,
-      Linter.LintMessage
-    ][]
+    const pairs = result.messages
+      .map(m => [m.ruleId, m])
+      .filter(([ruleId, _message]) => ruleId) as [string, Linter.LintMessage][]
     return pairs.map(([ruleId, m]) => {
       const line = m.line
       const message = m.message
