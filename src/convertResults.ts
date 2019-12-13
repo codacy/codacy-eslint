@@ -8,7 +8,7 @@ export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {
     const filename = result.filePath
     const pairs = result.messages
       .map(m => [m.ruleId, m])
-      .filter(([ruleId, _message]) => ruleId) as [string, Linter.LintMessage][]
+      .filter(([ruleId, _m]) => ruleId) as [string, Linter.LintMessage][]
     return pairs.map(([ruleId, m]) => {
       const line = m.line
       const message = m.message

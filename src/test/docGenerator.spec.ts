@@ -3,7 +3,7 @@ import {
   generateDescription,
   generatePatterns
 } from "../docGenerator"
-import { writeFile } from "../promisified"
+import { writeFile } from "../fileUtils"
 import { EOL } from "os"
 
 describe("docGenerator", () => {
