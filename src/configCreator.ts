@@ -44,7 +44,7 @@ async function createOptions(
       const patterns = eslintTool.patterns
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
-        result.baseConfig.extends = [] // TODO: Maintain base configurations without rules
+        result.baseConfig.extends = []
         result.baseConfig.overrides.extends = []
         result.baseConfig.rules = patternsToRules(patterns)
       }
