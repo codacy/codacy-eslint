@@ -52,10 +52,7 @@ async function createOptions(
       return result
     }
   }
-  const fileNames = await allFilesNames(srcDirPath)
-  if (fileNames.find(name => name.startsWith(".eslintrc")) !== undefined)
-    return {}
-  else return defaultOptions
+  return {}
 }
 
 export async function configCreator(
