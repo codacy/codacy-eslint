@@ -2,6 +2,7 @@ import { DocGenerator } from "../DocGenerator"
 import { writeFile } from "../fileUtils"
 import { EOL } from "os"
 import { defaultEngine } from "../eslintDefaultOptions"
+import { DescriptionEntry } from "../model/Description"
 
 const docGenerator = new DocGenerator(defaultEngine.getRules())
 
@@ -15,7 +16,7 @@ describe("DocGenerator", () => {
     )
   })
   it("should generate description.json", () => {
-    const patterns = docGenerator.generateDescription()
+    const patterns: DescriptionEntry[] = docGenerator.generateDescriptionEntries()
 
     return writeFile(
       "docs/description/description.json",

@@ -50,8 +50,9 @@ export class DocGenerator {
     return new Patterns(toolName, toolVersion, entries)
   }
 
-  generateDescription(): DescriptionEntry[] {
-    const descriptionEntries = Array.from(this.rules.entries()).map(
+  generateDescriptionEntries(): DescriptionEntry[] {
+    return flatMap(
+      Array.from(this.rules.entries()),
       ([patternId, ruleModule]) => {
         const eslintDescription =
           ruleModule && ruleModule.meta && ruleModule.meta.docs
@@ -70,7 +71,6 @@ export class DocGenerator {
         )
       }
     )
-    return descriptionEntries.filter(x => x !== null) as DescriptionEntry[]
   }
 
   private fromEslintSchemaToParameters(
@@ -124,7 +124,10 @@ export class DocGenerator {
           patternIdToCodacy(pattern) +
           ".md"
         return writeFile(filename, text)
-      } else return Promise.reject(`Failed to retrieve docs for ${pattern}`)
+      } else
+        return Promise.reject(
+          `Failed to retrieve docs for ${pattern} from ${url}`
+        )
     })
     return Promise.all(promises)
   }
