@@ -76,9 +76,8 @@ export class DocGenerator {
   private fromEslintSchemaToParameters(
     schema: JSONSchema4 | JSONSchema4[]
   ): PatternsParameter[] {
-    const anyOfToArray = (schema: JSONSchema4) => {
-      return schema.anyOf ? schema.anyOf : [schema]
-    }
+    const anyOfToArray = (schema: JSONSchema4) =>
+      schema.anyOf ? schema.anyOf : [schema]
 
     const flattenSchema = <JSONSchema4[]>(
       (<unknown>flatMapDeep(schema, anyOfToArray))
@@ -87,8 +86,7 @@ export class DocGenerator {
     if (Array.isArray(flattenSchema)) {
       const objects = flattenSchema.filter(value => value && value.properties)
       return fromSchemaArray(objects)
-    }
-    return []
+    } else return []
   }
 
   private patternIdsWithoutPrefix(prefix: string): Array<string> {

@@ -89,7 +89,7 @@ describe("fileUtils", () => {
     })
     it("should parse a codacyrc file with no tools", () => {
       const codacyrcFileContent = `{
-      "files" : ["foo/bar/baz.js", "foo2/bar/baz.php"],
+      "files" : ["foo/bar/baz.js", "foo2/bar/baz.php"]
     }`
       const parsed = parseCodacyrcFile(codacyrcFileContent)
       const expected: Codacyrc = {
