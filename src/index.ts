@@ -16,7 +16,7 @@ async function run() {
 
   const srcDirPath = "/src"
 
-  const [options, files] = await configCreator(srcDirPath, codacyrc)
+  const [options, files] = await configCreator(codacyrc)
 
   options.resolvePluginsRelativeTo = "."
 

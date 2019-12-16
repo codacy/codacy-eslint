@@ -4,7 +4,6 @@ import { Codacyrc, Pattern } from "./model/CodacyInput"
 import { toolName } from "./toolMetadata"
 import { patternIdToEslint } from "./model/Patterns"
 import { cloneDeep, isEmpty, partition, fromPairs } from "lodash"
-import { allFilesNames } from "./fileUtils"
 
 function patternsToRules(
   patterns: Pattern[]
@@ -35,7 +34,6 @@ function patternsToRules(
 }
 
 async function createOptions(
-  srcDirPath: string,
   codacyInput?: Codacyrc
 ): Promise<CLIEngine.Options> {
   if (codacyInput && codacyInput.tools) {
@@ -56,10 +54,9 @@ async function createOptions(
 }
 
 export async function configCreator(
-  srcDirPath: string,
   codacyInput?: Codacyrc
 ): Promise<[CLIEngine.Options, string[]]> {
-  const options = createOptions(srcDirPath, codacyInput)
+  const options = createOptions(codacyInput)
   const files = codacyInput && codacyInput.files ? codacyInput.files : []
   return [await options, files]
 }
