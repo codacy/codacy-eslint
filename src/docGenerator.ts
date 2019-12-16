@@ -12,7 +12,7 @@ import {
   PatternsEntry,
   PatternsParameter
 } from "./model/Patterns"
-import { fromSchemaArray } from "./NamedParameters"
+import { fromSchemaArray } from "./namedParameters"
 import { toolName, toolVersion } from "./toolMetadata"
 import { writeFile } from "./fileUtils"
 import { capitalize, patternTitle } from "./DocGeneratorStringUtils"
