@@ -1,5 +1,5 @@
 import { JSONSchema4 } from "json-schema"
-import { flatMap, flatMapDeep, toPairs } from "lodash"
+import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { DescriptionEntry } from "./model/Description"
 import {
@@ -12,12 +12,11 @@ import {
   PatternsEntry,
   PatternsParameter
 } from "./model/Patterns"
+import { fromSchemaArray } from "./namedParameters"
 import { toolName, toolVersion } from "./toolMetadata"
 import { writeFile } from "./fileUtils"
 import { capitalize, patternTitle } from "./DocGeneratorStringUtils"
 import { Rule } from "eslint"
-
-type WithDefault = { default: any }
 export class DocGenerator {
   private readonly rules: Map<string, Rule.RuleModule>
 
@@ -87,16 +86,7 @@ export class DocGenerator {
 
     if (Array.isArray(flattenSchema)) {
       const objects = flattenSchema.filter(value => value && value.properties)
-      const namedParameters = flatMap(objects, o => {
-        const pairs = toPairs(o.properties)
-        const haveDefault = pairs.filter(
-          ([k, v]) => v && (v as WithDefault) && v.default
-        ) as [string, WithDefault][]
-        return haveDefault.map(([k, v]) => {
-          return new PatternsParameter(k, v.default)
-        })
-      })
-      return namedParameters
+      return fromSchemaArray(objects)
     }
     return []
   }
