@@ -1,11 +1,34 @@
-Nesting ternary expressions makes code unclear. The no-nested-ternary rule disallows the use of nested ternary expressions. The no-nested-ternary rule aims to increase the clarity and readability of code by disallowing the use of nested ternary expressions.
+# disallow nested ternary expressions (no-nested-ternary)
 
+Nesting ternary expressions can make code more difficult to understand.
 
-```
-//Bad:
+```js
 var foo = bar ? baz : qux === quxx ? bing : bam;
+```
 
-//Good
+## Rule Details
+
+The `no-nested-ternary` rule disallows nested ternary expressions.
+
+Examples of **incorrect** code for this rule:
+
+```js
+/*eslint no-nested-ternary: "error"*/
+
+var thing = foo ? bar : baz === qux ? quxx : foobar;
+
+foo ? baz === qux ? quxx() : foobar() : bar();
+```
+
+Examples of **correct** code for this rule:
+
+```js
+/*eslint no-nested-ternary: "error"*/
+
+var thing = foo ? bar : foobar;
+
+var thing;
+
 if (foo) {
   thing = bar;
 } else if (baz === qux) {
@@ -13,7 +36,9 @@ if (foo) {
 } else {
   thing = foobar;
 }
-
 ```
 
-[Source](http://eslint.org/docs/rules/no-nested-ternary)
+## Related Rules
+
+* [no-ternary](no-ternary.md)
+* [no-unneeded-ternary](no-unneeded-ternary.md)

@@ -1,18 +1,44 @@
-Empty character classes in regular expressions do not match anything and can result in code that may not work as intended.
-This rule is aimed at highlighting possible typos and unexpected behavior in regular expressions which may arise from the use of empty character classes.
+# disallow empty character classes in regular expressions (no-empty-character-class)
 
-```
-//Bad:
-var foo = /^abc[]/;  /*error Empty class.*/
-/^abc[]/.test(foo);  /*error Empty class.*/
-bar.match(/^abc[]/); /*error Empty class.*/
+Because empty character classes in regular expressions do not match anything, they might be typing mistakes.
 
-//Good:
-var foo = /^abc/;
-var foo = /^abc[a-z]/;
-var bar = new RegExp("^abc[]");
-
-
+```js
+var foo = /^abc[]/;
 ```
 
-[Source](http://eslint.org/docs/rules/no-empty-character-class)
+## Rule Details
+
+This rule disallows empty character classes in regular expressions.
+
+Examples of **incorrect** code for this rule:
+
+```js
+/*eslint no-empty-character-class: "error"*/
+
+/^abc[]/.test("abcdefg"); // false
+"abcdefg".match(/^abc[]/); // null
+```
+
+Examples of **correct** code for this rule:
+
+```js
+/*eslint no-empty-character-class: "error"*/
+
+/^abc/.test("abcdefg"); // true
+"abcdefg".match(/^abc/); // ["abc"]
+
+/^abc[a-z]/.test("abcdefg"); // true
+"abcdefg".match(/^abc[a-z]/); // ["abcd"]
+```
+
+## Known Limitations
+
+This rule does not report empty character classes in the string argument of calls to the `RegExp` constructor.
+
+Example of a *false negative* when this rule reports correct code:
+
+```js
+/*eslint no-empty-character-class: "error"*/
+
+var abcNeverMatches = new RegExp("^abc[]");
+```

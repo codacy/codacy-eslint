@@ -1,17 +1,91 @@
-A switch statements with duplicate case labels is normally an indication of a programmer error.
-In the following example the 3rd case label uses again the literal 1 that has already been used in the first case label. Most likely the case block was copied from above and it was forgotten to change the literal.
-This inspection reports any duplicated case labels on JavaScript switch statements.
+# Rule to disallow a duplicate case label (no-duplicate-case)
 
-```
-//Bad:
-var a = 1;
+If a `switch` statement has duplicate test expressions in `case` clauses, it is likely that a programmer copied a `case` clause but forgot to change the test expression.
+
+## Rule Details
+
+This rule disallows duplicate test expressions in `case` clauses of `switch` statements.
+
+Examples of **incorrect** code for this rule:
+
+```js
+/*eslint no-duplicate-case: "error"*/
+
+var a = 1,
+    one = 1;
+
 switch (a) {
-	case 1: break;
-	case 2: break;
-	case 1:
-	default: break;
+    case 1:
+        break;
+    case 2:
+        break;
+    case 1:         // duplicate test expression
+        break;
+    default:
+        break;
 }
 
+switch (a) {
+    case one:
+        break;
+    case 2:
+        break;
+    case one:         // duplicate test expression
+        break;
+    default:
+        break;
+}
+
+switch (a) {
+    case "1":
+        break;
+    case "2":
+        break;
+    case "1":         // duplicate test expression
+        break;
+    default:
+        break;
+}
 ```
 
-[Source](http://eslint.org/docs/rules/no-duplicate-case)
+Examples of **correct** code for this rule:
+
+```js
+/*eslint no-duplicate-case: "error"*/
+
+var a = 1,
+    one = 1;
+
+switch (a) {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+        break;
+}
+
+switch (a) {
+    case one:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+        break;
+}
+
+switch (a) {
+    case "1":
+        break;
+    case "2":
+        break;
+    case "3":
+        break;
+    default:
+        break;
+}
+```

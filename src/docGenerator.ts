@@ -125,7 +125,7 @@ export class DocGenerator {
           patternIdToCodacy(pattern) +
           ".md"
         return writeFile(filename, text)
-      } else return Promise.resolve()
+      } else return Promise.reject(`Failed to retrieve docs for ${pattern}`)
     })
     return Promise.all(promises)
   }

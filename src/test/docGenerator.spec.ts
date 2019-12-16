@@ -28,7 +28,7 @@ describe("DocGenerator", () => {
   it("should generate eslint description files", () => {
     return docGenerator.downloadDocs(
       pattern =>
-        `${githubBaseUrl}/eslint/eslint/blob/master/docs/rules/${pattern}.md`
+        `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
     )
   })
 

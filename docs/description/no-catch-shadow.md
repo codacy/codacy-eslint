@@ -71,5 +71,3 @@ try {
 ## When Not To Use It
 
 If you do not need to support IE 8 and earlier, you should turn this rule off.
-
-[Source](http://eslint.org/docs/rules/no-catch-shadow)

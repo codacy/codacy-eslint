@@ -1,14 +1,59 @@
-JavaScript allows the omission of parentheses when invoking a function via the new keyword and the constructor has no arguments. However, some coders believe that omitting the parentheses is inconsistent with the rest of the language and thus makes code less clear.
-This rule is aimed at highlighting a lack of convention and increasing code clarity by requiring the use of parentheses when invoking a constructor via the new keyword. As such, it will warn when these parentheses are omitted.
+# require parentheses when invoking a constructor with no arguments (new-parens)
 
+JavaScript allows the omission of parentheses when invoking a function via the `new` keyword and the constructor has no arguments. However, some coders believe that omitting the parentheses is inconsistent with the rest of the language and thus makes code less clear.
 
-```
-//Bad:
+```js
 var person = new Person;
-
-//Good:
-var person = new Person();
-
 ```
 
-[Source](http://eslint.org/docs/rules/new-parens)
+## Rule Details
+
+This rule can enforce or disallow parentheses when invoking a constructor with no arguments using the `new` keyword.
+
+## Options
+
+This rule takes one option.
+
+- `"always"` enforces parenthesis after a new constructor with no arguments (default)
+- `"never"` enforces no parenthesis after a new constructor with no arguments
+
+### always
+
+Examples of **incorrect** code for this rule with the `"always"` option:
+
+```js
+/*eslint new-parens: "error"*/
+
+var person = new Person;
+var person = new (Person);
+```
+
+Examples of **correct** code for this rule with the `"always"` option:
+
+```js
+/*eslint new-parens: "error"*/
+
+var person = new Person();
+var person = new (Person)();
+```
+
+### never
+
+Examples of **incorrect** code for this rule with the `"never"` option:
+
+```js
+/*eslint new-parens: ["error", "never"]*/
+
+var person = new Person();
+var person = new (Person)();
+```
+
+Examples of **correct** code for this rule with the `"never"` option:
+
+```js
+/*eslint new-parens: ["error", "never"]*/
+
+var person = new Person;
+var person = (new Person);
+var person = new Person("Name");
+```
