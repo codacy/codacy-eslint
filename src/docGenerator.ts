@@ -1,5 +1,5 @@
 import { JSONSchema4 } from "json-schema"
-import { flatMapDeep } from "lodash"
+import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { DescriptionEntry } from "./model/Description"
 import {
@@ -12,7 +12,7 @@ import {
   PatternsEntry,
   PatternsParameter
 } from "./model/Patterns"
-import { fromSchemaArray } from "./namedParameters"
+import { fromSchemaArray } from "./NamedParameters"
 import { toolName, toolVersion } from "./toolMetadata"
 import { writeFile } from "./fileUtils"
 import { capitalize, patternTitle } from "./DocGeneratorStringUtils"
@@ -25,7 +25,8 @@ export class DocGenerator {
   }
 
   generatePatterns(): Patterns {
-    const patterns = Array.from(this.rules.entries()).map(
+    const entries = flatMap(
+      Array.from(this.rules.entries()),
       ([patternId, ruleModule]) => {
         const meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
         const eslintCategory =
@@ -46,7 +47,6 @@ export class DocGenerator {
         )
       }
     )
-    const entries = patterns.filter(x => x !== null) as PatternsEntry[]
     return new Patterns(toolName, toolVersion, entries)
   }
 
