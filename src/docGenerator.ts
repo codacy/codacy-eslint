@@ -101,7 +101,8 @@ export class DocGenerator {
   }
 
   private eslintPatternIds(): Array<string> {
-    // All third party plugins' rules start with plugin's name followed by slash
+    // We take all the patterns except those that have slashes because
+    // they come from third party plugins
     return Array.from(this.rules.keys()).filter(e => !e.includes("/"))
   }
 
