@@ -120,8 +120,7 @@
       "ts"
     ],
     "spec": "src/test/**/*.spec.ts",
-    "require": "ts-node/register",
-    "timeout": 10000
+    "require": "ts-node/register"
   },
   "lint-staged": {
     "src/*.{ts,js,css,json,md}": [

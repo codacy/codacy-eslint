@@ -10,6 +10,8 @@ COPY . .
 
 RUN npm run compile
 
+RUN node dist/src/docGeneratorMain.js
+
 RUN npm test
 
 FROM node:$NODE_IMAGE_VERSION
