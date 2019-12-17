@@ -17,9 +17,6 @@ export function parseTimeoutSeconds(timeoutString?: string): number {
     case "minute":
     case "minutes":
       return number * 60
-    case "hour":
-    case "hours":
-      return number * 60 * 60
     default:
       return defaultTimeout
   }
