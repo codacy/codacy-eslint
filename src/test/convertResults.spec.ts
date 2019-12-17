@@ -1,7 +1,7 @@
 import { convertResults } from "../convertResults"
 import { deepEqual } from "assert"
 import { CLIEngine } from "eslint"
-import { CodacyResult } from "../model/CodacyResult"
+import { CodacyResult } from "../model/codacyResult"
 
 describe("convertResults", () => {
   it("should convert a Eslint report into Codacy results", () => {

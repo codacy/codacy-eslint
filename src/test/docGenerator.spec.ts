@@ -1,8 +1,8 @@
-import { DocGenerator } from "../DocGenerator"
+import { DocGenerator } from "../docGenerator"
 import { writeFile } from "../fileUtils"
 import { EOL } from "os"
 import { defaultEngine } from "../eslintDefaultOptions"
-import { DescriptionEntry } from "../model/Description"
+import { DescriptionEntry } from "../model/description"
 
 const docGenerator = new DocGenerator(defaultEngine.getRules())
 

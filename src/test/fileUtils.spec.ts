@@ -1,6 +1,6 @@
 import { parseCodacyrcFile } from "../fileUtils"
 import { deepEqual } from "assert"
-import { Codacyrc } from "../model/CodacyInput"
+import { Codacyrc } from "../model/codacyInput"
 import chai from "chai"
 
 describe("fileUtils", () => {

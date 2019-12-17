@@ -1,7 +1,7 @@
 import fs from "fs"
 import { promisify } from "util"
 import { walk as fsWalk } from "@nodelib/fs.walk"
-import { Codacyrc } from "./model/CodacyInput"
+import { Codacyrc } from "./model/codacyInput"
 
 export const readFile = promisify(fs.readFile)
 export const writeFile = promisify(fs.writeFile)
