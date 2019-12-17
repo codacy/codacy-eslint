@@ -1,4 +1,4 @@
-import { DocGenerator } from "./DocGenerator"
+import { DocGenerator } from "./docGenerator"
 import { writeFile } from "./fileUtils"
 import { EOL } from "os"
 import { defaultEngine } from "./eslintDefaultOptions"
@@ -25,7 +25,6 @@ async function main() {
   )
 
   console.log("Generate vue description files")
-
   await docGenerator.downloadDocs(
     pattern =>
       `${githubBaseUrl}/vuejs/eslint-plugin-vue/master/docs/rules/${pattern}.md`,

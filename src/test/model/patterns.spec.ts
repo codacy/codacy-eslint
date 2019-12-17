@@ -1,4 +1,4 @@
-import { patternIdToCodacy, patternIdToEslint } from "../../model/Patterns"
+import { patternIdToCodacy, patternIdToEslint } from "../../model/patterns"
 import { equal } from "assert"
 
 describe("Patterns", () => {

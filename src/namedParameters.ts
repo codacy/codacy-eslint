@@ -1,6 +1,6 @@
 import { JSONSchema4 } from "json-schema"
 import { flatMap, toPairs } from "lodash"
-import { PatternsParameter } from "./model/Patterns"
+import { PatternsParameter } from "./model/patterns"
 
 export function fromSchemaArray(objects: JSONSchema4[]): PatternsParameter[] {
   return flatMap(objects, o => {

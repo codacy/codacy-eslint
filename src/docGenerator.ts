@@ -1,7 +1,7 @@
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
-import { DescriptionEntry } from "./model/Description"
+import { DescriptionEntry } from "./model/description"
 import {
   Category,
   fromEslintCategoryToCategory,
@@ -11,11 +11,11 @@ import {
   Patterns,
   PatternsEntry,
   PatternsParameter
-} from "./model/Patterns"
+} from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { toolName, toolVersion } from "./toolMetadata"
 import { writeFile } from "./fileUtils"
-import { capitalize, patternTitle } from "./DocGeneratorStringUtils"
+import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import { Rule } from "eslint"
 export class DocGenerator {
   private readonly rules: Map<string, Rule.RuleModule>
