@@ -24,7 +24,8 @@
   },
   "scripts": {
     "compile": "tsc",
-    "test": "mocha"
+    "test": "mocha",
+    "generateDocs": "npm run compile && node dist/src/docGeneratorMain.js"
   },
   "prettier": {
     "semi": false
@@ -75,6 +76,7 @@
     "eslint-import-resolver-node": "^0.3.2",
     "eslint-import-resolver-webpack": "^0.12.0",
     "eslint-plugin-angular": "^4.0.1",
+    "eslint-plugin-angularjs-security-rules": "^1.0.7",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-backbone": "^2.1.1",
     "eslint-plugin-chai": "0.0.1",

@@ -5440,5 +5440,101 @@
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "xss_no-location-href-assign",
+    "title": "Xss: No location href assign",
+    "description": "Disallow location.href assignment (prevent possible XSS)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "xss_no-mixed-html",
+    "title": "Xss: No mixed html",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-element-methods",
+    "title": "Angularjs security rules: Detect angular element methods",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-open-redirect",
+    "title": "Angularjs security rules: Detect angular open redirect",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-orderBy-expressions",
+    "title": "Angularjs security rules: Detect angular orderBy expressions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-resource-loading",
+    "title": "Angularjs security rules: Detect angular resource loading",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-sce-disabled",
+    "title": "Angularjs security rules: Detect angular sce disabled",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-scope-expressions",
+    "title": "Angularjs security rules: Detect angular scope expressions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-service-expressions",
+    "title": "Angularjs security rules: Detect angular service expressions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAs-methods",
+    "title": "Angularjs security rules: Detect angular trustAs methods",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAsCss-method",
+    "title": "Angularjs security rules: Detect angular trustAsCss method",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAsHtml-method",
+    "title": "Angularjs security rules: Detect angular trustAsHtml method",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAsJs-method",
+    "title": "Angularjs security rules: Detect angular trustAsJs method",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAsResourceUrl-method",
+    "title": "Angularjs security rules: Detect angular trustAsResourceUrl method",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-angular-trustAsUrl-method",
+    "title": "Angularjs security rules: Detect angular trustAsUrl method",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "angularjs-security-rules_detect-third-party-angular-translate",
+    "title": "Angularjs security rules: Detect third party angular translate",
+    "description": "",
+    "timeToFix": 5
   }
 ]

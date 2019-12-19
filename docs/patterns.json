@@ -2494,7 +2494,8 @@
     {
       "patternId": "security_detect-object-injection",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "Injection"
     },
     {
       "patternId": "security_detect-new-buffer",
@@ -5428,6 +5429,88 @@
       "patternId": "relay_hook-required-argument",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "xss_no-location-href-assign",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "XSS"
+    },
+    {
+      "patternId": "xss_no-mixed-html",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "XSS"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-element-methods",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-open-redirect",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-orderBy-expressions",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-resource-loading",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-sce-disabled",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-scope-expressions",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-service-expressions",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAs-methods",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAsCss-method",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAsHtml-method",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAsJs-method",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAsResourceUrl-method",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-angular-trustAsUrl-method",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "angularjs-security-rules_detect-third-party-angular-translate",
+      "level": "Info",
+      "category": "Security"
     }
   ]
 }

@@ -11,28 +11,43 @@ export type Category =
   | "Documentation"
   | "BestPractice"
 
-export function fromEslintCategoryToCategory(category?: string): Category {
+export type SecuritySubcategory =
+  | "Injection"
+  | "BrokenAuth"
+  | "SensitiveData"
+  | "XXE"
+  | "BrokenAccess"
+  | "Misconfiguration"
+  | "XSS"
+  | "BadDeserialization"
+  | "VulnerableComponent"
+  | "NoLogging"
+
+export function fromEslintPatternIdAndCategoryToCategory(patternId: string, category?: string): [Category, SecuritySubcategory | undefined] {
+  if(patternId.includes("xss")) return ["Security", "XSS"]
+  if(patternId.includes("injection")) return ["Security", "Injection"]
+  if(patternId.includes("security")) return ["Security", undefined]
   switch (category) {
     case "Possible Errors":
-      return "ErrorProne"
+      return ["ErrorProne", undefined]
     case "Best Practices":
-      return "BestPractice"
+      return ["BestPractice", undefined]
     case "Strict Mode":
-      return "BestPractice"
+      return ["BestPractice", undefined]
     case "Variables":
-      return "CodeStyle"
+      return ["CodeStyle", undefined]
     case "Node.js and CommonJS":
-      return "BestPractice"
+      return ["BestPractice", undefined]
     case "Stylistic Issues":
-      return "CodeStyle"
+      return ["CodeStyle", undefined]
     case "ECMAScript 6":
-      return "BestPractice"
+      return ["BestPractice", undefined]
     case "Deprecated":
-      return "Compatibility"
+      return ["Compatibility", undefined]
     case "Removed":
-      return "Compatibility"
+      return ["Compatibility", undefined]
     default:
-      return "CodeStyle"
+      return ["CodeStyle", undefined]
   }
 }
 
@@ -82,17 +97,20 @@ export class PatternsEntry {
   patternId: string
   level: Level
   category: Category
+  subcategory?: SecuritySubcategory
   parameters?: PatternsParameter[]
 
   constructor(
     patternId: string,
     level: Level,
     category: Category,
+    subcategory?: SecuritySubcategory,
     parameters?: PatternsParameter[]
   ) {
     this.patternId = patternId
     this.level = level
     this.category = category
+    this.subcategory = subcategory
     this.parameters = parameters
   }
 }
