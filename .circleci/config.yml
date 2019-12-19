@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@1.1.0
+  codacy: codacy/base@1.2.0
   codacy_plugins_test: codacy/plugins-test@0.6.6
 
 jobs:
@@ -24,8 +24,7 @@ workflows:
   version: 2
   compile_test_deploy:
     jobs:
-      - codacy/checkout_and_version:
-          write_sbt_version: true
+      - codacy/checkout_and_version
       - publish_docker_local:
           requires:
             - codacy/checkout_and_version
@@ -35,7 +34,7 @@ workflows:
           run_multiple_tests: true
           requires:
             - publish_docker_local
-      - codacy/sbt:
+      - codacy/shell:
           name: publish_dockerhub
           context: CodacyDocker
           cmd: |
