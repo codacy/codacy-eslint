@@ -4,7 +4,7 @@ import fetch from "node-fetch"
 import { DescriptionEntry } from "./model/description"
 import {
   Category,
-  fromEslintCategoryToCategory,
+  fromEslintPatternIdAndCategoryToCategory,
   fromEslintCategoryToLevel,
   Level,
   patternIdToCodacy,
@@ -32,9 +32,10 @@ export class DocGenerator {
         const eslintCategory =
           meta && meta.docs ? meta.docs.category : undefined
         const level: Level = fromEslintCategoryToLevel(eslintCategory)
-        const category: Category = patternId.includes("security")
-          ? "Security"
-          : fromEslintCategoryToCategory(eslintCategory)
+        const [
+          category,
+          subcategory
+        ] = fromEslintPatternIdAndCategoryToCategory(patternId, eslintCategory)
         const parameters =
           meta && meta.schema
             ? this.fromEslintSchemaToParameters(meta.schema)
@@ -43,6 +44,7 @@ export class DocGenerator {
           patternIdToCodacy(patternId),
           level,
           category,
+          subcategory,
           parameters && parameters.length > 0 ? parameters : undefined
         )
       }

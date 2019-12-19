@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run compile
 
-RUN node dist/src/docGeneratorMain.js
+RUN npm run generateDocs
 
 RUN npm test
 

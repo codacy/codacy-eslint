@@ -64,6 +64,13 @@ async function main() {
       `${githubBaseUrl}/ilyavolodin/eslint-plugin-backbone/master/docs/rules/${pattern}.md`,
     "backbone"
   )
+
+  console.log("Generate xss description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
+    "xss"
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

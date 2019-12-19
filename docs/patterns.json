@@ -2494,7 +2494,8 @@
     {
       "patternId": "security_detect-object-injection",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "Injection"
     },
     {
       "patternId": "security_detect-new-buffer",
@@ -5428,6 +5429,18 @@
       "patternId": "relay_hook-required-argument",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "xss_no-location-href-assign",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "XSS"
+    },
+    {
+      "patternId": "xss_no-mixed-html",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "XSS"
     }
   ]
 }

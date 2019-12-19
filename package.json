@@ -24,7 +24,8 @@
   },
   "scripts": {
     "compile": "tsc",
-    "test": "mocha"
+    "test": "mocha",
+    "generateDocs": "npm run compile && node dist/src/docGeneratorMain.js"
   },
   "prettier": {
     "semi": false

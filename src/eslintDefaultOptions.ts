@@ -46,7 +46,8 @@ export const defaultOptions: CLIEngine.Options = {
       "standard",
       "vue",
       "@typescript-eslint",
-      "relay"
+      "relay",
+      "xss"
     ],
     parser: "babel-eslint",
     overrides: [

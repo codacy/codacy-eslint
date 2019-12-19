@@ -5440,5 +5440,17 @@
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "xss_no-location-href-assign",
+    "title": "Xss: No location href assign",
+    "description": "Disallow location.href assignment (prevent possible XSS)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "xss_no-mixed-html",
+    "title": "Xss: No mixed html",
+    "description": "",
+    "timeToFix": 5
   }
 ]
