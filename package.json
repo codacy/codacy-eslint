@@ -24,13 +24,41 @@
   },
   "scripts": {
     "compile": "tsc",
-    "test": "mocha",
-    "generateDocs": "npm run compile && node dist/src/docGeneratorMain.js"
+    "generateDocs": "npm run compile && node dist/src/docGeneratorMain.js",
+    "test": "mocha"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.{ts,js,css,json,md}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "prettier": {
     "semi": false
   },
+  "mocha": {
+    "extension": [
+      "ts"
+    ],
+    "require": "ts-node/register",
+    "spec": "src/test/**/*.spec.ts"
+  },
   "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/plugin-syntax-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-object-assign": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/runtime": "^7.7.7",
     "@hapi/eslint-plugin-hapi": "^4.3.4",
     "@lwc/eslint-plugin-lwc": "^0.8.0",
     "@nodelib/fs.walk": "^1.2.4",
@@ -38,8 +66,14 @@
     "@react-native-community/eslint-config": "0.0.5",
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
@@ -123,6 +157,7 @@
     "eslint-plugin-vue": "^6.0.1",
     "eslint-plugin-wdio": "^5.13.2",
     "eslint-plugin-xss": "^0.1.9",
+    "jstransformer-babel": "^2.1.0",
     "node-fetch": "^2.6.0",
     "npm": "^6.13.4",
     "standard": "^14.3.1",
@@ -144,24 +179,5 @@
     "simple-mock": "^0.8.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "mocha": {
-    "extension": [
-      "ts"
-    ],
-    "spec": "src/test/**/*.spec.ts",
-    "require": "ts-node/register"
-  },
-  "lint-staged": {
-    "src/*.{ts,js,css,json,md}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ]
   }
 }
