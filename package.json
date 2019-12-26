@@ -66,7 +66,7 @@
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "0.0.5",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.12.0",
+    "@typescript-eslint/parser": "^2.13.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
