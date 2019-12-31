@@ -4506,9 +4506,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_component-definition-name-casing",
+    "title": "Vue: Component definition name casing",
+    "description": "Enforce specific casing for component definition name",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_component-name-in-template-casing",
     "title": "Vue: Component name in template casing",
     "description": "Enforce specific casing for the component naming style in template",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_component-tags-order",
+    "title": "Vue: Component tags order",
+    "description": "Enforce order of component top-level elements",
     "timeToFix": 5
   },
   {
@@ -4590,6 +4602,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_max-len",
+    "title": "Vue: Max len",
+    "description": "Enforce a maximum line length",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_multiline-html-element-content-newline",
     "title": "Vue: Multiline html element content newline",
     "description": "Require a line break before and after the contents of a multiline element",
@@ -4632,6 +4650,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_no-deprecated-slot-attribute",
+    "title": "Vue: No deprecated slot attribute",
+    "description": "Disallow deprecated `slot` attribute (in Vue.js 2.6.0+)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_no-deprecated-slot-scope-attribute",
+    "title": "Vue: No deprecated slot scope attribute",
+    "description": "Disallow deprecated `slot-scope` attribute (in Vue.js 2.6.0+)",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_no-dupe-keys",
     "title": "Vue: No dupe keys",
     "description": "Disallow duplication of field names",
@@ -4650,6 +4680,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_no-irregular-whitespace",
+    "title": "Vue: No irregular whitespace",
+    "description": "Disallow irregular whitespace",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_no-multi-spaces",
     "title": "Vue: No multi spaces",
     "description": "Disallow multiple spaces",
@@ -4659,6 +4695,12 @@
     "patternId": "vue_no-parsing-error",
     "title": "Vue: No parsing error",
     "description": "Disallow parsing errors in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_no-reserved-component-names",
+    "title": "Vue: No reserved component names",
+    "description": "Disallow the use of reserved names in component definitions",
     "timeToFix": 5
   },
   {
@@ -4692,6 +4734,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_no-static-inline-styles",
+    "title": "Vue: No static inline styles",
+    "description": "Disallow static inline `style` attributes",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_no-template-key",
     "title": "Vue: No template key",
     "description": "Disallow `key` attribute on `<template>`",
@@ -4707,6 +4755,12 @@
     "patternId": "vue_no-textarea-mustache",
     "title": "Vue: No textarea mustache",
     "description": "Disallow mustaches in `<textarea>`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_no-unsupported-features",
+    "title": "Vue: No unsupported features",
+    "description": "Disallow unsupported Vue.js syntax on the specified version",
     "timeToFix": 5
   },
   {
@@ -4770,6 +4824,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_require-name-property",
+    "title": "Vue: Require name property",
+    "description": "Require a name property in Vue components",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_require-prop-type-constructor",
     "title": "Vue: Require prop type constructor",
     "description": "Require prop type to be a constructor",
@@ -4830,6 +4890,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_static-class-names-order",
+    "title": "Vue: Static class names order",
+    "description": "Enforce static class names order",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_this-in-template",
     "title": "Vue: This in template",
     "description": "Disallow usage of `this` in template",
@@ -4869,6 +4935,12 @@
     "patternId": "vue_valid-template-root",
     "title": "Vue: Valid template root",
     "description": "Enforce valid template root",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_valid-v-bind-sync",
+    "title": "Vue: Valid v bind sync",
+    "description": "Enforce valid `.sync` modifier on `v-bind` directives",
     "timeToFix": 5
   },
   {
@@ -5112,6 +5184,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-extra-semi",
+    "title": "@typescript eslint: No extra semi",
+    "description": "Disallow unnecessary semicolons",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-extraneous-class",
     "title": "@typescript eslint: No extraneous class",
     "description": "Forbids the use of classes as namespaces",
@@ -5187,6 +5265,12 @@
     "patternId": "@typescript-eslint_no-type-alias",
     "title": "@typescript eslint: No type alias",
     "description": "Disallow the use of type aliases",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-throw-literal",
+    "title": "@typescript eslint: No throw literal",
+    "description": "Disallow throwing literals as exceptions",
     "timeToFix": 5
   },
   {

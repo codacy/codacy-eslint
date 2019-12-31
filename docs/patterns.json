@@ -29,7 +29,13 @@
     {
       "patternId": "array-bracket-spacing",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ]
     },
     {
       "patternId": "array-callback-return",
@@ -57,6 +63,10 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
         {
           "name": "requireForBlockBody",
           "default": false
@@ -86,7 +96,13 @@
     {
       "patternId": "block-spacing",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "brace-style",
@@ -132,7 +148,13 @@
     {
       "patternId": "comma-dangle",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ]
     },
     {
       "patternId": "comma-spacing",
@@ -152,18 +174,34 @@
     {
       "patternId": "comma-style",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "last"
+        }
+      ]
     },
     {
       "patternId": "complexity",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": 4
+        }
+      ]
     },
     {
       "patternId": "computed-property-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        },
         {
           "name": "enforceForClassMembers",
           "default": false
@@ -184,7 +222,13 @@
     {
       "patternId": "consistent-this",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "self"
+        }
+      ]
     },
     {
       "patternId": "constructor-super",
@@ -194,7 +238,13 @@
     {
       "patternId": "curly",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "all"
+        }
+      ]
     },
     {
       "patternId": "default-case",
@@ -209,7 +259,13 @@
     {
       "patternId": "dot-location",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "property"
+        }
+      ]
     },
     {
       "patternId": "dot-notation",
@@ -234,7 +290,13 @@
     {
       "patternId": "eqeqeq",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "smart"
+        }
+      ]
     },
     {
       "patternId": "for-direction",
@@ -335,6 +397,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "^[a-z]+([A-Z][a-z]+)*$"
+        },
+        {
           "name": "properties",
           "default": false
         },
@@ -359,6 +425,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": 2
+        },
+        {
           "name": "SwitchCase",
           "default": 0
         },
@@ -380,12 +450,24 @@
     {
       "patternId": "init-declarations",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "jsx-quotes",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "prefer-double"
+        }
+      ]
     },
     {
       "patternId": "key-spacing",
@@ -492,7 +574,13 @@
     {
       "patternId": "max-nested-callbacks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": 5
+        }
+      ]
     },
     {
       "patternId": "max-params",
@@ -552,7 +640,13 @@
     {
       "patternId": "newline-after-var",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "newline-before-return",
@@ -634,7 +728,13 @@
     {
       "patternId": "no-cond-assign",
       "level": "Error",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "except-parens"
+        }
+      ]
     },
     {
       "patternId": "no-confusing-arrow",
@@ -896,7 +996,13 @@
     {
       "patternId": "no-inner-declarations",
       "level": "Error",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "functions"
+        }
+      ]
     },
     {
       "patternId": "no-invalid-regexp",
@@ -1183,7 +1289,13 @@
     {
       "patternId": "no-restricted-modules",
       "level": "Warning",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "no-restricted-properties",
@@ -1198,7 +1310,13 @@
     {
       "patternId": "no-return-assign",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "no-return-await",
@@ -1541,7 +1659,13 @@
     {
       "patternId": "object-curly-spacing",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ]
     },
     {
       "patternId": "object-property-newline",
@@ -1566,7 +1690,13 @@
     {
       "patternId": "one-var",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "one-var-declaration-per-line",
@@ -1581,7 +1711,13 @@
     {
       "patternId": "operator-linebreak",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "after"
+        }
+      ]
     },
     {
       "patternId": "padded-blocks",
@@ -1692,7 +1828,13 @@
     {
       "patternId": "quotes",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "double"
+        }
+      ]
     },
     {
       "patternId": "radix",
@@ -1738,7 +1880,13 @@
     {
       "patternId": "semi",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "semi-spacing",
@@ -1812,17 +1960,35 @@
     {
       "patternId": "space-before-blocks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "space-before-function-paren",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "space-in-parens",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ]
     },
     {
       "patternId": "space-infix-ops",
@@ -1853,12 +2019,24 @@
     {
       "patternId": "spaced-comment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ]
     },
     {
       "patternId": "strict",
       "level": "Error",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "function"
+        }
+      ]
     },
     {
       "patternId": "switch-colon-spacing",
@@ -1959,6 +2137,10 @@
       "category": "BestPractice",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "outside"
+        },
+        {
           "name": "functionPrototypeMethods",
           "default": false
         }
@@ -1979,6 +2161,10 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        },
         {
           "name": "exceptRange",
           "default": false
@@ -4561,7 +4747,17 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_component-definition-name-casing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_component-name-in-template-casing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_component-tags-order",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4641,6 +4837,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_max-len",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_multiline-html-element-content-newline",
       "level": "Info",
       "category": "CodeStyle"
@@ -4676,6 +4877,16 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_no-deprecated-slot-attribute",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_no-deprecated-slot-scope-attribute",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_no-dupe-keys",
       "level": "Info",
       "category": "CodeStyle"
@@ -4691,12 +4902,48 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_no-irregular-whitespace",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "skipComments",
+          "default": false
+        },
+        {
+          "name": "skipStrings",
+          "default": true
+        },
+        {
+          "name": "skipTemplates",
+          "default": false
+        },
+        {
+          "name": "skipRegExps",
+          "default": false
+        },
+        {
+          "name": "skipHTMLAttributeValues",
+          "default": false
+        },
+        {
+          "name": "skipHTMLTextContents",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "vue_no-multi-spaces",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
       "patternId": "vue_no-parsing-error",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_no-reserved-component-names",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4726,6 +4973,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_no-static-inline-styles",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_no-template-key",
       "level": "Info",
       "category": "CodeStyle"
@@ -4737,6 +4989,11 @@
     },
     {
       "patternId": "vue_no-textarea-mustache",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_no-unsupported-features",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4787,6 +5044,11 @@
     },
     {
       "patternId": "vue_require-direct-export",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_require-name-property",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4857,6 +5119,11 @@
       ]
     },
     {
+      "patternId": "vue_static-class-names-order",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_this-in-template",
       "level": "Info",
       "category": "CodeStyle"
@@ -4888,6 +5155,11 @@
     },
     {
       "patternId": "vue_valid-template-root",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_valid-v-bind-sync",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -5128,6 +5400,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "@typescript-eslint_no-extra-semi",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "@typescript-eslint_no-extraneous-class",
       "level": "Info",
       "category": "BestPractice"
@@ -5205,6 +5482,11 @@
       "patternId": "@typescript-eslint_no-type-alias",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_no-throw-literal",
+      "level": "Info",
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-condition",

@@ -17,6 +17,7 @@ import { toolName, toolVersion } from "./toolMetadata"
 import { writeFile } from "./fileUtils"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import { Rule } from "eslint"
+import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 export class DocGenerator {
   private readonly rules: Map<string, Rule.RuleModule>
 
@@ -36,10 +37,20 @@ export class DocGenerator {
           category,
           subcategory
         ] = fromEslintPatternIdAndCategoryToCategory(patternId, eslintCategory)
-        const parameters =
+        const namedParameters =
           meta && meta.schema
             ? this.fromEslintSchemaToParameters(meta.schema)
             : undefined
+        const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
+          patternId
+        )
+        const unnamedParameter = unnamedParameterValue
+          ? new PatternsParameter("unnamedParam", unnamedParameterValue)
+          : undefined
+        const parameters: PatternsParameter[] | undefined =
+          namedParameters && unnamedParameter
+            ? [unnamedParameter, ...namedParameters]
+            : namedParameters
         return new PatternsEntry(
           patternIdToCodacy(patternId),
           level,
