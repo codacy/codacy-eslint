@@ -1,11 +1,15 @@
+import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
+
+import { capitalize, patternTitle } from "./docGeneratorStringUtils"
+import { writeFile } from "./fileUtils"
 import { DescriptionEntry } from "./model/description"
 import {
   Category,
-  fromEslintPatternIdAndCategoryToCategory,
   fromEslintCategoryToLevel,
+  fromEslintPatternIdAndCategoryToCategory,
   Level,
   patternIdToCodacy,
   Patterns,
@@ -13,10 +17,8 @@ import {
   PatternsParameter
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
+import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
-import { writeFile } from "./fileUtils"
-import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { Rule } from "eslint"
 export class DocGenerator {
   private readonly rules: Map<string, Rule.RuleModule>
 
@@ -36,10 +38,24 @@ export class DocGenerator {
           category,
           subcategory
         ] = fromEslintPatternIdAndCategoryToCategory(patternId, eslintCategory)
-        const parameters =
+        const namedParameters =
           meta && meta.schema
             ? this.fromEslintSchemaToParameters(meta.schema)
             : undefined
+        const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
+          patternId
+        )
+        const unnamedParameter = unnamedParameterValue
+          ? new PatternsParameter("unnamedParam", unnamedParameterValue)
+          : undefined
+        function getParameters(): PatternsParameter[] | undefined {
+          if (namedParameters && unnamedParameter)
+            return [unnamedParameter, ...namedParameters]
+          else if (namedParameters) return namedParameters
+          else if (unnamedParameter) return [unnamedParameter]
+          else return undefined
+        }
+        const parameters = getParameters()
         return new PatternsEntry(
           patternIdToCodacy(patternId),
           level,

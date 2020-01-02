@@ -1,7 +1,8 @@
-import { DocGenerator } from "./docGenerator"
-import { writeFile } from "./fileUtils"
 import { EOL } from "os"
+
+import { DocGenerator } from "./docGenerator"
 import { defaultEngine } from "./eslintDefaultOptions"
+import { writeFile } from "./fileUtils"
 
 main()
 

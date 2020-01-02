@@ -19,8 +19,8 @@
   "license": "Apache-2.0",
   "main": "dist/src/index.js",
   "directories": {
-    "src": "./src",
-    "test": "./src/test"
+    "test": "./src/test",
+    "src": "./src"
   },
   "scripts": {
     "compile": "tsc",
@@ -33,10 +33,14 @@
     }
   },
   "lint-staged": {
+    "package.json": [
+      "npm run generateDocs",
+      "sort-package-json",
+      "git add"
+    ],
     "src/*.{ts,js,css,json,md}": [
       "prettier --write",
       "eslint --fix",
-      "sort-package-json",
       "git add"
     ]
   },
@@ -69,12 +73,12 @@
     "@typescript-eslint/parser": "^2.14.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-require-ignore": "^0.1.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
@@ -175,6 +179,8 @@
     "@types/node": "^13.1.2",
     "@types/node-fetch": "^2.5.4",
     "@types/simple-mock": "^0.8.1",
+    "eslint-plugin-simple-import-sort": "^5.0.0",
+    "eslint-plugin-unused-imports": "^0.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "mocha": "^6.2.2",

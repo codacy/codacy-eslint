@@ -1,9 +1,10 @@
 import { CLIEngine, Linter } from "eslint"
+import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
+
 import { defaultOptions } from "./eslintDefaultOptions"
 import { Codacyrc, Pattern } from "./model/codacyInput"
-import { toolName } from "./toolMetadata"
 import { patternIdToEslint } from "./model/patterns"
-import { cloneDeep, isEmpty, partition, fromPairs } from "lodash"
+import { toolName } from "./toolMetadata"
 
 function patternsToRules(
   patterns: Pattern[]
