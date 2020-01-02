@@ -1,0 +1,6 @@
+<module name="root">
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="\.eslintrc\.json"/>
+    </module>
+    <module name="@typescript-eslint_explicit-function-return-type" />
+</module>
