@@ -3,12 +3,12 @@ import { CLIEngine } from "eslint"
 import { configCreator } from "./configCreator"
 import { convertResults, resultString } from "./convertResults"
 import { parseCodacyrcFile, readJsonFile } from "./fileUtils"
-import { parseTimeoutSeconds } from "./parseTimeoutSeconds"
+import { parseTimeoutMilliseconds } from "./parseTimeoutMilliseconds"
 
 const timeoutHandle = setTimeout(() => {
   console.error("Timeout occurred. Exiting.")
   process.exit(2)
-}, parseTimeoutSeconds(process.env.TIMEOUT) * 1000)
+}, parseTimeoutMilliseconds(process.env.TIMEOUT))
 
 async function run() {
   const jsonFile = await readJsonFile("/.codacyrc")
