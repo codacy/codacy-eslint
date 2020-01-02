@@ -1,4 +1,5 @@
 import { CLIEngine } from "eslint"
+
 import { configCreator } from "./configCreator"
 import { convertResults, resultString } from "./convertResults"
 import { parseCodacyrcFile, readJsonFile } from "./fileUtils"

@@ -13,6 +13,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["@typescript-eslint"],
-  rules: {}
+  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
+  rules: {
+    "simple-import-sort/sort": "error"
+  }
 }

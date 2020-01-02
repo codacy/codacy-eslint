@@ -1,6 +1,7 @@
 import { CLIEngine, Linter } from "eslint"
-import { CodacyResult } from "./model/codacyResult"
 import { flatMap } from "lodash"
+
+import { CodacyResult } from "./model/codacyResult"
 import { patternIdToCodacy } from "./model/patterns"
 
 export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {

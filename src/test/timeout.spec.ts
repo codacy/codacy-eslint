@@ -1,5 +1,6 @@
 import { equal } from "assert"
-import { parseTimeoutSeconds, defaultTimeout } from "../parseTimeoutSeconds"
+
+import { defaultTimeout,parseTimeoutSeconds } from "../parseTimeoutSeconds"
 
 describe("parseTimeoutSeconds", () => {
   it("should parse timeout with seconds", () => {

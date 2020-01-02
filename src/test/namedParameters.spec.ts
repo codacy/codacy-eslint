@@ -1,7 +1,8 @@
-import { JSONSchema4 } from "json-schema"
 import { deepEqual } from "assert"
-import { fromSchemaArray } from "../namedParameters"
+import { JSONSchema4 } from "json-schema"
+
 import { PatternsParameter } from "../model/patterns"
+import { fromSchemaArray } from "../namedParameters"
 
 describe("namedParameters", () => {
   describe("fromSchemaArray", () => {

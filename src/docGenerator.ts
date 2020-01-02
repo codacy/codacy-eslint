@@ -1,11 +1,15 @@
+import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
+
+import { capitalize, patternTitle } from "./docGeneratorStringUtils"
+import { writeFile } from "./fileUtils"
 import { DescriptionEntry } from "./model/description"
 import {
   Category,
-  fromEslintPatternIdAndCategoryToCategory,
   fromEslintCategoryToLevel,
+  fromEslintPatternIdAndCategoryToCategory,
   Level,
   patternIdToCodacy,
   Patterns,
@@ -13,11 +17,8 @@ import {
   PatternsParameter
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
-import { toolName, toolVersion } from "./toolMetadata"
-import { writeFile } from "./fileUtils"
-import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { Rule } from "eslint"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
+import { toolName, toolVersion } from "./toolMetadata"
 export class DocGenerator {
   private readonly rules: Map<string, Rule.RuleModule>
 
@@ -47,10 +48,14 @@ export class DocGenerator {
         const unnamedParameter = unnamedParameterValue
           ? new PatternsParameter("unnamedParam", unnamedParameterValue)
           : undefined
-        const parameters: PatternsParameter[] | undefined =
-          namedParameters && unnamedParameter
-            ? [unnamedParameter, ...namedParameters]
-            : namedParameters
+        function getParameters(): PatternsParameter[] | undefined {
+          if (namedParameters && unnamedParameter)
+            return [unnamedParameter, ...namedParameters]
+          else if (namedParameters) return namedParameters
+          else if (unnamedParameter) return [unnamedParameter]
+          else return undefined
+        }
+        const parameters = getParameters()
         return new PatternsEntry(
           patternIdToCodacy(patternId),
           level,
