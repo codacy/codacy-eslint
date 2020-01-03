@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="4.3">
+    <file name="example.js">
+        <error source="simple-import-sort/sort" line="1" message="Run autofix to sort these imports!" severity="error" />
+
+        <error source="m6web-i18n/no-unknown-key" line="2" message="'Welcome to React Translation' is missing from 'fr' language" severity="error" />
+        <error source="m6web-i18n/no-unknown-key-secondary-langs" line="1" message="'Welcome to React Translation' is missing from 'en' language" severity="warning" />
+    </file>
+</checkstyle>
