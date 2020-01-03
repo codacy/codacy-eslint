@@ -1,5 +1,5 @@
 <module name="root">
     <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value=".eslintrc.js" />
+        <property name="fileNamePattern" value="\.eslintrc\.js" />
     </module>
 </module>

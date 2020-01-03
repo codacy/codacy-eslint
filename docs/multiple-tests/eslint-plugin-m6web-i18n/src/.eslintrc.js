@@ -1,4 +1,13 @@
 module.exports = {
+    env: {
+        es6: true,
+        node: true
+    },
+    parser: "babel-eslint",
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: "module"
+    },
     plugins: [
         "m6web-i18n"
     ],
@@ -10,25 +19,25 @@ module.exports = {
         "m6web-i18n/interpolation-data": ["error", { "interpolationPattern": "\\{\\.+\\}" }]
     },
     settings: {
-        "i18n": {
+        i18n: {
             // Used in 'no-unknown-key' rule
-            "principalLangs": [
+            principalLangs: [
                 {
-                    "name": "fr",
-                    "translationPath": "fr.json"
+                    name: "fr",
+                    translationPath: "fr.json"
                 }
             ],
             // Used in 'no-unknown-key-secondary-langs' rule
-            "secondaryLangs": [
+            secondaryLangs: [
                 {
-                    "name": "en",
-                    "translationPath": "en.json"
+                    name: "en",
+                    translationPath: "en.json"
                 }
             ],
             // Translate function
-            "functionName": "t",
-            "pluralizedKeys": ["one", "other"],
-            "translationsCacheTTL": 300
+            functionName: "t",
+            pluralizedKeys: ["one", "other"],
+            translationsCacheTTL: 300
         }
     }
 };
