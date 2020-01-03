@@ -44,7 +44,9 @@ async function createOptions(
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
         result.baseConfig.extends = []
-        result.baseConfig.overrides.extends = []
+        result.baseConfig.overrides.forEach(
+          (override: any) => (override.extends = [])
+        )
         result.baseConfig.rules = patternsToRules(patterns)
       }
       result.useEslintrc = false

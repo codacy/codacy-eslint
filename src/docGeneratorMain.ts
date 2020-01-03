@@ -25,6 +25,20 @@ async function main() {
     pattern => `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
   )
 
+  console.log("Generate typescript-eslint description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@typescript-eslint"
+  )
+
+  console.log("Generate angular description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
+    "angular"
+  )
+
   console.log("Generate vue description files")
   await docGenerator.downloadDocs(
     pattern =>
