@@ -6054,6 +6054,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_ban-ts-comment",
+    "title": "@typescript eslint: Ban ts comment",
+    "description": "Bans `// @ts-<directive>` comments from being used",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_ban-types",
     "title": "@typescript eslint: Ban types",
     "description": "Bans specific types from being used",
@@ -6075,6 +6081,12 @@
     "patternId": "@typescript-eslint_class-name-casing",
     "title": "@typescript eslint: Class name casing",
     "description": "Require PascalCased class and interface names",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_comma-spacing",
+    "title": "@typescript eslint: Comma spacing",
+    "description": "Enforces consistent spacing before and after commas",
     "timeToFix": 5
   },
   {
@@ -6105,6 +6117,12 @@
     "patternId": "@typescript-eslint_explicit-member-accessibility",
     "title": "@typescript eslint: Explicit member accessibility",
     "description": "Require explicit accessibility modifiers on class properties and methods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_explicit-module-boundary-types",
+    "title": "@typescript eslint: Explicit module boundary types",
+    "description": "Require explicit return and argument types on exported functions' and classes' public class methods",
     "timeToFix": 5
   },
   {
@@ -6264,6 +6282,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
+    "title": "@typescript eslint: No non null asserted optional chain",
+    "description": "Disallows using a non-null assertion after an optional chain expression",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-parameter-properties",
     "title": "@typescript eslint: No parameter properties",
     "description": "Disallow the use of parameter properties in class constructors",
@@ -6357,6 +6381,12 @@
     "patternId": "@typescript-eslint_no-var-requires",
     "title": "@typescript eslint: No var requires",
     "description": "Disallows the use of require statements except in import statements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-as-const",
+    "title": "@typescript eslint: Prefer as const",
+    "description": "Prefer usage of `as const` over literal type",
     "timeToFix": 5
   },
   {

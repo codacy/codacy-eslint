@@ -6140,6 +6140,25 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_ban-ts-comment",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ts-ignore",
+          "default": true
+        },
+        {
+          "name": "ts-nocheck",
+          "default": true
+        },
+        {
+          "name": "ts-check",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "@typescript-eslint_ban-types",
       "level": "Info",
       "category": "BestPractice"
@@ -6182,6 +6201,21 @@
       ]
     },
     {
+      "patternId": "@typescript-eslint_comma-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": false
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ]
+    },
+    {
       "patternId": "@typescript-eslint_consistent-type-assertions",
       "level": "Info",
       "category": "BestPractice"
@@ -6203,6 +6237,11 @@
     },
     {
       "patternId": "@typescript-eslint_explicit-member-accessibility",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_explicit-module-boundary-types",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6365,6 +6404,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "@typescript-eslint_no-parameter-properties",
       "level": "Info",
       "category": "CodeStyle"
@@ -6455,6 +6499,11 @@
     },
     {
       "patternId": "@typescript-eslint_no-var-requires",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-as-const",
       "level": "Info",
       "category": "BestPractice"
     },

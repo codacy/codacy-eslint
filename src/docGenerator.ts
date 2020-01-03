@@ -121,7 +121,8 @@ export class DocGenerator {
 
   downloadDocs(
     urlFromPatternId: (patternId: string) => string,
-    prefix: string = ""
+    prefix: string = "",
+    rejectOnError: boolean = true
   ) {
     const patterns =
       prefix.length > 0
@@ -138,10 +139,14 @@ export class DocGenerator {
           patternIdToCodacy(pattern) +
           ".md"
         return writeFile(filename, text)
-      } else
-        return Promise.reject(
-          `Failed to retrieve docs for ${pattern} from ${url}`
-        )
+      } else {
+        const message = `Failed to retrieve docs for ${pattern} from ${url}`
+        if (rejectOnError) return Promise.reject(message)
+        else {
+          console.log(`${message}. Skipping`)
+          Promise.resolve()
+        }
+      }
     })
     return Promise.all(promises)
   }

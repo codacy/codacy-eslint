@@ -75,7 +75,17 @@ export const defaultOptions: CLIEngine.Options = {
         extends: baseConfigs.concat(typescriptConfigs),
         parser: "@typescript-eslint/parser"
       }
-    ]
+    ],
+    settings: {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true
+        }
+      }
+    }
   }
 }
 
