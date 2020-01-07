@@ -2886,6 +2886,30 @@
     "timeToFix": 5
   },
   {
+    "patternId": "chai-expect_no-inner-compare",
+    "title": "Chai expect: No inner compare",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "chai-expect_no-inner-literal",
+    "title": "Chai expect: No inner literal",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "chai-expect_missing-assertion",
+    "title": "Chai expect: Missing assertion",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "chai-expect_terminating-properties",
+    "title": "Chai expect: Terminating properties",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "chai-friendly_no-unused-expressions",
     "title": "Chai friendly: No unused expressions",
     "description": "Disallow unused expressions",

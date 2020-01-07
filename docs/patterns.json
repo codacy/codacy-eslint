@@ -3259,6 +3259,26 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "chai-expect_no-inner-compare",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "chai-expect_no-inner-literal",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "chai-expect_missing-assertion",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "chai-expect_terminating-properties",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "chai-friendly_no-unused-expressions",
       "level": "Info",
       "category": "BestPractice"
