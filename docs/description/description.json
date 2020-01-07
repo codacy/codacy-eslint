@@ -5924,7 +5924,7 @@
   {
     "patternId": "@typescript-eslint_consistent-type-assertions",
     "title": "@typescript eslint: Consistent type assertions",
-    "description": "Enforces consistent usage of type assertions.",
+    "description": "Enforces consistent usage of type assertions",
     "timeToFix": 5
   },
   {
@@ -5996,7 +5996,7 @@
   {
     "patternId": "@typescript-eslint_no-dynamic-delete",
     "title": "@typescript eslint: No dynamic delete",
-    "description": "Bans usage of the delete operator with computed key expressions",
+    "description": "Disallow the delete operator with computed key expressions",
     "timeToFix": 5
   },
   {
@@ -6044,7 +6044,7 @@
   {
     "patternId": "@typescript-eslint_no-floating-promises",
     "title": "@typescript eslint: No floating promises",
-    "description": "Requires Promise-like values to be handled appropriately.",
+    "description": "Requires Promise-like values to be handled appropriately",
     "timeToFix": 5
   },
   {
@@ -6060,9 +6060,15 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-implied-eval",
+    "title": "@typescript eslint: No implied eval",
+    "description": "Disallow the use of `eval()`-like methods",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-magic-numbers",
     "title": "@typescript eslint: No magic numbers",
-    "description": "Disallows magic numbers",
+    "description": "Disallow magic numbers",
     "timeToFix": 5
   },
   {
@@ -6134,7 +6140,7 @@
   {
     "patternId": "@typescript-eslint_no-unnecessary-type-arguments",
     "title": "@typescript eslint: No unnecessary type arguments",
-    "description": "Warns if an explicitly specified type argument is the default for that type parameter",
+    "description": "Enforces that type arguments will not be used if not required",
     "timeToFix": 5
   },
   {
@@ -6146,7 +6152,7 @@
   {
     "patternId": "@typescript-eslint_no-untyped-public-signature",
     "title": "@typescript eslint: No untyped public signature",
-    "description": "Requires that all public method arguments and return type will be explicitly typed",
+    "description": "Disallow untyped public methods",
     "timeToFix": 5
   },
   {
@@ -6158,7 +6164,7 @@
   {
     "patternId": "@typescript-eslint_no-unused-vars-experimental",
     "title": "@typescript eslint: No unused vars experimental",
-    "description": "Disallow unused variables and arguments.",
+    "description": "Disallow unused variables and arguments",
     "timeToFix": 5
   },
   {
@@ -6230,7 +6236,7 @@
   {
     "patternId": "@typescript-eslint_prefer-regexp-exec",
     "title": "@typescript eslint: Prefer regexp exec",
-    "description": "Prefer RegExp#exec() over String#match() if no global flag is provided",
+    "description": "Enforce that `RegExp#exec` is used instead of `String#match` if no global flag is provided",
     "timeToFix": 5
   },
   {
@@ -6278,7 +6284,7 @@
   {
     "patternId": "@typescript-eslint_return-await",
     "title": "@typescript eslint: Return await",
-    "description": "Rules for awaiting returned promises",
+    "description": "Enforces consistent returning of awaited values",
     "timeToFix": 5
   },
   {
@@ -6290,7 +6296,7 @@
   {
     "patternId": "@typescript-eslint_space-before-function-paren",
     "title": "@typescript eslint: Space before function paren",
-    "description": "Enforce consistent spacing before `function` definition opening parenthesis",
+    "description": "Enforces consistent spacing before function parenthesis",
     "timeToFix": 5
   },
   {

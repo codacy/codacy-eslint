@@ -6175,6 +6175,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_no-implied-eval",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_no-magic-numbers",
       "level": "Info",
       "category": "BestPractice",
