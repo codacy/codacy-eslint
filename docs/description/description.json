@@ -3576,6 +3576,36 @@
     "timeToFix": 5
   },
   {
+    "patternId": "hapi_hapi-capitalize-modules",
+    "title": "Hapi: Hapi capitalize modules",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "hapi_hapi-for-you",
+    "title": "Hapi: Hapi for you",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "hapi_hapi-no-var",
+    "title": "Hapi: Hapi no var",
+    "description": "Require `let` or `const` instead of `var` when outside of try...catch",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "hapi_hapi-scope-start",
+    "title": "Hapi: Hapi scope start",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "hapi_no-arrowception",
+    "title": "Hapi: No arrowception",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",

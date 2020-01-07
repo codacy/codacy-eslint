@@ -3897,6 +3897,31 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "hapi_hapi-capitalize-modules",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "hapi_hapi-for-you",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "hapi_hapi-no-var",
+      "level": "Warning",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "hapi_hapi-scope-start",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "hapi_no-arrowception",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle"
