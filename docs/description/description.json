@@ -5232,6 +5232,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-unsanitized_property",
+    "title": "No unsanitized: Property",
+    "description": "ESLint rule to disallow unsanitized property assignment",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "no-unsanitized_method",
+    "title": "No unsanitized: Method",
+    "description": "ESLint rule to disallow unsanitized method calls",
+    "timeToFix": 5
+  },
+  {
     "patternId": "react-hooks_rules-of-hooks",
     "title": "React hooks: Rules of hooks",
     "description": "",

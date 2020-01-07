@@ -5363,6 +5363,16 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "no-unsanitized_property",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "no-unsanitized_method",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "react-hooks_rules-of-hooks",
       "level": "Info",
       "category": "CodeStyle"

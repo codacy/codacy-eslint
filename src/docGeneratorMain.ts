@@ -102,6 +102,13 @@ async function main() {
     "mocha"
   )
 
+  console.log("Generate no-unsanitized description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/mozilla/eslint-plugin-no-unsanitized/master/docs/rules/${pattern}.md`,
+    "no-unsanitized"
+  )
+
   console.log("Generate node description files")
   await docGenerator.downloadDocs(pattern => {
     const patternFoldered = pattern.split("_").join("/")

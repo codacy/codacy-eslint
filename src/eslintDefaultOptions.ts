@@ -52,6 +52,7 @@ export const defaultOptions: CLIEngine.Options = {
       "mongodb",
       "no-only-tests",
       "no-unsafe-innerhtml",
+      "no-unsanitized",
       "node",
       "promise",
       "react-hooks",
