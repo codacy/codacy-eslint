@@ -67,6 +67,13 @@ async function main() {
     pattern => `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
   )
 
+  console.log("Generate jasmine description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/tlvince/eslint-plugin-jasmine/master/docs/rules/${pattern}.md`,
+    "jasmine"
+  )
+
   console.log("Generate lodash description files")
   await docGenerator.downloadDocs(
     pattern =>

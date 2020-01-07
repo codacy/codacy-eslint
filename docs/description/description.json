@@ -3606,6 +3606,132 @@
     "timeToFix": 5
   },
   {
+    "patternId": "jasmine_expect-matcher",
+    "title": "Jasmine: Expect matcher",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_expect-single-argument",
+    "title": "Jasmine: Expect single argument",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_named-spy",
+    "title": "Jasmine: Named spy",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-focused-tests",
+    "title": "Jasmine: No focused tests",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-disabled-tests",
+    "title": "Jasmine: No disabled tests",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-describe-variables",
+    "title": "Jasmine: No describe variables",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-suite-dupes",
+    "title": "Jasmine: No suite dupes",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-spec-dupes",
+    "title": "Jasmine: No spec dupes",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_missing-expect",
+    "title": "Jasmine: Missing expect",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-suite-callback-args",
+    "title": "Jasmine: No suite callback args",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_valid-expect",
+    "title": "Jasmine: Valid expect",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-assign-spyon",
+    "title": "Jasmine: No assign spyon",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-unsafe-spy",
+    "title": "Jasmine: No unsafe spy",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-global-setup",
+    "title": "Jasmine: No global setup",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-pending-tests",
+    "title": "Jasmine: No pending tests",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-promise-without-done-fail",
+    "title": "Jasmine: No promise without done fail",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_no-expect-in-setup-teardown",
+    "title": "Jasmine: No expect in setup teardown",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_new-line-between-declarations",
+    "title": "Jasmine: New line between declarations",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_new-line-before-expect",
+    "title": "Jasmine: New line before expect",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_prefer-jasmine-matcher",
+    "title": "Jasmine: Prefer jasmine matcher",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jasmine_prefer-toHaveBeenCalledWith",
+    "title": "Jasmine: Prefer toHaveBeenCalledWith",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",

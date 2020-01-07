@@ -39,6 +39,7 @@ export const defaultOptions: CLIEngine.Options = {
       "hapi",
       "html",
       "import",
+      "jasmine",
       "jsx-a11y",
       "lodash-fp",
       "lodash",

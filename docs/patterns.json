@@ -3922,6 +3922,111 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "jasmine_expect-matcher",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_expect-single-argument",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_named-spy",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-focused-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-disabled-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-describe-variables",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-suite-dupes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-spec-dupes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_missing-expect",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-suite-callback-args",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_valid-expect",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-assign-spyon",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-unsafe-spy",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-global-setup",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-pending-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-promise-without-done-fail",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_no-expect-in-setup-teardown",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_new-line-between-declarations",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_new-line-before-expect",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_prefer-jasmine-matcher",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jasmine_prefer-toHaveBeenCalledWith",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle"
