@@ -5949,6 +5949,21 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "redux-saga_no-yield-in-race",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "redux-saga_yield-effects",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "redux-saga_no-unhandled-errors",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "relay_graphql-syntax",
       "level": "Info",
       "category": "CodeStyle"

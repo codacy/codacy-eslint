@@ -5832,6 +5832,24 @@
     "timeToFix": 5
   },
   {
+    "patternId": "redux-saga_no-yield-in-race",
+    "title": "Redux saga: No yield in race",
+    "description": "Flag use of yield inside race effects",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "redux-saga_yield-effects",
+    "title": "Redux saga: Yield effects",
+    "description": "Enforce yield in front of effects",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "redux-saga_no-unhandled-errors",
+    "title": "Redux saga: No unhandled errors",
+    "description": "Enforce error handling on sagas",
+    "timeToFix": 5
+  },
+  {
     "patternId": "relay_graphql-syntax",
     "title": "Relay: Graphql syntax",
     "description": "Validates the syntax of graphql`...` templates.",
