@@ -5620,5 +5620,35 @@
     "title": "Angularjs security rules: Detect third party angular translate",
     "description": "",
     "timeToFix": 5
+  },
+  {
+    "patternId": "m6web-i18n_no-unknown-key",
+    "title": "M6web i18n: No unknown key",
+    "description": "Ensures that used translate key is in translation file",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "m6web-i18n_no-unknown-key-secondary-langs",
+    "title": "M6web i18n: No unknown key secondary langs",
+    "description": "Ensures that used translate key is in translation file",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "m6web-i18n_no-text-as-attribute",
+    "title": "M6web i18n: No text as attribute",
+    "description": "Ensure that no plain text is used in attributes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "m6web-i18n_no-text-as-children",
+    "title": "M6web i18n: No text as children",
+    "description": "Ensures that no plain text is used in JSX components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "m6web-i18n_interpolation-data",
+    "title": "M6web i18n: Interpolation data",
+    "description": "Ensures that interpolated translate key have data",
+    "timeToFix": 5
   }
 ]
