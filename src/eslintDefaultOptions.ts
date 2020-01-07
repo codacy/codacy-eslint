@@ -35,6 +35,7 @@ export const defaultOptions: CLIEngine.Options = {
       "ember",
       "ember-suave",
       "flowtype",
+      "graphql",
       "html",
       "import",
       "jsx-a11y",

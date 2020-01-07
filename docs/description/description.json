@@ -3546,6 +3546,36 @@
     "timeToFix": 5
   },
   {
+    "patternId": "graphql_template-strings",
+    "title": "Graphql: Template strings",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "graphql_named-operations",
+    "title": "Graphql: Named operations",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "graphql_required-fields",
+    "title": "Graphql: Required fields",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "graphql_capitalized-type-name",
+    "title": "Graphql: Capitalized type name",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "graphql_no-deprecated-fields",
+    "title": "Graphql: No deprecated fields",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",
