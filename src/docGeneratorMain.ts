@@ -136,6 +136,13 @@ async function main() {
     "react-native"
   )
 
+  console.log("Generate redux-saga description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/pke/eslint-plugin-redux-saga/master/docs/rules/${pattern}.md`,
+    "redux-saga"
+  )
+
   console.log("Generate typescript-eslint description files")
   await docGenerator.downloadDocs(
     pattern =>

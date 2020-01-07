@@ -59,7 +59,6 @@ export const defaultOptions: CLIEngine.Options = {
       "react-hooks",
       "react-native",
       "react",
-      "redux",
       "redux-saga",
       "relay",
       "security",
