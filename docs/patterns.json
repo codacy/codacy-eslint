@@ -4476,6 +4476,111 @@
       ]
     },
     {
+      "patternId": "json_*",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_json",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_unknown",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_comment-not-permitted",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_undefined",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_enum-value-mismatch",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_unexpected-end-of-comment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_unexpected-end-of-string",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_unexpected-end-of-number",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_invalid-unicode",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_invalid-escape-character",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_invalid-character",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_property-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_comma-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_colon-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_value-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_comma-or-close-backet-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_comma-or-close-brace-expected",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_trailing-comma",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_duplicate-key",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "json_schema-resolve-error",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle"

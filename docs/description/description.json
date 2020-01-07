@@ -4182,6 +4182,132 @@
     "timeToFix": 5
   },
   {
+    "patternId": "json_*",
+    "title": "Json: *",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_json",
+    "title": "Json: Json",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_unknown",
+    "title": "Json: Unknown",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_comment-not-permitted",
+    "title": "Json: Comment not permitted",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_undefined",
+    "title": "Json: Undefined",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_enum-value-mismatch",
+    "title": "Json: Enum value mismatch",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_unexpected-end-of-comment",
+    "title": "Json: Unexpected end of comment",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_unexpected-end-of-string",
+    "title": "Json: Unexpected end of string",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_unexpected-end-of-number",
+    "title": "Json: Unexpected end of number",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_invalid-unicode",
+    "title": "Json: Invalid unicode",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_invalid-escape-character",
+    "title": "Json: Invalid escape character",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_invalid-character",
+    "title": "Json: Invalid character",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_property-expected",
+    "title": "Json: Property expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_comma-expected",
+    "title": "Json: Comma expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_colon-expected",
+    "title": "Json: Colon expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_value-expected",
+    "title": "Json: Value expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_comma-or-close-backet-expected",
+    "title": "Json: Comma or close backet expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_comma-or-close-brace-expected",
+    "title": "Json: Comma or close brace expected",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_trailing-comma",
+    "title": "Json: Trailing comma",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_duplicate-key",
+    "title": "Json: Duplicate key",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "json_schema-resolve-error",
+    "title": "Json: Schema resolve error",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",
