@@ -5373,6 +5373,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "prettier_prettier",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "react-hooks_rules-of-hooks",
       "level": "Info",
       "category": "CodeStyle"

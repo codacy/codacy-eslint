@@ -5244,6 +5244,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "prettier_prettier",
+    "title": "Prettier: Prettier",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "react-hooks_rules-of-hooks",
     "title": "React hooks: Rules of hooks",
     "description": "",

@@ -54,6 +54,7 @@ export const defaultOptions: CLIEngine.Options = {
       "no-unsafe-innerhtml",
       "no-unsanitized",
       "node",
+      "prettier",
       "promise",
       "react-hooks",
       "react",
