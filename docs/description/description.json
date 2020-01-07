@@ -4518,132 +4518,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "lodash-fp_consistent-compose",
-    "title": "Lodash fp: Consistent compose",
-    "description": "Enforce a consistent composition method.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_consistent-name",
-    "title": "Lodash fp: Consistent name",
-    "description": "Enforce a consistent name for Lodash.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-argumentless-calls",
-    "title": "Lodash fp: No argumentless calls",
-    "description": "Forbid argument-less calls of Lodash methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-chain",
-    "title": "Lodash fp: No chain",
-    "description": "Forbid the use of [`_.chain`](https://lodash.com/docs#chain)",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-extraneous-args",
-    "title": "Lodash fp: No extraneous args",
-    "description": "No extraneous arguments to methods with a fixed arity.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-extraneous-function-wrapping",
-    "title": "Lodash fp: No extraneous function wrapping",
-    "description": "Avoid unnecessary function wrapping.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-extraneous-iteratee-args",
-    "title": "Lodash fp: No extraneous iteratee args",
-    "description": "No extraneous parameters in iteratees.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-extraneous-partials",
-    "title": "Lodash fp: No extraneous partials",
-    "description": "No extraneous partials in method calls.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-for-each",
-    "title": "Lodash fp: No for each",
-    "description": " Forbid the use of [`_.forEach`](https://lodash.com/docs#forEach)",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-partial-of-curried",
-    "title": "Lodash fp: No partial of curried",
-    "description": "No use of [`_.partial`](https://lodash.com/docs#partial) on curried Lodash methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-single-composition",
-    "title": "Lodash fp: No single composition",
-    "description": "Enforce at least two methods arguments for composition methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-submodule-destructuring",
-    "title": "Lodash fp: No submodule destructuring",
-    "description": "Forbid destructuring of Lodash submodules.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_no-unused-result",
-    "title": "Lodash fp: No unused result",
-    "description": "Enforce that the result of a Lodash method call gets used.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-compact",
-    "title": "Lodash fp: Prefer compact",
-    "description": "Prefer [`_.compact`](https://lodash.com/docs#compact) over [`_.filter`](https://lodash.com/docs#filter) with identity function.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-composition-grouping",
-    "title": "Lodash fp: Prefer composition grouping",
-    "description": "Prefer grouping similar methods in composition methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-constant",
-    "title": "Lodash fp: Prefer constant",
-    "description": "Prefer [`_.constant`](https://lodash.com/docs#constant) over functions returning literals.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-flat-map",
-    "title": "Lodash fp: Prefer flat map",
-    "description": "Prefer [`_.flatMap`](https://lodash.com/docs#flatMap) over consecutive [`_.map`](https://lodash.com/docs#map) and [`_.flatten`](https://lodash.com/docs#flatten).",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-get",
-    "title": "Lodash fp: Prefer get",
-    "description": "Prefer [`_.get`](https://lodash.com/docs#get) over multiple `&&`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_prefer-identity",
-    "title": "Lodash fp: Prefer identity",
-    "description": "Prefer [`_.identity`](https://lodash.com/docs#identity) over functions returning their argument.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_preferred-alias",
-    "title": "Lodash fp: Preferred alias",
-    "description": "Limit the use of aliases.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "lodash-fp_use-fp",
-    "title": "Lodash fp: Use fp",
-    "description": "Use lodash/fp instead of Lodash.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "lodash_callback-binding",
     "title": "Lodash: Callback binding",
     "description": "",
@@ -4893,6 +4767,132 @@
     "patternId": "lodash_unwrap",
     "title": "Lodash: Unwrap",
     "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_consistent-compose",
+    "title": "Lodash fp: Consistent compose",
+    "description": "Enforce a consistent composition method.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_consistent-name",
+    "title": "Lodash fp: Consistent name",
+    "description": "Enforce a consistent name for Lodash.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-argumentless-calls",
+    "title": "Lodash fp: No argumentless calls",
+    "description": "Forbid argument-less calls of Lodash methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-chain",
+    "title": "Lodash fp: No chain",
+    "description": "Forbid the use of [`_.chain`](https://lodash.com/docs#chain)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-extraneous-args",
+    "title": "Lodash fp: No extraneous args",
+    "description": "No extraneous arguments to methods with a fixed arity.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-extraneous-function-wrapping",
+    "title": "Lodash fp: No extraneous function wrapping",
+    "description": "Avoid unnecessary function wrapping.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-extraneous-iteratee-args",
+    "title": "Lodash fp: No extraneous iteratee args",
+    "description": "No extraneous parameters in iteratees.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-extraneous-partials",
+    "title": "Lodash fp: No extraneous partials",
+    "description": "No extraneous partials in method calls.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-for-each",
+    "title": "Lodash fp: No for each",
+    "description": " Forbid the use of [`_.forEach`](https://lodash.com/docs#forEach)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-partial-of-curried",
+    "title": "Lodash fp: No partial of curried",
+    "description": "No use of [`_.partial`](https://lodash.com/docs#partial) on curried Lodash methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-single-composition",
+    "title": "Lodash fp: No single composition",
+    "description": "Enforce at least two methods arguments for composition methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-submodule-destructuring",
+    "title": "Lodash fp: No submodule destructuring",
+    "description": "Forbid destructuring of Lodash submodules.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_no-unused-result",
+    "title": "Lodash fp: No unused result",
+    "description": "Enforce that the result of a Lodash method call gets used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-compact",
+    "title": "Lodash fp: Prefer compact",
+    "description": "Prefer [`_.compact`](https://lodash.com/docs#compact) over [`_.filter`](https://lodash.com/docs#filter) with identity function.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-composition-grouping",
+    "title": "Lodash fp: Prefer composition grouping",
+    "description": "Prefer grouping similar methods in composition methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-constant",
+    "title": "Lodash fp: Prefer constant",
+    "description": "Prefer [`_.constant`](https://lodash.com/docs#constant) over functions returning literals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-flat-map",
+    "title": "Lodash fp: Prefer flat map",
+    "description": "Prefer [`_.flatMap`](https://lodash.com/docs#flatMap) over consecutive [`_.map`](https://lodash.com/docs#map) and [`_.flatten`](https://lodash.com/docs#flatten).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-get",
+    "title": "Lodash fp: Prefer get",
+    "description": "Prefer [`_.get`](https://lodash.com/docs#get) over multiple `&&`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_prefer-identity",
+    "title": "Lodash fp: Prefer identity",
+    "description": "Prefer [`_.identity`](https://lodash.com/docs#identity) over functions returning their argument.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_preferred-alias",
+    "title": "Lodash fp: Preferred alias",
+    "description": "Limit the use of aliases.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "lodash-fp_use-fp",
+    "title": "Lodash fp: Use fp",
+    "description": "Use lodash/fp instead of Lodash.",
     "timeToFix": 5
   },
   {

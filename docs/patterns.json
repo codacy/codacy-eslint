@@ -4768,111 +4768,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "lodash-fp_consistent-compose",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_consistent-name",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-argumentless-calls",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-chain",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-extraneous-args",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-extraneous-function-wrapping",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-extraneous-iteratee-args",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-extraneous-partials",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-for-each",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-partial-of-curried",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-single-composition",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-submodule-destructuring",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_no-unused-result",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-compact",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-composition-grouping",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-constant",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-flat-map",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-get",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_prefer-identity",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_preferred-alias",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "lodash-fp_use-fp",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "lodash_callback-binding",
       "level": "Info",
       "category": "CodeStyle"
@@ -5079,6 +4974,111 @@
     },
     {
       "patternId": "lodash_unwrap",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_consistent-compose",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_consistent-name",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-argumentless-calls",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-chain",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-extraneous-args",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-extraneous-function-wrapping",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-extraneous-iteratee-args",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-extraneous-partials",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-for-each",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-partial-of-curried",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-single-composition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-submodule-destructuring",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_no-unused-result",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-compact",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-composition-grouping",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-constant",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-flat-map",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-get",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_prefer-identity",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_preferred-alias",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "lodash-fp_use-fp",
       "level": "Info",
       "category": "CodeStyle"
     },

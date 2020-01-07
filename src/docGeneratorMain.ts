@@ -88,6 +88,13 @@ async function main() {
     "lodash"
   )
 
+  console.log("Generate meteor description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/dferber90/eslint-plugin-meteor/master/docs/rules/${pattern}.md`,
+    "meteor"
+  )
+
   console.log("Generate node description files")
   await docGenerator.downloadDocs(pattern => {
     const patternFoldered = pattern.split("_").join("/")
