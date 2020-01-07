@@ -3732,6 +3732,246 @@
     "timeToFix": 5
   },
   {
+    "patternId": "jest_consistent-test-it",
+    "title": "Jest: Consistent test it",
+    "description": "Have control over `test` and `it` usages",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_expect-expect",
+    "title": "Jest: Expect expect",
+    "description": "Enforce assertion to be made in a test body",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_lowercase-name",
+    "title": "Jest: Lowercase name",
+    "description": "Enforce `it`, `test` and `describe` to have descriptions that begin with a lowercase letter. This provides more readable test failures.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-alias-methods",
+    "title": "Jest: No alias methods",
+    "description": "Disallow alias methods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-commented-out-tests",
+    "title": "Jest: No commented out tests",
+    "description": "This rule raises a warning about commented out tests. It's similar to no-disabled-tests rule.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-disabled-tests",
+    "title": "Jest: No disabled tests",
+    "description": "Disallow disabled tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-duplicate-hooks",
+    "title": "Jest: No duplicate hooks",
+    "description": "Disallow duplicate setup and teardown hooks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-expect-resolves",
+    "title": "Jest: No expect resolves",
+    "description": "Disallow expect.resolves",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-export",
+    "title": "Jest: No export",
+    "description": "Prevents exports from test files. If a file has at least 1 test in it, then this rule will prevent exports.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-focused-tests",
+    "title": "Jest: No focused tests",
+    "description": "Disallow focused tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-hooks",
+    "title": "Jest: No hooks",
+    "description": "Disallow setup and teardown hooks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-identical-title",
+    "title": "Jest: No identical title",
+    "description": "Disallow identical titles",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-if",
+    "title": "Jest: No if",
+    "description": "Disallow conditional logic",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-jasmine-globals",
+    "title": "Jest: No jasmine globals",
+    "description": "Disallow Jasmine globals",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-jest-import",
+    "title": "Jest: No jest import",
+    "description": "The `jest` object is automatically in scope within every test file. The methods in the `jest` object help create mocks and let you control Jest's overall behavior. It is therefore completely unnecessary to import in `jest`, as Jest doesn't export anything in the first place.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-large-snapshots",
+    "title": "Jest: No large snapshots",
+    "description": "Disallow large snapshots",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-mocks-import",
+    "title": "Jest: No mocks import",
+    "description": "When using `jest.mock`, your tests (just like the code being tested) should import from `./x`, not `./__mocks__/x`. Not following this rule can lead to confusion, because you will have multiple instances of the mocked module",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-standalone-expect",
+    "title": "Jest: No standalone expect",
+    "description": "Prevents expects that are outside of an it or test block.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-test-callback",
+    "title": "Jest: No test callback",
+    "description": "Avoid using a callback in asynchronous tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-test-prefixes",
+    "title": "Jest: No test prefixes",
+    "description": "Use `.only` and `.skip` over `f` and `x`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-test-return-statement",
+    "title": "Jest: No test return statement",
+    "description": "Disallow explicitly returning from tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-truthy-falsy",
+    "title": "Jest: No truthy falsy",
+    "description": "Disallow using `toBeTruthy()` & `toBeFalsy()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-try-expect",
+    "title": "Jest: No try expect",
+    "description": "Prefer using toThrow for exception tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-called-with",
+    "title": "Jest: Prefer called with",
+    "description": "Suggest using `toBeCalledWith()` OR `toHaveBeenCalledWith()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-expect-assertions",
+    "title": "Jest: Prefer expect assertions",
+    "description": "Suggest using `expect.assertions()` OR `expect.hasAssertions()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-hooks-on-top",
+    "title": "Jest: Prefer hooks on top",
+    "description": "Suggest to have all hooks at top level",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-inline-snapshots",
+    "title": "Jest: Prefer inline snapshots",
+    "description": "Suggest using inline snapshots",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-spy-on",
+    "title": "Jest: Prefer spy on",
+    "description": "Suggest using `jest.spyOn()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-strict-equal",
+    "title": "Jest: Prefer strict equal",
+    "description": "Suggest using toStrictEqual()",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-to-be-null",
+    "title": "Jest: Prefer to be null",
+    "description": "Suggest using `toBeNull()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-to-be-undefined",
+    "title": "Jest: Prefer to be undefined",
+    "description": "Suggest using `toBeUndefined()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-to-contain",
+    "title": "Jest: Prefer to contain",
+    "description": "Suggest using `toContain()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-to-have-length",
+    "title": "Jest: Prefer to have length",
+    "description": "Suggest using `toHaveLength()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_prefer-todo",
+    "title": "Jest: Prefer todo",
+    "description": "Suggest using `test.todo`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_require-to-throw-message",
+    "title": "Jest: Require to throw message",
+    "description": "Require a message for `toThrow()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_require-top-level-describe",
+    "title": "Jest: Require top level describe",
+    "description": "Prevents test cases and hooks to be outside of a describe block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_valid-describe",
+    "title": "Jest: Valid describe",
+    "description": "Using an improper `describe()` callback function can lead to unexpected test errors.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_valid-expect-in-promise",
+    "title": "Jest: Valid expect in promise",
+    "description": "Enforce having return statement when testing with promises",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_valid-expect",
+    "title": "Jest: Valid expect",
+    "description": "Enforce valid `expect()` usage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_valid-title",
+    "title": "Jest: Valid title",
+    "description": "Enforce valid titles",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",

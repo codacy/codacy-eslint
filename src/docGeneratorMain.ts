@@ -74,6 +74,13 @@ async function main() {
     "jasmine"
   )
 
+  console.log("Generate jest description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/jest-community/eslint-plugin-jest/master/docs/rules/${pattern}.md`,
+    "jest"
+  )
+
   console.log("Generate lodash description files")
   await docGenerator.downloadDocs(
     pattern =>

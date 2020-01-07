@@ -4027,6 +4027,218 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "jest_consistent-test-it",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_expect-expect",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_lowercase-name",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-alias-methods",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-commented-out-tests",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-disabled-tests",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-duplicate-hooks",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-expect-resolves",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-export",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-focused-tests",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-hooks",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-identical-title",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-if",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-jasmine-globals",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-jest-import",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-large-snapshots",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-mocks-import",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-standalone-expect",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-test-callback",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-test-prefixes",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-test-return-statement",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-truthy-falsy",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_no-try-expect",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-called-with",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-expect-assertions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-hooks-on-top",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-inline-snapshots",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-spy-on",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-strict-equal",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-to-be-null",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-to-be-undefined",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-to-contain",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-to-have-length",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_prefer-todo",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_require-to-throw-message",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_require-top-level-describe",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_valid-describe",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "jest_valid-expect-in-promise",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "jest_valid-expect",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "alwaysAwait",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "jest_valid-title",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreTypeOfDescribeName",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle"

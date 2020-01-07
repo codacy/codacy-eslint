@@ -40,6 +40,7 @@ export const defaultOptions: CLIEngine.Options = {
       "html",
       "import",
       "jasmine",
+      "jest",
       "jsx-a11y",
       "lodash-fp",
       "lodash",
