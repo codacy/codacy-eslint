@@ -5388,6 +5388,41 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "react-native_no-unused-styles",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_no-inline-styles",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_no-color-literals",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_sort-styles",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_split-platform-components",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_no-raw-text",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "react-native_no-single-element-style-arrays",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "react_boolean-prop-naming",
       "level": "Info",
       "category": "CodeStyle",

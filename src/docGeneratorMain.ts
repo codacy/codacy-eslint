@@ -129,6 +129,13 @@ async function main() {
     "react"
   )
 
+  console.log("Generate react-native description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/Intellicode/eslint-plugin-react-native/master/docs/rules/${pattern}.md`,
+    "react-native"
+  )
+
   console.log("Generate typescript-eslint description files")
   await docGenerator.downloadDocs(
     pattern =>

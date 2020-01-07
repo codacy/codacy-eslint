@@ -57,6 +57,7 @@ export const defaultOptions: CLIEngine.Options = {
       "prettier",
       "promise",
       "react-hooks",
+      "react-native",
       "react",
       "relay",
       "security",

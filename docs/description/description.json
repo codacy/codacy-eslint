@@ -5262,6 +5262,48 @@
     "timeToFix": 5
   },
   {
+    "patternId": "react-native_no-unused-styles",
+    "title": "React native: No unused styles",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_no-inline-styles",
+    "title": "React native: No inline styles",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_no-color-literals",
+    "title": "React native: No color literals",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_sort-styles",
+    "title": "React native: Sort styles",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_split-platform-components",
+    "title": "React native: Split platform components",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_no-raw-text",
+    "title": "React native: No raw text",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react-native_no-single-element-style-arrays",
+    "title": "React native: No single element style arrays",
+    "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
+    "timeToFix": 5
+  },
+  {
     "patternId": "react_boolean-prop-naming",
     "title": "React: Boolean prop naming",
     "description": "Enforces consistent naming for boolean props",
