@@ -5220,6 +5220,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-only-tests_no-only-tests",
+    "title": "No only tests: No only tests",
+    "description": "Disallow .only blocks in tests",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-unsafe-innerhtml_no-unsafe-innerhtml",
     "title": "No unsafe innerhtml: No unsafe innerhtml",
     "description": "",

@@ -5353,6 +5353,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "no-only-tests_no-only-tests",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "no-unsafe-innerhtml_no-unsafe-innerhtml",
       "level": "Info",
       "category": "CodeStyle"

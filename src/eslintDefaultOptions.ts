@@ -50,6 +50,7 @@ export const defaultOptions: CLIEngine.Options = {
       "meteor",
       "mocha",
       "mongodb",
+      "no-only-tests",
       "no-unsafe-innerhtml",
       "node",
       "promise",
