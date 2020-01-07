@@ -3269,6 +3269,400 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "cypress_no-assigning-return-values",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "cypress_no-unnecessary-waiting",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "cypress_assertion-before-screenshot",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "cypress_require-data-selectors",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "drupal_jquery-var-name",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "drupal_check-closure-globals",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_alias-model-in-controller",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_avoid-leaking-state-in-ember-objects",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_avoid-using-needs-in-controllers",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_classic-decorator-hooks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_classic-decorator-no-classic-methods",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_closure-actions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_computed-property-getters",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_jquery-ember-run",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_named-functions-in-promises",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "allowSimpleArrowFunction",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "ember_new-module-imports",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-actions-hash",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-arrow-function-computed-properties",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "onlyThisContexts",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "ember_no-attrs-in-components",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-attrs-snapshot",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-capital-letters-in-routes",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-classic-classes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-classic-components",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-computed-properties-in-native-classes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-duplicate-dependent-keys",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-ember-super-in-es-classes",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-ember-testing-in-module-scope",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-empty-attrs",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-function-prototype-extensions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-get-with-default",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-get",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreGetProperties",
+          "default": false
+        },
+        {
+          "name": "ignoreNestedPaths",
+          "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "ember_no-global-jquery",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-invalid-debug-function-arguments",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-jquery",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-new-mixins",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-observers",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-old-shims",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-on-calls-in-components",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-pause-test",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-proxies",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-restricted-resolver-tests",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-side-effects",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-test-and-then",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-test-import-export",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-test-module-for",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-unnecessary-index-route",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-unnecessary-route-path-option",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-unnecessary-service-injection-argument",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "Injection"
+    },
+    {
+      "patternId": "ember_no-volatile-computed-properties",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_order-in-components",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_order-in-controllers",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_order-in-models",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_order-in-routes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_require-computed-macros",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_require-computed-property-dependencies",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "allowDynamicKeys",
+          "default": true
+        },
+        {
+          "name": "requireServiceNames",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "ember_require-return-from-computed",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_require-super-in-init",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_require-tagless-components",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_route-path-style",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_routes-segments-snake-case",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_use-brace-expansion",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_use-ember-data-rfc-395-imports",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_use-ember-get-and-set",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreThisExpressions",
+          "default": false
+        },
+        {
+          "name": "ignoreNonThisExpressions",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "ember-suave_lines-between-object-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "exceptAfterSingleLine",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "ember-suave_no-const-outside-module-scope",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember-suave_no-direct-property-access",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember-suave_require-access-in-comments",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "flowtype_array-style-complex-type",
       "level": "Info",
       "category": "CodeStyle"

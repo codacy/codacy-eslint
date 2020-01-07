@@ -1,0 +1,97 @@
+## Organize your controllers
+
+### Rule name: `order-in-controllers`
+
+#### Configuration
+
+```
+ember/order-in-controllers: [2, {
+  order: [
+    'controller',
+    'service',
+    'query-params',
+    'inherited-property',
+    'property',
+    'single-line-function',
+    'multi-line-function',
+    'observer',
+    'actions',
+    ['method', 'empty-method'],
+  ]
+}]
+```
+
+If you want some of properties to be treated equally in order you can group them into arrays, like so:
+
+```
+order: [
+  ['controller', 'service', 'query-params'],
+  'inherited-property',
+  'property',
+  ['single-line-function', 'multi-line-function']
+]
+```
+
+You can find full list of properties that you can use to configure this rule [here](/lib/utils/property-order.js#L10).
+
+#### Description
+
+You should write code grouped and ordered in this way:
+
+1. Controller injections
+2. Service injections
+3. Query params
+4. Default controller's properties
+5. Custom properties
+6. Single line computed properties
+7. Multi line computed properties
+8. Observers
+9. Actions
+10. Custom / private methods
+
+
+```javascript
+const { Controller, computed, inject: { controller, service }, get } = Ember;
+
+export default Controller.extend({
+  // 1. Controller injections
+  application: controller(),
+
+  // 2. Service injections
+  currentUser: service(),
+
+  // 3. Query params
+  queryParams: ['view'],
+
+  // 4. Default controller's properties
+  concatenatedProperties: ['concatenatedProperty'],
+
+  // 5. Custom properties
+  attitude: 10,
+
+  // 6. Single line Computed Property
+  health: alias('model.health'),
+
+  // 7. Multiline Computed Property
+  levelOfHappiness: computed('attitude', 'health', function() {
+    return get(this, 'attitude') * get(this, 'health') * Math.random();
+  }),
+
+  // 8. Observers
+  onVahicleChange: observer('vehicle', function() {
+    // observer logic
+  }),
+
+  // 9. All actions
+  actions: {
+    sneakyAction() {
+      return this._secretMethod();
+    },
+  },
+
+  // 10. Custom / private methods
+  _secretMethod() {
+    // custom secret method logic
+  },
+});
+```

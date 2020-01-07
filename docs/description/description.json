@@ -2898,6 +2898,420 @@
     "timeToFix": 5
   },
   {
+    "patternId": "cypress_no-assigning-return-values",
+    "title": "Cypress: No assigning return values",
+    "description": "Prevent assigning return values of cy calls",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "cypress_no-unnecessary-waiting",
+    "title": "Cypress: No unnecessary waiting",
+    "description": "Prevent waiting for arbitrary time periods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "cypress_assertion-before-screenshot",
+    "title": "Cypress: Assertion before screenshot",
+    "description": "Assert on the page state before taking a screenshot, so the screenshot is consistent",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "cypress_require-data-selectors",
+    "title": "Cypress: Require data selectors",
+    "description": "Use data-* attributes to provide context to your selectors and insulate them from CSS or JS changes https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "drupal_jquery-var-name",
+    "title": "Drupal: Jquery var name",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "drupal_check-closure-globals",
+    "title": "Drupal: Check closure globals",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_alias-model-in-controller",
+    "title": "Ember: Alias model in controller",
+    "description": "Enforce aliasing model in controllers",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_avoid-leaking-state-in-ember-objects",
+    "title": "Ember: Avoid leaking state in ember objects",
+    "description": "Disallow state leakage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_avoid-using-needs-in-controllers",
+    "title": "Ember: Avoid using needs in controllers",
+    "description": "Disallow using `needs` in controllers",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_classic-decorator-hooks",
+    "title": "Ember: Classic decorator hooks",
+    "description": "Enforce using correct hooks for both classic and non-classic classes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_classic-decorator-no-classic-methods",
+    "title": "Ember: Classic decorator no classic methods",
+    "description": "Disallow usage of classic APIs such as `get`/`set` in classes that aren't explicitly decorated with `@classic`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_closure-actions",
+    "title": "Ember: Closure actions",
+    "description": "Enforce usage of closure actions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_computed-property-getters",
+    "title": "Ember: Computed property getters",
+    "description": "Enforce the consistent use of getters in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_jquery-ember-run",
+    "title": "Ember: Jquery ember run",
+    "description": "Disallow usage of jQuery without an Ember run loop",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_named-functions-in-promises",
+    "title": "Ember: Named functions in promises",
+    "description": "Enforce usage of named functions in promises",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_new-module-imports",
+    "title": "Ember: New module imports",
+    "description": "Enforce using \"New Module Imports\" from Ember RFC #176",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-actions-hash",
+    "title": "Ember: No actions hash",
+    "description": "Disallow the actions hash in components, controllers, and routes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-arrow-function-computed-properties",
+    "title": "Ember: No arrow function computed properties",
+    "description": "Disallow arrow functions in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-attrs-in-components",
+    "title": "Ember: No attrs in components",
+    "description": "Disallow usage of `this.attrs` in components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-attrs-snapshot",
+    "title": "Ember: No attrs snapshot",
+    "description": "Disallow use of attrs snapshot in the `didReceiveAttrs` and `didUpdateAttrs` hooks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-capital-letters-in-routes",
+    "title": "Ember: No capital letters in routes",
+    "description": "Disallow routes with uppercased letters in router.js",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-classic-classes",
+    "title": "Ember: No classic classes",
+    "description": "Disallow \"classic\" classes in favor of native JS classes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-classic-components",
+    "title": "Ember: No classic components",
+    "description": "Enforce using Glimmer components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-computed-properties-in-native-classes",
+    "title": "Ember: No computed properties in native classes",
+    "description": "Disallow using computed properties in native classes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
+    "title": "Ember: No deeply nested dependent keys with each",
+    "description": "Disallow usage of deeply-nested computed property dependent keys with `@each`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-duplicate-dependent-keys",
+    "title": "Ember: No duplicate dependent keys",
+    "description": "Disallow repeating computed property dependent keys",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-ember-super-in-es-classes",
+    "title": "Ember: No ember super in es classes",
+    "description": "Disallow use of `this._super` in ES class methods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-ember-testing-in-module-scope",
+    "title": "Ember: No ember testing in module scope",
+    "description": "Disallow use of `Ember.testing` in module scope",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-empty-attrs",
+    "title": "Ember: No empty attrs",
+    "description": "Disallow usage of empty attributes in Ember Data models",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-function-prototype-extensions",
+    "title": "Ember: No function prototype extensions",
+    "description": "Disallow usage of Ember's `function` prototype extensions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-get-with-default",
+    "title": "Ember: No get with default",
+    "description": "Disallow usage of the Ember's `getWithDefault` function",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-get",
+    "title": "Ember: No get",
+    "description": "Require using ES5 getters instead of Ember's `get` / `getProperties` functions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-global-jquery",
+    "title": "Ember: No global jquery",
+    "description": "Disallow usage of global jQuery object",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
+    "title": "Ember: No incorrect calls with inline anonymous functions",
+    "description": "Disallow inline anonymous functions as arguments to `debounce`, `once`, and `scheduleOnce`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-invalid-debug-function-arguments",
+    "title": "Ember: No invalid debug function arguments",
+    "description": "Disallow usages of Ember's `assert()` / `warn()` / `deprecate()` functions that have the arguments passed in the wrong order.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-jquery",
+    "title": "Ember: No jquery",
+    "description": "Disallow any usage of jQuery",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-new-mixins",
+    "title": "Ember: No new mixins",
+    "description": "Disallow the creation of new mixins",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-observers",
+    "title": "Ember: No observers",
+    "description": "Disallow usage of observers",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-old-shims",
+    "title": "Ember: No old shims",
+    "description": "Disallow usage of old shims for modules",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-on-calls-in-components",
+    "title": "Ember: No on calls in components",
+    "description": "Disallow usage of `on` to call lifecycle hooks in components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-pause-test",
+    "title": "Ember: No pause test",
+    "description": "Disallow usage of the `pauseTest` helper in tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-proxies",
+    "title": "Ember: No proxies",
+    "description": "Disallow using array or object proxies",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-restricted-resolver-tests",
+    "title": "Ember: No restricted resolver tests",
+    "description": "Disallow the use of patterns that use the restricted resolver in tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-side-effects",
+    "title": "Ember: No side effects",
+    "description": "Disallow unexpected side effects in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-test-and-then",
+    "title": "Ember: No test and then",
+    "description": "Disallow usage of the `andThen` test wait helper",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-test-import-export",
+    "title": "Ember: No test import export",
+    "description": "Disallow importing of \"-test.js\" in a test file and exporting from a test file",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-test-module-for",
+    "title": "Ember: No test module for",
+    "description": "Disallow usage of `moduleFor`, `moduleForComponent`, etc",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-unnecessary-index-route",
+    "title": "Ember: No unnecessary index route",
+    "description": "Disallow unnecessary `index` route definition",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-unnecessary-route-path-option",
+    "title": "Ember: No unnecessary route path option",
+    "description": "Disallow unnecessary usage of the route `path` option",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-unnecessary-service-injection-argument",
+    "title": "Ember: No unnecessary service injection argument",
+    "description": "Disallow unnecessary argument when injecting services",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-volatile-computed-properties",
+    "title": "Ember: No volatile computed properties",
+    "description": "Disallow volatile computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_order-in-components",
+    "title": "Ember: Order in components",
+    "description": "Enforce proper order of properties in components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_order-in-controllers",
+    "title": "Ember: Order in controllers",
+    "description": "Enforce proper order of properties in controllers",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_order-in-models",
+    "title": "Ember: Order in models",
+    "description": "Enforce proper order of properties in models",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_order-in-routes",
+    "title": "Ember: Order in routes",
+    "description": "Enforce proper order of properties in routes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_require-computed-macros",
+    "title": "Ember: Require computed macros",
+    "description": "Require using computed property macros when possible",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_require-computed-property-dependencies",
+    "title": "Ember: Require computed property dependencies",
+    "description": "Require dependencies to be declared statically in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_require-return-from-computed",
+    "title": "Ember: Require return from computed",
+    "description": "Disallow missing return statements in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_require-super-in-init",
+    "title": "Ember: Require super in init",
+    "description": "Require `this._super` to be called in `init` hooks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_require-tagless-components",
+    "title": "Ember: Require tagless components",
+    "description": "Disallow using the wrapper element of a component",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_route-path-style",
+    "title": "Ember: Route path style",
+    "description": "Enforce usage of kebab-case (instead of snake_case or camelCase) in route paths",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_routes-segments-snake-case",
+    "title": "Ember: Routes segments snake case",
+    "description": "Enforce usage of snake_cased dynamic segments in routes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_use-brace-expansion",
+    "title": "Ember: Use brace expansion",
+    "description": "Enforce usage of brace expansion in computed property dependent keys",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_use-ember-data-rfc-395-imports",
+    "title": "Ember: Use ember data rfc 395 imports",
+    "description": "Enforce usage of `@ember-data/` packages instead `ember-data`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_use-ember-get-and-set",
+    "title": "Ember: Use ember get and set",
+    "description": "Enforce usage of `Ember.get` and `Ember.set`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember-suave_lines-between-object-properties",
+    "title": "Ember suave: Lines between object properties",
+    "description": "Require or disallow an empty line between object properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember-suave_no-const-outside-module-scope",
+    "title": "Ember suave: No const outside module scope",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember-suave_no-direct-property-access",
+    "title": "Ember suave: No direct property access",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember-suave_require-access-in-comments",
+    "title": "Ember suave: Require access in comments",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "flowtype_array-style-complex-type",
     "title": "Flowtype: Array style complex type",
     "description": "",
