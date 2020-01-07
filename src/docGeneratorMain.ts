@@ -95,6 +95,13 @@ async function main() {
     "meteor"
   )
 
+  console.log("Generate mocha description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/lo1tuma/eslint-plugin-mocha/master/docs/rules/${pattern}.md`,
+    "mocha"
+  )
+
   console.log("Generate node description files")
   await docGenerator.downloadDocs(pattern => {
     const patternFoldered = pattern.split("_").join("/")
