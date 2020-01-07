@@ -7,7 +7,6 @@ import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import { writeFile } from "./fileUtils"
 import { DescriptionEntry } from "./model/description"
 import {
-  Category,
   fromEslintCategoryToLevel,
   fromEslintPatternIdAndCategoryToCategory,
   Level,
