@@ -3972,6 +3972,216 @@
     "timeToFix": 5
   },
   {
+    "patternId": "jsdoc_check-access",
+    "title": "Jsdoc: Check access",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-alignment",
+    "title": "Jsdoc: Check alignment",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-examples",
+    "title": "Jsdoc: Check examples",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-indentation",
+    "title": "Jsdoc: Check indentation",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-param-names",
+    "title": "Jsdoc: Check param names",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-property-names",
+    "title": "Jsdoc: Check property names",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-syntax",
+    "title": "Jsdoc: Check syntax",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-tag-names",
+    "title": "Jsdoc: Check tag names",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-types",
+    "title": "Jsdoc: Check types",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_check-values",
+    "title": "Jsdoc: Check values",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_empty-tags",
+    "title": "Jsdoc: Empty tags",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_implements-on-classes",
+    "title": "Jsdoc: Implements on classes",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_match-description",
+    "title": "Jsdoc: Match description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_newline-after-description",
+    "title": "Jsdoc: Newline after description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_no-types",
+    "title": "Jsdoc: No types",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_no-undefined-types",
+    "title": "Jsdoc: No undefined types",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-description",
+    "title": "Jsdoc: Require description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-description-complete-sentence",
+    "title": "Jsdoc: Require description complete sentence",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-example",
+    "title": "Jsdoc: Require example",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-file-overview",
+    "title": "Jsdoc: Require file overview",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-hyphen-before-param-description",
+    "title": "Jsdoc: Require hyphen before param description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-jsdoc",
+    "title": "Jsdoc: Require jsdoc",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-param",
+    "title": "Jsdoc: Require param",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-param-description",
+    "title": "Jsdoc: Require param description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-param-name",
+    "title": "Jsdoc: Require param name",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-param-type",
+    "title": "Jsdoc: Require param type",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-property",
+    "title": "Jsdoc: Require property",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-property-description",
+    "title": "Jsdoc: Require property description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-property-name",
+    "title": "Jsdoc: Require property name",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-property-type",
+    "title": "Jsdoc: Require property type",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-returns",
+    "title": "Jsdoc: Require returns",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-returns-check",
+    "title": "Jsdoc: Require returns check",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-returns-description",
+    "title": "Jsdoc: Require returns description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-returns-type",
+    "title": "Jsdoc: Require returns type",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_valid-types",
+    "title": "Jsdoc: Valid types",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "",

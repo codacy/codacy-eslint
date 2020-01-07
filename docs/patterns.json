@@ -4239,6 +4239,243 @@
       ]
     },
     {
+      "patternId": "jsdoc_check-access",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-alignment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-examples",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowInlineConfig",
+          "default": true
+        },
+        {
+          "name": "captionRequired",
+          "default": false
+        },
+        {
+          "name": "checkEslintrc",
+          "default": true
+        },
+        {
+          "name": "noDefaultExampleRules",
+          "default": false
+        },
+        {
+          "name": "paddedIndent",
+          "default": 0
+        },
+        {
+          "name": "reportUnusedDisableDirectives",
+          "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "jsdoc_check-indentation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-param-names",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-property-names",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-syntax",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-tag-names",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-types",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_check-values",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_empty-tags",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_implements-on-classes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_match-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_newline-after-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_no-types",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_no-undefined-types",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-description-complete-sentence",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-example",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "avoidExampleOnConstructors",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "jsdoc_require-file-overview",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-hyphen-before-param-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-jsdoc",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "exemptEmptyFunctions",
+          "default": false
+        },
+        {
+          "name": "require",
+          "default": {}
+        }
+      ]
+    },
+    {
+      "patternId": "jsdoc_require-param",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-param-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-param-name",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-param-type",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-property",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-property-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-property-name",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-property-type",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-returns",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "forceRequireReturn",
+          "default": false
+        },
+        {
+          "name": "forceReturnsWithAsync",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "jsdoc_require-returns-check",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-returns-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-returns-type",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_valid-types",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowEmptyNamepaths",
+          "default": true
+        },
+        {
+          "name": "checkSeesForNamepaths",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle"
