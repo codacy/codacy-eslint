@@ -5495,7 +5495,13 @@
     {
       "patternId": "react_display-name",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreTranspilerName",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "react_forbid-component-props",

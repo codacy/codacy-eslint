@@ -46,7 +46,6 @@ export const defaultOptions: CLIEngine.Options = {
       "jsx-a11y",
       "lodash",
       "lodash-fp",
-      "m6web-i18n",
       "meteor",
       "mocha",
       "mongodb",

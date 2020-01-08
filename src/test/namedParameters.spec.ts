@@ -32,7 +32,7 @@ describe("namedParameters", () => {
         new PatternsParameter("setWithoutGet", true),
         new PatternsParameter("enforceForClassMembers", false)
       ]
-      deepEqual(fromSchemaArray(schemaArray), expectedResult)
+      deepEqual(fromSchemaArray("dummy", schemaArray), expectedResult)
     })
   })
 })
