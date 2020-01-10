@@ -43,7 +43,7 @@ export class rulesNamedParametersAndDefaults {
 
   static has(patternId: string, parameter: string): boolean {
     return this.array.some(
-      ([pId, param, value]) => pId === patternId && param === parameter
+      ([pId, param, _]) => pId === patternId && param === parameter
     )
   }
 
@@ -52,7 +52,7 @@ export class rulesNamedParametersAndDefaults {
     parameter: string
   ): PatternsParameter | undefined {
     const e = this.array.find(
-      ([pId, param, value]) => pId === patternId && param === parameter
+      ([pId, param, _]) => pId === patternId && param === parameter
     )
     return e ? new PatternsParameter(parameter, e[2]) : undefined
   }
