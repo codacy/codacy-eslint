@@ -1,3 +1,5 @@
+import { PatternsParameter } from "./model/patterns"
+
 export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["array-bracket-spacing", "never"],
   ["arrow-parens", "always"],
@@ -33,3 +35,25 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["wrap-iife", "outside"],
   ["yoda", "never"]
 ])
+
+export class rulesNamedParametersAndDefaults {
+  private static readonly array: [string, string, any][] = [
+    ["react/display-name", "ignoreTranspilerName", false]
+  ]
+
+  static has(patternId: string, parameter: string): boolean {
+    return this.array.some(
+      ([pId, param, _]) => pId === patternId && param === parameter
+    )
+  }
+
+  static parameter(
+    patternId: string,
+    parameter: string
+  ): PatternsParameter | undefined {
+    const e = this.array.find(
+      ([pId, param, _]) => pId === patternId && param === parameter
+    )
+    return e ? new PatternsParameter(parameter, e[2]) : undefined
+  }
+}

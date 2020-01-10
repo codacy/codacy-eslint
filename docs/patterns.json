@@ -5103,31 +5103,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "m6web-i18n_no-unknown-key",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "m6web-i18n_no-unknown-key-secondary-langs",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "m6web-i18n_no-text-as-attribute",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "m6web-i18n_no-text-as-children",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "m6web-i18n_interpolation-data",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "meteor_audit-argument-checks",
       "level": "Info",
       "category": "CodeStyle"
@@ -5495,7 +5470,13 @@
     {
       "patternId": "react_display-name",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreTranspilerName",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "react_forbid-component-props",

@@ -39,7 +39,7 @@ export class DocGenerator {
         ] = fromEslintPatternIdAndCategoryToCategory(patternId, eslintCategory)
         const namedParameters =
           meta && meta.schema
-            ? this.fromEslintSchemaToParameters(meta.schema)
+            ? this.fromEslintSchemaToParameters(patternId, meta.schema)
             : undefined
         const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
           patternId
@@ -91,6 +91,7 @@ export class DocGenerator {
   }
 
   private fromEslintSchemaToParameters(
+    patternId: string,
     schema: JSONSchema4 | JSONSchema4[]
   ): PatternsParameter[] {
     const anyOfToArray = (schema: JSONSchema4) =>
@@ -102,7 +103,7 @@ export class DocGenerator {
 
     if (Array.isArray(flattenSchema)) {
       const objects = flattenSchema.filter(value => value && value.properties)
-      return fromSchemaArray(objects)
+      return fromSchemaArray(patternId, objects)
     } else return []
   }
 
