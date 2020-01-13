@@ -2176,17 +2176,6 @@
       ]
     },
     {
-      "patternId": "import_no-unresolved",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "caseSensitive",
-          "default": true
-        }
-      ]
-    },
-    {
       "patternId": "import_named",
       "level": "Info",
       "category": "CodeStyle"
@@ -2429,11 +2418,6 @@
     },
     {
       "patternId": "node_no-missing-import",
-      "level": "Error",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "node_no-missing-require",
       "level": "Error",
       "category": "ErrorProne"
     },
@@ -4355,6 +4339,16 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "jsdoc_no-bad-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_no-defaults",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "jsdoc_no-types",
       "level": "Info",
       "category": "CodeStyle"
@@ -4393,7 +4387,13 @@
     {
       "patternId": "jsdoc_require-hyphen-before-param-description",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkProperties",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "jsdoc_require-jsdoc",

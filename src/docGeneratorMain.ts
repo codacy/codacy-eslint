@@ -1,5 +1,6 @@
 import { EOL } from "os"
 
+import { blacklist } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
 import { defaultEngine } from "./eslintDefaultOptions"
 import { writeFile } from "./fileUtils"
@@ -7,7 +8,11 @@ import { writeFile } from "./fileUtils"
 main()
 
 async function main() {
-  const docGenerator = new DocGenerator(defaultEngine.getRules())
+  const docGenerator = new DocGenerator(
+    Array.from(defaultEngine.getRules().entries()).filter(
+      ([patternId, _]) => patternId && !blacklist.includes(patternId)
+    )
+  )
 
   console.log("Generate patterns.json")
   await writeJsonFile("docs/patterns.json", docGenerator.generatePatterns())

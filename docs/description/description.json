@@ -1650,12 +1650,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "import_no-unresolved",
-    "title": "Import: No unresolved",
-    "description": "",
-    "timeToFix": 5
-  },
-  {
     "patternId": "import_named",
     "title": "Import: Named",
     "description": "",
@@ -1941,12 +1935,6 @@
     "patternId": "node_no-missing-import",
     "title": "Node: No missing import",
     "description": "Disallow `import` declarations which import non-existence modules",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "node_no-missing-require",
-    "title": "Node: No missing require",
-    "description": "Disallow `require()` expressions which import non-existence modules",
     "timeToFix": 5
   },
   {
@@ -4076,6 +4064,18 @@
   {
     "patternId": "jsdoc_newline-after-description",
     "title": "Jsdoc: Newline after description",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_no-bad-blocks",
+    "title": "Jsdoc: No bad blocks",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_no-defaults",
+    "title": "Jsdoc: No defaults",
     "description": "",
     "timeToFix": 5
   },
