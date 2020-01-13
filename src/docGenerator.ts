@@ -19,75 +19,70 @@ import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
 export class DocGenerator {
-  private readonly rules: Map<string, Rule.RuleModule>
+  private readonly rules: [string, Rule.RuleModule][]
 
-  constructor(rules: Map<string, Rule.RuleModule>) {
+  constructor(rules: [string, Rule.RuleModule][]) {
     this.rules = rules
   }
 
+  private getPatternIds() {
+    return this.rules.map(([patternId, _]) => patternId)
+  }
+
   generatePatterns(): Patterns {
-    const entries = flatMap(
-      Array.from(this.rules.entries()),
-      ([patternId, ruleModule]) => {
-        const meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
-        const eslintCategory =
-          meta && meta.docs ? meta.docs.category : undefined
-        const level: Level = fromEslintCategoryToLevel(eslintCategory)
-        const [
-          category,
-          subcategory
-        ] = fromEslintPatternIdAndCategoryToCategory(patternId, eslintCategory)
-        const namedParameters =
-          meta && meta.schema
-            ? this.fromEslintSchemaToParameters(patternId, meta.schema)
-            : undefined
-        const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
-          patternId
-        )
-        const unnamedParameter = unnamedParameterValue
-          ? new PatternsParameter("unnamedParam", unnamedParameterValue)
+    const entries = flatMap(this.rules, ([patternId, ruleModule]) => {
+      const meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
+      const eslintCategory = meta && meta.docs ? meta.docs.category : undefined
+      const level: Level = fromEslintCategoryToLevel(eslintCategory)
+      const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
+        patternId,
+        eslintCategory
+      )
+      const namedParameters =
+        meta && meta.schema
+          ? this.fromEslintSchemaToParameters(patternId, meta.schema)
           : undefined
-        function getParameters(): PatternsParameter[] | undefined {
-          if (namedParameters && unnamedParameter)
-            return [unnamedParameter, ...namedParameters]
-          else if (namedParameters) return namedParameters
-          else if (unnamedParameter) return [unnamedParameter]
-          else return undefined
-        }
-        const parameters = getParameters()
-        return new PatternsEntry(
-          patternIdToCodacy(patternId),
-          level,
-          category,
-          subcategory,
-          parameters && parameters.length > 0 ? parameters : undefined
-        )
+      const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
+        patternId
+      )
+      const unnamedParameter = unnamedParameterValue
+        ? new PatternsParameter("unnamedParam", unnamedParameterValue)
+        : undefined
+      function getParameters(): PatternsParameter[] | undefined {
+        if (namedParameters && unnamedParameter)
+          return [unnamedParameter, ...namedParameters]
+        else if (namedParameters) return namedParameters
+        else if (unnamedParameter) return [unnamedParameter]
+        else return undefined
       }
-    )
+      const parameters = getParameters()
+      return new PatternsEntry(
+        patternIdToCodacy(patternId),
+        level,
+        category,
+        subcategory,
+        parameters && parameters.length > 0 ? parameters : undefined
+      )
+    })
     return new Patterns(toolName, toolVersion, entries)
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
-    return flatMap(
-      Array.from(this.rules.entries()),
-      ([patternId, ruleModule]) => {
-        const eslintDescription =
-          ruleModule && ruleModule.meta && ruleModule.meta.docs
-            ? ruleModule.meta.docs.description
-            : undefined
-        const description = eslintDescription
-          ? capitalize(eslintDescription)
-          : ""
-        const title = patternTitle(patternId)
-        const timeToFix = 5
-        return new DescriptionEntry(
-          patternIdToCodacy(patternId),
-          title,
-          description,
-          timeToFix
-        )
-      }
-    )
+    return flatMap(this.rules, ([patternId, ruleModule]) => {
+      const eslintDescription =
+        ruleModule && ruleModule.meta && ruleModule.meta.docs
+          ? ruleModule.meta.docs.description
+          : undefined
+      const description = eslintDescription ? capitalize(eslintDescription) : ""
+      const title = patternTitle(patternId)
+      const timeToFix = 5
+      return new DescriptionEntry(
+        patternIdToCodacy(patternId),
+        title,
+        description,
+        timeToFix
+      )
+    })
   }
 
   private fromEslintSchemaToParameters(
@@ -109,7 +104,7 @@ export class DocGenerator {
 
   private patternIdsWithoutPrefix(prefix: string): Array<string> {
     const longPrefix = prefix + "/"
-    const patternIds = Array.from(this.rules.entries()).map(e => e[0])
+    const patternIds = this.getPatternIds()
     const filteredPatternIds = patternIds.filter(patternId =>
       patternId.startsWith(longPrefix)
     )
@@ -121,7 +116,7 @@ export class DocGenerator {
   private eslintPatternIds(): Array<string> {
     // We take all the patterns except those that have slashes because
     // they come from third party plugins
-    return Array.from(this.rules.keys()).filter(e => !e.includes("/"))
+    return this.getPatternIds().filter(e => !e.includes("/"))
   }
 
   downloadDocs(
