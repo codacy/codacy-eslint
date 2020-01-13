@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@1.2.1
-  codacy_plugins_test: codacy/plugins-test@0.6.6
+  codacy: codacy/base@2.0.1
+  codacy_plugins_test: codacy/plugins-test@0.7.1
 
 jobs:
   publish_docker_local:
@@ -10,15 +10,15 @@ jobs:
     working_directory: ~/workdir
     steps:
       - attach_workspace:
-          at: ~/
+          at: ~/workdir
       - run:
           command: |
             docker build -t $CIRCLE_PROJECT_REPONAME:latest .
-            docker save --output ~/workdir/docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
       - persist_to_workspace:
+          root: ~/workdir
           paths:
-            - workdir/*
-          root: ~/
+            - docker-image.tar
 
 workflows:
   version: 2
@@ -38,7 +38,7 @@ workflows:
           name: publish_dockerhub
           context: CodacyDocker
           cmd: |
-            docker load --input ~/workdir/docker-image.tar
+            docker load --input docker-image.tar
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
             docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:latest
