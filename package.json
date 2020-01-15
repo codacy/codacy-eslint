@@ -55,7 +55,7 @@
     "spec": "src/test/**/*.spec.ts"
   },
   "dependencies": {
-    "@babel/cli": "^7.8.0",
+    "@babel/cli": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
     "@babel/plugin-transform-object-assign": "^7.8.3",
