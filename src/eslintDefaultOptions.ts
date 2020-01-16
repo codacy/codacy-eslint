@@ -61,6 +61,7 @@ export const defaultOptions: CLIEngine.Options = {
       "redux-saga",
       "relay",
       "security",
+      "sonarjs",
       "standard",
       "@typescript-eslint",
       "vue",
