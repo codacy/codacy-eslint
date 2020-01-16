@@ -148,6 +148,13 @@ async function main() {
     "redux-saga"
   )
 
+  console.log("Generate sonarjs description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/SonarSource/eslint-plugin-sonarjs/master/docs/rules/${pattern}.md`,
+    "sonarjs"
+  )
+
   console.log("Generate typescript-eslint description files")
   await docGenerator.downloadDocs(
     pattern =>

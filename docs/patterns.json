@@ -5504,6 +5504,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "react_function-component-definition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "react_jsx-boolean-value",
       "level": "Info",
       "category": "CodeStyle"
@@ -5627,6 +5632,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "react_jsx-no-script-url",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "react_jsx-no-target-blank",
       "level": "Info",
       "category": "BestPractice"
@@ -5710,6 +5720,11 @@
       "patternId": "react_no-access-state-in-setstate",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "react_no-adjacent-inline-elements",
+      "level": "Info",
+      "category": "BestPractice"
     },
     {
       "patternId": "react_no-array-index-key",
@@ -5980,6 +5995,131 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "sonarjs_cognitive-complexity",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_max-switch-cases",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-all-duplicated-branches",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-collapsible-if",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-collection-size-mischeck",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-duplicate-string",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-duplicated-branches",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-element-overwrite",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-extra-arguments",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-identical-conditions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-identical-functions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-identical-expressions",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-inverted-boolean-check",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-one-iteration-loop",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-redundant-boolean",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-redundant-jump",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-same-line-conditional",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-small-switch",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-unused-collection",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-use-of-empty-return-value",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_no-useless-catch",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_prefer-immediate-return",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_prefer-object-literal",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_prefer-single-boolean-return",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "sonarjs_prefer-while",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "@typescript-eslint_adjacent-overload-signatures",
       "level": "Info",
       "category": "BestPractice"
@@ -6052,6 +6192,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "@typescript-eslint_default-param-last",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_explicit-function-return-type",
       "level": "Info",
       "category": "CodeStyle"
@@ -6107,6 +6252,11 @@
     },
     {
       "patternId": "@typescript-eslint_member-ordering",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_naming-convention",
       "level": "Info",
       "category": "CodeStyle"
     },

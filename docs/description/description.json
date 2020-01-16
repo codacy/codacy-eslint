@@ -5358,6 +5358,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "react_function-component-definition",
+    "title": "React: Function component definition",
+    "description": "Standardize the way function component get defined",
+    "timeToFix": 5
+  },
+  {
     "patternId": "react_jsx-boolean-value",
     "title": "React: Jsx boolean value",
     "description": "Enforce boolean attributes notation in JSX",
@@ -5472,6 +5478,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "react_jsx-no-script-url",
+    "title": "React: Jsx no script url",
+    "description": "Forbid `javascript:` URLs",
+    "timeToFix": 5
+  },
+  {
     "patternId": "react_jsx-no-target-blank",
     "title": "React: Jsx no target blank",
     "description": "Forbid target=\"_blank\" attribute without rel=\"noopener noreferrer\"",
@@ -5571,6 +5583,12 @@
     "patternId": "react_no-access-state-in-setstate",
     "title": "React: No access state in setstate",
     "description": "Reports when this.state is accessed within setState",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "react_no-adjacent-inline-elements",
+    "title": "React: No adjacent inline elements",
+    "description": "Prevent adjacent inline elements not separated by whitespace.",
     "timeToFix": 5
   },
   {
@@ -5862,6 +5880,156 @@
     "timeToFix": 5
   },
   {
+    "patternId": "sonarjs_cognitive-complexity",
+    "title": "Sonarjs: Cognitive complexity",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_max-switch-cases",
+    "title": "Sonarjs: Max switch cases",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-all-duplicated-branches",
+    "title": "Sonarjs: No all duplicated branches",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-collapsible-if",
+    "title": "Sonarjs: No collapsible if",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-collection-size-mischeck",
+    "title": "Sonarjs: No collection size mischeck",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-duplicate-string",
+    "title": "Sonarjs: No duplicate string",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-duplicated-branches",
+    "title": "Sonarjs: No duplicated branches",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-element-overwrite",
+    "title": "Sonarjs: No element overwrite",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-extra-arguments",
+    "title": "Sonarjs: No extra arguments",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-identical-conditions",
+    "title": "Sonarjs: No identical conditions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-identical-functions",
+    "title": "Sonarjs: No identical functions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-identical-expressions",
+    "title": "Sonarjs: No identical expressions",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-inverted-boolean-check",
+    "title": "Sonarjs: No inverted boolean check",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-one-iteration-loop",
+    "title": "Sonarjs: No one iteration loop",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-redundant-boolean",
+    "title": "Sonarjs: No redundant boolean",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-redundant-jump",
+    "title": "Sonarjs: No redundant jump",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-same-line-conditional",
+    "title": "Sonarjs: No same line conditional",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-small-switch",
+    "title": "Sonarjs: No small switch",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-unused-collection",
+    "title": "Sonarjs: No unused collection",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-use-of-empty-return-value",
+    "title": "Sonarjs: No use of empty return value",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_no-useless-catch",
+    "title": "Sonarjs: No useless catch",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_prefer-immediate-return",
+    "title": "Sonarjs: Prefer immediate return",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_prefer-object-literal",
+    "title": "Sonarjs: Prefer object literal",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_prefer-single-boolean-return",
+    "title": "Sonarjs: Prefer single boolean return",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "sonarjs_prefer-while",
+    "title": "Sonarjs: Prefer while",
+    "description": "",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_adjacent-overload-signatures",
     "title": "@typescript eslint: Adjacent overload signatures",
     "description": "Require that member overloads be consecutive",
@@ -5922,6 +6090,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_default-param-last",
+    "title": "@typescript eslint: Default param last",
+    "description": "Enforce default parameters to be last",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_explicit-function-return-type",
     "title": "@typescript eslint: Explicit function return type",
     "description": "Require explicit return types on functions and class methods",
@@ -5973,6 +6147,12 @@
     "patternId": "@typescript-eslint_member-ordering",
     "title": "@typescript eslint: Member ordering",
     "description": "Require a consistent member declaration order",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_naming-convention",
+    "title": "@typescript eslint: Naming convention",
+    "description": "Enforces naming conventions for everything across a codebase",
     "timeToFix": 5
   },
   {
@@ -6248,7 +6428,7 @@
   {
     "patternId": "@typescript-eslint_require-array-sort-compare",
     "title": "@typescript eslint: Require array sort compare",
-    "description": "Enforce giving `compare` argument to `Array#sort`",
+    "description": "Requires `Array#sort` calls to always provide a `compareFunction`",
     "timeToFix": 5
   },
   {
