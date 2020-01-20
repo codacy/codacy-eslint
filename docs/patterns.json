@@ -2665,7 +2665,7 @@
       "patternId": "security_detect-object-injection",
       "level": "Info",
       "category": "Security",
-      "subcategory": "Injection"
+      "subcategory": "CommandInjection"
     },
     {
       "patternId": "security_detect-new-buffer",
@@ -3543,7 +3543,7 @@
       "patternId": "ember_no-unnecessary-service-injection-argument",
       "level": "Info",
       "category": "Security",
-      "subcategory": "Injection"
+      "subcategory": "CommandInjection"
     },
     {
       "patternId": "ember_no-volatile-computed-properties",
