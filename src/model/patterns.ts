@@ -12,21 +12,37 @@ export type Category =
   | "BestPractice"
 
 export type SecuritySubcategory =
-  | "Injection"
-  | "BrokenAuth"
-  | "SensitiveData"
-  | "XXE"
-  | "BrokenAccess"
-  | "Misconfiguration"
   | "XSS"
-  | "BadDeserialization"
-  | "VulnerableComponent"
-  | "NoLogging"
+  | "InputValidation"
+  | "FileAccess"
+  | "HTTP"
+  | "Cookies"
+  | "UnexpectedBehaviour"
+  | "MassAssignment"
+  | "InsecureStorage"
+  | "InsecureModulesLibraries"
+  | "Visibility"
+  | "CSRF"
+  | "Android"
+  | "MaliciousCode"
+  | "Cryptography"
+  | "CommandInjection"
+  | "FirefoxOS"
+  | "Auth"
+  | "DoS"
+  | "SQLInjection"
+  | "Routes"
+  | "Regex"
+  | "SSL"
+  | "Other"
 
-export function fromEslintPatternIdAndCategoryToCategory(patternId: string, category?: string): [Category, SecuritySubcategory | undefined] {
-  if(patternId.includes("xss")) return ["Security", "XSS"]
-  if(patternId.includes("injection")) return ["Security", "Injection"]
-  if(patternId.includes("security")) return ["Security", undefined]
+export function fromEslintPatternIdAndCategoryToCategory(
+  patternId: string,
+  category?: string
+): [Category, SecuritySubcategory | undefined] {
+  if (patternId.includes("xss")) return ["Security", "XSS"]
+  if (patternId.includes("injection")) return ["Security", "CommandInjection"]
+  if (patternId.includes("security")) return ["Security", undefined]
   switch (category) {
     case "Possible Errors":
       return ["ErrorProne", undefined]
