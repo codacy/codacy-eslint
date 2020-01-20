@@ -4,28 +4,17 @@ orbs:
   codacy: codacy/base@2.0.1
   codacy_plugins_test: codacy/plugins-test@0.7.1
 
-jobs:
-  publish_docker_local:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/workdir
-      - run:
-          command: |
-            docker build -t $CIRCLE_PROJECT_REPONAME:latest .
-            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
-      - persist_to_workspace:
-          root: ~/workdir
-          paths:
-            - docker-image.tar
-
 workflows:
   version: 2
   compile_test_deploy:
     jobs:
       - codacy/checkout_and_version
-      - publish_docker_local:
+      - codacy/shell:
+          name: publish_docker_local
+          cmd: |
+            docker build -t $CIRCLE_PROJECT_REPONAME:latest .
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+          persist_to_workspace: true
           requires:
             - codacy/checkout_and_version
       - codacy_plugins_test/run:
