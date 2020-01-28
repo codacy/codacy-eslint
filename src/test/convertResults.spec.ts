@@ -39,7 +39,8 @@ describe("convertResults", () => {
       errorCount: 2,
       warningCount: 0,
       fixableErrorCount: 0,
-      fixableWarningCount: 0
+      fixableWarningCount: 0,
+      usedDeprecatedRules: []
     }
 
     const results = convertResults(report)
