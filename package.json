@@ -178,7 +178,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^6.1.7",
-    "@types/mocha": "^5.2.6",
+    "@types/mocha": "^7.0.1",
     "@types/node": "^13.5.2",
     "@types/node-fetch": "^2.5.4",
     "@types/simple-mock": "^0.8.1",
