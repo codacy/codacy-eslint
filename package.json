@@ -24,6 +24,7 @@
   },
   "scripts": {
     "compile": "tsc",
+    "dockerBuild": "docker build -t codacy-eslint .",
     "generateDocs": "npm run compile && node dist/src/docGeneratorMain.js",
     "test": "mocha"
   },

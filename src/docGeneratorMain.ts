@@ -72,6 +72,14 @@ async function main() {
     pattern => `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
   )
 
+  console.log("Generate import description files")
+  await docGenerator.downloadDocs(
+    pattern =>
+      `${githubBaseUrl}/benmosher/eslint-plugin-import/master/docs/rules/${pattern}.md`,
+    "import",
+    false
+  )
+
   console.log("Generate jasmine description files")
   await docGenerator.downloadDocs(
     pattern =>
