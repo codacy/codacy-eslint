@@ -23,4 +23,6 @@ RUN npm install --production
 RUN adduser -u 2004 -D docker
 RUN chown -R docker:docker /docs
 
-CMD ["node", "dist/src/index.js"]
+WORKDIR /src
+
+CMD ["node", "/dist/src/index.js"]
