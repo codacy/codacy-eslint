@@ -178,7 +178,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "@types/eslint": "^6.1.7",
+    "@types/eslint": "^6.1.8",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.0",
     "@types/node-fetch": "^2.5.4",
