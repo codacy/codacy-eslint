@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   codacy: codacy/base@2.3.0
-  codacy_plugins_test: codacy/plugins-test@0.8.2
+  codacy_plugins_test: codacy/plugins-test@0.10.0
 
 workflows:
   version: 2
