@@ -43,6 +43,10 @@ export function fromEslintPatternIdAndCategoryToCategory(
   if (patternId.includes("xss")) return ["Security", "XSS"]
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
   if (patternId.includes("security")) return ["Security", undefined]
+  if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"]
+  if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"]
+  if (patternId.startsWith("scanjs-rules")) return ["Security", undefined]
+
   switch (category) {
     case "Possible Errors":
       return ["ErrorProne", undefined]
