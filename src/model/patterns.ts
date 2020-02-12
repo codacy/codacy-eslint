@@ -93,11 +93,11 @@ export function fromEslintCategoryToLevel(category?: string): Level {
 }
 
 export function patternIdToCodacy(patternId: string): string {
-  return patternId.replace(/\//g, "_")
+  return patternId.replace(/_/g, "__").replace(/\//g, "_")
 }
 
 export function patternIdToEslint(patternId: string): string {
-  return patternId.replace(/_/g, "/")
+  return patternId.replace(/([^_])_([^_])/g, "$1/$2").replace(/__/g, "_")
 }
 
 export class PatternsParameter {

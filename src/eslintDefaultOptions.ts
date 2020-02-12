@@ -60,6 +60,7 @@ export const defaultOptions: CLIEngine.Options = {
       "react",
       "redux-saga",
       "relay",
+      "scanjs-rules",
       "security",
       "sonarjs",
       "standard",

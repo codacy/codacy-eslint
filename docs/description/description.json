@@ -1652,67 +1652,56 @@
   {
     "patternId": "import_named",
     "title": "Import: Named",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_default",
     "title": "Import: Default",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_namespace",
     "title": "Import: Namespace",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-namespace",
     "title": "Import: No namespace",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_export",
     "title": "Import: Export",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-mutable-exports",
     "title": "Import: No mutable exports",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_extensions",
     "title": "Import: Extensions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-restricted-paths",
     "title": "Import: No restricted paths",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-internal-modules",
     "title": "Import: No internal modules",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_group-exports",
     "title": "Import: Group exports",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-relative-parent-imports",
     "title": "Import: No relative parent imports",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -1724,169 +1713,141 @@
   {
     "patternId": "import_no-cycle",
     "title": "Import: No cycle",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-named-default",
     "title": "Import: No named default",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-named-as-default",
     "title": "Import: No named as default",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-named-as-default-member",
     "title": "Import: No named as default member",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-anonymous-default-export",
     "title": "Import: No anonymous default export",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-unused-modules",
     "title": "Import: No unused modules",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-commonjs",
     "title": "Import: No commonjs",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-amd",
     "title": "Import: No amd",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-duplicates",
     "title": "Import: No duplicates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_first",
     "title": "Import: First",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_max-dependencies",
     "title": "Import: Max dependencies",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-extraneous-dependencies",
     "title": "Import: No extraneous dependencies",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-absolute-path",
     "title": "Import: No absolute path",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-nodejs-modules",
     "title": "Import: No nodejs modules",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-webpack-loader-syntax",
     "title": "Import: No webpack loader syntax",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_order",
     "title": "Import: Order",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_newline-after-import",
     "title": "Import: Newline after import",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_prefer-default-export",
     "title": "Import: Prefer default export",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-default-export",
     "title": "Import: No default export",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-named-export",
     "title": "Import: No named export",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-dynamic-require",
     "title": "Import: No dynamic require",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_unambiguous",
     "title": "Import: Unambiguous",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-unassigned-import",
     "title": "Import: No unassigned import",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-useless-path-segments",
     "title": "Import: No useless path segments",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_dynamic-import-chunkname",
     "title": "Import: Dynamic import chunkname",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_exports-last",
     "title": "Import: Exports last",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_no-deprecated",
     "title": "Import: No deprecated",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "import_imports-first",
     "title": "Import: Imports first",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2054,79 +2015,66 @@
   {
     "patternId": "promise_param-names",
     "title": "Promise: Param names",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-return-wrap",
     "title": "Promise: No return wrap",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_always-return",
     "title": "Promise: Always return",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_catch-or-return",
     "title": "Promise: Catch or return",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_prefer-await-to-callbacks",
     "title": "Promise: Prefer await to callbacks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_prefer-await-to-then",
     "title": "Promise: Prefer await to then",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-native",
     "title": "Promise: No native",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-callback-in-promise",
     "title": "Promise: No callback in promise",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-promise-in-callback",
     "title": "Promise: No promise in callback",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-nesting",
     "title": "Promise: No nesting",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_avoid-new",
     "title": "Promise: Avoid new",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-new-statics",
     "title": "Promise: No new statics",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "promise_no-return-in-finally",
     "title": "Promise: No return in finally",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2138,571 +2086,476 @@
   {
     "patternId": "standard_array-bracket-even-spacing",
     "title": "Standard: Array bracket even spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "standard_computed-property-even-spacing",
     "title": "Standard: Computed property even spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "standard_object-curly-even-spacing",
     "title": "Standard: Object curly even spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "standard_no-callback-literal",
     "title": "Standard: No callback literal",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-non-literal-regexp",
     "title": "Security: Detect non literal regexp",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-non-literal-require",
     "title": "Security: Detect non literal require",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-non-literal-fs-filename",
     "title": "Security: Detect non literal fs filename",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-eval-with-expression",
     "title": "Security: Detect eval with expression",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-pseudoRandomBytes",
     "title": "Security: Detect pseudoRandomBytes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-possible-timing-attacks",
     "title": "Security: Detect possible timing attacks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-no-csrf-before-method-override",
     "title": "Security: Detect no csrf before method override",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-buffer-noassert",
     "title": "Security: Detect buffer noassert",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-child-process",
     "title": "Security: Detect child process",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-disable-mustache-escape",
     "title": "Security: Detect disable mustache escape",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-object-injection",
     "title": "Security: Detect object injection",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "security_detect-new-buffer",
     "title": "Security: Detect new buffer",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_angularelement",
     "title": "Angular: Angularelement",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_avoid-scope-typos",
     "title": "Angular: Avoid scope typos",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_component-limit",
     "title": "Angular: Component limit",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_component-name",
     "title": "Angular: Component name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_constant-name",
     "title": "Angular: Constant name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_controller-as-route",
     "title": "Angular: Controller as route",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_controller-as-vm",
     "title": "Angular: Controller as vm",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_controller-as",
     "title": "Angular: Controller as",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_controller-name",
     "title": "Angular: Controller name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_deferred",
     "title": "Angular: Deferred",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_definedundefined",
     "title": "Angular: Definedundefined",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_di-order",
     "title": "Angular: Di order",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_di-unused",
     "title": "Angular: Di unused",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_di",
     "title": "Angular: Di",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_directive-name",
     "title": "Angular: Directive name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_directive-restrict",
     "title": "Angular: Directive restrict",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_document-service",
     "title": "Angular: Document service",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_dumb-inject",
     "title": "Angular: Dumb inject",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_empty-controller",
     "title": "Angular: Empty controller",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_factory-name",
     "title": "Angular: Factory name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_file-name",
     "title": "Angular: File name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_filter-name",
     "title": "Angular: Filter name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_foreach",
     "title": "Angular: Foreach",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_function-type",
     "title": "Angular: Function type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_interval-service",
     "title": "Angular: Interval service",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_json-functions",
     "title": "Angular: Json functions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_log",
     "title": "Angular: Log",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_module-dependency-order",
     "title": "Angular: Module dependency order",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_module-getter",
     "title": "Angular: Module getter",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_module-name",
     "title": "Angular: Module name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_module-setter",
     "title": "Angular: Module setter",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-angular-mock",
     "title": "Angular: No angular mock",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-controller",
     "title": "Angular: No controller",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-cookiestore",
     "title": "Angular: No cookiestore",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-directive-replace",
     "title": "Angular: No directive replace",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-http-callback",
     "title": "Angular: No http callback",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-inline-template",
     "title": "Angular: No inline template",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-jquery-angularelement",
     "title": "Angular: No jquery angularelement",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-private-call",
     "title": "Angular: No private call",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-run-logic",
     "title": "Angular: No run logic",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-service-method",
     "title": "Angular: No service method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_no-services",
     "title": "Angular: No services",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_on-destroy",
     "title": "Angular: On destroy",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_on-watch",
     "title": "Angular: On watch",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_one-dependency-per-line",
     "title": "Angular: One dependency per line",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_prefer-component",
     "title": "Angular: Prefer component",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_provider-name",
     "title": "Angular: Provider name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_rest-service",
     "title": "Angular: Rest service",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_service-name",
     "title": "Angular: Service name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_timeout-service",
     "title": "Angular: Timeout service",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-array",
     "title": "Angular: Typecheck array",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-date",
     "title": "Angular: Typecheck date",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-function",
     "title": "Angular: Typecheck function",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-number",
     "title": "Angular: Typecheck number",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-object",
     "title": "Angular: Typecheck object",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_typecheck-string",
     "title": "Angular: Typecheck string",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_value-name",
     "title": "Angular: Value name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_watchers-execution",
     "title": "Angular: Watchers execution",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angular_window-service",
     "title": "Angular: Window service",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-element-methods",
     "title": "Angularjs security rules: Detect angular element methods",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-open-redirect",
     "title": "Angularjs security rules: Detect angular open redirect",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-orderBy-expressions",
     "title": "Angularjs security rules: Detect angular orderBy expressions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-resource-loading",
     "title": "Angularjs security rules: Detect angular resource loading",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-sce-disabled",
     "title": "Angularjs security rules: Detect angular sce disabled",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-scope-expressions",
     "title": "Angularjs security rules: Detect angular scope expressions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-service-expressions",
     "title": "Angularjs security rules: Detect angular service expressions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAs-methods",
     "title": "Angularjs security rules: Detect angular trustAs methods",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAsCss-method",
     "title": "Angularjs security rules: Detect angular trustAsCss method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAsHtml-method",
     "title": "Angularjs security rules: Detect angular trustAsHtml method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAsJs-method",
     "title": "Angularjs security rules: Detect angular trustAsJs method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAsResourceUrl-method",
     "title": "Angularjs security rules: Detect angular trustAsResourceUrl method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-angular-trustAsUrl-method",
     "title": "Angularjs security rules: Detect angular trustAsUrl method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "angularjs-security-rules_detect-third-party-angular-translate",
     "title": "Angularjs security rules: Detect third party angular translate",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "babel_array-bracket-spacing",
     "title": "Babel: Array bracket spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "babel_arrow-parens",
     "title": "Babel: Arrow parens",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "babel_flow-object-type",
     "title": "Babel: Flow object type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "babel_func-params-comma-dangle",
     "title": "Babel: Func params comma dangle",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "babel_generator-star-spacing",
     "title": "Babel: Generator star spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2720,7 +2573,6 @@
   {
     "patternId": "babel_no-await-in-loop",
     "title": "Babel: No await in loop",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2744,7 +2596,6 @@
   {
     "patternId": "babel_object-shorthand",
     "title": "Babel: Object shorthand",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2756,7 +2607,6 @@
   {
     "patternId": "babel_semi",
     "title": "Babel: Semi",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2876,25 +2726,21 @@
   {
     "patternId": "chai-expect_no-inner-compare",
     "title": "Chai expect: No inner compare",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "chai-expect_no-inner-literal",
     "title": "Chai expect: No inner literal",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "chai-expect_missing-assertion",
     "title": "Chai expect: Missing assertion",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "chai-expect_terminating-properties",
     "title": "Chai expect: Terminating properties",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -2936,13 +2782,11 @@
   {
     "patternId": "drupal_jquery-var-name",
     "title": "Drupal: Jquery var name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "drupal_check-closure-globals",
     "title": "Drupal: Check closure globals",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -3308,31 +3152,26 @@
   {
     "patternId": "ember-suave_no-const-outside-module-scope",
     "title": "Ember suave: No const outside module scope",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "ember-suave_no-direct-property-access",
     "title": "Ember suave: No direct property access",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "ember-suave_require-access-in-comments",
     "title": "Ember suave: Require access in comments",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_array-style-complex-type",
     "title": "Flowtype: Array style complex type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_array-style-simple-type",
     "title": "Flowtype: Array style simple type",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -3344,73 +3183,61 @@
   {
     "patternId": "flowtype_boolean-style",
     "title": "Flowtype: Boolean style",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_define-flow-type",
     "title": "Flowtype: Define flow type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_delimiter-dangle",
     "title": "Flowtype: Delimiter dangle",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_generic-spacing",
     "title": "Flowtype: Generic spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_newline-after-flow-annotation",
     "title": "Flowtype: Newline after flow annotation",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-dupe-keys",
     "title": "Flowtype: No dupe keys",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-existential-type",
     "title": "Flowtype: No existential type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-flow-fix-me-comments",
     "title": "Flowtype: No flow fix me comments",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-mixed",
     "title": "Flowtype: No mixed",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-mutable-array",
     "title": "Flowtype: No mutable array",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-primitive-constructor-types",
     "title": "Flowtype: No primitive constructor types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_no-types-missing-file-annotation",
     "title": "Flowtype: No types missing file annotation",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -3422,181 +3249,151 @@
   {
     "patternId": "flowtype_no-weak-types",
     "title": "Flowtype: No weak types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_object-type-delimiter",
     "title": "Flowtype: Object type delimiter",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-compound-type-alias",
     "title": "Flowtype: Require compound type alias",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-exact-type",
     "title": "Flowtype: Require exact type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-indexer-name",
     "title": "Flowtype: Require indexer name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-inexact-type",
     "title": "Flowtype: Require inexact type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-parameter-type",
     "title": "Flowtype: Require parameter type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-readonly-react-props",
     "title": "Flowtype: Require readonly react props",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-return-type",
     "title": "Flowtype: Require return type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-types-at-top",
     "title": "Flowtype: Require types at top",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-valid-file-annotation",
     "title": "Flowtype: Require valid file annotation",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_require-variable-type",
     "title": "Flowtype: Require variable type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_semi",
     "title": "Flowtype: Semi",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_sort-keys",
     "title": "Flowtype: Sort keys",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_space-after-type-colon",
     "title": "Flowtype: Space after type colon",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_space-before-generic-bracket",
     "title": "Flowtype: Space before generic bracket",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_space-before-type-colon",
     "title": "Flowtype: Space before type colon",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_spread-exact-type",
     "title": "Flowtype: Spread exact type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_type-id-match",
     "title": "Flowtype: Type id match",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_type-import-style",
     "title": "Flowtype: Type import style",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_union-intersection-spacing",
     "title": "Flowtype: Union intersection spacing",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_use-flow-type",
     "title": "Flowtype: Use flow type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "flowtype_valid-syntax",
     "title": "Flowtype: Valid syntax",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "graphql_template-strings",
     "title": "Graphql: Template strings",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "graphql_named-operations",
     "title": "Graphql: Named operations",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "graphql_required-fields",
     "title": "Graphql: Required fields",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "graphql_capitalized-type-name",
     "title": "Graphql: Capitalized type name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "graphql_no-deprecated-fields",
     "title": "Graphql: No deprecated fields",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "hapi_hapi-capitalize-modules",
     "title": "Hapi: Hapi capitalize modules",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "hapi_hapi-for-you",
     "title": "Hapi: Hapi for you",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -3608,139 +3405,116 @@
   {
     "patternId": "hapi_hapi-scope-start",
     "title": "Hapi: Hapi scope start",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "hapi_no-arrowception",
     "title": "Hapi: No arrowception",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_expect-matcher",
     "title": "Jasmine: Expect matcher",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_expect-single-argument",
     "title": "Jasmine: Expect single argument",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_named-spy",
     "title": "Jasmine: Named spy",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-focused-tests",
     "title": "Jasmine: No focused tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-disabled-tests",
     "title": "Jasmine: No disabled tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-describe-variables",
     "title": "Jasmine: No describe variables",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-suite-dupes",
     "title": "Jasmine: No suite dupes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-spec-dupes",
     "title": "Jasmine: No spec dupes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_missing-expect",
     "title": "Jasmine: Missing expect",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-suite-callback-args",
     "title": "Jasmine: No suite callback args",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_valid-expect",
     "title": "Jasmine: Valid expect",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-assign-spyon",
     "title": "Jasmine: No assign spyon",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-unsafe-spy",
     "title": "Jasmine: No unsafe spy",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-global-setup",
     "title": "Jasmine: No global setup",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-pending-tests",
     "title": "Jasmine: No pending tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-promise-without-done-fail",
     "title": "Jasmine: No promise without done fail",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_no-expect-in-setup-teardown",
     "title": "Jasmine: No expect in setup teardown",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_new-line-between-declarations",
     "title": "Jasmine: New line between declarations",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_new-line-before-expect",
     "title": "Jasmine: New line before expect",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_prefer-jasmine-matcher",
     "title": "Jasmine: Prefer jasmine matcher",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jasmine_prefer-toHaveBeenCalledWith",
     "title": "Jasmine: Prefer toHaveBeenCalledWith",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -3986,811 +3760,676 @@
   {
     "patternId": "jsdoc_check-access",
     "title": "Jsdoc: Check access",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-examples",
     "title": "Jsdoc: Check examples",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-indentation",
     "title": "Jsdoc: Check indentation",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-param-names",
     "title": "Jsdoc: Check param names",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-property-names",
     "title": "Jsdoc: Check property names",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-syntax",
     "title": "Jsdoc: Check syntax",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-tag-names",
     "title": "Jsdoc: Check tag names",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-types",
     "title": "Jsdoc: Check types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-values",
     "title": "Jsdoc: Check values",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_empty-tags",
     "title": "Jsdoc: Empty tags",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_implements-on-classes",
     "title": "Jsdoc: Implements on classes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_match-description",
     "title": "Jsdoc: Match description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_newline-after-description",
     "title": "Jsdoc: Newline after description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-bad-blocks",
     "title": "Jsdoc: No bad blocks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-defaults",
     "title": "Jsdoc: No defaults",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-types",
     "title": "Jsdoc: No types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-undefined-types",
     "title": "Jsdoc: No undefined types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-description",
     "title": "Jsdoc: Require description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-description-complete-sentence",
     "title": "Jsdoc: Require description complete sentence",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-example",
     "title": "Jsdoc: Require example",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-file-overview",
     "title": "Jsdoc: Require file overview",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-hyphen-before-param-description",
     "title": "Jsdoc: Require hyphen before param description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-jsdoc",
     "title": "Jsdoc: Require jsdoc",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param",
     "title": "Jsdoc: Require param",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param-description",
     "title": "Jsdoc: Require param description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param-name",
     "title": "Jsdoc: Require param name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param-type",
     "title": "Jsdoc: Require param type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property",
     "title": "Jsdoc: Require property",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-description",
     "title": "Jsdoc: Require property description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-name",
     "title": "Jsdoc: Require property name",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-type",
     "title": "Jsdoc: Require property type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns",
     "title": "Jsdoc: Require returns",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns-check",
     "title": "Jsdoc: Require returns check",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns-description",
     "title": "Jsdoc: Require returns description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns-type",
     "title": "Jsdoc: Require returns type",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_valid-types",
     "title": "Jsdoc: Valid types",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_*",
     "title": "Json: *",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_json",
     "title": "Json: Json",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_unknown",
     "title": "Json: Unknown",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_comment-not-permitted",
     "title": "Json: Comment not permitted",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_undefined",
     "title": "Json: Undefined",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_enum-value-mismatch",
     "title": "Json: Enum value mismatch",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_unexpected-end-of-comment",
     "title": "Json: Unexpected end of comment",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_unexpected-end-of-string",
     "title": "Json: Unexpected end of string",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_unexpected-end-of-number",
     "title": "Json: Unexpected end of number",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_invalid-unicode",
     "title": "Json: Invalid unicode",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_invalid-escape-character",
     "title": "Json: Invalid escape character",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_invalid-character",
     "title": "Json: Invalid character",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_property-expected",
     "title": "Json: Property expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_comma-expected",
     "title": "Json: Comma expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_colon-expected",
     "title": "Json: Colon expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_value-expected",
     "title": "Json: Value expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_comma-or-close-backet-expected",
     "title": "Json: Comma or close backet expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_comma-or-close-brace-expected",
     "title": "Json: Comma or close brace expected",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_trailing-comma",
     "title": "Json: Trailing comma",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_duplicate-key",
     "title": "Json: Duplicate key",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "json_schema-resolve-error",
     "title": "Json: Schema resolve error",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_alt-text",
     "title": "Jsx a11y: Alt text",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_anchor-has-content",
     "title": "Jsx a11y: Anchor has content",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_anchor-is-valid",
     "title": "Jsx a11y: Anchor is valid",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_aria-activedescendant-has-tabindex",
     "title": "Jsx a11y: Aria activedescendant has tabindex",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_aria-props",
     "title": "Jsx a11y: Aria props",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_aria-proptypes",
     "title": "Jsx a11y: Aria proptypes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_aria-role",
     "title": "Jsx a11y: Aria role",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_aria-unsupported-elements",
     "title": "Jsx a11y: Aria unsupported elements",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_click-events-have-key-events",
     "title": "Jsx a11y: Click events have key events",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_control-has-associated-label",
     "title": "Jsx a11y: Control has associated label",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_heading-has-content",
     "title": "Jsx a11y: Heading has content",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_html-has-lang",
     "title": "Jsx a11y: Html has lang",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_iframe-has-title",
     "title": "Jsx a11y: Iframe has title",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_img-redundant-alt",
     "title": "Jsx a11y: Img redundant alt",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_interactive-supports-focus",
     "title": "Jsx a11y: Interactive supports focus",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_label-has-associated-control",
     "title": "Jsx a11y: Label has associated control",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_label-has-for",
     "title": "Jsx a11y: Label has for",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_lang",
     "title": "Jsx a11y: Lang",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_media-has-caption",
     "title": "Jsx a11y: Media has caption",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_mouse-events-have-key-events",
     "title": "Jsx a11y: Mouse events have key events",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-access-key",
     "title": "Jsx a11y: No access key",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-autofocus",
     "title": "Jsx a11y: No autofocus",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-distracting-elements",
     "title": "Jsx a11y: No distracting elements",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-interactive-element-to-noninteractive-role",
     "title": "Jsx a11y: No interactive element to noninteractive role",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-noninteractive-element-interactions",
     "title": "Jsx a11y: No noninteractive element interactions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-noninteractive-element-to-interactive-role",
     "title": "Jsx a11y: No noninteractive element to interactive role",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-noninteractive-tabindex",
     "title": "Jsx a11y: No noninteractive tabindex",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-onchange",
     "title": "Jsx a11y: No onchange",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-redundant-roles",
     "title": "Jsx a11y: No redundant roles",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_no-static-element-interactions",
     "title": "Jsx a11y: No static element interactions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_role-has-required-aria-props",
     "title": "Jsx a11y: Role has required aria props",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_role-supports-aria-props",
     "title": "Jsx a11y: Role supports aria props",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_scope",
     "title": "Jsx a11y: Scope",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "jsx-a11y_tabindex-no-positive",
     "title": "Jsx a11y: Tabindex no positive",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_callback-binding",
     "title": "Lodash: Callback binding",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_chain-style",
     "title": "Lodash: Chain style",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_chaining",
     "title": "Lodash: Chaining",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_collection-method-value",
     "title": "Lodash: Collection method value",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_collection-ordering",
     "title": "Lodash: Collection ordering",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_collection-return",
     "title": "Lodash: Collection return",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_consistent-compose",
     "title": "Lodash: Consistent compose",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_identity-shorthand",
     "title": "Lodash: Identity shorthand",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_import-scope",
     "title": "Lodash: Import scope",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_matches-prop-shorthand",
     "title": "Lodash: Matches prop shorthand",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_matches-shorthand",
     "title": "Lodash: Matches shorthand",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_no-commit",
     "title": "Lodash: No commit",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_no-double-unwrap",
     "title": "Lodash: No double unwrap",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_no-extra-args",
     "title": "Lodash: No extra args",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_no-unbound-this",
     "title": "Lodash: No unbound this",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_path-style",
     "title": "Lodash: Path style",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-compact",
     "title": "Lodash: Prefer compact",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-constant",
     "title": "Lodash: Prefer constant",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-filter",
     "title": "Lodash: Prefer filter",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-find",
     "title": "Lodash: Prefer find",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-flat-map",
     "title": "Lodash: Prefer flat map",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-get",
     "title": "Lodash: Prefer get",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-immutable-method",
     "title": "Lodash: Prefer immutable method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-includes",
     "title": "Lodash: Prefer includes",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-invoke-map",
     "title": "Lodash: Prefer invoke map",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-is-nil",
     "title": "Lodash: Prefer is nil",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-lodash-chain",
     "title": "Lodash: Prefer lodash chain",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-lodash-method",
     "title": "Lodash: Prefer lodash method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-lodash-typecheck",
     "title": "Lodash: Prefer lodash typecheck",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-map",
     "title": "Lodash: Prefer map",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-matches",
     "title": "Lodash: Prefer matches",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-noop",
     "title": "Lodash: Prefer noop",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-over-quantifier",
     "title": "Lodash: Prefer over quantifier",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-reject",
     "title": "Lodash: Prefer reject",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-some",
     "title": "Lodash: Prefer some",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-startswith",
     "title": "Lodash: Prefer startswith",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-thru",
     "title": "Lodash: Prefer thru",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-times",
     "title": "Lodash: Prefer times",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prefer-wrapper-method",
     "title": "Lodash: Prefer wrapper method",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_preferred-alias",
     "title": "Lodash: Preferred alias",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_prop-shorthand",
     "title": "Lodash: Prop shorthand",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "lodash_unwrap",
     "title": "Lodash: Unwrap",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -4922,181 +4561,151 @@
   {
     "patternId": "meteor_audit-argument-checks",
     "title": "Meteor: Audit argument checks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_no-session",
     "title": "Meteor: No session",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_no-template-lifecycle-assignments",
     "title": "Meteor: No template lifecycle assignments",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_no-zero-timeout",
     "title": "Meteor: No zero timeout",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_eventmap-params",
     "title": "Meteor: Eventmap params",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_prefix-eventmap-selectors",
     "title": "Meteor: Prefix eventmap selectors",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_prefer-session-equals",
     "title": "Meteor: Prefer session equals",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_template-names",
     "title": "Meteor: Template names",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_scope-dom-lookups",
     "title": "Meteor: Scope dom lookups",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_no-dom-lookup-on-created",
     "title": "Meteor: No dom lookup on created",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "meteor_no-template-parent-data",
     "title": "Meteor: No template parent data",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-exclusive-tests",
     "title": "Mocha: No exclusive tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-pending-tests",
     "title": "Mocha: No pending tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-skipped-tests",
     "title": "Mocha: No skipped tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_handle-done-callback",
     "title": "Mocha: Handle done callback",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-synchronous-tests",
     "title": "Mocha: No synchronous tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-global-tests",
     "title": "Mocha: No global tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-return-and-callback",
     "title": "Mocha: No return and callback",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-return-from-async",
     "title": "Mocha: No return from async",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_valid-test-description",
     "title": "Mocha: Valid test description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_valid-suite-description",
     "title": "Mocha: Valid suite description",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-mocha-arrows",
     "title": "Mocha: No mocha arrows",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-hooks",
     "title": "Mocha: No hooks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-hooks-for-single-case",
     "title": "Mocha: No hooks for single case",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-sibling-hooks",
     "title": "Mocha: No sibling hooks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-top-level-hooks",
     "title": "Mocha: No top level hooks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-identical-title",
     "title": "Mocha: No identical title",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_max-top-level-suites",
     "title": "Mocha: Max top level suites",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-nested-tests",
     "title": "Mocha: No nested tests",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-setup-in-describe",
     "title": "Mocha: No setup in describe",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -5108,109 +4717,91 @@
   {
     "patternId": "mocha_no-async-describe",
     "title": "Mocha: No async describe",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-insert-calls",
     "title": "Mongodb: Check insert calls",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-update-calls",
     "title": "Mongodb: Check update calls",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-query-calls",
     "title": "Mongodb: Check query calls",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-remove-calls",
     "title": "Mongodb: Check remove calls",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-deprecated-calls",
     "title": "Mongodb: Check deprecated calls",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_no-replace",
     "title": "Mongodb: No replace",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-numeric-updates",
     "title": "Mongodb: Check numeric updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-rename-updates",
     "title": "Mongodb: Check rename updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-unset-updates",
     "title": "Mongodb: Check unset updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-current-date-updates",
     "title": "Mongodb: Check current date updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-minmax-updates",
     "title": "Mongodb: Check minmax updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-set-updates",
     "title": "Mongodb: Check set updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-push-updates",
     "title": "Mongodb: Check push updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-pull-updates",
     "title": "Mongodb: Check pull updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-pop-updates",
     "title": "Mongodb: Check pop updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-addtoset-updates",
     "title": "Mongodb: Check addtoset updates",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "mongodb_check-deprecated-updates",
     "title": "Mongodb: Check deprecated updates",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -5222,7 +4813,6 @@
   {
     "patternId": "no-unsafe-innerhtml_no-unsafe-innerhtml",
     "title": "No unsafe innerhtml: No unsafe innerhtml",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -5240,55 +4830,46 @@
   {
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-hooks_rules-of-hooks",
     "title": "React hooks: Rules of hooks",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-hooks_exhaustive-deps",
     "title": "React hooks: Exhaustive deps",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_no-unused-styles",
     "title": "React native: No unused styles",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_no-inline-styles",
     "title": "React native: No inline styles",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_no-color-literals",
     "title": "React native: No color literals",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_sort-styles",
     "title": "React native: Sort styles",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_split-platform-components",
     "title": "React native: Split platform components",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "react-native_no-raw-text",
     "title": "React native: No raw text",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -5816,7 +5397,7 @@
   {
     "patternId": "react_void-dom-elements-no-children",
     "title": "React: Void dom elements no children",
-    "description": "Prevent passing of children to void DOM elements (e.g. <br />).",
+    "description": "Prevent passing of children to void DOM elements (e.g. `<br />`).",
     "timeToFix": 5
   },
   {
@@ -5864,13 +5445,11 @@
   {
     "patternId": "relay_no-future-added-value",
     "title": "Relay: No future added value",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "relay_unused-fields",
     "title": "Relay: Unused fields",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -5880,153 +5459,308 @@
     "timeToFix": 5
   },
   {
+    "patternId": "scanjs-rules_accidental__assignment",
+    "title": "Scanjs rules: Accidental_assignment",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__hostname",
+    "title": "Scanjs rules: Assign_to_hostname",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__href",
+    "title": "Scanjs rules: Assign_to_href",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__location",
+    "title": "Scanjs rules: Assign_to_location",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__onmessage",
+    "title": "Scanjs rules: Assign_to_onmessage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__pathname",
+    "title": "Scanjs rules: Assign_to_pathname",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__protocol",
+    "title": "Scanjs rules: Assign_to_protocol",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__search",
+    "title": "Scanjs rules: Assign_to_search",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_assign__to__src",
+    "title": "Scanjs rules: Assign_to_src",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__addEventListener",
+    "title": "Scanjs rules: Call_addEventListener",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__addEventListener__deviceproximity",
+    "title": "Scanjs rules: Call_addEventListener_deviceproximity",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__addEventListener__message",
+    "title": "Scanjs rules: Call_addEventListener_message",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__connect",
+    "title": "Scanjs rules: Call_connect",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__eval",
+    "title": "Scanjs rules: Call_eval",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__execScript",
+    "title": "Scanjs rules: Call_execScript",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__hide",
+    "title": "Scanjs rules: Call_hide",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__open__remote=true",
+    "title": "Scanjs rules: Call_open_remote=true",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__parseFromString",
+    "title": "Scanjs rules: Call_parseFromString",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__setAttribute__mozbrowser",
+    "title": "Scanjs rules: Call_setAttribute_mozbrowser",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__setImmediate",
+    "title": "Scanjs rules: Call_setImmediate",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__setInterval",
+    "title": "Scanjs rules: Call_setInterval",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_call__setTimeout",
+    "title": "Scanjs rules: Call_setTimeout",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_identifier__indexedDB",
+    "title": "Scanjs rules: Identifier_indexedDB",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_identifier__localStorage",
+    "title": "Scanjs rules: Identifier_localStorage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_identifier__sessionStorage",
+    "title": "Scanjs rules: Identifier_sessionStorage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_new__Function",
+    "title": "Scanjs rules: New_Function",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__addIdleObserver",
+    "title": "Scanjs rules: Property_addIdleObserver",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__createContextualFragment",
+    "title": "Scanjs rules: Property_createContextualFragment",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__crypto",
+    "title": "Scanjs rules: Property_crypto",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__geolocation",
+    "title": "Scanjs rules: Property_geolocation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__getUserMedia",
+    "title": "Scanjs rules: Property_getUserMedia",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__indexedDB",
+    "title": "Scanjs rules: Property_indexedDB",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__localStorage",
+    "title": "Scanjs rules: Property_localStorage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__mgmt",
+    "title": "Scanjs rules: Property_mgmt",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "scanjs-rules_property__sessionStorage",
+    "title": "Scanjs rules: Property_sessionStorage",
+    "timeToFix": 5
+  },
+  {
     "patternId": "sonarjs_cognitive-complexity",
     "title": "Sonarjs: Cognitive complexity",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_max-switch-cases",
     "title": "Sonarjs: Max switch cases",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-all-duplicated-branches",
     "title": "Sonarjs: No all duplicated branches",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-collapsible-if",
     "title": "Sonarjs: No collapsible if",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-collection-size-mischeck",
     "title": "Sonarjs: No collection size mischeck",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-duplicate-string",
     "title": "Sonarjs: No duplicate string",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-duplicated-branches",
     "title": "Sonarjs: No duplicated branches",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-element-overwrite",
     "title": "Sonarjs: No element overwrite",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-extra-arguments",
     "title": "Sonarjs: No extra arguments",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-identical-conditions",
     "title": "Sonarjs: No identical conditions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-identical-functions",
     "title": "Sonarjs: No identical functions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-identical-expressions",
     "title": "Sonarjs: No identical expressions",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-inverted-boolean-check",
     "title": "Sonarjs: No inverted boolean check",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-one-iteration-loop",
     "title": "Sonarjs: No one iteration loop",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-redundant-boolean",
     "title": "Sonarjs: No redundant boolean",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-redundant-jump",
     "title": "Sonarjs: No redundant jump",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-same-line-conditional",
     "title": "Sonarjs: No same line conditional",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-small-switch",
     "title": "Sonarjs: No small switch",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-unused-collection",
     "title": "Sonarjs: No unused collection",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-use-of-empty-return-value",
     "title": "Sonarjs: No use of empty return value",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_no-useless-catch",
     "title": "Sonarjs: No useless catch",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_prefer-immediate-return",
     "title": "Sonarjs: Prefer immediate return",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_prefer-object-literal",
     "title": "Sonarjs: Prefer object literal",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_prefer-single-boolean-return",
     "title": "Sonarjs: Prefer single boolean return",
-    "description": "",
     "timeToFix": 5
   },
   {
     "patternId": "sonarjs_prefer-while",
     "title": "Sonarjs: Prefer while",
-    "description": "",
     "timeToFix": 5
   },
   {
@@ -6180,6 +5914,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-dupe-class-members",
+    "title": "@typescript eslint: No dupe class members",
+    "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-dynamic-delete",
     "title": "@typescript eslint: No dynamic delete",
     "description": "Disallow the delete operator with computed key expressions",
@@ -6315,6 +6055,12 @@
     "patternId": "@typescript-eslint_no-throw-literal",
     "title": "@typescript eslint: No throw literal",
     "description": "Disallow throwing literals as exceptions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
+    "title": "@typescript eslint: No unnecessary boolean literal compare",
+    "description": "Flags unnecessary equality comparisons against boolean literals",
     "timeToFix": 5
   },
   {
@@ -6501,6 +6247,12 @@
     "patternId": "@typescript-eslint_strict-boolean-expressions",
     "title": "@typescript eslint: Strict boolean expressions",
     "description": "Restricts the types allowed in boolean expressions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_switch-exhaustiveness-check",
+    "title": "@typescript eslint: Switch exhaustiveness check",
+    "description": "Exhaustiveness checking in switch with union type",
     "timeToFix": 5
   },
   {
@@ -7118,7 +6870,6 @@
   {
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
-    "description": "",
     "timeToFix": 5
   }
 ]
