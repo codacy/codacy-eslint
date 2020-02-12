@@ -73,7 +73,9 @@ export class DocGenerator {
         ruleModule && ruleModule.meta && ruleModule.meta.docs
           ? ruleModule.meta.docs.description
           : undefined
-      const description = eslintDescription ? capitalize(eslintDescription) : ""
+      const description = eslintDescription
+        ? capitalize(eslintDescription)
+        : undefined
       const title = patternTitle(patternId)
       const timeToFix = 5
       return new DescriptionEntry(

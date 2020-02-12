@@ -11,11 +11,11 @@ export class DescriptionParameter {
 export class DescriptionEntry {
   readonly patternId: string
   readonly title: string
-  readonly description: string
-  readonly timeToFix: number
+  readonly description?: string
+  readonly timeToFix?: number
   readonly parameters?: DescriptionParameter[]
 
-  constructor(patternId: string, title: string, description: string, timeToFix: number, parameters?: DescriptionParameter[]) {
+  constructor(patternId: string, title: string, description?: string, timeToFix?: number, parameters?: DescriptionParameter[]) {
     this.patternId = patternId
     this.title = title
     this.description = description

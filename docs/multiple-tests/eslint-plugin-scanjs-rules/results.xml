@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="4.3">
+    <file name="example.js">
+        <error source="scanjs-rules_assign__to__href" line="1" message="Assignment to href can be unsafe" severity="info" />
+    </file>
+</checkstyle>

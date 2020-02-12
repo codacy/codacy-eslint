@@ -43,6 +43,12 @@ export function fromEslintPatternIdAndCategoryToCategory(
   if (patternId.includes("xss")) return ["Security", "XSS"]
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
   if (patternId.includes("security")) return ["Security", undefined]
+  if (patternId.includes("crypto")) return ["Security", "Cryptography"]
+  if (patternId.includes("Storage")) return ["Security", "InsecureStorage"]
+  if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"]
+  if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"]
+  if (patternId.startsWith("scanjs-rules")) return ["Security", undefined]
+
   switch (category) {
     case "Possible Errors":
       return ["ErrorProne", undefined]
@@ -93,11 +99,11 @@ export function fromEslintCategoryToLevel(category?: string): Level {
 }
 
 export function patternIdToCodacy(patternId: string): string {
-  return patternId.replace(/\//g, "_")
+  return patternId.replace(/_/g, "__").replace(/\//g, "_")
 }
 
 export function patternIdToEslint(patternId: string): string {
-  return patternId.replace(/_/g, "/")
+  return patternId.replace(/([^_])_([^_])/g, "$1/$2").replace(/__/g, "_")
 }
 
 export class PatternsParameter {

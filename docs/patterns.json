@@ -4239,6 +4239,10 @@
         {
           "name": "ignoreTypeOfDescribeName",
           "default": false
+        },
+        {
+          "name": "disallowedWords",
+          "default": []
         }
       ]
     },
@@ -5995,6 +5999,213 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "scanjs-rules_accidental__assignment",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__hostname",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__href",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__location",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__onmessage",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__pathname",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__protocol",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__search",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_assign__to__src",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "MaliciousCode"
+    },
+    {
+      "patternId": "scanjs-rules_call__Function",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__addEventListener",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__addEventListener__deviceproximity",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__addEventListener__message",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__connect",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__eval",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__execScript",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__hide",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__open__remote=true",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__parseFromString",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__setAttribute__mozbrowser",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__setImmediate",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__setInterval",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_call__setTimeout",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
+      "patternId": "scanjs-rules_identifier__indexedDB",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_identifier__localStorage",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "InsecureStorage"
+    },
+    {
+      "patternId": "scanjs-rules_identifier__sessionStorage",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "InsecureStorage"
+    },
+    {
+      "patternId": "scanjs-rules_new__Function",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__addIdleObserver",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__createContextualFragment",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__crypto",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "Cryptography"
+    },
+    {
+      "patternId": "scanjs-rules_property__geolocation",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__getUserMedia",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__indexedDB",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__localStorage",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "InsecureStorage"
+    },
+    {
+      "patternId": "scanjs-rules_property__mgmt",
+      "level": "Info",
+      "category": "Security"
+    },
+    {
+      "patternId": "scanjs-rules_property__sessionStorage",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "InsecureStorage"
+    },
+    {
       "patternId": "sonarjs_cognitive-complexity",
       "level": "Info",
       "category": "CodeStyle"
@@ -6305,6 +6516,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "@typescript-eslint_no-dupe-class-members",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "@typescript-eslint_no-dynamic-delete",
       "level": "Info",
       "category": "BestPractice"
@@ -6432,6 +6648,11 @@
       "patternId": "@typescript-eslint_no-throw-literal",
       "level": "Info",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-condition",
@@ -6599,6 +6820,11 @@
     },
     {
       "patternId": "@typescript-eslint_strict-boolean-expressions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_switch-exhaustiveness-check",
       "level": "Info",
       "category": "BestPractice"
     },
