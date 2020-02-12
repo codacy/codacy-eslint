@@ -6143,12 +6143,14 @@
     {
       "patternId": "scanjs-rules_identifier__localStorage",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "InsecureStorage"
     },
     {
       "patternId": "scanjs-rules_identifier__sessionStorage",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "InsecureStorage"
     },
     {
       "patternId": "scanjs-rules_new__Function",
@@ -6168,7 +6170,8 @@
     {
       "patternId": "scanjs-rules_property__crypto",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "Cryptography"
     },
     {
       "patternId": "scanjs-rules_property__geolocation",
@@ -6188,7 +6191,8 @@
     {
       "patternId": "scanjs-rules_property__localStorage",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "InsecureStorage"
     },
     {
       "patternId": "scanjs-rules_property__mgmt",
@@ -6198,7 +6202,8 @@
     {
       "patternId": "scanjs-rules_property__sessionStorage",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "InsecureStorage"
     },
     {
       "patternId": "sonarjs_cognitive-complexity",
