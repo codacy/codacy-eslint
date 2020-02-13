@@ -112,7 +112,7 @@
     "eslint-config-winedirect": "^1.1.0",
     "eslint-config-xo": "^0.29.0",
     "eslint-config-xo-react": "^0.22.0",
-    "eslint-config-xo-space": "^0.22.0",
+    "eslint-config-xo-space": "^0.24.0",
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-import-resolver-webpack": "^0.12.1",
