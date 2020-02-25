@@ -3293,6 +3293,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "cypress_no-force",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "drupal_jquery-var-name",
       "level": "Info",
       "category": "CodeStyle"
@@ -3403,6 +3408,11 @@
       "patternId": "ember_no-computed-properties-in-native-classes",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-controllers",
+      "level": "Info",
+      "category": "BestPractice"
     },
     {
       "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
@@ -5162,57 +5172,27 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "mocha_no-exclusive-tests",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-pending-tests",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-skipped-tests",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "mocha_handle-done-callback",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "mocha_no-synchronous-tests",
+      "patternId": "mocha_max-top-level-suites",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-async-describe",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-exclusive-tests",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
       "patternId": "mocha_no-global-tests",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-return-and-callback",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-return-from-async",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_valid-test-description",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_valid-suite-description",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-mocha-arrows",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -5227,22 +5207,12 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "mocha_no-sibling-hooks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "mocha_no-top-level-hooks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "mocha_no-identical-title",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "mocha_max-top-level-suites",
+      "patternId": "mocha_no-mocha-arrows",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -5252,7 +5222,42 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "mocha_no-pending-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-return-and-callback",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-return-from-async",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "mocha_no-setup-in-describe",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-sibling-hooks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-skipped-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-synchronous-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-top-level-hooks",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -5262,7 +5267,12 @@
       "category": "BestPractice"
     },
     {
-      "patternId": "mocha_no-async-describe",
+      "patternId": "mocha_valid-suite-description",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_valid-test-description",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -7206,6 +7216,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "vue_padding-line-between-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "vue_prop-name-casing",
       "level": "Info",
       "category": "CodeStyle"
@@ -7269,6 +7284,29 @@
       "patternId": "vue_singleline-html-element-content-newline",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "vue_sort-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "caseSensitive",
+          "default": true
+        },
+        {
+          "name": "minKeys",
+          "default": 2
+        },
+        {
+          "name": "natural",
+          "default": false
+        },
+        {
+          "name": "runOutsideVue",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "vue_space-infix-ops",

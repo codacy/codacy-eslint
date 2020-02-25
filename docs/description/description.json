@@ -2780,6 +2780,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "cypress_no-force",
+    "title": "Cypress: No force",
+    "description": "Disallow using of 'force: true' option for click and type calls",
+    "timeToFix": 5
+  },
+  {
     "patternId": "drupal_jquery-var-name",
     "title": "Drupal: Jquery var name",
     "timeToFix": 5
@@ -2895,6 +2901,12 @@
     "patternId": "ember_no-computed-properties-in-native-classes",
     "title": "Ember: No computed properties in native classes",
     "description": "Disallow using computed properties in native classes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-controllers",
+    "title": "Ember: No controllers",
+    "description": "Disallow non-essential controllers",
     "timeToFix": 5
   },
   {
@@ -4614,58 +4626,28 @@
     "timeToFix": 5
   },
   {
-    "patternId": "mocha_no-exclusive-tests",
-    "title": "Mocha: No exclusive tests",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-pending-tests",
-    "title": "Mocha: No pending tests",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-skipped-tests",
-    "title": "Mocha: No skipped tests",
-    "timeToFix": 5
-  },
-  {
     "patternId": "mocha_handle-done-callback",
     "title": "Mocha: Handle done callback",
     "timeToFix": 5
   },
   {
-    "patternId": "mocha_no-synchronous-tests",
-    "title": "Mocha: No synchronous tests",
+    "patternId": "mocha_max-top-level-suites",
+    "title": "Mocha: Max top level suites",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-async-describe",
+    "title": "Mocha: No async describe",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-exclusive-tests",
+    "title": "Mocha: No exclusive tests",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-global-tests",
     "title": "Mocha: No global tests",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-return-and-callback",
-    "title": "Mocha: No return and callback",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-return-from-async",
-    "title": "Mocha: No return from async",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_valid-test-description",
-    "title": "Mocha: Valid test description",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_valid-suite-description",
-    "title": "Mocha: Valid suite description",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-mocha-arrows",
-    "title": "Mocha: No mocha arrows",
     "timeToFix": 5
   },
   {
@@ -4679,23 +4661,13 @@
     "timeToFix": 5
   },
   {
-    "patternId": "mocha_no-sibling-hooks",
-    "title": "Mocha: No sibling hooks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "mocha_no-top-level-hooks",
-    "title": "Mocha: No top level hooks",
-    "timeToFix": 5
-  },
-  {
     "patternId": "mocha_no-identical-title",
     "title": "Mocha: No identical title",
     "timeToFix": 5
   },
   {
-    "patternId": "mocha_max-top-level-suites",
-    "title": "Mocha: Max top level suites",
+    "patternId": "mocha_no-mocha-arrows",
+    "title": "Mocha: No mocha arrows",
     "timeToFix": 5
   },
   {
@@ -4704,8 +4676,43 @@
     "timeToFix": 5
   },
   {
+    "patternId": "mocha_no-pending-tests",
+    "title": "Mocha: No pending tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-return-and-callback",
+    "title": "Mocha: No return and callback",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-return-from-async",
+    "title": "Mocha: No return from async",
+    "timeToFix": 5
+  },
+  {
     "patternId": "mocha_no-setup-in-describe",
     "title": "Mocha: No setup in describe",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-sibling-hooks",
+    "title": "Mocha: No sibling hooks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-skipped-tests",
+    "title": "Mocha: No skipped tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-synchronous-tests",
+    "title": "Mocha: No synchronous tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-top-level-hooks",
+    "title": "Mocha: No top level hooks",
     "timeToFix": 5
   },
   {
@@ -4715,8 +4722,13 @@
     "timeToFix": 5
   },
   {
-    "patternId": "mocha_no-async-describe",
-    "title": "Mocha: No async describe",
+    "patternId": "mocha_valid-suite-description",
+    "title": "Mocha: Valid suite description",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_valid-test-description",
+    "title": "Mocha: Valid test description",
     "timeToFix": 5
   },
   {
@@ -6634,6 +6646,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "vue_padding-line-between-blocks",
+    "title": "Vue: Padding line between blocks",
+    "description": "Require or disallow padding lines between blocks",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_prop-name-casing",
     "title": "Vue: Prop name casing",
     "description": "Enforce specific casing for the Prop name in Vue components",
@@ -6709,6 +6727,12 @@
     "patternId": "vue_singleline-html-element-content-newline",
     "title": "Vue: Singleline html element content newline",
     "description": "Require a line break before and after the contents of a singleline element",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "vue_sort-keys",
+    "title": "Vue: Sort keys",
+    "description": "Enforce sort-keys in a manner that is compatible with order-in-components",
     "timeToFix": 5
   },
   {
