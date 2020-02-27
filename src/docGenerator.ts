@@ -90,7 +90,7 @@ export class DocGenerator {
           ? this.generateParameters(patternId, meta.schema)
           : undefined
       const descriptionParameters = patternsParameters
-        ? patternsParameters.map(p => new DescriptionParameter(p.name, ""))
+        ? patternsParameters.map(p => new DescriptionParameter(p.name, p.name))
         : undefined
       return new DescriptionEntry(
         patternIdToCodacy(patternId),

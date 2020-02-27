@@ -7,15 +7,15 @@
     "parameters": [
       {
         "name": "getWithoutSet",
-        "description": ""
+        "description": "getWithoutSet"
       },
       {
         "name": "setWithoutGet",
-        "description": ""
+        "description": "setWithoutGet"
       },
       {
         "name": "enforceForClassMembers",
-        "description": ""
+        "description": "enforceForClassMembers"
       }
     ]
   },
@@ -33,7 +33,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -45,7 +45,7 @@
     "parameters": [
       {
         "name": "allowImplicit",
-        "description": ""
+        "description": "allowImplicit"
       }
     ]
   },
@@ -69,11 +69,11 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "requireForBlockBody",
-        "description": ""
+        "description": "requireForBlockBody"
       }
     ]
   },
@@ -85,11 +85,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -107,7 +107,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -119,7 +119,7 @@
     "parameters": [
       {
         "name": "allowSingleLine",
-        "description": ""
+        "description": "allowSingleLine"
       }
     ]
   },
@@ -137,11 +137,11 @@
     "parameters": [
       {
         "name": "ignoreDestructuring",
-        "description": ""
+        "description": "ignoreDestructuring"
       },
       {
         "name": "ignoreImports",
-        "description": ""
+        "description": "ignoreImports"
       }
     ]
   },
@@ -165,7 +165,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -177,11 +177,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -193,7 +193,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -205,7 +205,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -217,11 +217,11 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "enforceForClassMembers",
-        "description": ""
+        "description": "enforceForClassMembers"
       }
     ]
   },
@@ -233,7 +233,7 @@
     "parameters": [
       {
         "name": "treatUndefinedAsUnspecified",
-        "description": ""
+        "description": "treatUndefinedAsUnspecified"
       }
     ]
   },
@@ -245,7 +245,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -263,7 +263,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -287,7 +287,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -299,11 +299,11 @@
     "parameters": [
       {
         "name": "allowKeywords",
-        "description": ""
+        "description": "allowKeywords"
       },
       {
         "name": "allowPattern",
-        "description": ""
+        "description": "allowPattern"
       }
     ]
   },
@@ -321,7 +321,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -357,7 +357,7 @@
     "parameters": [
       {
         "name": "allowArrowFunctions",
-        "description": ""
+        "description": "allowArrowFunctions"
       }
     ]
   },
@@ -387,7 +387,7 @@
     "parameters": [
       {
         "name": "allowImplicit",
-        "description": ""
+        "description": "allowImplicit"
       }
     ]
   },
@@ -429,7 +429,7 @@
     "parameters": [
       {
         "name": "min",
-        "description": ""
+        "description": "min"
       }
     ]
   },
@@ -441,19 +441,19 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "properties",
-        "description": ""
+        "description": "properties"
       },
       {
         "name": "onlyDeclarations",
-        "description": ""
+        "description": "onlyDeclarations"
       },
       {
         "name": "ignoreDestructuring",
-        "description": ""
+        "description": "ignoreDestructuring"
       }
     ]
   },
@@ -471,19 +471,19 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "SwitchCase",
-        "description": ""
+        "description": "SwitchCase"
       },
       {
         "name": "flatTernaryExpressions",
-        "description": ""
+        "description": "flatTernaryExpressions"
       },
       {
         "name": "ignoreComments",
-        "description": ""
+        "description": "ignoreComments"
       }
     ]
   },
@@ -501,7 +501,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -513,7 +513,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -531,11 +531,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -559,27 +559,27 @@
     "parameters": [
       {
         "name": "beforeBlockComment",
-        "description": ""
+        "description": "beforeBlockComment"
       },
       {
         "name": "afterBlockComment",
-        "description": ""
+        "description": "afterBlockComment"
       },
       {
         "name": "beforeLineComment",
-        "description": ""
+        "description": "beforeLineComment"
       },
       {
         "name": "afterLineComment",
-        "description": ""
+        "description": "afterLineComment"
       },
       {
         "name": "allowBlockStart",
-        "description": ""
+        "description": "allowBlockStart"
       },
       {
         "name": "allowBlockEnd",
-        "description": ""
+        "description": "allowBlockEnd"
       }
     ]
   },
@@ -597,7 +597,7 @@
     "parameters": [
       {
         "name": "exceptAfterSingleLine",
-        "description": ""
+        "description": "exceptAfterSingleLine"
       }
     ]
   },
@@ -639,7 +639,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -663,7 +663,7 @@
     "parameters": [
       {
         "name": "max",
-        "description": ""
+        "description": "max"
       }
     ]
   },
@@ -687,15 +687,15 @@
     "parameters": [
       {
         "name": "newIsCap",
-        "description": ""
+        "description": "newIsCap"
       },
       {
         "name": "capIsNew",
-        "description": ""
+        "description": "capIsNew"
       },
       {
         "name": "properties",
-        "description": ""
+        "description": "properties"
       }
     ]
   },
@@ -713,7 +713,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -731,7 +731,7 @@
     "parameters": [
       {
         "name": "ignoreChainWithDepth",
-        "description": ""
+        "description": "ignoreChainWithDepth"
       }
     ]
   },
@@ -767,7 +767,7 @@
     "parameters": [
       {
         "name": "int32Hint",
-        "description": ""
+        "description": "int32Hint"
       }
     ]
   },
@@ -815,7 +815,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -827,7 +827,7 @@
     "parameters": [
       {
         "name": "allowParens",
-        "description": ""
+        "description": "allowParens"
       }
     ]
   },
@@ -851,7 +851,7 @@
     "parameters": [
       {
         "name": "checkLoops",
-        "description": ""
+        "description": "checkLoops"
       }
     ]
   },
@@ -929,7 +929,7 @@
     "parameters": [
       {
         "name": "includeExports",
-        "description": ""
+        "description": "includeExports"
       }
     ]
   },
@@ -941,7 +941,7 @@
     "parameters": [
       {
         "name": "allowElseIf",
-        "description": ""
+        "description": "allowElseIf"
       }
     ]
   },
@@ -953,7 +953,7 @@
     "parameters": [
       {
         "name": "allowEmptyCatch",
-        "description": ""
+        "description": "allowEmptyCatch"
       }
     ]
   },
@@ -989,7 +989,7 @@
     "parameters": [
       {
         "name": "allowIndirect",
-        "description": ""
+        "description": "allowIndirect"
       }
     ]
   },
@@ -1043,7 +1043,7 @@
     "parameters": [
       {
         "name": "commentPattern",
-        "description": ""
+        "description": "commentPattern"
       }
     ]
   },
@@ -1073,15 +1073,15 @@
     "parameters": [
       {
         "name": "boolean",
-        "description": ""
+        "description": "boolean"
       },
       {
         "name": "number",
-        "description": ""
+        "description": "number"
       },
       {
         "name": "string",
-        "description": ""
+        "description": "string"
       }
     ]
   },
@@ -1093,7 +1093,7 @@
     "parameters": [
       {
         "name": "lexicalBindings",
-        "description": ""
+        "description": "lexicalBindings"
       }
     ]
   },
@@ -1123,7 +1123,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1141,7 +1141,7 @@
     "parameters": [
       {
         "name": "capIsConstructor",
-        "description": ""
+        "description": "capIsConstructor"
       }
     ]
   },
@@ -1153,19 +1153,19 @@
     "parameters": [
       {
         "name": "skipComments",
-        "description": ""
+        "description": "skipComments"
       },
       {
         "name": "skipStrings",
-        "description": ""
+        "description": "skipStrings"
       },
       {
         "name": "skipTemplates",
-        "description": ""
+        "description": "skipTemplates"
       },
       {
         "name": "skipRegExps",
-        "description": ""
+        "description": "skipRegExps"
       }
     ]
   },
@@ -1189,11 +1189,11 @@
     "parameters": [
       {
         "name": "allowLoop",
-        "description": ""
+        "description": "allowLoop"
       },
       {
         "name": "allowSwitch",
-        "description": ""
+        "description": "allowSwitch"
       }
     ]
   },
@@ -1223,15 +1223,15 @@
     "parameters": [
       {
         "name": "detectObjects",
-        "description": ""
+        "description": "detectObjects"
       },
       {
         "name": "enforceConst",
-        "description": ""
+        "description": "enforceConst"
       },
       {
         "name": "ignoreArrayIndexes",
-        "description": ""
+        "description": "ignoreArrayIndexes"
       }
     ]
   },
@@ -1249,7 +1249,7 @@
     "parameters": [
       {
         "name": "allowSamePrecedence",
-        "description": ""
+        "description": "allowSamePrecedence"
       }
     ]
   },
@@ -1279,7 +1279,7 @@
     "parameters": [
       {
         "name": "ignoreEOLComments",
-        "description": ""
+        "description": "ignoreEOLComments"
       }
     ]
   },
@@ -1393,7 +1393,7 @@
     "parameters": [
       {
         "name": "allowForLoopAfterthoughts",
-        "description": ""
+        "description": "allowForLoopAfterthoughts"
       }
     ]
   },
@@ -1429,7 +1429,7 @@
     "parameters": [
       {
         "name": "builtinGlobals",
-        "description": ""
+        "description": "builtinGlobals"
       }
     ]
   },
@@ -1459,7 +1459,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1483,7 +1483,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1507,7 +1507,7 @@
     "parameters": [
       {
         "name": "props",
-        "description": ""
+        "description": "props"
       }
     ]
   },
@@ -1537,11 +1537,11 @@
     "parameters": [
       {
         "name": "builtinGlobals",
-        "description": ""
+        "description": "builtinGlobals"
       },
       {
         "name": "hoist",
-        "description": ""
+        "description": "hoist"
       }
     ]
   },
@@ -1571,7 +1571,7 @@
     "parameters": [
       {
         "name": "allowAtRootLevel",
-        "description": ""
+        "description": "allowAtRootLevel"
       }
     ]
   },
@@ -1583,7 +1583,7 @@
     "parameters": [
       {
         "name": "allowIndentationTabs",
-        "description": ""
+        "description": "allowIndentationTabs"
       }
     ]
   },
@@ -1619,11 +1619,11 @@
     "parameters": [
       {
         "name": "skipBlankLines",
-        "description": ""
+        "description": "skipBlankLines"
       },
       {
         "name": "ignoreComments",
-        "description": ""
+        "description": "ignoreComments"
       }
     ]
   },
@@ -1635,7 +1635,7 @@
     "parameters": [
       {
         "name": "typeof",
-        "description": ""
+        "description": "typeof"
       }
     ]
   },
@@ -1659,19 +1659,19 @@
     "parameters": [
       {
         "name": "allowAfterThis",
-        "description": ""
+        "description": "allowAfterThis"
       },
       {
         "name": "allowAfterSuper",
-        "description": ""
+        "description": "allowAfterSuper"
       },
       {
         "name": "allowAfterThisConstructor",
-        "description": ""
+        "description": "allowAfterThisConstructor"
       },
       {
         "name": "enforceInMethodNames",
-        "description": ""
+        "description": "enforceInMethodNames"
       }
     ]
   },
@@ -1695,7 +1695,7 @@
     "parameters": [
       {
         "name": "defaultAssignment",
-        "description": ""
+        "description": "defaultAssignment"
       }
     ]
   },
@@ -1719,7 +1719,7 @@
     "parameters": [
       {
         "name": "enforceForOrderingRelations",
-        "description": ""
+        "description": "enforceForOrderingRelations"
       }
     ]
   },
@@ -1731,15 +1731,15 @@
     "parameters": [
       {
         "name": "allowShortCircuit",
-        "description": ""
+        "description": "allowShortCircuit"
       },
       {
         "name": "allowTernary",
-        "description": ""
+        "description": "allowTernary"
       },
       {
         "name": "allowTaggedTemplates",
-        "description": ""
+        "description": "allowTaggedTemplates"
       }
     ]
   },
@@ -1781,7 +1781,7 @@
     "parameters": [
       {
         "name": "enforceForClassMembers",
-        "description": ""
+        "description": "enforceForClassMembers"
       }
     ]
   },
@@ -1811,15 +1811,15 @@
     "parameters": [
       {
         "name": "ignoreDestructuring",
-        "description": ""
+        "description": "ignoreDestructuring"
       },
       {
         "name": "ignoreImport",
-        "description": ""
+        "description": "ignoreImport"
       },
       {
         "name": "ignoreExport",
-        "description": ""
+        "description": "ignoreExport"
       }
     ]
   },
@@ -1879,7 +1879,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1891,11 +1891,11 @@
     "parameters": [
       {
         "name": "allowAllPropertiesOnSameLine",
-        "description": ""
+        "description": "allowAllPropertiesOnSameLine"
       },
       {
         "name": "allowMultiplePropertiesPerLine",
-        "description": ""
+        "description": "allowMultiplePropertiesPerLine"
       }
     ]
   },
@@ -1913,7 +1913,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1937,7 +1937,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -1961,11 +1961,11 @@
     "parameters": [
       {
         "name": "allowNamedFunctions",
-        "description": ""
+        "description": "allowNamedFunctions"
       },
       {
         "name": "allowUnboundThis",
-        "description": ""
+        "description": "allowUnboundThis"
       }
     ]
   },
@@ -1977,11 +1977,11 @@
     "parameters": [
       {
         "name": "destructuring",
-        "description": ""
+        "description": "destructuring"
       },
       {
         "name": "ignoreReadBeforeAssign",
-        "description": ""
+        "description": "ignoreReadBeforeAssign"
       }
     ]
   },
@@ -2023,7 +2023,7 @@
     "parameters": [
       {
         "name": "allowEmptyReject",
-        "description": ""
+        "description": "allowEmptyReject"
       }
     ]
   },
@@ -2071,7 +2071,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2101,7 +2101,7 @@
     "parameters": [
       {
         "name": "require",
-        "description": ""
+        "description": "require"
       }
     ]
   },
@@ -2131,7 +2131,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2143,11 +2143,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -2165,15 +2165,15 @@
     "parameters": [
       {
         "name": "ignoreCase",
-        "description": ""
+        "description": "ignoreCase"
       },
       {
         "name": "ignoreDeclarationSort",
-        "description": ""
+        "description": "ignoreDeclarationSort"
       },
       {
         "name": "ignoreMemberSort",
-        "description": ""
+        "description": "ignoreMemberSort"
       }
     ]
   },
@@ -2185,15 +2185,15 @@
     "parameters": [
       {
         "name": "caseSensitive",
-        "description": ""
+        "description": "caseSensitive"
       },
       {
         "name": "natural",
-        "description": ""
+        "description": "natural"
       },
       {
         "name": "minKeys",
-        "description": ""
+        "description": "minKeys"
       }
     ]
   },
@@ -2205,7 +2205,7 @@
     "parameters": [
       {
         "name": "ignoreCase",
-        "description": ""
+        "description": "ignoreCase"
       }
     ]
   },
@@ -2217,7 +2217,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2229,7 +2229,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2241,7 +2241,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2253,7 +2253,7 @@
     "parameters": [
       {
         "name": "int32Hint",
-        "description": ""
+        "description": "int32Hint"
       }
     ]
   },
@@ -2265,11 +2265,11 @@
     "parameters": [
       {
         "name": "words",
-        "description": ""
+        "description": "words"
       },
       {
         "name": "nonwords",
-        "description": ""
+        "description": "nonwords"
       }
     ]
   },
@@ -2281,7 +2281,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2293,7 +2293,7 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       }
     ]
   },
@@ -2305,11 +2305,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -2345,11 +2345,11 @@
     "parameters": [
       {
         "name": "enforceForSwitchCase",
-        "description": ""
+        "description": "enforceForSwitchCase"
       },
       {
         "name": "enforceForIndexOf",
-        "description": ""
+        "description": "enforceForIndexOf"
       }
     ]
   },
@@ -2361,23 +2361,23 @@
     "parameters": [
       {
         "name": "requireReturn",
-        "description": ""
+        "description": "requireReturn"
       },
       {
         "name": "requireParamDescription",
-        "description": ""
+        "description": "requireParamDescription"
       },
       {
         "name": "requireReturnDescription",
-        "description": ""
+        "description": "requireReturnDescription"
       },
       {
         "name": "requireReturnType",
-        "description": ""
+        "description": "requireReturnType"
       },
       {
         "name": "requireParamType",
-        "description": ""
+        "description": "requireParamType"
       }
     ]
   },
@@ -2389,7 +2389,7 @@
     "parameters": [
       {
         "name": "requireStringLiterals",
-        "description": ""
+        "description": "requireStringLiterals"
       }
     ]
   },
@@ -2407,11 +2407,11 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "functionPrototypeMethods",
-        "description": ""
+        "description": "functionPrototypeMethods"
       }
     ]
   },
@@ -2435,15 +2435,15 @@
     "parameters": [
       {
         "name": "unnamedParam",
-        "description": ""
+        "description": "unnamedParam"
       },
       {
         "name": "exceptRange",
-        "description": ""
+        "description": "exceptRange"
       },
       {
         "name": "onlyEquality",
-        "description": ""
+        "description": "onlyEquality"
       }
     ]
   },
@@ -2464,7 +2464,7 @@
     "parameters": [
       {
         "name": "allowComputed",
-        "description": ""
+        "description": "allowComputed"
       }
     ]
   },
@@ -3370,15 +3370,15 @@
     "parameters": [
       {
         "name": "newIsCap",
-        "description": ""
+        "description": "newIsCap"
       },
       {
         "name": "capIsNew",
-        "description": ""
+        "description": "capIsNew"
       },
       {
         "name": "properties",
-        "description": ""
+        "description": "properties"
       }
     ]
   },
@@ -3401,7 +3401,7 @@
     "parameters": [
       {
         "name": "capIsConstructor",
-        "description": ""
+        "description": "capIsConstructor"
       }
     ]
   },
@@ -3413,15 +3413,15 @@
     "parameters": [
       {
         "name": "allowShortCircuit",
-        "description": ""
+        "description": "allowShortCircuit"
       },
       {
         "name": "allowTernary",
-        "description": ""
+        "description": "allowTernary"
       },
       {
         "name": "allowTaggedTemplates",
-        "description": ""
+        "description": "allowTaggedTemplates"
       }
     ]
   },
@@ -3455,7 +3455,7 @@
     "parameters": [
       {
         "name": "requireStringLiterals",
-        "description": ""
+        "description": "requireStringLiterals"
       }
     ]
   },
@@ -3695,7 +3695,7 @@
     "parameters": [
       {
         "name": "allowSimpleArrowFunction",
-        "description": ""
+        "description": "allowSimpleArrowFunction"
       }
     ]
   },
@@ -3719,7 +3719,7 @@
     "parameters": [
       {
         "name": "onlyThisContexts",
-        "description": ""
+        "description": "onlyThisContexts"
       }
     ]
   },
@@ -3815,11 +3815,11 @@
     "parameters": [
       {
         "name": "ignoreGetProperties",
-        "description": ""
+        "description": "ignoreGetProperties"
       },
       {
         "name": "ignoreNestedPaths",
-        "description": ""
+        "description": "ignoreNestedPaths"
       }
     ]
   },
@@ -3975,11 +3975,11 @@
     "parameters": [
       {
         "name": "allowDynamicKeys",
-        "description": ""
+        "description": "allowDynamicKeys"
       },
       {
         "name": "requireServiceNames",
-        "description": ""
+        "description": "requireServiceNames"
       }
     ]
   },
@@ -4033,11 +4033,11 @@
     "parameters": [
       {
         "name": "ignoreThisExpressions",
-        "description": ""
+        "description": "ignoreThisExpressions"
       },
       {
         "name": "ignoreNonThisExpressions",
-        "description": ""
+        "description": "ignoreNonThisExpressions"
       }
     ]
   },
@@ -4049,7 +4049,7 @@
     "parameters": [
       {
         "name": "exceptAfterSingleLine",
-        "description": ""
+        "description": "exceptAfterSingleLine"
       }
     ]
   },
@@ -4152,15 +4152,15 @@
     "parameters": [
       {
         "name": "allowShortCircuit",
-        "description": ""
+        "description": "allowShortCircuit"
       },
       {
         "name": "allowTernary",
-        "description": ""
+        "description": "allowTernary"
       },
       {
         "name": "allowTaggedTemplates",
-        "description": ""
+        "description": "allowTaggedTemplates"
       }
     ]
   },
@@ -4671,7 +4671,7 @@
     "parameters": [
       {
         "name": "alwaysAwait",
-        "description": ""
+        "description": "alwaysAwait"
       }
     ]
   },
@@ -4683,11 +4683,11 @@
     "parameters": [
       {
         "name": "ignoreTypeOfDescribeName",
-        "description": ""
+        "description": "ignoreTypeOfDescribeName"
       },
       {
         "name": "disallowedWords",
-        "description": ""
+        "description": "disallowedWords"
       }
     ]
   },
@@ -4708,27 +4708,27 @@
     "parameters": [
       {
         "name": "allowInlineConfig",
-        "description": ""
+        "description": "allowInlineConfig"
       },
       {
         "name": "captionRequired",
-        "description": ""
+        "description": "captionRequired"
       },
       {
         "name": "checkEslintrc",
-        "description": ""
+        "description": "checkEslintrc"
       },
       {
         "name": "noDefaultExampleRules",
-        "description": ""
+        "description": "noDefaultExampleRules"
       },
       {
         "name": "paddedIndent",
-        "description": ""
+        "description": "paddedIndent"
       },
       {
         "name": "reportUnusedDisableDirectives",
-        "description": ""
+        "description": "reportUnusedDisableDirectives"
       }
     ]
   },
@@ -4824,7 +4824,7 @@
     "parameters": [
       {
         "name": "avoidExampleOnConstructors",
-        "description": ""
+        "description": "avoidExampleOnConstructors"
       }
     ]
   },
@@ -4840,7 +4840,7 @@
     "parameters": [
       {
         "name": "checkProperties",
-        "description": ""
+        "description": "checkProperties"
       }
     ]
   },
@@ -4851,11 +4851,11 @@
     "parameters": [
       {
         "name": "exemptEmptyFunctions",
-        "description": ""
+        "description": "exemptEmptyFunctions"
       },
       {
         "name": "require",
-        "description": ""
+        "description": "require"
       }
     ]
   },
@@ -4906,11 +4906,11 @@
     "parameters": [
       {
         "name": "forceRequireReturn",
-        "description": ""
+        "description": "forceRequireReturn"
       },
       {
         "name": "forceReturnsWithAsync",
-        "description": ""
+        "description": "forceReturnsWithAsync"
       }
     ]
   },
@@ -4936,11 +4936,11 @@
     "parameters": [
       {
         "name": "allowEmptyNamepaths",
-        "description": ""
+        "description": "allowEmptyNamepaths"
       },
       {
         "name": "checkSeesForNamepaths",
-        "description": ""
+        "description": "checkSeesForNamepaths"
       }
     ]
   },
@@ -5091,7 +5091,7 @@
     "parameters": [
       {
         "name": "ignoreNonDOM",
-        "description": ""
+        "description": "ignoreNonDOM"
       }
     ]
   },
@@ -5172,7 +5172,7 @@
     "parameters": [
       {
         "name": "ignoreNonDOM",
-        "description": ""
+        "description": "ignoreNonDOM"
       }
     ]
   },
@@ -5900,11 +5900,11 @@
     "parameters": [
       {
         "name": "rule",
-        "description": ""
+        "description": "rule"
       },
       {
         "name": "validateNested",
-        "description": ""
+        "description": "validateNested"
       }
     ]
   },
@@ -5916,15 +5916,15 @@
     "parameters": [
       {
         "name": "button",
-        "description": ""
+        "description": "button"
       },
       {
         "name": "submit",
-        "description": ""
+        "description": "submit"
       },
       {
         "name": "reset",
-        "description": ""
+        "description": "reset"
       }
     ]
   },
@@ -5936,7 +5936,7 @@
     "parameters": [
       {
         "name": "allowRequiredDefaults",
-        "description": ""
+        "description": "allowRequiredDefaults"
       }
     ]
   },
@@ -5954,7 +5954,7 @@
     "parameters": [
       {
         "name": "ignoreTranspilerName",
-        "description": ""
+        "description": "ignoreTranspilerName"
       }
     ]
   },
@@ -6074,7 +6074,7 @@
     "parameters": [
       {
         "name": "checkFragmentShorthand",
-        "description": ""
+        "description": "checkFragmentShorthand"
       }
     ]
   },
@@ -6098,23 +6098,23 @@
     "parameters": [
       {
         "name": "allowArrowFunctions",
-        "description": ""
+        "description": "allowArrowFunctions"
       },
       {
         "name": "allowBind",
-        "description": ""
+        "description": "allowBind"
       },
       {
         "name": "allowFunctions",
-        "description": ""
+        "description": "allowFunctions"
       },
       {
         "name": "ignoreRefs",
-        "description": ""
+        "description": "ignoreRefs"
       },
       {
         "name": "ignoreDOMComponents",
-        "description": ""
+        "description": "ignoreDOMComponents"
       }
     ]
   },
@@ -6318,7 +6318,7 @@
     "parameters": [
       {
         "name": "ignoreStateless",
-        "description": ""
+        "description": "ignoreStateless"
       }
     ]
   },
@@ -6378,7 +6378,7 @@
     "parameters": [
       {
         "name": "checkAliases",
-        "description": ""
+        "description": "checkAliases"
       }
     ]
   },
@@ -6420,7 +6420,7 @@
     "parameters": [
       {
         "name": "ignorePureComponents",
-        "description": ""
+        "description": "ignorePureComponents"
       }
     ]
   },
@@ -6462,11 +6462,11 @@
     "parameters": [
       {
         "name": "component",
-        "description": ""
+        "description": "component"
       },
       {
         "name": "html",
-        "description": ""
+        "description": "html"
       }
     ]
   },
@@ -6877,15 +6877,15 @@
     "parameters": [
       {
         "name": "ignoreCase",
-        "description": ""
+        "description": "ignoreCase"
       },
       {
         "name": "memberSyntaxSortOrder",
-        "description": ""
+        "description": "memberSyntaxSortOrder"
       },
       {
         "name": "ignoreMemberSort",
-        "description": ""
+        "description": "ignoreMemberSort"
       }
     ]
   },
@@ -6921,15 +6921,15 @@
     "parameters": [
       {
         "name": "ts-ignore",
-        "description": ""
+        "description": "ts-ignore"
       },
       {
         "name": "ts-nocheck",
-        "description": ""
+        "description": "ts-nocheck"
       },
       {
         "name": "ts-check",
-        "description": ""
+        "description": "ts-check"
       }
     ]
   },
@@ -6947,7 +6947,7 @@
     "parameters": [
       {
         "name": "allowSingleLine",
-        "description": ""
+        "description": "allowSingleLine"
       }
     ]
   },
@@ -6959,11 +6959,11 @@
     "parameters": [
       {
         "name": "ignoreDestructuring",
-        "description": ""
+        "description": "ignoreDestructuring"
       },
       {
         "name": "ignoreImports",
-        "description": ""
+        "description": "ignoreImports"
       }
     ]
   },
@@ -6975,7 +6975,7 @@
     "parameters": [
       {
         "name": "allowUnderscorePrefix",
-        "description": ""
+        "description": "allowUnderscorePrefix"
       }
     ]
   },
@@ -6987,11 +6987,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -7051,15 +7051,15 @@
     "parameters": [
       {
         "name": "SwitchCase",
-        "description": ""
+        "description": "SwitchCase"
       },
       {
         "name": "flatTernaryExpressions",
-        "description": ""
+        "description": "flatTernaryExpressions"
       },
       {
         "name": "ignoreComments",
-        "description": ""
+        "description": "ignoreComments"
       }
     ]
   },
@@ -7185,15 +7185,15 @@
     "parameters": [
       {
         "name": "detectObjects",
-        "description": ""
+        "description": "detectObjects"
       },
       {
         "name": "enforceConst",
-        "description": ""
+        "description": "enforceConst"
       },
       {
         "name": "ignoreArrayIndexes",
-        "description": ""
+        "description": "ignoreArrayIndexes"
       }
     ]
   },
@@ -7313,15 +7313,15 @@
     "parameters": [
       {
         "name": "allowShortCircuit",
-        "description": ""
+        "description": "allowShortCircuit"
       },
       {
         "name": "allowTernary",
-        "description": ""
+        "description": "allowTernary"
       },
       {
         "name": "allowTaggedTemplates",
-        "description": ""
+        "description": "allowTaggedTemplates"
       }
     ]
   },
@@ -7513,11 +7513,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -7547,7 +7547,7 @@
     "parameters": [
       {
         "name": "allowSingleLine",
-        "description": ""
+        "description": "allowSingleLine"
       }
     ]
   },
@@ -7559,11 +7559,11 @@
     "parameters": [
       {
         "name": "ignoreDestructuring",
-        "description": ""
+        "description": "ignoreDestructuring"
       },
       {
         "name": "ignoreImports",
-        "description": ""
+        "description": "ignoreImports"
       }
     ]
   },
@@ -7665,11 +7665,11 @@
     "parameters": [
       {
         "name": "before",
-        "description": ""
+        "description": "before"
       },
       {
         "name": "after",
-        "description": ""
+        "description": "after"
       }
     ]
   },
@@ -7771,27 +7771,27 @@
     "parameters": [
       {
         "name": "skipComments",
-        "description": ""
+        "description": "skipComments"
       },
       {
         "name": "skipStrings",
-        "description": ""
+        "description": "skipStrings"
       },
       {
         "name": "skipTemplates",
-        "description": ""
+        "description": "skipTemplates"
       },
       {
         "name": "skipRegExps",
-        "description": ""
+        "description": "skipRegExps"
       },
       {
         "name": "skipHTMLAttributeValues",
-        "description": ""
+        "description": "skipHTMLAttributeValues"
       },
       {
         "name": "skipHTMLTextContents",
-        "description": ""
+        "description": "skipHTMLTextContents"
       }
     ]
   },
@@ -8001,19 +8001,19 @@
     "parameters": [
       {
         "name": "caseSensitive",
-        "description": ""
+        "description": "caseSensitive"
       },
       {
         "name": "minKeys",
-        "description": ""
+        "description": "minKeys"
       },
       {
         "name": "natural",
-        "description": ""
+        "description": "natural"
       },
       {
         "name": "runOutsideVue",
-        "description": ""
+        "description": "runOutsideVue"
       }
     ]
   },
@@ -8025,7 +8025,7 @@
     "parameters": [
       {
         "name": "int32Hint",
-        "description": ""
+        "description": "int32Hint"
       }
     ]
   },
@@ -8037,11 +8037,11 @@
     "parameters": [
       {
         "name": "words",
-        "description": ""
+        "description": "words"
       },
       {
         "name": "nonwords",
-        "description": ""
+        "description": "nonwords"
       }
     ]
   },
