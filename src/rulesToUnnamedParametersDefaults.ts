@@ -38,7 +38,14 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
 
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
-    ["react/display-name", "ignoreTranspilerName", false]
+    ["react/display-name", "ignoreTranspilerName", false],
+    ["sort-imports-es6-autofix/sort-imports-es6", "ignoreCase", false],
+    ["sort-imports-es6-autofix/sort-imports-es6", "ignoreMemberSort", false],
+    [
+      "sort-imports-es6-autofix/sort-imports-es6",
+      "memberSyntaxSortOrder",
+      ["none", "all", "multiple", "single"]
+    ]
   ]
 
   static has(patternId: string, parameter: string): boolean {
