@@ -53,8 +53,8 @@ export class DocGenerator {
 
   generatePatterns(): Patterns {
     const entries = flatMap(this.rules, ([patternId, ruleModule]) => {
-      const meta = ruleModule && ruleModule.meta ? ruleModule.meta : undefined
-      const eslintCategory = meta && meta.docs ? meta.docs.category : undefined
+      const meta = ruleModule?.meta
+      const eslintCategory = meta?.docs?.category
       const level: Level = fromEslintCategoryToLevel(eslintCategory)
       const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
         patternId,
@@ -78,8 +78,7 @@ export class DocGenerator {
   generateDescriptionEntries(): DescriptionEntry[] {
     return flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule && ruleModule.meta
-      const eslintDescription =
-        meta && meta.docs ? meta.docs.description : undefined
+      const eslintDescription = meta?.docs?.description
       const description = eslintDescription
         ? capitalize(eslintDescription)
         : undefined
@@ -89,9 +88,9 @@ export class DocGenerator {
         meta && meta.schema
           ? this.generateParameters(patternId, meta.schema)
           : undefined
-      const descriptionParameters = patternsParameters
-        ? patternsParameters.map(p => new DescriptionParameter(p.name, p.name))
-        : undefined
+      const descriptionParameters = patternsParameters?.map(
+        p => new DescriptionParameter(p.name, p.name)
+      )
       return new DescriptionEntry(
         patternIdToCodacy(patternId),
         title,

@@ -34,42 +34,41 @@ export type SecuritySubcategory =
   | "Routes"
   | "Regex"
   | "SSL"
-  | "Other"
 
 export function fromEslintPatternIdAndCategoryToCategory(
   patternId: string,
   category?: string
-): [Category, SecuritySubcategory | undefined] {
+): [Category, SecuritySubcategory?] {
   if (patternId.includes("xss")) return ["Security", "XSS"]
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
-  if (patternId.includes("security")) return ["Security", undefined]
+  if (patternId.includes("security")) return ["Security"]
   if (patternId.includes("crypto")) return ["Security", "Cryptography"]
   if (patternId.includes("Storage")) return ["Security", "InsecureStorage"]
   if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"]
   if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"]
-  if (patternId.startsWith("scanjs-rules")) return ["Security", undefined]
+  if (patternId.startsWith("scanjs-rules")) return ["Security"]
 
   switch (category) {
     case "Possible Errors":
-      return ["ErrorProne", undefined]
+      return ["ErrorProne"]
     case "Best Practices":
-      return ["BestPractice", undefined]
+      return ["BestPractice"]
     case "Strict Mode":
-      return ["BestPractice", undefined]
+      return ["BestPractice"]
     case "Variables":
-      return ["CodeStyle", undefined]
+      return ["CodeStyle"]
     case "Node.js and CommonJS":
-      return ["BestPractice", undefined]
+      return ["BestPractice"]
     case "Stylistic Issues":
-      return ["CodeStyle", undefined]
+      return ["CodeStyle"]
     case "ECMAScript 6":
-      return ["BestPractice", undefined]
+      return ["BestPractice"]
     case "Deprecated":
-      return ["Compatibility", undefined]
+      return ["Compatibility"]
     case "Removed":
-      return ["Compatibility", undefined]
+      return ["Compatibility"]
     default:
-      return ["CodeStyle", undefined]
+      return ["CodeStyle"]
   }
 }
 
