@@ -3,7 +3,21 @@
     "patternId": "accessor-pairs",
     "title": "Accessor pairs",
     "description": "Enforce getter and setter pairs in objects and classes",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "getWithoutSet",
+        "description": ""
+      },
+      {
+        "name": "setWithoutGet",
+        "description": ""
+      },
+      {
+        "name": "enforceForClassMembers",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "array-bracket-newline",
@@ -15,13 +29,25 @@
     "patternId": "array-bracket-spacing",
     "title": "Array bracket spacing",
     "description": "Enforce consistent spacing inside array brackets",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "array-callback-return",
     "title": "Array callback return",
     "description": "Enforce `return` statements in callbacks of array methods",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowImplicit",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "array-element-newline",
@@ -39,13 +65,33 @@
     "patternId": "arrow-parens",
     "title": "Arrow parens",
     "description": "Require parentheses around arrow function arguments",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "requireForBlockBody",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "arrow-spacing",
     "title": "Arrow spacing",
     "description": "Enforce consistent spacing before and after the arrow in arrow functions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "block-scoped-var",
@@ -57,13 +103,25 @@
     "patternId": "block-spacing",
     "title": "Block spacing",
     "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "brace-style",
     "title": "Brace style",
     "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowSingleLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "callback-return",
@@ -75,7 +133,17 @@
     "patternId": "camelcase",
     "title": "Camelcase",
     "description": "Enforce camelcase naming convention",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreDestructuring",
+        "description": ""
+      },
+      {
+        "name": "ignoreImports",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "capitalized-comments",
@@ -93,43 +161,93 @@
     "patternId": "comma-dangle",
     "title": "Comma dangle",
     "description": "Require or disallow trailing commas",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "comma-spacing",
     "title": "Comma spacing",
     "description": "Enforce consistent spacing before and after commas",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "comma-style",
     "title": "Comma style",
     "description": "Enforce consistent comma style",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "complexity",
     "title": "Complexity",
     "description": "Enforce a maximum cyclomatic complexity allowed in a program",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "computed-property-spacing",
     "title": "Computed property spacing",
     "description": "Enforce consistent spacing inside computed property brackets",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "enforceForClassMembers",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "consistent-return",
     "title": "Consistent return",
     "description": "Require `return` statements to either always or never specify values",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "treatUndefinedAsUnspecified",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "consistent-this",
     "title": "Consistent this",
     "description": "Enforce consistent naming when capturing the current execution context",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "constructor-super",
@@ -141,7 +259,13 @@
     "patternId": "curly",
     "title": "Curly",
     "description": "Enforce consistent brace style for all control statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "default-case",
@@ -159,13 +283,29 @@
     "patternId": "dot-location",
     "title": "Dot location",
     "description": "Enforce consistent newlines before and after dots",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "dot-notation",
     "title": "Dot notation",
     "description": "Enforce dot notation whenever possible",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowKeywords",
+        "description": ""
+      },
+      {
+        "name": "allowPattern",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "eol-last",
@@ -177,7 +317,13 @@
     "patternId": "eqeqeq",
     "title": "Eqeqeq",
     "description": "Require the use of `===` and `!==`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "for-direction",
@@ -207,7 +353,13 @@
     "patternId": "func-style",
     "title": "Func style",
     "description": "Enforce the consistent use of either `function` declarations or expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowArrowFunctions",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "function-call-argument-newline",
@@ -231,7 +383,13 @@
     "patternId": "getter-return",
     "title": "Getter return",
     "description": "Enforce `return` statements in getters",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowImplicit",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "global-require",
@@ -267,13 +425,37 @@
     "patternId": "id-length",
     "title": "Id length",
     "description": "Enforce minimum and maximum identifier lengths",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "min",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "id-match",
     "title": "Id match",
     "description": "Require identifiers to match a specified regular expression",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "properties",
+        "description": ""
+      },
+      {
+        "name": "onlyDeclarations",
+        "description": ""
+      },
+      {
+        "name": "ignoreDestructuring",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "implicit-arrow-linebreak",
@@ -285,7 +467,25 @@
     "patternId": "indent",
     "title": "Indent",
     "description": "Enforce consistent indentation",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "SwitchCase",
+        "description": ""
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": ""
+      },
+      {
+        "name": "ignoreComments",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "indent-legacy",
@@ -297,13 +497,25 @@
     "patternId": "init-declarations",
     "title": "Init declarations",
     "description": "Require or disallow initialization in variable declarations",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsx-quotes",
     "title": "Jsx quotes",
     "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "key-spacing",
@@ -315,7 +527,17 @@
     "patternId": "keyword-spacing",
     "title": "Keyword spacing",
     "description": "Enforce consistent spacing before and after keywords",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "line-comment-position",
@@ -333,7 +555,33 @@
     "patternId": "lines-around-comment",
     "title": "Lines around comment",
     "description": "Require empty lines around comments",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "beforeBlockComment",
+        "description": ""
+      },
+      {
+        "name": "afterBlockComment",
+        "description": ""
+      },
+      {
+        "name": "beforeLineComment",
+        "description": ""
+      },
+      {
+        "name": "afterLineComment",
+        "description": ""
+      },
+      {
+        "name": "allowBlockStart",
+        "description": ""
+      },
+      {
+        "name": "allowBlockEnd",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "lines-around-directive",
@@ -345,7 +593,13 @@
     "patternId": "lines-between-class-members",
     "title": "Lines between class members",
     "description": "Require or disallow an empty line between class members",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exceptAfterSingleLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "max-classes-per-file",
@@ -381,7 +635,13 @@
     "patternId": "max-nested-callbacks",
     "title": "Max nested callbacks",
     "description": "Enforce a maximum depth that callbacks can be nested",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "max-params",
@@ -399,7 +659,13 @@
     "patternId": "max-statements-per-line",
     "title": "Max statements per line",
     "description": "Enforce a maximum number of statements allowed per line",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "max",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "multiline-comment-style",
@@ -417,7 +683,21 @@
     "patternId": "new-cap",
     "title": "New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "newIsCap",
+        "description": ""
+      },
+      {
+        "name": "capIsNew",
+        "description": ""
+      },
+      {
+        "name": "properties",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "new-parens",
@@ -429,7 +709,13 @@
     "patternId": "newline-after-var",
     "title": "Newline after var",
     "description": "Require or disallow an empty line after variable declarations",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "newline-before-return",
@@ -441,7 +727,13 @@
     "patternId": "newline-per-chained-call",
     "title": "Newline per chained call",
     "description": "Require a newline after each call in a method chain",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreChainWithDepth",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-alert",
@@ -471,7 +763,13 @@
     "patternId": "no-bitwise",
     "title": "No bitwise",
     "description": "Disallow bitwise operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-buffer-constructor",
@@ -513,13 +811,25 @@
     "patternId": "no-cond-assign",
     "title": "No cond assign",
     "description": "Disallow assignment operators in conditional expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-confusing-arrow",
     "title": "No confusing arrow",
     "description": "Disallow arrow functions where they could be confused with comparisons",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowParens",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-console",
@@ -537,7 +847,13 @@
     "patternId": "no-constant-condition",
     "title": "No constant condition",
     "description": "Disallow constant expressions in conditions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkLoops",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-constructor-return",
@@ -609,19 +925,37 @@
     "patternId": "no-duplicate-imports",
     "title": "No duplicate imports",
     "description": "Disallow duplicate module imports",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "includeExports",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-else-return",
     "title": "No else return",
     "description": "Disallow `else` blocks after `return` statements in `if` statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowElseIf",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-empty",
     "title": "No empty",
     "description": "Disallow empty block statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowEmptyCatch",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-empty-character-class",
@@ -651,7 +985,13 @@
     "patternId": "no-eval",
     "title": "No eval",
     "description": "Disallow the use of `eval()`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowIndirect",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-ex-assign",
@@ -699,7 +1039,13 @@
     "patternId": "no-fallthrough",
     "title": "No fallthrough",
     "description": "Disallow fallthrough of `case` statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "commentPattern",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-floating-decimal",
@@ -723,13 +1069,33 @@
     "patternId": "no-implicit-coercion",
     "title": "No implicit coercion",
     "description": "Disallow shorthand type conversions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "boolean",
+        "description": ""
+      },
+      {
+        "name": "number",
+        "description": ""
+      },
+      {
+        "name": "string",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-implicit-globals",
     "title": "No implicit globals",
     "description": "Disallow declarations in the global scope",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "lexicalBindings",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-implied-eval",
@@ -753,7 +1119,13 @@
     "patternId": "no-inner-declarations",
     "title": "No inner declarations",
     "description": "Disallow variable or `function` declarations in nested blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-invalid-regexp",
@@ -765,13 +1137,37 @@
     "patternId": "no-invalid-this",
     "title": "No invalid this",
     "description": "Disallow `this` keywords outside of classes or class-like objects",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "capIsConstructor",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-irregular-whitespace",
     "title": "No irregular whitespace",
     "description": "Disallow irregular whitespace",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "skipComments",
+        "description": ""
+      },
+      {
+        "name": "skipStrings",
+        "description": ""
+      },
+      {
+        "name": "skipTemplates",
+        "description": ""
+      },
+      {
+        "name": "skipRegExps",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-iterator",
@@ -789,7 +1185,17 @@
     "patternId": "no-labels",
     "title": "No labels",
     "description": "Disallow labeled statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowLoop",
+        "description": ""
+      },
+      {
+        "name": "allowSwitch",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-lone-blocks",
@@ -813,7 +1219,21 @@
     "patternId": "no-magic-numbers",
     "title": "No magic numbers",
     "description": "Disallow magic numbers",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "detectObjects",
+        "description": ""
+      },
+      {
+        "name": "enforceConst",
+        "description": ""
+      },
+      {
+        "name": "ignoreArrayIndexes",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-misleading-character-class",
@@ -825,7 +1245,13 @@
     "patternId": "no-mixed-operators",
     "title": "No mixed operators",
     "description": "Disallow mixed binary operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowSamePrecedence",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-mixed-requires",
@@ -849,7 +1275,13 @@
     "patternId": "no-multi-spaces",
     "title": "No multi spaces",
     "description": "Disallow multiple spaces",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreEOLComments",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-multi-str",
@@ -957,7 +1389,13 @@
     "patternId": "no-plusplus",
     "title": "No plusplus",
     "description": "Disallow the unary operators `++` and `--`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowForLoopAfterthoughts",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-process-env",
@@ -987,7 +1425,13 @@
     "patternId": "no-redeclare",
     "title": "No redeclare",
     "description": "Disallow variable redeclaration",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "builtinGlobals",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-regex-spaces",
@@ -1011,7 +1455,13 @@
     "patternId": "no-restricted-modules",
     "title": "No restricted modules",
     "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-restricted-properties",
@@ -1029,7 +1479,13 @@
     "patternId": "no-return-assign",
     "title": "No return assign",
     "description": "Disallow assignment operators in `return` statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-return-await",
@@ -1047,7 +1503,13 @@
     "patternId": "no-self-assign",
     "title": "No self assign",
     "description": "Disallow assignments where both sides are exactly the same",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "props",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-self-compare",
@@ -1071,7 +1533,17 @@
     "patternId": "no-shadow",
     "title": "No shadow",
     "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "builtinGlobals",
+        "description": ""
+      },
+      {
+        "name": "hoist",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-shadow-restricted-names",
@@ -1095,13 +1567,25 @@
     "patternId": "no-sync",
     "title": "No sync",
     "description": "Disallow synchronous methods",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowAtRootLevel",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-tabs",
     "title": "No tabs",
     "description": "Disallow all tabs",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowIndentationTabs",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-template-curly-in-string",
@@ -1131,13 +1615,29 @@
     "patternId": "no-trailing-spaces",
     "title": "No trailing spaces",
     "description": "Disallow trailing whitespace at the end of lines",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "skipBlankLines",
+        "description": ""
+      },
+      {
+        "name": "ignoreComments",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-undef",
     "title": "No undef",
     "description": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "typeof",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-undef-init",
@@ -1155,7 +1655,25 @@
     "patternId": "no-underscore-dangle",
     "title": "No underscore dangle",
     "description": "Disallow dangling underscores in identifiers",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowAfterThis",
+        "description": ""
+      },
+      {
+        "name": "allowAfterSuper",
+        "description": ""
+      },
+      {
+        "name": "allowAfterThisConstructor",
+        "description": ""
+      },
+      {
+        "name": "enforceInMethodNames",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-unexpected-multiline",
@@ -1173,7 +1691,13 @@
     "patternId": "no-unneeded-ternary",
     "title": "No unneeded ternary",
     "description": "Disallow ternary operators when simpler alternatives exist",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "defaultAssignment",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-unreachable",
@@ -1191,13 +1715,33 @@
     "patternId": "no-unsafe-negation",
     "title": "No unsafe negation",
     "description": "Disallow negating the left operand of relational operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "enforceForOrderingRelations",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-unused-expressions",
     "title": "No unused expressions",
     "description": "Disallow unused expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": ""
+      },
+      {
+        "name": "allowTernary",
+        "description": ""
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-unused-labels",
@@ -1233,7 +1777,13 @@
     "patternId": "no-useless-computed-key",
     "title": "No useless computed key",
     "description": "Disallow unnecessary computed property keys in objects and classes",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "enforceForClassMembers",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-useless-concat",
@@ -1257,7 +1807,21 @@
     "patternId": "no-useless-rename",
     "title": "No useless rename",
     "description": "Disallow renaming import, export, and destructured assignments to the same name",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreDestructuring",
+        "description": ""
+      },
+      {
+        "name": "ignoreImport",
+        "description": ""
+      },
+      {
+        "name": "ignoreExport",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "no-useless-return",
@@ -1311,13 +1875,29 @@
     "patternId": "object-curly-spacing",
     "title": "Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "object-property-newline",
     "title": "Object property newline",
     "description": "Enforce placing object properties on separate lines",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": ""
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "object-shorthand",
@@ -1329,7 +1909,13 @@
     "patternId": "one-var",
     "title": "One var",
     "description": "Enforce variables to be declared either together or separately in functions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "one-var-declaration-per-line",
@@ -1347,7 +1933,13 @@
     "patternId": "operator-linebreak",
     "title": "Operator linebreak",
     "description": "Enforce consistent linebreak style for operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "padded-blocks",
@@ -1365,13 +1957,33 @@
     "patternId": "prefer-arrow-callback",
     "title": "Prefer arrow callback",
     "description": "Require using arrow functions for callbacks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowNamedFunctions",
+        "description": ""
+      },
+      {
+        "name": "allowUnboundThis",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "prefer-const",
     "title": "Prefer const",
     "description": "Require `const` declarations for variables that are never reassigned after declared",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "destructuring",
+        "description": ""
+      },
+      {
+        "name": "ignoreReadBeforeAssign",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "prefer-destructuring",
@@ -1407,7 +2019,13 @@
     "patternId": "prefer-promise-reject-errors",
     "title": "Prefer promise reject errors",
     "description": "Require using Error objects as Promise rejection reasons",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowEmptyReject",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "prefer-reflect",
@@ -1449,7 +2067,13 @@
     "patternId": "quotes",
     "title": "Quotes",
     "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "radix",
@@ -1473,7 +2097,13 @@
     "patternId": "require-jsdoc",
     "title": "Require jsdoc",
     "description": "Require JSDoc comments",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "require",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "require-unicode-regexp",
@@ -1497,13 +2127,29 @@
     "patternId": "semi",
     "title": "Semi",
     "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "semi-spacing",
     "title": "Semi spacing",
     "description": "Enforce consistent spacing before and after semicolons",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "semi-style",
@@ -1515,67 +2161,157 @@
     "patternId": "sort-imports",
     "title": "Sort imports",
     "description": "Enforce sorted import declarations within modules",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreCase",
+        "description": ""
+      },
+      {
+        "name": "ignoreDeclarationSort",
+        "description": ""
+      },
+      {
+        "name": "ignoreMemberSort",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "sort-keys",
     "title": "Sort keys",
     "description": "Require object keys to be sorted",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": ""
+      },
+      {
+        "name": "natural",
+        "description": ""
+      },
+      {
+        "name": "minKeys",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "sort-vars",
     "title": "Sort vars",
     "description": "Require variables within the same declaration block to be sorted",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreCase",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "space-before-blocks",
     "title": "Space before blocks",
     "description": "Enforce consistent spacing before blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "space-before-function-paren",
     "title": "Space before function paren",
     "description": "Enforce consistent spacing before `function` definition opening parenthesis",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "space-in-parens",
     "title": "Space in parens",
     "description": "Enforce consistent spacing inside parentheses",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "space-infix-ops",
     "title": "Space infix ops",
     "description": "Require spacing around infix operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "space-unary-ops",
     "title": "Space unary ops",
     "description": "Enforce consistent spacing before or after unary operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "words",
+        "description": ""
+      },
+      {
+        "name": "nonwords",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "spaced-comment",
     "title": "Spaced comment",
     "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "strict",
     "title": "Strict",
     "description": "Require or disallow strict mode directives",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "switch-colon-spacing",
     "title": "Switch colon spacing",
     "description": "Enforce spacing around colons of switch statements",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "symbol-description",
@@ -1605,19 +2341,57 @@
     "patternId": "use-isnan",
     "title": "Use isnan",
     "description": "Require calls to `isNaN()` when checking for `NaN`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "enforceForSwitchCase",
+        "description": ""
+      },
+      {
+        "name": "enforceForIndexOf",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "valid-jsdoc",
     "title": "Valid jsdoc",
     "description": "Enforce valid JSDoc comments",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "requireReturn",
+        "description": ""
+      },
+      {
+        "name": "requireParamDescription",
+        "description": ""
+      },
+      {
+        "name": "requireReturnDescription",
+        "description": ""
+      },
+      {
+        "name": "requireReturnType",
+        "description": ""
+      },
+      {
+        "name": "requireParamType",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "valid-typeof",
     "title": "Valid typeof",
     "description": "Enforce comparing `typeof` expressions against valid strings",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "requireStringLiterals",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vars-on-top",
@@ -1629,7 +2403,17 @@
     "patternId": "wrap-iife",
     "title": "Wrap iife",
     "description": "Require parentheses around immediate `function` invocations",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "functionPrototypeMethods",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "wrap-regex",
@@ -1647,7 +2431,21 @@
     "patternId": "yoda",
     "title": "Yoda",
     "description": "Require or disallow \"Yoda\" conditions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": ""
+      },
+      {
+        "name": "exceptRange",
+        "description": ""
+      },
+      {
+        "name": "onlyEquality",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "import_named",
@@ -1662,7 +2460,13 @@
   {
     "patternId": "import_namespace",
     "title": "Import: Namespace",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowComputed",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "import_no-namespace",
@@ -2562,7 +3366,21 @@
     "patternId": "babel_new-cap",
     "title": "Babel: New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "newIsCap",
+        "description": ""
+      },
+      {
+        "name": "capIsNew",
+        "description": ""
+      },
+      {
+        "name": "properties",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "babel_camelcase",
@@ -2579,13 +3397,33 @@
     "patternId": "babel_no-invalid-this",
     "title": "Babel: No invalid this",
     "description": "Disallow `this` keywords outside of classes or class-like objects",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "capIsConstructor",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "babel_no-unused-expressions",
     "title": "Babel: No unused expressions",
     "description": "Disallow unused expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": ""
+      },
+      {
+        "name": "allowTernary",
+        "description": ""
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "babel_object-curly-spacing",
@@ -2613,7 +3451,13 @@
     "patternId": "babel_valid-typeof",
     "title": "Babel: Valid typeof",
     "description": "Enforce comparing `typeof` expressions against valid strings",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "requireStringLiterals",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "backbone_collection-model",
@@ -2847,7 +3691,13 @@
     "patternId": "ember_named-functions-in-promises",
     "title": "Ember: Named functions in promises",
     "description": "Enforce usage of named functions in promises",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowSimpleArrowFunction",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember_new-module-imports",
@@ -2865,7 +3715,13 @@
     "patternId": "ember_no-arrow-function-computed-properties",
     "title": "Ember: No arrow function computed properties",
     "description": "Disallow arrow functions in computed properties",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "onlyThisContexts",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember_no-attrs-in-components",
@@ -2955,7 +3811,17 @@
     "patternId": "ember_no-get",
     "title": "Ember: No get",
     "description": "Require using ES5 getters instead of Ember's `get` / `getProperties` functions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreGetProperties",
+        "description": ""
+      },
+      {
+        "name": "ignoreNestedPaths",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember_no-global-jquery",
@@ -3105,7 +3971,17 @@
     "patternId": "ember_require-computed-property-dependencies",
     "title": "Ember: Require computed property dependencies",
     "description": "Require dependencies to be declared statically in computed properties",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowDynamicKeys",
+        "description": ""
+      },
+      {
+        "name": "requireServiceNames",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember_require-return-from-computed",
@@ -3153,13 +4029,29 @@
     "patternId": "ember_use-ember-get-and-set",
     "title": "Ember: Use ember get and set",
     "description": "Enforce usage of `Ember.get` and `Ember.set`",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreThisExpressions",
+        "description": ""
+      },
+      {
+        "name": "ignoreNonThisExpressions",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember-suave_lines-between-object-properties",
     "title": "Ember suave: Lines between object properties",
     "description": "Require or disallow an empty line between object properties",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exceptAfterSingleLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "ember-suave_no-const-outside-module-scope",
@@ -3256,7 +4148,21 @@
     "patternId": "flowtype_no-unused-expressions",
     "title": "Flowtype: No unused expressions",
     "description": "Disallow unused expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": ""
+      },
+      {
+        "name": "allowTernary",
+        "description": ""
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "flowtype_no-weak-types",
@@ -3761,13 +4667,29 @@
     "patternId": "jest_valid-expect",
     "title": "Jest: Valid expect",
     "description": "Enforce valid `expect()` usage",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "alwaysAwait",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jest_valid-title",
     "title": "Jest: Valid title",
     "description": "Enforce valid titles",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreTypeOfDescribeName",
+        "description": ""
+      },
+      {
+        "name": "disallowedWords",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_check-access",
@@ -3782,7 +4704,33 @@
   {
     "patternId": "jsdoc_check-examples",
     "title": "Jsdoc: Check examples",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowInlineConfig",
+        "description": ""
+      },
+      {
+        "name": "captionRequired",
+        "description": ""
+      },
+      {
+        "name": "checkEslintrc",
+        "description": ""
+      },
+      {
+        "name": "noDefaultExampleRules",
+        "description": ""
+      },
+      {
+        "name": "paddedIndent",
+        "description": ""
+      },
+      {
+        "name": "reportUnusedDisableDirectives",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_check-indentation",
@@ -3872,7 +4820,13 @@
   {
     "patternId": "jsdoc_require-example",
     "title": "Jsdoc: Require example",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "avoidExampleOnConstructors",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-file-overview",
@@ -3882,12 +4836,28 @@
   {
     "patternId": "jsdoc_require-hyphen-before-param-description",
     "title": "Jsdoc: Require hyphen before param description",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkProperties",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-jsdoc",
     "title": "Jsdoc: Require jsdoc",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exemptEmptyFunctions",
+        "description": ""
+      },
+      {
+        "name": "require",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-param",
@@ -3932,7 +4902,17 @@
   {
     "patternId": "jsdoc_require-returns",
     "title": "Jsdoc: Require returns",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "forceRequireReturn",
+        "description": ""
+      },
+      {
+        "name": "forceReturnsWithAsync",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-returns-check",
@@ -3952,7 +4932,17 @@
   {
     "patternId": "jsdoc_valid-types",
     "title": "Jsdoc: Valid types",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowEmptyNamepaths",
+        "description": ""
+      },
+      {
+        "name": "checkSeesForNamepaths",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "json_*",
@@ -4097,7 +5087,13 @@
   {
     "patternId": "jsx-a11y_aria-role",
     "title": "Jsx a11y: Aria role",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsx-a11y_aria-unsupported-elements",
@@ -4172,7 +5168,13 @@
   {
     "patternId": "jsx-a11y_no-autofocus",
     "title": "Jsx a11y: No autofocus",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "jsx-a11y_no-distracting-elements",
@@ -4894,19 +5896,49 @@
     "patternId": "react_boolean-prop-naming",
     "title": "React: Boolean prop naming",
     "description": "Enforces consistent naming for boolean props",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "rule",
+        "description": ""
+      },
+      {
+        "name": "validateNested",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_button-has-type",
     "title": "React: Button has type",
     "description": "Forbid \"button\" element without an explicit \"type\" attribute",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "button",
+        "description": ""
+      },
+      {
+        "name": "submit",
+        "description": ""
+      },
+      {
+        "name": "reset",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_default-props-match-prop-types",
     "title": "React: Default props match prop types",
     "description": "Enforce all defaultProps are defined and not \"required\" in propTypes.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowRequiredDefaults",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_destructuring-assignment",
@@ -4918,7 +5950,13 @@
     "patternId": "react_display-name",
     "title": "React: Display name",
     "description": "Prevent missing displayName in a React component definition",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreTranspilerName",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_forbid-component-props",
@@ -5032,7 +6070,13 @@
     "patternId": "react_jsx-key",
     "title": "React: Jsx key",
     "description": "Report missing `key` props in iterators/collection literals",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkFragmentShorthand",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_jsx-max-depth",
@@ -5050,7 +6094,29 @@
     "patternId": "react_jsx-no-bind",
     "title": "React: Jsx no bind",
     "description": "Prevents usage of Function.prototype.bind and arrow functions in React component props",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowArrowFunctions",
+        "description": ""
+      },
+      {
+        "name": "allowBind",
+        "description": ""
+      },
+      {
+        "name": "allowFunctions",
+        "description": ""
+      },
+      {
+        "name": "ignoreRefs",
+        "description": ""
+      },
+      {
+        "name": "ignoreDOMComponents",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_jsx-no-comment-textnodes",
@@ -5248,7 +6314,13 @@
     "patternId": "react_no-multi-comp",
     "title": "React: No multi comp",
     "description": "Prevent multiple component definition per file",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreStateless",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_no-set-state",
@@ -5302,7 +6374,13 @@
     "patternId": "react_no-unsafe",
     "title": "React: No unsafe",
     "description": "Prevent usage of unsafe lifecycle methods",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkAliases",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_no-unused-prop-types",
@@ -5338,7 +6416,13 @@
     "patternId": "react_prefer-stateless-function",
     "title": "React: Prefer stateless function",
     "description": "Enforce stateless components to be written as a pure function",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignorePureComponents",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_prop-types",
@@ -5374,7 +6458,17 @@
     "patternId": "react_self-closing-comp",
     "title": "React: Self closing comp",
     "description": "Prevent extra closing tags for components without children",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "component",
+        "description": ""
+      },
+      {
+        "name": "html",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "react_sort-comp",
@@ -5803,7 +6897,21 @@
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
     "description": "Bans `// @ts-<directive>` comments from being used",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ts-ignore",
+        "description": ""
+      },
+      {
+        "name": "ts-nocheck",
+        "description": ""
+      },
+      {
+        "name": "ts-check",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_ban-types",
@@ -5815,25 +6923,57 @@
     "patternId": "@typescript-eslint_brace-style",
     "title": "@typescript eslint: Brace style",
     "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowSingleLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_camelcase",
     "title": "@typescript eslint: Camelcase",
     "description": "Enforce camelCase naming convention",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreDestructuring",
+        "description": ""
+      },
+      {
+        "name": "ignoreImports",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_class-name-casing",
     "title": "@typescript eslint: Class name casing",
     "description": "Require PascalCased class and interface names",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowUnderscorePrefix",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_comma-spacing",
     "title": "@typescript eslint: Comma spacing",
     "description": "Enforces consistent spacing before and after commas",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_consistent-type-assertions",
@@ -5887,7 +7027,21 @@
     "patternId": "@typescript-eslint_indent",
     "title": "@typescript eslint: Indent",
     "description": "Enforce consistent indentation",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SwitchCase",
+        "description": ""
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": ""
+      },
+      {
+        "name": "ignoreComments",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_interface-name-prefix",
@@ -6007,7 +7161,21 @@
     "patternId": "@typescript-eslint_no-magic-numbers",
     "title": "@typescript eslint: No magic numbers",
     "description": "Disallow magic numbers",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "detectObjects",
+        "description": ""
+      },
+      {
+        "name": "enforceConst",
+        "description": ""
+      },
+      {
+        "name": "ignoreArrayIndexes",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_no-misused-new",
@@ -6121,7 +7289,21 @@
     "patternId": "@typescript-eslint_no-unused-expressions",
     "title": "@typescript eslint: No unused expressions",
     "description": "Disallow unused expressions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": ""
+      },
+      {
+        "name": "allowTernary",
+        "description": ""
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_no-use-before-define",
@@ -6307,7 +7489,17 @@
     "patternId": "vue_arrow-spacing",
     "title": "Vue: Arrow spacing",
     "description": "Enforce consistent spacing before and after the arrow in arrow functions",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_attribute-hyphenation",
@@ -6331,13 +7523,29 @@
     "patternId": "vue_brace-style",
     "title": "Vue: Brace style",
     "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowSingleLine",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_camelcase",
     "title": "Vue: Camelcase",
     "description": "Enforce camelcase naming convention",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreDestructuring",
+        "description": ""
+      },
+      {
+        "name": "ignoreImports",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_comma-dangle",
@@ -6433,7 +7641,17 @@
     "patternId": "vue_keyword-spacing",
     "title": "Vue: Keyword spacing",
     "description": "Enforce consistent spacing before and after keywords",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": ""
+      },
+      {
+        "name": "after",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_match-component-file-name",
@@ -6529,7 +7747,33 @@
     "patternId": "vue_no-irregular-whitespace",
     "title": "Vue: No irregular whitespace",
     "description": "Disallow irregular whitespace",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "skipComments",
+        "description": ""
+      },
+      {
+        "name": "skipStrings",
+        "description": ""
+      },
+      {
+        "name": "skipTemplates",
+        "description": ""
+      },
+      {
+        "name": "skipRegExps",
+        "description": ""
+      },
+      {
+        "name": "skipHTMLAttributeValues",
+        "description": ""
+      },
+      {
+        "name": "skipHTMLTextContents",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_no-multi-spaces",
@@ -6733,19 +7977,53 @@
     "patternId": "vue_sort-keys",
     "title": "Vue: Sort keys",
     "description": "Enforce sort-keys in a manner that is compatible with order-in-components",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": ""
+      },
+      {
+        "name": "minKeys",
+        "description": ""
+      },
+      {
+        "name": "natural",
+        "description": ""
+      },
+      {
+        "name": "runOutsideVue",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_space-infix-ops",
     "title": "Vue: Space infix ops",
     "description": "Require spacing around infix operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_space-unary-ops",
     "title": "Vue: Space unary ops",
     "description": "Enforce consistent spacing before or after unary operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "words",
+        "description": ""
+      },
+      {
+        "name": "nonwords",
+        "description": ""
+      }
+    ]
   },
   {
     "patternId": "vue_static-class-names-order",
