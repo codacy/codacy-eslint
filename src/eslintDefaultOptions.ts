@@ -63,6 +63,7 @@ export const defaultOptions: CLIEngine.Options = {
       "scanjs-rules",
       "security",
       "sonarjs",
+      "sort-imports-es6-autofix",
       "standard",
       "@typescript-eslint",
       "vue",

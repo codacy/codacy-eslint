@@ -6870,6 +6870,26 @@
     "timeToFix": 5
   },
   {
+    "patternId": "sort-imports-es6-autofix_sort-imports-es6",
+    "title": "Sort imports es6 autofix: Sort imports es6",
+    "description": "Enforce sorted import declarations within modules",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreCase",
+        "description": ""
+      },
+      {
+        "name": "memberSyntaxSortOrder",
+        "description": ""
+      },
+      {
+        "name": "ignoreMemberSort",
+        "description": ""
+      }
+    ]
+  },
+  {
     "patternId": "@typescript-eslint_adjacent-overload-signatures",
     "title": "@typescript eslint: Adjacent overload signatures",
     "description": "Require that member overloads be consecutive",
