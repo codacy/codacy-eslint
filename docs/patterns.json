@@ -2609,12 +2609,14 @@
     {
       "patternId": "security_detect-unsafe-regex",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "Regex"
     },
     {
       "patternId": "security_detect-non-literal-regexp",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "Regex"
     },
     {
       "patternId": "security_detect-non-literal-require",
