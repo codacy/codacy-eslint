@@ -3407,6 +3407,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "ember_no-component-lifecycle-hooks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "ember_no-computed-properties-in-native-classes",
       "level": "Info",
       "category": "CodeStyle"
@@ -3485,6 +3490,11 @@
       "patternId": "ember_no-jquery",
       "level": "Info",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "ember_no-legacy-test-waiters",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-new-mixins",
