@@ -3754,6 +3754,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ember_no-component-lifecycle-hooks",
+    "title": "Ember: No component lifecycle hooks",
+    "description": "Disallow usage of \"classic\" ember component lifecycle hooks. Render modifiers or custom functional modifiers should be used instead.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-computed-properties-in-native-classes",
     "title": "Ember: No computed properties in native classes",
     "description": "Disallow using computed properties in native classes",
@@ -3845,6 +3851,12 @@
     "patternId": "ember_no-jquery",
     "title": "Ember: No jquery",
     "description": "Disallow any usage of jQuery",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-legacy-test-waiters",
+    "title": "Ember: No legacy test waiters",
+    "description": "Disallow the use of the legacy test waiter APIs.",
     "timeToFix": 5
   },
   {
