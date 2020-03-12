@@ -187,7 +187,7 @@
     "@types/node": "^13.9.0",
     "@types/node-fetch": "^2.5.5",
     "@types/simple-mock": "^0.8.1",
-    "eslint-plugin-simple-import-sort": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^5.0.2",
     "eslint-plugin-unused-imports": "^0.1.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
