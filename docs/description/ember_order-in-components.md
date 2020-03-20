@@ -1,5 +1,7 @@
 # order-in-components
 
+:wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+
 ## Configuration
 
 ```js
@@ -79,6 +81,8 @@ You should write code grouped and ordered in this way:
 6. Lifecycle Hooks (in execution order)
 7. Actions
 8. Custom / private methods
+
+## Examples
 
 ```javascript
 const {

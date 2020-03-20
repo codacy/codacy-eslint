@@ -1,5 +1,7 @@
 # order-in-models
 
+:wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+
 ## Configuration
 
 ```js
@@ -47,6 +49,8 @@ You should write code grouped and ordered in this way:
 3. Single line computed properties
 4. Multiline computed properties
 5. Other structures (custom methods etc.)
+
+## Examples
 
 ```javascript
 // GOOD

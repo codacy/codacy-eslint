@@ -3497,6 +3497,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "ember_no-mixins",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "ember_no-new-mixins",
       "level": "Info",
       "category": "BestPractice"
@@ -3520,6 +3525,11 @@
       "patternId": "ember_no-pause-test",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-private-routing-service",
+      "level": "Info",
+      "category": "BestPractice"
     },
     {
       "patternId": "ember_no-proxies",
@@ -6392,11 +6402,6 @@
       "category": "BestPractice"
     },
     {
-      "patternId": "@typescript-eslint_ban-ts-ignore",
-      "level": "Info",
-      "category": "BestPractice"
-    },
-    {
       "patternId": "@typescript-eslint_ban-ts-comment",
       "level": "Info",
       "category": "BestPractice",
@@ -6416,7 +6421,17 @@
       ]
     },
     {
+      "patternId": "@typescript-eslint_ban-ts-ignore",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_ban-types",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-base-to-string",
       "level": "Info",
       "category": "BestPractice"
     },
@@ -6617,12 +6632,12 @@
       "category": "BestPractice"
     },
     {
-      "patternId": "@typescript-eslint_no-inferrable-types",
+      "patternId": "@typescript-eslint_no-implied-eval",
       "level": "Info",
       "category": "BestPractice"
     },
     {
-      "patternId": "@typescript-eslint_no-implied-eval",
+      "patternId": "@typescript-eslint_no-inferrable-types",
       "level": "Info",
       "category": "BestPractice"
     },
@@ -6661,14 +6676,14 @@
       "category": "BestPractice"
     },
     {
-      "patternId": "@typescript-eslint_no-non-null-assertion",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "@typescript-eslint_no-non-null-assertion",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-parameter-properties",
@@ -6686,14 +6701,14 @@
       "category": "BestPractice"
     },
     {
-      "patternId": "@typescript-eslint_no-type-alias",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "@typescript-eslint_no-throw-literal",
       "level": "Info",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-type-alias",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
@@ -6721,17 +6736,22 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_no-unsafe-call",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "@typescript-eslint_no-unsafe-member-access",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "@typescript-eslint_no-unsafe-return",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "@typescript-eslint_no-untyped-public-signature",
-      "level": "Info",
-      "category": "BestPractice"
-    },
-    {
-      "patternId": "@typescript-eslint_no-unused-vars",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "@typescript-eslint_no-unused-vars-experimental",
       "level": "Info",
       "category": "BestPractice"
     },
@@ -6753,6 +6773,16 @@
           "default": false
         }
       ]
+    },
+    {
+      "patternId": "@typescript-eslint_no-unused-vars-experimental",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-unused-vars",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-use-before-define",
@@ -6803,6 +6833,11 @@
       "patternId": "@typescript-eslint_prefer-optional-chain",
       "level": "Info",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
+      "level": "Error",
+      "category": "ErrorProne"
     },
     {
       "patternId": "@typescript-eslint_prefer-readonly",
