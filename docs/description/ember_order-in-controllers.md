@@ -1,5 +1,7 @@
 # order-in-controllers
 
+:wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+
 ## Configuration
 
 ```js
@@ -57,6 +59,8 @@ You should write code grouped and ordered in this way:
 8. Observers
 9. Actions
 10. Custom / private methods
+
+## Examples
 
 ```javascript
 const {

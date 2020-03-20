@@ -1,5 +1,7 @@
 # order-in-routes
 
+:wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+
 ## Configuration
 
 ```js
@@ -76,6 +78,8 @@ You should write code grouped and ordered in this way:
 7. Other lifecycle hooks in execution order (serialize, redirect, etc)
 8. Actions
 9. Custom / private methods
+
+## Examples
 
 ```javascript
 const {

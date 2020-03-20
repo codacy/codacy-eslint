@@ -3860,6 +3860,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ember_no-mixins",
+    "title": "Ember: No mixins",
+    "description": "Disallow the usage of mixins",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-new-mixins",
     "title": "Ember: No new mixins",
     "description": "Disallow the creation of new mixins",
@@ -3887,6 +3893,12 @@
     "patternId": "ember_no-pause-test",
     "title": "Ember: No pause test",
     "description": "Disallow usage of the `pauseTest` helper in tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-private-routing-service",
+    "title": "Ember: No private routing service",
+    "description": "Disallow injecting the private routing service",
     "timeToFix": 5
   },
   {
@@ -4916,6 +4928,10 @@
     "title": "Jsdoc: Require returns",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
       {
         "name": "forceRequireReturn",
         "description": "forceRequireReturn"
@@ -6920,12 +6936,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_ban-ts-ignore",
-    "title": "@typescript eslint: Ban ts ignore",
-    "description": "Bans “// @ts-ignore” comments from being used",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
     "description": "Bans `// @ts-<directive>` comments from being used",
@@ -6946,9 +6956,21 @@
     ]
   },
   {
+    "patternId": "@typescript-eslint_ban-ts-ignore",
+    "title": "@typescript eslint: Ban ts ignore",
+    "description": "Bans “// @ts-ignore” comments from being used",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_ban-types",
     "title": "@typescript eslint: Ban types",
     "description": "Bans specific types from being used",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-base-to-string",
+    "title": "@typescript eslint: No base to string",
+    "description": "Requires that `.toString()` is only called on objects which provide useful information when stringified",
     "timeToFix": 5
   },
   {
@@ -7178,15 +7200,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_no-inferrable-types",
-    "title": "@typescript eslint: No inferrable types",
-    "description": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_no-implied-eval",
     "title": "@typescript eslint: No implied eval",
     "description": "Disallow the use of `eval()`-like methods",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-inferrable-types",
+    "title": "@typescript eslint: No inferrable types",
+    "description": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean",
     "timeToFix": 5
   },
   {
@@ -7228,15 +7250,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_no-non-null-assertion",
-    "title": "@typescript eslint: No non null assertion",
-    "description": "Disallows non-null assertions using the `!` postfix operator",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
     "title": "@typescript eslint: No non null asserted optional chain",
     "description": "Disallows using a non-null assertion after an optional chain expression",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-non-null-assertion",
+    "title": "@typescript eslint: No non null assertion",
+    "description": "Disallows non-null assertions using the `!` postfix operator",
     "timeToFix": 5
   },
   {
@@ -7258,15 +7280,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_no-type-alias",
-    "title": "@typescript eslint: No type alias",
-    "description": "Disallow the use of type aliases",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_no-throw-literal",
     "title": "@typescript eslint: No throw literal",
     "description": "Disallow throwing literals as exceptions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-type-alias",
+    "title": "@typescript eslint: No type alias",
+    "description": "Disallow the use of type aliases",
     "timeToFix": 5
   },
   {
@@ -7300,21 +7322,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-unsafe-call",
+    "title": "@typescript eslint: No unsafe call",
+    "description": "Disallows calling an any type value",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-unsafe-member-access",
+    "title": "@typescript eslint: No unsafe member access",
+    "description": "Disallows member access on any typed variables",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-unsafe-return",
+    "title": "@typescript eslint: No unsafe return",
+    "description": "Disallows returning any from a function",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-untyped-public-signature",
     "title": "@typescript eslint: No untyped public signature",
     "description": "Disallow untyped public methods",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "@typescript-eslint_no-unused-vars",
-    "title": "@typescript eslint: No unused vars",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "@typescript-eslint_no-unused-vars-experimental",
-    "title": "@typescript eslint: No unused vars experimental",
-    "description": "Disallow unused variables and arguments",
     "timeToFix": 5
   },
   {
@@ -7336,6 +7364,18 @@
         "description": "allowTaggedTemplates"
       }
     ]
+  },
+  {
+    "patternId": "@typescript-eslint_no-unused-vars-experimental",
+    "title": "@typescript eslint: No unused vars experimental",
+    "description": "Disallow unused variables and arguments",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-unused-vars",
+    "title": "@typescript eslint: No unused vars",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
   },
   {
     "patternId": "@typescript-eslint_no-use-before-define",
@@ -7395,6 +7435,12 @@
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
     "description": "Prefer using concise optional chain expressions instead of chained logical ands",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
+    "title": "@typescript eslint: Prefer readonly parameter types",
+    "description": "Requires that function parameters are typed as readonly to prevent accidental mutation of inputs",
     "timeToFix": 5
   },
   {
