@@ -4929,6 +4929,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
         "name": "forceRequireReturn",
         "description": "forceRequireReturn"
       },

@@ -4492,6 +4492,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "checkGetters",
+          "default": true
+        },
+        {
           "name": "forceRequireReturn",
           "default": false
         },
