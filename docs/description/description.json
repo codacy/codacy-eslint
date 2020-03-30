@@ -3842,9 +3842,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ember_no-incorrect-computed-macros",
+    "title": "Ember: No incorrect computed macros",
+    "description": "Disallow incorrect usage of computed property macros",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-invalid-debug-function-arguments",
     "title": "Ember: No invalid debug function arguments",
     "description": "Disallow usages of Ember's `assert()` / `warn()` / `deprecate()` functions that have the arguments passed in the wrong order.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-invalid-dependent-keys",
+    "title": "Ember: No invalid dependent keys",
+    "description": "Require that dependent keys used for computed properties to be valid.",
     "timeToFix": 5
   },
   {
@@ -3905,6 +3917,12 @@
     "patternId": "ember_no-proxies",
     "title": "Ember: No proxies",
     "description": "Disallow using array or object proxies",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-replace-test-comments",
+    "title": "Ember: No replace test comments",
+    "description": "Disallow 'Replace this with your real tests' comments in test files",
     "timeToFix": 5
   },
   {
@@ -7012,6 +7030,12 @@
         "description": "allowUnderscorePrefix"
       }
     ]
+  },
+  {
+    "patternId": "@typescript-eslint_class-literal-property-style",
+    "title": "@typescript eslint: Class literal property style",
+    "description": "Ensures that literals on classes are exposed in a consistent style",
+    "timeToFix": 5
   },
   {
     "patternId": "@typescript-eslint_comma-spacing",

@@ -18,8 +18,10 @@ Observers do have some limited uses. They let you reflect state from your applic
 Examples of **incorrect** code for this rule:
 
 ```js
+import { observer } from '@ember/object';
+
 export default Controller.extend({
-  change: Ember.observer('text', function() {
+  change: observer('text', function () {
     console.log(`change detected: ${this.text}`);
   })
 });
@@ -29,7 +31,7 @@ export default Controller.extend({
 import { observer } from '@ember/object';
 
 export default Controller.extend({
-  change: observer('text', function() {
+  change: observer('text', function () {
     console.log(`change detected: ${this.text}`);
   })
 });

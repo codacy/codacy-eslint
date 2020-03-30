@@ -180,6 +180,7 @@
     "typescript": "^3.8.3",
     "vue-eslint-parser": "^7.0.0",
     "webpack": "^4.42.1",
+    "webpack-manifest-plugin": "^2.2.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
