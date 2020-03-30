@@ -62,8 +62,8 @@ export default Model.extend({
   behaviors: hasMany('behaviour'),
 
   // 3. Computed Properties
-  mood: computed('health', 'hunger', function() {
-    const result = this.get('health') * this.get('hunger');
+  mood: computed('health', 'hunger', function () {
+    const result = this.health * this.hunger;
     return result;
   })
 });
@@ -72,8 +72,8 @@ export default Model.extend({
 ```javascript
 // BAD
 export default Model.extend({
-  mood: computed('health', 'hunger', function() {
-    const result = this.get('health') * this.get('hunger');
+  mood: computed('health', 'hunger', function () {
+    const result = this.health * this.hunger;
     return result;
   }),
 

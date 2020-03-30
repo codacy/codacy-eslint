@@ -3482,7 +3482,17 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "ember_no-incorrect-computed-macros",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "ember_no-invalid-debug-function-arguments",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "ember_no-invalid-dependent-keys",
       "level": "Error",
       "category": "ErrorProne"
     },
@@ -3533,6 +3543,11 @@
     },
     {
       "patternId": "ember_no-proxies",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-replace-test-comments",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6475,6 +6490,11 @@
           "default": false
         }
       ]
+    },
+    {
+      "patternId": "@typescript-eslint_class-literal-property-style",
+      "level": "Info",
+      "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_comma-spacing",

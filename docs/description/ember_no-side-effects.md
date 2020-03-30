@@ -7,12 +7,8 @@ When using computed properties do not introduce side effects. It will make reaso
 ## Examples
 
 ```javascript
-import Ember from 'ember';
-
-const {
-  Component,
-  computed: { filterBy, alias }
-} = Ember;
+import Component from '@ember/component';
+import { alias, filterBy } from '@ember/object/computed';
 
 export default Component.extend({
   init(...args) {
@@ -30,8 +26,8 @@ export default Component.extend({
 
   // BAD:
   fifteenAmountBad: 0,
-  fifteenBad: computed('users', function() {
-    const fifteen = this.get('users').filterBy('items', 'age', 15);
+  fifteenBad: computed('users', function () {
+    const fifteen = this.users.filterBy('items', 'age', 15);
     this.set('fifteenAmount', fifteen.length); // SIDE EFFECT!
     return fifteen;
   })
