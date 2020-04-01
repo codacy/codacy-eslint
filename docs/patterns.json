@@ -2382,6 +2382,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "node_callback-return",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "node_exports-style",
       "level": "Info",
       "category": "CodeStyle"
@@ -2390,6 +2395,16 @@
       "patternId": "node_file-extension-in-import",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_global-require",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_handle-callback-err",
+      "level": "Error",
+      "category": "ErrorProne"
     },
     {
       "patternId": "node_no-callback-literal",
@@ -2420,6 +2435,52 @@
       "patternId": "node_no-missing-import",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "node_no-mixed-requires",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_no-new-require",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "node_no-path-concat",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "node_no-process-env",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_no-process-exit",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "node_no-restricted-import",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_no-restricted-require",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "node_no-sync",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAtRootLevel",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "node_no-unpublished-bin",
@@ -3312,7 +3373,7 @@
     {
       "patternId": "ember_alias-model-in-controller",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_avoid-leaking-state-in-ember-objects",
@@ -3322,7 +3383,7 @@
     {
       "patternId": "ember_avoid-using-needs-in-controllers",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_classic-decorator-hooks",
@@ -3337,7 +3398,7 @@
     {
       "patternId": "ember_closure-actions",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_computed-property-getters",
@@ -3346,13 +3407,13 @@
     },
     {
       "patternId": "ember_jquery-ember-run",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_named-functions-in-promises",
       "level": "Info",
-      "category": "BestPractice",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "allowSimpleArrowFunction",
@@ -3363,7 +3424,7 @@
     {
       "patternId": "ember_new-module-imports",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-actions-hash",
@@ -3372,8 +3433,8 @@
     },
     {
       "patternId": "ember_no-arrow-function-computed-properties",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "onlyThisContexts",
@@ -3383,18 +3444,18 @@
     },
     {
       "patternId": "ember_no-attrs-in-components",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-attrs-snapshot",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-capital-letters-in-routes",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-classic-classes",
@@ -3419,27 +3480,27 @@
     {
       "patternId": "ember_no-controllers",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-duplicate-dependent-keys",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-ember-super-in-es-classes",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-ember-testing-in-module-scope",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-empty-attrs",
@@ -3449,17 +3510,17 @@
     {
       "patternId": "ember_no-function-prototype-extensions",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-get-with-default",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-get",
       "level": "Info",
-      "category": "BestPractice",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "ignoreGetProperties",
@@ -3467,39 +3528,44 @@
         },
         {
           "name": "ignoreNestedPaths",
-          "default": true
+          "default": false
         }
       ]
     },
     {
       "patternId": "ember_no-global-jquery",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-incorrect-computed-macros",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-invalid-debug-function-arguments",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-invalid-dependent-keys",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_no-invalid-test-waiters",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-jquery",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-legacy-test-waiters",
@@ -3509,27 +3575,27 @@
     {
       "patternId": "ember_no-mixins",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-new-mixins",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-observers",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-old-shims",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-on-calls-in-components",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-pause-test",
@@ -3539,7 +3605,7 @@
     {
       "patternId": "ember_no-private-routing-service",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-proxies",
@@ -3554,12 +3620,12 @@
     {
       "patternId": "ember_no-restricted-resolver-tests",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-side-effects",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-test-and-then",
@@ -3579,12 +3645,12 @@
     {
       "patternId": "ember_no-unnecessary-index-route",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-unnecessary-route-path-option",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_no-unnecessary-service-injection-argument",
@@ -3595,7 +3661,7 @@
     {
       "patternId": "ember_no-volatile-computed-properties",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_order-in-components",
@@ -3620,12 +3686,12 @@
     {
       "patternId": "ember_require-computed-macros",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_require-computed-property-dependencies",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "allowDynamicKeys",
@@ -3639,13 +3705,13 @@
     },
     {
       "patternId": "ember_require-return-from-computed",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_require-super-in-init",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_require-tagless-components",
@@ -3655,12 +3721,12 @@
     {
       "patternId": "ember_route-path-style",
       "level": "Info",
-      "category": "BestPractice"
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_routes-segments-snake-case",
-      "level": "Error",
-      "category": "ErrorProne"
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "ember_use-brace-expansion",
@@ -3675,7 +3741,7 @@
     {
       "patternId": "ember_use-ember-get-and-set",
       "level": "Info",
-      "category": "BestPractice",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "ignoreThisExpressions",
@@ -4292,6 +4358,86 @@
           "default": []
         }
       ]
+    },
+    {
+      "patternId": "jest-formatting_padding-around-after-all-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-after-each-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-before-all-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-before-each-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-describe-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-expect-groups",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-test-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-around-all",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-after-all-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-after-each-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-before-all-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-before-each-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-describe-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-expect-statements",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-test-blocks",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest-formatting_padding-before-all",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsdoc_check-access",

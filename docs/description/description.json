@@ -2655,6 +2655,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "node_callback-return",
+    "title": "Node: Callback return",
+    "description": "Require `return` statements after callbacks",
+    "timeToFix": 5
+  },
+  {
     "patternId": "node_exports-style",
     "title": "Node: Exports style",
     "description": "Enforce either `module.exports` or `exports`",
@@ -2664,6 +2670,18 @@
     "patternId": "node_file-extension-in-import",
     "title": "Node: File extension in import",
     "description": "Enforce the style of file extensions in `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_global-require",
+    "title": "Node: Global require",
+    "description": "Require `require()` calls to be placed at top-level module scope",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_handle-callback-err",
+    "title": "Node: Handle callback err",
+    "description": "Require error handling in callbacks",
     "timeToFix": 5
   },
   {
@@ -2701,6 +2719,60 @@
     "title": "Node: No missing import",
     "description": "Disallow `import` declarations which import non-existence modules",
     "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-mixed-requires",
+    "title": "Node: No mixed requires",
+    "description": "Disallow `require` calls to be mixed with regular variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-new-require",
+    "title": "Node: No new require",
+    "description": "Disallow `new` operators with calls to `require`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-path-concat",
+    "title": "Node: No path concat",
+    "description": "Disallow string concatenation with `__dirname` and `__filename`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-process-env",
+    "title": "Node: No process env",
+    "description": "Disallow the use of `process.env`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-process-exit",
+    "title": "Node: No process exit",
+    "description": "Disallow the use of `process.exit()`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-restricted-import",
+    "title": "Node: No restricted import",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-restricted-require",
+    "title": "Node: No restricted require",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "node_no-sync",
+    "title": "Node: No sync",
+    "description": "Disallow synchronous methods",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowAtRootLevel",
+        "description": "allowAtRootLevel"
+      }
+    ]
   },
   {
     "patternId": "node_no-unpublished-bin",
@@ -3732,7 +3804,7 @@
   {
     "patternId": "ember_no-attrs-snapshot",
     "title": "Ember: No attrs snapshot",
-    "description": "Disallow use of attrs snapshot in the `didReceiveAttrs` and `didUpdateAttrs` hooks",
+    "description": "Disallow use of attrs snapshot in the `didReceiveAttrs` and `didUpdateAttrs` component hooks",
     "timeToFix": 5
   },
   {
@@ -3856,7 +3928,13 @@
   {
     "patternId": "ember_no-invalid-dependent-keys",
     "title": "Ember: No invalid dependent keys",
-    "description": "Require that dependent keys used for computed properties to be valid.",
+    "description": "Disallow invalid dependent keys in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_no-invalid-test-waiters",
+    "title": "Ember: No invalid test waiters",
+    "description": "Disallow incorrect usage of test waiter APIs",
     "timeToFix": 5
   },
   {
@@ -3868,7 +3946,7 @@
   {
     "patternId": "ember_no-legacy-test-waiters",
     "title": "Ember: No legacy test waiters",
-    "description": "Disallow the use of the legacy test waiter APIs.",
+    "description": "Disallow the use of the legacy test waiter APIs",
     "timeToFix": 5
   },
   {
@@ -4064,7 +4142,7 @@
   {
     "patternId": "ember_use-ember-data-rfc-395-imports",
     "title": "Ember: Use ember data rfc 395 imports",
-    "description": "Enforce usage of `@ember-data/` packages instead `ember-data`",
+    "description": "Enforce usage of `@ember-data/` package imports instead `ember-data`",
     "timeToFix": 5
   },
   {
@@ -4732,6 +4810,86 @@
         "description": "disallowedWords"
       }
     ]
+  },
+  {
+    "patternId": "jest-formatting_padding-around-after-all-blocks",
+    "title": "Jest formatting: Padding around after all blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-after-each-blocks",
+    "title": "Jest formatting: Padding around after each blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-before-all-blocks",
+    "title": "Jest formatting: Padding around before all blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-before-each-blocks",
+    "title": "Jest formatting: Padding around before each blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-describe-blocks",
+    "title": "Jest formatting: Padding around describe blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-expect-groups",
+    "title": "Jest formatting: Padding around expect groups",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-test-blocks",
+    "title": "Jest formatting: Padding around test blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-around-all",
+    "title": "Jest formatting: Padding around all",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-after-all-blocks",
+    "title": "Jest formatting: Padding before after all blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-after-each-blocks",
+    "title": "Jest formatting: Padding before after each blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-before-all-blocks",
+    "title": "Jest formatting: Padding before before all blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-before-each-blocks",
+    "title": "Jest formatting: Padding before before each blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-describe-blocks",
+    "title": "Jest formatting: Padding before describe blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-expect-statements",
+    "title": "Jest formatting: Padding before expect statements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-test-blocks",
+    "title": "Jest formatting: Padding before test blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest-formatting_padding-before-all",
+    "title": "Jest formatting: Padding before all",
+    "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-access",
