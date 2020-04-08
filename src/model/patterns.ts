@@ -1,39 +1,4 @@
-export type Level = "Error" | "Info" | "Warning"
-
-export type Category =
-  | "ErrorProne"
-  | "CodeStyle"
-  | "Complexity"
-  | "UnusedCode"
-  | "Security"
-  | "Compatibility"
-  | "Performance"
-  | "Documentation"
-  | "BestPractice"
-
-export type SecuritySubcategory =
-  | "XSS"
-  | "InputValidation"
-  | "FileAccess"
-  | "HTTP"
-  | "Cookies"
-  | "UnexpectedBehaviour"
-  | "MassAssignment"
-  | "InsecureStorage"
-  | "InsecureModulesLibraries"
-  | "Visibility"
-  | "CSRF"
-  | "Android"
-  | "MaliciousCode"
-  | "Cryptography"
-  | "CommandInjection"
-  | "FirefoxOS"
-  | "Auth"
-  | "DoS"
-  | "SQLInjection"
-  | "Routes"
-  | "Regex"
-  | "SSL"
+import { Category, Level, SecuritySubcategory } from "codacy-seed"
 
 export function fromEslintPatternIdAndCategoryToCategory(
   patternId: string,
@@ -43,8 +8,10 @@ export function fromEslintPatternIdAndCategoryToCategory(
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
   if (patternId.includes("crypto")) return ["Security", "Cryptography"]
   if (patternId.includes("Storage")) return ["Security", "InsecureStorage"]
-  if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"]
-  if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"]
+  if (patternId.startsWith("scanjs-rules/call_"))
+    return ["Security", "CommandInjection"]
+  if (patternId.startsWith("scanjs-rules/assign_to_"))
+    return ["Security", "MaliciousCode"]
   if (patternId.startsWith("scanjs-rules") || patternId.includes("security"))
     return ["Security", patternId.includes("regex") ? "Regex" : undefined]
 
@@ -103,46 +70,4 @@ export function patternIdToCodacy(patternId: string): string {
 
 export function patternIdToEslint(patternId: string): string {
   return patternId.replace(/([^_])_([^_])/g, "$1/$2").replace(/__/g, "_")
-}
-
-export class PatternsParameter {
-  name: string
-  default?: any
-
-  constructor(name: string, d?: any) {
-    this.name = name
-    this.default = d
-  }
-}
-export class PatternsEntry {
-  patternId: string
-  level: Level
-  category: Category
-  subcategory?: SecuritySubcategory
-  parameters?: PatternsParameter[]
-
-  constructor(
-    patternId: string,
-    level: Level,
-    category: Category,
-    subcategory?: SecuritySubcategory,
-    parameters?: PatternsParameter[]
-  ) {
-    this.patternId = patternId
-    this.level = level
-    this.category = category
-    this.subcategory = subcategory
-    this.parameters = parameters
-  }
-}
-
-export class Patterns {
-  name: string
-  version: string
-  patterns: PatternsEntry[]
-  constructor(name: string, version: string, patterns: PatternsEntry[]) {
-    this.name = name
-    this.version = version
-    this.patterns = patterns
-  }
 }

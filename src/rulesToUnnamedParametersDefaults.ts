@@ -1,4 +1,4 @@
-import { PatternsParameter } from "./model/patterns"
+import { PatternsParameter } from "codacy-seed"
 
 export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["array-bracket-spacing", "never"],

@@ -1,7 +1,7 @@
+import { PatternsParameter } from "codacy-seed"
 import { JSONSchema4 } from "json-schema"
 import { flatMap, toPairs } from "lodash"
 
-import { PatternsParameter } from "./model/patterns"
 import { rulesNamedParametersAndDefaults } from "./rulesToUnnamedParametersDefaults"
 
 export function fromSchemaArray(
