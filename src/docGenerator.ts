@@ -1,19 +1,22 @@
+import {
+  DescriptionEntry,
+  DescriptionParameter,
+  Level,
+  Patterns,
+  PatternsEntry,
+  PatternsParameter,
+  writeFile
+} from "codacy-seed"
 import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
 import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { writeFile } from "./fileUtils"
-import { DescriptionEntry, DescriptionParameter } from "./model/description"
 import {
   fromEslintCategoryToLevel,
   fromEslintPatternIdAndCategoryToCategory,
-  Level,
-  patternIdToCodacy,
-  Patterns,
-  PatternsEntry,
-  PatternsParameter
+  patternIdToCodacy
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"

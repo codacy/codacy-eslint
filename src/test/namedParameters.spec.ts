@@ -1,7 +1,7 @@
 import { deepEqual } from "assert"
+import { PatternsParameter } from "codacy-seed"
 import { JSONSchema4 } from "json-schema"
 
-import { PatternsParameter } from "../model/patterns"
 import { fromSchemaArray } from "../namedParameters"
 
 describe("namedParameters", () => {

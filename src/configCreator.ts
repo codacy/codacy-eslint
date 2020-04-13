@@ -1,8 +1,8 @@
+import { Codacyrc, Pattern } from "codacy-seed"
 import { CLIEngine, Linter } from "eslint"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 
 import { defaultOptions } from "./eslintDefaultOptions"
-import { Codacyrc, Pattern } from "./model/codacyInput"
 import { patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
 

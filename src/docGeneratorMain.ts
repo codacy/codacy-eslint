@@ -1,9 +1,9 @@
+import { writeFile } from "codacy-seed"
 import { EOL } from "os"
 
 import { blacklist } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
 import { defaultEngine } from "./eslintDefaultOptions"
-import { writeFile } from "./fileUtils"
 
 main()
 

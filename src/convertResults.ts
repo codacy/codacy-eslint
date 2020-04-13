@@ -1,8 +1,8 @@
+import { CodacyResult } from "codacy-seed"
 import { CLIEngine, Linter } from "eslint"
 import { flatMap } from "lodash"
 
 import { blacklist } from "./blacklist"
-import { CodacyResult } from "./model/codacyResult"
 import { patternIdToCodacy } from "./model/patterns"
 
 export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {
@@ -18,9 +18,4 @@ export function convertResults(report: CLIEngine.LintReport): CodacyResult[] {
       return new CodacyResult(filename, message, patternId, line)
     })
   })
-}
-
-export function resultString(results: CodacyResult[]): string {
-  const lines = results.map(result => JSON.stringify(result))
-  return lines.join("\n")
 }
