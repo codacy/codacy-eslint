@@ -3643,6 +3643,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "ember_no-test-this-render",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "ember_no-unnecessary-index-route",
       "level": "Info",
       "category": "CodeStyle"
@@ -3680,6 +3685,11 @@
     },
     {
       "patternId": "ember_order-in-routes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "ember_prefer-ember-test-helpers",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6572,6 +6582,10 @@
       "category": "BestPractice",
       "parameters": [
         {
+          "name": "ts-expect-error",
+          "default": true
+        },
+        {
           "name": "ts-ignore",
           "default": true
         },
@@ -6592,11 +6606,6 @@
     },
     {
       "patternId": "@typescript-eslint_ban-types",
-      "level": "Info",
-      "category": "BestPractice"
-    },
-    {
-      "patternId": "@typescript-eslint_no-base-to-string",
       "level": "Info",
       "category": "BestPractice"
     },
@@ -6737,6 +6746,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "@typescript-eslint_method-signature-style",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_naming-convention",
       "level": "Info",
       "category": "CodeStyle"
@@ -6745,6 +6759,17 @@
       "patternId": "@typescript-eslint_no-array-constructor",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_no-base-to-string",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "ignoreTaggedTemplateExpressions",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "@typescript-eslint_no-dupe-class-members",
@@ -6906,6 +6931,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_no-unsafe-assignment",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "@typescript-eslint_no-unsafe-call",
       "level": "Error",
       "category": "ErrorProne"
@@ -7015,12 +7045,22 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_prefer-reduce-type-parameter",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "@typescript-eslint_prefer-regexp-exec",
       "level": "Info",
       "category": "BestPractice"
     },
     {
       "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-ts-expect-error",
       "level": "Info",
       "category": "BestPractice"
     },

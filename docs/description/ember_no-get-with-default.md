@@ -1,5 +1,7 @@
 # no-get-with-default
 
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+
 :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
 This rule attempts to catch and prevent the use of `getWithDefault`.
@@ -11,7 +13,7 @@ Even though the behavior for `getWithDefault` is more defined such that it only 
 - `||` operator
 - ternary operator
 
-In addition, [Nullish Coalescing Operator `??`](https://github.com/tc39/proposal-nullish-coalescing) will land in the JavaScript language soon so developers can leverage safe property access with native support instead of using `getWithDefault`.
+In addition, [Nullish Coalescing Operator `??`](https://github.com/tc39/proposal-nullish-coalescing) will land in the JavaScript language soon so developers can leverage safe property access with native support instead of using `getWithDefault`. But note that `??` checks for either `undefined` or `null` whereas `getWithDefault` only checks for `undefined`.
 
 ## Examples
 

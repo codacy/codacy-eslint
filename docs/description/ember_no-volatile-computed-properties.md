@@ -1,5 +1,7 @@
 # no-volatile-computed-properties
 
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+
 Volatile computed properties are deprecated as of Ember 3.9.
 
 ## Rule Details
@@ -35,9 +37,3 @@ const Person = EmberObject.extend({
 * [Deprecation list](https://deprecations.emberjs.com/v3.x/#toc_computed-property-volatile)
 * [Volatile spec](https://api.emberjs.com/ember/release/classes/ComputedProperty/methods/volatile?anchor=volatile)
 * [Computed property spec](https://api.emberjs.com/ember/release/classes/ComputedProperty)
-
-## Help Wanted
-
-| Issue | Link |
-| :-- | :-- |
-| :x: Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |
