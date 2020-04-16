@@ -1,5 +1,7 @@
 # require-computed-property-dependencies
 
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+
 :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
 Computed properties should have their property dependencies listed out so that they can recompute upon changes.
@@ -51,9 +53,3 @@ This rule takes an optional object containing:
 ## References
 
 * [Guide](https://guides.emberjs.com/release/object-model/computed-properties/) for computed properties
-
-## Help Wanted
-
-| Issue | Link |
-| :-- | :-- |
-| :x: Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |

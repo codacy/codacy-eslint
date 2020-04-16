@@ -4034,6 +4034,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ember_no-test-this-render",
+    "title": "Ember: No test this render",
+    "description": "Disallow usage of the `this.render` in tests, recommending to use @ember/test-helpers' `render` instead.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-unnecessary-index-route",
     "title": "Ember: No unnecessary index route",
     "description": "Disallow unnecessary `index` route definition",
@@ -4079,6 +4085,12 @@
     "patternId": "ember_order-in-routes",
     "title": "Ember: Order in routes",
     "description": "Enforce proper order of properties in routes",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ember_prefer-ember-test-helpers",
+    "title": "Ember: Prefer ember test helpers",
+    "description": "Enforce usage of `@ember/test-helpers` methods over native window methods",
     "timeToFix": 5
   },
   {
@@ -7118,6 +7130,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "ts-expect-error",
+        "description": "ts-expect-error"
+      },
+      {
         "name": "ts-ignore",
         "description": "ts-ignore"
       },
@@ -7141,12 +7157,6 @@
     "patternId": "@typescript-eslint_ban-types",
     "title": "@typescript eslint: Ban types",
     "description": "Bans specific types from being used",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "@typescript-eslint_no-base-to-string",
-    "title": "@typescript eslint: No base to string",
-    "description": "Requires that `.toString()` is only called on objects which provide useful information when stringified",
     "timeToFix": 5
   },
   {
@@ -7304,6 +7314,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_method-signature-style",
+    "title": "@typescript eslint: Method signature style",
+    "description": "Enforces using a particular method signature syntax.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_naming-convention",
     "title": "@typescript eslint: Naming convention",
     "description": "Enforces naming conventions for everything across a codebase",
@@ -7314,6 +7330,18 @@
     "title": "@typescript eslint: No array constructor",
     "description": "Disallow generic `Array` constructors",
     "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-base-to-string",
+    "title": "@typescript eslint: No base to string",
+    "description": "Requires that `.toString()` is only called on objects which provide useful information when stringified",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreTaggedTemplateExpressions",
+        "description": "ignoreTaggedTemplateExpressions"
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_no-dupe-class-members",
@@ -7504,6 +7532,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_no-unsafe-assignment",
+    "title": "@typescript eslint: No unsafe assignment",
+    "description": "Disallows assigning any to variables and properties",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_no-unsafe-call",
     "title": "@typescript eslint: No unsafe call",
     "description": "Disallows calling an any type value",
@@ -7632,6 +7666,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "@typescript-eslint_prefer-reduce-type-parameter",
+    "title": "@typescript eslint: Prefer reduce type parameter",
+    "description": "Prefer using type parameter when calling `Array#reduce` instead of casting",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_prefer-regexp-exec",
     "title": "@typescript eslint: Prefer regexp exec",
     "description": "Enforce that `RegExp#exec` is used instead of `String#match` if no global flag is provided",
@@ -7641,6 +7681,12 @@
     "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
     "title": "@typescript eslint: Prefer string starts ends with",
     "description": "Enforce the use of `String#startsWith` and `String#endsWith` instead of other equivalent methods of checking substrings",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-ts-expect-error",
+    "title": "@typescript eslint: Prefer ts expect error",
+    "description": "Recommends using `// @ts-expect-error` over `// @ts-ignore`",
     "timeToFix": 5
   },
   {

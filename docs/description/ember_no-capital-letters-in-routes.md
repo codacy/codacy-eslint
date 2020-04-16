@@ -1,5 +1,7 @@
 # no-capital-letters-in-routes
 
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+
 Raise an error when there is a route with upper-cased letters in router.js.
 
 When you accidentally uppercase any of your routes or create upper-cased route using ember-cli the application will crash without any clear information what's wrong. This rule makes it more obvious, so you don't have to think about it any more.
@@ -29,9 +31,3 @@ this.route('sign-up');
 * [no-unnecessary-route-path-option](no-unnecessary-route-path-option.md)
 * [route-path-style](route-path-style.md)
 * [routes-segments-snake-case](routes-segments-snake-case.md)
-
-## Help Wanted
-
-| Issue | Link |
-| :-- | :-- |
-| :x: Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |
