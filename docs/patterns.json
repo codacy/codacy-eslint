@@ -4568,7 +4568,21 @@
     {
       "patternId": "jsdoc_require-description",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkConstructors",
+          "default": true
+        },
+        {
+          "name": "checkGetters",
+          "default": true
+        },
+        {
+          "name": "checkSetters",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "jsdoc_require-description-complete-sentence",
@@ -4581,7 +4595,15 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "avoidExampleOnConstructors",
+          "name": "checkConstructors",
+          "default": true
+        },
+        {
+          "name": "checkGetters",
+          "default": false
+        },
+        {
+          "name": "checkSetters",
           "default": false
         }
       ]
@@ -4620,7 +4642,21 @@
     {
       "patternId": "jsdoc_require-param",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkConstructors",
+          "default": true
+        },
+        {
+          "name": "checkGetters",
+          "default": false
+        },
+        {
+          "name": "checkSetters",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "jsdoc_require-param-description",
@@ -4662,6 +4698,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "checkConstructors",
+          "default": false
+        },
         {
           "name": "checkGetters",
           "default": true
@@ -6726,9 +6766,29 @@
       ]
     },
     {
+      "patternId": "@typescript-eslint_init-declarations",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "@typescript-eslint_interface-name-prefix",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_keyword-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": true
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "@typescript-eslint_member-delimiter-style",
@@ -6767,7 +6827,7 @@
       "parameters": [
         {
           "name": "ignoreTaggedTemplateExpressions",
-          "default": false
+          "default": true
         }
       ]
     },
