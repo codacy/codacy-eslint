@@ -5022,7 +5022,21 @@
   {
     "patternId": "jsdoc_require-description",
     "title": "Jsdoc: Require description",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-description-complete-sentence",
@@ -5035,8 +5049,16 @@
     "timeToFix": 5,
     "parameters": [
       {
-        "name": "avoidExampleOnConstructors",
-        "description": "avoidExampleOnConstructors"
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
       }
     ]
   },
@@ -5074,7 +5096,21 @@
   {
     "patternId": "jsdoc_require-param",
     "title": "Jsdoc: Require param",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      }
+    ]
   },
   {
     "patternId": "jsdoc_require-param-description",
@@ -5116,6 +5152,10 @@
     "title": "Jsdoc: Require returns",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
       {
         "name": "checkGetters",
         "description": "checkGetters"
@@ -7290,10 +7330,32 @@
     ]
   },
   {
+    "patternId": "@typescript-eslint_init-declarations",
+    "title": "@typescript eslint: Init declarations",
+    "description": "Require or disallow initialization in variable declarations",
+    "timeToFix": 5
+  },
+  {
     "patternId": "@typescript-eslint_interface-name-prefix",
     "title": "@typescript eslint: Interface name prefix",
     "description": "Require that interface names should or should not prefixed with `I`",
     "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_keyword-spacing",
+    "title": "@typescript eslint: Keyword spacing",
+    "description": "Enforce consistent spacing before and after keywords",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_member-delimiter-style",
