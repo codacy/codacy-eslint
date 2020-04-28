@@ -6722,6 +6722,25 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "@typescript-eslint_dot-notation",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "allowKeywords",
+          "default": true
+        },
+        {
+          "name": "allowPattern",
+          "default": ""
+        },
+        {
+          "name": "allowPrivateClassPropertyAccess",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "@typescript-eslint_explicit-function-return-type",
       "level": "Info",
       "category": "CodeStyle"
@@ -6893,6 +6912,11 @@
     },
     {
       "patternId": "@typescript-eslint_no-inferrable-types",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-invalid-void-type",
       "level": "Info",
       "category": "BestPractice"
     },
