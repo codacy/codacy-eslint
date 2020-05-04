@@ -163,7 +163,7 @@
     "eslint-plugin-react-intl": "^1.1.2",
     "eslint-plugin-react-native": "^3.8.1",
     "eslint-plugin-redux-saga": "^1.1.3",
-    "eslint-plugin-relay": "^1.7.0",
+    "eslint-plugin-relay": "^1.7.1",
     "eslint-plugin-scanjs-rules": "^0.2.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sfdx": "^1.0.1",
