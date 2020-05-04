@@ -6105,11 +6105,13 @@
   {
     "patternId": "react-hooks_rules-of-hooks",
     "title": "React hooks: Rules of hooks",
+    "description": "Enforces the Rules of Hooks",
     "timeToFix": 5
   },
   {
     "patternId": "react-hooks_exhaustive-deps",
     "title": "React hooks: Exhaustive deps",
+    "description": "Verifies the list of dependencies for Hooks like useEffect and similar",
     "timeToFix": 5
   },
   {
@@ -8567,5 +8569,13 @@
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
     "timeToFix": 5
+  },
+  {
+    "patternId": "JSON format",
+    "title": "JSON format"
+  },
+  {
+    "patternId": "JSON sorting",
+    "title": "JSON sorting"
   }
 ]

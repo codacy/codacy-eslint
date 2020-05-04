@@ -5,7 +5,7 @@ import {
   Patterns,
   PatternsEntry,
   PatternsParameter,
-  writeFile
+  writeFile,
 } from "codacy-seed"
 import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
@@ -13,10 +13,11 @@ import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
+import { extraPatternEntries } from "./extraPatternEntries"
 import {
   fromEslintCategoryToLevel,
   fromEslintPatternIdAndCategoryToCategory,
-  patternIdToCodacy
+  patternIdToCodacy,
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
@@ -75,11 +76,14 @@ export class DocGenerator {
         parameters
       )
     })
-    return new Patterns(toolName, toolVersion, entries)
+
+    const completeEntryArray = entries.concat(extraPatternEntries)
+
+    return new Patterns(toolName, toolVersion, completeEntryArray)
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
-    return flatMap(this.rules, ([patternId, ruleModule]) => {
+    const descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule && ruleModule.meta
       const eslintDescription = meta?.docs?.description
       const description = eslintDescription
@@ -92,7 +96,7 @@ export class DocGenerator {
           ? this.generateParameters(patternId, meta.schema)
           : undefined
       const descriptionParameters = patternsParameters?.map(
-        p => new DescriptionParameter(p.name, p.name)
+        (p) => new DescriptionParameter(p.name, p.name)
       )
       return new DescriptionEntry(
         patternIdToCodacy(patternId),
@@ -102,6 +106,14 @@ export class DocGenerator {
         descriptionParameters
       )
     })
+
+    const extraPatternsDescriptions = flatMap(extraPatternEntries, (entry) => {
+      return new DescriptionEntry(
+        patternIdToCodacy(entry.patternId),
+        entry.patternId
+      )
+    })
+    return descriptions.concat(extraPatternsDescriptions)
   }
 
   private fromEslintSchemaToParameters(
@@ -116,7 +128,7 @@ export class DocGenerator {
     )
 
     if (Array.isArray(flattenSchema)) {
-      const objects = flattenSchema.filter(value => value && value.properties)
+      const objects = flattenSchema.filter((value) => value && value.properties)
       return fromSchemaArray(patternId, objects)
     } else return []
   }
@@ -124,10 +136,10 @@ export class DocGenerator {
   private patternIdsWithoutPrefix(prefix: string): Array<string> {
     const longPrefix = prefix + "/"
     const patternIds = this.getPatternIds()
-    const filteredPatternIds = patternIds.filter(patternId =>
+    const filteredPatternIds = patternIds.filter((patternId) =>
       patternId.startsWith(longPrefix)
     )
-    return filteredPatternIds.map(patternId =>
+    return filteredPatternIds.map((patternId) =>
       patternId.substring(longPrefix.length)
     )
   }
@@ -135,7 +147,7 @@ export class DocGenerator {
   private eslintPatternIds(): Array<string> {
     // We take all the patterns except those that have slashes because
     // they come from third party plugins
-    return this.getPatternIds().filter(e => !e.includes("/"))
+    return this.getPatternIds().filter((e) => !e.includes("/"))
   }
 
   downloadDocs(
@@ -147,7 +159,7 @@ export class DocGenerator {
       prefix.length > 0
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
-    const promises: Promise<void>[] = patterns.map(async pattern => {
+    const promises: Promise<void>[] = patterns.map(async (pattern) => {
       const url: string = urlFromPatternId(pattern)
       const result = await fetch(url)
       if (result.ok) {
