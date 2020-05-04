@@ -5625,13 +5625,13 @@
     },
     {
       "patternId": "react-hooks_rules-of-hooks",
-      "level": "Info",
-      "category": "CodeStyle"
+      "level": "Error",
+      "category": "ErrorProne"
     },
     {
       "patternId": "react-hooks_exhaustive-deps",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "react-native_no-unused-styles",
