@@ -83,7 +83,7 @@ export class DocGenerator {
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
-    var descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
+    const descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule && ruleModule.meta
       const eslintDescription = meta?.docs?.description
       const description = eslintDescription
@@ -107,7 +107,7 @@ export class DocGenerator {
       )
     })
 
-    var extraPatternsDescriptions = flatMap(extraPatternEntries, (entry) => {
+    const extraPatternsDescriptions = flatMap(extraPatternEntries, (entry) => {
       return new DescriptionEntry(
         patternIdToCodacy(entry.patternId),
         entry.patternId
