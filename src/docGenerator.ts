@@ -13,7 +13,7 @@ import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import extraPatternEntries from "./extraPatternEntries"
+import { extraPatternEntries } from "./extraPatternEntries"
 import {
   fromEslintCategoryToLevel,
   fromEslintPatternIdAndCategoryToCategory,

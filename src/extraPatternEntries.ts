@@ -2,7 +2,7 @@ import { PatternsEntry } from "codacy-seed"
 
 // plugins' rules not included by Engine.getRules()
 // this might happen if plugins do not export their rules
-const extraPluginsDocs: Array<PatternsEntry> = [
+export const extraPatternEntries: Array<PatternsEntry> = [
   {
     patternId: "JSON format",
     category: "ErrorProne",
@@ -14,5 +14,3 @@ const extraPluginsDocs: Array<PatternsEntry> = [
     level: "Warning",
   },
 ]
-
-export default extraPluginsDocs
