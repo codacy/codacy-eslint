@@ -7825,6 +7825,16 @@
       "level": "Info",
       "category": "Security",
       "subcategory": "XSS"
+    },
+    {
+      "patternId": "JSON format",
+      "category": "ErrorProne",
+      "level": "Warning"
+    },
+    {
+      "patternId": "JSON sorting",
+      "category": "ErrorProne",
+      "level": "Warning"
     }
   ]
 }

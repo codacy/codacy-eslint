@@ -83,7 +83,7 @@ export class DocGenerator {
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
-    return flatMap(this.rules, ([patternId, ruleModule]) => {
+    var descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule && ruleModule.meta
       const eslintDescription = meta?.docs?.description
       const description = eslintDescription
@@ -106,6 +106,14 @@ export class DocGenerator {
         descriptionParameters
       )
     })
+
+    var extraPatternsDescriptions = flatMap(extraPatternEntries, (entry) => {
+      return new DescriptionEntry(
+        patternIdToCodacy(entry.patternId),
+        entry.patternId
+      )
+    })
+    return descriptions.concat(extraPatternsDescriptions)
   }
 
   private fromEslintSchemaToParameters(
