@@ -71,7 +71,7 @@
     "@nodelib/fs.walk": "^1.2.4",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "1.1.0",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.30.0",
     "autoprefixer": "^9.7.6",
     "babel-core": "^6.26.3",
