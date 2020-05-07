@@ -67,7 +67,7 @@
     "@babel/runtime": "^7.9.6",
     "@contentful/eslint-config-extension": "^0.3.1",
     "@hapi/eslint-plugin-hapi": "^4.3.5",
-    "@lwc/eslint-plugin-lwc": "^0.9.0",
+    "@lwc/eslint-plugin-lwc": "^0.10.0",
     "@nodelib/fs.walk": "^1.2.4",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "1.1.0",
