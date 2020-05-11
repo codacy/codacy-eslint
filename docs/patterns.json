@@ -2176,11 +2176,6 @@
       ]
     },
     {
-      "patternId": "import_named",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "import_default",
       "level": "Info",
       "category": "CodeStyle"
@@ -3605,7 +3600,13 @@
     {
       "patternId": "ember_no-private-routing-service",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "catchRouterMicrolib",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "ember_no-proxies",
@@ -4179,6 +4180,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "jest_no-deprecated-functions",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "jest_no-disabled-tests",
       "level": "Info",
       "category": "BestPractice"
@@ -4645,11 +4651,19 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "autoIncrementBase",
+          "default": 0
+        },
+        {
           "name": "checkConstructors",
           "default": true
         },
         {
           "name": "checkGetters",
+          "default": false
+        },
+        {
+          "name": "checkRestProperty",
           "default": false
         },
         {
@@ -6914,6 +6928,17 @@
       "patternId": "@typescript-eslint_no-inferrable-types",
       "level": "Info",
       "category": "BestPractice"
+    },
+    {
+      "patternId": "@typescript-eslint_no-invalid-this",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "capIsConstructor",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "@typescript-eslint_no-invalid-void-type",
