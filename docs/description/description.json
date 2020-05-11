@@ -2448,11 +2448,6 @@
     ]
   },
   {
-    "patternId": "import_named",
-    "title": "Import: Named",
-    "timeToFix": 5
-  },
-  {
     "patternId": "import_default",
     "title": "Import: Default",
     "timeToFix": 5
@@ -3989,7 +3984,13 @@
     "patternId": "ember_no-private-routing-service",
     "title": "Ember: No private routing service",
     "description": "Disallow injecting the private routing service",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "catchRouterMicrolib",
+        "description": "catchRouterMicrolib"
+      }
+    ]
   },
   {
     "patternId": "ember_no-proxies",
@@ -4598,6 +4599,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "jest_no-deprecated-functions",
+    "title": "Jest: No deprecated functions",
+    "description": "Disallow use of deprecated functions",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jest_no-disabled-tests",
     "title": "Jest: No disabled tests",
     "description": "Disallow disabled tests",
@@ -5099,12 +5106,20 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "autoIncrementBase",
+        "description": "autoIncrementBase"
+      },
+      {
         "name": "checkConstructors",
         "description": "checkConstructors"
       },
       {
         "name": "checkGetters",
         "description": "checkGetters"
+      },
+      {
+        "name": "checkRestProperty",
+        "description": "checkRestProperty"
       },
       {
         "name": "checkSetters",
@@ -7504,6 +7519,18 @@
     "title": "@typescript eslint: No inferrable types",
     "description": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean",
     "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_no-invalid-this",
+    "title": "@typescript eslint: No invalid this",
+    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "capIsConstructor",
+        "description": "capIsConstructor"
+      }
+    ]
   },
   {
     "patternId": "@typescript-eslint_no-invalid-void-type",
