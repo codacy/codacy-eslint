@@ -1722,7 +1722,17 @@
     {
       "patternId": "padded-blocks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
+        {
+          "name": "allowSingleLineBlocks",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "padding-line-between-statements",
