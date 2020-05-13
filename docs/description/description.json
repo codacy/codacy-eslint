@@ -1945,7 +1945,17 @@
     "patternId": "padded-blocks",
     "title": "Padded blocks",
     "description": "Require or disallow padding within blocks",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "allowSingleLineBlocks",
+        "description": "allowSingleLineBlocks"
+      }
+    ]
   },
   {
     "patternId": "padding-line-between-statements",

@@ -26,6 +26,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["one-var", "always"],
   ["operator-linebreak", "after"],
   ["quotes", "double"],
+  ["padded-blocks", "always"],
   ["semi", "always"],
   ["space-before-blocks", "always"],
   ["space-before-function-paren", "always"],
@@ -33,19 +34,20 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["spaced-comment", "always"],
   ["strict", "function"],
   ["wrap-iife", "outside"],
-  ["yoda", "never"]
+  ["yoda", "never"],
 ])
 
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
+    ["padded-blocks", "allowSingleLineBlocks", true],
     ["react/display-name", "ignoreTranspilerName", false],
     ["sort-imports-es6-autofix/sort-imports-es6", "ignoreCase", false],
     ["sort-imports-es6-autofix/sort-imports-es6", "ignoreMemberSort", false],
     [
       "sort-imports-es6-autofix/sort-imports-es6",
       "memberSyntaxSortOrder",
-      ["none", "all", "multiple", "single"]
-    ]
+      ["none", "all", "multiple", "single"],
+    ],
   ]
 
   static has(patternId: string, parameter: string): boolean {
