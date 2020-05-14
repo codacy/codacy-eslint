@@ -35,6 +35,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["strict", "function"],
   ["wrap-iife", "outside"],
   ["yoda", "never"],
+  ["brace-style", "1tbs"],
 ])
 
 export class rulesNamedParametersAndDefaults {

@@ -4,27 +4,35 @@ import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 
 import { defaultOptions } from "./eslintDefaultOptions"
 import { patternIdToEslint } from "./model/patterns"
+import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName } from "./toolMetadata"
 
 function patternsToRules(
   patterns: Pattern[]
 ): { [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions } {
-  const pairs = patterns.map(pattern => {
+  const pairs = patterns.map((pattern) => {
     const patternId = patternIdToEslint(pattern.patternId)
     if (pattern.parameters) {
       const [unnamedParameters, namedParameters] = partition(
         pattern.parameters,
-        p => p.name === "unnamedParam"
+        (p) => p.name === "unnamedParam"
       )
       const namedOptions = fromPairs(
-        namedParameters.map(p => [p.name, p.value])
+        namedParameters.map((p) => [p.name, p.value])
       )
-      const unnamedOptions = unnamedParameters.map(p => p.value)
+
+      // add default value if it is defined and not passed on the configuration
+      const unnamedOptions =
+        unnamedParameters.length === 0 &&
+        rulesToUnnamedParametersDefaults.has(patternId)
+          ? [rulesToUnnamedParametersDefaults.get(patternId)]
+          : unnamedParameters.map((p) => p.value)
+
       return [
         patternId,
         isEmpty(namedOptions)
           ? ["error", ...unnamedOptions]
-          : ["error", ...unnamedOptions, namedOptions]
+          : ["error", ...unnamedOptions, namedOptions],
       ]
     } else {
       return [patternId, "error"]
@@ -38,7 +46,7 @@ async function createOptions(
   codacyInput?: Codacyrc
 ): Promise<CLIEngine.Options> {
   if (codacyInput && codacyInput.tools) {
-    const eslintTool = codacyInput.tools.find(tool => tool.name === toolName)
+    const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
     if (eslintTool && eslintTool.patterns) {
       const patterns = eslintTool.patterns
       const result = cloneDeep(defaultOptions)
