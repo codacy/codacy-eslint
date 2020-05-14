@@ -110,6 +110,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "1tbs"
+        },
+        {
           "name": "allowSingleLine",
           "default": false
         }
@@ -4255,6 +4259,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "jest_no-restricted-matchers",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
       "patternId": "jest_no-standalone-expect",
       "level": "Info",
       "category": "BestPractice"
@@ -7262,6 +7271,17 @@
       "patternId": "@typescript-eslint_unified-signatures",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_lines-between-class-members",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "exceptAfterSingleLine",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "vue_array-bracket-spacing",
