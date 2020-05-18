@@ -9,12 +9,9 @@ export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
   report.results.forEach((result) => {
     const filename = result.filePath
     const messages = result.messages
-    if (
-      messages.length === 1 &&
-      messages[0].ruleId == null &&
-      messages[0].message.startsWith("Parsing error:")
-    ) {
-      results.push(new FileError(filename, messages[0].message))
+    const fatalErrors = messages.filter((m) => m.fatal).map((m) => m.message)
+    if (fatalErrors.length > 0) {
+      results.push(new FileError(filename, fatalErrors.join("\\n")))
     } else {
       const pairs = messages
         .filter((r) => r.ruleId && !blacklist.includes(r.ruleId))
