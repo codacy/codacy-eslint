@@ -1,5 +1,5 @@
 import { deepEqual } from "assert"
-import { CodacyResult } from "codacy-seed"
+import { Issue, ToolResult } from "codacy-seed"
 import { CLIEngine } from "eslint"
 
 import { convertResults } from "../convertResults"
@@ -44,9 +44,9 @@ describe("convertResults", () => {
     }
 
     const results = convertResults(report)
-    const expected: CodacyResult[] = [
-      new CodacyResult("file.js", "Message 1", "rule1", 1),
-      new CodacyResult("file.js", "Message 2", "rule2", 2)
+    const expected: ToolResult[] = [
+      new Issue("file.js", "Message 1", "rule1", 1),
+      new Issue("file.js", "Message 2", "rule2", 2)
     ]
 
     deepEqual(results, expected)

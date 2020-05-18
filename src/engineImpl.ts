@@ -1,12 +1,12 @@
-import { Codacyrc, CodacyResult, Engine } from "codacy-seed"
+import { Codacyrc, Engine, ToolResult } from "codacy-seed"
 import { CLIEngine } from "eslint"
 
 import { configCreator } from "./configCreator"
 import { convertResults } from "./convertResults"
 
-export const engineImpl: Engine = async function(
+export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
-): Promise<CodacyResult[]> {
+): Promise<ToolResult[]> {
   const srcDirPath = "/src"
 
   const [options, files] = await configCreator(codacyrc)
@@ -21,7 +21,7 @@ export const engineImpl: Engine = async function(
 
   const eslintResults = engine.executeOnFiles(filesToAnalyze)
 
-  const codacyResults = convertResults(eslintResults)
+  const issues = convertResults(eslintResults)
 
-  return codacyResults.map(r => r.relativeTo(srcDirPath))
+  return issues.map((r) => r.relativeTo(srcDirPath))
 }
