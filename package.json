@@ -72,7 +72,7 @@
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "1.1.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "autoprefixer": "^9.8.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
