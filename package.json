@@ -174,7 +174,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-wdio": "^6.0.12",
     "eslint-plugin-xss": "^0.1.10",
-    "extract-css-chunks-webpack-plugin": "^4.7.4",
+    "extract-css-chunks-webpack-plugin": "^4.7.5",
     "jstransformer-babel": "^2.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-fetch": "^2.6.0",
