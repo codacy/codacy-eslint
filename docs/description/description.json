@@ -2086,6 +2086,14 @@
       {
         "name": "unnamedParam",
         "description": "unnamedParam"
+      },
+      {
+        "name": "avoidEscape",
+        "description": "avoidEscape"
+      },
+      {
+        "name": "allowTemplateLiterals",
+        "description": "allowTemplateLiterals"
       }
     ]
   },
