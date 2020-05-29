@@ -41,6 +41,8 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
     ["padded-blocks", "allowSingleLineBlocks", true],
+    ["quotes", "avoidEscape", false],
+    ["quotes", "allowTemplateLiterals", false],
     ["react/display-name", "ignoreTranspilerName", false],
     ["sort-imports-es6-autofix/sort-imports-es6", "ignoreCase", false],
     ["sort-imports-es6-autofix/sort-imports-es6", "ignoreMemberSort", false],
