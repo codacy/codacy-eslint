@@ -3693,6 +3693,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "cypress_no-async-tests",
+    "title": "Cypress: No async tests",
+    "description": "Prevent using async/await in Cypress test cases",
+    "timeToFix": 5
+  },
+  {
     "patternId": "cypress_assertion-before-screenshot",
     "title": "Cypress: Assertion before screenshot",
     "description": "Assert on the page state before taking a screenshot, so the screenshot is consistent",

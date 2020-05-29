@@ -3355,6 +3355,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "cypress_no-async-tests",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "cypress_assertion-before-screenshot",
       "level": "Error",
       "category": "ErrorProne"

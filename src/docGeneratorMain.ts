@@ -168,7 +168,8 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@typescript-eslint"
+    "@typescript-eslint",
+    false
   )
 
   console.log("Generate vue description files")
