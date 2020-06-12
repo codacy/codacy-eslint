@@ -488,6 +488,46 @@
       {
         "name": "ignoreComments",
         "description": "ignoreComments"
+      },
+      {
+        "name": "VariableDeclarator",
+        "description": "VariableDeclarator"
+      },
+      {
+        "name": "outerIIFEBody",
+        "description": "outerIIFEBody"
+      },
+      {
+        "name": "MemberExpression",
+        "description": "MemberExpression"
+      },
+      {
+        "name": "FunctionDeclaration",
+        "description": "FunctionDeclaration"
+      },
+      {
+        "name": "FunctionExpression",
+        "description": "FunctionExpression"
+      },
+      {
+        "name": "CallExpression",
+        "description": "CallExpression"
+      },
+      {
+        "name": "ArrayExpression",
+        "description": "ArrayExpression"
+      },
+      {
+        "name": "ObjectExpression",
+        "description": "ObjectExpression"
+      },
+      {
+        "name": "ImportDeclaration",
+        "description": "ImportDeclaration"
+      },
+      {
+        "name": "ignoredNodes",
+        "description": "ignoredNodes"
       }
     ]
   },
