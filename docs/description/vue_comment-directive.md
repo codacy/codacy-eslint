@@ -21,8 +21,6 @@ It supports usage of the following comments:
 We can't write HTML comments in tags.
 :::
 
-This rule doesn't throw any warning.
-
 ## :book: Rule Details
 
 ESLint doesn't provide any API to enhance `eslint-disable` functionality and ESLint rules cannot affect other rules. But ESLint provides [processors API](https://eslint.org/docs/developer-guide/working-with-plugins#processors-in-plugins).
@@ -51,8 +49,8 @@ The `eslint-disable`-like comments can be used in the `<template>` and in the bl
 </template>
 
 <!-- eslint-disable-next-line vue/component-tags-order -->
-<script>
-</script>
+<style>
+</style>
 ```
 
 </eslint-code-block>
@@ -62,15 +60,16 @@ The `eslint-disable` comments has no effect after one block.
 <eslint-code-block :rules="{'vue/comment-directive': ['error'], 'vue/max-attributes-per-line': ['error'], 'vue/component-tags-order': ['error'] }">
 
 ```vue
-<template>
-</template>
-
-<!-- eslint-disable vue/component-tags-order -->
-<style> /* <- Warning has been disabled. */
+<style>
 </style>
 
-<script> /* <- Warning are not disabled. */
+<!-- eslint-disable -->
+<script> /* <- Warning has been disabled. */
 </script>
+
+<template> <!-- <- Warning are not disabled. -->
+</template>
+
 ```
 
 </eslint-code-block>
@@ -88,9 +87,45 @@ The `eslint-disable`-like comments can include descriptions to explain why the c
 
 </eslint-code-block>
 
+## :wrench: Options
+
+```json
+{
+  "vue/comment-directive": ["error", {
+    "reportUnusedDisableDirectives": false
+  }]
+}
+```
+
+- `reportUnusedDisableDirectives` ... If `true`, to report unused `eslint-disable` HTML comments. default `false`
+
+### `{ "reportUnusedDisableDirectives": true }`
+
+<eslint-code-block :rules="{'vue/comment-directive': ['error', {reportUnusedDisableDirectives: true} ], 'vue/max-attributes-per-line': ['error']}">
+
+```vue
+<template>
+  <!-- ✓ GOOD -->
+  <!-- eslint-disable-next-line vue/max-attributes-per-line -->
+  <div a="1" b="2" c="3" d="4" />
+
+  <!-- ✗ BAD -->
+  <!-- eslint-disable-next-line vue/max-attributes-per-line -->
+  <div a="1" />
+</template>
+```
+
+</eslint-code-block>
+
+::: warning Note
+Unused reports cannot be suppressed with `eslint-disable` HTML comments.
+:::
+
 ## :books: Further reading
 
-- [Disabling rules with inline comments](https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments)
+- [Disabling rules with inline comments]
+
+[Disabling rules with inline comments]: https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments
 
 ## :mag: Implementation
 
