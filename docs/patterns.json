@@ -443,6 +443,54 @@
         {
           "name": "ignoreComments",
           "default": false
+        },
+        {
+          "name": "VariableDeclarator",
+          "default": 1
+        },
+        {
+          "name": "outerIIFEBody",
+          "default": 1
+        },
+        {
+          "name": "MemberExpression",
+          "default": 1
+        },
+        {
+          "name": "FunctionDeclaration",
+          "default": {
+            "parameters": 1,
+            "body": 1
+          }
+        },
+        {
+          "name": "FunctionExpression",
+          "default": {
+            "parameters": 1,
+            "body": 1
+          }
+        },
+        {
+          "name": "CallExpression",
+          "default": {
+            "arguments": 1
+          }
+        },
+        {
+          "name": "ArrayExpression",
+          "default": 1
+        },
+        {
+          "name": "ObjectExpression",
+          "default": 1
+        },
+        {
+          "name": "ImportDeclaration",
+          "default": 1
+        },
+        {
+          "name": "ignoredNodes",
+          "default": []
         }
       ]
     },

@@ -40,6 +40,17 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
 
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
+    ["indent", "ArrayExpression", 1],
+    ["indent", "CallExpression", { arguments: 1 }],
+    ["indent", "FunctionDeclaration", { parameters: 1, body: 1 }],
+    ["indent", "FunctionExpression", { parameters: 1, body: 1 }],
+    ["indent", "ignoredNodes", []],
+    ["indent", "ImportDeclaration", 1],
+    ["indent", "MemberExpression", 1],
+    ["indent", "ObjectExpression", 1],
+    ["indent", "outerIIFEBody", 1],
+    ["indent", "offsetTernaryExpressions", false],
+    ["indent", "VariableDeclarator", 1],
     ["padded-blocks", "allowSingleLineBlocks", true],
     ["quotes", "avoidEscape", false],
     ["quotes", "allowTemplateLiterals", false],
