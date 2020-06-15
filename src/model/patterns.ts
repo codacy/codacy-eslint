@@ -19,17 +19,17 @@ export function fromEslintPatternIdAndCategoryToCategory(
     case "Possible Errors":
       return ["ErrorProne"]
     case "Best Practices":
-      return ["BestPractice"]
+      return ["CodeStyle"]
     case "Strict Mode":
-      return ["BestPractice"]
+      return ["CodeStyle"]
     case "Variables":
       return ["CodeStyle"]
     case "Node.js and CommonJS":
-      return ["BestPractice"]
+      return ["CodeStyle"]
     case "Stylistic Issues":
       return ["CodeStyle"]
     case "ECMAScript 6":
-      return ["BestPractice"]
+      return ["CodeStyle"]
     case "Deprecated":
       return ["Compatibility"]
     case "Removed":
