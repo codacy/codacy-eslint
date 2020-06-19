@@ -6,4 +6,4 @@ export const blacklist = [
 
 // Removes a pattern from the documentation
 // but still supports it with eslint config file
-export const documentationBlacklist = ["graphql/required-fields"]
+export const documentationBlacklist: Array<String> = []

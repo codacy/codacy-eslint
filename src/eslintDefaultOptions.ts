@@ -3,7 +3,7 @@ import { CLIEngine } from "eslint"
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
 const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
-  "plugin:@typescript-eslint/recommended"
+  "plugin:@typescript-eslint/recommended",
 ]
 
 export const defaultOptions: CLIEngine.Options = {
@@ -20,7 +20,7 @@ export const defaultOptions: CLIEngine.Options = {
       mocha: true,
       amd: true,
       worker: true,
-      qunit: true
+      qunit: true,
     },
     plugins: [
       "angular",
@@ -35,7 +35,6 @@ export const defaultOptions: CLIEngine.Options = {
       "ember",
       "ember-suave",
       "flowtype",
-      "graphql",
       "hapi",
       "html",
       "import",
@@ -70,27 +69,27 @@ export const defaultOptions: CLIEngine.Options = {
       "@typescript-eslint",
       "vue",
       "wdio",
-      "xss"
+      "xss",
     ],
     parser: "babel-eslint",
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: baseConfigs.concat(typescriptConfigs),
-        parser: "@typescript-eslint/parser"
-      }
+        parser: "@typescript-eslint/parser",
+      },
     ],
     settings: {
       "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"]
+        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
       "import/resolver": {
         typescript: {
-          alwaysTryTypes: true
-        }
-      }
-    }
-  }
+          alwaysTryTypes: true,
+        },
+      },
+    },
+  },
 }
 
 export const defaultEngine = new CLIEngine(defaultOptions)
