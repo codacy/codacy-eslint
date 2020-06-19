@@ -2309,7 +2309,13 @@
     {
       "patternId": "import_no-cycle",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreExternal",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "import_no-named-default",
@@ -3545,7 +3551,13 @@
     {
       "patternId": "ember_no-computed-properties-in-native-classes",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreClassic",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "ember_no-controllers",
@@ -3598,6 +3610,10 @@
         },
         {
           "name": "ignoreNestedPaths",
+          "default": false
+        },
+        {
+          "name": "useOptionalChaining",
           "default": false
         }
       ]
@@ -3699,6 +3715,12 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "ember_no-restricted-service-injections",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection"
+    },
+    {
       "patternId": "ember_no-side-effects",
       "level": "Info",
       "category": "CodeStyle"
@@ -3772,7 +3794,13 @@
     {
       "patternId": "ember_require-computed-macros",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "includeNativeGetters",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "ember_require-computed-property-dependencies",
@@ -4071,31 +4099,6 @@
     },
     {
       "patternId": "flowtype_valid-syntax",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "graphql_template-strings",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "graphql_named-operations",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "graphql_required-fields",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "graphql_capitalized-type-name",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "graphql_no-deprecated-fields",
       "level": "Info",
       "category": "CodeStyle"
     },
