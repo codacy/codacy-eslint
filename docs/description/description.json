@@ -4509,26 +4509,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "graphql_template-strings",
-    "title": "Graphql: Template strings",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "graphql_named-operations",
-    "title": "Graphql: Named operations",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "graphql_capitalized-type-name",
-    "title": "Graphql: Capitalized type name",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "graphql_no-deprecated-fields",
-    "title": "Graphql: No deprecated fields",
-    "timeToFix": 5
-  },
-  {
     "patternId": "hapi_hapi-capitalize-modules",
     "title": "Hapi: Hapi capitalize modules",
     "timeToFix": 5
