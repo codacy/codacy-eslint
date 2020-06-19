@@ -43,7 +43,8 @@ function patternsToRules(
 }
 
 async function createOptions(
-  codacyInput?: Codacyrc
+  codacyInput?: Codacyrc,
+  tsConfigFile?: string
 ): Promise<CLIEngine.Options> {
   if (codacyInput && codacyInput.tools) {
     const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
@@ -56,6 +57,11 @@ async function createOptions(
           (override: any) => (override.extends = [])
         )
         result.baseConfig.rules = patternsToRules(patterns)
+        if (tsConfigFile) {
+          result.baseConfig.overrides[0].parserOptions = {
+            project: tsConfigFile,
+          }
+        }
       }
       result.useEslintrc = false
       return result
@@ -65,9 +71,10 @@ async function createOptions(
 }
 
 export async function configCreator(
-  codacyInput?: Codacyrc
+  codacyInput?: Codacyrc,
+  tsConfigFile?: string
 ): Promise<[CLIEngine.Options, string[]]> {
-  const options = createOptions(codacyInput)
+  const options = createOptions(codacyInput, tsConfigFile)
   const files = codacyInput && codacyInput.files ? codacyInput.files : []
   return [await options, files]
 }

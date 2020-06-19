@@ -1,5 +1,6 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
 import { CLIEngine } from "eslint"
+import { pathExists } from "fs-extra"
 
 import { configCreator } from "./configCreator"
 import { convertResults } from "./convertResults"
@@ -9,7 +10,12 @@ export const engineImpl: Engine = async function (
 ): Promise<ToolResult[]> {
   const srcDirPath = "/src"
 
-  const [options, files] = await configCreator(codacyrc)
+  const tsconfigFile = "./tsconfig.json"
+
+  const [options, files] = await configCreator(
+    codacyrc,
+    (await pathExists(tsconfigFile)) ? tsconfigFile : undefined
+  )
 
   options.resolvePluginsRelativeTo = "/"
 
