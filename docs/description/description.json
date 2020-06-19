@@ -2574,7 +2574,13 @@
   {
     "patternId": "import_no-cycle",
     "title": "Import: No cycle",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreExternal",
+        "description": "ignoreExternal"
+      }
+    ]
   },
   {
     "patternId": "import_no-named-default",
@@ -3898,7 +3904,13 @@
     "patternId": "ember_no-computed-properties-in-native-classes",
     "title": "Ember: No computed properties in native classes",
     "description": "Disallow using computed properties in native classes",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreClassic",
+        "description": "ignoreClassic"
+      }
+    ]
   },
   {
     "patternId": "ember_no-controllers",
@@ -3961,6 +3973,10 @@
       {
         "name": "ignoreNestedPaths",
         "description": "ignoreNestedPaths"
+      },
+      {
+        "name": "useOptionalChaining",
+        "description": "useOptionalChaining"
       }
     ]
   },
@@ -4079,6 +4095,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ember_no-restricted-service-injections",
+    "title": "Ember: No restricted service injections",
+    "description": "Disallow injecting certain services under certain paths",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-side-effects",
     "title": "Ember: No side effects",
     "description": "Disallow unexpected side effects in computed properties",
@@ -4166,7 +4188,13 @@
     "patternId": "ember_require-computed-macros",
     "title": "Ember: Require computed macros",
     "description": "Require using computed property macros when possible",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "includeNativeGetters",
+        "description": "includeNativeGetters"
+      }
+    ]
   },
   {
     "patternId": "ember_require-computed-property-dependencies",
@@ -4488,11 +4516,6 @@
   {
     "patternId": "graphql_named-operations",
     "title": "Graphql: Named operations",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "graphql_required-fields",
-    "title": "Graphql: Required fields",
     "timeToFix": 5
   },
   {
