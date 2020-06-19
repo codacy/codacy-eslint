@@ -3,3 +3,7 @@ export const blacklist = [
   "import/no-unresolved",
   "node/no-missing-require",
 ]
+
+// Removes a pattern from the documentation
+// but still supports it with eslint config file
+export const documentationBlacklist = ["graphql/required-fields"]

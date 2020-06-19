@@ -1,7 +1,7 @@
 import { writeFile } from "codacy-seed"
 import { EOL } from "os"
 
-import { blacklist } from "./blacklist"
+import { blacklist, documentationBlacklist } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
 import { defaultEngine } from "./eslintDefaultOptions"
 
@@ -10,7 +10,10 @@ main()
 async function main() {
   const docGenerator = new DocGenerator(
     Array.from(defaultEngine.getRules().entries()).filter(
-      ([patternId, _]) => patternId && !blacklist.includes(patternId)
+      ([patternId, _]) =>
+        patternId &&
+        !blacklist.includes(patternId) &&
+        !documentationBlacklist.includes(patternId)
     )
   )
 
