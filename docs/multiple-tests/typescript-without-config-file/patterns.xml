@@ -3,4 +3,16 @@
         <property name="fileNamePattern" value="\.eslintrc\.json"/>
     </module>
     <module name="@typescript-eslint_explicit-function-return-type" />
+    <module name="@typescript-eslint_no-unnecessary-boolean-literal-compare" />
+    <module name="@typescript-eslint_no-dupe-class-members" />
+    <module name="@typescript-eslint_no-dynamic-delete" />
+    <module name="@typescript-eslint_no-empty-function" />
+    <module name="@typescript-eslint_no-empty-interface" />
+    <module name="@typescript-eslint_no-explicit-any" />
+    <module name="@typescript-eslint_no-extra-non-null-assertion" />
+    <module name="@typescript-eslint_no-extra-parens" />
+    <module name="@typescript-eslint_no-extra-semi" />
+    <module name="@typescript-eslint_no-extraneous-class" />
+    <module name="@typescript-eslint_no-floating-promises" />
+    <module name="@typescript-eslint_no-for-in-array" />
 </module>

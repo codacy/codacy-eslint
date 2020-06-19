@@ -4990,16 +4990,19 @@
   {
     "patternId": "jsdoc_check-access",
     "title": "Jsdoc: Check access",
+    "description": "Checks that `@access` tags have a valid value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
+    "description": "Reports invalid alignment of JSDoc block asterisks.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-examples",
     "title": "Jsdoc: Check examples",
+    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5031,81 +5034,97 @@
   {
     "patternId": "jsdoc_check-indentation",
     "title": "Jsdoc: Check indentation",
+    "description": "Reports invalid padding inside JSDoc blocks.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-param-names",
     "title": "Jsdoc: Check param names",
+    "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-property-names",
     "title": "Jsdoc: Check property names",
+    "description": "Ensures that property names in JSDoc are not duplicated on the same block and that nested properties have defined roots.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-syntax",
     "title": "Jsdoc: Check syntax",
+    "description": "Reports against Google Closure Compiler syntax.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-tag-names",
     "title": "Jsdoc: Check tag names",
+    "description": "Reports invalid block tag names.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-types",
     "title": "Jsdoc: Check types",
+    "description": "Reports invalid types.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_check-values",
     "title": "Jsdoc: Check values",
+    "description": "This rule checks the values for a handful of tags: `@version`, `@since`, `@license` and `@author`.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_empty-tags",
     "title": "Jsdoc: Empty tags",
+    "description": "Expects specific tags to be empty of any content.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_implements-on-classes",
     "title": "Jsdoc: Implements on classes",
+    "description": "Reports an issue with any non-constructor function using `@implements`.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_match-description",
     "title": "Jsdoc: Match description",
+    "description": "Enforces a regular expression pattern on descriptions.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_newline-after-description",
     "title": "Jsdoc: Newline after description",
+    "description": "Enforces a consistent padding of the block description.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-bad-blocks",
     "title": "Jsdoc: No bad blocks",
+    "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-defaults",
     "title": "Jsdoc: No defaults",
+    "description": "This rule reports defaults being used on the relevant portion of `@param` or `@default`.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-types",
     "title": "Jsdoc: No types",
+    "description": "This rule reports types being used on `@param` or `@returns`.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_no-undefined-types",
     "title": "Jsdoc: No undefined types",
+    "description": "Checks that types in jsdoc comments are defined.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-description",
     "title": "Jsdoc: Require description",
+    "description": "Requires that all functions have a description.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5125,11 +5144,13 @@
   {
     "patternId": "jsdoc_require-description-complete-sentence",
     "title": "Jsdoc: Require description complete sentence",
+    "description": "Requires that block description, explicit `@description`, and `@param`/`@returns` tag descriptions are written in complete sentences.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-example",
     "title": "Jsdoc: Require example",
+    "description": "Requires that all functions have examples.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5149,22 +5170,19 @@
   {
     "patternId": "jsdoc_require-file-overview",
     "title": "Jsdoc: Require file overview",
+    "description": "Checks that all files have one `@file`, `@fileoverview`, or `@overview` tag at the beginning of the file.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-hyphen-before-param-description",
     "title": "Jsdoc: Require hyphen before param description",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "checkProperties",
-        "description": "checkProperties"
-      }
-    ]
+    "description": "Requires a hyphen before the `@param` description.",
+    "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-jsdoc",
     "title": "Jsdoc: Require jsdoc",
+    "description": "Require JSDoc comments",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5180,6 +5198,7 @@
   {
     "patternId": "jsdoc_require-param",
     "title": "Jsdoc: Require param",
+    "description": "Requires that all function parameters are documented.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5207,41 +5226,49 @@
   {
     "patternId": "jsdoc_require-param-description",
     "title": "Jsdoc: Require param description",
+    "description": "Requires that each `@param` tag has a `description` value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param-name",
     "title": "Jsdoc: Require param name",
+    "description": "Requires that all function parameters have names.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-param-type",
     "title": "Jsdoc: Require param type",
+    "description": "Requires that each `@param` tag has a `type` value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property",
     "title": "Jsdoc: Require property",
+    "description": "Requires that all `@typedef` and `@namespace` tags have `@property` when their type is a plain `object`, `Object`, or `PlainObject`.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-description",
     "title": "Jsdoc: Require property description",
+    "description": "Requires that each `@property` tag has a `description` value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-name",
     "title": "Jsdoc: Require property name",
+    "description": "Requires that all function `@property` tags have names.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-property-type",
     "title": "Jsdoc: Require property type",
+    "description": "Requires that each `@property` tag has a `type` value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns",
     "title": "Jsdoc: Require returns",
+    "description": "Requires returns are documented.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5265,21 +5292,30 @@
   {
     "patternId": "jsdoc_require-returns-check",
     "title": "Jsdoc: Require returns check",
+    "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns-description",
     "title": "Jsdoc: Require returns description",
+    "description": "Requires that the `@returns` tag has a `description` value.",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_require-returns-type",
     "title": "Jsdoc: Require returns type",
+    "description": "Requires that `@returns` tag has `type` value.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsdoc_require-throws",
+    "title": "Jsdoc: Require throws",
     "timeToFix": 5
   },
   {
     "patternId": "jsdoc_valid-types",
     "title": "Jsdoc: Valid types",
+    "description": "Requires all types to be valid JSDoc or Closure compiler types without syntax errors.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5446,6 +5482,11 @@
   {
     "patternId": "jsx-a11y_aria-unsupported-elements",
     "title": "Jsx a11y: Aria unsupported elements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jsx-a11y_autocomplete-valid",
+    "title": "Jsx a11y: Autocomplete valid",
     "timeToFix": 5
   },
   {

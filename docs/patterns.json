@@ -4705,13 +4705,7 @@
     {
       "patternId": "jsdoc_require-hyphen-before-param-description",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkProperties",
-          "default": false
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "jsdoc_require-jsdoc",
@@ -4825,6 +4819,11 @@
     },
     {
       "patternId": "jsdoc_require-returns-type",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsdoc_require-throws",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4996,6 +4995,11 @@
     },
     {
       "patternId": "jsx-a11y_aria-unsupported-elements",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jsx-a11y_autocomplete-valid",
       "level": "Info",
       "category": "CodeStyle"
     },
