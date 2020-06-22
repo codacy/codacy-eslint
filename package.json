@@ -84,7 +84,7 @@
     "babel-plugin-transform-require-ignore": "^0.1.1",
     "codacy-seed": "1.0.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-airbnb-typescript": "^7.2.1",
     "eslint-config-angular": "^0.5.0",
