@@ -9,7 +9,15 @@ export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
   report.results.forEach((result) => {
     const filename = result.filePath
     const messages = result.messages
-    const fatalErrors = messages.filter((m) => m.fatal).map((m) => m.message)
+    const fatalErrors = messages
+      .filter((m) => m.fatal)
+      // this filter is here to avoid errors related to files not supported by current parser
+      // example: Using a "@typescript-eslint/parser" parser does not allow JSON files to be analyzed
+      .filter(
+        (m) =>
+          !m.message.includes("The file does not match your project config:")
+      )
+      .map((m) => m.message)
     if (fatalErrors.length > 0) {
       results.push(new FileError(filename, fatalErrors.join("\\n")))
     } else {
