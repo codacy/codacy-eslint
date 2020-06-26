@@ -3865,6 +3865,12 @@
     ]
   },
   {
+    "patternId": "ember_no-assignment-of-untracked-properties-used-in-tracking-contexts",
+    "title": "Ember: No assignment of untracked properties used in tracking contexts",
+    "description": "Disallow assignment of untracked properties that are used as computed property dependencies",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ember_no-attrs-in-components",
     "title": "Ember: No attrs in components",
     "description": "Disallow usage of `this.attrs` in components",
@@ -4655,7 +4661,13 @@
     "patternId": "jest_lowercase-name",
     "title": "Jest: Lowercase name",
     "description": "Enforce lowercase test names",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreTopLevelDescribe",
+        "description": "ignoreTopLevelDescribe"
+      }
+    ]
   },
   {
     "patternId": "jest_no-alias-methods",
@@ -4667,6 +4679,12 @@
     "patternId": "jest_no-commented-out-tests",
     "title": "Jest: No commented out tests",
     "description": "Disallow commented out tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "jest_no-conditional-expect",
+    "title": "Jest: No conditional expect",
+    "description": "Prevent calling `expect` conditionally",
     "timeToFix": 5
   },
   {
@@ -4900,10 +4918,6 @@
       {
         "name": "ignoreTypeOfDescribeName",
         "description": "ignoreTypeOfDescribeName"
-      },
-      {
-        "name": "disallowedWords",
-        "description": "disallowedWords"
       }
     ]
   },
@@ -4945,46 +4959,6 @@
   {
     "patternId": "jest-formatting_padding-around-all",
     "title": "Jest formatting: Padding around all",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-after-all-blocks",
-    "title": "Jest formatting: Padding before after all blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-after-each-blocks",
-    "title": "Jest formatting: Padding before after each blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-before-all-blocks",
-    "title": "Jest formatting: Padding before before all blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-before-each-blocks",
-    "title": "Jest formatting: Padding before before each blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-describe-blocks",
-    "title": "Jest formatting: Padding before describe blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-expect-statements",
-    "title": "Jest formatting: Padding before expect statements",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-test-blocks",
-    "title": "Jest formatting: Padding before test blocks",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "jest-formatting_padding-before-all",
-    "title": "Jest formatting: Padding before all",
     "timeToFix": 5
   },
   {
@@ -5052,7 +5026,7 @@
   {
     "patternId": "jsdoc_check-syntax",
     "title": "Jsdoc: Check syntax",
-    "description": "Reports against Google Closure Compiler syntax.",
+    "description": "Reports against syntax not valid for the mode (e.g., Google Closure Compiler in non-Closure mode).",
     "timeToFix": 5
   },
   {
@@ -8726,13 +8700,5 @@
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
     "timeToFix": 5
-  },
-  {
-    "patternId": "JSON format",
-    "title": "JSON format"
-  },
-  {
-    "patternId": "JSON sorting",
-    "title": "JSON sorting"
   }
 ]

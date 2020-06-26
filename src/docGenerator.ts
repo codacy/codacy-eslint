@@ -13,7 +13,6 @@ import { flatMap, flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { extraPatternEntries } from "./extraPatternEntries"
 import {
   fromEslintCategoryToLevel,
   fromEslintPatternIdAndCategoryToCategory,
@@ -77,9 +76,7 @@ export class DocGenerator {
       )
     })
 
-    const completeEntryArray = entries.concat(extraPatternEntries)
-
-    return new Patterns(toolName, toolVersion, completeEntryArray)
+    return new Patterns(toolName, toolVersion, entries)
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
@@ -107,13 +104,7 @@ export class DocGenerator {
       )
     })
 
-    const extraPatternsDescriptions = flatMap(extraPatternEntries, (entry) => {
-      return new DescriptionEntry(
-        patternIdToCodacy(entry.patternId),
-        entry.patternId
-      )
-    })
-    return descriptions.concat(extraPatternsDescriptions)
+    return descriptions
   }
 
   private fromEslintSchemaToParameters(

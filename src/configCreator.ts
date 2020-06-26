@@ -49,7 +49,18 @@ async function createOptions(
   if (codacyInput && codacyInput.tools) {
     const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
     if (eslintTool && eslintTool.patterns) {
-      const patterns = eslintTool.patterns
+      const isTypescriptAnalysis =
+        codacyInput.files &&
+        codacyInput.files.every((f) => f.endsWith(".ts") || f.endsWith(".tsx"))
+
+      // typescript patterns require a typescript parser which will fail for different file types
+      // so we are removing typescript patterns when analysing different file types
+      const patterns = isTypescriptAnalysis
+        ? eslintTool.patterns
+        : eslintTool.patterns.filter(
+            (p) => !p.patternId.startsWith("@typescript-eslint")
+          )
+
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
         result.baseConfig.extends = []
