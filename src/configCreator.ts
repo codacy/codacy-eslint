@@ -1,6 +1,6 @@
 import { Codacyrc, Pattern } from "codacy-seed"
 import { CLIEngine, Linter } from "eslint"
-import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
+import { cloneDeep, every, fromPairs, isEmpty, partition } from "lodash"
 
 import { defaultOptions } from "./eslintDefaultOptions"
 import { patternIdToEslint } from "./model/patterns"
@@ -74,7 +74,13 @@ export async function configCreator(
   codacyInput?: Codacyrc,
   tsConfigFile?: string
 ): Promise<[CLIEngine.Options, string[]]> {
-  const options = createOptions(codacyInput, tsConfigFile)
   const files = codacyInput && codacyInput.files ? codacyInput.files : []
+  const tsConfig = every(
+    files,
+    (file) => file.endsWith(".ts") || file.endsWith(".tsx")
+  )
+    ? tsConfigFile
+    : undefined
+  const options = createOptions(codacyInput, tsConfig)
   return [await options, files]
 }
