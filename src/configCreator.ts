@@ -69,8 +69,12 @@ async function createOptions(
         )
         result.baseConfig.rules = patternsToRules(patterns)
         if (tsConfigFile) {
-          result.baseConfig.overrides[0].parserOptions = {
-            project: tsConfigFile,
+          if (result.baseConfig.overrides[0].parserOptions) {
+            result.baseConfig.overrides[0].parserOptions.project = tsConfigFile
+          } else {
+            result.baseConfig.overrides[0].parserOptions = {
+              project: tsConfigFile
+            }
           }
         }
       }

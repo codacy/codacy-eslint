@@ -76,6 +76,9 @@ export const defaultOptions: CLIEngine.Options = {
         files: ["**/*.ts", "**/*.tsx"],
         extends: baseConfigs.concat(typescriptConfigs),
         parser: "@typescript-eslint/parser",
+        parserOptions: {
+          sourceType: "module"
+        },
       },
     ],
     settings: {

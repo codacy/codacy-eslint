@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="test.json">
+        <error source="json_json" line="3" message="Comment not allowed" severity="info" />
+    </file>
+</checkstyle>
