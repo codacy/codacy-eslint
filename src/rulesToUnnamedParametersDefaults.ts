@@ -40,6 +40,13 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
 
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
+    ["ember/no-restricted-service-injections", "paths", [""]],
+    ["ember/no-restricted-service-injections", "services", [""]],
+    [
+      "ember/no-restricted-service-injections",
+      "message",
+      "Injecting this service is not allowed from this file.",
+    ],
     ["indent", "ArrayExpression", 1],
     ["indent", "CallExpression", { arguments: 1 }],
     ["indent", "FunctionDeclaration", { parameters: 1, body: 1 }],
