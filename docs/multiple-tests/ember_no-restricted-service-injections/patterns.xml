@@ -1,0 +1,9 @@
+<module name="root">
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value=".*\.json" />
+    </module>
+    <module name="ember_no-restricted-service-injections">
+        <property name="paths" value="[&quot;&quot;]" />
+        <property name="services" value="[&quot;&quot;]" />
+    </module>
+</module>
