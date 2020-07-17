@@ -1,5 +1,5 @@
 {
-  "name": "ESLint",
+  "name": "eslint",
   "version": "6.8.0",
   "patterns": [
     {
@@ -3519,6 +3519,11 @@
       ]
     },
     {
+      "patternId": "ember_no-assignment-of-untracked-properties-used-in-tracking-contexts",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "ember_no-attrs-in-components",
       "level": "Info",
       "category": "CodeStyle"
@@ -3696,6 +3701,10 @@
         {
           "name": "catchRouterMicrolib",
           "default": false
+        },
+        {
+          "name": "catchRouterMain",
+          "default": false
         }
       ]
     },
@@ -3723,13 +3732,13 @@
         {
           "name": "paths",
           "default": [
-            "**"
+            ""
           ]
         },
         {
           "name": "services",
           "default": [
-            "a-service"
+            ""
           ]
         },
         {
@@ -4263,7 +4272,13 @@
     {
       "patternId": "jest_lowercase-name",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreTopLevelDescribe",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "jest_no-alias-methods",
@@ -4272,6 +4287,11 @@
     },
     {
       "patternId": "jest_no-commented-out-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "jest_no-conditional-expect",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4469,10 +4489,6 @@
         {
           "name": "ignoreTypeOfDescribeName",
           "default": false
-        },
-        {
-          "name": "disallowedWords",
-          "default": []
         }
       ]
     },
@@ -4513,46 +4529,6 @@
     },
     {
       "patternId": "jest-formatting_padding-around-all",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-after-all-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-after-each-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-before-all-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-before-each-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-describe-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-expect-statements",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-test-blocks",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "jest-formatting_padding-before-all",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4730,6 +4706,26 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "checkConstructors",
+          "default": true
+        },
+        {
+          "name": "checkGetters",
+          "default": true
+        },
+        {
+          "name": "checkSetters",
+          "default": true
+        },
+        {
+          "name": "enableFixer",
+          "default": true
+        },
+        {
+          "name": "exemptEmptyConstructors",
+          "default": false
+        },
         {
           "name": "exemptEmptyFunctions",
           "default": false
