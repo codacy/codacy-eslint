@@ -18,7 +18,7 @@ describe("convertResults", () => {
               message: "Message 1",
               nodeType: "type",
               severity: 0,
-              source: null
+              source: null,
             },
             {
               column: 0,
@@ -27,26 +27,27 @@ describe("convertResults", () => {
               message: "Message 2",
               nodeType: "type",
               severity: 0,
-              source: null
-            }
+              source: null,
+            },
           ],
           errorCount: 2,
           warningCount: 0,
           fixableErrorCount: 0,
-          fixableWarningCount: 0
-        }
+          fixableWarningCount: 0,
+          usedDeprecatedRules: [],
+        },
       ],
       errorCount: 2,
       warningCount: 0,
       fixableErrorCount: 0,
       fixableWarningCount: 0,
-      usedDeprecatedRules: []
+      usedDeprecatedRules: [],
     }
 
     const results = convertResults(report)
     const expected: ToolResult[] = [
       new Issue("file.js", "Message 1", "rule1", 1),
-      new Issue("file.js", "Message 2", "rule2", 2)
+      new Issue("file.js", "Message 2", "rule2", 2),
     ]
 
     deepEqual(results, expected)

@@ -1,6 +1,6 @@
 {
   "name": "eslint",
-  "version": "6.8.0",
+  "version": "7.5.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -17,7 +17,7 @@
         },
         {
           "name": "enforceForClassMembers",
-          "default": false
+          "default": true
         }
       ]
     },
@@ -44,6 +44,10 @@
       "parameters": [
         {
           "name": "allowImplicit",
+          "default": false
+        },
+        {
+          "name": "checkForEach",
           "default": false
         }
       ]
@@ -136,6 +140,10 @@
         {
           "name": "ignoreImports",
           "default": false
+        },
+        {
+          "name": "ignoreGlobals",
+          "default": false
         }
       ]
     },
@@ -208,7 +216,7 @@
         },
         {
           "name": "enforceForClassMembers",
-          "default": false
+          "default": true
         }
       ]
     },
@@ -252,6 +260,11 @@
     },
     {
       "patternId": "default-case",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "default-case-last",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -385,6 +398,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "id-denylist",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "id-length",
       "level": "Info",
       "category": "CodeStyle",
@@ -438,6 +456,10 @@
         },
         {
           "name": "flatTernaryExpressions",
+          "default": false
+        },
+        {
+          "name": "offsetTernaryExpressions",
           "default": false
         },
         {
@@ -957,7 +979,13 @@
     {
       "patternId": "no-extra-boolean-cast",
       "level": "Error",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "enforceForLogicalOperands",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "no-extra-label",
@@ -1136,6 +1164,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "no-loss-of-precision",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "no-magic-numbers",
       "level": "Info",
       "category": "CodeStyle",
@@ -1303,6 +1336,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "no-promise-executor-return",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "no-proto",
       "level": "Info",
       "category": "CodeStyle"
@@ -1327,6 +1365,11 @@
       "patternId": "no-regex-spaces",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "no-restricted-exports",
+      "level": "Warning",
+      "category": "CodeStyle"
     },
     {
       "patternId": "no-restricted-globals",
@@ -1564,6 +1607,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "no-unreachable-loop",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "no-unsafe-finally",
       "level": "Error",
       "category": "ErrorProne"
@@ -1612,6 +1660,11 @@
       "patternId": "no-use-before-define",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "no-useless-backreference",
+      "level": "Error",
+      "category": "ErrorProne"
     },
     {
       "patternId": "no-useless-call",
@@ -1681,7 +1734,13 @@
     {
       "patternId": "no-void",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAsStatement",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "no-warning-comments",
@@ -1865,7 +1924,13 @@
     {
       "patternId": "prefer-regex-literals",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "disallowRedundantWrapping",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "prefer-rest-params",
@@ -1993,6 +2058,10 @@
         },
         {
           "name": "ignoreMemberSort",
+          "default": false
+        },
+        {
+          "name": "allowSeparatedGroups",
           "default": false
         }
       ]
@@ -2150,7 +2219,7 @@
       "parameters": [
         {
           "name": "enforceForSwitchCase",
-          "default": false
+          "default": true
         },
         {
           "name": "enforceForIndexOf",
@@ -4341,6 +4410,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "jest_no-interpolation-in-snapshots",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "jest_no-jasmine-globals",
       "level": "Info",
       "category": "CodeStyle"
@@ -4848,10 +4922,6 @@
       "parameters": [
         {
           "name": "allowEmptyNamepaths",
-          "default": true
-        },
-        {
-          "name": "checkSeesForNamepaths",
           "default": false
         }
       ]
@@ -6356,6 +6426,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "relay_must-colocate-fragment-spreads",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "relay_hook-required-argument",
       "level": "Info",
       "category": "CodeStyle"
@@ -6737,25 +6812,13 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "ts-expect-error",
-          "default": true
-        },
-        {
-          "name": "ts-ignore",
-          "default": true
-        },
-        {
-          "name": "ts-nocheck",
-          "default": true
-        },
-        {
-          "name": "ts-check",
-          "default": false
+          "name": "minimumDescriptionLength",
+          "default": 3
         }
       ]
     },
     {
-      "patternId": "@typescript-eslint_ban-ts-ignore",
+      "patternId": "@typescript-eslint_ban-tslint-comment",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6771,32 +6834,6 @@
       "parameters": [
         {
           "name": "allowSingleLine",
-          "default": false
-        }
-      ]
-    },
-    {
-      "patternId": "@typescript-eslint_camelcase",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreDestructuring",
-          "default": false
-        },
-        {
-          "name": "ignoreImports",
-          "default": false
-        }
-      ]
-    },
-    {
-      "patternId": "@typescript-eslint_class-name-casing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowUnderscorePrefix",
           "default": false
         }
       ]
@@ -6820,6 +6857,11 @@
           "default": true
         }
       ]
+    },
+    {
+      "patternId": "@typescript-eslint_no-confusing-non-null-assertion",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_consistent-type-assertions",
@@ -6876,11 +6918,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "@typescript-eslint_generic-type-naming",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "@typescript-eslint_indent",
       "level": "Info",
       "category": "CodeStyle",
@@ -6894,6 +6931,10 @@
           "default": false
         },
         {
+          "name": "offsetTernaryExpressions",
+          "default": false
+        },
+        {
           "name": "ignoreComments",
           "default": false
         }
@@ -6901,11 +6942,6 @@
     },
     {
       "patternId": "@typescript-eslint_init-declarations",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "@typescript-eslint_interface-name-prefix",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6926,11 +6962,6 @@
     },
     {
       "patternId": "@typescript-eslint_member-delimiter-style",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "@typescript-eslint_member-naming",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -6957,13 +6988,7 @@
     {
       "patternId": "@typescript-eslint_no-base-to-string",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreTaggedTemplateExpressions",
-          "default": true
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "@typescript-eslint_no-dupe-class-members",
@@ -7161,11 +7186,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "@typescript-eslint_no-untyped-public-signature",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "@typescript-eslint_no-unused-expressions",
       "level": "Info",
       "category": "CodeStyle",
@@ -7226,6 +7246,11 @@
     },
     {
       "patternId": "@typescript-eslint_prefer-includes",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-literal-enum-member",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -7366,6 +7391,11 @@
       ]
     },
     {
+      "patternId": "@typescript-eslint_no-loss-of-precision",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "vue_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle"
@@ -7422,6 +7452,10 @@
         },
         {
           "name": "ignoreImports",
+          "default": false
+        },
+        {
+          "name": "ignoreGlobals",
           "default": false
         }
       ]
