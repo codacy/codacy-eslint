@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="4.3">
     <file name="example.js">
-        <error source="prettier_prettier" line="2" message="Replace `&quot;33&quot;` with `'33'`" severity="info" />
+        <error source="prettier_prettier" line="2" message="Replace `&quot;33&quot;` with `'33';`" severity="info" />
         <error source="no-var" line="1" message="Unexpected var, use let or const instead." severity="warning" />
         <error source="no-var" line="2" message="Unexpected var, use let or const instead." severity="warning" />
         <error source="no-unused-vars" line="2" message="'test' is assigned a value but never used." severity="info" />
         <error source="no-unused-vars" line="1" message="'s' is assigned a value but never used." severity="info" />
-        <error source="prettier_prettier" line="1" message="Delete `;`" severity="info" />
     </file>
 </checkstyle>

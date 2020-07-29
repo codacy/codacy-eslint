@@ -2,8 +2,8 @@
 
 var x;
 
-//#Info: no-unused-vars
 var y = 10;
+//#Info: no-unused-vars
 y = 5;
 
 //#Info: no-unused-vars
@@ -11,9 +11,9 @@ y = 5;
     return 5;
 })();
 
-//#Info: no-unused-vars
 function fact(n) {
     if (n < 2) return 1;
+    //#Info: no-unused-vars
     return n * fact(n - 1);
 }
 

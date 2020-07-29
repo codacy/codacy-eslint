@@ -46,6 +46,10 @@
       {
         "name": "allowImplicit",
         "description": "allowImplicit"
+      },
+      {
+        "name": "checkForEach",
+        "description": "checkForEach"
       }
     ]
   },
@@ -146,6 +150,10 @@
       {
         "name": "ignoreImports",
         "description": "ignoreImports"
+      },
+      {
+        "name": "ignoreGlobals",
+        "description": "ignoreGlobals"
       }
     ]
   },
@@ -275,6 +283,12 @@
     "patternId": "default-case",
     "title": "Default case",
     "description": "Require `default` cases in `switch` statements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "default-case-last",
+    "title": "Default case last",
+    "description": "Enforce default clauses in switch statements to be last",
     "timeToFix": 5
   },
   {
@@ -426,6 +440,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "id-denylist",
+    "title": "Id denylist",
+    "description": "Disallow specified identifiers",
+    "timeToFix": 5
+  },
+  {
     "patternId": "id-length",
     "title": "Id length",
     "description": "Enforce minimum and maximum identifier lengths",
@@ -484,6 +504,10 @@
       {
         "name": "flatTernaryExpressions",
         "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
       },
       {
         "name": "ignoreComments",
@@ -1059,7 +1083,13 @@
     "patternId": "no-extra-boolean-cast",
     "title": "No extra boolean cast",
     "description": "Disallow unnecessary boolean casts",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "enforceForLogicalOperands",
+        "description": "enforceForLogicalOperands"
+      }
+    ]
   },
   {
     "patternId": "no-extra-label",
@@ -1260,6 +1290,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-loss-of-precision",
+    "title": "No loss of precision",
+    "description": "Disallow literal numbers that lose precision",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-magic-numbers",
     "title": "No magic numbers",
     "description": "Disallow magic numbers",
@@ -1454,6 +1490,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-promise-executor-return",
+    "title": "No promise executor return",
+    "description": "Disallow returning values from Promise executor functions",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-proto",
     "title": "No proto",
     "description": "Disallow the use of the `__proto__` property",
@@ -1481,6 +1523,12 @@
     "patternId": "no-regex-spaces",
     "title": "No regex spaces",
     "description": "Disallow multiple spaces in regular expressions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "no-restricted-exports",
+    "title": "No restricted exports",
+    "description": "Disallow specified names in exports",
     "timeToFix": 5
   },
   {
@@ -1750,6 +1798,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "no-unreachable-loop",
+    "title": "No unreachable loop",
+    "description": "Disallow loops with a body that allows only one iteration",
+    "timeToFix": 5
+  },
+  {
     "patternId": "no-unsafe-finally",
     "title": "No unsafe finally",
     "description": "Disallow control flow statements in `finally` blocks",
@@ -1803,6 +1857,12 @@
     "patternId": "no-use-before-define",
     "title": "No use before define",
     "description": "Disallow the use of variables before they are defined",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "no-useless-backreference",
+    "title": "No useless backreference",
+    "description": "Disallow useless backreferences in regular expressions",
     "timeToFix": 5
   },
   {
@@ -1883,7 +1943,13 @@
     "patternId": "no-void",
     "title": "No void",
     "description": "Disallow `void` operators",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowAsStatement",
+        "description": "allowAsStatement"
+      }
+    ]
   },
   {
     "patternId": "no-warning-comments",
@@ -2091,7 +2157,13 @@
     "patternId": "prefer-regex-literals",
     "title": "Prefer regex literals",
     "description": "Disallow use of the `RegExp` constructor in favor of regular expression literals",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "disallowRedundantWrapping",
+        "description": "disallowRedundantWrapping"
+      }
+    ]
   },
   {
     "patternId": "prefer-rest-params",
@@ -2236,6 +2308,10 @@
       {
         "name": "ignoreMemberSort",
         "description": "ignoreMemberSort"
+      },
+      {
+        "name": "allowSeparatedGroups",
+        "description": "allowSeparatedGroups"
       }
     ]
   },
@@ -4732,7 +4808,7 @@
   {
     "patternId": "jest_no-export",
     "title": "Jest: No export",
-    "description": "Prevent exporting from test files",
+    "description": "Disallow using `exports` in files containing tests",
     "timeToFix": 5
   },
   {
@@ -4760,6 +4836,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "jest_no-interpolation-in-snapshots",
+    "title": "Jest: No interpolation in snapshots",
+    "description": "Disallow string interpolation inside snapshots",
+    "timeToFix": 5
+  },
+  {
     "patternId": "jest_no-jasmine-globals",
     "title": "Jest: No jasmine globals",
     "description": "Disallow Jasmine globals",
@@ -4780,7 +4862,7 @@
   {
     "patternId": "jest_no-mocks-import",
     "title": "Jest: No mocks import",
-    "description": "Disallow manually importing from __mocks__ ",
+    "description": "Disallow manually importing from `__mocks__`",
     "timeToFix": 5
   },
   {
@@ -4792,7 +4874,7 @@
   {
     "patternId": "jest_no-standalone-expect",
     "title": "Jest: No standalone expect",
-    "description": "Prevents expects that are outside of an it or test block.",
+    "description": "Disallow using `expect` outside of `it` or `test` blocks",
     "timeToFix": 5
   },
   {
@@ -4828,7 +4910,7 @@
   {
     "patternId": "jest_prefer-called-with",
     "title": "Jest: Prefer called with",
-    "description": "Suggest using `toBeCalledWith()` OR `toHaveBeenCalledWith()`",
+    "description": "Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
     "timeToFix": 5
   },
   {
@@ -4840,7 +4922,7 @@
   {
     "patternId": "jest_prefer-hooks-on-top",
     "title": "Jest: Prefer hooks on top",
-    "description": "Suggest to have all hooks at top level",
+    "description": "Suggest having hooks before any test cases",
     "timeToFix": 5
   },
   {
@@ -4858,7 +4940,7 @@
   {
     "patternId": "jest_prefer-strict-equal",
     "title": "Jest: Prefer strict equal",
-    "description": "Suggest using toStrictEqual()",
+    "description": "Suggest using `toStrictEqual()`",
     "timeToFix": 5
   },
   {
@@ -4900,7 +4982,7 @@
   {
     "patternId": "jest_require-top-level-describe",
     "title": "Jest: Require top level describe",
-    "description": "Prevents test cases and hooks to be outside of a describe block",
+    "description": "Require test cases and hooks to be inside a `describe` block",
     "timeToFix": 5
   },
   {
@@ -5333,10 +5415,6 @@
       {
         "name": "allowEmptyNamepaths",
         "description": "allowEmptyNamepaths"
-      },
-      {
-        "name": "checkSeesForNamepaths",
-        "description": "checkSeesForNamepaths"
       }
     ]
   },
@@ -6962,6 +7040,11 @@
     "timeToFix": 5
   },
   {
+    "patternId": "relay_must-colocate-fragment-spreads",
+    "title": "Relay: Must colocate fragment spreads",
+    "timeToFix": 5
+  },
+  {
     "patternId": "relay_hook-required-argument",
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
@@ -7313,31 +7396,19 @@
   {
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
-    "description": "Bans `// @ts-<directive>` comments from being used",
+    "description": "Bans `// @ts-<directive>` comments from being used or requires descriptions after directive",
     "timeToFix": 5,
     "parameters": [
       {
-        "name": "ts-expect-error",
-        "description": "ts-expect-error"
-      },
-      {
-        "name": "ts-ignore",
-        "description": "ts-ignore"
-      },
-      {
-        "name": "ts-nocheck",
-        "description": "ts-nocheck"
-      },
-      {
-        "name": "ts-check",
-        "description": "ts-check"
+        "name": "minimumDescriptionLength",
+        "description": "minimumDescriptionLength"
       }
     ]
   },
   {
-    "patternId": "@typescript-eslint_ban-ts-ignore",
-    "title": "@typescript eslint: Ban ts ignore",
-    "description": "Bans “// @ts-ignore” comments from being used",
+    "patternId": "@typescript-eslint_ban-tslint-comment",
+    "title": "@typescript eslint: Ban tslint comment",
+    "description": "Bans `// tslint:<rule-flag>` comments from being used",
     "timeToFix": 5
   },
   {
@@ -7355,34 +7426,6 @@
       {
         "name": "allowSingleLine",
         "description": "allowSingleLine"
-      }
-    ]
-  },
-  {
-    "patternId": "@typescript-eslint_camelcase",
-    "title": "@typescript eslint: Camelcase",
-    "description": "Enforce camelCase naming convention",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ignoreDestructuring",
-        "description": "ignoreDestructuring"
-      },
-      {
-        "name": "ignoreImports",
-        "description": "ignoreImports"
-      }
-    ]
-  },
-  {
-    "patternId": "@typescript-eslint_class-name-casing",
-    "title": "@typescript eslint: Class name casing",
-    "description": "Require PascalCased class and interface names",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "allowUnderscorePrefix",
-        "description": "allowUnderscorePrefix"
       }
     ]
   },
@@ -7407,6 +7450,12 @@
         "description": "after"
       }
     ]
+  },
+  {
+    "patternId": "@typescript-eslint_no-confusing-non-null-assertion",
+    "title": "@typescript eslint: No confusing non null assertion",
+    "description": "Disallow non-null assertion in locations that may be confusing",
+    "timeToFix": 5
   },
   {
     "patternId": "@typescript-eslint_consistent-type-assertions",
@@ -7471,12 +7520,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_generic-type-naming",
-    "title": "@typescript eslint: Generic type naming",
-    "description": "Enforces naming of generic type variables",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_indent",
     "title": "@typescript eslint: Indent",
     "description": "Enforce consistent indentation",
@@ -7491,6 +7534,10 @@
         "description": "flatTernaryExpressions"
       },
       {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
         "name": "ignoreComments",
         "description": "ignoreComments"
       }
@@ -7500,12 +7547,6 @@
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
     "description": "Require or disallow initialization in variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "@typescript-eslint_interface-name-prefix",
-    "title": "@typescript eslint: Interface name prefix",
-    "description": "Require that interface names should or should not prefixed with `I`",
     "timeToFix": 5
   },
   {
@@ -7528,12 +7569,6 @@
     "patternId": "@typescript-eslint_member-delimiter-style",
     "title": "@typescript eslint: Member delimiter style",
     "description": "Require a specific member delimiter style for interfaces and type literals",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "@typescript-eslint_member-naming",
-    "title": "@typescript eslint: Member naming",
-    "description": "Enforces naming conventions for class members by visibility",
     "timeToFix": 5
   },
   {
@@ -7564,13 +7599,7 @@
     "patternId": "@typescript-eslint_no-base-to-string",
     "title": "@typescript eslint: No base to string",
     "description": "Requires that `.toString()` is only called on objects which provide useful information when stringified",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ignoreTaggedTemplateExpressions",
-        "description": "ignoreTaggedTemplateExpressions"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "@typescript-eslint_no-dupe-class-members",
@@ -7803,12 +7832,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "@typescript-eslint_no-untyped-public-signature",
-    "title": "@typescript eslint: No untyped public signature",
-    "description": "Disallow untyped public methods",
-    "timeToFix": 5
-  },
-  {
     "patternId": "@typescript-eslint_no-unused-expressions",
     "title": "@typescript eslint: No unused expressions",
     "description": "Disallow unused expressions",
@@ -7880,6 +7903,12 @@
     "patternId": "@typescript-eslint_prefer-includes",
     "title": "@typescript eslint: Prefer includes",
     "description": "Enforce `includes` method over `indexOf` method",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-literal-enum-member",
+    "title": "@typescript eslint: Prefer literal enum member",
+    "description": "Require that all enum members be literal values to prevent unintended enum member name shadow issues",
     "timeToFix": 5
   },
   {
@@ -8045,6 +8074,12 @@
     ]
   },
   {
+    "patternId": "@typescript-eslint_no-loss-of-precision",
+    "title": "@typescript eslint: No loss of precision",
+    "description": "Disallow literal numbers that lose precision",
+    "timeToFix": 5
+  },
+  {
     "patternId": "vue_array-bracket-spacing",
     "title": "Vue: Array bracket spacing",
     "description": "Enforce consistent spacing inside array brackets",
@@ -8109,6 +8144,10 @@
       {
         "name": "ignoreImports",
         "description": "ignoreImports"
+      },
+      {
+        "name": "ignoreGlobals",
+        "description": "ignoreGlobals"
       }
     ]
   },

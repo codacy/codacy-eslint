@@ -1,5 +1,5 @@
 <module name="root">
     <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value="\.eslintrc\.yaml" />
+        <property name="fileNamePattern" value="\.eslintrc\.yml" />
     </module>
 </module>

@@ -20,6 +20,8 @@ COPY --from=builder docs docs
 
 RUN npm install --production
 
+RUN rm -rf /package.json /package-lock.json
+
 RUN adduser -u 2004 -D docker
 RUN chown -R docker:docker /docs
 
