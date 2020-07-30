@@ -2847,7 +2847,8 @@
     {
       "patternId": "security_detect-no-csrf-before-method-override",
       "level": "Info",
-      "category": "Security"
+      "category": "Security",
+      "subcategory": "CSRF"
     },
     {
       "patternId": "security_detect-buffer-noassert",
