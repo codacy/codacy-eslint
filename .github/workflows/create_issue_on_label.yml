@@ -1,4 +1,4 @@
-name: Force creation of issue on Jira when labelled with force-jira-import
+name: Force creation of issue on Jira when labeled with force-jira-import
 
 on:
   issues:
