@@ -4,6 +4,7 @@ export function fromEslintPatternIdAndCategoryToCategory(
   patternId: string,
   category?: string
 ): [Category, SecuritySubcategory?] {
+  if (patternId.includes("csrf")) return ["Security", "CSRF"]
   if (patternId.includes("xss")) return ["Security", "XSS"]
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
   if (patternId.includes("crypto")) return ["Security", "Cryptography"]
