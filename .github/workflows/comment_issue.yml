@@ -19,13 +19,21 @@ jobs:
 
       - name: Extract Jira number
         id: extract_jira_number
-        run: echo "::set-output name=jira_number::$(echo ${{ github.event.issue.title }}| sed 's/.*\[\(${{ secrets.JIRA_PROJECT }}-[[:digit:]]\{1,\}\)\].*/\1/')"
+        uses: actions/github-script@v2.0.0
+        env:
+          JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
+          GITHUB_TITLE: ${{ github.event.issue.title }}
+        with:
+          script: |
+            const jiraTaskRegex = new RegExp(`\\\[(${process.env.JIRA_PROJECT}-[0-9]+?)\\\]`)
+            return process.env.GITHUB_TITLE.match(jiraTaskRegex)[1]
+          result-encoding: string
 
       - name: Jira Add comment on issue
         id: add_comment_jira_issue
         uses: atlassian/gajira-comment@v2.0.0
         with:
-          issue: ${{ steps.extract_jira_number.outputs.jira_number }}
+          issue: ${{ steps.extract_jira_number.outputs.result }}
           comment: |
             GitHub Comment : ${{ github.event.comment.user.login }}
             {quote}${{ github.event.comment.body }}{quote}
