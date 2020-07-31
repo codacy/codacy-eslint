@@ -1,0 +1,57 @@
+name: Create issue on Jira
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  jira:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Jira Login
+        id: login
+        uses: atlassian/gajira-login@v2.0.0
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+
+      - name: Jira Create issue
+        id: create_jira_issue
+        uses: atlassian/gajira-create@v2.0.0
+        with:
+          project: ${{ secrets.JIRA_PROJECT }}
+          issuetype: ${{ secrets.JIRA_ISSUE_TYPE }}
+          summary: "[GH#${{ github.event.issue.number }}]  ${{ github.event.issue.title }}"
+          description: |
+            ${{ github.event.issue.body }}
+            ----
+            {panel}
+            _[Github permalink |${{ github.event.issue.html_url }}]_
+            {panel}
+
+      - name: Change Title
+        uses: actions/github-script@v2.0.0
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title}}
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '[${{ steps.create_jira_issue.outputs.issue }}] ${{ env.ISSUE_TITLE }}'
+            })
+      - name: Add comment after sync
+        uses: actions/github-script@v2.0.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Internal ticket created : [${{ steps.create_jira_issue.outputs.issue }}](${{ secrets.JIRA_BASE_URL }}/browse/${{ steps.create_jira_issue.outputs.issue }})'
+            })
