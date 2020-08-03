@@ -203,7 +203,7 @@
     "lint-staged": "^10.2.11",
     "mocha": "^8.1.0",
     "simple-mock": "^0.8.0",
-    "ts-loader": "^8.0.1",
+    "ts-loader": "^8.0.2",
     "ts-node": "^8.10.2"
   }
 }
