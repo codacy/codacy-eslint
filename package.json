@@ -72,7 +72,7 @@
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
-    "@typescript-eslint/parser": "^3.7.1",
+    "@typescript-eslint/parser": "^3.8.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^9.8.6",
     "babel-core": "^6.26.3",
