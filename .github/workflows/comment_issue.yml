@@ -6,10 +6,13 @@ on:
 
 jobs:
   jira:
+    env:
+      JIRA_CREATE_COMMENT_AUTO: ${{ secrets.JIRA_CREATE_COMMENT_AUTO }}
     runs-on: ubuntu-latest
     steps:
 
       - name: Jira Login
+        if: env.JIRA_CREATE_COMMENT_AUTO == 'true'
         id: login
         uses: atlassian/gajira-login@v2.0.0
         env:
@@ -18,6 +21,7 @@ jobs:
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
 
       - name: Extract Jira number
+        if: env.JIRA_CREATE_COMMENT_AUTO == 'true'
         id: extract_jira_number
         uses: actions/github-script@v2.0.0
         env:
@@ -30,6 +34,7 @@ jobs:
           result-encoding: string
 
       - name: Jira Add comment on issue
+        if: env.JIRA_CREATE_COMMENT_AUTO == 'true'
         id: add_comment_jira_issue
         uses: atlassian/gajira-comment@v2.0.0
         with:
