@@ -82,7 +82,7 @@
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-require-ignore": "^0.1.1",
-    "codacy-seed": "^1.1.0",
+    "codacy-seed": "^1.1.1",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
