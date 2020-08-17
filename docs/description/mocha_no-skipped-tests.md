@@ -3,8 +3,6 @@
 Mocha has a feature that allows you to skip tests by appending `.skip` to a test-suite or a test-case, or by prepending it with an `x` (e.g., `xdescribe(...)` instead of `describe(...)`).
 Sometimes tests are skipped as part of a debugging process, and aren't intended to be committed.  This rule reminds you to remove `.skip` or the `x` prefix from your tests.
 
-**Fixable:** Problems detected by this rule are automatically fixable using the `--fix` flag on the command line.
-
 ## Rule Details
 
 This rule looks for `describe.skip`, `it.skip`, `suite.skip`, `test.skip`, `context.skip`, `specify.skip`, `xdescribe`, `xit`, `xcontext` and `xspecify` occurrences within the source code.
@@ -44,28 +42,6 @@ suite.only("bar", function () {});
 test.only("bar", function () {});
 ```
 
-## Settings
-
-This rule supports the following shared configuration settings:
-
-* `additionalTestFunctions`: An array of extra test functions to protect.  This might be used with a custom Mocha extension, such as [`ember-mocha`](https://github.com/switchfly/ember-mocha)
-* `additionalXFunctions`: An array of extra x-function to protect
-
-```json
-{
-    "rules": {
-        "mocha/no-skipped-tests": "error"
-    },
-    "settings": {
-       "mocha/additionalTestFunctions": [
-           "describeModule"
-       ],
-       "mocha/additionalXFunctions": [
-           "xdescribeModule"
-       ]
-    }
-}
-```
 ## When Not To Use It
 
 * If you really want to commit skipped tests to your repo, turn this rule off.
