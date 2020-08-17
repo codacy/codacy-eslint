@@ -34,6 +34,7 @@ export const defaultOptions: CLIEngine.Options = {
       "drupal",
       "ember",
       "ember-suave",
+      "filenames",
       "flowtype",
       "hapi",
       "html",
@@ -77,7 +78,7 @@ export const defaultOptions: CLIEngine.Options = {
         extends: baseConfigs.concat(typescriptConfigs),
         parser: "@typescript-eslint/parser",
         parserOptions: {
-          sourceType: "module"
+          sourceType: "module",
         },
       },
     ],
