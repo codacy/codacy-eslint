@@ -1764,6 +1764,10 @@
       {
         "name": "enforceInMethodNames",
         "description": "enforceInMethodNames"
+      },
+      {
+        "name": "allowFunctionParams",
+        "description": "allowFunctionParams"
       }
     ]
   },
@@ -3995,6 +3999,18 @@
     ]
   },
   {
+    "patternId": "ember_no-controller-access-in-routes",
+    "title": "Ember: No controller access in routes",
+    "description": "Disallow routes from accessing the controller outside of setupController/resetController",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "allowControllerFor",
+        "description": "allowControllerFor"
+      }
+    ]
+  },
+  {
     "patternId": "ember_no-controllers",
     "title": "Ember: No controllers",
     "description": "Disallow non-essential controllers",
@@ -4059,6 +4075,14 @@
       {
         "name": "useOptionalChaining",
         "description": "useOptionalChaining"
+      },
+      {
+        "name": "catchSafeObjects",
+        "description": "catchSafeObjects"
+      },
+      {
+        "name": "catchUnsafeObjects",
+        "description": "catchUnsafeObjects"
       }
     ]
   },
@@ -4395,6 +4419,33 @@
   {
     "patternId": "ember-suave_require-access-in-comments",
     "title": "Ember suave: Require access in comments",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "filenames_match-regex",
+    "title": "Filenames: Match regex",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ]
+  },
+  {
+    "patternId": "filenames_match-exported",
+    "title": "Filenames: Match exported",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ]
+  },
+  {
+    "patternId": "filenames_no-index",
+    "title": "Filenames: No index",
     "timeToFix": 5
   },
   {
@@ -5304,6 +5355,14 @@
         "description": "checkConstructors"
       },
       {
+        "name": "checkDestructured",
+        "description": "checkDestructured"
+      },
+      {
+        "name": "checkDestructuredRoots",
+        "description": "checkDestructuredRoots"
+      },
+      {
         "name": "checkGetters",
         "description": "checkGetters"
       },
@@ -6109,91 +6168,121 @@
   {
     "patternId": "mocha_handle-done-callback",
     "title": "Mocha: Handle done callback",
-    "timeToFix": 5
+    "description": "Enforces handling of callbacks for async tests",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ignoreSkipped",
+        "description": "ignoreSkipped"
+      }
+    ]
   },
   {
     "patternId": "mocha_max-top-level-suites",
     "title": "Mocha: Max top level suites",
+    "description": "Limit the number of top-level suites in a single file",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-async-describe",
     "title": "Mocha: No async describe",
+    "description": "Disallow async functions passed to describe",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-exclusive-tests",
     "title": "Mocha: No exclusive tests",
+    "description": "Disallow exclusive tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "mocha_no-exports",
+    "title": "Mocha: No exports",
+    "description": "Disallow exports from test files",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-global-tests",
     "title": "Mocha: No global tests",
+    "description": "Disallow global tests",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-hooks",
     "title": "Mocha: No hooks",
+    "description": "Disallow hooks",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-hooks-for-single-case",
     "title": "Mocha: No hooks for single case",
+    "description": "Disallow hooks for a single test or test suite",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-identical-title",
     "title": "Mocha: No identical title",
+    "description": "Disallow identical titles",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-mocha-arrows",
     "title": "Mocha: No mocha arrows",
+    "description": "Disallow arrow functions as arguments to mocha functions",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-nested-tests",
     "title": "Mocha: No nested tests",
+    "description": "Disallow tests to be nested within other tests ",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-pending-tests",
     "title": "Mocha: No pending tests",
+    "description": "Disallow pending tests",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-return-and-callback",
     "title": "Mocha: No return and callback",
+    "description": "Disallow returning in a test or hook function that uses a callback",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-return-from-async",
     "title": "Mocha: No return from async",
+    "description": "Disallow returning from an async test or hook",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-setup-in-describe",
     "title": "Mocha: No setup in describe",
+    "description": "Disallow setup in describe blocks",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-sibling-hooks",
     "title": "Mocha: No sibling hooks",
+    "description": "Disallow duplicate uses of a hook at the same level inside a describe",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-skipped-tests",
     "title": "Mocha: No skipped tests",
+    "description": "Disallow skipped tests",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-synchronous-tests",
     "title": "Mocha: No synchronous tests",
+    "description": "Disallow synchronous tests",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_no-top-level-hooks",
     "title": "Mocha: No top level hooks",
+    "description": "Disallow top-level hooks",
     "timeToFix": 5
   },
   {
@@ -6205,11 +6294,13 @@
   {
     "patternId": "mocha_valid-suite-description",
     "title": "Mocha: Valid suite description",
+    "description": "Match suite descriptions against a pre-configured regular expression",
     "timeToFix": 5
   },
   {
     "patternId": "mocha_valid-test-description",
     "title": "Mocha: Valid test description",
+    "description": "Match test descriptions against a pre-configured regular expression",
     "timeToFix": 5
   },
   {
@@ -7885,6 +7976,12 @@
     "patternId": "@typescript-eslint_prefer-as-const",
     "title": "@typescript eslint: Prefer as const",
     "description": "Prefer usage of `as const` over literal type",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "@typescript-eslint_prefer-enum-initializers",
+    "title": "@typescript eslint: Prefer enum initializers",
+    "description": "Prefer initializing each enums member value",
     "timeToFix": 5
   },
   {

@@ -34,9 +34,11 @@ export class DocGenerator {
 
   private generateParameters(
     patternId: string,
-    schema: JSONSchema4 | JSONSchema4[]
+    schema: JSONSchema4 | JSONSchema4[] | undefined
   ): PatternsParameter[] | undefined {
-    const namedParameters = this.fromEslintSchemaToParameters(patternId, schema)
+    const namedParameters = schema
+      ? this.fromEslintSchemaToParameters(patternId, schema)
+      : undefined
     const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(
       patternId
     )
@@ -63,10 +65,7 @@ export class DocGenerator {
         patternId,
         eslintCategory
       )
-      const parameters =
-        meta && meta.schema
-          ? this.generateParameters(patternId, meta.schema)
-          : undefined
+      const parameters = this.generateParameters(patternId, meta?.schema)
       return new PatternsEntry(
         patternIdToCodacy(patternId),
         level,
@@ -88,10 +87,10 @@ export class DocGenerator {
         : undefined
       const title = patternTitle(patternId)
       const timeToFix = 5
-      const patternsParameters =
-        meta && meta.schema
-          ? this.generateParameters(patternId, meta.schema)
-          : undefined
+      const patternsParameters = this.generateParameters(
+        patternId,
+        meta?.schema
+      )
       const descriptionParameters = patternsParameters?.map(
         (p) => new DescriptionParameter(p.name, p.name)
       )

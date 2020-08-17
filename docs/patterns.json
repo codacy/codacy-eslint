@@ -1577,6 +1577,10 @@
         {
           "name": "enforceInMethodNames",
           "default": false
+        },
+        {
+          "name": "allowFunctionParams",
+          "default": true
         }
       ]
     },
@@ -3635,6 +3639,17 @@
       ]
     },
     {
+      "patternId": "ember_no-controller-access-in-routes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowControllerFor",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "ember_no-controllers",
       "level": "Info",
       "category": "CodeStyle"
@@ -3689,6 +3704,14 @@
         },
         {
           "name": "useOptionalChaining",
+          "default": false
+        },
+        {
+          "name": "catchSafeObjects",
+          "default": false
+        },
+        {
+          "name": "catchUnsafeObjects",
           "default": false
         }
       ]
@@ -3987,6 +4010,33 @@
     },
     {
       "patternId": "ember-suave_require-access-in-comments",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "filenames_match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"
+        }
+      ]
+    },
+    {
+      "patternId": "filenames_match-exported",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "camel"
+        }
+      ]
+    },
+    {
+      "patternId": "filenames_no-index",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -4825,6 +4875,14 @@
           "default": true
         },
         {
+          "name": "checkDestructured",
+          "default": true
+        },
+        {
+          "name": "checkDestructuredRoots",
+          "default": true
+        },
+        {
           "name": "checkGetters",
           "default": false
         },
@@ -5597,7 +5655,13 @@
     {
       "patternId": "mocha_handle-done-callback",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreSkipped",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "mocha_max-top-level-suites",
@@ -5611,6 +5675,11 @@
     },
     {
       "patternId": "mocha_no-exclusive-tests",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "mocha_no-exports",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -7232,6 +7301,11 @@
     },
     {
       "patternId": "@typescript-eslint_prefer-as-const",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-enum-initializers",
       "level": "Info",
       "category": "CodeStyle"
     },
