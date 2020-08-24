@@ -1,5 +1,29 @@
 # Codacy Eslint
 
+### Add new plugins / configs
+-  Install the package using npm
+```
+npm install <package-name>
+```
+- \[Plugins only\] Add the plugin to the `src/eslintDefaultOptions.ts` plugins section
+- \[Plugins only\] If the plugins has descriptions for rules on GitHub we can reference them
+at `src/eslintDefaultOptions.ts` to include them on the generated documentation adding a section like:
+```typescript
+  console.log("Generate xss description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
+    "xss"
+  )
+```
+- Generate documentation so it adds the new plugin documentation
+
+### Generate documentation
+```bash
+npm install
+npm run generateDocs
+```
+
 ## What is Codacy
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
