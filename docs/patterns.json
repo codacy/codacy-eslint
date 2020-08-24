@@ -3843,7 +3843,13 @@
     {
       "patternId": "ember_no-side-effects",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "catchEvents",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "ember_no-test-and-then",
@@ -4246,6 +4252,11 @@
     },
     {
       "patternId": "flowtype_valid-syntax",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "graphql-fragments_limit-complexity",
       "level": "Info",
       "category": "CodeStyle"
     },

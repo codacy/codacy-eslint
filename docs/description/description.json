@@ -4228,7 +4228,13 @@
     "patternId": "ember_no-side-effects",
     "title": "Ember: No side effects",
     "description": "Disallow unexpected side effects in computed properties",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "catchEvents",
+        "description": "catchEvents"
+      }
+    ]
   },
   {
     "patternId": "ember_no-test-and-then",
@@ -4657,6 +4663,12 @@
   {
     "patternId": "flowtype_valid-syntax",
     "title": "Flowtype: Valid syntax",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "graphql-fragments_limit-complexity",
+    "title": "Graphql fragments: Limit complexity",
+    "description": "Verifies that your graphql`...` expressions are not too complex.",
     "timeToFix": 5
   },
   {
