@@ -3451,6 +3451,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "better-styled-components_sort-declarations-alphabetically",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "chai-expect_no-inner-compare",
       "level": "Info",
       "category": "CodeStyle"

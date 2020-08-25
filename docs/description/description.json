@@ -3783,6 +3783,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "better-styled-components_sort-declarations-alphabetically",
+    "title": "Better styled components: Sort declarations alphabetically",
+    "description": "Styles are sorted alphabetically.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "chai-expect_no-inner-compare",
     "title": "Chai expect: No inner compare",
     "timeToFix": 5

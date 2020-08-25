@@ -27,6 +27,7 @@ export const defaultOptions: CLIEngine.Options = {
       "angularjs-security-rules",
       "babel",
       "backbone",
+      "better-styled-components",
       "chai-expect",
       "chai-friendly",
       "compat",
