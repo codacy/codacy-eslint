@@ -4,24 +4,25 @@
 
 1.  Install the package using npm:
 
-    ```
+    ```bash
     npm install <package-name>
     ```
 
-1.  \[Plugins only\] Add the plugin to the plugins section in the file `src/eslintDefaultOptions.ts`
-1.  \[Plugins only\] If the plugin has descriptions for rules on GitHub, reference them
+2.  \[Plugins only\] Add the plugin to the plugins section in the file `src/eslintDefaultOptions.ts`
+
+3.  \[Plugins only\] If the plugin has descriptions for rules on GitHub, reference them
 at `src/eslintDefaultOptions.ts` to include them on the generated documentation. To do this, add a section similar to the following example:
 
     ```typescript
-      console.log("Generate xss description files")
-      await docGenerator.downloadDocs(
-        (pattern) =>
-          `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
-        "xss"
-      )
+    console.log("Generate xss description files")
+    await docGenerator.downloadDocs(
+      (pattern) =>
+        `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
+      "xss"
+    )
     ```
 
-1.  Generate documentation so it adds the new plugin documentation:
+4.  Generate documentation so it adds the new plugin documentation:
 
     ```bash
     npm install
