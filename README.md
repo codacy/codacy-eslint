@@ -22,12 +22,14 @@ at `src/eslintDefaultOptions.ts` to include them on the generated documentation.
     )
     ```
 
-4.  Generate documentation so it adds the new plugin documentation:
+4.  Generate documentation so it adds the new plugin documentation
 
-    ```bash
-    npm install
-    npm run generateDocs
-    ```
+## Generating documentation
+
+```bash
+npm install
+npm run generateDocs
+```
 
 ## What is Codacy
 
