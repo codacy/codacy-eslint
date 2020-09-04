@@ -4,5 +4,7 @@
         <error source="@typescript-eslint_explicit-function-return-type" line="10" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="17" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="40" message="Missing return type on function." severity="info" />
+        <error source="@typescript-eslint_no-unused-vars" line="7" message="'o1' is defined but never used." severity="info" />
+        <error source="@typescript-eslint_no-unused-vars" line="7" message="'o2' is defined but never used." severity="info" />
     </file>
 </checkstyle>
