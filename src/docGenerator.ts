@@ -66,7 +66,7 @@ export class DocGenerator {
         eslintCategory
       )
       const parameters = this.generateParameters(patternId, meta?.schema)
-      const enabled = meta?.docs?.recommended
+      const enabled = meta?.docs?.recommended === true
       return new PatternsEntry(
         patternIdToCodacy(patternId),
         level,
