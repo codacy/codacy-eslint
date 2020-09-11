@@ -5611,7 +5611,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "jest_lowercase-name",
@@ -5637,35 +5637,35 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "jest_no-conditional-expect",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-deprecated-functions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-disabled-tests",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "jest_no-done-callback",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-duplicate-hooks",
@@ -5686,14 +5686,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-focused-tests",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-hooks",
@@ -5707,7 +5707,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-if",
@@ -5721,21 +5721,21 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-jasmine-globals",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-jest-import",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-large-snapshots",
@@ -5749,7 +5749,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-restricted-matchers",
@@ -5763,14 +5763,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-test-prefixes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_no-test-return-statement",
@@ -5791,7 +5791,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_prefer-called-with",
@@ -5889,14 +5889,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_valid-expect-in-promise",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_valid-expect",
@@ -5908,7 +5908,7 @@
           "default": false
         }
       ],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest_valid-title",
@@ -5920,7 +5920,7 @@
           "default": false
         }
       ],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "jest-formatting_padding-around-after-all-blocks",
@@ -6228,7 +6228,7 @@
           "default": {}
         }
       ],
-      "enabled": "true"
+      "enabled": false
     },
     {
       "patternId": "jsdoc_require-param",
@@ -7087,160 +7087,147 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "off"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_consistent-name",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": [
-        "error",
-        "_"
-      ]
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-argumentless-calls",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-chain",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-extraneous-args",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-extraneous-function-wrapping",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-extraneous-iteratee-args",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-extraneous-partials",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "off"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-for-each",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "off"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-partial-of-curried",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-single-composition",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-submodule-destructuring",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_no-unused-result",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-compact",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-composition-grouping",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-constant",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": [
-        "error",
-        {
-          "arrowFunctions": false
-        }
-      ]
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-flat-map",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-get",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_prefer-identity",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": [
-        "error",
-        {
-          "arrowFunctions": false
-        }
-      ]
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_preferred-alias",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "off"
+      "enabled": false
     },
     {
       "patternId": "lodash-fp_use-fp",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "meteor_audit-argument-checks",
@@ -8947,7 +8934,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_array-type",
@@ -8961,7 +8948,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_ban-ts-comment",
@@ -8973,7 +8960,7 @@
           "default": 3
         }
       ],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_ban-tslint-comment",
@@ -8987,7 +8974,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_brace-style",
@@ -9091,7 +9078,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_func-call-spacing",
@@ -9168,7 +9155,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-base-to-string",
@@ -9203,28 +9190,28 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-empty-interface",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-explicit-any",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-extra-non-null-assertion",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-extra-parens",
@@ -9238,7 +9225,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-extraneous-class",
@@ -9252,14 +9239,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-for-in-array",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-implicit-any-catch",
@@ -9273,14 +9260,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-inferrable-types",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-invalid-this",
@@ -9344,35 +9331,35 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-misused-promises",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-namespace",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-non-null-assertion",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-parameter-properties",
@@ -9407,7 +9394,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-throw-literal",
@@ -9456,35 +9443,35 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-assignment",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-call",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-member-access",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-return",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unused-expressions",
@@ -9518,7 +9505,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "warn"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-use-before-define",
@@ -9539,14 +9526,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_prefer-as-const",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_prefer-enum-initializers",
@@ -9588,7 +9575,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_prefer-nullish-coalescing",
@@ -9630,7 +9617,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
@@ -9665,21 +9652,21 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_restrict-plus-operands",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_restrict-template-expressions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_return-await",
@@ -9714,7 +9701,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_type-annotation-spacing",
@@ -9728,7 +9715,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": "error"
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_unified-signatures",
