@@ -1,0 +1,3 @@
+<module name="root">
+    <module name="ember_no-restricted-service-injections" />
+</module>
