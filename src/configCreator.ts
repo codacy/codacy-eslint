@@ -21,12 +21,7 @@ function patternsToRules(
         namedParameters.map((p) => [p.name, p.value])
       )
 
-      // add default value if it is defined and not passed on the configuration
-      const unnamedOptions =
-        unnamedParameters.length === 0 &&
-        rulesToUnnamedParametersDefaults.has(patternId)
-          ? [rulesToUnnamedParametersDefaults.get(patternId)]
-          : unnamedParameters.map((p) => p.value)
+      const unnamedOptions = unnamedParameters.map((p) => p.value)
 
       return [
         patternId,
@@ -73,7 +68,7 @@ async function createOptions(
             result.baseConfig.overrides[0].parserOptions.project = tsConfigFile
           } else {
             result.baseConfig.overrides[0].parserOptions = {
-              project: tsConfigFile
+              project: tsConfigFile,
             }
           }
         }

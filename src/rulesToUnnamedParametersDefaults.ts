@@ -1,4 +1,4 @@
-import { PatternsParameter } from "codacy-seed"
+import { ParameterSpec } from "codacy-seed"
 
 export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["array-bracket-spacing", "never"],
@@ -82,10 +82,10 @@ export class rulesNamedParametersAndDefaults {
   static parameter(
     patternId: string,
     parameter: string
-  ): PatternsParameter | undefined {
+  ): ParameterSpec | undefined {
     const e = this.array.find(
       ([pId, param, _]) => pId === patternId && param === parameter
     )
-    return e ? new PatternsParameter(parameter, e[2]) : undefined
+    return e ? new ParameterSpec(parameter, e[2]) : undefined
   }
 }
