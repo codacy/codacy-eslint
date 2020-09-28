@@ -1,6 +1,6 @@
 {
   "name": "eslint",
-  "version": "7.8.1",
+  "version": "7.10.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -391,6 +391,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "expression"
+        },
         {
           "name": "allowArrowFunctions",
           "default": false
@@ -4871,6 +4875,10 @@
         {
           "name": "catchEvents",
           "default": true
+        },
+        {
+          "name": "checkPlainGetters",
+          "default": false
         }
       ],
       "enabled": true
@@ -5006,7 +5014,16 @@
       "patternId": "ember_require-super-in-init",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "checkInitOnly",
+          "default": true
+        },
+        {
+          "name": "checkNativeClasses",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -6026,6 +6043,13 @@
     },
     {
       "patternId": "jsdoc_check-indentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_check-line-alignment",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -8990,6 +9014,13 @@
     },
     {
       "patternId": "@typescript-eslint_class-literal-property-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_comma-dangle",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

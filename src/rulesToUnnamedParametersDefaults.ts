@@ -14,6 +14,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["eqeqeq", "smart"],
   ["filenames/match-exported", "camel"],
   ["filenames/match-regex", "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"],
+  ["func-style", "expression"],
   ["id-match", "^[a-z]+([A-Z][a-z]+)*$"],
   ["indent", 2],
   ["jsx-quotes", "prefer-double"],
