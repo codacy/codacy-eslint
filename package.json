@@ -84,7 +84,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-require-ignore": "^0.1.1",
     "codacy-seed": "^1.2.0",
-    "eslint": "^7.9.0",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-airbnb-typescript": "^10.0.0",
