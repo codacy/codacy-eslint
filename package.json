@@ -192,7 +192,8 @@
     "vue-eslint-parser": "^7.1.0",
     "webpack": "^4.44.2",
     "webpack-manifest-plugin": "^2.2.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "eslint-plugin-security-node": "1.0.12"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.3",
