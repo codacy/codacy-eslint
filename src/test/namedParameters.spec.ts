@@ -1,5 +1,5 @@
 import { deepEqual } from "assert"
-import { PatternsParameter } from "codacy-seed"
+import { ParameterSpec } from "codacy-seed"
 import { JSONSchema4 } from "json-schema"
 
 import { fromSchemaArray } from "../namedParameters"
@@ -28,9 +28,9 @@ describe("namedParameters", () => {
         }
       ]
       const expectedResult = [
-        new PatternsParameter("getWithoutSet", false),
-        new PatternsParameter("setWithoutGet", true),
-        new PatternsParameter("enforceForClassMembers", false)
+        new ParameterSpec("getWithoutSet", false),
+        new ParameterSpec("setWithoutGet", true),
+        new ParameterSpec("enforceForClassMembers", false)
       ]
       deepEqual(fromSchemaArray("dummy", schemaArray), expectedResult)
     })

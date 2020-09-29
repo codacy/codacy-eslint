@@ -386,6 +386,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "allowArrowFunctions",
         "description": "allowArrowFunctions"
       }
@@ -4693,6 +4697,10 @@
       {
         "name": "catchEvents",
         "description": "catchEvents"
+      },
+      {
+        "name": "checkPlainGetters",
+        "description": "checkPlainGetters"
       }
     ],
     "patternId": "ember_no-side-effects",
@@ -4827,10 +4835,19 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "checkInitOnly",
+        "description": "checkInitOnly"
+      },
+      {
+        "name": "checkNativeClasses",
+        "description": "checkNativeClasses"
+      }
+    ],
     "patternId": "ember_require-super-in-init",
     "title": "Ember: Require super in init",
-    "description": "Require `this._super` to be called in `init` hooks",
+    "description": "Require super to be called in lifecycle hooks",
     "timeToFix": 5
   },
   {
@@ -5777,6 +5794,13 @@
     "patternId": "jsdoc_check-indentation",
     "title": "Jsdoc: Check indentation",
     "description": "Reports invalid padding inside JSDoc blocks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-line-alignment",
+    "title": "Jsdoc: Check line alignment",
+    "description": "Reports invalid alignment of JSDoc block lines.",
     "timeToFix": 5
   },
   {
@@ -8512,6 +8536,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "@typescript-eslint_comma-dangle",
+    "title": "@typescript eslint: Comma dangle",
+    "description": "Require or disallow trailing comma",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "before",
@@ -9146,7 +9177,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-ts-expect-error",
     "title": "@typescript eslint: Prefer ts expect error",
-    "description": "Recommends using `// @ts-expect-error` over `// @ts-ignore`",
+    "description": "Recommends using `@ts-expect-error` over `@ts-ignore`",
     "timeToFix": 5
   },
   {

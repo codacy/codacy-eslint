@@ -2,9 +2,9 @@ import {
   DescriptionEntry,
   DescriptionParameter,
   Level,
-  Patterns,
-  PatternsEntry,
-  PatternsParameter,
+  ParameterSpec,
+  PatternSpec,
+  Specification,
   writeFile,
 } from "codacy-seed"
 import { Rule } from "eslint"
@@ -35,7 +35,7 @@ export class DocGenerator {
   private generateParameters(
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[] | undefined
-  ): PatternsParameter[] | undefined {
+  ): ParameterSpec[] | undefined {
     const namedParameters = schema
       ? this.fromEslintSchemaToParameters(patternId, schema)
       : undefined
@@ -43,9 +43,9 @@ export class DocGenerator {
       patternId
     )
     const unnamedParameter = unnamedParameterValue
-      ? new PatternsParameter("unnamedParam", unnamedParameterValue)
+      ? new ParameterSpec("unnamedParam", unnamedParameterValue)
       : undefined
-    function getParameters(): PatternsParameter[] | undefined {
+    function getParameters(): ParameterSpec[] | undefined {
       if (namedParameters && unnamedParameter)
         return [unnamedParameter, ...namedParameters]
       else if (namedParameters) return namedParameters
@@ -56,8 +56,8 @@ export class DocGenerator {
     return result && result.length > 0 ? result : undefined
   }
 
-  generatePatterns(): Patterns {
-    const entries = flatMap(this.rules, ([patternId, ruleModule]) => {
+  generatePatterns(): Specification {
+    const patterns = flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const eslintCategory = meta?.docs?.category
       const level: Level = fromEslintCategoryToLevel(eslintCategory)
@@ -67,7 +67,7 @@ export class DocGenerator {
       )
       const parameters = this.generateParameters(patternId, meta?.schema)
       const enabled = meta?.docs?.recommended === true
-      return new PatternsEntry(
+      return new PatternSpec(
         patternIdToCodacy(patternId),
         level,
         category,
@@ -77,7 +77,7 @@ export class DocGenerator {
       )
     })
 
-    return new Patterns(toolName, toolVersion, entries)
+    return new Specification(toolName, toolVersion, patterns)
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
@@ -111,7 +111,7 @@ export class DocGenerator {
   private fromEslintSchemaToParameters(
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[]
-  ): PatternsParameter[] {
+  ): ParameterSpec[] {
     const anyOfToArray = (schema: JSONSchema4) =>
       schema.anyOf ? schema.anyOf : [schema]
 
