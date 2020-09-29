@@ -15,6 +15,8 @@ export function fromEslintPatternIdAndCategoryToCategory(
     return ["Security", "MaliciousCode"]
   if (patternId.startsWith("scanjs-rules") || patternId.includes("security"))
     return ["Security", patternId.includes("regex") ? "Regex" : undefined]
+  if (patternId.startsWith("no-unsanitized"))
+    return ["Security", "XSS"]
 
   switch (category) {
     case "Possible Errors":
