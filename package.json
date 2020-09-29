@@ -171,6 +171,7 @@
     "eslint-plugin-relay": "^1.8.1",
     "eslint-plugin-scanjs-rules": "^0.2.1",
     "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-security-node": "1.0.12",
     "eslint-plugin-sfdx": "^1.0.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
@@ -192,8 +193,7 @@
     "vue-eslint-parser": "^7.1.0",
     "webpack": "^4.44.2",
     "webpack-manifest-plugin": "^2.2.0",
-    "xml2js": "^0.4.23",
-    "eslint-plugin-security-node": "1.0.12"
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.3",
