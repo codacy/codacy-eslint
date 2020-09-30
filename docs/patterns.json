@@ -7625,14 +7625,16 @@
     {
       "patternId": "no-unsanitized_property",
       "level": "Info",
-      "category": "CodeStyle",
+      "category": "Security",
+      "subcategory": "XSS",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-unsanitized_method",
       "level": "Info",
-      "category": "CodeStyle",
+      "category": "Security",
+      "subcategory": "XSS",
       "parameters": [],
       "enabled": false
     },
