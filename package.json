@@ -72,7 +72,7 @@
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^2.0.0",
     "@salesforce/eslint-config-lwc": "^0.7.0",
-    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.4.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
