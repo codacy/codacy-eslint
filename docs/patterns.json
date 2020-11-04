@@ -1,6 +1,6 @@
 {
   "name": "eslint",
-  "version": "7.10.0",
+  "version": "7.11.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -4905,11 +4905,25 @@
       "enabled": true
     },
     {
+      "patternId": "ember_no-test-support-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-test-this-render",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "ember_no-try-invoke",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "ember_no-unnecessary-index-route",
@@ -9045,6 +9059,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_consistent-indexed-object-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_consistent-type-assertions",
       "level": "Info",
       "category": "CodeStyle",
@@ -9087,6 +9108,22 @@
         },
         {
           "name": "allowPrivateClassPropertyAccess",
+          "default": false
+        },
+        {
+          "name": "allowProtectedClassPropertyAccess",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_space-infix-ops",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "int32Hint",
           "default": false
         }
       ],
@@ -9479,6 +9516,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-unsafe-assignment",
       "level": "Error",
       "category": "ErrorProne",
@@ -9758,6 +9802,18 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-duplicate-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "includeExports",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_indent",
       "level": "Info",
       "category": "CodeStyle",
@@ -9886,6 +9942,29 @@
       "enabled": false
     },
     {
+      "patternId": "vue_comma-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": false
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_comma-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_comment-directive",
       "level": "Info",
       "category": "CodeStyle",
@@ -9914,6 +9993,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_custom-event-name-casing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_dot-location",
       "level": "Info",
       "category": "CodeStyle",
@@ -9921,7 +10007,37 @@
       "enabled": false
     },
     {
+      "patternId": "vue_dot-notation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowKeywords",
+          "default": true
+        },
+        {
+          "name": "allowPattern",
+          "default": ""
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "vue_eqeqeq",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_experimental-script-setup-vars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_func-call-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -9936,6 +10052,27 @@
     },
     {
       "patternId": "vue_html-closing-bracket-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_html-comment-content-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_html-comment-content-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_html-comment-indent",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10042,7 +10179,21 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-arrow-functions-in-watch",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-async-in-computed-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-bare-strings-in-template",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10057,6 +10208,83 @@
     },
     {
       "patternId": "vue_no-confusing-v-for-v-if",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-custom-modifiers-on-v-model",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-data-object-declaration",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-destroyed-lifecycle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-dollar-listeners-api",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-dollar-scopedslots-api",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-events-api",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-filter",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-functional-template",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-html-element-is",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-inline-template",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-props-default-this",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10084,7 +10312,49 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-deprecated-v-bind-sync",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-v-on-native-modifier",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-v-on-number-modifiers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-vue-config-keycodes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-dupe-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-dupe-v-else-if",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-duplicate-attr-inheritance",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10098,11 +10368,25 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-empty-component-block",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-empty-pattern",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "vue_no-extra-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "vue_no-irregular-whitespace",
@@ -10137,6 +10421,20 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-lifecycle-after-await",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-lone-template",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-multi-spaces",
       "level": "Info",
       "category": "CodeStyle",
@@ -10144,7 +10442,49 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-multiple-objects-in-class",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-multiple-slot-args",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-multiple-template-root",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-mutating-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-parsing-error",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-potential-component-option-typo",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-ref-as-operand",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10165,7 +10505,35 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-restricted-component-options",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-restricted-static-attribute",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-restricted-syntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-restricted-v-bind",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-setup-props-destructure",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10193,6 +10561,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-sparse-arrays",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "vue_no-static-inline-styles",
       "level": "Info",
       "category": "CodeStyle",
@@ -10214,7 +10589,21 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-template-target-blank",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-textarea-mustache",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-unregistered-components",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10235,6 +10624,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-unused-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-unused-vars",
       "level": "Info",
       "category": "CodeStyle",
@@ -10249,6 +10645,41 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-useless-concat",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-useless-mustaches",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-useless-v-bind",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-v-for-template-key-on-child",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-v-for-template-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-v-html",
       "level": "Info",
       "category": "CodeStyle",
@@ -10256,7 +10687,58 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-v-model-argument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-watch-after-await",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_object-curly-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_object-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_object-property-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAllPropertiesOnSameLine",
+          "default": false
+        },
+        {
+          "name": "allowMultiplePropertiesPerLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_one-component-per-file",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_operator-linebreak",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10271,6 +10753,13 @@
     },
     {
       "patternId": "vue_padding-line-between-blocks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_prefer-template",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10305,6 +10794,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_require-explicit-emits",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_require-name-property",
       "level": "Info",
       "category": "CodeStyle",
@@ -10333,6 +10829,20 @@
       "enabled": false
     },
     {
+      "patternId": "vue_require-slots-as-functions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_require-toggle-inside-transition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_require-v-for-key",
       "level": "Info",
       "category": "CodeStyle",
@@ -10348,6 +10858,13 @@
     },
     {
       "patternId": "vue_return-in-computed-property",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_return-in-emits-validator",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10392,6 +10909,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_space-in-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_space-infix-ops",
       "level": "Info",
       "category": "CodeStyle",
@@ -10427,6 +10951,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_template-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_this-in-template",
       "level": "Info",
       "category": "CodeStyle",
@@ -10442,6 +10973,13 @@
     },
     {
       "patternId": "vue_v-bind-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_v-for-delimiter-style",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10526,6 +11064,13 @@
     },
     {
       "patternId": "vue_valid-v-if",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_valid-v-is",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

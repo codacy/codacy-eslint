@@ -4731,9 +4731,23 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-test-support-import",
+    "title": "Ember: No test support import",
+    "description": "Disallow importing of \"test-support\" files in production code.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-test-this-render",
     "title": "Ember: No test this render",
     "description": "Disallow usage of the `this.render` in tests, recommending to use @ember/test-helpers' `render` instead.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_no-try-invoke",
+    "title": "Ember: No try invoke",
+    "description": "Disallow usage of the Ember's `tryInvoke` util",
     "timeToFix": 5
   },
   {
@@ -8499,7 +8513,7 @@
     ],
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
-    "description": "Bans `// @ts-<directive>` comments from being used or requires descriptions after directive",
+    "description": "Bans `@ts-<directive>` comments from being used or requires descriptions after directive",
     "timeToFix": 5
   },
   {
@@ -8560,6 +8574,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_consistent-indexed-object-style",
+    "title": "@typescript eslint: Consistent indexed object style",
+    "description": "Enforce or disallow the use of the record type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-assertions",
     "title": "@typescript eslint: Consistent type assertions",
     "description": "Enforces consistent usage of type assertions",
@@ -8599,11 +8620,27 @@
       {
         "name": "allowPrivateClassPropertyAccess",
         "description": "allowPrivateClassPropertyAccess"
+      },
+      {
+        "name": "allowProtectedClassPropertyAccess",
+        "description": "allowProtectedClassPropertyAccess"
       }
     ],
     "patternId": "@typescript-eslint_dot-notation",
     "title": "@typescript eslint: Dot notation",
     "description": "Enforce dot notation whenever possible",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": "int32Hint"
+      }
+    ],
+    "patternId": "@typescript-eslint_space-infix-ops",
+    "title": "@typescript eslint: Space infix ops",
+    "description": "This rule is aimed at ensuring there are spaces around infix operators.",
     "timeToFix": 5
   },
   {
@@ -8994,6 +9031,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
+    "title": "@typescript eslint: No unnecessary type constraint",
+    "description": "Disallows unnecessary constraints on generic types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-assignment",
     "title": "@typescript eslint: No unsafe assignment",
     "description": "Disallows assigning any to variables and properties",
@@ -9274,6 +9318,18 @@
   {
     "parameters": [
       {
+        "name": "includeExports",
+        "description": "includeExports"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-duplicate-imports",
+    "title": "@typescript eslint: No duplicate imports",
+    "description": "Disallow duplicate imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
         "name": "SwitchCase",
         "description": "SwitchCase"
       },
@@ -9400,6 +9456,29 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "vue_comma-spacing",
+    "title": "Vue: Comma spacing",
+    "description": "Enforce consistent spacing before and after commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_comma-style",
+    "title": "Vue: Comma style",
+    "description": "Enforce consistent comma style",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "vue_comment-directive",
     "title": "Vue: Comment directive",
@@ -9429,9 +9508,32 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_custom-event-name-casing",
+    "title": "Vue: Custom event name casing",
+    "description": "Enforce custom event names always use \"kebab-case\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_dot-location",
     "title": "Vue: Dot location",
     "description": "Enforce consistent newlines before and after dots",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowKeywords",
+        "description": "allowKeywords"
+      },
+      {
+        "name": "allowPattern",
+        "description": "allowPattern"
+      }
+    ],
+    "patternId": "vue_dot-notation",
+    "title": "Vue: Dot notation",
+    "description": "Enforce dot notation whenever possible",
     "timeToFix": 5
   },
   {
@@ -9439,6 +9541,20 @@
     "patternId": "vue_eqeqeq",
     "title": "Vue: Eqeqeq",
     "description": "Require the use of `===` and `!==`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_experimental-script-setup-vars",
+    "title": "Vue: Experimental script setup vars",
+    "description": "Prevent variables defined in `<script setup>` to be marked as undefined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_func-call-spacing",
+    "title": "Vue: Func call spacing",
+    "description": "Require or disallow spacing between function identifiers and their invocations",
     "timeToFix": 5
   },
   {
@@ -9453,6 +9569,27 @@
     "patternId": "vue_html-closing-bracket-spacing",
     "title": "Vue: Html closing bracket spacing",
     "description": "Require or disallow a space before tag's closing brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_html-comment-content-newline",
+    "title": "Vue: Html comment content newline",
+    "description": "Enforce unified line brake in HTML comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_html-comment-content-spacing",
+    "title": "Vue: Html comment content spacing",
+    "description": "Enforce unified spacing in HTML comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_html-comment-indent",
+    "title": "Vue: Html comment indent",
+    "description": "Enforce consistent indentation in HTML comments",
     "timeToFix": 5
   },
   {
@@ -9557,9 +9694,23 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-arrow-functions-in-watch",
+    "title": "Vue: No arrow functions in watch",
+    "description": "Disallow using arrow functions to define watcher",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-async-in-computed-properties",
     "title": "Vue: No async in computed properties",
     "description": "Disallow asynchronous actions in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-bare-strings-in-template",
+    "title": "Vue: No bare strings in template",
+    "description": "Disallow the use of bare strings in `<template>`",
     "timeToFix": 5
   },
   {
@@ -9574,6 +9725,83 @@
     "patternId": "vue_no-confusing-v-for-v-if",
     "title": "Vue: No confusing v for v if",
     "description": "Disallow confusing `v-for` and `v-if` on the same element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-custom-modifiers-on-v-model",
+    "title": "Vue: No custom modifiers on v model",
+    "description": "Disallow custom modifiers on v-model used on the component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-data-object-declaration",
+    "title": "Vue: No deprecated data object declaration",
+    "description": "Disallow using deprecated object declaration on data (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-destroyed-lifecycle",
+    "title": "Vue: No deprecated destroyed lifecycle",
+    "description": "Disallow using deprecated `destroyed` and `beforeDestroy` lifecycle hooks (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-dollar-listeners-api",
+    "title": "Vue: No deprecated dollar listeners api",
+    "description": "Disallow using deprecated `$listeners` (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-dollar-scopedslots-api",
+    "title": "Vue: No deprecated dollar scopedslots api",
+    "description": "Disallow using deprecated `$scopedSlots` (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-events-api",
+    "title": "Vue: No deprecated events api",
+    "description": "Disallow using deprecated events api (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-filter",
+    "title": "Vue: No deprecated filter",
+    "description": "Disallow using deprecated filters syntax (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-functional-template",
+    "title": "Vue: No deprecated functional template",
+    "description": "Disallow using deprecated the `functional` template (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-html-element-is",
+    "title": "Vue: No deprecated html element is",
+    "description": "Disallow using deprecated the `is` attribute on HTML elements (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-inline-template",
+    "title": "Vue: No deprecated inline template",
+    "description": "Disallow using deprecated `inline-template` attribute (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-props-default-this",
+    "title": "Vue: No deprecated props default this",
+    "description": "Disallow props default function `this` access",
     "timeToFix": 5
   },
   {
@@ -9599,9 +9827,51 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-deprecated-v-bind-sync",
+    "title": "Vue: No deprecated v bind sync",
+    "description": "Disallow use of deprecated `.sync` modifier on `v-bind` directive (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-v-on-native-modifier",
+    "title": "Vue: No deprecated v on native modifier",
+    "description": "Disallow using deprecated `.native` modifiers (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-v-on-number-modifiers",
+    "title": "Vue: No deprecated v on number modifiers",
+    "description": "Disallow using deprecated number (keycode) modifiers (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-vue-config-keycodes",
+    "title": "Vue: No deprecated vue config keycodes",
+    "description": "Disallow using deprecated `Vue.config.keyCodes` (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-dupe-keys",
     "title": "Vue: No dupe keys",
     "description": "Disallow duplication of field names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-dupe-v-else-if",
+    "title": "Vue: No dupe v else if",
+    "description": "Disallow duplicate conditions in `v-if` / `v-else-if` chains",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-duplicate-attr-inheritance",
+    "title": "Vue: No duplicate attr inheritance",
+    "description": "Enforce `inheritAttrs` to be set to `false` when using `v-bind=\"$attrs\"`",
     "timeToFix": 5
   },
   {
@@ -9613,9 +9883,23 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-empty-component-block",
+    "title": "Vue: No empty component block",
+    "description": "Disallow the `<template>` `<script>` `<style>` block to be empty",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-empty-pattern",
     "title": "Vue: No empty pattern",
     "description": "Disallow empty destructuring patterns",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-extra-parens",
+    "title": "Vue: No extra parens",
+    "description": "Disallow unnecessary parentheses",
     "timeToFix": 5
   },
   {
@@ -9652,6 +9936,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-lifecycle-after-await",
+    "title": "Vue: No lifecycle after await",
+    "description": "Disallow asynchronously registered lifecycle hooks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-lone-template",
+    "title": "Vue: No lone template",
+    "description": "Disallow unnecessary `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-multi-spaces",
     "title": "Vue: No multi spaces",
     "description": "Disallow multiple spaces",
@@ -9659,9 +9957,51 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-multiple-objects-in-class",
+    "title": "Vue: No multiple objects in class",
+    "description": "Disallow to pass multiple objects into array to class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-multiple-slot-args",
+    "title": "Vue: No multiple slot args",
+    "description": "Disallow to pass multiple arguments to scoped slots",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-multiple-template-root",
+    "title": "Vue: No multiple template root",
+    "description": "Disallow adding multiple root nodes to the template",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-mutating-props",
+    "title": "Vue: No mutating props",
+    "description": "Disallow mutation of component props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-parsing-error",
     "title": "Vue: No parsing error",
     "description": "Disallow parsing errors in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-potential-component-option-typo",
+    "title": "Vue: No potential component option typo",
+    "description": "Disallow a potential typo in your component property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-ref-as-operand",
+    "title": "Vue: No ref as operand",
+    "description": "Disallow use of value wrapped by `ref()` (Composition API) as an operand",
     "timeToFix": 5
   },
   {
@@ -9680,9 +10020,37 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-component-options",
+    "title": "Vue: No restricted component options",
+    "description": "Disallow specific component option",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-static-attribute",
+    "title": "Vue: No restricted static attribute",
+    "description": "Disallow specific attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-syntax",
     "title": "Vue: No restricted syntax",
     "description": "Disallow specified syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-v-bind",
+    "title": "Vue: No restricted v bind",
+    "description": "Disallow specific argument in `v-bind`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-setup-props-destructure",
+    "title": "Vue: No setup props destructure",
+    "description": "Disallow destructuring of `props` passed to `setup`",
     "timeToFix": 5
   },
   {
@@ -9708,6 +10076,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-sparse-arrays",
+    "title": "Vue: No sparse arrays",
+    "description": "Disallow sparse arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-static-inline-styles",
     "title": "Vue: No static inline styles",
     "description": "Disallow static inline `style` attributes",
@@ -9729,9 +10104,23 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-template-target-blank",
+    "title": "Vue: No template target blank",
+    "description": "Disallow target=\"_blank\" attribute without rel=\"noopener noreferrer\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-textarea-mustache",
     "title": "Vue: No textarea mustache",
     "description": "Disallow mustaches in `<textarea>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-unregistered-components",
+    "title": "Vue: No unregistered components",
+    "description": "Disallow using components that are not registered inside templates",
     "timeToFix": 5
   },
   {
@@ -9750,6 +10139,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-unused-properties",
+    "title": "Vue: No unused properties",
+    "description": "Disallow unused properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-unused-vars",
     "title": "Vue: No unused vars",
     "description": "Disallow unused variable definitions of v-for directives or scope attributes",
@@ -9764,6 +10160,41 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-useless-concat",
+    "title": "Vue: No useless concat",
+    "description": "Disallow unnecessary concatenation of literals or template literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-useless-mustaches",
+    "title": "Vue: No useless mustaches",
+    "description": "Disallow unnecessary mustache interpolations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-useless-v-bind",
+    "title": "Vue: No useless v bind",
+    "description": "Disallow unnecessary `v-bind` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-v-for-template-key-on-child",
+    "title": "Vue: No v for template key on child",
+    "description": "Disallow key of `<template v-for>` placed on child elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-v-for-template-key",
+    "title": "Vue: No v for template key",
+    "description": "Disallow `key` attribute on `<template v-for>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-v-html",
     "title": "Vue: No v html",
     "description": "Disallow use of v-html to prevent XSS attack",
@@ -9771,9 +10202,60 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-v-model-argument",
+    "title": "Vue: No v model argument",
+    "description": "Disallow adding an argument to `v-model` used in custom component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-watch-after-await",
+    "title": "Vue: No watch after await",
+    "description": "Disallow asynchronously registered `watch`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_object-curly-newline",
+    "title": "Vue: Object curly newline",
+    "description": "Enforce consistent line breaks inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_object-curly-spacing",
     "title": "Vue: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "vue_object-property-newline",
+    "title": "Vue: Object property newline",
+    "description": "Enforce placing object properties on separate lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_one-component-per-file",
+    "title": "Vue: One component per file",
+    "description": "Enforce that each component should be in its own file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_operator-linebreak",
+    "title": "Vue: Operator linebreak",
+    "description": "Enforce consistent linebreak style for operators",
     "timeToFix": 5
   },
   {
@@ -9788,6 +10270,13 @@
     "patternId": "vue_padding-line-between-blocks",
     "title": "Vue: Padding line between blocks",
     "description": "Require or disallow padding lines between blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-template",
+    "title": "Vue: Prefer template",
+    "description": "Require template literals instead of string concatenation",
     "timeToFix": 5
   },
   {
@@ -9820,6 +10309,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_require-explicit-emits",
+    "title": "Vue: Require explicit emits",
+    "description": "Require `emits` option with name triggered by `$emit()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_require-name-property",
     "title": "Vue: Require name property",
     "description": "Require a name property in Vue components",
@@ -9848,6 +10344,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_require-slots-as-functions",
+    "title": "Vue: Require slots as functions",
+    "description": "Enforce properties of `$slots` to be used as a function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-toggle-inside-transition",
+    "title": "Vue: Require toggle inside transition",
+    "description": "Require control the display of the content inside `<transition>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_require-v-for-key",
     "title": "Vue: Require v for key",
     "description": "Require `v-bind:key` with `v-for` directives",
@@ -9865,6 +10375,13 @@
     "patternId": "vue_return-in-computed-property",
     "title": "Vue: Return in computed property",
     "description": "Enforce that a return statement is present in computed property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_return-in-emits-validator",
+    "title": "Vue: Return in emits validator",
+    "description": "Enforce that a return statement is present in emits validator",
     "timeToFix": 5
   },
   {
@@ -9906,6 +10423,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "vue_space-in-parens",
+    "title": "Vue: Space in parens",
+    "description": "Enforce consistent spacing inside parentheses",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "int32Hint",
@@ -9942,6 +10466,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_template-curly-spacing",
+    "title": "Vue: Template curly spacing",
+    "description": "Require or disallow spacing around embedded expressions of template strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_this-in-template",
     "title": "Vue: This in template",
     "description": "Disallow usage of `this` in template",
@@ -9959,6 +10490,13 @@
     "patternId": "vue_v-bind-style",
     "title": "Vue: V bind style",
     "description": "Enforce `v-bind` directive style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_v-for-delimiter-style",
+    "title": "Vue: V for delimiter style",
+    "description": "Enforce `v-for` directive's delimiter style",
     "timeToFix": 5
   },
   {
@@ -10043,6 +10581,13 @@
     "patternId": "vue_valid-v-if",
     "title": "Vue: Valid v if",
     "description": "Enforce valid `v-if` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-v-is",
+    "title": "Vue: Valid v is",
+    "description": "Enforce valid `v-is` directives",
     "timeToFix": 5
   },
   {
