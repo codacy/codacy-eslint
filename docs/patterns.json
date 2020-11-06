@@ -4659,6 +4659,13 @@
       "enabled": false
     },
     {
+      "patternId": "ember_no-empty-glimmer-component-classes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-function-prototype-extensions",
       "level": "Info",
       "category": "CodeStyle",
@@ -4868,6 +4875,20 @@
       "enabled": false
     },
     {
+      "patternId": "ember_no-settled-after-test-helper",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ember_no-shadow-route-definition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-side-effects",
       "level": "Info",
       "category": "CodeStyle",
@@ -4882,6 +4903,13 @@
         }
       ],
       "enabled": true
+    },
+    {
+      "patternId": "ember_no-string-prototype-extensions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-and-then",
@@ -5042,6 +5070,13 @@
     },
     {
       "patternId": "ember_require-tagless-components",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ember_require-valid-css-selector-in-test-helpers",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -6037,8 +6072,20 @@
           "default": false
         },
         {
+          "name": "checkDefaults",
+          "default": false
+        },
+        {
           "name": "checkEslintrc",
           "default": true
+        },
+        {
+          "name": "checkParams",
+          "default": false
+        },
+        {
+          "name": "checkProperties",
+          "default": false
         },
         {
           "name": "noDefaultExampleRules",
@@ -9859,6 +9906,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_array-bracket-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle",
@@ -9897,6 +9951,13 @@
     },
     {
       "patternId": "vue_block-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_block-tag-newline",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
