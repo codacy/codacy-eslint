@@ -114,7 +114,7 @@
     "eslint-config-snak": "^1.0.15",
     "eslint-config-somos": "^1.1.0",
     "eslint-config-standard": "^16.0.1",
-    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-config-standard-jsx": "^10.0.0",
     "eslint-config-standard-react": "^10.0.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-vue": "^2.0.2",
