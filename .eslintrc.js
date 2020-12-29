@@ -1,21 +1,21 @@
 module.exports = {
   env: {
     es6: true,
-    node: true
+    node: true,
   },
   extends: ["prettier"],
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    SharedArrayBuffer: "readonly",
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
-    projects: ["./tsconfig.json"]
+    projects: ["./tsconfig.json"],
   },
   plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
   rules: {
-    "simple-import-sort/sort": "error"
-  }
+    "simple-import-sort/imports": "error",
+  },
 }

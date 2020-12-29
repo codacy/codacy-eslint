@@ -2,6 +2,7 @@ import { FileError, Issue, ToolResult } from "codacy-seed"
 import { CLIEngine, Linter } from "eslint"
 
 import { isBlacklisted } from "./blacklist"
+import { computeSuggestion } from "./computeSuggestion"
 import { patternIdToCodacy } from "./model/patterns"
 
 export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
@@ -20,7 +21,17 @@ export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
         const line = m.line
         const message = m.message
         const patternId = patternIdToCodacy(ruleId)
-        results.push(new Issue(filename, message, patternId, line))
+        const suggestion =
+          process.env.AUTOCOMMENT && result.source
+            ? computeSuggestion(
+                result.source,
+                m.line,
+                m.endLine,
+                m.fix,
+                m.suggestions
+              )
+            : undefined
+        results.push(new Issue(filename, message, patternId, line, suggestion))
       })
     }
   })
