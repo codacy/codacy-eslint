@@ -22,7 +22,7 @@ export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
         const message = m.message
         const patternId = patternIdToCodacy(ruleId)
         const suggestion =
-          process.env.AUTOCOMMENT !== undefined && result.source
+          process.env.SUGGESTIONS === "true" && result.source
             ? computeSuggestion(
                 result.source,
                 m.line,
