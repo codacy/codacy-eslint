@@ -195,7 +195,7 @@
     "standard": "^16.0.3",
     "typescript": "^4.1.3",
     "vue-eslint-parser": "^7.3.0",
-    "webpack": "^5.11.0",
+    "webpack": "^5.11.1",
     "webpack-manifest-plugin": "^3.0.0",
     "xml2js": "^0.4.23"
   },
