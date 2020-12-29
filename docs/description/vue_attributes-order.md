@@ -3,8 +3,10 @@ pageClass: rule-details
 sidebarDepth: 0
 title: vue/attributes-order
 description: enforce order of attributes
+since: v4.3.0
 ---
 # vue/attributes-order
+
 > enforce order of attributes
 
 - :gear: This rule is included in `"plugin:vue/vue3-recommended"` and `"plugin:vue/recommended"`.
@@ -89,7 +91,33 @@ This rule aims to enforce ordering of component attributes. The default order is
 
 </eslint-code-block>
 
+Note that `v-bind="object"` syntax is considered to be the same as the next or previous attribute categories.
+
+<eslint-code-block fix :rules="{'vue/attributes-order': ['error']}">
+
+```vue
+<template>
+  <!-- ✓ GOOD (`v-bind="object"` is considered GLOBAL category) -->
+  <MyComponent
+    v-bind="object"
+    id="x"
+    v-model="x"
+    v-bind:foo="x">
+  </MyComponent>
+
+  <!-- ✗ BAD (`v-bind="object"` is considered UNIQUE category) -->
+  <MyComponent
+    key="x"
+    v-model="x"
+    v-bind="object">
+  </MyComponent>
+</template>
+```
+
+</eslint-code-block>
+
 ## :wrench: Options
+
 ```json
 {
   "vue/attributes-order": ["error", {
@@ -111,7 +139,7 @@ This rule aims to enforce ordering of component attributes. The default order is
 }
 ```
 
-### `"alphabetical": true` 
+### `"alphabetical": true`
 
 <eslint-code-block fix :rules="{'vue/attributes-order': ['error', {alphabetical: true}]}">
 
@@ -219,6 +247,10 @@ This rule aims to enforce ordering of component attributes. The default order is
 
 - [Style guide - Element attribute order](https://v3.vuejs.org/style-guide/#element-attribute-order-recommended)
 - [Style guide (for v2) - Element attribute order](https://vuejs.org/v2/style-guide/#Element-attribute-order-recommended)
+
+## :rocket: Version
+
+This rule was introduced in eslint-plugin-vue v4.3.0
 
 ## :mag: Implementation
 

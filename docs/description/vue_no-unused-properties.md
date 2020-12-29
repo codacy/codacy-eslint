@@ -3,8 +3,10 @@ pageClass: rule-details
 sidebarDepth: 0
 title: vue/no-unused-properties
 description: disallow unused properties
+since: v7.0.0
 ---
 # vue/no-unused-properties
+
 > disallow unused properties
 
 ## :book: Rule Details
@@ -52,7 +54,8 @@ This rule cannot be checked for use in other components (e.g. `mixins`, Property
 ```json
 {
   "vue/no-unused-properties": ["error", {
-    "groups": ["props"]
+    "groups": ["props"],
+    "deepData": false
   }]
 }
 ```
@@ -63,6 +66,7 @@ This rule cannot be checked for use in other components (e.g. `mixins`, Property
   - `"computed"`
   - `"methods"`
   - `"setup"`
+- `"deepData"` (`boolean`) If `true`, the object of the property defined in `data` will be searched deeply. Default is `false`. Include `"data"` in `groups` to use this option.
 
 ### `"groups": ["props", "data"]`
 
@@ -99,6 +103,32 @@ This rule cannot be checked for use in other components (e.g. `mixins`, Property
     },
     created() {
       this.cnt = 2
+    }
+  }
+</script>
+```
+
+</eslint-code-block>
+
+### `{ "groups": ["props", "data"], "deepData": true }`
+
+<eslint-code-block :rules="{'vue/no-unused-properties': ['error', {groups: ['props', 'data'], deepData: true}]}">
+
+```vue
+<template>
+  <Foo :param="state.used">
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        state: {
+          /* ✓ GOOD */
+          used: null,
+          /* ✗ BAD (`state.unused` data not used) */
+          unused: null
+        }
+      }
     }
   }
 </script>
@@ -157,6 +187,10 @@ This rule cannot be checked for use in other components (e.g. `mixins`, Property
 ```
 
 </eslint-code-block>
+
+## :rocket: Version
+
+This rule was introduced in eslint-plugin-vue v7.0.0
 
 ## :mag: Implementation
 

@@ -3,8 +3,10 @@ pageClass: rule-details
 sidebarDepth: 0
 title: vue/block-tag-newline
 description: enforce line breaks after opening and before closing block-level tags
+since: v7.1.0
 ---
 # vue/block-tag-newline
+
 > enforce line breaks after opening and before closing block-level tags
 
 - :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
@@ -154,6 +156,10 @@ export default {
 ```
 
 </eslint-code-block>
+
+## :rocket: Version
+
+This rule was introduced in eslint-plugin-vue v7.1.0
 
 ## :mag: Implementation
 
