@@ -1,5 +1,4 @@
 import { deepStrictEqual } from "assert"
-import { exception } from "console"
 import { Linter, Rule } from "eslint"
 import { computeSuggestion } from "../computeSuggestion"
 
