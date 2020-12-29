@@ -1,5 +1,5 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
-import { CLIEngine } from "eslint"
+import { CLIEngine, Linter } from "eslint"
 import { pathExists } from "fs-extra"
 
 import { configCreator } from "./configCreator"
