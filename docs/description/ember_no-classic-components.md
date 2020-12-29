@@ -1,6 +1,6 @@
 # no-classic-components
 
-:car: The `"extends": "plugin:ember/octane"` property in a configuration file enables this rule.
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
 
 This rule aims to enforce Glimmer components instead of classic ones. We should migrate to Glimmer components because
 they have few advantages:
@@ -38,7 +38,7 @@ import Component from '@glimmer/component';
 
 ## References
 
-- [Ember 3.13 Release Notes](https://blog.emberjs.com/2019/09/25/ember-3-13-released.html)
+- [Ember 3.13 Release Notes](https://blog.emberjs.com/2019/09/25/ember-3-13-released.html) (minimum Ember version needed to use Glimmer components)
 - [Ember Glimmer Components RFC](https://github.com/emberjs/rfcs/blob/master/text/0416-glimmer-components.md)
 - [Ember Octane Release Plan](https://blog.emberjs.com/2019/08/15/octane-release-plan.html)
 - [Glimmer Components Explained](https://www.pzuraq.com/coming-soon-in-ember-octane-part-5-glimmer-components/)

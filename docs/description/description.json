@@ -1549,6 +1549,13 @@
   },
   {
     "parameters": [],
+    "patternId": "no-nonoctal-decimal-escape",
+    "title": "No nonoctal decimal escape",
+    "description": "Disallow `\\8` and `\\9` escape sequences in string literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "no-obj-calls",
     "title": "No obj calls",
     "description": "Disallow calling global object properties as functions",
@@ -1970,6 +1977,18 @@
     "patternId": "no-unsafe-negation",
     "title": "No unsafe negation",
     "description": "Disallow negating the left operand of relational operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "disallowArithmeticOperators",
+        "description": "disallowArithmeticOperators"
+      }
+    ],
+    "patternId": "no-unsafe-optional-chaining",
+    "title": "No unsafe optional chaining",
+    "description": "Disallow use of optional chaining in contexts where the `undefined` value is not allowed",
     "timeToFix": 5
   },
   {
@@ -2782,251 +2801,6 @@
   },
   {
     "parameters": [],
-    "patternId": "import_default",
-    "title": "Import: Default",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowComputed",
-        "description": "allowComputed"
-      }
-    ],
-    "patternId": "import_namespace",
-    "title": "Import: Namespace",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-namespace",
-    "title": "Import: No namespace",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_export",
-    "title": "Import: Export",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-mutable-exports",
-    "title": "Import: No mutable exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_extensions",
-    "title": "Import: Extensions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-restricted-paths",
-    "title": "Import: No restricted paths",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-internal-modules",
-    "title": "Import: No internal modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_group-exports",
-    "title": "Import: Group exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-relative-parent-imports",
-    "title": "Import: No relative parent imports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-self-import",
-    "title": "Import: No self import",
-    "description": "Forbid a module from importing itself",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreExternal",
-        "description": "ignoreExternal"
-      }
-    ],
-    "patternId": "import_no-cycle",
-    "title": "Import: No cycle",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-named-default",
-    "title": "Import: No named default",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-named-as-default",
-    "title": "Import: No named as default",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-named-as-default-member",
-    "title": "Import: No named as default member",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-anonymous-default-export",
-    "title": "Import: No anonymous default export",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-unused-modules",
-    "title": "Import: No unused modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-commonjs",
-    "title": "Import: No commonjs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-amd",
-    "title": "Import: No amd",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-duplicates",
-    "title": "Import: No duplicates",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_first",
-    "title": "Import: First",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_max-dependencies",
-    "title": "Import: Max dependencies",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-extraneous-dependencies",
-    "title": "Import: No extraneous dependencies",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-absolute-path",
-    "title": "Import: No absolute path",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-nodejs-modules",
-    "title": "Import: No nodejs modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-webpack-loader-syntax",
-    "title": "Import: No webpack loader syntax",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_order",
-    "title": "Import: Order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_newline-after-import",
-    "title": "Import: Newline after import",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_prefer-default-export",
-    "title": "Import: Prefer default export",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-default-export",
-    "title": "Import: No default export",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-named-export",
-    "title": "Import: No named export",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-dynamic-require",
-    "title": "Import: No dynamic require",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_unambiguous",
-    "title": "Import: Unambiguous",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-unassigned-import",
-    "title": "Import: No unassigned import",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-useless-path-segments",
-    "title": "Import: No useless path segments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_dynamic-import-chunkname",
-    "title": "Import: Dynamic import chunkname",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_exports-last",
-    "title": "Import: Exports last",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_no-deprecated",
-    "title": "Import: No deprecated",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "import_imports-first",
-    "title": "Import: Imports first",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "node_callback-return",
     "title": "Node: Callback return",
     "description": "Require `return` statements after callbacks",
@@ -3379,30 +3153,6 @@
     "patternId": "promise_valid-params",
     "title": "Promise: Valid params",
     "description": "Ensures the proper number of arguments are passed to Promise functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_array-bracket-even-spacing",
-    "title": "Standard: Array bracket even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_computed-property-even-spacing",
-    "title": "Standard: Computed property even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_object-curly-even-spacing",
-    "title": "Standard: Object curly even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_no-callback-literal",
-    "title": "Standard: No callback literal",
     "timeToFix": 5
   },
   {
@@ -4503,7 +4253,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "catchSafeObjects",
+        "description": "catchSafeObjects"
+      },
+      {
+        "name": "catchUnsafeObjects",
+        "description": "catchUnsafeObjects"
+      }
+    ],
     "patternId": "ember_no-get-with-default",
     "title": "Ember: No get with default",
     "description": "Disallow usage of the Ember's `getWithDefault` function",
@@ -4887,8 +4646,8 @@
         "description": "checkNativeClasses"
       }
     ],
-    "patternId": "ember_require-super-in-init",
-    "title": "Ember: Require super in init",
+    "patternId": "ember_require-super-in-lifecycle-hooks",
+    "title": "Ember: Require super in lifecycle hooks",
     "description": "Require super to be called in lifecycle hooks",
     "timeToFix": 5
   },
@@ -8532,6 +8291,30 @@
   },
   {
     "parameters": [],
+    "patternId": "standard_array-bracket-even-spacing",
+    "title": "Standard: Array bracket even spacing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "standard_computed-property-even-spacing",
+    "title": "Standard: Computed property even spacing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "standard_object-curly-even-spacing",
+    "title": "Standard: Object curly even spacing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "standard_no-callback-literal",
+    "title": "Standard: No callback literal",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_adjacent-overload-signatures",
     "title": "@typescript eslint: Adjacent overload signatures",
     "description": "Require that member overloads be consecutive",
@@ -8679,18 +8462,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "int32Hint",
-        "description": "int32Hint"
-      }
-    ],
-    "patternId": "@typescript-eslint_space-infix-ops",
-    "title": "@typescript eslint: Space infix ops",
-    "description": "This rule is aimed at ensuring there are spaces around infix operators.",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_explicit-function-return-type",
     "title": "@typescript eslint: Explicit function return type",
@@ -8716,6 +8487,30 @@
     "patternId": "@typescript-eslint_func-call-spacing",
     "title": "@typescript eslint: Func call spacing",
     "description": "Require or disallow spacing between function identifiers and their invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@typescript-eslint_indent",
+    "title": "@typescript eslint: Indent",
+    "description": "Enforce consistent indentation",
     "timeToFix": 5
   },
   {
@@ -8804,9 +8599,28 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-confusing-void-expression",
+    "title": "@typescript eslint: No confusing void expression",
+    "description": "Requires expressions of type void to appear in statement position",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-dupe-class-members",
     "title": "@typescript eslint: No dupe class members",
     "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "includeExports",
+        "description": "includeExports"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-duplicate-imports",
+    "title": "@typescript eslint: No duplicate imports",
+    "description": "Disallow duplicate imports",
     "timeToFix": 5
   },
   {
@@ -9133,16 +8947,16 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-unused-vars-experimental",
-    "title": "@typescript eslint: No unused vars experimental",
-    "description": "Disallow unused variables and arguments",
+    "patternId": "@typescript-eslint_no-unused-vars",
+    "title": "@typescript eslint: No unused vars",
+    "description": "Disallow unused variables",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-unused-vars",
-    "title": "@typescript eslint: No unused vars",
-    "description": "Disallow unused variables",
+    "patternId": "@typescript-eslint_no-unused-vars-experimental",
+    "title": "@typescript eslint: No unused vars experimental",
+    "description": "Disallow unused variables and arguments",
     "timeToFix": 5
   },
   {
@@ -9164,6 +8978,13 @@
     "patternId": "@typescript-eslint_no-var-requires",
     "title": "@typescript eslint: No var requires",
     "description": "Disallows the use of require statements except in import statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
+    "title": "@typescript eslint: Non nullable type assertion style",
+    "description": "Prefers a non-null assertion over explicit type cast when possible",
     "timeToFix": 5
   },
   {
@@ -9231,16 +9052,16 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
-    "title": "@typescript eslint: Prefer readonly parameter types",
-    "description": "Requires that function parameters are typed as readonly to prevent accidental mutation of inputs",
+    "patternId": "@typescript-eslint_prefer-readonly",
+    "title": "@typescript eslint: Prefer readonly",
+    "description": "Requires that private members are marked as `readonly` if they're never modified outside of the constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-readonly",
-    "title": "@typescript eslint: Prefer readonly",
-    "description": "Requires that private members are marked as `readonly` if they're never modified outside of the constructor",
+    "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
+    "title": "@typescript eslint: Prefer readonly parameter types",
+    "description": "Requires that function parameters are typed as readonly to prevent accidental mutation of inputs",
     "timeToFix": 5
   },
   {
@@ -9280,6 +9101,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_quotes",
+    "title": "@typescript eslint: Quotes",
+    "description": "Enforce the consistent use of either backticks, double, or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_require-array-sort-compare",
     "title": "@typescript eslint: Require array sort compare",
     "description": "Requires `Array#sort` calls to always provide a `compareFunction`",
@@ -9315,9 +9143,28 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_semi",
+    "title": "@typescript eslint: Semi",
+    "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_space-before-function-paren",
     "title": "@typescript eslint: Space before function paren",
     "description": "Enforces consistent spacing before function parenthesis",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": "int32Hint"
+      }
+    ],
+    "patternId": "@typescript-eslint_space-infix-ops",
+    "title": "@typescript eslint: Space infix ops",
+    "description": "This rule is aimed at ensuring there are spaces around infix operators.",
     "timeToFix": 5
   },
   {
@@ -9350,6 +9197,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_typedef",
+    "title": "@typescript eslint: Typedef",
+    "description": "Requires type annotations to exist",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_unbound-method",
     "title": "@typescript eslint: Unbound method",
     "description": "Enforces unbound methods are called with their expected scope",
@@ -9360,63 +9214,6 @@
     "patternId": "@typescript-eslint_unified-signatures",
     "title": "@typescript eslint: Unified signatures",
     "description": "Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "includeExports",
-        "description": "includeExports"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-duplicate-imports",
-    "title": "@typescript eslint: No duplicate imports",
-    "description": "Disallow duplicate imports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_quotes",
-    "title": "@typescript eslint: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_semi",
-    "title": "@typescript eslint: Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_typedef",
-    "title": "@typescript eslint: Typedef",
-    "description": "Requires type annotations to exist",
     "timeToFix": 5
   },
   {
@@ -9571,7 +9368,7 @@
     "parameters": [],
     "patternId": "vue_custom-event-name-casing",
     "title": "Vue: Custom event name casing",
-    "description": "Enforce custom event names always use \"kebab-case\"",
+    "description": "Enforce specific casing for custom event name",
     "timeToFix": 5
   },
   {
@@ -9751,6 +9548,13 @@
     "patternId": "vue_name-property-casing",
     "title": "Vue: Name property casing",
     "description": "Enforce specific casing for the name property in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_new-line-between-multi-line-property",
+    "title": "Vue: New line between multi line property",
+    "description": "Enforce new lines between multi-line properties in Vue components",
     "timeToFix": 5
   },
   {
@@ -10081,9 +9885,37 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-block",
+    "title": "Vue: No restricted block",
+    "description": "Disallow specific block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-call-after-await",
+    "title": "Vue: No restricted call after await",
+    "description": "Disallow asynchronously called restricted methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-component-options",
     "title": "Vue: No restricted component options",
     "description": "Disallow specific component option",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-custom-event",
+    "title": "Vue: No restricted custom event",
+    "description": "Disallow specific custom event",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-props",
+    "title": "Vue: No restricted props",
+    "description": "Disallow specific props",
     "timeToFix": 5
   },
   {
@@ -10558,6 +10390,13 @@
     "patternId": "vue_v-for-delimiter-style",
     "title": "Vue: V for delimiter style",
     "description": "Enforce `v-for` directive's delimiter style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_v-on-event-hyphenation",
+    "title": "Vue: V on event hyphenation",
+    "description": "Enforce v-on event naming style on custom components in template",
     "timeToFix": 5
   },
   {

@@ -1,6 +1,6 @@
 # no-computed-properties-in-native-classes
 
-:car: The `"extends": "plugin:ember/octane"` property in a configuration file enables this rule.
+:white_check_mark: The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
 
 Since the beginning of Ember's existence, Computed Properties (CPs) have been used to accomplish reactivity in the framework. With Ember Octane, new features were introduced including Glimmer components, native JavaScript classes and Tracked Properties. With Ember Octane's new programming model, CPs are no longer needed. If using native JavaScript classes, Tracked Properties should be used instead as they give us the same benefit of CPs but with less boilerplate and more flexibility.
 
@@ -72,6 +72,7 @@ This rule takes an optional object containing:
 
 ## References
 
+* [Ember 3.13 Release Notes](https://blog.emberjs.com/2019/09/25/ember-3-13-released.html) (minimum Ember version needed to use tracked properties)
 * [Ember Guides: Tracked Properties](https://octane-guides-preview.emberjs.com/release/state-management/tracked-properties/)
 * [Tracked Properties Deep Dive](https://www.pzuraq.com/coming-soon-in-ember-octane-part-3-tracked-properties/)
 * [ember-native-class-codemod](https://github.com/ember-codemods/ember-native-class-codemod)
