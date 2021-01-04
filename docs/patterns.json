@@ -5208,6 +5208,125 @@
       "enabled": false
     },
     {
+      "patternId": "functional_functional-parameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_immutable-data",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-class",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-conditional-statement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-expression-statement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-let",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-loop-statement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-method-signature",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-mixed-type",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-promise-reject",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-return-void",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-this-expression",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-throw-statement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-try-statement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_prefer-readonly-type",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_prefer-tacit",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_prefer-type-literal",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "graphql-fragments_limit-complexity",
       "level": "Info",
       "category": "CodeStyle",

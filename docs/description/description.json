@@ -5032,6 +5032,125 @@
   },
   {
     "parameters": [],
+    "patternId": "functional_functional-parameters",
+    "title": "Functional: Functional parameters",
+    "description": "Enforce functional parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_immutable-data",
+    "title": "Functional: Immutable data",
+    "description": "Enforce treating data as immutable.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-class",
+    "title": "Functional: No class",
+    "description": "Disallow classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-conditional-statement",
+    "title": "Functional: No conditional statement",
+    "description": "Disallow conditional statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-expression-statement",
+    "title": "Functional: No expression statement",
+    "description": "Disallow expression statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-let",
+    "title": "Functional: No let",
+    "description": "Disallow mutable variables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-loop-statement",
+    "title": "Functional: No loop statement",
+    "description": "Disallow imperative loops.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-method-signature",
+    "title": "Functional: No method signature",
+    "description": "Prefer property signatures with readonly modifiers over method signatures.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-mixed-type",
+    "title": "Functional: No mixed type",
+    "description": "Restrict types so that only members of the same kind of are allowed in them.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-promise-reject",
+    "title": "Functional: No promise reject",
+    "description": "Disallow try-catch[-finally] and try-finally patterns.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-return-void",
+    "title": "Functional: No return void",
+    "description": "Disallow functions that don't return anything.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-this-expression",
+    "title": "Functional: No this expression",
+    "description": "Disallow this access.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-throw-statement",
+    "title": "Functional: No throw statement",
+    "description": "Disallow throwing exceptions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_no-try-statement",
+    "title": "Functional: No try statement",
+    "description": "Disallow try-catch[-finally] and try-finally patterns.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_prefer-readonly-type",
+    "title": "Functional: Prefer readonly type",
+    "description": "Prefer readonly array over mutable arrays.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_prefer-tacit",
+    "title": "Functional: Prefer tacit",
+    "description": "Replaces `x => f(x)` with just `f`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_prefer-type-literal",
+    "title": "Functional: Prefer type literal",
+    "description": "Prefer Type Literals over Interfaces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "graphql-fragments_limit-complexity",
     "title": "Graphql fragments: Limit complexity",
     "description": "Verifies that your graphql`...` expressions are not too complex.",

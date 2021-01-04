@@ -37,6 +37,7 @@ export const defaultOptions: CLIEngine.Options = {
       "ember-suave",
       "filenames",
       "flowtype",
+      "functional",
       "graphql-fragments",
       "hapi",
       "html",
