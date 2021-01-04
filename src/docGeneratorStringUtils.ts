@@ -3,15 +3,13 @@ export function capitalize(s: string): string {
 }
 
 export function patternTitle(patternId: string): string {
-  const parts = patternId.split("/").map(s =>
-    capitalize(s)
-      .split("-")
-      .join(" ")
-  )
+  const parts = patternId
+    .split("/")
+    .map((s) => capitalize(s).split("-").join(" "))
   let res: string[]
   if (parts.length > 2) {
     const family = parts[0]
-    const subfamilies = parts.slice(1, parts.length - 1).map(s => `[${s}]`)
+    const subfamilies = parts.slice(1, parts.length - 1).map((s) => `[${s}]`)
     const name = parts[parts.length - 1]
     res = [family, subfamilies.concat(name).join(" ")]
   } else {

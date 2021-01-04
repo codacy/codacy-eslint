@@ -4205,6 +4205,13 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-current-route-name",
+    "title": "Ember: No current route name",
+    "description": "Disallow usage of the `currentRouteName()` test helper",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
     "title": "Ember: No deeply nested dependent keys with each",
     "description": "Disallow usage of deeply-nested computed property dependent keys with `@each`",
@@ -4626,6 +4633,13 @@
     "patternId": "ember_require-computed-property-dependencies",
     "title": "Ember: Require computed property dependencies",
     "description": "Require dependencies to be declared statically in computed properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_require-fetch-import",
+    "title": "Ember: Require fetch import",
+    "description": "Enforce explicit import for `fetch()`",
     "timeToFix": 5
   },
   {
@@ -7336,6 +7350,10 @@
       {
         "name": "checkFragmentShorthand",
         "description": "checkFragmentShorthand"
+      },
+      {
+        "name": "checkKeyMustBeforeSpread",
+        "description": "checkKeyMustBeforeSpread"
       }
     ],
     "patternId": "react_jsx-key",
@@ -7355,6 +7373,13 @@
     "patternId": "react_jsx-max-props-per-line",
     "title": "React: Jsx max props per line",
     "description": "Limit maximum of props on a single line in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-newline",
+    "title": "React: Jsx newline",
+    "description": "Enforce a new line after jsx elements and expressions",
     "timeToFix": 5
   },
   {
@@ -7390,6 +7415,13 @@
     "patternId": "react_jsx-no-comment-textnodes",
     "title": "React: Jsx no comment textnodes",
     "description": "Comments inside children section of tag should be placed inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-constructed-context-values",
+    "title": "React: Jsx no constructed context values",
+    "description": "Prevents JSX context provider values from taking values that will cause needless rerenders.",
     "timeToFix": 5
   },
   {

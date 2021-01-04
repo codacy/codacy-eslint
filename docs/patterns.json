@@ -1,6 +1,6 @@
 {
   "name": "eslint",
-  "version": "7.16.0",
+  "version": "7.17.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -4332,6 +4332,13 @@
       "enabled": false
     },
     {
+      "patternId": "ember_no-current-route-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-deeply-nested-dependent-keys-with-each",
       "level": "Info",
       "category": "CodeStyle",
@@ -4761,6 +4768,13 @@
         }
       ],
       "enabled": true
+    },
+    {
+      "patternId": "ember_require-fetch-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "ember_require-return-from-computed",
@@ -7687,6 +7701,10 @@
         {
           "name": "checkFragmentShorthand",
           "default": false
+        },
+        {
+          "name": "checkKeyMustBeforeSpread",
+          "default": false
         }
       ],
       "enabled": true
@@ -7700,6 +7718,13 @@
     },
     {
       "patternId": "react_jsx-max-props-per-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react_jsx-newline",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -7739,6 +7764,13 @@
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "react_jsx-no-constructed-context-values",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "react_jsx-no-duplicate-props",
@@ -7910,8 +7942,8 @@
     },
     {
       "patternId": "react_no-danger-with-children",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -8165,8 +8197,8 @@
     },
     {
       "patternId": "react_style-prop-object",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
