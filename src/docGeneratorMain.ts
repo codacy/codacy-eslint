@@ -76,6 +76,13 @@ async function main() {
       `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
   )
 
+  console.log("Generate functional description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/jonaskello/eslint-plugin-functional/master/docs/rules/${pattern}.md`,
+    "functional"
+  )
+
   console.log("Generate import description files")
   await docGenerator.downloadDocs(
     (pattern) =>
