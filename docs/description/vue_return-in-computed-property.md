@@ -13,7 +13,7 @@ since: v3.7.0
 
 ## :book: Rule Details
 
-This rule enforces that a `return` statement is present in `computed` properties.
+This rule enforces that a `return` statement is present in `computed` properties and functions.
 
 <eslint-code-block :rules="{'vue/return-in-computed-property': ['error']}">
 
@@ -39,6 +39,39 @@ export default {
       }
     },
     baf: function () {}
+  }
+}
+</script>
+```
+
+</eslint-code-block>
+
+<eslint-code-block :rules="{'vue/return-in-computed-property': ['error']}">
+
+```vue
+<script>
+import {computed} from 'vue'
+export default {
+  setup() {
+    const foobar = useFoobar()
+
+    /* ✓ GOOD */
+    const foo = computed(() => {
+      if (foobar.bar) {
+        return foobar.baz
+      } else {
+        return foobar.baf
+      }
+    })
+    const bar = computed(() => false)
+
+    /* ✗ BAD */
+    const baz = computed(() => {
+      if (foobar.baf) {
+        return foobar.baf
+      }
+    })
+    const baf = computed(() => {})
   }
 }
 </script>
