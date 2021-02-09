@@ -211,7 +211,7 @@
     "@types/simple-mock": "^0.8.1",
     "chai": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unused-imports": "^1.0.3",
+    "eslint-plugin-unused-imports": "^1.1.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
     "mocha": "^8.2.1",
