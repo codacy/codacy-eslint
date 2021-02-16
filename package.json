@@ -125,7 +125,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-babel-module": "^5.2.0",
     "eslint-import-resolver-node": "^0.3.4",
-    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-angular": "^4.0.1",
     "eslint-plugin-angularjs-security-rules": "^1.0.8",
