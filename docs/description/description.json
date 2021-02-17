@@ -4312,6 +4312,13 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-html-safe",
+    "title": "Ember: No html safe",
+    "description": "Disallow the use of `htmlSafe`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
     "title": "Ember: No incorrect calls with inline anonymous functions",
     "description": "Disallow inline anonymous functions as arguments to `debounce`, `once`, and `scheduleOnce`",
@@ -5315,6 +5322,12 @@
   },
   {
     "parameters": [],
+    "patternId": "jasmine_prefer-toBeUndefined",
+    "title": "Jasmine: Prefer toBeUndefined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_consistent-test-it",
     "title": "Jest: Consistent test it",
     "description": "Have control over `test` and `it` usages",
@@ -6065,7 +6078,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "exemptAsync",
+        "description": "exemptAsync"
+      },
+      {
+        "name": "reportMissingReturnForUndefinedTypes",
+        "description": "reportMissingReturnForUndefinedTypes"
+      }
+    ],
     "patternId": "jsdoc_require-returns-check",
     "title": "Jsdoc: Require returns check",
     "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
@@ -6089,6 +6111,50 @@
     "parameters": [],
     "patternId": "jsdoc_require-throws",
     "title": "Jsdoc: Require throws",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "forceRequireNext",
+        "description": "forceRequireNext"
+      },
+      {
+        "name": "forceRequireYields",
+        "description": "forceRequireYields"
+      },
+      {
+        "name": "next",
+        "description": "next"
+      },
+      {
+        "name": "nextWithGeneratorTag",
+        "description": "nextWithGeneratorTag"
+      },
+      {
+        "name": "withGeneratorTag",
+        "description": "withGeneratorTag"
+      }
+    ],
+    "patternId": "jsdoc_require-yields",
+    "title": "Jsdoc: Require yields",
+    "description": "Requires yields are documented.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkGeneratorsOnly",
+        "description": "checkGeneratorsOnly"
+      },
+      {
+        "name": "next",
+        "description": "next"
+      }
+    ],
+    "patternId": "jsdoc_require-yields-check",
+    "title": "Jsdoc: Require yields check",
+    "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
     "timeToFix": 5
   },
   {
@@ -8049,6 +8115,13 @@
   },
   {
     "parameters": [],
+    "patternId": "relay_function-required-argument",
+    "title": "Relay: Function required argument",
+    "description": "Validates that the second argument is passed to relay functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "relay_hook-required-argument",
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
@@ -9140,6 +9213,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_object-curly-spacing",
+    "title": "@typescript eslint: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_prefer-as-const",
     "title": "@typescript eslint: Prefer as const",
     "description": "Prefer usage of `as const` over literal type",
@@ -9297,6 +9377,13 @@
     "patternId": "@typescript-eslint_semi",
     "title": "@typescript eslint: Semi",
     "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
+    "title": "@typescript eslint: Sort type union intersection members",
+    "description": "Enforces that members of a type union/intersection are sorted alphabetically",
     "timeToFix": 5
   },
   {
@@ -9567,6 +9654,26 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "button",
+        "description": "button"
+      },
+      {
+        "name": "submit",
+        "description": "submit"
+      },
+      {
+        "name": "reset",
+        "description": "reset"
+      }
+    ],
+    "patternId": "vue_html-button-has-type",
+    "title": "Vue: Html button has type",
+    "description": "Disallow usage of button without an explicit type attribute",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "vue_html-closing-bracket-newline",
     "title": "Vue: Html closing bracket newline",
@@ -9710,6 +9817,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_next-tick-style",
+    "title": "Vue: Next tick style",
+    "description": "Enforce Promise or callback style in `nextTick`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-arrow-functions-in-watch",
     "title": "Vue: No arrow functions in watch",
     "description": "Disallow using arrow functions to define watcher",
@@ -9741,6 +9855,18 @@
     "patternId": "vue_no-confusing-v-for-v-if",
     "title": "Vue: No confusing v for v if",
     "description": "Disallow confusing `v-for` and `v-if` on the same element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkLoops",
+        "description": "checkLoops"
+      }
+    ],
+    "patternId": "vue_no-constant-condition",
+    "title": "Vue: No constant condition",
+    "description": "Disallow constant expressions in conditions",
     "timeToFix": 5
   },
   {
@@ -10569,6 +10695,13 @@
     "patternId": "vue_v-slot-style",
     "title": "Vue: V slot style",
     "description": "Enforce `v-slot` directive style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-next-tick",
+    "title": "Vue: Valid next tick",
+    "description": "Enforce valid `nextTick` function calls",
     "timeToFix": 5
   },
   {
