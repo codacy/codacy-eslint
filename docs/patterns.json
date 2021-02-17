@@ -4439,6 +4439,13 @@
       "enabled": true
     },
     {
+      "patternId": "ember_no-html-safe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
       "level": "Info",
       "category": "CodeStyle",
@@ -5516,6 +5523,13 @@
       "enabled": false
     },
     {
+      "patternId": "jasmine_prefer-toBeUndefined",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_consistent-test-it",
       "level": "Info",
       "category": "CodeStyle",
@@ -6278,7 +6292,16 @@
       "patternId": "jsdoc_require-returns-check",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "exemptAsync",
+          "default": true
+        },
+        {
+          "name": "reportMissingReturnForUndefinedTypes",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -6300,6 +6323,50 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-yields",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "forceRequireNext",
+          "default": false
+        },
+        {
+          "name": "forceRequireYields",
+          "default": false
+        },
+        {
+          "name": "next",
+          "default": false
+        },
+        {
+          "name": "nextWithGeneratorTag",
+          "default": false
+        },
+        {
+          "name": "withGeneratorTag",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-yields-check",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkGeneratorsOnly",
+          "default": false
+        },
+        {
+          "name": "next",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -8399,6 +8466,13 @@
       "enabled": false
     },
     {
+      "patternId": "relay_function-required-argument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "relay_hook-required-argument",
       "level": "Info",
       "category": "CodeStyle",
@@ -9587,6 +9661,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_object-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_prefer-as-const",
       "level": "Info",
       "category": "CodeStyle",
@@ -9742,6 +9823,13 @@
     },
     {
       "patternId": "@typescript-eslint_semi",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_sort-type-union-intersection-members",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10015,6 +10103,26 @@
       "enabled": false
     },
     {
+      "patternId": "vue_html-button-has-type",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "button",
+          "default": true
+        },
+        {
+          "name": "submit",
+          "default": true
+        },
+        {
+          "name": "reset",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "vue_html-closing-bracket-newline",
       "level": "Info",
       "category": "CodeStyle",
@@ -10157,6 +10265,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_next-tick-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-arrow-functions-in-watch",
       "level": "Info",
       "category": "CodeStyle",
@@ -10190,6 +10305,18 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
+    },
+    {
+      "patternId": "vue_no-constant-condition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkLoops",
+          "default": true
+        }
+      ],
+      "enabled": true
     },
     {
       "patternId": "vue_no-custom-modifiers-on-v-model",
@@ -11014,6 +11141,13 @@
     },
     {
       "patternId": "vue_v-slot-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_valid-next-tick",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
