@@ -23,6 +23,7 @@ export const defaultOptions: CLIEngine.Options = {
       qunit: true,
     },
     plugins: [
+      "airbnb",
       "angular",
       "angularjs-security-rules",
       "babel",

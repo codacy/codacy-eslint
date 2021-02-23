@@ -4907,6 +4907,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_object-type-curly-spacing",
+    "title": "Flowtype: Object type curly spacing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_object-type-delimiter",
     "title": "Flowtype: Object type delimiter",
     "timeToFix": 5
