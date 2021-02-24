@@ -23,7 +23,6 @@ export const defaultOptions: CLIEngine.Options = {
       qunit: true,
     },
     plugins: [
-      "airbnb",
       "angular",
       "angularjs-security-rules",
       "babel",
@@ -72,6 +71,7 @@ export const defaultOptions: CLIEngine.Options = {
       "standard",
       "@typescript-eslint",
       "vue",
+      "@vue/airbnb",
       "wdio",
       "xss",
     ],
