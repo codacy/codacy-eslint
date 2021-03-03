@@ -27,4 +27,4 @@ RUN chown -R docker:docker /docs
 
 WORKDIR /src
 
-CMD ["node", "--max-old-space-size=2536", "/dist/src/index.js"]
+CMD ["node", "/dist/src/index.js"]
