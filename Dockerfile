@@ -1,9 +1,9 @@
-ARG NODE_IMAGE_VERSION=14-alpine
+ARG NODE_IMAGE_VERSION=15-alpine
 
 FROM node:$NODE_IMAGE_VERSION as builder
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
@@ -18,7 +18,7 @@ COPY --from=builder package.json ./
 COPY --from=builder package-lock.json ./
 COPY --from=builder docs docs
 
-RUN npm install --production
+RUN npm install --legacy-peer-deps --production
 
 RUN rm -rf /package.json /package-lock.json
 
