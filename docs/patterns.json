@@ -5061,6 +5061,13 @@
       "enabled": false
     },
     {
+      "patternId": "flowtype_object-type-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "flowtype_object-type-delimiter",
       "level": "Info",
       "category": "CodeStyle",
