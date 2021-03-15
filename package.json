@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@angular-eslint/builder": "^1.2.0",
-    "@angular-eslint/eslint-plugin": "^1.2.0",
+    "@angular-eslint/eslint-plugin": "^2.0.1",
     "@angular-eslint/eslint-plugin-template": "^1.2.0",
     "@angular-eslint/schematics": "^1.2.0",
     "@angular-eslint/template-parser": "^1.2.0",
