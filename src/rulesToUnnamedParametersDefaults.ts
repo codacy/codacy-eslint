@@ -31,6 +31,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["quotes", "double"],
   ["padded-blocks", "always"],
   ["semi", "always"],
+  ["sort-keys", "asc"],
   ["space-before-blocks", "always"],
   ["space-before-function-paren", "always"],
   ["space-in-parens", "never"],
