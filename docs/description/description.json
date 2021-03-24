@@ -2525,6 +2525,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "caseSensitive",
         "description": "caseSensitive"
       },
@@ -4857,6 +4861,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_no-internal-flow-type",
+    "title": "Flowtype: No internal flow type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_no-mixed",
     "title": "Flowtype: No mixed",
     "timeToFix": 5
@@ -5615,6 +5625,13 @@
     "patternId": "jest_require-top-level-describe",
     "title": "Jest: Require top level describe",
     "description": "Require test cases and hooks to be inside a `describe` block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_unbound-method",
+    "title": "Jest: Unbound method",
+    "description": "Enforces unbound methods are called with their expected scope",
     "timeToFix": 5
   },
   {
@@ -7567,10 +7584,15 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "prevent",
+        "description": "prevent"
+      }
+    ],
     "patternId": "react_jsx-newline",
     "title": "React: Jsx newline",
-    "description": "Enforce a new line after jsx elements and expressions",
+    "description": "Require or prevent a new line after jsx elements and expressions.",
     "timeToFix": 5
   },
   {
@@ -7910,6 +7932,13 @@
     "patternId": "react_no-unsafe",
     "title": "React: No unsafe",
     "description": "Prevent usage of unsafe lifecycle methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_no-unstable-nested-components",
+    "title": "React: No unstable nested components",
+    "description": "Prevent creating unstable components inside components",
     "timeToFix": 5
   },
   {

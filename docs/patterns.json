@@ -2539,6 +2539,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "asc"
+        },
+        {
           "name": "caseSensitive",
           "default": true
         },
@@ -5006,6 +5010,13 @@
       "enabled": false
     },
     {
+      "patternId": "flowtype_no-internal-flow-type",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "flowtype_no-mixed",
       "level": "Info",
       "category": "CodeStyle",
@@ -5816,6 +5827,13 @@
     },
     {
       "patternId": "jest_require-top-level-describe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest_unbound-method",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -7920,7 +7938,12 @@
       "patternId": "react_jsx-newline",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "prevent",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -8260,6 +8283,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "react_no-unstable-nested-components",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
       "enabled": false
     },
     {
