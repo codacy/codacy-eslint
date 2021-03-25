@@ -709,6 +709,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "always"
+        },
+        {
           "name": "exceptAfterSingleLine",
           "default": false
         }
