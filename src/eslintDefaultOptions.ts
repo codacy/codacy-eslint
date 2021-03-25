@@ -102,6 +102,9 @@ export const defaultOptions: CLIEngine.Options = {
           alwaysTryTypes: true,
         },
       },
+      jest: {
+        version: 26
+      }
     },
   },
 }
