@@ -1,4 +1,8 @@
-const blacklistRegexes: RegExp[] = [/import\/.+/, /node\/no-missing-require/]
+const blacklistRegexes: RegExp[] = [
+  /import\/.+/,
+  /node\/no-missing-require/,
+  /promise\/no-native/,
+]
 
 const documentationBlacklistRegexes: RegExp[] = []
 

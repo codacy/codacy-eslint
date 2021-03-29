@@ -3132,13 +3132,6 @@
       "enabled": false
     },
     {
-      "patternId": "promise_no-native",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "promise_no-callback-in-promise",
       "level": "Info",
       "category": "CodeStyle",

@@ -40,6 +40,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["space-in-parens", "never"],
   ["spaced-comment", "always"],
   ["strict", "function"],
+  ["@typescript-eslint/indent", 2],
   ["vue/brace-style", "1tbs"],
   ["vue/sort-keys", "asc"],
   ["wrap-iife", "outside"],
