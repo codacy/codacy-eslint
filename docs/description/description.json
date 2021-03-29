@@ -4741,6 +4741,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "exceptAfterSingleLine",
         "description": "exceptAfterSingleLine"
       }
@@ -9554,6 +9558,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "allowSingleLine",
         "description": "allowSingleLine"
       }
@@ -10609,6 +10617,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "caseSensitive",
         "description": "caseSensitive"
