@@ -26,6 +26,9 @@ async function main() {
     docGenerator.generateDescriptionEntries()
   )
 
+  console.log("Generate all-patterns multiple-test patterns.xml")
+  await docGenerator.generateAllPatternsMultipleTest()
+
   const githubBaseUrl = "https://raw.githubusercontent.com"
 
   console.log("Generate angular description files")

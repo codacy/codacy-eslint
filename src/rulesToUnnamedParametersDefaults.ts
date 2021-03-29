@@ -4,6 +4,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["array-bracket-spacing", "never"],
   ["arrow-parens", "always"],
   ["block-spacing", "always"],
+  ["brace-style", "1tbs"],
   ["comma-dangle", "never"],
   ["comma-style", "last"],
   ["complexity", 4],
@@ -11,6 +12,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["consistent-this", "self"],
   ["curly", "all"],
   ["dot-location", "property"],
+  ["ember-suave/lines-between-object-properties", "never"],
   ["eqeqeq", "smart"],
   ["filenames/match-exported", "camel"],
   ["filenames/match-regex", "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"],
@@ -38,9 +40,10 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["space-in-parens", "never"],
   ["spaced-comment", "always"],
   ["strict", "function"],
+  ["vue/brace-style", "1tbs"],
+  ["vue/sort-keys", "asc"],
   ["wrap-iife", "outside"],
   ["yoda", "never"],
-  ["brace-style", "1tbs"],
 ])
 
 export class rulesNamedParametersAndDefaults {

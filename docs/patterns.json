@@ -4878,6 +4878,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "never"
+        },
+        {
           "name": "exceptAfterSingleLine",
           "default": false
         }
@@ -10008,6 +10012,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "1tbs"
+        },
+        {
           "name": "allowSingleLine",
           "default": false
         }
@@ -11063,6 +11071,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "asc"
+        },
         {
           "name": "caseSensitive",
           "default": true
