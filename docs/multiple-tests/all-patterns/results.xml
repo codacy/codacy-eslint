@@ -3,4 +3,7 @@
   <file name="empty.js">
     <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
   </file>
+  <file name="empty.ts">
+    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
+  </file>
 </checkstyle>

@@ -328,7 +328,6 @@
   <module name="promise_catch-or-return" />
   <module name="promise_prefer-await-to-callbacks" />
   <module name="promise_prefer-await-to-then" />
-  <module name="promise_no-native" />
   <module name="promise_no-callback-in-promise" />
   <module name="promise_no-promise-in-callback" />
   <module name="promise_no-nesting" />

@@ -3116,12 +3116,6 @@
   },
   {
     "parameters": [],
-    "patternId": "promise_no-native",
-    "title": "Promise: No native",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "promise_no-callback-in-promise",
     "title": "Promise: No callback in promise",
     "timeToFix": 5
