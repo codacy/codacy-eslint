@@ -9077,6 +9077,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "1tbs"
+        },
+        {
           "name": "allowSingleLine",
           "default": false
         }
@@ -9205,6 +9209,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": 2
+        },
         {
           "name": "SwitchCase",
           "default": 0
