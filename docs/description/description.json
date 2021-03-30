@@ -8624,6 +8624,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "allowSingleLine",
         "description": "allowSingleLine"
       }
@@ -8752,6 +8756,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "SwitchCase",
         "description": "SwitchCase"
