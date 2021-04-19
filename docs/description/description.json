@@ -740,7 +740,7 @@
     "parameters": [],
     "patternId": "max-lines-per-function",
     "title": "Max lines per function",
-    "description": "Enforce a maximum number of line of code in a function",
+    "description": "Enforce a maximum number of lines of code in a function",
     "timeToFix": 5
   },
   {
@@ -1238,6 +1238,10 @@
       {
         "name": "string",
         "description": "string"
+      },
+      {
+        "name": "disallowTemplateShorthand",
+        "description": "disallowTemplateShorthand"
       }
     ],
     "patternId": "no-implicit-coercion",
@@ -1449,7 +1453,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreNonDeclaration",
+        "description": "ignoreNonDeclaration"
+      }
+    ],
     "patternId": "no-multi-assign",
     "title": "No multi assign",
     "description": "Disallow use of chained assignment expressions",
@@ -1752,7 +1761,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowInParentheses",
+        "description": "allowInParentheses"
+      }
+    ],
     "patternId": "no-sequences",
     "title": "No sequences",
     "description": "Disallow comma operators",
@@ -2008,6 +2022,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "no-unused-expressions",
@@ -2168,7 +2186,7 @@
     "parameters": [],
     "patternId": "object-curly-newline",
     "title": "Object curly newline",
-    "description": "Enforce consistent line breaks inside braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces",
     "timeToFix": 5
   },
   {
@@ -3761,6 +3779,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "babel_no-unused-expressions",
@@ -4904,6 +4926,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "flowtype_no-unused-expressions",
@@ -4927,6 +4953,12 @@
     "parameters": [],
     "patternId": "flowtype_object-type-delimiter",
     "title": "Flowtype: Object type delimiter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_quotes",
+    "title": "Flowtype: Quotes",
     "timeToFix": 5
   },
   {
@@ -5047,6 +5079,12 @@
     "parameters": [],
     "patternId": "flowtype_use-flow-type",
     "title": "Flowtype: Use flow type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_use-read-only-spread",
+    "title": "Flowtype: Use read only spread",
     "timeToFix": 5
   },
   {
@@ -9168,6 +9206,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-argument",
+    "title": "@typescript eslint: No unsafe argument",
+    "description": "Disallows calling an function with an any type value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-assignment",
     "title": "@typescript eslint: No unsafe assignment",
     "description": "Disallows assigning any to variables and properties",
@@ -9207,6 +9252,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "@typescript-eslint_no-unused-expressions",
@@ -10094,6 +10143,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "vue_no-invalid-model-keys",
+    "title": "Vue: No invalid model keys",
+    "description": "Require valid keys in model option",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "skipComments",
@@ -10365,6 +10421,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-unused-refs",
+    "title": "Vue: No unused refs",
+    "description": "Disallow unused refs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-unused-vars",
     "title": "Vue: No unused vars",
     "description": "Disallow unused variable definitions of v-for directives or scope attributes",
@@ -10437,7 +10500,7 @@
     "parameters": [],
     "patternId": "vue_object-curly-newline",
     "title": "Vue: Object curly newline",
-    "description": "Enforce consistent line breaks inside braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces",
     "timeToFix": 5
   },
   {
@@ -10887,6 +10950,661 @@
     "parameters": [],
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "sortCharacterClasses",
+        "description": "sortCharacterClasses"
+      }
+    ],
+    "patternId": "unicorn_better-regex",
+    "title": "Unicorn: Better regex",
+    "description": "Improve regexes by making them shorter, consistent, and safer.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_catch-error-name",
+    "title": "Unicorn: Catch error name",
+    "description": "Enforce a specific parameter name in catch clauses.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_consistent-destructuring",
+    "title": "Unicorn: Consistent destructuring",
+    "description": "Use destructured variables over properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkArrowFunctions",
+        "description": "checkArrowFunctions"
+      }
+    ],
+    "patternId": "unicorn_consistent-function-scoping",
+    "title": "Unicorn: Consistent function scoping",
+    "description": "Move function definitions to the highest possible scope.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_custom-error-definition",
+    "title": "Unicorn: Custom error definition",
+    "description": "Enforce correct `Error` subclassing.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_empty-brace-spaces",
+    "title": "Unicorn: Empty brace spaces",
+    "description": "Enforce no spaces between braces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_error-message",
+    "title": "Unicorn: Error message",
+    "description": "Enforce passing a `message` value when creating a built-in error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_escape-case",
+    "title": "Unicorn: Escape case",
+    "description": "Require escape sequences to use uppercase values.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreDatesOnPullRequests",
+        "description": "ignoreDatesOnPullRequests"
+      },
+      {
+        "name": "allowWarningComments",
+        "description": "allowWarningComments"
+      }
+    ],
+    "patternId": "unicorn_expiring-todo-comments",
+    "title": "Unicorn: Expiring todo comments",
+    "description": "Add expiration conditions to TODO comments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "non-zero",
+        "description": "non-zero"
+      }
+    ],
+    "patternId": "unicorn_explicit-length-check",
+    "title": "Unicorn: Explicit length check",
+    "description": "Enforce explicitly comparing the `length` property of a value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_filename-case",
+    "title": "Unicorn: Filename case",
+    "description": "Enforce a case style for filenames.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreImports",
+        "description": "ignoreImports"
+      }
+    ],
+    "patternId": "unicorn_import-index",
+    "title": "Unicorn: Import index",
+    "description": "Enforce importing index files with `.`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_import-style",
+    "title": "Unicorn: Import style",
+    "description": "Enforce specific import styles per module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_new-for-builtins",
+    "title": "Unicorn: New for builtins",
+    "description": "Enforce the use of `new` for all builtins, except `String`, `Number`, `Boolean`, `Symbol` and `BigInt`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-abusive-eslint-disable",
+    "title": "Unicorn: No abusive eslint disable",
+    "description": "Enforce specifying rules to disable in `eslint-disable` comments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-callback-reference",
+    "title": "Unicorn: No array callback reference",
+    "description": "Prevent passing a function reference directly to iterator methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-for-each",
+    "title": "Unicorn: No array for each",
+    "description": "Prefer `for…of` over `Array#forEach(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-push-push",
+    "title": "Unicorn: No array push push",
+    "description": "Enforce combining multiple `Array#push()` into one call.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-reduce",
+    "title": "Unicorn: No array reduce",
+    "description": "Disallow `Array#reduce()` and `Array#reduceRight()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-console-spaces",
+    "title": "Unicorn: No console spaces",
+    "description": "Do not use leading/trailing space between `console.log` parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-for-loop",
+    "title": "Unicorn: No for loop",
+    "description": "Do not use a `for` loop that can be replaced with a `for-of` loop.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-hex-escape",
+    "title": "Unicorn: No hex escape",
+    "description": "Enforce the use of Unicode escapes instead of hexadecimal escapes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-instanceof-array",
+    "title": "Unicorn: No instanceof array",
+    "description": "Require `Array.isArray()` instead of `instanceof Array`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-keyword-prefix",
+    "title": "Unicorn: No keyword prefix",
+    "description": "Disallow identifiers starting with `new` or `class`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-lonely-if",
+    "title": "Unicorn: No lonely if",
+    "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-nested-ternary",
+    "title": "Unicorn: No nested ternary",
+    "description": "Disallow nested ternary expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-new-array",
+    "title": "Unicorn: No new array",
+    "description": "Disallow `new Array()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-new-buffer",
+    "title": "Unicorn: No new buffer",
+    "description": "Enforce the use of `Buffer.from()` and `Buffer.alloc()` instead of the deprecated `new Buffer()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkStrictEquality",
+        "description": "checkStrictEquality"
+      }
+    ],
+    "patternId": "unicorn_no-null",
+    "title": "Unicorn: No null",
+    "description": "Disallow the use of the `null` literal.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-object-as-default-parameter",
+    "title": "Unicorn: No object as default parameter",
+    "description": "Disallow the use of objects as default parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-process-exit",
+    "title": "Unicorn: No process exit",
+    "description": "Disallow `process.exit()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-static-only-class",
+    "title": "Unicorn: No static only class",
+    "description": "Forbid classes that only have static members.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-this-assignment",
+    "title": "Unicorn: No this assignment",
+    "description": "Disallow assigning `this` to a variable.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unreadable-array-destructuring",
+    "title": "Unicorn: No unreadable array destructuring",
+    "description": "Disallow unreadable array destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
+    "description": "Disallow unsafe regular expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unused-properties",
+    "title": "Unicorn: No unused properties",
+    "description": "Disallow unused object properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-undefined",
+    "title": "Unicorn: No useless undefined",
+    "description": "Disallow useless `undefined`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-zero-fractions",
+    "title": "Unicorn: No zero fractions",
+    "description": "Disallow number literals with zero fractions or dangling dots.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_number-literal-case",
+    "title": "Unicorn: Number literal case",
+    "description": "Enforce proper case for numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "onlyIfContainsSeparator",
+        "description": "onlyIfContainsSeparator"
+      }
+    ],
+    "patternId": "unicorn_numeric-separators-style",
+    "title": "Unicorn: Numeric separators style",
+    "description": "Enforce the style of numeric separators by correctly grouping digits.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-add-event-listener",
+    "title": "Unicorn: Prefer add event listener",
+    "description": "Prefer `.addEventListener()` and `.removeEventListener()` over `on`-functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-find",
+    "title": "Unicorn: Prefer array find",
+    "description": "Prefer `.find(…)` over the first element from `.filter(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-flat-map",
+    "title": "Unicorn: Prefer array flat map",
+    "description": "Prefer `Array#flat()` over legacy techniques to flatten arrays.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-flat",
+    "title": "Unicorn: Prefer array flat",
+    "description": "Prefer `.flatMap(…)` over `.map(…).flat()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-index-of",
+    "title": "Unicorn: Prefer array index of",
+    "description": "Prefer `Array#indexOf()` over `Array#findIndex()` when looking for the index of an item.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-some",
+    "title": "Unicorn: Prefer array some",
+    "description": "Prefer `.some(…)` over `.find(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-date-now",
+    "title": "Unicorn: Prefer date now",
+    "description": "Prefer `Date.now()` to get the number of milliseconds since the Unix Epoch.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-default-parameters",
+    "title": "Unicorn: Prefer default parameters",
+    "description": "Prefer default parameters over reassignment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-append",
+    "title": "Unicorn: Prefer dom node append",
+    "description": "Prefer `Node#append()` over `Node#appendChild()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-dataset",
+    "title": "Unicorn: Prefer dom node dataset",
+    "description": "Prefer using `.dataset` on DOM elements over `.setAttribute(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-remove",
+    "title": "Unicorn: Prefer dom node remove",
+    "description": "Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-text-content",
+    "title": "Unicorn: Prefer dom node text content",
+    "description": "Prefer `.textContent` over `.innerText`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-includes",
+    "title": "Unicorn: Prefer includes",
+    "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-keyboard-event-key",
+    "title": "Unicorn: Prefer keyboard event key",
+    "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-math-trunc",
+    "title": "Unicorn: Prefer math trunc",
+    "description": "Enforce the use of `Math.trunc` instead of bitwise operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-modern-dom-apis",
+    "title": "Unicorn: Prefer modern dom apis",
+    "description": "Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()` or `.prepend()` over `insertAdjacentText()` and `insertAdjacentElement()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-negative-index",
+    "title": "Unicorn: Prefer negative index",
+    "description": "Prefer negative index over `.length - index` for `{String,Array,TypedArray}#slice()` and `Array#splice()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkInfinity",
+        "description": "checkInfinity"
+      }
+    ],
+    "patternId": "unicorn_prefer-number-properties",
+    "title": "Unicorn: Prefer number properties",
+    "description": "Prefer `Number` static properties over global ones.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-optional-catch-binding",
+    "title": "Unicorn: Prefer optional catch binding",
+    "description": "Prefer omitting the `catch` binding parameter.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-query-selector",
+    "title": "Unicorn: Prefer query selector",
+    "description": "Prefer `.querySelector()` over `.getElementById()`, `.querySelectorAll()` over `.getElementsByClassName()` and `.getElementsByTagName()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-reflect-apply",
+    "title": "Unicorn: Prefer reflect apply",
+    "description": "Prefer `Reflect.apply()` over `Function#apply()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-regexp-test",
+    "title": "Unicorn: Prefer regexp test",
+    "description": "Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-set-has",
+    "title": "Unicorn: Prefer set has",
+    "description": "Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-spread",
+    "title": "Unicorn: Prefer spread",
+    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)` and `Array#slice()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-replace-all",
+    "title": "Unicorn: Prefer string replace all",
+    "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-slice",
+    "title": "Unicorn: Prefer string slice",
+    "description": "Prefer `String#slice()` over `String#substr()` and `String#substring()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-starts-ends-with",
+    "title": "Unicorn: Prefer string starts ends with",
+    "description": "Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-trim-start-end",
+    "title": "Unicorn: Prefer string trim start end",
+    "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "minimumCases",
+        "description": "minimumCases"
+      },
+      {
+        "name": "emptyDefaultCase",
+        "description": "emptyDefaultCase"
+      }
+    ],
+    "patternId": "unicorn_prefer-switch",
+    "title": "Unicorn: Prefer switch",
+    "description": "Prefer `switch` over multiple `else-if`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-ternary",
+    "title": "Unicorn: Prefer ternary",
+    "description": "Prefer ternary expressions over simple `if-else` statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-type-error",
+    "title": "Unicorn: Prefer type error",
+    "description": "Enforce throwing `TypeError` in type checking conditions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prevent-abbreviations",
+    "title": "Unicorn: Prevent abbreviations",
+    "description": "Prevent abbreviations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_string-content",
+    "title": "Unicorn: String content",
+    "description": "Enforce better string content.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_throw-new-error",
+    "title": "Unicorn: Throw new error",
+    "description": "Require `new` when throwing an error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-instanceof",
+    "title": "Unicorn: No array instanceof",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-fn-reference-in-iterator",
+    "title": "Unicorn: No fn reference in iterator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-reduce",
+    "title": "Unicorn: No reduce",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dataset",
+    "title": "Unicorn: Prefer dataset",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-event-key",
+    "title": "Unicorn: Prefer event key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-exponentiation-operator",
+    "title": "Unicorn: Prefer exponentiation operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-flat-map",
+    "title": "Unicorn: Prefer flat map",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-append",
+    "title": "Unicorn: Prefer node append",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-remove",
+    "title": "Unicorn: Prefer node remove",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-replace-all",
+    "title": "Unicorn: Prefer replace all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-starts-ends-with",
+    "title": "Unicorn: Prefer starts ends with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-text-content",
+    "title": "Unicorn: Prefer text content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-trim-start-end",
+    "title": "Unicorn: Prefer trim start end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_regex-shorthand",
+    "title": "Unicorn: Regex shorthand",
     "timeToFix": 5
   }
 ]
