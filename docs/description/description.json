@@ -11606,5 +11606,187 @@
     "patternId": "unicorn_regex-shorthand",
     "title": "Unicorn: Regex shorthand",
     "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_always-simplification",
+    "title": "Ramda: Always simplification",
+    "description": "Detects cases where `always` is redundant",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_any-pass-simplification",
+    "title": "Ramda: Any pass simplification",
+    "description": "Detects when `anyPass` with complements can be replaced by complement of `allPass`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_both-simplification",
+    "title": "Ramda: Both simplification",
+    "description": "`both` simplifications, like replacing negation by `either`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_complement-simplification",
+    "title": "Ramda: Complement simplification",
+    "description": "`complement` simplifications, like when the negation should be replaced by an assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-pipe-style",
+    "title": "Ramda: Compose pipe style",
+    "description": "Enforces `compose` for single line expression and `pipe` for multiline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-simplification",
+    "title": "Ramda: Compose simplification",
+    "description": "Detects when there are better functions that behave the same as `compose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_cond-simplification",
+    "title": "Ramda: Cond simplification",
+    "description": "`cond` simplification, like suggesting ifElse when too few parameters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_either-simplification",
+    "title": "Ramda: Either simplification",
+    "description": "`either` simplifications, like replacing negation by `both`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_eq-by-simplification",
+    "title": "Ramda: Eq by simplification",
+    "description": "Detects when `eqBy(prop(_))` can be replaced by `eqProps(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_filter-simplification",
+    "title": "Ramda: Filter simplification",
+    "description": "`filter` simplifications, like `filter(complement(_))` to `reject(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_if-else-simplification",
+    "title": "Ramda: If else simplification",
+    "description": "`ifElse` simplifications, like replacing by `when` or `unless`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_map-simplification",
+    "title": "Ramda: Map simplification",
+    "description": "`map` simplifications, like `map(prop(_))` to `pluck(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_merge-simplification",
+    "title": "Ramda: Merge simplification",
+    "description": "`merge` simplifications, like suggesting assoc for one element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-and",
+    "title": "Ramda: No redundant and",
+    "description": "Forbid using `and` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-not",
+    "title": "Ramda: No redundant not",
+    "description": "Forbid using `not` in call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-or",
+    "title": "Ramda: No redundant or",
+    "description": "Forbid using `or` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_pipe-simplification",
+    "title": "Ramda: Pipe simplification",
+    "description": "Detects when there are better functions that behave the same as `pipe`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-both-either",
+    "title": "Ramda: Prefer both either",
+    "description": "Enforces using `both`/`either` instead of `allPass`/`anyPass` with a list of only two predicates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-complement",
+    "title": "Ramda: Prefer complement",
+    "description": "Enforces using `complement` instead of compositions using `not`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-ramda-boolean",
+    "title": "Ramda: Prefer ramda boolean",
+    "description": "Suggests using Ramda T and F functions instead of explicit versions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prop-satisfies-simplification",
+    "title": "Ramda: Prop satisfies simplification",
+    "description": "`propSatisfies` simplifications, like `propSatisfies(equals(_))` to `propEq(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reduce-simplification",
+    "title": "Ramda: Reduce simplification",
+    "description": "`reduce` simplifications, like `reduce(add)` to `sum`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reject-simplification",
+    "title": "Ramda: Reject simplification",
+    "description": "`reject` simplifications, like `reject(complement(_))` to `filter(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_set-simplification",
+    "title": "Ramda: Set simplification",
+    "description": "`set` simplifications, like `set(lensProp(_))` to `assoc(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_unless-simplification",
+    "title": "Ramda: Unless simplification",
+    "description": "`unless` simplifications, like `unless(complement(_))` to `when(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_when-simplification",
+    "title": "Ramda: When simplification",
+    "description": "`when` simplifications, like `when(complement(_))` to `unless(_)`",
+    "timeToFix": 5
   }
 ]

@@ -12075,6 +12075,188 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
+    },
+    {
+      "patternId": "ramda_always-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_any-pass-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_both-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_complement-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_compose-pipe-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_compose-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_cond-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_either-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_eq-by-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_filter-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_if-else-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_map-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_merge-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_no-redundant-and",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_no-redundant-not",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_no-redundant-or",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_pipe-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_prefer-both-either",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_prefer-complement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_prefer-ramda-boolean",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_prop-satisfies-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_reduce-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_reject-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_set-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_unless-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ramda_when-simplification",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     }
   ]
 }

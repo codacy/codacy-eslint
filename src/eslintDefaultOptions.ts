@@ -73,7 +73,8 @@ export const defaultOptions: CLIEngine.Options = {
       "vue",
       "wdio",
       "xss",
-      "unicorn"
+      "unicorn",
+      "ramda"
     ],
     parser: "babel-eslint",
     overrides: [
