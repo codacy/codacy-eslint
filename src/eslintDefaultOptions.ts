@@ -74,7 +74,8 @@ export const defaultOptions: CLIEngine.Options = {
       "wdio",
       "xss",
       "unicorn",
-      "ramda"
+      "ramda",
+      "monorepo"
     ],
     parser: "babel-eslint",
     overrides: [

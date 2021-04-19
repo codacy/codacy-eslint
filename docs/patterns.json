@@ -12257,6 +12257,20 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
+    },
+    {
+      "patternId": "monorepo_no-internal-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "monorepo_no-relative-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     }
   ]
 }

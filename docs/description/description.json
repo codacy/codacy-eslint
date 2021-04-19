@@ -11788,5 +11788,17 @@
     "title": "Ramda: When simplification",
     "description": "`when` simplifications, like `when(complement(_))` to `unless(_)`",
     "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "monorepo_no-internal-import",
+    "title": "Monorepo: No internal import",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "monorepo_no-relative-import",
+    "title": "Monorepo: No relative import",
+    "timeToFix": 5
   }
 ]

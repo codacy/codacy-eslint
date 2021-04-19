@@ -1507,4 +1507,6 @@
   <module name="ramda_set-simplification" />
   <module name="ramda_unless-simplification" />
   <module name="ramda_when-simplification" />
+  <module name="monorepo_no-internal-import" />
+  <module name="monorepo_no-relative-import" />
 </module>
