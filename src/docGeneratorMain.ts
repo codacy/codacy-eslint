@@ -198,6 +198,14 @@ async function main() {
       `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
     "xss"
   )
+
+  console.log("Generate unicorn description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
+    "unicorn",
+    false
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
