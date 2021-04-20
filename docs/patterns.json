@@ -6007,7 +6007,7 @@
         },
         {
           "name": "checkEslintrc",
-          "default": true
+          "default": false
         },
         {
           "name": "checkParams",

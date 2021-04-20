@@ -14,20 +14,21 @@ export function fromSchemaArray(
       ([k, v]) => v && v.hasOwnProperty("default")
     )
     const manual = pairs.filter(
-      ([k, v]) =>
-        v &&
-        !v.hasOwnProperty("default") &&
-        rulesNamedParametersAndDefaults.has(patternId, k)
+      ([k, v]) => v && rulesNamedParametersAndDefaults.has(patternId, k)
     )
-    const a = pairs
-      .filter(([k, v]) => v && !v.hasOwnProperty("default"))
-      .map((e) => [patternId, e])
-    const automaticParameters: ParameterSpec[] = haveDefault.map(
-      ([k, v]) => new ParameterSpec(k, v.default)
-    )
-    const manualParameters: ParameterSpec[] = manual
-      .map(([k, v]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
-      .filter((e) => e) as ParameterSpec[]
-    return automaticParameters.concat(manualParameters)
+    const automaticParameters: [string, any][] = haveDefault.map(([k, v]) => [
+      k,
+      v.default,
+    ])
+
+    const manualParameters: [string, any][] = manual
+      .map(([k, v]) =>
+        rulesNamedParametersAndDefaults.parameter(patternId, k)
+      )
+      .filter((e) => e) as [string, any][]
+
+    const map = new Map([...automaticParameters, ...manualParameters])
+    const all = Array.from(map.entries())
+    return all.map(([k, v]) => new ParameterSpec(k, v))
   })
 }
