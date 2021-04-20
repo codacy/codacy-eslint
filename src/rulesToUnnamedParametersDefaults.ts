@@ -68,6 +68,7 @@ export class rulesNamedParametersAndDefaults {
     ["indent", "outerIIFEBody", 1],
     ["indent", "offsetTernaryExpressions", false],
     ["indent", "VariableDeclarator", 1],
+    ["jsdoc/check-examples", "checkEslintrc", false],
     ["padded-blocks", "allowSingleLineBlocks", true],
     ["quotes", "avoidEscape", false],
     ["quotes", "allowTemplateLiterals", false],
@@ -90,10 +91,10 @@ export class rulesNamedParametersAndDefaults {
   static parameter(
     patternId: string,
     parameter: string
-  ): ParameterSpec | undefined {
+  ): [string, any] | undefined {
     const e = this.array.find(
       ([pId, param, _]) => pId === patternId && param === parameter
     )
-    return e ? new ParameterSpec(parameter, e[2]) : undefined
+    return e ? [parameter, e[2]] : undefined
   }
 }

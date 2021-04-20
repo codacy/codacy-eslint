@@ -1,0 +1,6 @@
+<module name="root">
+    <module name="jsdoc_check-examples" />
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="\.eslintrc\.js" />
+    </module>
+</module>
