@@ -20,15 +20,15 @@ export function fromSchemaArray(
       k,
       v.default,
     ])
-
     const manualParameters: [string, any][] = manual
-      .map(([k, v]) =>
-        rulesNamedParametersAndDefaults.parameter(patternId, k)
-      )
+      .map(([k, v]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
       .filter((e) => e) as [string, any][]
-
-    const map = new Map([...automaticParameters, ...manualParameters])
-    const all = Array.from(map.entries())
-    return all.map(([k, v]) => new ParameterSpec(k, v))
+    const allParametersMap = new Map([
+      ...automaticParameters,
+      ...manualParameters,
+    ])
+    return Array.from(allParametersMap.entries()).map(
+      ([k, v]) => new ParameterSpec(k, v)
+    )
   })
 }
