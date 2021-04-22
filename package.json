@@ -59,7 +59,7 @@
     "@angular-eslint/builder": "^4.0.0",
     "@angular-eslint/eslint-plugin": "^4.0.0",
     "@angular-eslint/eslint-plugin-template": "^2.1.0",
-    "@angular-eslint/schematics": "^2.1.0",
+    "@angular-eslint/schematics": "^4.0.0",
     "@angular-eslint/template-parser": "^4.0.0",
     "@angular/compiler": "^11.2.11",
     "@babel/cli": "^7.13.16",
