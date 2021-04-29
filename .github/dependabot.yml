@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Europe/Lisbon
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 15.0.0
+  - dependency-name: mini-css-extract-plugin
+    versions:
+    - 1.5.0
+  - dependency-name: ts-loader
+    versions:
+    - 9.0.0
+    - 9.0.2
+  - dependency-name: eslint
+    versions:
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: webpack
+    versions:
+    - 5.33.2
+  - dependency-name: "@angular/compiler"
+    versions:
+    - 11.2.10
+  - dependency-name: eslint-config-xo
+    versions:
+    - 0.35.0
+  - dependency-name: eslint-config-xo-space
+    versions:
+    - 0.27.0
