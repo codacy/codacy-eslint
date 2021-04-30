@@ -109,7 +109,7 @@
     "eslint-config-es6": "^1.10.3",
     "eslint-config-expo": "^6.0.0",
     "eslint-config-fliplet": "^1.0.5",
-    "eslint-config-gatsby-standard": "^2.2.0",
+    "eslint-config-gatsby-standard": "^3.0.2",
     "eslint-config-google": "^0.14.0",
     "eslint-config-kentcdodds": "^18.0.0",
     "eslint-config-loopback": "^13.1.0",
