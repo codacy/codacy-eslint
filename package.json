@@ -204,7 +204,7 @@
     "extract-css-chunks-webpack-plugin": "^4.9.0",
     "jstransformer-babel": "^2.1.0",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^1.5.1",
+    "mini-css-extract-plugin": "^1.6.0",
     "node-fetch": "^2.6.1",
     "npm": "^7.12.1",
     "prettier": "^2.2.1",
