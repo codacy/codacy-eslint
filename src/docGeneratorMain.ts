@@ -170,6 +170,13 @@ async function main() {
     "redux-saga"
   )
 
+  console.log("Generate regexp description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-regexp/master/docs/rules/${pattern}.md`,
+    "regexp"
+  )
+
   console.log("Generate sonarjs description files")
   await docGenerator.downloadDocs(
     (pattern) =>
