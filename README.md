@@ -53,6 +53,16 @@ You may need to test changes that comes from our [codacy-engine-typescript-seed]
 
 5.  Publish your docker locally as normal: `docker build -t codacy-eslint:local .`
 
+## Limitations
+
+### Incompatible rules
+
+There are some ESLint rules that will be ignored when running this Docker container. For more details on the ignored
+rules, check `blacklistRegexes` defined at [blacklist.ts](src/blacklist.ts).
+
+Usually, these rules need an Internet connection and/or to check `node_modules`, and would not run successfully
+on our Docker container environment.
+
 ## What is Codacy
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
