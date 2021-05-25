@@ -57,11 +57,11 @@ You may need to test changes that comes from our [codacy-engine-typescript-seed]
 
 ### Incompatible rules
 
-There are some ESLint rules that will be ignored when running this docker container. For more details on the ignored
-rules, you can check `blacklistRegexes` defined at [blacklist.ts](src/blacklist.ts).
+There are some ESLint rules that will be ignored when running this Docker container. For more details on the ignored
+rules, check `blacklistRegexes` defined at [blacklist.ts](src/blacklist.ts).
 
-Usually those rules need internet connection, and/or to check `node_modules`, and would not run successfully
-on our docker container envorionment.
+Usually, these rules need an Internet connection and/or to check `node_modules`, and would not run successfully
+on our Docker container environment.
 
 ## What is Codacy
 
