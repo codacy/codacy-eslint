@@ -2,6 +2,7 @@ const blacklistRegexes: RegExp[] = [
   /import\/.+/,
   /node\/no-missing-require/,
   /promise\/no-native/,
+  /ember\/no-restricted-property-modifications/,
 ]
 
 const documentationBlacklistRegexes: RegExp[] = []
