@@ -126,7 +126,7 @@
     "eslint-config-signavio-test": "^2.0.0",
     "eslint-config-simplifield": "^12.0.0",
     "eslint-config-snak": "^1.0.15",
-    "eslint-config-somos": "^1.1.0",
+    "eslint-config-somos": "^2.0.1",
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-jsx": "^10.0.0",
     "eslint-config-standard-react": "^11.0.1",
