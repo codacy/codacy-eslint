@@ -162,7 +162,7 @@
     "eslint-plugin-graphql-fragments": "0.0.2",
     "eslint-plugin-hapi": "^4.1.0",
     "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jasmine": "^4.1.2",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jest-formatting": "^2.0.1",
