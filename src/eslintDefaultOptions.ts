@@ -59,6 +59,7 @@ export const defaultOptions: CLIEngine.Options = {
       "no-unsanitized",
       "node",
       "prettier",
+      "prettier-vue",
       "promise",
       "ramda",
       "react-hooks",
