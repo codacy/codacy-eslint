@@ -79,7 +79,7 @@
     "@lwc/eslint-plugin-lwc": "^1.0.1",
     "@nodelib/fs.walk": "^1.2.6",
     "@prodigy/eslint-config-prodigy": "0.0.7",
-    "@react-native-community/eslint-config": "^2.0.0",
+    "@react-native-community/eslint-config": "^3.0.0",
     "@salesforce/eslint-config-lwc": "^2.0.0",
     "@strv/eslint-config-typescript": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
