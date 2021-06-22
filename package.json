@@ -58,7 +58,7 @@
   "dependencies": {
     "@1stg/eslint-config": "^2.4.0",
     "@angular-eslint/builder": "^12.1.0",
-    "@angular-eslint/eslint-plugin": "^12.1.0",
+    "@angular-eslint/eslint-plugin": "^12.2.0",
     "@angular-eslint/eslint-plugin-template": "^12.2.0",
     "@angular-eslint/schematics": "^12.1.0",
     "@angular-eslint/template-parser": "^12.1.0",
