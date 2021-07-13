@@ -66,6 +66,7 @@ export const defaultOptions: CLIEngine.Options = {
       "react-native",
       "react",
       "redux-saga",
+      "regexp",
       "relay",
       "scanjs-rules",
       "security",

@@ -1,4 +1,4 @@
-# Enforce Functional Parameters (functional-parameters)
+# Enforce functional parameters (functional-parameters)
 
 Disallow use of rest parameters, the `arguments` keyword and enforces that functions take a least 1 parameter.
 
@@ -120,7 +120,7 @@ function add(x) {
 }
 ```
 
-See [Currying](https://en.wikipedia.org/wiki/Currying) and [Higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) on Wikipedia for more infomation.
+See [Currying](https://en.wikipedia.org/wiki/Currying) and [Higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) on Wikipedia for more information.
 
 #### `enforceParameterCount.count`
 
@@ -133,4 +133,4 @@ If true, this option allows for the use of [IIFEs](https://developer.mozilla.org
 ### `ignorePattern`
 
 Patterns will be matched against function names.
-See the [ignorePattern](./options/ignore-pattern.md) docs for more infomation.
+See the [ignorePattern](./options/ignore-pattern.md) docs for more information.

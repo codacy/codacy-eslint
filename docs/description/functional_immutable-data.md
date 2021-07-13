@@ -78,7 +78,7 @@ The default options:
 The rule take advantage of TypeScript's typing engine to check if mutation is taking place.
 If you are not using TypeScript, type checking cannot be performed; hence this option exists.
 
-This option will make the rule assume the type of the nodes it is checking are of type Array/Object.  
+This option will make the rule assume the type of the nodes it is checking are of type Array/Object.
 However this may result in some false positives being picked up.
 
 Disabling this option can result in false negatives, for example:
@@ -90,7 +90,7 @@ x.push(3); // This will NOT be flagged.
 // This is due to the fact that without a typing engine, we cannot tell that x is an array.
 ```
 
-Note: This option will have no effect if the TypeScript typing engine is avaliable (i.e. you are using TypeScript and have configured eslint correctly).
+Note: This option will have no effect if the TypeScript typing engine is available (i.e. you are using TypeScript and have configured ESLint correctly).
 
 ### `ignoreImmediateMutation`
 
@@ -107,13 +107,13 @@ const sorted = [...original].sort((a, b) => a.localeCompare(b)); // This is OK w
 ### `ignorePattern`
 
 Patterns will be matched against variable names.
-See the [ignorePattern](./options/ignore-pattern.md) docs for more infomation.
+See the [ignorePattern](./options/ignore-pattern.md) docs for more information.
 
 ### `ignoreAccessorPattern`
 
 This option takes a match string or an array of match strings (not a RegExp pattern).
 
-The match string allows you to specify dot seperated `.` object paths and has support for "glob" `*` and "globstar" `**` matching.
+The match string allows you to specify dot separated `.` object paths and has support for "glob" `*` and "globstar" `**` matching.
 
 For example:
 
@@ -148,7 +148,7 @@ For example:
 
 #### Wildcards
 
-The following wildcards can be used when specifing a pattern:
+The following wildcards can be used when specifying a pattern:
 
 `**` - Match any depth (including zero). Can only be used as a full accessor.
 `*` - When used as a full accessor, match the next accessor (there must be one). When used as part of an accessor, match any characters.
