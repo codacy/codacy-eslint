@@ -234,7 +234,7 @@
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.6.1",
     "@types/node-fetch": "^2.5.10",
-    "@types/simple-mock": "^0.8.1",
+    "@types/simple-mock": "^0.8.2",
     "chai": "^4.3.4",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^1.1.2",
