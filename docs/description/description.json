@@ -740,7 +740,7 @@
     "parameters": [],
     "patternId": "max-lines-per-function",
     "title": "Max lines per function",
-    "description": "Enforce a maximum number of line of code in a function",
+    "description": "Enforce a maximum number of lines of code in a function",
     "timeToFix": 5
   },
   {
@@ -1238,6 +1238,10 @@
       {
         "name": "string",
         "description": "string"
+      },
+      {
+        "name": "disallowTemplateShorthand",
+        "description": "disallowTemplateShorthand"
       }
     ],
     "patternId": "no-implicit-coercion",
@@ -1449,7 +1453,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreNonDeclaration",
+        "description": "ignoreNonDeclaration"
+      }
+    ],
     "patternId": "no-multi-assign",
     "title": "No multi assign",
     "description": "Disallow use of chained assignment expressions",
@@ -1752,7 +1761,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowInParentheses",
+        "description": "allowInParentheses"
+      }
+    ],
     "patternId": "no-sequences",
     "title": "No sequences",
     "description": "Disallow comma operators",
@@ -2008,6 +2022,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "no-unused-expressions",
@@ -2168,7 +2186,7 @@
     "parameters": [],
     "patternId": "object-curly-newline",
     "title": "Object curly newline",
-    "description": "Enforce consistent line breaks inside braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces",
     "timeToFix": 5
   },
   {
@@ -3761,6 +3779,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "babel_no-unused-expressions",
@@ -3964,7 +3986,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
+      }
+    ],
     "patternId": "chai-friendly_no-unused-expressions",
     "title": "Chai friendly: No unused expressions",
     "description": "Disallow unused expressions",
@@ -4321,6 +4348,13 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-implicit-service-injection-argument",
+    "title": "Ember: No implicit service injection argument",
+    "description": "Disallow omitting the injected service name argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-incorrect-calls-with-inline-anonymous-functions",
     "title": "Ember: No incorrect calls with inline anonymous functions",
     "description": "Disallow inline anonymous functions as arguments to `debounce`, `once`, and `scheduleOnce`",
@@ -4572,6 +4606,13 @@
     "patternId": "ember_no-unnecessary-service-injection-argument",
     "title": "Ember: No unnecessary service injection argument",
     "description": "Disallow unnecessary argument when injecting services",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_no-unused-services",
+    "title": "Ember: No unused services",
+    "description": "Disallow unused service injections (see rule doc for limitations)",
     "timeToFix": 5
   },
   {
@@ -4833,6 +4874,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_enforce-line-break",
+    "title": "Flowtype: Enforce line break",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_generic-spacing",
     "title": "Flowtype: Generic spacing",
     "timeToFix": 5
@@ -4904,6 +4951,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "flowtype_no-unused-expressions",
@@ -4927,6 +4978,12 @@
     "parameters": [],
     "patternId": "flowtype_object-type-delimiter",
     "title": "Flowtype: Object type delimiter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_quotes",
+    "title": "Flowtype: Quotes",
     "timeToFix": 5
   },
   {
@@ -5047,6 +5104,12 @@
     "parameters": [],
     "patternId": "flowtype_use-flow-type",
     "title": "Flowtype: Use flow type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_use-read-only-spread",
+    "title": "Flowtype: Use read only spread",
     "timeToFix": 5
   },
   {
@@ -5788,7 +5851,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "preserveMainDescriptionPostDelimiter",
+        "description": "preserveMainDescriptionPostDelimiter"
+      }
+    ],
     "patternId": "jsdoc_check-line-alignment",
     "title": "Jsdoc: Check line alignment",
     "description": "Reports invalid alignment of JSDoc block lines.",
@@ -5859,6 +5931,20 @@
   },
   {
     "parameters": [],
+    "patternId": "jsdoc_match-name",
+    "title": "Jsdoc: Match name",
+    "description": "Reports the name portion of a JSDoc tag if matching or not matching a given regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_multiline-blocks",
+    "title": "Jsdoc: Multiline blocks",
+    "description": "Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsdoc_newline-after-description",
     "title": "Jsdoc: Newline after description",
     "description": "Enforces a consistent padding of the block description.",
@@ -5879,6 +5965,31 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "contexts",
+        "description": "contexts"
+      }
+    ],
+    "patternId": "jsdoc_no-missing-syntax",
+    "title": "Jsdoc: No missing syntax",
+    "description": "Reports when certain comment structures are always expected.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-multi-asterisks",
+    "title": "Jsdoc: No multi asterisks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-restricted-syntax",
+    "title": "Jsdoc: No restricted syntax",
+    "description": "Reports when certain comment structures are present.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "jsdoc_no-types",
     "title": "Jsdoc: No types",
@@ -5890,6 +6001,12 @@
     "patternId": "jsdoc_no-undefined-types",
     "title": "Jsdoc: No undefined types",
     "description": "Checks that types in jsdoc comments are defined.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-asterisk-prefix",
+    "title": "Jsdoc: Require asterisk prefix",
     "timeToFix": 5
   },
   {
@@ -6180,6 +6297,13 @@
     "patternId": "jsdoc_require-yields-check",
     "title": "Jsdoc: Require yields check",
     "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_tag-lines",
+    "title": "Jsdoc: Tag lines",
+    "description": "Enforces lines (or no lines) between tags.",
     "timeToFix": 5
   },
   {
@@ -8351,7 +8475,7 @@
     "parameters": [],
     "patternId": "regexp_no-assertion-capturing-group",
     "title": "Regexp: No assertion capturing group",
-    "description": "Disallow capturing group that captures assertions.",
+    "description": "Disallow capturing group that captures empty.",
     "timeToFix": 5
   },
   {
@@ -8373,6 +8497,13 @@
     "patternId": "regexp_no-empty-alternative",
     "title": "Regexp: No empty alternative",
     "description": "Disallow alternatives without elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-capturing-group",
+    "title": "Regexp: No empty capturing group",
+    "description": "Disallow capturing group that captures empty.",
     "timeToFix": 5
   },
   {
@@ -8457,6 +8588,20 @@
     "patternId": "regexp_no-standalone-backslash",
     "title": "Regexp: No standalone backslash",
     "description": "Disallow standalone backslashes (`\\`)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-super-linear-backtracking",
+    "title": "Regexp: No super linear backtracking",
+    "description": "Disallow exponential and polynomial backtracking",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-super-linear-move",
+    "title": "Regexp: No super linear move",
+    "description": "Disallow quantifiers that cause quadratic moves",
     "timeToFix": 5
   },
   {
@@ -8587,6 +8732,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_optimal-quantifier-concatenation",
+    "title": "Regexp: Optimal quantifier concatenation",
+    "description": "Require optimal quantifiers for concatenated quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_order-in-character-class",
     "title": "Regexp: Order in character class",
     "description": "Enforces elements order in character class",
@@ -8699,9 +8851,30 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_sort-alternatives",
+    "title": "Regexp: Sort alternatives",
+    "description": "Sort alternatives if order doesn't matter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_sort-character-class-elements",
+    "title": "Regexp: Sort character class elements",
+    "description": "Enforces elements order in character class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_sort-flags",
     "title": "Regexp: Sort flags",
     "description": "Require regex flags to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_strict",
+    "title": "Regexp: Strict",
+    "description": "Disallow not strictly valid regular expressions",
     "timeToFix": 5
   },
   {
@@ -8991,150 +9164,224 @@
     "parameters": [],
     "patternId": "sonarjs_cognitive-complexity",
     "title": "Sonarjs: Cognitive complexity",
+    "description": "Cognitive Complexity of functions should not be too high",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_elseif-without-else",
+    "title": "Sonarjs: Elseif without else",
+    "description": "\"if ... else if\" constructs should end with \"else\" clauses",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_max-switch-cases",
     "title": "Sonarjs: Max switch cases",
+    "description": "\"switch\" statements should not have too many \"case\" clauses",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-all-duplicated-branches",
     "title": "Sonarjs: No all duplicated branches",
+    "description": "All branches in a conditional structure should not have exactly the same implementation",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-collapsible-if",
     "title": "Sonarjs: No collapsible if",
+    "description": "Collapsible \"if\" statements should be merged",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-collection-size-mischeck",
     "title": "Sonarjs: No collection size mischeck",
+    "description": "Collection sizes and array length comparisons should make sense",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-duplicate-string",
     "title": "Sonarjs: No duplicate string",
+    "description": "String literals should not be duplicated",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-duplicated-branches",
     "title": "Sonarjs: No duplicated branches",
+    "description": "Two branches in a conditional structure should not have exactly the same implementation",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-element-overwrite",
     "title": "Sonarjs: No element overwrite",
+    "description": "Collection elements should not be replaced unconditionally",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-empty-collection",
+    "title": "Sonarjs: No empty collection",
+    "description": "Empty collections should not be accessed or iterated",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-extra-arguments",
     "title": "Sonarjs: No extra arguments",
+    "description": "Function calls should not pass extra arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-gratuitous-expressions",
+    "title": "Sonarjs: No gratuitous expressions",
+    "description": "Boolean expressions should not be gratuitous",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-identical-conditions",
     "title": "Sonarjs: No identical conditions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "sonarjs_no-identical-functions",
-    "title": "Sonarjs: No identical functions",
+    "description": "Related \"if/else if\" statements should not have the same condition",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-identical-expressions",
     "title": "Sonarjs: No identical expressions",
+    "description": "Identical expressions should not be used on both sides of a binary operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-identical-functions",
+    "title": "Sonarjs: No identical functions",
+    "description": "Functions should not have identical implementations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-ignored-return",
+    "title": "Sonarjs: No ignored return",
+    "description": "Return values from functions without side effects should not be ignored",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-inverted-boolean-check",
     "title": "Sonarjs: No inverted boolean check",
+    "description": "Boolean checks should not be inverted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-nested-switch",
+    "title": "Sonarjs: No nested switch",
+    "description": "\"switch\" statements should not be nested",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_no-nested-template-literals",
+    "title": "Sonarjs: No nested template literals",
+    "description": "Template literals should not be nested",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-one-iteration-loop",
     "title": "Sonarjs: No one iteration loop",
+    "description": "Loops with at most one iteration should be refactored",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-redundant-boolean",
     "title": "Sonarjs: No redundant boolean",
+    "description": "Boolean literals should not be redundant",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-redundant-jump",
     "title": "Sonarjs: No redundant jump",
+    "description": "Jump statements should not be redundant",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-same-line-conditional",
     "title": "Sonarjs: No same line conditional",
+    "description": "Conditionals should start on new lines",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-small-switch",
     "title": "Sonarjs: No small switch",
+    "description": "\"switch\" statements should have at least 3 \"case\" clauses",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-unused-collection",
     "title": "Sonarjs: No unused collection",
+    "description": "Collection and array contents should be used",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-use-of-empty-return-value",
     "title": "Sonarjs: No use of empty return value",
+    "description": "The output of functions that don't return anything should not be used",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_no-useless-catch",
     "title": "Sonarjs: No useless catch",
+    "description": "\"catch\" clauses should do more than rethrow",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sonarjs_non-existent-operator",
+    "title": "Sonarjs: Non existent operator",
+    "description": "Non-existent operators \"=+\", \"=-\" and \"=!\" should not be used",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_prefer-immediate-return",
     "title": "Sonarjs: Prefer immediate return",
+    "description": "Local variables should not be declared and then immediately returned or thrown",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_prefer-object-literal",
     "title": "Sonarjs: Prefer object literal",
+    "description": "Object literal syntax should be used",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_prefer-single-boolean-return",
     "title": "Sonarjs: Prefer single boolean return",
+    "description": "Return of boolean expressions should not be wrapped into an \"if-then-else\" statement",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "sonarjs_prefer-while",
     "title": "Sonarjs: Prefer while",
+    "description": "A \"while\" loop should be used instead of a \"for\" loop",
     "timeToFix": 5
   },
   {
@@ -9326,6 +9573,10 @@
       {
         "name": "allowProtectedClassPropertyAccess",
         "description": "allowProtectedClassPropertyAccess"
+      },
+      {
+        "name": "allowIndexSignaturePropertyAccess",
+        "description": "allowIndexSignaturePropertyAccess"
       }
     ],
     "patternId": "@typescript-eslint_dot-notation",
@@ -9775,6 +10026,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-argument",
+    "title": "@typescript eslint: No unsafe argument",
+    "description": "Disallows calling an function with an any type value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-assignment",
     "title": "@typescript eslint: No unsafe assignment",
     "description": "Disallows assigning any to variables and properties",
@@ -9814,6 +10072,10 @@
       {
         "name": "allowTaggedTemplates",
         "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
       }
     ],
     "patternId": "@typescript-eslint_no-unused-expressions",
@@ -10104,6 +10366,748 @@
     "patternId": "@typescript-eslint_unified-signatures",
     "title": "@typescript eslint: Unified signatures",
     "description": "Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "sortCharacterClasses",
+        "description": "sortCharacterClasses"
+      }
+    ],
+    "patternId": "unicorn_better-regex",
+    "title": "Unicorn: Better regex",
+    "description": "Improve regexes by making them shorter, consistent, and safer.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_catch-error-name",
+    "title": "Unicorn: Catch error name",
+    "description": "Enforce a specific parameter name in catch clauses.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_consistent-destructuring",
+    "title": "Unicorn: Consistent destructuring",
+    "description": "Use destructured variables over properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkArrowFunctions",
+        "description": "checkArrowFunctions"
+      }
+    ],
+    "patternId": "unicorn_consistent-function-scoping",
+    "title": "Unicorn: Consistent function scoping",
+    "description": "Move function definitions to the highest possible scope.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_custom-error-definition",
+    "title": "Unicorn: Custom error definition",
+    "description": "Enforce correct `Error` subclassing.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_empty-brace-spaces",
+    "title": "Unicorn: Empty brace spaces",
+    "description": "Enforce no spaces between braces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_error-message",
+    "title": "Unicorn: Error message",
+    "description": "Enforce passing a `message` value when creating a built-in error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_escape-case",
+    "title": "Unicorn: Escape case",
+    "description": "Require escape sequences to use uppercase values.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreDatesOnPullRequests",
+        "description": "ignoreDatesOnPullRequests"
+      },
+      {
+        "name": "allowWarningComments",
+        "description": "allowWarningComments"
+      }
+    ],
+    "patternId": "unicorn_expiring-todo-comments",
+    "title": "Unicorn: Expiring todo comments",
+    "description": "Add expiration conditions to TODO comments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "non-zero",
+        "description": "non-zero"
+      }
+    ],
+    "patternId": "unicorn_explicit-length-check",
+    "title": "Unicorn: Explicit length check",
+    "description": "Enforce explicitly comparing the `length` or `size` property of a value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_filename-case",
+    "title": "Unicorn: Filename case",
+    "description": "Enforce a case style for filenames.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreImports",
+        "description": "ignoreImports"
+      }
+    ],
+    "patternId": "unicorn_import-index",
+    "title": "Unicorn: Import index",
+    "description": "Enforce importing index files with `.`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_import-style",
+    "title": "Unicorn: Import style",
+    "description": "Enforce specific import styles per module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_new-for-builtins",
+    "title": "Unicorn: New for builtins",
+    "description": "Enforce the use of `new` for all builtins, except `String`, `Number`, `Boolean`, `Symbol` and `BigInt`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-abusive-eslint-disable",
+    "title": "Unicorn: No abusive eslint disable",
+    "description": "Enforce specifying rules to disable in `eslint-disable` comments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-callback-reference",
+    "title": "Unicorn: No array callback reference",
+    "description": "Prevent passing a function reference directly to iterator methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-for-each",
+    "title": "Unicorn: No array for each",
+    "description": "Prefer `for…of` over `Array#forEach(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-method-this-argument",
+    "title": "Unicorn: No array method this argument",
+    "description": "Disallow using the `this` argument in array methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-push-push",
+    "title": "Unicorn: No array push push",
+    "description": "Enforce combining multiple `Array#push()` into one call.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-reduce",
+    "title": "Unicorn: No array reduce",
+    "description": "Disallow `Array#reduce()` and `Array#reduceRight()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-console-spaces",
+    "title": "Unicorn: No console spaces",
+    "description": "Do not use leading/trailing space between `console.log` parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-document-cookie",
+    "title": "Unicorn: No document cookie",
+    "description": "Do not use `document.cookie` directly.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-for-loop",
+    "title": "Unicorn: No for loop",
+    "description": "Do not use a `for` loop that can be replaced with a `for-of` loop.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-hex-escape",
+    "title": "Unicorn: No hex escape",
+    "description": "Enforce the use of Unicode escapes instead of hexadecimal escapes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-instanceof-array",
+    "title": "Unicorn: No instanceof array",
+    "description": "Require `Array.isArray()` instead of `instanceof Array`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-keyword-prefix",
+    "title": "Unicorn: No keyword prefix",
+    "description": "Disallow identifiers starting with `new` or `class`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-lonely-if",
+    "title": "Unicorn: No lonely if",
+    "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-nested-ternary",
+    "title": "Unicorn: No nested ternary",
+    "description": "Disallow nested ternary expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-new-array",
+    "title": "Unicorn: No new array",
+    "description": "Disallow `new Array()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-new-buffer",
+    "title": "Unicorn: No new buffer",
+    "description": "Enforce the use of `Buffer.from()` and `Buffer.alloc()` instead of the deprecated `new Buffer()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkStrictEquality",
+        "description": "checkStrictEquality"
+      }
+    ],
+    "patternId": "unicorn_no-null",
+    "title": "Unicorn: No null",
+    "description": "Disallow the use of the `null` literal.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-object-as-default-parameter",
+    "title": "Unicorn: No object as default parameter",
+    "description": "Disallow the use of objects as default parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-process-exit",
+    "title": "Unicorn: No process exit",
+    "description": "Disallow `process.exit()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-static-only-class",
+    "title": "Unicorn: No static only class",
+    "description": "Forbid classes that only have static members.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-this-assignment",
+    "title": "Unicorn: No this assignment",
+    "description": "Disallow assigning `this` to a variable.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unreadable-array-destructuring",
+    "title": "Unicorn: No unreadable array destructuring",
+    "description": "Disallow unreadable array destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
+    "description": "Disallow unsafe regular expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unused-properties",
+    "title": "Unicorn: No unused properties",
+    "description": "Disallow unused object properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-undefined",
+    "title": "Unicorn: No useless undefined",
+    "description": "Disallow useless `undefined`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-zero-fractions",
+    "title": "Unicorn: No zero fractions",
+    "description": "Disallow number literals with zero fractions or dangling dots.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_number-literal-case",
+    "title": "Unicorn: Number literal case",
+    "description": "Enforce proper case for numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "onlyIfContainsSeparator",
+        "description": "onlyIfContainsSeparator"
+      }
+    ],
+    "patternId": "unicorn_numeric-separators-style",
+    "title": "Unicorn: Numeric separators style",
+    "description": "Enforce the style of numeric separators by correctly grouping digits.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-add-event-listener",
+    "title": "Unicorn: Prefer add event listener",
+    "description": "Prefer `.addEventListener()` and `.removeEventListener()` over `on`-functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-find",
+    "title": "Unicorn: Prefer array find",
+    "description": "Prefer `.find(…)` over the first element from `.filter(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-flat-map",
+    "title": "Unicorn: Prefer array flat map",
+    "description": "Prefer `.flatMap(…)` over `.map(…).flat()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-flat",
+    "title": "Unicorn: Prefer array flat",
+    "description": "Prefer `Array#flat()` over legacy techniques to flatten arrays.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-index-of",
+    "title": "Unicorn: Prefer array index of",
+    "description": "Prefer `Array#indexOf()` over `Array#findIndex()` when looking for the index of an item.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-array-some",
+    "title": "Unicorn: Prefer array some",
+    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.find(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkAllIndexAccess",
+        "description": "checkAllIndexAccess"
+      }
+    ],
+    "patternId": "unicorn_prefer-at",
+    "title": "Unicorn: Prefer at",
+    "description": "Prefer `.at()` method for index access and `String#charAt()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-date-now",
+    "title": "Unicorn: Prefer date now",
+    "description": "Prefer `Date.now()` to get the number of milliseconds since the Unix Epoch.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-default-parameters",
+    "title": "Unicorn: Prefer default parameters",
+    "description": "Prefer default parameters over reassignment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-append",
+    "title": "Unicorn: Prefer dom node append",
+    "description": "Prefer `Node#append()` over `Node#appendChild()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-dataset",
+    "title": "Unicorn: Prefer dom node dataset",
+    "description": "Prefer using `.dataset` on DOM elements over `.setAttribute(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-remove",
+    "title": "Unicorn: Prefer dom node remove",
+    "description": "Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dom-node-text-content",
+    "title": "Unicorn: Prefer dom node text content",
+    "description": "Prefer `.textContent` over `.innerText`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-includes",
+    "title": "Unicorn: Prefer includes",
+    "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-keyboard-event-key",
+    "title": "Unicorn: Prefer keyboard event key",
+    "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-math-trunc",
+    "title": "Unicorn: Prefer math trunc",
+    "description": "Enforce the use of `Math.trunc` instead of bitwise operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-modern-dom-apis",
+    "title": "Unicorn: Prefer modern dom apis",
+    "description": "Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()` or `.prepend()` over `insertAdjacentText()` and `insertAdjacentElement()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-module",
+    "title": "Unicorn: Prefer module",
+    "description": "Prefer JavaScript modules (ESM) over CommonJS.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-negative-index",
+    "title": "Unicorn: Prefer negative index",
+    "description": "Prefer negative index over `.length - index` for `{String,Array,TypedArray}#slice()`, `Array#splice()` and `Array#at()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkRequire",
+        "description": "checkRequire"
+      }
+    ],
+    "patternId": "unicorn_prefer-node-protocol",
+    "title": "Unicorn: Prefer node protocol",
+    "description": "Prefer using the `node:` protocol when importing Node.js builtin modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkInfinity",
+        "description": "checkInfinity"
+      }
+    ],
+    "patternId": "unicorn_prefer-number-properties",
+    "title": "Unicorn: Prefer number properties",
+    "description": "Prefer `Number` static properties over global ones.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-object-has-own",
+    "title": "Unicorn: Prefer object has own",
+    "description": "Prefer `Object.hasOwn(…)` over `Object.prototype.hasOwnProperty.call(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-optional-catch-binding",
+    "title": "Unicorn: Prefer optional catch binding",
+    "description": "Prefer omitting the `catch` binding parameter.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-prototype-methods",
+    "title": "Unicorn: Prefer prototype methods",
+    "description": "Prefer borrowing methods from the prototype instead of the instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-query-selector",
+    "title": "Unicorn: Prefer query selector",
+    "description": "Prefer `.querySelector()` over `.getElementById()`, `.querySelectorAll()` over `.getElementsByClassName()` and `.getElementsByTagName()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-reflect-apply",
+    "title": "Unicorn: Prefer reflect apply",
+    "description": "Prefer `Reflect.apply()` over `Function#apply()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-regexp-test",
+    "title": "Unicorn: Prefer regexp test",
+    "description": "Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-set-has",
+    "title": "Unicorn: Prefer set has",
+    "description": "Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-spread",
+    "title": "Unicorn: Prefer spread",
+    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)` and `Array#slice()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-replace-all",
+    "title": "Unicorn: Prefer string replace all",
+    "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-slice",
+    "title": "Unicorn: Prefer string slice",
+    "description": "Prefer `String#slice()` over `String#substr()` and `String#substring()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-starts-ends-with",
+    "title": "Unicorn: Prefer string starts ends with",
+    "description": "Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-string-trim-start-end",
+    "title": "Unicorn: Prefer string trim start end",
+    "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "minimumCases",
+        "description": "minimumCases"
+      },
+      {
+        "name": "emptyDefaultCase",
+        "description": "emptyDefaultCase"
+      }
+    ],
+    "patternId": "unicorn_prefer-switch",
+    "title": "Unicorn: Prefer switch",
+    "description": "Prefer `switch` over multiple `else-if`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-ternary",
+    "title": "Unicorn: Prefer ternary",
+    "description": "Prefer ternary expressions over simple `if-else` statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-top-level-await",
+    "title": "Unicorn: Prefer top level await",
+    "description": "Prefer top-level await over top-level promises and async function calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-type-error",
+    "title": "Unicorn: Prefer type error",
+    "description": "Enforce throwing `TypeError` in type checking conditions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prevent-abbreviations",
+    "title": "Unicorn: Prevent abbreviations",
+    "description": "Prevent abbreviations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_require-array-join-separator",
+    "title": "Unicorn: Require array join separator",
+    "description": "Enforce using the separator argument with `Array#join()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_require-number-to-fixed-digits-argument",
+    "title": "Unicorn: Require number to fixed digits argument",
+    "description": "Enforce using the digits argument with `Number#toFixed()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_require-post-message-target-origin",
+    "title": "Unicorn: Require post message target origin",
+    "description": "Enforce using the `targetOrigin` argument with `window.postMessage()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_string-content",
+    "title": "Unicorn: String content",
+    "description": "Enforce better string content.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_throw-new-error",
+    "title": "Unicorn: Throw new error",
+    "description": "Require `new` when throwing an error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-instanceof",
+    "title": "Unicorn: No array instanceof",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-fn-reference-in-iterator",
+    "title": "Unicorn: No fn reference in iterator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-reduce",
+    "title": "Unicorn: No reduce",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dataset",
+    "title": "Unicorn: Prefer dataset",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-event-key",
+    "title": "Unicorn: Prefer event key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-exponentiation-operator",
+    "title": "Unicorn: Prefer exponentiation operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-flat-map",
+    "title": "Unicorn: Prefer flat map",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-append",
+    "title": "Unicorn: Prefer node append",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-remove",
+    "title": "Unicorn: Prefer node remove",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-replace-all",
+    "title": "Unicorn: Prefer replace all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-starts-ends-with",
+    "title": "Unicorn: Prefer starts ends with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-text-content",
+    "title": "Unicorn: Prefer text content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-trim-start-end",
+    "title": "Unicorn: Prefer trim start end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_regex-shorthand",
+    "title": "Unicorn: Regex shorthand",
     "timeToFix": 5
   },
   {
@@ -10599,7 +11603,7 @@
     "parameters": [],
     "patternId": "vue_no-deprecated-props-default-this",
     "title": "Vue: No deprecated props default this",
-    "description": "Disallow props default function `this` access",
+    "description": "Disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
     "timeToFix": 5
   },
   {
@@ -10628,6 +11632,13 @@
     "patternId": "vue_no-deprecated-v-bind-sync",
     "title": "Vue: No deprecated v bind sync",
     "description": "Disallow use of deprecated `.sync` modifier on `v-bind` directive (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-v-is",
+    "title": "Vue: No deprecated v is",
+    "description": "Disallow deprecated `v-is` directive (in Vue.js 3.1.0+)",
     "timeToFix": 5
   },
   {
@@ -10698,6 +11709,13 @@
     "patternId": "vue_no-extra-parens",
     "title": "Vue: No extra parens",
     "description": "Disallow unnecessary parentheses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-invalid-model-keys",
+    "title": "Vue: No invalid model keys",
+    "description": "Require valid keys in model option",
     "timeToFix": 5
   },
   {
@@ -10944,6 +11962,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-this-in-before-route-enter",
+    "title": "Vue: No this in before route enter",
+    "description": "Disallow `this` usage in a `beforeRouteEnter` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-unregistered-components",
     "title": "Vue: No unregistered components",
     "description": "Disallow using components that are not registered inside templates",
@@ -10968,6 +11993,13 @@
     "patternId": "vue_no-unused-properties",
     "title": "Vue: No unused properties",
     "description": "Disallow unused properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-unused-refs",
+    "title": "Vue: No unused refs",
+    "description": "Disallow unused refs",
     "timeToFix": 5
   },
   {
@@ -11044,7 +12076,7 @@
     "parameters": [],
     "patternId": "vue_object-curly-newline",
     "title": "Vue: Object curly newline",
-    "description": "Enforce consistent line breaks inside braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces",
     "timeToFix": 5
   },
   {
@@ -11131,6 +12163,13 @@
     "patternId": "vue_require-direct-export",
     "title": "Vue: Require direct export",
     "description": "Require the component to be directly exported",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-emit-validator",
+    "title": "Vue: Require emit validator",
+    "description": "Require type definitions in emits",
     "timeToFix": 5
   },
   {
