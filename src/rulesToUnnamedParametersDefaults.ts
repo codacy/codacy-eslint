@@ -70,6 +70,7 @@ export class rulesNamedParametersAndDefaults {
     ["indent", "offsetTernaryExpressions", false],
     ["indent", "VariableDeclarator", 1],
     ["jsdoc/check-examples", "checkEslintrc", false],
+    ["jsdoc/no-missing-syntax", "contexts", []],
     ["padded-blocks", "allowSingleLineBlocks", true],
     ["quotes", "avoidEscape", false],
     ["quotes", "allowTemplateLiterals", false],
