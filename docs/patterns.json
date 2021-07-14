@@ -1,6 +1,6 @@
 {
   "name": "eslint",
-  "version": "7.29.0",
+  "version": "7.30.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -6003,7 +6003,12 @@
       "patternId": "jsdoc_check-line-alignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
       "enabled": false
     },
     {

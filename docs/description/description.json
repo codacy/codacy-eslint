@@ -5788,7 +5788,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "jsdoc_check-line-alignment",
     "title": "Jsdoc: Check line alignment",
     "description": "Reports invalid alignment of JSDoc block lines.",

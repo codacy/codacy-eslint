@@ -19,6 +19,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["func-style", "expression"],
   ["id-match", "^[a-z]+([A-Z][a-z]+)*$"],
   ["indent", 2],
+  ["jsdoc/check-line-alignment", "never"],
   ["jsx-quotes", "prefer-double"],
   ["init-declarations", "always"],
   ["lines-between-class-members", "always"],
