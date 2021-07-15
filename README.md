@@ -1,4 +1,4 @@
-# Codacy ESLint
+# Codacy ESLint test
 
 ## Adding new plugins / configs
 
