@@ -207,7 +207,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-tsdoc": "^0.2.14",
     "eslint-plugin-unicorn": "^34.0.1",
-    "eslint-plugin-vue": "^7.13.0",
+    "eslint-plugin-vue": "^7.14.0",
     "eslint-plugin-wdio": "^7.4.2",
     "eslint-plugin-xss": "^0.1.10",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
