@@ -78,7 +78,7 @@
     "@emotion/eslint-plugin": "^11.2.0",
     "@hapi/eslint-plugin-hapi": "^4.3.6",
     "@lwc/eslint-plugin-lwc": "^1.0.1",
-    "@nodelib/fs.walk": "^1.2.7",
+    "@nodelib/fs.walk": "^1.2.8",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.0",
     "@salesforce/eslint-config-lwc": "^2.1.0",
