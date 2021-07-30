@@ -88,7 +88,7 @@
     "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-airbnb": "^5.3.0",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-standard": "^6.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "assets-webpack-plugin": "^7.1.1",
     "autoprefixer": "^10.3.1",
