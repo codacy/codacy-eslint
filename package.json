@@ -83,7 +83,7 @@
     "@react-native-community/eslint-config": "^3.0.0",
     "@salesforce/eslint-config-lwc": "^2.1.1",
     "@strv/eslint-config-typescript": "^2.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.28.5",
     "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-airbnb": "^5.3.0",
