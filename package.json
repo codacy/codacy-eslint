@@ -172,7 +172,7 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-jsx": "^0.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-lodash": "^7.2.0",
+    "eslint-plugin-lodash": "^7.3.0",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "eslint-plugin-m6web-i18n": "^0.5.1",
     "eslint-plugin-meteor": "^7.3.0",
