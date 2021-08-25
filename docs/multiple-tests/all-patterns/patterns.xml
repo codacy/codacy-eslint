@@ -933,6 +933,7 @@
   <module name="no-unsafe-innerhtml_no-unsafe-innerhtml" />
   <module name="no-unsanitized_property" />
   <module name="no-unsanitized_method" />
+  <module name="playwright_missing-playwright-await" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="ramda_always-simplification" />

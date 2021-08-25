@@ -58,6 +58,7 @@ export const defaultOptions: CLIEngine.Options = {
       "no-unsafe-innerhtml",
       "no-unsanitized",
       "node",
+      "playwright",
       "prettier",
       "prettier-vue",
       "promise",

@@ -7454,6 +7454,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_missing-playwright-await",
+    "title": "Playwright: Missing playwright await",
+    "description": "Enforce expect-playwright matchers to be awaited.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
     "timeToFix": 5
