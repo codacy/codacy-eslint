@@ -9866,6 +9866,13 @@
       "enabled": false
     },
     {
+      "patternId": "sort-keys-fix_sort-keys-fix",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "standard_array-bracket-even-spacing",
       "level": "Info",
       "category": "CodeStyle",

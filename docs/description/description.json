@@ -9437,6 +9437,13 @@
   },
   {
     "parameters": [],
+    "patternId": "sort-keys-fix_sort-keys-fix",
+    "title": "Sort keys fix: Sort keys fix",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "standard_array-bracket-even-spacing",
     "title": "Standard: Array bracket even spacing",
     "timeToFix": 5

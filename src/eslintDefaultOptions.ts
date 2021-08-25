@@ -73,6 +73,7 @@ export const defaultOptions: CLIEngine.Options = {
       "security",
       "sonarjs",
       "sort-imports-es6-autofix",
+      "sort-keys-fix",
       "standard",
       "@typescript-eslint",
       "unicorn",
