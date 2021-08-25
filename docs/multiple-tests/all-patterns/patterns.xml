@@ -573,6 +573,7 @@
   <module name="flowtype_delimiter-dangle" />
   <module name="flowtype_enforce-line-break" />
   <module name="flowtype_generic-spacing" />
+  <module name="flowtype_interface-id-match" />
   <module name="flowtype_newline-after-flow-annotation" />
   <module name="flowtype_no-dupe-keys" />
   <module name="flowtype_no-existential-type" />
@@ -657,6 +658,7 @@
   <module name="jest_consistent-test-it" />
   <module name="jest_expect-expect" />
   <module name="jest_lowercase-name" />
+  <module name="jest_max-nested-describe" />
   <module name="jest_no-alias-methods" />
   <module name="jest_no-commented-out-tests" />
   <module name="jest_no-conditional-expect" />
@@ -1075,6 +1077,7 @@
   <module name="regexp_no-empty-group" />
   <module name="regexp_no-empty-lookarounds-assertion" />
   <module name="regexp_no-escape-backspace" />
+  <module name="regexp_no-invalid-regexp" />
   <module name="regexp_no-invisible-character" />
   <module name="regexp_no-lazy-ends" />
   <module name="regexp_no-legacy-features" />
@@ -1304,6 +1307,7 @@
   <module name="@typescript-eslint_prefer-readonly-parameter-types" />
   <module name="@typescript-eslint_prefer-reduce-type-parameter" />
   <module name="@typescript-eslint_prefer-regexp-exec" />
+  <module name="@typescript-eslint_prefer-return-this-type" />
   <module name="@typescript-eslint_prefer-string-starts-ends-with" />
   <module name="@typescript-eslint_prefer-ts-expect-error" />
   <module name="@typescript-eslint_promise-function-async" />
@@ -1362,6 +1366,8 @@
   <module name="unicorn_no-unreadable-array-destructuring" />
   <module name="unicorn_no-unsafe-regex" />
   <module name="unicorn_no-unused-properties" />
+  <module name="unicorn_no-useless-length-check" />
+  <module name="unicorn_no-useless-spread" />
   <module name="unicorn_no-useless-undefined" />
   <module name="unicorn_no-zero-fractions" />
   <module name="unicorn_number-literal-case" />
@@ -1387,6 +1393,7 @@
   <module name="unicorn_prefer-negative-index" />
   <module name="unicorn_prefer-node-protocol" />
   <module name="unicorn_prefer-number-properties" />
+  <module name="unicorn_prefer-object-from-entries" />
   <module name="unicorn_prefer-object-has-own" />
   <module name="unicorn_prefer-optional-catch-binding" />
   <module name="unicorn_prefer-prototype-methods" />
@@ -1428,6 +1435,7 @@
   <module name="vue_arrow-spacing" />
   <module name="vue_attribute-hyphenation" />
   <module name="vue_attributes-order" />
+  <module name="vue_block-lang" />
   <module name="vue_block-spacing" />
   <module name="vue_block-tag-newline" />
   <module name="vue_brace-style" />
@@ -1497,6 +1505,7 @@
   <module name="vue_no-duplicate-attributes" />
   <module name="vue_no-empty-component-block" />
   <module name="vue_no-empty-pattern" />
+  <module name="vue_no-export-in-script-setup" />
   <module name="vue_no-extra-parens" />
   <module name="vue_no-invalid-model-keys" />
   <module name="vue_no-irregular-whitespace" />
@@ -1537,6 +1546,7 @@
   <module name="vue_no-unused-properties" />
   <module name="vue_no-unused-refs" />
   <module name="vue_no-unused-vars" />
+  <module name="vue_no-use-computed-property-like-method" />
   <module name="vue_no-use-v-if-with-v-for" />
   <module name="vue_no-useless-concat" />
   <module name="vue_no-useless-mustaches" />
@@ -1560,6 +1570,7 @@
   <module name="vue_require-direct-export" />
   <module name="vue_require-emit-validator" />
   <module name="vue_require-explicit-emits" />
+  <module name="vue_require-expose" />
   <module name="vue_require-name-property" />
   <module name="vue_require-prop-type-constructor" />
   <module name="vue_require-prop-types" />
@@ -1571,6 +1582,7 @@
   <module name="vue_return-in-computed-property" />
   <module name="vue_return-in-emits-validator" />
   <module name="vue_script-indent" />
+  <module name="vue_script-setup-uses-vars" />
   <module name="vue_singleline-html-element-content-newline" />
   <module name="vue_sort-keys" />
   <module name="vue_space-in-parens" />
@@ -1586,6 +1598,8 @@
   <module name="vue_v-on-function-call" />
   <module name="vue_v-on-style" />
   <module name="vue_v-slot-style" />
+  <module name="vue_valid-define-emits" />
+  <module name="vue_valid-define-props" />
   <module name="vue_valid-next-tick" />
   <module name="vue_valid-template-root" />
   <module name="vue_valid-v-bind-sync" />
@@ -1597,6 +1611,7 @@
   <module name="vue_valid-v-html" />
   <module name="vue_valid-v-if" />
   <module name="vue_valid-v-is" />
+  <module name="vue_valid-v-memo" />
   <module name="vue_valid-v-model" />
   <module name="vue_valid-v-on" />
   <module name="vue_valid-v-once" />

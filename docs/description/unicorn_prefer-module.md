@@ -23,29 +23,17 @@ Prefer using the [JavaScript module](https://developer.mozilla.org/en-US/docs/We
 	const __filename = fileURLToPath(import.meta.url);
 	const __dirname = path.dirname(fileURLToPath(import.meta.url));
 	```
-<<<<<<< HEAD
 
 	However, in most cases, this is better:
 
-=======
-	
-	However, in most cases, this is better:
-	
->>>>>>> add regexp plugin
 	```js
 	import {fileURLToPath} from 'url';
 
 	const foo = fileURLToPath(new URL('foo.js', import.meta.url));
 	```
-<<<<<<< HEAD
 
 	And many Node.js APIs accept `URL` directly, so you can just do this:
 
-=======
-	
-	And many Node.js APIs accept `URL` directly, so you can just do this:
-	
->>>>>>> add regexp plugin
 	```js
 	const foo = new URL('foo.js', import.meta.url);
 	```
@@ -58,11 +46,8 @@ Prefer using the [JavaScript module](https://developer.mozilla.org/en-US/docs/We
 
 	`export …` should be used in JavaScript modules.
 
-<<<<<<< HEAD
 _`.cjs` files are ignored._
 
-=======
->>>>>>> add regexp plugin
 ## Fail
 
 ```js

@@ -4886,6 +4886,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_interface-id-match",
+    "title": "Flowtype: Interface id match",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_newline-after-flow-annotation",
     "title": "Flowtype: Newline after flow annotation",
     "timeToFix": 5
@@ -5431,6 +5437,13 @@
     "patternId": "jest_lowercase-name",
     "title": "Jest: Lowercase name",
     "description": "Enforce lowercase test names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_max-nested-describe",
+    "title": "Jest: Max nested describe",
+    "description": "Enforces a maximum depth to nested describe calls",
     "timeToFix": 5
   },
   {
@@ -6099,6 +6112,10 @@
       {
         "name": "exemptEmptyFunctions",
         "description": "exemptEmptyFunctions"
+      },
+      {
+        "name": "fixerMessage",
+        "description": "fixerMessage"
       },
       {
         "name": "require",
@@ -8529,6 +8546,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_no-invalid-regexp",
+    "title": "Regexp: No invalid regexp",
+    "description": "Disallow invalid regular expression strings in `RegExp` constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_no-invisible-character",
     "title": "Regexp: No invisible character",
     "description": "Disallow invisible raw character",
@@ -10225,6 +10249,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_prefer-return-this-type",
+    "title": "@typescript eslint: Prefer return this type",
+    "description": "Enforce that `this` is used when only `this` type is returned",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
     "title": "@typescript eslint: Prefer string starts ends with",
     "description": "Enforce the use of `String#startsWith` and `String#endsWith` instead of other equivalent methods of checking substrings",
@@ -10531,7 +10562,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowSimpleOperations",
+        "description": "allowSimpleOperations"
+      }
+    ],
     "patternId": "unicorn_no-array-reduce",
     "title": "Unicorn: No array reduce",
     "description": "Disallow `Array#reduce()` and `Array#reduceRight()`.",
@@ -10666,6 +10702,20 @@
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-length-check",
+    "title": "Unicorn: No useless length check",
+    "description": "Disallow useless array length check.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-spread",
+    "title": "Unicorn: No useless spread",
+    "description": "Disallow unnecessary spread.",
     "timeToFix": 5
   },
   {
@@ -10861,6 +10911,13 @@
     "patternId": "unicorn_prefer-number-properties",
     "title": "Unicorn: Prefer number properties",
     "description": "Prefer `Number` static properties over global ones.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-object-from-entries",
+    "title": "Unicorn: Prefer object from entries",
+    "description": "Prefer using `Object.fromEntries(…)` to transform a list of key-value pairs into an object.",
     "timeToFix": 5
   },
   {
@@ -11152,6 +11209,13 @@
     "patternId": "vue_attributes-order",
     "title": "Vue: Attributes order",
     "description": "Enforce order of attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_block-lang",
+    "title": "Vue: Block lang",
+    "description": "Disallow use other than available `lang`",
     "timeToFix": 5
   },
   {
@@ -11706,6 +11770,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-export-in-script-setup",
+    "title": "Vue: No export in script setup",
+    "description": "Disallow `export` in `<script setup>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-extra-parens",
     "title": "Vue: No extra parens",
     "description": "Disallow unnecessary parentheses",
@@ -12011,6 +12082,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-use-computed-property-like-method",
+    "title": "Vue: No use computed property like method",
+    "description": "Disallow use computed property like method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-use-v-if-with-v-for",
     "title": "Vue: No use v if with v for",
     "description": "Disallow use v-if on the same element as v-for",
@@ -12181,6 +12259,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_require-expose",
+    "title": "Vue: Require expose",
+    "description": "Require declare public properties using `expose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_require-name-property",
     "title": "Vue: Require name property",
     "description": "Require a name property in Vue components",
@@ -12254,6 +12339,13 @@
     "patternId": "vue_script-indent",
     "title": "Vue: Script indent",
     "description": "Enforce consistent indentation in `<script>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_script-setup-uses-vars",
+    "title": "Vue: Script setup uses vars",
+    "description": "Prevent `<script setup>` variables used in `<template>` to be marked as unused",
     "timeToFix": 5
   },
   {
@@ -12398,6 +12490,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_valid-define-emits",
+    "title": "Vue: Valid define emits",
+    "description": "Enforce valid `defineEmits` compiler macro",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-define-props",
+    "title": "Vue: Valid define props",
+    "description": "Enforce valid `defineProps` compiler macro",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_valid-next-tick",
     "title": "Vue: Valid next tick",
     "description": "Enforce valid `nextTick` function calls",
@@ -12471,6 +12577,13 @@
     "patternId": "vue_valid-v-is",
     "title": "Vue: Valid v is",
     "description": "Enforce valid `v-is` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-v-memo",
+    "title": "Vue: Valid v memo",
+    "description": "Enforce valid `v-memo` directives",
     "timeToFix": 5
   },
   {
