@@ -9,6 +9,7 @@ since: "v0.9.0"
 
 > disallow unnecessary regex flags
 
+- :gear: This rule is included in `"plugin:regexp/recommended"`.
 - :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
 ## :book: Rule Details
@@ -157,13 +158,16 @@ No other flags will be checked.
 {
   "regexp/no-useless-flag": ["error",
     {
-      "ignore": [] // An array of "i", "m", "s", "g" and "y".
+      "ignore": [], // An array of "i", "m", "s", "g" and "y".
+      "strictTypes": true
     }
   ]
 }
 ```
 
 - `ignore` ... An array of flags to ignore from the check.
+- `strictTypes` ... If `true`, strictly check the type of object to determine if the regex instance was used in `search()` and `split()`. Default is `true`. This option is only effective for verifying the `g` and `y` flags.  
+  This option is always on when using TypeScript.
 
 ### `"ignore": ["s", "g"]`
 
@@ -179,6 +183,32 @@ var foo = /\w/s;
 /* ✗ BAD */
 var foo = /\w/i;
 var foo = /\w/m;
+```
+
+</eslint-code-block>
+
+### `"strictTypes": false`
+
+<eslint-code-block fix>
+
+```js
+/* eslint regexp/no-useless-flag: ["error", { "strictTypes": false }] */
+
+/* ✓ GOOD */
+const notStr = {}
+notStr.split(/foo/g);
+
+/** @param {object} obj */
+function fn1 (obj) {
+    obj.search(/foo/g);
+}
+
+/* ✗ BAD */
+maybeStr.split(/foo/g); // The type of "maybeStr" cannot be tracked.
+
+function fn2 (maybeStr) {
+    maybeStr.search(/foo/g);
+}
 ```
 
 </eslint-code-block>

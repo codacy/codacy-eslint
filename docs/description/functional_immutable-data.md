@@ -58,6 +58,7 @@ This rule accepts an options object of the following type:
         forArrays: boolean;
         forObjects: boolean;
       }
+  ignoreClass: boolean | "fieldsOnly";
   ignoreImmediateMutation: boolean;
   ignorePattern?: string | Array<string>;
   ignoreAccessorPattern?: string | Array<string>;
@@ -69,8 +70,19 @@ The default options:
 ```ts
 {
   assumeTypes: true,
+  ignoreClass: false,
   ignoreImmediateMutation: true,
 };
+```
+
+Note: the `lite` ruleset overrides the default options to:
+
+```ts
+{
+  assumeTypes: true,
+  ignoreClass: "fieldsOnly",
+  ignoreImmediateMutation: true,
+}
 ```
 
 ### `assumeTypes`
@@ -103,6 +115,12 @@ For example, an array can be immutably sorted like so:
 const original = ["foo", "bar", "baz"];
 const sorted = [...original].sort((a, b) => a.localeCompare(b)); // This is OK with ignoreImmediateMutation.
 ```
+
+### `ignoreClass`
+
+Ignore mutations inside classes.
+
+Classes already aren't functional so ignore mutations going on inside them.
 
 ### `ignorePattern`
 
