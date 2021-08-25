@@ -7454,6 +7454,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_missing-playwright-await",
+    "title": "Playwright: Missing playwright await",
+    "description": "Enforce expect-playwright matchers to be awaited.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
     "timeToFix": 5
@@ -9426,6 +9433,13 @@
     "patternId": "sort-imports-es6-autofix_sort-imports-es6",
     "title": "Sort imports es6 autofix: Sort imports es6",
     "description": "Enforce sorted import declarations within modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sort-keys-fix_sort-keys-fix",
+    "title": "Sort keys fix: Sort keys fix",
+    "description": "Require object keys to be sorted",
     "timeToFix": 5
   },
   {

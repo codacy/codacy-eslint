@@ -7805,6 +7805,13 @@
       "enabled": false
     },
     {
+      "patternId": "playwright_missing-playwright-await",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "prettier_prettier",
       "level": "Info",
       "category": "CodeStyle",
@@ -9856,6 +9863,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "sort-keys-fix_sort-keys-fix",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {

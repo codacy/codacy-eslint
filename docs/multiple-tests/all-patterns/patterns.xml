@@ -933,6 +933,7 @@
   <module name="no-unsafe-innerhtml_no-unsafe-innerhtml" />
   <module name="no-unsanitized_property" />
   <module name="no-unsanitized_method" />
+  <module name="playwright_missing-playwright-await" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="ramda_always-simplification" />
@@ -1207,6 +1208,7 @@
   <module name="sonarjs_prefer-single-boolean-return" />
   <module name="sonarjs_prefer-while" />
   <module name="sort-imports-es6-autofix_sort-imports-es6" />
+  <module name="sort-keys-fix_sort-keys-fix" />
   <module name="standard_array-bracket-even-spacing" />
   <module name="standard_computed-property-even-spacing" />
   <module name="standard_object-curly-even-spacing" />
