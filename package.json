@@ -146,7 +146,7 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-jsx": "^10.0.0",
     "eslint-config-standard-react": "^11.0.1",
-    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-universe": "^7.0.1",
     "eslint-config-vue": "^2.0.2",
