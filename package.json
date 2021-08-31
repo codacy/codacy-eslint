@@ -98,7 +98,7 @@
     "@salesforce/eslint-config-lwc": "^2.1.1",
     "@strv/eslint-config-typescript": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
-    "@typescript-eslint/parser": "^4.29.3",
+    "@typescript-eslint/parser": "^4.30.0",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-airbnb": "^5.3.0",
