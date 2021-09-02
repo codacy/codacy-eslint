@@ -11,7 +11,8 @@
     "outDir": "dist",
     "resolveJsonModule": true,
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "package.json"],
   "exclude": ["node_modules"]
