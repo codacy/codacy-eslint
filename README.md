@@ -9,7 +9,12 @@
     ```
 
 2.  \[Plugins only\] Add the plugin to the plugins section in the file `src/eslintDefaultOptions.ts`
+---
+  **NOTE**
 
+  Before adding a plugin to the Codacy UI, make sure it has widespread use and is actively maintained. Otherwise, installing it as described in point `1` can be enough for users using configuration files.
+
+---
 3.  \[Plugins only\] If the plugin has descriptions for rules on GitHub, reference them
 at `src/docGeneratorMain.ts` to include them on the generated documentation. To do this, add a section similar to the following example:
 
