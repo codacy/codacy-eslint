@@ -8,17 +8,17 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 RUN npm run compile
-# RUN npm test
-# RUN npm run generateDocs
+RUN npm test
+RUN npm run generateDocs
 
-# FROM node:$NODE_IMAGE_VERSION
+FROM node:$NODE_IMAGE_VERSION
 
-# COPY --from=builder dist dist
-# COPY --from=builder package.json ./
-# COPY --from=builder package-lock.json ./
-# COPY --from=builder docs docs
+COPY --from=builder dist dist
+COPY --from=builder package.json ./
+COPY --from=builder package-lock.json ./
+COPY --from=builder docs docs
 
-# RUN npm install --legacy-peer-deps --production
+RUN npm install --legacy-peer-deps --production
 
 RUN rm -rf /package.json /package-lock.json
 
