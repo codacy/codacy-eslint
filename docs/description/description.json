@@ -5174,7 +5174,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreIfReadonly",
+        "description": "ignoreIfReadonly"
+      }
+    ],
     "patternId": "functional_no-method-signature",
     "title": "Functional: No method signature",
     "description": "Prefer property signatures with readonly modifiers over method signatures.",
@@ -8010,7 +8015,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "links",
+        "description": "links"
+      },
+      {
+        "name": "forms",
+        "description": "forms"
+      }
+    ],
     "patternId": "react_jsx-no-target-blank",
     "title": "React: Jsx no target blank",
     "description": "Forbid `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
@@ -8143,7 +8157,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowFunctions",
+        "description": "allowFunctions"
+      }
+    ],
     "patternId": "react_no-children-prop",
     "title": "React: No children prop",
     "description": "Prevent passing of children as props.",
@@ -8318,6 +8337,13 @@
     "patternId": "react_prefer-es6-class",
     "title": "React: Prefer es6 class",
     "description": "Enforce ES5 or ES6 class for React Components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_prefer-exact-props",
+    "title": "React: Prefer exact props",
+    "description": "Prefer exact proptype definitions",
     "timeToFix": 5
   },
   {
@@ -8973,6 +8999,62 @@
     "patternId": "relay_hook-required-argument",
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_aura-api",
+    "title": "@salesforce: [Aura] Aura api",
+    "description": "Validate Aura APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_ecma-intrinsics",
+    "title": "@salesforce: [Aura] Ecma intrinsics",
+    "description": "Validate JavaScript intrinsic APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_getevt-markup-prefix",
+    "title": "@salesforce: [Aura] Getevt markup prefix",
+    "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Aura] No deprecated aura error",
+    "description": "Prevent usage of $A.error",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Aura] No deprecated component creation",
+    "description": "Prevent usage of deprecated component creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Aura] No deprecated event creation",
+    "description": "Prevent usage of deprecated event creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-document",
+    "title": "@salesforce: [Aura] Secure document",
+    "description": "Validate secure document public APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-window",
+    "title": "@salesforce: [Aura] Secure window",
+    "description": "Validate secure window public APIs",
     "timeToFix": 5
   },
   {
@@ -12155,6 +12237,13 @@
     "patternId": "vue_no-v-model-argument",
     "title": "Vue: No v model argument",
     "description": "Disallow adding an argument to `v-model` used in custom component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-v-text",
+    "title": "Vue: No v text",
+    "description": "Disallow use of v-text",
     "timeToFix": 5
   },
   {

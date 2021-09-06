@@ -1047,6 +1047,7 @@
   <module name="react_no-unused-state" />
   <module name="react_no-will-update-set-state" />
   <module name="react_prefer-es6-class" />
+  <module name="react_prefer-exact-props" />
   <module name="react_prefer-read-only-props" />
   <module name="react_prefer-stateless-function" />
   <module name="react_prop-types" />
@@ -1139,6 +1140,14 @@
   <module name="relay_must-colocate-fragment-spreads" />
   <module name="relay_function-required-argument" />
   <module name="relay_hook-required-argument" />
+  <module name="@salesforce_aura_aura-api" />
+  <module name="@salesforce_aura_ecma-intrinsics" />
+  <module name="@salesforce_aura_getevt-markup-prefix" />
+  <module name="@salesforce_aura_no-deprecated-aura-error" />
+  <module name="@salesforce_aura_no-deprecated-component-creation" />
+  <module name="@salesforce_aura_no-deprecated-event-creation" />
+  <module name="@salesforce_aura_secure-document" />
+  <module name="@salesforce_aura_secure-window" />
   <module name="scanjs-rules_accidental__assignment" />
   <module name="scanjs-rules_assign__to__hostname" />
   <module name="scanjs-rules_assign__to__href" />
@@ -1557,6 +1566,7 @@
   <module name="vue_no-v-for-template-key" />
   <module name="vue_no-v-html" />
   <module name="vue_no-v-model-argument" />
+  <module name="vue_no-v-text" />
   <module name="vue_no-watch-after-await" />
   <module name="vue_object-curly-newline" />
   <module name="vue_object-curly-spacing" />

@@ -5360,7 +5360,12 @@
       "patternId": "functional_no-method-signature",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ignoreIfReadonly",
+          "default": true
+        }
+      ],
       "enabled": false
     },
     {
@@ -8372,7 +8377,16 @@
       "patternId": "react_jsx-no-target-blank",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "links",
+          "default": true
+        },
+        {
+          "name": "forms",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -8505,7 +8519,12 @@
       "patternId": "react_no-children-prop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "allowFunctions",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -8676,6 +8695,13 @@
       "patternId": "react_prefer-es6-class",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react_prefer-exact-props",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -9332,6 +9358,62 @@
     },
     {
       "patternId": "relay_hook-required-argument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_aura-api",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_ecma-intrinsics",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_getevt-markup-prefix",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_no-deprecated-aura-error",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_no-deprecated-component-creation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_no-deprecated-event-creation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_secure-document",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_aura_secure-window",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12600,6 +12682,13 @@
     },
     {
       "patternId": "vue_no-v-model-argument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-v-text",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
