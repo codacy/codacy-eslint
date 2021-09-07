@@ -220,6 +220,13 @@ async function main() {
       `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
     "@salesforce/eslint-plugin-aura"
   )
+
+  console.log("Generate salesforce eslint-plugin-lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/eslint-plugin-aura"
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
