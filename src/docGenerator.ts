@@ -158,8 +158,7 @@ export class DocGenerator {
         const text = await result.text()
         const filename =
           "docs/description/" +
-          (prefix.length > 0 ? prefix + "_" : "") +
-          patternIdToCodacy(pattern) +
+          patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
           ".md"
         return writeFile(filename, text)
       } else {

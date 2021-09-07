@@ -9059,6 +9059,34 @@
   },
   {
     "parameters": [],
+    "patternId": "@salesforce_lightning_no-aura-localization-service",
+    "title": "@salesforce: [Lightning] No aura localization service",
+    "description": "Disallow usage of \"$A.localizationService\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_no-moment",
+    "title": "@salesforce: [Lightning] No moment",
+    "description": "Prohibit usage of \"moment\" library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_prefer-i18n-service",
+    "title": "@salesforce: [Lightning] Prefer i18n service",
+    "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Lightning] Valid apex method invocation",
+    "description": "Enforce invoking Apex methods with the right arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "scanjs-rules_accidental__assignment",
     "title": "Scanjs rules: Accidental_assignment",
     "timeToFix": 5

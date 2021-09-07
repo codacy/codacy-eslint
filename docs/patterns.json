@@ -9420,6 +9420,34 @@
       "enabled": false
     },
     {
+      "patternId": "@salesforce_lightning_no-aura-localization-service",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_lightning_no-moment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_lightning_prefer-i18n-service",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_accidental__assignment",
       "level": "Info",
       "category": "Security",

@@ -210,15 +210,22 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
-    "eslint-plugin-unicorn",
+    "unicorn",
     false
   )
 
-  console.log("Generate salesforce description files")
+  console.log("Generate @salesforce/aura description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
-    "@salesforce/eslint-plugin-aura"
+    "@salesforce/aura"
+  )
+
+  console.log("Generate @salesforce/lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/lightning"
   )
 }
 
