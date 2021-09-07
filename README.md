@@ -19,7 +19,8 @@ at `src/docGeneratorMain.ts` to include them on the generated documentation. To 
     await docGenerator.downloadDocs(
       (pattern) =>
         `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
-      "xss"
+      "xss", // this is the pattern's prefix, like: xss/some-pattern-id
+      false // Add false for plugins not having .md files for all the patterns
     )
     ```
 
