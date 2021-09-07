@@ -69,6 +69,7 @@ export const defaultOptions: CLIEngine.Options = {
       "redux-saga",
       "regexp",
       "relay",
+      "@salesforce/eslint-plugin-aura",
       "scanjs-rules",
       "security",
       "sonarjs",

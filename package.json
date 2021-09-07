@@ -93,6 +93,8 @@
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.1",
     "@salesforce/eslint-config-lwc": "^2.2.0",
+    "@salesforce/eslint-plugin-aura": "^2.0.0",
+    "@salesforce/sfdx-lwc-jest": "^1.0.1",
     "@strv/eslint-config-typescript": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
