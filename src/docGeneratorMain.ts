@@ -225,7 +225,7 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
-    "@salesforce/eslint-plugin-aura"
+    "@salesforce/eslint-plugin-lightning"
   )
 }
 
