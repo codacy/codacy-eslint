@@ -249,7 +249,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^7.28.0",
-    "@types/fs-extra": "^9.0.12",
+    "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.173",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.2",
