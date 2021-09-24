@@ -5288,6 +5288,34 @@
   },
   {
     "parameters": [],
+    "patternId": "i18n-json_valid-json",
+    "title": "I18n json: Valid json",
+    "description": "Validates the JSON translation file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_valid-message-syntax",
+    "title": "I18n json: Valid message syntax",
+    "description": "Validates message syntax for each translation key in the file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_identical-keys",
+    "title": "I18n json: Identical keys",
+    "description": "Verifies the key structure for the translation file matches the key structure specified in the options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_sorted-keys",
+    "title": "I18n json: Sorted keys",
+    "description": "Ensure an order for the translation keys. (Recursive)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_expect-matcher",
     "title": "Jasmine: Expect matcher",
     "timeToFix": 5

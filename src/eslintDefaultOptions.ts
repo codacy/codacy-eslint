@@ -41,6 +41,7 @@ export const defaultOptions: CLIEngine.Options = {
       "graphql-fragments",
       "hapi",
       "html",
+      "i18n-json",
       "import",
       "jasmine",
       "jest",
