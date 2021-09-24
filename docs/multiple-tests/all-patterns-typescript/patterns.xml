@@ -633,6 +633,10 @@
   <module name="hapi_hapi-no-var" />
   <module name="hapi_hapi-scope-start" />
   <module name="hapi_no-arrowception" />
+  <module name="i18n-json_valid-json" />
+  <module name="i18n-json_valid-message-syntax" />
+  <module name="i18n-json_identical-keys" />
+  <module name="i18n-json_sorted-keys" />
   <module name="jasmine_expect-matcher" />
   <module name="jasmine_expect-single-argument" />
   <module name="jasmine_named-spy" />

@@ -5474,6 +5474,34 @@
       "enabled": false
     },
     {
+      "patternId": "i18n-json_valid-json",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "i18n-json_valid-message-syntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "i18n-json_identical-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "i18n-json_sorted-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "jasmine_expect-matcher",
       "level": "Info",
       "category": "CodeStyle",
