@@ -470,6 +470,7 @@
   <module name="cypress_assertion-before-screenshot" />
   <module name="cypress_require-data-selectors" />
   <module name="cypress_no-force" />
+  <module name="cypress_no-pause" />
   <module name="drupal_jquery-var-name" />
   <module name="drupal_check-closure-globals" />
   <module name="ember_alias-model-in-controller" />
@@ -576,6 +577,7 @@
   <module name="flowtype_interface-id-match" />
   <module name="flowtype_newline-after-flow-annotation" />
   <module name="flowtype_no-dupe-keys" />
+  <module name="flowtype_no-duplicate-type-union-intersection-members" />
   <module name="flowtype_no-existential-type" />
   <module name="flowtype_no-flow-fix-me-comments" />
   <module name="flowtype_no-internal-flow-type" />
@@ -600,6 +602,7 @@
   <module name="flowtype_require-variable-type" />
   <module name="flowtype_semi" />
   <module name="flowtype_sort-keys" />
+  <module name="flowtype_sort-type-union-intersection-members" />
   <module name="flowtype_space-after-type-colon" />
   <module name="flowtype_space-before-generic-bracket" />
   <module name="flowtype_space-before-type-colon" />
@@ -689,12 +692,14 @@
   <module name="jest_no-try-expect" />
   <module name="jest_prefer-called-with" />
   <module name="jest_prefer-expect-assertions" />
+  <module name="jest_prefer-expect-resolves" />
   <module name="jest_prefer-hooks-on-top" />
   <module name="jest_prefer-inline-snapshots" />
   <module name="jest_prefer-spy-on" />
   <module name="jest_prefer-strict-equal" />
   <module name="jest_prefer-to-be-null" />
   <module name="jest_prefer-to-be-undefined" />
+  <module name="jest_prefer-to-be" />
   <module name="jest_prefer-to-contain" />
   <module name="jest_prefer-to-have-length" />
   <module name="jest_prefer-todo" />
@@ -1037,6 +1042,7 @@
   <module name="react_no-find-dom-node" />
   <module name="react_no-is-mounted" />
   <module name="react_no-multi-comp" />
+  <module name="react_no-namespace" />
   <module name="react_no-set-state" />
   <module name="react_no-string-refs" />
   <module name="react_no-redundant-should-component-update" />
@@ -1076,10 +1082,13 @@
   <module name="regexp_match-any" />
   <module name="regexp_negation" />
   <module name="regexp_no-assertion-capturing-group" />
+  <module name="regexp_no-contradiction-with-assertion" />
+  <module name="regexp_no-control-character" />
   <module name="regexp_no-dupe-characters-character-class" />
   <module name="regexp_no-dupe-disjunctions" />
   <module name="regexp_no-empty-alternative" />
   <module name="regexp_no-empty-capturing-group" />
+  <module name="regexp_no-empty-character-class" />
   <module name="regexp_no-empty-group" />
   <module name="regexp_no-empty-lookarounds-assertion" />
   <module name="regexp_no-escape-backspace" />
@@ -1087,6 +1096,7 @@
   <module name="regexp_no-invisible-character" />
   <module name="regexp_no-lazy-ends" />
   <module name="regexp_no-legacy-features" />
+  <module name="regexp_no-misleading-unicode-character" />
   <module name="regexp_no-non-standard-flag" />
   <module name="regexp_no-obscure-range" />
   <module name="regexp_no-octal" />
@@ -1118,7 +1128,9 @@
   <module name="regexp_prefer-character-class" />
   <module name="regexp_prefer-d" />
   <module name="regexp_prefer-escape-replacement-dollar-char" />
+  <module name="regexp_prefer-lookaround" />
   <module name="regexp_prefer-named-backreference" />
+  <module name="regexp_prefer-named-capture-group" />
   <module name="regexp_prefer-plus-quantifier" />
   <module name="regexp_prefer-predefined-assertion" />
   <module name="regexp_prefer-quantifier" />
@@ -1130,6 +1142,7 @@
   <module name="regexp_prefer-t" />
   <module name="regexp_prefer-unicode-codepoint-escapes" />
   <module name="regexp_prefer-w" />
+  <module name="regexp_require-unicode-regexp" />
   <module name="regexp_sort-alternatives" />
   <module name="regexp_sort-character-class-elements" />
   <module name="regexp_sort-flags" />
@@ -1282,6 +1295,7 @@
   <module name="@typescript-eslint_no-loop-func" />
   <module name="@typescript-eslint_no-loss-of-precision" />
   <module name="@typescript-eslint_no-magic-numbers" />
+  <module name="@typescript-eslint_no-meaningless-void-operator" />
   <module name="@typescript-eslint_no-misused-new" />
   <module name="@typescript-eslint_no-misused-promises" />
   <module name="@typescript-eslint_no-namespace" />
@@ -1313,6 +1327,7 @@
   <module name="@typescript-eslint_no-var-requires" />
   <module name="@typescript-eslint_non-nullable-type-assertion-style" />
   <module name="@typescript-eslint_object-curly-spacing" />
+  <module name="@typescript-eslint_padding-line-between-statements" />
   <module name="@typescript-eslint_prefer-as-const" />
   <module name="@typescript-eslint_prefer-enum-initializers" />
   <module name="@typescript-eslint_prefer-for-of" />
@@ -1372,6 +1387,7 @@
   <module name="unicorn_no-for-loop" />
   <module name="unicorn_no-hex-escape" />
   <module name="unicorn_no-instanceof-array" />
+  <module name="unicorn_no-invalid-remove-event-listener" />
   <module name="unicorn_no-keyword-prefix" />
   <module name="unicorn_no-lonely-if" />
   <module name="unicorn_no-nested-ternary" />
@@ -1385,6 +1401,7 @@
   <module name="unicorn_no-unreadable-array-destructuring" />
   <module name="unicorn_no-unsafe-regex" />
   <module name="unicorn_no-unused-properties" />
+  <module name="unicorn_no-useless-fallback-in-spread" />
   <module name="unicorn_no-useless-length-check" />
   <module name="unicorn_no-useless-spread" />
   <module name="unicorn_no-useless-undefined" />
@@ -1463,6 +1480,7 @@
   <module name="vue_comma-spacing" />
   <module name="vue_comma-style" />
   <module name="vue_comment-directive" />
+  <module name="vue_component-api-style" />
   <module name="vue_component-definition-name-casing" />
   <module name="vue_component-name-in-template-casing" />
   <module name="vue_component-tags-order" />
