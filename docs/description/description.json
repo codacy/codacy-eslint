@@ -4048,6 +4048,13 @@
   },
   {
     "parameters": [],
+    "patternId": "cypress_no-pause",
+    "title": "Cypress: No pause",
+    "description": "Disallow using of 'cy.pause' calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "drupal_jquery-var-name",
     "title": "Drupal: Jquery var name",
     "timeToFix": 5
@@ -4904,6 +4911,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_no-duplicate-type-union-intersection-members",
+    "title": "Flowtype: No duplicate type union intersection members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_no-existential-type",
     "title": "Flowtype: No existential type",
     "timeToFix": 5
@@ -5062,6 +5075,12 @@
     "parameters": [],
     "patternId": "flowtype_sort-keys",
     "title": "Flowtype: Sort keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_sort-type-union-intersection-members",
+    "title": "Flowtype: Sort type union intersection members",
     "timeToFix": 5
   },
   {
@@ -5663,6 +5682,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-expect-resolves",
+    "title": "Jest: Prefer expect resolves",
+    "description": "Prefer `await expect(...).resolves` over `expect(await ...)` syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-hooks-on-top",
     "title": "Jest: Prefer hooks on top",
     "description": "Suggest having hooks before any test cases",
@@ -5701,6 +5727,13 @@
     "patternId": "jest_prefer-to-be-undefined",
     "title": "Jest: Prefer to be undefined",
     "description": "Suggest using `toBeUndefined()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-to-be",
+    "title": "Jest: Prefer to be",
+    "description": "Suggest using `toBe()` for primitive literals",
     "timeToFix": 5
   },
   {
@@ -8266,6 +8299,13 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-namespace",
+    "title": "React: No namespace",
+    "description": "Enforce that namespaces are not used in React elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_no-set-state",
     "title": "React: No set state",
     "description": "Prevent usage of setState",
@@ -8558,6 +8598,20 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_no-contradiction-with-assertion",
+    "title": "Regexp: No contradiction with assertion",
+    "description": "Disallow elements that contradict assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-control-character",
+    "title": "Regexp: No control character",
+    "description": "Disallow control characters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_no-dupe-characters-character-class",
     "title": "Regexp: No dupe characters character class",
     "description": "Disallow duplicate characters in the RegExp character class",
@@ -8582,6 +8636,13 @@
     "patternId": "regexp_no-empty-capturing-group",
     "title": "Regexp: No empty capturing group",
     "description": "Disallow capturing group that captures empty.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-character-class",
+    "title": "Regexp: No empty character class",
+    "description": "Disallow character classes that match no characters",
     "timeToFix": 5
   },
   {
@@ -8631,6 +8692,13 @@
     "patternId": "regexp_no-legacy-features",
     "title": "Regexp: No legacy features",
     "description": "Disallow legacy RegExp features",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-misleading-unicode-character",
+    "title": "Regexp: No misleading unicode character",
+    "description": "Disallow multi-code-point characters in character classes and quantifiers",
     "timeToFix": 5
   },
   {
@@ -8852,9 +8920,23 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_prefer-lookaround",
+    "title": "Regexp: Prefer lookaround",
+    "description": "Prefer lookarounds over capturing group that do not replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_prefer-named-backreference",
     "title": "Regexp: Prefer named backreference",
     "description": "Enforce using named backreferences",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-capture-group",
+    "title": "Regexp: Prefer named capture group",
+    "description": "Enforce using named capture groups",
     "timeToFix": 5
   },
   {
@@ -8932,6 +9014,13 @@
     "patternId": "regexp_prefer-w",
     "title": "Regexp: Prefer w",
     "description": "Enforce using `\\w`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_require-unicode-regexp",
+    "title": "Regexp: Require unicode regexp",
+    "description": "Enforce the use of the `u` flag",
     "timeToFix": 5
   },
   {
@@ -10075,6 +10164,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "checkNever",
+        "description": "checkNever"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-meaningless-void-operator",
+    "title": "@typescript eslint: No meaningless void operator",
+    "description": "Disallow the `void` operator except when used to discard a value",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-new",
     "title": "@typescript eslint: No misused new",
@@ -10306,6 +10407,13 @@
     "patternId": "@typescript-eslint_object-curly-spacing",
     "title": "@typescript eslint: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_padding-line-between-statements",
+    "title": "@typescript eslint: Padding line between statements",
+    "description": "Require or disallow padding lines between statements",
     "timeToFix": 5
   },
   {
@@ -10762,6 +10870,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-invalid-remove-event-listener",
+    "title": "Unicorn: No invalid remove event listener",
+    "description": "Prevent calling `EventTarget#removeEventListener()` with the result of an expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-keyword-prefix",
     "title": "Unicorn: No keyword prefix",
     "description": "Disallow identifiers starting with `new` or `class`.",
@@ -10854,6 +10969,13 @@
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-fallback-in-spread",
+    "title": "Unicorn: No useless fallback in spread",
+    "description": "Forbid useless fallback when spreading in object literals.",
     "timeToFix": 5
   },
   {
@@ -11125,7 +11247,7 @@
     "parameters": [],
     "patternId": "unicorn_prefer-spread",
     "title": "Unicorn: Prefer spread",
-    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)` and `Array#slice()`.",
+    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#slice()` and `String#split('')`.",
     "timeToFix": 5
   },
   {
@@ -11455,6 +11577,13 @@
     "patternId": "vue_comment-directive",
     "title": "Vue: Comment directive",
     "description": "Support comment-directives in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_component-api-style",
+    "title": "Vue: Component api style",
+    "description": "Enforce component API style",
     "timeToFix": 5
   },
   {
