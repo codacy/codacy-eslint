@@ -229,7 +229,7 @@
     "eslint-plugin-suitescript": "^1.2.1",
     "eslint-plugin-tsdoc": "^0.2.14",
     "eslint-plugin-unicorn": "^36.0.0",
-    "eslint-plugin-vue": "^7.18.0",
+    "eslint-plugin-vue": "^7.19.0",
     "eslint-plugin-wdio": "^7.4.2",
     "eslint-plugin-xss": "^0.1.11",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
