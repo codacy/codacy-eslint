@@ -185,7 +185,7 @@
     "eslint-plugin-i18n-json": "^3.1.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jasmine": "^4.1.2",
-    "eslint-plugin-jest": "^25.0.1",
+    "eslint-plugin-jest": "^25.0.5",
     "eslint-plugin-jest-formatting": "^3.0.0",
     "eslint-plugin-jsdoc": "^36.1.0",
     "eslint-plugin-json": "^3.1.0",
