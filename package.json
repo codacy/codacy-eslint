@@ -210,7 +210,7 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-ramda": "^2.5.1",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-intl": "^1.1.2",
     "eslint-plugin-react-native": "^3.11.0",
     "eslint-plugin-react-redux": "^3.3.2",
