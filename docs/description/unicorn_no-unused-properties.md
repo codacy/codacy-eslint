@@ -1,9 +1,10 @@
 # Disallow unused object properties
 
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
 Unused properties, much like unused variables, are often a result of incomplete refactoring and may confuse readers.
 
 This rule is primarily useful when you use objects to group constants or model enumerations. It is much harder to predict class properties usage, and practically impossible to predict reflective property access. This rule ignores cases like that.
-
 
 ## Example use cases
 
@@ -28,7 +29,6 @@ const ClassName = {
 };
 ```
 
-
 ## Fail
 
 ```js
@@ -41,7 +41,6 @@ console.log(enum.used);
 
 const {used} = enum;
 ```
-
 
 ## Pass
 
@@ -65,7 +64,6 @@ const foo = {
 	}
 };
 ```
-
 
 ## Scope and limitations
 
