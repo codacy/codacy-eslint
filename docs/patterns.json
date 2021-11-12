@@ -5691,18 +5691,6 @@
       "enabled": false
     },
     {
-      "patternId": "jest_lowercase-name",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreTopLevelDescribe",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "jest_max-nested-describe",
       "level": "Info",
       "category": "CodeStyle",
@@ -5753,13 +5741,6 @@
     },
     {
       "patternId": "jest_no-duplicate-hooks",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_no-expect-resolves",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -5864,20 +5845,6 @@
       "enabled": false
     },
     {
-      "patternId": "jest_no-truthy-falsy",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_no-try-expect",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "jest_prefer-called-with",
       "level": "Info",
       "category": "CodeStyle",
@@ -5906,10 +5873,15 @@
       "enabled": false
     },
     {
-      "patternId": "jest_prefer-inline-snapshots",
+      "patternId": "jest_prefer-lowercase-title",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ignoreTopLevelDescribe",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -5921,20 +5893,6 @@
     },
     {
       "patternId": "jest_prefer-strict-equal",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_prefer-to-be-null",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_prefer-to-be-undefined",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -5969,6 +5927,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_require-hook",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_require-to-throw-message",
       "level": "Info",
       "category": "CodeStyle",
@@ -5990,7 +5955,7 @@
       "enabled": false
     },
     {
-      "patternId": "jest_valid-describe",
+      "patternId": "jest_valid-describe-callback",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
@@ -8077,8 +8042,8 @@
     },
     {
       "patternId": "react-hooks_rules-of-hooks",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
@@ -8558,6 +8523,13 @@
       "enabled": false
     },
     {
+      "patternId": "react_no-invalid-html-attribute",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "react_no-access-state-in-setstate",
       "level": "Error",
       "category": "ErrorProne",
@@ -8573,6 +8545,13 @@
     },
     {
       "patternId": "react_no-array-index-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react_no-arrow-function-lifecycle",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -8737,6 +8716,13 @@
       "patternId": "react_no-unstable-nested-components",
       "level": "Error",
       "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react_no-unused-class-component-methods",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
@@ -9301,6 +9287,13 @@
       "enabled": false
     },
     {
+      "patternId": "regexp_prefer-named-replacement",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "regexp_prefer-plus-quantifier",
       "level": "Info",
       "category": "CodeStyle",
@@ -9344,6 +9337,13 @@
     },
     {
       "patternId": "regexp_prefer-regexp-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-result-array-groups",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -9414,6 +9414,13 @@
     },
     {
       "patternId": "regexp_unicode-escape",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_use-ignore-case",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10633,6 +10640,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
       "level": "Error",
       "category": "ErrorProne",
@@ -10662,6 +10676,13 @@
     },
     {
       "patternId": "@typescript-eslint_no-require-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_no-restricted-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -11787,6 +11808,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_template-indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_throw-new-error",
       "level": "Info",
       "category": "CodeStyle",
@@ -12243,6 +12271,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_multi-word-component-names",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_multiline-html-element-content-newline",
       "level": "Info",
       "category": "CodeStyle",
@@ -12300,6 +12335,13 @@
     },
     {
       "patternId": "vue_no-boolean-default",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-computed-properties-in-data",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12396,6 +12438,13 @@
     },
     {
       "patternId": "vue_no-deprecated-props-default-this",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-router-link-tag-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12651,6 +12700,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-restricted-class",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-restricted-component-options",
       "level": "Info",
       "category": "CodeStyle",
@@ -12770,6 +12826,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-undef-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-unregistered-components",
       "level": "Info",
       "category": "CodeStyle",
@@ -12834,6 +12897,13 @@
     },
     {
       "patternId": "vue_no-useless-mustaches",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-useless-template-attributes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

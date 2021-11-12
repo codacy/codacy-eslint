@@ -664,7 +664,6 @@
   <module name="jasmine_prefer-toBeUndefined" />
   <module name="jest_consistent-test-it" />
   <module name="jest_expect-expect" />
-  <module name="jest_lowercase-name" />
   <module name="jest_max-nested-describe" />
   <module name="jest_no-alias-methods" />
   <module name="jest_no-commented-out-tests" />
@@ -673,7 +672,6 @@
   <module name="jest_no-disabled-tests" />
   <module name="jest_no-done-callback" />
   <module name="jest_no-duplicate-hooks" />
-  <module name="jest_no-expect-resolves" />
   <module name="jest_no-export" />
   <module name="jest_no-focused-tests" />
   <module name="jest_no-hooks" />
@@ -688,25 +686,22 @@
   <module name="jest_no-standalone-expect" />
   <module name="jest_no-test-prefixes" />
   <module name="jest_no-test-return-statement" />
-  <module name="jest_no-truthy-falsy" />
-  <module name="jest_no-try-expect" />
   <module name="jest_prefer-called-with" />
   <module name="jest_prefer-expect-assertions" />
   <module name="jest_prefer-expect-resolves" />
   <module name="jest_prefer-hooks-on-top" />
-  <module name="jest_prefer-inline-snapshots" />
+  <module name="jest_prefer-lowercase-title" />
   <module name="jest_prefer-spy-on" />
   <module name="jest_prefer-strict-equal" />
-  <module name="jest_prefer-to-be-null" />
-  <module name="jest_prefer-to-be-undefined" />
   <module name="jest_prefer-to-be" />
   <module name="jest_prefer-to-contain" />
   <module name="jest_prefer-to-have-length" />
   <module name="jest_prefer-todo" />
+  <module name="jest_require-hook" />
   <module name="jest_require-to-throw-message" />
   <module name="jest_require-top-level-describe" />
   <module name="jest_unbound-method" />
-  <module name="jest_valid-describe" />
+  <module name="jest_valid-describe-callback" />
   <module name="jest_valid-expect-in-promise" />
   <module name="jest_valid-expect" />
   <module name="jest_valid-title" />
@@ -1029,9 +1024,11 @@
   <module name="react_jsx-uses-react" />
   <module name="react_jsx-uses-vars" />
   <module name="react_jsx-wrap-multilines" />
+  <module name="react_no-invalid-html-attribute" />
   <module name="react_no-access-state-in-setstate" />
   <module name="react_no-adjacent-inline-elements" />
   <module name="react_no-array-index-key" />
+  <module name="react_no-arrow-function-lifecycle" />
   <module name="react_no-children-prop" />
   <module name="react_no-danger" />
   <module name="react_no-danger-with-children" />
@@ -1053,6 +1050,7 @@
   <module name="react_no-unknown-property" />
   <module name="react_no-unsafe" />
   <module name="react_no-unstable-nested-components" />
+  <module name="react_no-unused-class-component-methods" />
   <module name="react_no-unused-prop-types" />
   <module name="react_no-unused-state" />
   <module name="react_no-will-update-set-state" />
@@ -1131,6 +1129,7 @@
   <module name="regexp_prefer-lookaround" />
   <module name="regexp_prefer-named-backreference" />
   <module name="regexp_prefer-named-capture-group" />
+  <module name="regexp_prefer-named-replacement" />
   <module name="regexp_prefer-plus-quantifier" />
   <module name="regexp_prefer-predefined-assertion" />
   <module name="regexp_prefer-quantifier" />
@@ -1138,6 +1137,7 @@
   <module name="regexp_prefer-range" />
   <module name="regexp_prefer-regexp-exec" />
   <module name="regexp_prefer-regexp-test" />
+  <module name="regexp_prefer-result-array-groups" />
   <module name="regexp_prefer-star-quantifier" />
   <module name="regexp_prefer-t" />
   <module name="regexp_prefer-unicode-codepoint-escapes" />
@@ -1148,6 +1148,7 @@
   <module name="regexp_sort-flags" />
   <module name="regexp_strict" />
   <module name="regexp_unicode-escape" />
+  <module name="regexp_use-ignore-case" />
   <module name="relay_graphql-syntax" />
   <module name="relay_compat-uses-vars" />
   <module name="relay_graphql-naming" />
@@ -1299,11 +1300,13 @@
   <module name="@typescript-eslint_no-misused-new" />
   <module name="@typescript-eslint_no-misused-promises" />
   <module name="@typescript-eslint_no-namespace" />
+  <module name="@typescript-eslint_no-non-null-asserted-nullish-coalescing" />
   <module name="@typescript-eslint_no-non-null-asserted-optional-chain" />
   <module name="@typescript-eslint_no-non-null-assertion" />
   <module name="@typescript-eslint_no-parameter-properties" />
   <module name="@typescript-eslint_no-redeclare" />
   <module name="@typescript-eslint_no-require-imports" />
+  <module name="@typescript-eslint_no-restricted-imports" />
   <module name="@typescript-eslint_no-shadow" />
   <module name="@typescript-eslint_no-this-alias" />
   <module name="@typescript-eslint_no-throw-literal" />
@@ -1451,6 +1454,7 @@
   <module name="unicorn_require-number-to-fixed-digits-argument" />
   <module name="unicorn_require-post-message-target-origin" />
   <module name="unicorn_string-content" />
+  <module name="unicorn_template-indent" />
   <module name="unicorn_throw-new-error" />
   <module name="unicorn_no-array-instanceof" />
   <module name="unicorn_no-fn-reference-in-iterator" />
@@ -1506,6 +1510,7 @@
   <module name="vue_match-component-file-name" />
   <module name="vue_max-attributes-per-line" />
   <module name="vue_max-len" />
+  <module name="vue_multi-word-component-names" />
   <module name="vue_multiline-html-element-content-newline" />
   <module name="vue_mustache-interpolation-spacing" />
   <module name="vue_name-property-casing" />
@@ -1515,6 +1520,7 @@
   <module name="vue_no-async-in-computed-properties" />
   <module name="vue_no-bare-strings-in-template" />
   <module name="vue_no-boolean-default" />
+  <module name="vue_no-computed-properties-in-data" />
   <module name="vue_no-confusing-v-for-v-if" />
   <module name="vue_no-constant-condition" />
   <module name="vue_no-custom-modifiers-on-v-model" />
@@ -1528,6 +1534,7 @@
   <module name="vue_no-deprecated-html-element-is" />
   <module name="vue_no-deprecated-inline-template" />
   <module name="vue_no-deprecated-props-default-this" />
+  <module name="vue_no-deprecated-router-link-tag-prop" />
   <module name="vue_no-deprecated-scope-attribute" />
   <module name="vue_no-deprecated-slot-attribute" />
   <module name="vue_no-deprecated-slot-scope-attribute" />
@@ -1560,6 +1567,7 @@
   <module name="vue_no-reserved-keys" />
   <module name="vue_no-restricted-block" />
   <module name="vue_no-restricted-call-after-await" />
+  <module name="vue_no-restricted-class" />
   <module name="vue_no-restricted-component-options" />
   <module name="vue_no-restricted-custom-event" />
   <module name="vue_no-restricted-props" />
@@ -1577,6 +1585,7 @@
   <module name="vue_no-template-target-blank" />
   <module name="vue_no-textarea-mustache" />
   <module name="vue_no-this-in-before-route-enter" />
+  <module name="vue_no-undef-properties" />
   <module name="vue_no-unregistered-components" />
   <module name="vue_no-unsupported-features" />
   <module name="vue_no-unused-components" />
@@ -1587,6 +1596,7 @@
   <module name="vue_no-use-v-if-with-v-for" />
   <module name="vue_no-useless-concat" />
   <module name="vue_no-useless-mustaches" />
+  <module name="vue_no-useless-template-attributes" />
   <module name="vue_no-useless-v-bind" />
   <module name="vue_no-v-for-template-key-on-child" />
   <module name="vue_no-v-for-template-key" />

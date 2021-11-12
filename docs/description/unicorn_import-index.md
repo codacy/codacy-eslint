@@ -1,9 +1,10 @@
 # Enforce importing index files with `.`
 
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+
 Enforces importing index file with `.` instead of `./`, `./index` or `./index.js`.
-
-This rule is fixable.
-
 
 ## Fail
 
@@ -39,7 +40,6 @@ import m from './';
 import m from './index';
 ```
 
-
 ## Pass
 
 ```js
@@ -61,7 +61,6 @@ const m = require('@foo/bar');
 ```js
 import m from '.';
 ```
-
 
 ## Options
 

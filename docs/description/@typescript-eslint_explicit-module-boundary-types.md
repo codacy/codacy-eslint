@@ -2,8 +2,6 @@
 
 Explicit types for function return values and arguments makes it clear to any calling code what is the module boundary's input and output.
 
-Consider using this rule in place of [`no-untyped-public-signature`](./no-untyped-public-signature.md) which has been deprecated.
-
 ## Rule Details
 
 This rule aims to ensure that the values returned from a module are of the expected type.
@@ -267,3 +265,9 @@ If you wish to make sure all functions have explicit return types, as opposed to
 ## Further Reading
 
 - TypeScript [Functions](https://www.typescriptlang.org/docs/handbook/functions.html#function-types)
+
+## Attributes
+
+- [ ] ✅ Recommended
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

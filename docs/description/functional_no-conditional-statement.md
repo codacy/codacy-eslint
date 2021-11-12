@@ -5,11 +5,13 @@ This rule disallows conditional statements such as if and switch.
 ## Rule Details
 
 Conditional statements are not a good fit for functional style programming as they are not expressions and do not return a value.
-Instead consider using the [tenary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) which is an expression that returns a value:
+Instead consider using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) which is an expression that returns a value:
 
 For more background see this [blog post](https://hackernoon.com/rethinking-javascript-the-if-statement-b158a61cd6cb) and discussion in [tslint-immutable #54](https://github.com/jonaskello/tslint-immutable/issues/54).
 
 Examples of **incorrect** code for this rule:
+
+<!-- eslint-skip -->
 
 ```js
 /* eslint functional/no-conditional-statement: "error" */
@@ -49,7 +51,7 @@ function foo(x, y) {
 This rule accepts an options object of the following type:
 
 ```ts
-{
+type Options = {
   allowReturningBranches: boolean | "ifExhaustive";
 }
 ```
@@ -57,7 +59,7 @@ This rule accepts an options object of the following type:
 The default options:
 
 ```ts
-{
+const defaults = {
   allowReturningBranches: false
 }
 ```
@@ -94,6 +96,7 @@ const x = (() => {
       return 2;
     default:
       return 0;
+  }
 })();
 ```
 

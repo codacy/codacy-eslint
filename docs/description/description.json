@@ -5480,18 +5480,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "ignoreTopLevelDescribe",
-        "description": "ignoreTopLevelDescribe"
-      }
-    ],
-    "patternId": "jest_lowercase-name",
-    "title": "Jest: Lowercase name",
-    "description": "Enforce lowercase test names",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "jest_max-nested-describe",
     "title": "Jest: Max nested describe",
@@ -5545,13 +5533,6 @@
     "patternId": "jest_no-duplicate-hooks",
     "title": "Jest: No duplicate hooks",
     "description": "Disallow duplicate setup and teardown hooks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-expect-resolves",
-    "title": "Jest: No expect resolves",
-    "description": "Disallow expect.resolves",
     "timeToFix": 5
   },
   {
@@ -5654,20 +5635,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_no-truthy-falsy",
-    "title": "Jest: No truthy falsy",
-    "description": "Disallow using `toBeTruthy()` & `toBeFalsy()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-try-expect",
-    "title": "Jest: No try expect",
-    "description": "Prefer using toThrow for exception tests",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jest_prefer-called-with",
     "title": "Jest: Prefer called with",
     "description": "Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
@@ -5695,10 +5662,15 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "jest_prefer-inline-snapshots",
-    "title": "Jest: Prefer inline snapshots",
-    "description": "Suggest using inline snapshots",
+    "parameters": [
+      {
+        "name": "ignoreTopLevelDescribe",
+        "description": "ignoreTopLevelDescribe"
+      }
+    ],
+    "patternId": "jest_prefer-lowercase-title",
+    "title": "Jest: Prefer lowercase title",
+    "description": "Enforce lowercase test names",
     "timeToFix": 5
   },
   {
@@ -5713,20 +5685,6 @@
     "patternId": "jest_prefer-strict-equal",
     "title": "Jest: Prefer strict equal",
     "description": "Suggest using `toStrictEqual()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_prefer-to-be-null",
-    "title": "Jest: Prefer to be null",
-    "description": "Suggest using `toBeNull()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_prefer-to-be-undefined",
-    "title": "Jest: Prefer to be undefined",
-    "description": "Suggest using `toBeUndefined()`",
     "timeToFix": 5
   },
   {
@@ -5759,6 +5717,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_require-hook",
+    "title": "Jest: Require hook",
+    "description": "Require setup and teardown code to be within a hook",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_require-to-throw-message",
     "title": "Jest: Require to throw message",
     "description": "Require a message for `toThrow()`",
@@ -5780,8 +5745,8 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_valid-describe",
-    "title": "Jest: Valid describe",
+    "patternId": "jest_valid-describe-callback",
+    "title": "Jest: Valid describe callback",
     "description": "Enforce valid `describe()` callback",
     "timeToFix": 5
   },
@@ -5789,7 +5754,7 @@
     "parameters": [],
     "patternId": "jest_valid-expect-in-promise",
     "title": "Jest: Valid expect in promise",
-    "description": "Enforce having return statement when testing with promises",
+    "description": "Ensure promises that have expectations in their chain are valid",
     "timeToFix": 5
   },
   {
@@ -7522,7 +7487,7 @@
     "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
-    "description": "Enforce expect-playwright matchers to be awaited.",
+    "description": "Identify false positives when async Playwright APIs are not properly awaited.",
     "timeToFix": 5
   },
   {
@@ -8198,6 +8163,13 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-invalid-html-attribute",
+    "title": "React: No invalid html attribute",
+    "description": "Forbid attribute with an invalid values`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_no-access-state-in-setstate",
     "title": "React: No access state in setstate",
     "description": "Reports when this.state is accessed within setState",
@@ -8215,6 +8187,13 @@
     "patternId": "react_no-array-index-key",
     "title": "React: No array index key",
     "description": "Prevent usage of Array index in keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_no-arrow-function-lifecycle",
+    "title": "React: No arrow function lifecycle",
+    "description": "Lifecycle methods should be methods on the prototype, not class fields",
     "timeToFix": 5
   },
   {
@@ -8377,6 +8356,13 @@
     "patternId": "react_no-unstable-nested-components",
     "title": "React: No unstable nested components",
     "description": "Prevent creating unstable components inside components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_no-unused-class-component-methods",
+    "title": "React: No unused class component methods",
+    "description": "Prevent declaring unused methods of component class",
     "timeToFix": 5
   },
   {
@@ -8941,6 +8927,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_prefer-named-replacement",
+    "title": "Regexp: Prefer named replacement",
+    "description": "Enforce using named replacement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_prefer-plus-quantifier",
     "title": "Regexp: Prefer plus quantifier",
     "description": "Enforce using `+` quantifier",
@@ -8986,6 +8979,13 @@
     "patternId": "regexp_prefer-regexp-test",
     "title": "Regexp: Prefer regexp test",
     "description": "Enforce that `RegExp#test` is used instead of `String#match` and `RegExp#exec`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-result-array-groups",
+    "title": "Regexp: Prefer result array groups",
+    "description": "Enforce using result array `groups`",
     "timeToFix": 5
   },
   {
@@ -9056,6 +9056,13 @@
     "patternId": "regexp_unicode-escape",
     "title": "Regexp: Unicode escape",
     "description": "Enforce consistent usage of unicode escape or unicode codepoint escape",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_use-ignore-case",
+    "title": "Regexp: Use ignore case",
+    "description": "Use the `i` flag if it simplifies the pattern",
     "timeToFix": 5
   },
   {
@@ -10198,6 +10205,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
+    "title": "@typescript eslint: No non null asserted nullish coalescing",
+    "description": "Disallows using a non-null assertion in the left operand of the nullish coalescing operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
     "title": "@typescript eslint: No non null asserted optional chain",
     "description": "Disallows using a non-null assertion after an optional chain expression",
@@ -10229,6 +10243,13 @@
     "patternId": "@typescript-eslint_no-require-imports",
     "title": "@typescript eslint: No require imports",
     "description": "Disallows invocation of `require()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-restricted-imports",
+    "title": "@typescript eslint: No restricted imports",
+    "description": "Disallow specified modules when loaded by `import`",
     "timeToFix": 5
   },
   {
@@ -10305,7 +10326,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-argument",
     "title": "@typescript eslint: No unsafe argument",
-    "description": "Disallows calling an function with an any type value",
+    "description": "Disallows calling a function with an any type value",
     "timeToFix": 5
   },
   {
@@ -11352,6 +11373,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_template-indent",
+    "title": "Unicorn: Template indent",
+    "description": "Fix whitespace-insensitive template indentation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
@@ -11794,6 +11822,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_multi-word-component-names",
+    "title": "Vue: Multi word component names",
+    "description": "Require component names to be always multi-word",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_multiline-html-element-content-newline",
     "title": "Vue: Multiline html element content newline",
     "description": "Require a line break before and after the contents of a multiline element",
@@ -11853,6 +11888,13 @@
     "patternId": "vue_no-boolean-default",
     "title": "Vue: No boolean default",
     "description": "Disallow boolean defaults",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-computed-properties-in-data",
+    "title": "Vue: No computed properties in data",
+    "description": "Disallow accessing computed properties in `data`.",
     "timeToFix": 5
   },
   {
@@ -11949,6 +11991,13 @@
     "patternId": "vue_no-deprecated-props-default-this",
     "title": "Vue: No deprecated props default this",
     "description": "Disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-router-link-tag-prop",
+    "title": "Vue: No deprecated router link tag prop",
+    "description": "Disallow using deprecated `tag` property on `RouterLink` (in Vue.js 3.0.0+)",
     "timeToFix": 5
   },
   {
@@ -12202,6 +12251,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-class",
+    "title": "Vue: No restricted class",
+    "description": "Disallow specific classes in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-component-options",
     "title": "Vue: No restricted component options",
     "description": "Disallow specific component option",
@@ -12321,6 +12377,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-undef-properties",
+    "title": "Vue: No undef properties",
+    "description": "Disallow undefined properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-unregistered-components",
     "title": "Vue: No unregistered components",
     "description": "Disallow using components that are not registered inside templates",
@@ -12387,6 +12450,13 @@
     "patternId": "vue_no-useless-mustaches",
     "title": "Vue: No useless mustaches",
     "description": "Disallow unnecessary mustache interpolations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-useless-template-attributes",
+    "title": "Vue: No useless template attributes",
+    "description": "Disallow useless attribute on `<template>`",
     "timeToFix": 5
   },
   {
