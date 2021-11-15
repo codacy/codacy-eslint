@@ -102,7 +102,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
-    "@vue/eslint-config-airbnb": "^5.3.0",
+    "@vue/eslint-config-airbnb": "^6.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^7.0.0",
