@@ -252,7 +252,7 @@
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "@types/eslint": "^7.28.1",
+    "@types/eslint": "^7.29.0",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.177",
     "@types/mocha": "^9.0.0",
