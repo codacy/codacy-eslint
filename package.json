@@ -75,7 +75,7 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/runtime": "^7.16.3",
     "@contentful/eslint-config-extension": "^0.4.3",
-    "@emotion/eslint-plugin": "^11.5.0",
+    "@emotion/eslint-plugin": "^11.7.0",
     "@hapi/eslint-plugin-hapi": "^4.3.6",
     "@lego/browserslist-config": "^7.1.2",
     "@lego/browserslist-config-internal": "^7.1.2",
