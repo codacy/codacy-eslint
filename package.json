@@ -151,7 +151,7 @@
     "eslint-config-standard-react": "^11.0.1",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-config-strongloop": "^2.1.0",
-    "eslint-config-universe": "^8.0.0",
+    "eslint-config-universe": "^9.0.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-config-winedirect": "^1.1.0",
     "eslint-config-xo": "^0.39.0",
