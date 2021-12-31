@@ -63,7 +63,7 @@
     "@angular-eslint/schematics": "^13.0.1",
     "@angular-eslint/template-parser": "^13.0.1",
     "@angular/compiler": "^13.1.1",
-    "@babel/cli": "^7.16.0",
+    "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.5",
     "@babel/eslint-parser": "^7.16.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
