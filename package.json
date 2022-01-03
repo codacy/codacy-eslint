@@ -73,7 +73,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "^7.16.7",
     "@contentful/eslint-config-extension": "^0.4.3",
     "@emotion/eslint-plugin": "^11.7.0",
     "@hapi/eslint-plugin-hapi": "^4.3.6",
