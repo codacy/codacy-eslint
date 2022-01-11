@@ -5455,6 +5455,12 @@
   },
   {
     "parameters": [],
+    "patternId": "jasmine_prefer-promise-strategies",
+    "title": "Jasmine: Prefer promise strategies",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_prefer-toHaveBeenCalledWith",
     "title": "Jasmine: Prefer toHaveBeenCalledWith",
     "timeToFix": 5
@@ -6264,7 +6270,7 @@
     ],
     "patternId": "jsdoc_require-returns",
     "title": "Jsdoc: Require returns",
-    "description": "Requires returns are documented.",
+    "description": "Requires that returns are documented.",
     "timeToFix": 5
   },
   {
@@ -6301,6 +6307,7 @@
     "parameters": [],
     "patternId": "jsdoc_require-throws",
     "title": "Jsdoc: Require throws",
+    "description": "Requires that throw statements are documented.",
     "timeToFix": 5
   },
   {
@@ -7344,6 +7351,13 @@
   },
   {
     "parameters": [],
+    "patternId": "mocha_no-empty-description",
+    "title": "Mocha: No empty description",
+    "description": "Disallow empty test descriptions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "mongodb_check-insert-calls",
     "title": "Mongodb: Check insert calls",
     "timeToFix": 5
@@ -7488,6 +7502,13 @@
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
     "description": "Identify false positives when async Playwright APIs are not properly awaited.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-page-pause",
+    "title": "Playwright: No page pause",
+    "description": "Prevent usage of page.pause()",
     "timeToFix": 5
   },
   {
@@ -11721,6 +11742,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_component-options-name-casing",
+    "title": "Vue: Component options name casing",
+    "description": "Enforce the casing of component name in `components` options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_component-tags-order",
     "title": "Vue: Component tags order",
     "description": "Enforce order of component top-level elements",
@@ -11768,6 +11796,13 @@
     "patternId": "vue_experimental-script-setup-vars",
     "title": "Vue: Experimental script setup vars",
     "description": "Prevent variables defined in `<script setup>` to be marked as undefined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_first-attribute-linebreak",
+    "title": "Vue: First attribute linebreak",
+    "description": "Enforce the location of first attribute",
     "timeToFix": 5
   },
   {
@@ -11979,6 +12014,13 @@
     "patternId": "vue_no-boolean-default",
     "title": "Vue: No boolean default",
     "description": "Disallow boolean defaults",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-child-content",
+    "title": "Vue: No child content",
+    "description": "Disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text`",
     "timeToFix": 5
   },
   {
@@ -12198,6 +12240,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-expose-after-await",
+    "title": "Vue: No expose after await",
+    "description": "Disallow asynchronously registered `expose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-extra-parens",
     "title": "Vue: No extra parens",
     "description": "Disallow unnecessary parentheses",
@@ -12254,6 +12303,13 @@
     "patternId": "vue_no-lone-template",
     "title": "Vue: No lone template",
     "description": "Disallow unnecessary `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-loss-of-precision",
+    "title": "Vue: No loss of precision",
+    "description": "Disallow literal numbers that lose precision",
     "timeToFix": 5
   },
   {
@@ -12324,6 +12380,13 @@
     "patternId": "vue_no-reserved-keys",
     "title": "Vue: No reserved keys",
     "description": "Disallow overwriting reserved keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-reserved-props",
+    "title": "Vue: No reserved props",
+    "description": "Disallow reserved names in props",
     "timeToFix": 5
   },
   {
@@ -12655,6 +12718,13 @@
     "patternId": "vue_padding-line-between-blocks",
     "title": "Vue: Padding line between blocks",
     "description": "Require or disallow padding lines between blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-separate-static-class",
+    "title": "Vue: Prefer separate static class",
+    "description": "Require static class names in template to be in a separate `class` attribute",
     "timeToFix": 5
   },
   {

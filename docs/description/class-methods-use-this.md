@@ -83,6 +83,10 @@ class A {
     static foo() {
         // OK. static methods aren't expected to use this.
     }
+
+    static {
+        // OK. static blocks are exempt.
+    }
 }
 ```
 
@@ -95,7 +99,7 @@ This rule has two options:
 
 ### exceptMethods
 
-```
+```js
 "class-methods-use-this": [<enabled>, { "exceptMethods": [<...exceptions>] }]
 ```
 
@@ -125,9 +129,9 @@ class A {
 }
 ```
 
-## enforceForClassFields
+### enforceForClassFields
 
-```
+```js
 "class-methods-use-this": [<enabled>, { "enforceForClassFields": true | false }]
 ```
 

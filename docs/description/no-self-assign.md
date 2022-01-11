@@ -24,6 +24,10 @@ foo = foo;
 [a, ...b] = [x, ...b];
 
 ({a, b} = {a, x});
+
+foo &&= foo;
+foo ||= foo;
+foo ??= foo;
 ```
 
 Examples of **correct** code for this rule:
@@ -50,6 +54,10 @@ obj[a] = obj["a"];
 obj.a().b = obj.a().b;
 a().b = a().b;
 
+// `&=` and `|=` have an effect on non-integers.
+foo &= foo;
+foo |= foo;
+
 // Known limitation: this does not support computed properties except single literal or single identifier.
 obj[a + b] = obj[a + b];
 obj["a" + "b"] = obj["a" + "b"];
@@ -65,7 +73,7 @@ This rule has the option to check properties as well.
 }
 ```
 
-- `props` - if this is `true`, `no-self-assign` rule warns self-assignments of properties. Default is `true`.
+* `props` - if this is `true`, `no-self-assign` rule warns self-assignments of properties. Default is `true`.
 
 ### props
 
