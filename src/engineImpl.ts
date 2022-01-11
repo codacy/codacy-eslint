@@ -9,7 +9,6 @@ export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
 ): Promise<ToolResult[]> {
   const srcDirPath = "/src"
-
   const tsconfigFile = "./tsconfig.json"
 
   const [options, files] = await configCreator(
@@ -18,7 +17,6 @@ export const engineImpl: Engine = async function (
   )
 
   options.resolvePluginsRelativeTo = "/"
-
   options.cwd = srcDirPath
 
   const filesToAnalyze = files.length > 0 ? files : ["/src/**"]
