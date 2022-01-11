@@ -9702,6 +9702,97 @@
   },
   {
     "parameters": [],
+    "patternId": "storybook_await-interactions",
+    "title": "Storybook: Await interactions",
+    "description": "Interactions should be awaited",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_context-in-play-function",
+    "title": "Storybook: Context in play function",
+    "description": "Pass a context when invoking play function of another story",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_csf-component",
+    "title": "Storybook: Csf component",
+    "description": "The component property should be set",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_default-exports",
+    "title": "Storybook: Default exports",
+    "description": "Story files should have a default export",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_hierarchy-separator",
+    "title": "Storybook: Hierarchy separator",
+    "description": "Deprecated hierachy separator in title property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_meta-inline-properties",
+    "title": "Storybook: Meta inline properties",
+    "description": "Meta should only have inline properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-redundant-story-name",
+    "title": "Storybook: No redundant story name",
+    "description": "A story should not have a redundant name property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-stories-of",
+    "title": "Storybook: No stories of",
+    "description": "StoriesOf is deprecated and should not be used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-title-property-in-meta",
+    "title": "Storybook: No title property in meta",
+    "description": "Do not define a title in meta",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_prefer-pascal-case",
+    "title": "Storybook: Prefer pascal case",
+    "description": "Stories should use PascalCase",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_story-exports",
+    "title": "Storybook: Story exports",
+    "description": "A story file must contain at least one story export",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_use-storybook-expect",
+    "title": "Storybook: Use storybook expect",
+    "description": "Use expect from `@storybook/jest`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_use-storybook-testing-library",
+    "title": "Storybook: Use storybook testing library",
+    "description": "Do not use testing-library directly on stories",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_adjacent-overload-signatures",
     "title": "@typescript eslint: Adjacent overload signatures",
     "description": "Require that member overloads be consecutive",
