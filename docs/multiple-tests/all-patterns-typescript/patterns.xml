@@ -660,6 +660,7 @@
   <module name="jasmine_new-line-between-declarations" />
   <module name="jasmine_new-line-before-expect" />
   <module name="jasmine_prefer-jasmine-matcher" />
+  <module name="jasmine_prefer-promise-strategies" />
   <module name="jasmine_prefer-toHaveBeenCalledWith" />
   <module name="jasmine_prefer-toBeUndefined" />
   <module name="jest_consistent-test-it" />
@@ -914,6 +915,7 @@
   <module name="mocha_prefer-arrow-callback" />
   <module name="mocha_valid-suite-description" />
   <module name="mocha_valid-test-description" />
+  <module name="mocha_no-empty-description" />
   <module name="mongodb_check-insert-calls" />
   <module name="mongodb_check-update-calls" />
   <module name="mongodb_check-query-calls" />
@@ -938,6 +940,7 @@
   <module name="no-unsanitized_property" />
   <module name="no-unsanitized_method" />
   <module name="playwright_missing-playwright-await" />
+  <module name="playwright_no-page-pause" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="ramda_always-simplification" />
@@ -1244,6 +1247,19 @@
   <module name="standard_computed-property-even-spacing" />
   <module name="standard_object-curly-even-spacing" />
   <module name="standard_no-callback-literal" />
+  <module name="storybook_await-interactions" />
+  <module name="storybook_context-in-play-function" />
+  <module name="storybook_csf-component" />
+  <module name="storybook_default-exports" />
+  <module name="storybook_hierarchy-separator" />
+  <module name="storybook_meta-inline-properties" />
+  <module name="storybook_no-redundant-story-name" />
+  <module name="storybook_no-stories-of" />
+  <module name="storybook_no-title-property-in-meta" />
+  <module name="storybook_prefer-pascal-case" />
+  <module name="storybook_story-exports" />
+  <module name="storybook_use-storybook-expect" />
+  <module name="storybook_use-storybook-testing-library" />
   <module name="@typescript-eslint_adjacent-overload-signatures" />
   <module name="@typescript-eslint_array-type" />
   <module name="@typescript-eslint_await-thenable" />
@@ -1487,12 +1503,14 @@
   <module name="vue_component-api-style" />
   <module name="vue_component-definition-name-casing" />
   <module name="vue_component-name-in-template-casing" />
+  <module name="vue_component-options-name-casing" />
   <module name="vue_component-tags-order" />
   <module name="vue_custom-event-name-casing" />
   <module name="vue_dot-location" />
   <module name="vue_dot-notation" />
   <module name="vue_eqeqeq" />
   <module name="vue_experimental-script-setup-vars" />
+  <module name="vue_first-attribute-linebreak" />
   <module name="vue_func-call-spacing" />
   <module name="vue_html-button-has-type" />
   <module name="vue_html-closing-bracket-newline" />
@@ -1520,6 +1538,7 @@
   <module name="vue_no-async-in-computed-properties" />
   <module name="vue_no-bare-strings-in-template" />
   <module name="vue_no-boolean-default" />
+  <module name="vue_no-child-content" />
   <module name="vue_no-computed-properties-in-data" />
   <module name="vue_no-confusing-v-for-v-if" />
   <module name="vue_no-constant-condition" />
@@ -1550,11 +1569,13 @@
   <module name="vue_no-empty-component-block" />
   <module name="vue_no-empty-pattern" />
   <module name="vue_no-export-in-script-setup" />
+  <module name="vue_no-expose-after-await" />
   <module name="vue_no-extra-parens" />
   <module name="vue_no-invalid-model-keys" />
   <module name="vue_no-irregular-whitespace" />
   <module name="vue_no-lifecycle-after-await" />
   <module name="vue_no-lone-template" />
+  <module name="vue_no-loss-of-precision" />
   <module name="vue_no-multi-spaces" />
   <module name="vue_no-multiple-objects-in-class" />
   <module name="vue_no-multiple-slot-args" />
@@ -1565,6 +1586,7 @@
   <module name="vue_no-ref-as-operand" />
   <module name="vue_no-reserved-component-names" />
   <module name="vue_no-reserved-keys" />
+  <module name="vue_no-reserved-props" />
   <module name="vue_no-restricted-block" />
   <module name="vue_no-restricted-call-after-await" />
   <module name="vue_no-restricted-class" />
@@ -1611,6 +1633,7 @@
   <module name="vue_operator-linebreak" />
   <module name="vue_order-in-components" />
   <module name="vue_padding-line-between-blocks" />
+  <module name="vue_prefer-separate-static-class" />
   <module name="vue_prefer-template" />
   <module name="vue_prop-name-casing" />
   <module name="vue_require-component-is" />

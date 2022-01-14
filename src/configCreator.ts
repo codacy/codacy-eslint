@@ -56,13 +56,29 @@ async function createOptions(
             (p) => !p.patternId.startsWith("@typescript-eslint")
           )
 
+      // There are some plugins that their rules should only apply for
+      // some specific file types / files names. So when those are enabled
+      // explicitly we need to apply them with a bit of customization.
+      //
+      //   example: a rule for the storybook should only apply to files with
+      //            "story" or "stories" in the name. If enabled for all files it
+      //            reports false positives on normal files.
+      //            check: conf file @ eslint-plugin-storybook/configs/recomneded.js
+      const [storybookPatterns, otherPatterns] =
+          partition(patterns, (p) => p.patternId.startsWith("storybook"))
+
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
+        // remove extends and overrides from our default config.
         result.baseConfig.extends = []
         result.baseConfig.overrides.forEach(
           (override: any) => (override.extends = [])
         )
-        result.baseConfig.rules = patternsToRules(patterns)
+
+        // explicitly use the rules being passed by codacyrc
+        result.baseConfig.rules = patternsToRules(otherPatterns)
+
+        // configure overrides in case of typescript code
         if (tsConfigFile) {
           if (result.baseConfig.overrides[0].parserOptions) {
             result.baseConfig.overrides[0].parserOptions.project = tsConfigFile
@@ -71,6 +87,16 @@ async function createOptions(
               project: tsConfigFile,
             }
           }
+        }
+
+        // configure override in case storybook plugin rules being turned on
+        if (!isEmpty(storybookPatterns)) {
+          result.baseConfig.overrides.push(
+              {
+                files: ['*.stories.@(ts|tsx|js|jsx|mjs|cjs)', '*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
+                rules: patternsToRules(storybookPatterns)
+              }
+          )
         }
       }
       result.useEslintrc = false

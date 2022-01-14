@@ -78,6 +78,7 @@ export const defaultOptions: CLIEngine.Options = {
       "sort-imports-es6-autofix",
       "sort-keys-fix",
       "standard",
+      "storybook",
       "@typescript-eslint",
       "unicorn",
       "vue",

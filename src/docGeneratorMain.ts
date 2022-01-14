@@ -228,6 +228,13 @@ async function main() {
       `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
     "@salesforce/lightning"
   )
+
+  console.log("Generate storybook description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
+      "storybook"
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

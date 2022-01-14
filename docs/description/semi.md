@@ -172,6 +172,14 @@ Examples of additional **correct** code for this rule with the `"always", { "omi
 if (foo) { bar() }
 
 if (foo) { bar(); baz() }
+
+function f() { bar(); baz() }
+
+class C {
+    foo() { bar(); baz() }
+
+    static { bar(); baz() }
+}
 ```
 
 #### beforeStatementContinuationChars
@@ -202,13 +210,13 @@ import a from "a"
 
 If you do not want to enforce semicolon usage (or omission) in any particular way, then you can turn this rule off.
 
-## Further Reading
-
-* [An Open Letter to JavaScript Leaders Regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
-* [JavaScript Semicolon Insertion](http://inimino.org/~inimino/blog/javascript_semicolons)
-
 ## Related Rules
 
 * [no-extra-semi](no-extra-semi.md)
 * [no-unexpected-multiline](no-unexpected-multiline.md)
 * [semi-spacing](semi-spacing.md)
+
+## Further Reading
+
+* [An Open Letter to JavaScript Leaders Regarding Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+* [JavaScript Semicolon Insertion](http://inimino.org/~inimino/blog/javascript_semicolons)

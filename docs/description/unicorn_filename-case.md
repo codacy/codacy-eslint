@@ -1,12 +1,15 @@
 # Enforce a case style for filenames
 
+<!-- Do not manually modify RULE_NOTICE part -->
+<!-- RULE_NOTICE -->
 ✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+<!-- /RULE_NOTICE -->
 
 Enforces all linted files to have their names in a certain case style and lowercase file extension. The default is `kebabCase`.
 
 Files named `index.js`, `index.mjs`, `index.cjs`, `index.ts`, `index.tsx`, `index.vue` are ignored as they can't change case (Only a problem with `pascalCase`).
 
-Characters in the filename except `a-z`, `A-Z`, `0-9`, `-`, `_` and `$` are ignored.
+Characters in the filename except `a-z`, `A-Z`, `0-9`, `-`, and `_` are ignored.
 
 ## Cases
 
