@@ -6,6 +6,7 @@ import { defaultOptions } from "./eslintDefaultOptions"
 import { patternIdToEslint } from "./model/patterns"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName } from "./toolMetadata"
+import {debug, debugEach, debugJson} from "./logging";
 
 function patternsToRules(
   patterns: Pattern[]
@@ -44,9 +45,16 @@ async function createOptions(
   if (codacyInput && codacyInput.tools) {
     const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
     if (eslintTool && eslintTool.patterns) {
+      debug(`[codacy]: it appears we are going to use our own settings...`)
+      debug("[codacy]: read the following patterns to process from .codacyrc:")
+      debug(`[codacy]: # patterns to use: ${eslintTool.patterns.length}`)
+      debugEach(eslintTool.patterns, pattern => `[codacy]:  |- pattern name: ${pattern}`)
+
       const isTypescriptAnalysis =
         codacyInput.files &&
         codacyInput.files.every((f) => f.endsWith(".ts") || f.endsWith(".tsx"))
+
+      debug(`[codacy]: does the project appear to be a typescript one? - ${isTypescriptAnalysis}`)
 
       // typescript patterns require a typescript parser which will fail for different file types
       // so we are removing typescript patterns when analysing different file types
@@ -66,6 +74,8 @@ async function createOptions(
       //            check: conf file @ eslint-plugin-storybook/configs/recomneded.js
       const [storybookPatterns, otherPatterns] =
           partition(patterns, (p) => p.patternId.startsWith("storybook"))
+
+      debug(`[codacy]: do we have plugins to apply only to some file types? - ${storybookPatterns.length > 0}`)
 
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
