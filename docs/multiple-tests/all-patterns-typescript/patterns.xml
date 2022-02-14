@@ -669,6 +669,7 @@
   <module name="jest_no-alias-methods" />
   <module name="jest_no-commented-out-tests" />
   <module name="jest_no-conditional-expect" />
+  <module name="jest_no-conditional-in-test" />
   <module name="jest_no-deprecated-functions" />
   <module name="jest_no-disabled-tests" />
   <module name="jest_no-done-callback" />
@@ -688,10 +689,13 @@
   <module name="jest_no-test-prefixes" />
   <module name="jest_no-test-return-statement" />
   <module name="jest_prefer-called-with" />
+  <module name="jest_prefer-comparison-matcher" />
+  <module name="jest_prefer-equality-matcher" />
   <module name="jest_prefer-expect-assertions" />
   <module name="jest_prefer-expect-resolves" />
   <module name="jest_prefer-hooks-on-top" />
   <module name="jest_prefer-lowercase-title" />
+  <module name="jest_prefer-snapshot-hint" />
   <module name="jest_prefer-spy-on" />
   <module name="jest_prefer-strict-equal" />
   <module name="jest_prefer-to-be" />
@@ -760,6 +764,7 @@
   <module name="jsdoc_require-throws" />
   <module name="jsdoc_require-yields" />
   <module name="jsdoc_require-yields-check" />
+  <module name="jsdoc_sort-tags" />
   <module name="jsdoc_tag-lines" />
   <module name="jsdoc_valid-types" />
   <module name="json_*" />
@@ -1607,6 +1612,7 @@
   <module name="vue_no-template-target-blank" />
   <module name="vue_no-textarea-mustache" />
   <module name="vue_no-this-in-before-route-enter" />
+  <module name="vue_no-undef-components" />
   <module name="vue_no-undef-properties" />
   <module name="vue_no-unregistered-components" />
   <module name="vue_no-unsupported-features" />
@@ -1624,11 +1630,13 @@
   <module name="vue_no-v-for-template-key" />
   <module name="vue_no-v-html" />
   <module name="vue_no-v-model-argument" />
+  <module name="vue_no-v-text-v-html-on-component" />
   <module name="vue_no-v-text" />
   <module name="vue_no-watch-after-await" />
   <module name="vue_object-curly-newline" />
   <module name="vue_object-curly-spacing" />
   <module name="vue_object-property-newline" />
+  <module name="vue_object-shorthand" />
   <module name="vue_one-component-per-file" />
   <module name="vue_operator-linebreak" />
   <module name="vue_order-in-components" />
@@ -1636,6 +1644,7 @@
   <module name="vue_prefer-separate-static-class" />
   <module name="vue_prefer-template" />
   <module name="vue_prop-name-casing" />
+  <module name="vue_quote-props" />
   <module name="vue_require-component-is" />
   <module name="vue_require-default-prop" />
   <module name="vue_require-direct-export" />

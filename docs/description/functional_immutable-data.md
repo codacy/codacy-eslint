@@ -31,6 +31,7 @@ const arr = [0, 1, 2];
 
 arr[0] = 4; // <- Modifying an array is not allowed.
 arr.length = 1; // <- Modifying an array is not allowed.
+delete arr[1]; // <- Modifying an existing array is not allowed.
 arr.push(3); // <- Modifying an array is not allowed.
 ```
 
@@ -172,5 +173,5 @@ For example:
 
 The following wildcards can be used when specifying a pattern:
 
-`**` - Match any depth (including zero). Can only be used as a full accessor.
+`**` - Match any depth (including zero). Can only be used as a full accessor.\
 `*` - When used as a full accessor, match the next accessor (there must be one). When used as part of an accessor, match any characters.

@@ -1,4 +1,6 @@
-# Rule to disallow a duplicate case label (no-duplicate-case)
+# no-duplicate-case
+
+Disallows duplicate `case` labels.
 
 If a `switch` statement has duplicate test expressions in `case` clauses, it is likely that a programmer copied a `case` clause but forgot to change the test expression.
 
@@ -86,6 +88,21 @@ switch (a) {
     case "3":
         break;
     default:
+        break;
+}
+```
+
+## When Not To Use It
+
+In rare cases where identical test expressions in `case` clauses produce different values, which necessarily means that the expressions are causing and relying on side effects, you will have to disable this rule.
+
+```js
+switch (a) {
+    case i++:
+        foo();
+        break;
+    case i++: // eslint-disable-line no-duplicate-case
+        bar();
         break;
 }
 ```

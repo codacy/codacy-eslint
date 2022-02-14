@@ -5726,6 +5726,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_no-conditional-in-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_no-deprecated-functions",
       "level": "Info",
       "category": "CodeStyle",
@@ -5859,6 +5866,20 @@
       "enabled": false
     },
     {
+      "patternId": "jest_prefer-comparison-matcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest_prefer-equality-matcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_prefer-expect-assertions",
       "level": "Info",
       "category": "CodeStyle",
@@ -5889,6 +5910,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "jest_prefer-snapshot-hint",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -6574,6 +6602,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_sort-tags",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -12980,6 +13015,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-undef-components",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-undef-properties",
       "level": "Info",
       "category": "CodeStyle",
@@ -13099,6 +13141,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-v-text-v-html-on-component",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-v-text",
       "level": "Info",
       "category": "CodeStyle",
@@ -13140,6 +13189,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_object-shorthand",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -13186,6 +13242,13 @@
     },
     {
       "patternId": "vue_prop-name-casing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_quote-props",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

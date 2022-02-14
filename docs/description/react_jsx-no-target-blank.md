@@ -9,7 +9,7 @@ This rule aims to prevent user generated link hrefs and form actions from creati
 
 ## Rule Options
 
-```json
+```js
 ...
 "react/jsx-no-target-blank": [<enabled>, {
   "allowReferrer": <allow-referrer>,
@@ -122,6 +122,8 @@ var Hello = <Link />
 This rule supports the ability to use custom components for forms. To enable this, define your custom form components in the global [shared settings](https://github.com/yannickcr/eslint-plugin-react/blob/master/README.md#configuration) under the `formComponents` configuration area. Once configured, this rule will check those components as if they were `<form />` elements.
 
 ## When To Override It
+
+Modern browsers (Chrome ≥ 88, Edge ≥ 88, Firefox ≥ 79 and Safari ≥ 12.2) automatically imply `rel="noopener"`. Therefore this rule is no longer needed, if legacy browsers are not supported. See https://web.dev/external-anchors-use-rel-noopener/ and https://caniuse.com/mdn-html_elements_a_implicit_noopener for more details.
 
 For links to a trusted host (e.g. internal links to your own site, or links to a another host you control, where you can be certain this security vulnerability does not exist), you may want to keep the HTTP Referer header for analytics purposes.
 

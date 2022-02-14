@@ -1,4 +1,6 @@
-# Disallow mixes of different operators (no-mixed-operators)
+# no-mixed-operators
+
+Disallows mixes of different operators.
 
 Enclosing complex expressions by parentheses clarifies the developer's intention, which makes the code more readable.
 This rule warns when different operators are used consecutively without parentheses in an expression.
@@ -20,7 +22,7 @@ var foo = a && b || c || d;
 
 will generate
 
-```sh
+```shell
 1:13  Unexpected mix of '&&' and '||'. (no-mixed-operators)
 1:18  Unexpected mix of '&&' and '||'. (no-mixed-operators)
 ```
@@ -31,7 +33,7 @@ var foo = a && b ? c : d;
 
 will generate
 
-```sh
+```shell
 1:13  Unexpected mix of '&&' and '?:'. (no-mixed-operators)
 1:18  Unexpected mix of '&&' and '?:'. (no-mixed-operators)
 ```
