@@ -1,4 +1,6 @@
-# Disallow renaming import, export, and destructured assignments to the same name (no-useless-rename)
+# no-useless-rename
+
+Disallows renaming import, export, and destructured assignments to the same name.
 
 ES2015 allows for the renaming of references in import and export statements as well as destructuring assignments. This gives programmers a concise syntax for performing these operations while renaming these references:
 
@@ -52,8 +54,11 @@ Examples of **incorrect** code for this rule by default:
 /*eslint no-useless-rename: "error"*/
 
 import { foo as foo } from "bar";
+import { "foo" as foo } from "bar";
 export { foo as foo };
+export { foo as "foo" };
 export { foo as foo } from "bar";
+export { "foo" as "foo" } from "bar";
 let { foo: foo } = bar;
 let { 'foo': foo } = bar;
 function foo({ bar: bar }) {}
@@ -68,10 +73,13 @@ Examples of **correct** code for this rule by default:
 import * as foo from "foo";
 import { foo } from "bar";
 import { foo as bar } from "baz";
+import { "foo" as bar } from "baz";
 
 export { foo };
 export { foo as bar };
+export { foo as "bar" };
 export { foo as bar } from "foo";
+export { "foo" as "bar" } from "foo";
 
 let { foo } = bar;
 let { foo: bar } = baz;

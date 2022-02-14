@@ -5515,6 +5515,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_no-conditional-in-test",
+    "title": "Jest: No conditional in test",
+    "description": "Disallow conditional logic in tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_no-deprecated-functions",
     "title": "Jest: No deprecated functions",
     "description": "Disallow use of deprecated functions",
@@ -5648,6 +5655,20 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-comparison-matcher",
+    "title": "Jest: Prefer comparison matcher",
+    "description": "Suggest using the built-in comparison matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-equality-matcher",
+    "title": "Jest: Prefer equality matcher",
+    "description": "Suggest using the built-in equality matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-expect-assertions",
     "title": "Jest: Prefer expect assertions",
     "description": "Suggest using `expect.assertions()` OR `expect.hasAssertions()`",
@@ -5677,6 +5698,13 @@
     "patternId": "jest_prefer-lowercase-title",
     "title": "Jest: Prefer lowercase title",
     "description": "Enforce lowercase test names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-snapshot-hint",
+    "title": "Jest: Prefer snapshot hint",
+    "description": "Prefer including a hint with external snapshots",
     "timeToFix": 5
   },
   {
@@ -6352,6 +6380,12 @@
     "patternId": "jsdoc_require-yields-check",
     "title": "Jsdoc: Require yields check",
     "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_sort-tags",
+    "title": "Jsdoc: Sort tags",
     "timeToFix": 5
   },
   {
@@ -9753,7 +9787,7 @@
     "parameters": [],
     "patternId": "storybook_hierarchy-separator",
     "title": "Storybook: Hierarchy separator",
-    "description": "Deprecated hierachy separator in title property",
+    "description": "Deprecated hierarchy separator in title property",
     "timeToFix": 5
   },
   {
@@ -11585,14 +11619,14 @@
     "parameters": [],
     "patternId": "vue_array-bracket-newline",
     "title": "Vue: Array bracket newline",
-    "description": "Enforce linebreaks after opening and before closing array brackets",
+    "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_array-bracket-spacing",
     "title": "Vue: Array bracket spacing",
-    "description": "Enforce consistent spacing inside array brackets",
+    "description": "Enforce consistent spacing inside array brackets in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11608,7 +11642,7 @@
     ],
     "patternId": "vue_arrow-spacing",
     "title": "Vue: Arrow spacing",
-    "description": "Enforce consistent spacing before and after the arrow in arrow functions",
+    "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11636,7 +11670,7 @@
     "parameters": [],
     "patternId": "vue_block-spacing",
     "title": "Vue: Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11659,7 +11693,7 @@
     ],
     "patternId": "vue_brace-style",
     "title": "Vue: Brace style",
-    "description": "Enforce consistent brace style for blocks",
+    "description": "Enforce consistent brace style for blocks in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11679,14 +11713,14 @@
     ],
     "patternId": "vue_camelcase",
     "title": "Vue: Camelcase",
-    "description": "Enforce camelcase naming convention",
+    "description": "Enforce camelcase naming convention in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_comma-dangle",
     "title": "Vue: Comma dangle",
-    "description": "Require or disallow trailing commas",
+    "description": "Require or disallow trailing commas in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11702,14 +11736,14 @@
     ],
     "patternId": "vue_comma-spacing",
     "title": "Vue: Comma spacing",
-    "description": "Enforce consistent spacing before and after commas",
+    "description": "Enforce consistent spacing before and after commas in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_comma-style",
     "title": "Vue: Comma style",
-    "description": "Enforce consistent comma style",
+    "description": "Enforce consistent comma style in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11765,7 +11799,7 @@
     "parameters": [],
     "patternId": "vue_dot-location",
     "title": "Vue: Dot location",
-    "description": "Enforce consistent newlines before and after dots",
+    "description": "Enforce consistent newlines before and after dots in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11781,14 +11815,14 @@
     ],
     "patternId": "vue_dot-notation",
     "title": "Vue: Dot notation",
-    "description": "Enforce dot notation whenever possible",
+    "description": "Enforce dot notation whenever possible in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_eqeqeq",
     "title": "Vue: Eqeqeq",
-    "description": "Require the use of `===` and `!==`",
+    "description": "Require the use of `===` and `!==` in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11809,7 +11843,7 @@
     "parameters": [],
     "patternId": "vue_func-call-spacing",
     "title": "Vue: Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11906,7 +11940,7 @@
     "parameters": [],
     "patternId": "vue_key-spacing",
     "title": "Vue: Key spacing",
-    "description": "Enforce consistent spacing between keys and values in object literal properties",
+    "description": "Enforce consistent spacing between keys and values in object literal properties in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11922,7 +11956,7 @@
     ],
     "patternId": "vue_keyword-spacing",
     "title": "Vue: Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords",
+    "description": "Enforce consistent spacing before and after keywords in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11943,7 +11977,7 @@
     "parameters": [],
     "patternId": "vue_max-len",
     "title": "Vue: Max len",
-    "description": "Enforce a maximum line length",
+    "description": "Enforce a maximum line length in `.vue` files",
     "timeToFix": 5
   },
   {
@@ -12046,7 +12080,7 @@
     ],
     "patternId": "vue_no-constant-condition",
     "title": "Vue: No constant condition",
-    "description": "Disallow constant expressions in conditions",
+    "description": "Disallow constant expressions in conditions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12228,7 +12262,7 @@
     "parameters": [],
     "patternId": "vue_no-empty-pattern",
     "title": "Vue: No empty pattern",
-    "description": "Disallow empty destructuring patterns",
+    "description": "Disallow empty destructuring patterns in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12249,7 +12283,7 @@
     "parameters": [],
     "patternId": "vue_no-extra-parens",
     "title": "Vue: No extra parens",
-    "description": "Disallow unnecessary parentheses",
+    "description": "Disallow unnecessary parentheses in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12288,7 +12322,7 @@
     ],
     "patternId": "vue_no-irregular-whitespace",
     "title": "Vue: No irregular whitespace",
-    "description": "Disallow irregular whitespace",
+    "description": "Disallow irregular whitespace in `.vue` files",
     "timeToFix": 5
   },
   {
@@ -12309,7 +12343,7 @@
     "parameters": [],
     "patternId": "vue_no-loss-of-precision",
     "title": "Vue: No loss of precision",
-    "description": "Disallow literal numbers that lose precision",
+    "description": "Disallow literal numbers that lose precision in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12442,7 +12476,7 @@
     "parameters": [],
     "patternId": "vue_no-restricted-syntax",
     "title": "Vue: No restricted syntax",
-    "description": "Disallow specified syntax",
+    "description": "Disallow specified syntax in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12484,7 +12518,7 @@
     "parameters": [],
     "patternId": "vue_no-sparse-arrays",
     "title": "Vue: No sparse arrays",
-    "description": "Disallow sparse arrays",
+    "description": "Disallow sparse arrays in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12527,6 +12561,13 @@
     "patternId": "vue_no-this-in-before-route-enter",
     "title": "Vue: No this in before route enter",
     "description": "Disallow `this` usage in a `beforeRouteEnter` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-undef-components",
+    "title": "Vue: No undef components",
+    "description": "Disallow use of undefined components in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12596,7 +12637,7 @@
     "parameters": [],
     "patternId": "vue_no-useless-concat",
     "title": "Vue: No useless concat",
-    "description": "Disallow unnecessary concatenation of literals or template literals",
+    "description": "Disallow unnecessary concatenation of literals or template literals in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12650,6 +12691,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-v-text-v-html-on-component",
+    "title": "Vue: No v text v html on component",
+    "description": "Disallow v-text / v-html on component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-v-text",
     "title": "Vue: No v text",
     "description": "Disallow use of v-text",
@@ -12666,14 +12714,14 @@
     "parameters": [],
     "patternId": "vue_object-curly-newline",
     "title": "Vue: Object curly newline",
-    "description": "Enforce consistent line breaks after opening and before closing braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_object-curly-spacing",
     "title": "Vue: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
+    "description": "Enforce consistent spacing inside braces in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12689,7 +12737,14 @@
     ],
     "patternId": "vue_object-property-newline",
     "title": "Vue: Object property newline",
-    "description": "Enforce placing object properties on separate lines",
+    "description": "Enforce placing object properties on separate lines in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_object-shorthand",
+    "title": "Vue: Object shorthand",
+    "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12703,7 +12758,7 @@
     "parameters": [],
     "patternId": "vue_operator-linebreak",
     "title": "Vue: Operator linebreak",
-    "description": "Enforce consistent linebreak style for operators",
+    "description": "Enforce consistent linebreak style for operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12731,7 +12786,7 @@
     "parameters": [],
     "patternId": "vue_prefer-template",
     "title": "Vue: Prefer template",
-    "description": "Require template literals instead of string concatenation",
+    "description": "Require template literals instead of string concatenation in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12739,6 +12794,13 @@
     "patternId": "vue_prop-name-casing",
     "title": "Vue: Prop name casing",
     "description": "Enforce specific casing for the Prop name in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_quote-props",
+    "title": "Vue: Quote props",
+    "description": "Require quotes around object literal property names in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12906,7 +12968,7 @@
     "parameters": [],
     "patternId": "vue_space-in-parens",
     "title": "Vue: Space in parens",
-    "description": "Enforce consistent spacing inside parentheses",
+    "description": "Enforce consistent spacing inside parentheses in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12918,7 +12980,7 @@
     ],
     "patternId": "vue_space-infix-ops",
     "title": "Vue: Space infix ops",
-    "description": "Require spacing around infix operators",
+    "description": "Require spacing around infix operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12934,7 +12996,7 @@
     ],
     "patternId": "vue_space-unary-ops",
     "title": "Vue: Space unary ops",
-    "description": "Enforce consistent spacing before or after unary operators",
+    "description": "Enforce consistent spacing before or after unary operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12948,7 +13010,7 @@
     "parameters": [],
     "patternId": "vue_template-curly-spacing",
     "title": "Vue: Template curly spacing",
-    "description": "Require or disallow spacing around embedded expressions of template strings",
+    "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
     "timeToFix": 5
   },
   {
