@@ -259,7 +259,7 @@
     "@types/lodash": "^4.14.178",
     "@types/mocha": "^9.1.0",
     "@types/node": "^17.0.18",
-    "@types/node-fetch": "^2.6.0",
+    "@types/node-fetch": "^2.6.1",
     "@types/simple-mock": "^0.8.2",
     "chai": "^4.3.6",
     "eslint-plugin-simple-import-sort": "^7.0.0",
