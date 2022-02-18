@@ -62,7 +62,7 @@
     "@angular-eslint/eslint-plugin-template": "^13.1.0",
     "@angular-eslint/schematics": "^13.1.0",
     "@angular-eslint/template-parser": "^13.1.0",
-    "@angular/compiler": "^13.2.2",
+    "@angular/compiler": "^13.2.3",
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.4",
     "@babel/eslint-parser": "^7.17.0",
