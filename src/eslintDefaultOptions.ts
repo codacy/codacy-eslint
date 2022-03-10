@@ -1,4 +1,4 @@
-import { CLIEngine } from "eslint"
+import { ESLint, Linter } from "eslint"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
 const typescriptConfigs: string[] = [
@@ -6,7 +6,7 @@ const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/recommended",
 ]
 
-export const defaultOptions: CLIEngine.Options = {
+export const defaultOptions: ESLint.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
@@ -120,4 +120,5 @@ export const defaultOptions: CLIEngine.Options = {
   },
 }
 
-export const defaultEngine = new CLIEngine(defaultOptions)
+export const defaultEngine = new ESLint(defaultOptions)
+export const defaultLinter = new Linter(defaultOptions)

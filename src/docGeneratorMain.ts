@@ -3,13 +3,13 @@ import { EOL } from "os"
 
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
-import { defaultEngine } from "./eslintDefaultOptions"
+import { defaultLinter } from "./eslintDefaultOptions"
 
 main()
 
 async function main() {
   const docGenerator = new DocGenerator(
-    Array.from(defaultEngine.getRules().entries()).filter(
+    Array.from(defaultLinter.getRules().entries()).filter(
       ([patternId, _]) =>
         patternId &&
         !isBlacklisted(patternId) &&
