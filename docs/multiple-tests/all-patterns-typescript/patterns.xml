@@ -994,6 +994,8 @@
   <module name="react_forbid-foreign-prop-types" />
   <module name="react_forbid-prop-types" />
   <module name="react_function-component-definition" />
+  <module name="react_hook-use-state" />
+  <module name="react_iframe-missing-sandbox" />
   <module name="react_jsx-boolean-value" />
   <module name="react_jsx-child-element-spacing" />
   <module name="react_jsx-closing-bracket-location" />
@@ -1641,8 +1643,10 @@
   <module name="vue_operator-linebreak" />
   <module name="vue_order-in-components" />
   <module name="vue_padding-line-between-blocks" />
+  <module name="vue_prefer-import-from-vue" />
   <module name="vue_prefer-separate-static-class" />
   <module name="vue_prefer-template" />
+  <module name="vue_prefer-true-attribute-shorthand" />
   <module name="vue_prop-name-casing" />
   <module name="vue_quote-props" />
   <module name="vue_require-component-is" />
@@ -1699,6 +1703,9 @@
   <module name="vue_valid-v-show" />
   <module name="vue_valid-v-slot" />
   <module name="vue_valid-v-text" />
+  <module name="wdio_await-expect" />
+  <module name="wdio_no-debug" />
+  <module name="wdio_no-pause" />
   <module name="xss_no-location-href-assign" />
   <module name="xss_no-mixed-html" />
 </module>
