@@ -8269,6 +8269,20 @@
       "enabled": false
     },
     {
+      "patternId": "react_hook-use-state",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react_iframe-missing-sandbox",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "react_jsx-boolean-value",
       "level": "Info",
       "category": "CodeStyle",
@@ -8363,6 +8377,10 @@
         },
         {
           "name": "checkKeyMustBeforeSpread",
+          "default": false
+        },
+        {
+          "name": "warnOnDuplicates",
           "default": false
         }
       ],
@@ -8540,7 +8558,16 @@
       "patternId": "react_jsx-sort-props",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "multiline",
+          "default": "ignore"
+        },
+        {
+          "name": "locale",
+          "default": "auto"
+        }
+      ],
       "enabled": false
     },
     {
@@ -13227,6 +13254,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_prefer-import-from-vue",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_prefer-separate-static-class",
       "level": "Info",
       "category": "CodeStyle",
@@ -13235,6 +13269,13 @@
     },
     {
       "patternId": "vue_prefer-template",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_prefer-true-attribute-shorthand",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13664,6 +13705,27 @@
       "patternId": "vue_valid-v-text",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "wdio_await-expect",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "wdio_no-debug",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "wdio_no-pause",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },

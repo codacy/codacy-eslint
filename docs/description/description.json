@@ -7908,6 +7908,20 @@
   },
   {
     "parameters": [],
+    "patternId": "react_hook-use-state",
+    "title": "React: Hook use state",
+    "description": "Ensure symmetric naming of useState hook value and setter variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_iframe-missing-sandbox",
+    "title": "React: Iframe missing sandbox",
+    "description": "Enforce sandbox attribute on iframe elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_jsx-boolean-value",
     "title": "React: Jsx boolean value",
     "description": "Enforce boolean attributes notation in JSX",
@@ -7999,6 +8013,10 @@
       {
         "name": "checkKeyMustBeforeSpread",
         "description": "checkKeyMustBeforeSpread"
+      },
+      {
+        "name": "warnOnDuplicates",
+        "description": "warnOnDuplicates"
       }
     ],
     "patternId": "react_jsx-key",
@@ -8175,7 +8193,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "multiline",
+        "description": "multiline"
+      },
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
     "patternId": "react_jsx-sort-props",
     "title": "React: Jsx sort props",
     "description": "Enforce props alphabetical sorting",
@@ -12777,6 +12804,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_prefer-import-from-vue",
+    "title": "Vue: Prefer import from vue",
+    "description": "Enforce import from 'vue' instead of import from '@vue/*'",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_prefer-separate-static-class",
     "title": "Vue: Prefer separate static class",
     "description": "Require static class names in template to be in a separate `class` attribute",
@@ -12787,6 +12821,13 @@
     "patternId": "vue_prefer-template",
     "title": "Vue: Prefer template",
     "description": "Require template literals instead of string concatenation in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-true-attribute-shorthand",
+    "title": "Vue: Prefer true attribute shorthand",
+    "description": "Require shorthand form attribute when `v-bind` value is `true`",
     "timeToFix": 5
   },
   {
@@ -13214,6 +13255,27 @@
     "patternId": "vue_valid-v-text",
     "title": "Vue: Valid v text",
     "description": "Enforce valid `v-text` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_await-expect",
+    "title": "Wdio: Await expect",
+    "description": "Expect must be prefixed with await",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_no-debug",
+    "title": "Wdio: No debug",
+    "description": "Disallow browser.debug() in tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_no-pause",
+    "title": "Wdio: No pause",
+    "description": "Disallow browser.pause() in tests",
     "timeToFix": 5
   },
   {

@@ -97,6 +97,7 @@
     "@salesforce/eslint-plugin-aura": "^2.0.0",
     "@salesforce/eslint-plugin-lightning": "^0.1.1",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
+    "@serverless/eslint-config": "^4.0.0",
     "@strv/eslint-config-typescript": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.33.0",
