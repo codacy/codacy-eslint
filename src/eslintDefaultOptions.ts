@@ -1,4 +1,5 @@
-import { ESLint, Linter } from "eslint"
+import { ESLint } from "eslint"
+import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
 const typescriptConfigs: string[] = [
@@ -22,69 +23,7 @@ export const defaultOptions: ESLint.Options = {
       worker: true,
       qunit: true,
     },
-    plugins: [
-      "angular",
-      "angularjs-security-rules",
-      "babel",
-      "backbone",
-      "better-styled-components",
-      "chai-expect",
-      "chai-friendly",
-      "compat",
-      "cypress",
-      "drupal",
-      "ember",
-      "ember-suave",
-      "filenames",
-      "flowtype",
-      "functional",
-      "graphql-fragments",
-      "hapi",
-      "html",
-      "i18n-json",
-      "import",
-      "jasmine",
-      "jest",
-      "jest-formatting",
-      "jsdoc",
-      "json",
-      "jsx-a11y",
-      "lodash",
-      "lodash-fp",
-      "meteor",
-      "mocha",
-      "mongodb",
-      "monorepo",
-      "no-only-tests",
-      "no-unsafe-innerhtml",
-      "no-unsanitized",
-      "node",
-      "playwright",
-      "prettier",
-      "prettier-vue",
-      "promise",
-      "ramda",
-      "react-hooks",
-      "react-native",
-      "react",
-      "redux-saga",
-      "regexp",
-      "relay",
-      "@salesforce/eslint-plugin-aura",
-      "@salesforce/eslint-plugin-lightning",
-      "scanjs-rules",
-      "security",
-      "sonarjs",
-      "sort-imports-es6-autofix",
-      "sort-keys-fix",
-      "standard",
-      "storybook",
-      "@typescript-eslint",
-      "unicorn",
-      "vue",
-      "wdio",
-      "xss"
-    ],
+    plugins: pluginsNames,
     parser: "babel-eslint",
     overrides: [
       {
@@ -114,11 +53,10 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       jest: {
-        version: 26
-      }
+        version: 26,
+      },
     },
   },
 }
 
 export const defaultEngine = new ESLint(defaultOptions)
-export const defaultLinter = new Linter(defaultOptions)

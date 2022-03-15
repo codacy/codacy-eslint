@@ -2,7 +2,8 @@
 
 Enforce a convention in the order of `require()` / `import` statements.
 +(fixable) The `--fix` option on the [command line] automatically fixes problems reported by this rule.
-The order is as shown in the following example:
+
+With the [`groups`](#groups-array) option set to `["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]` the order is as shown in the following example:
 
 ```js
 // 1. node "builtin" modules
@@ -24,6 +25,8 @@ import baz from './bar/baz';
 import main from './';
 // 7. "object"-imports (only available in TypeScript)
 import log = console.log;
+// 8. "type" imports (only available in Flow and TypeScript)
+import type { Foo } from 'foo';
 ```
 
 Unassigned imports are ignored, as the order they are imported in may be important.
@@ -80,7 +83,7 @@ This rule supports the following options:
 ### `groups: [array]`:
 
 How groups are defined, and the order to respect. `groups` must be an array of `string` or [`string`]. The only allowed `string`s are:
-`"builtin"`, `"external"`, `"internal"`, `"unknown"`, `"parent"`, `"sibling"`, `"index"`, `"object"`.
+`"builtin"`, `"external"`, `"internal"`, `"unknown"`, `"parent"`, `"sibling"`, `"index"`, `"object"`, `"type"`.
 The enforced order is the same as the order of each element in a group. Omitted types are implicitly grouped together as the last element. Example:
 ```js
 [
@@ -96,7 +99,7 @@ The default value is `["builtin", "external", "parent", "sibling", "index"]`.
 You can set the options like this:
 
 ```js
-"import/order": ["error", {"groups": ["index", "sibling", "parent", "internal", "external", "builtin", "object"]}]
+"import/order": ["error", {"groups": ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"]}]
 ```
 
 ### `pathGroups: [array of objects]`:
@@ -145,16 +148,39 @@ Example:
   }]
 }
 ```
+
+You can also use `patterns`(e.g., `react`, `react-router-dom`, etc).
+
+Example:
+```json
+{
+  "import/order": [
+    "error",
+    {
+      "pathGroups": [
+        {
+          "pattern": "react",
+          "group": "builtin",
+          "position": "before"
+        }
+      ],
+      "pathGroupsExcludedImportTypes": ["react"]
+    }
+  ]
+}
+```
 The default value is `["builtin", "external"]`.
 
 ### `newlines-between: [ignore|always|always-and-inside-groups|never]`:
 
 Enforces or forbids new lines between import groups:
 
-- If set to `ignore`, no errors related to new lines between import groups will be reported (default).
+- If set to `ignore`, no errors related to new lines between import groups will be reported.
 - If set to `always`, at least one new line between each group will be enforced, and new lines inside a group will be forbidden. To prevent multiple lines between imports, core `no-multiple-empty-lines` rule can be used.
 - If set to `always-and-inside-groups`, it will act like `always` except newlines are allowed inside import groups.
 - If set to `never`, no new lines are allowed in the entire import section.
+
+The default value is `"ignore"`.
 
 With the default group setting, the following will be invalid:
 
@@ -251,6 +277,33 @@ import * as classnames from 'classnames';
 import aTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { compose, apply } from 'xcompose';
+```
+
+### `warnOnUnassignedImports: true|false`:
+
+* default: `false`
+
+Warns when unassigned imports are out of order.  These warning will not be fixed
+with `--fix` because unassigned imports are used for side-effects and changing the
+import of order of modules with side effects can not be done automatically in a
+way that is safe.
+
+This will fail the rule check:
+
+```js
+/* eslint import/order: ["error", {"warnOnUnassignedImports": true}] */
+import fs from 'fs';
+import './styles.css';
+import path from 'path';
+```
+
+While this will pass:
+
+```js
+/* eslint import/order: ["error", {"warnOnUnassignedImports": true}] */
+import fs from 'fs';
+import path from 'path';
+import './styles.css';
 ```
 
 ## Related

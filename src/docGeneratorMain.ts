@@ -1,21 +1,12 @@
 import { writeFile } from "codacy-seed"
 import { EOL } from "os"
-
-import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
-import { defaultLinter } from "./eslintDefaultOptions"
+import { allRules } from "./eslintPlugins"
 
 main()
 
 async function main() {
-  const docGenerator = new DocGenerator(
-    Array.from(defaultLinter.getRules().entries()).filter(
-      ([patternId, _]) =>
-        patternId &&
-        !isBlacklisted(patternId) &&
-        !isBlacklistedOnlyFromDocumentation(patternId)
-    )
-  )
+  const docGenerator = new DocGenerator(allRules)
 
   console.log("Generate patterns.json")
   await writeJsonFile("docs/patterns.json", docGenerator.generatePatterns())
@@ -35,7 +26,8 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
-    "angular"
+    "angular",
+    false
   )
 
   console.log("Generate backbone description files")
@@ -231,9 +223,9 @@ async function main() {
 
   console.log("Generate storybook description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
-      "storybook"
+    (pattern) =>
+      `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
+    "storybook"
   )
 }
 
