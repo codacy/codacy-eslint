@@ -1,4 +1,6 @@
-parser: babel-eslint
+parser: "@babel/eslint-parser"
+parserOptions:
+  requireConfigFile: false
 plugins:
   - import
 rules:
