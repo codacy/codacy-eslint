@@ -5,6 +5,10 @@ module.exports = {
     },
     parser: "@babel/eslint-parser",
     parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ["@babel/preset-react"],
+        },
         ecmaVersion: 2018,
         sourceType: "module"
     },

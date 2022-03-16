@@ -25,6 +25,9 @@ export const defaultOptions: ESLint.Options = {
     },
     plugins: pluginsNames,
     parser: "@babel/eslint-parser",
+    parserOptions: {
+      requireConfigFile: false,
+    },
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
