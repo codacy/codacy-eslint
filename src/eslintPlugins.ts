@@ -25,7 +25,6 @@ import { rules as importRules } from "eslint-plugin-import"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
-import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
 import { rules as lodashRules } from "eslint-plugin-lodash"
@@ -60,6 +59,7 @@ import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as vueRules } from "eslint-plugin-vue"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
+import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
   ["@angular-eslint", angularRules],
@@ -140,4 +140,11 @@ const pluginsRules = plugins
 
 const baseRules = Array.from(new Linter().getRules().entries())
 
-export const allRules = baseRules.concat(pluginsRules)
+export const allRules = baseRules
+  .concat(pluginsRules)
+  .filter(
+    ([patternId, _]) =>
+      patternId &&
+      !isBlacklisted(patternId) &&
+      !isBlacklistedOnlyFromDocumentation(patternId)
+  )

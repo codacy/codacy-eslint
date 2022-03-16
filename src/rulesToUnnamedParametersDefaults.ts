@@ -51,7 +51,6 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
 
 export class rulesNamedParametersAndDefaults {
   private static readonly array: [string, string, any][] = [
-    ["ember/no-restricted-property-modifications", "properties", [""]],
     ["ember/no-restricted-service-injections", "paths", [""]],
     ["ember/no-restricted-service-injections", "services", [""]],
     [
