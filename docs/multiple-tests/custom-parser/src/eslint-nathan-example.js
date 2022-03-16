@@ -10,7 +10,7 @@ export default class Foo extends Component {
         progress: PropTypes.bool
       }),
     }),
-  }
+  };
 }
 const IndexLink = React.createClass({
   render() {

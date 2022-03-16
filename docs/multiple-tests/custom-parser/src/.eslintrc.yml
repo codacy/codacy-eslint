@@ -4,8 +4,12 @@ env:
     browser: true
     node: true
 extends: 'eslint:recommended'
-parser: babel-eslint
+parser: "@babel/eslint-parser"
 parserOptions:
+    requireConfigFile: false
+    babelOptions: 
+        presets:
+            - "@babel/preset-react"
     ecmaVersion: 7
     sourceType: module
     ecmaFeatures: {jsx: true, experimentalObjectRestSpread: true}
