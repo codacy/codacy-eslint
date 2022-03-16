@@ -24,7 +24,7 @@ export const defaultOptions: ESLint.Options = {
       qunit: true,
     },
     plugins: pluginsNames,
-    parser: "babel-eslint",
+    parser: "@babel/eslint-parser",
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
