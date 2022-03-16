@@ -62,7 +62,7 @@ import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 
 const plugins = [
-  ["angular", angularRules],
+  ["@angular-eslint", angularRules],
   ["angularjs-security-rules", angularjsSecurityRules],
   ["babel", babelRules],
   ["backbone", backboneRules],
