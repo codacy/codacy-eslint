@@ -85,7 +85,9 @@ const plugins = [
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-formatting", jestFormattingRules],
-  ["jsdoc", jsdocRules],
+  // jsdoc doesn't support ESLint 8 yet
+  // https://github.com/eslint/eslint/issues/14745
+  // ["jsdoc", jsdocRules],
   ["json", jsonRules],
   ["jsx-a11y", jsxA11yRules],
   ["lodash", lodashRules],
