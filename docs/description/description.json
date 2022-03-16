@@ -8800,85 +8800,85 @@
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_aura-api",
-    "title": "@salesforce: [Eslint plugin aura] Aura api",
+    "patternId": "@salesforce_aura_aura-api",
+    "title": "@salesforce: [Aura] Aura api",
     "description": "Validate Aura APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_ecma-intrinsics",
-    "title": "@salesforce: [Eslint plugin aura] Ecma intrinsics",
+    "patternId": "@salesforce_aura_ecma-intrinsics",
+    "title": "@salesforce: [Aura] Ecma intrinsics",
     "description": "Validate JavaScript intrinsic APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_getevt-markup-prefix",
-    "title": "@salesforce: [Eslint plugin aura] Getevt markup prefix",
+    "patternId": "@salesforce_aura_getevt-markup-prefix",
+    "title": "@salesforce: [Aura] Getevt markup prefix",
     "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-aura-error",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated aura error",
+    "patternId": "@salesforce_aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Aura] No deprecated aura error",
     "description": "Prevent usage of $A.error",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-component-creation",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated component creation",
+    "patternId": "@salesforce_aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Aura] No deprecated component creation",
     "description": "Prevent usage of deprecated component creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-event-creation",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated event creation",
+    "patternId": "@salesforce_aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Aura] No deprecated event creation",
     "description": "Prevent usage of deprecated event creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_secure-document",
-    "title": "@salesforce: [Eslint plugin aura] Secure document",
+    "patternId": "@salesforce_aura_secure-document",
+    "title": "@salesforce: [Aura] Secure document",
     "description": "Validate secure document public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_secure-window",
-    "title": "@salesforce: [Eslint plugin aura] Secure window",
+    "patternId": "@salesforce_aura_secure-window",
+    "title": "@salesforce: [Aura] Secure window",
     "description": "Validate secure window public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_no-aura-localization-service",
-    "title": "@salesforce: [Eslint plugin lightning] No aura localization service",
+    "patternId": "@salesforce_lightning_no-aura-localization-service",
+    "title": "@salesforce: [Lightning] No aura localization service",
     "description": "Disallow usage of \"$A.localizationService\"",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_no-moment",
-    "title": "@salesforce: [Eslint plugin lightning] No moment",
+    "patternId": "@salesforce_lightning_no-moment",
+    "title": "@salesforce: [Lightning] No moment",
     "description": "Prohibit usage of \"moment\" library",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_prefer-i18n-service",
-    "title": "@salesforce: [Eslint plugin lightning] Prefer i18n service",
+    "patternId": "@salesforce_lightning_prefer-i18n-service",
+    "title": "@salesforce: [Lightning] Prefer i18n service",
     "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_valid-apex-method-invocation",
-    "title": "@salesforce: [Eslint plugin lightning] Valid apex method invocation",
+    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Lightning] Valid apex method invocation",
     "description": "Enforce invoking Apex methods with the right arguments",
     "timeToFix": 5
   },

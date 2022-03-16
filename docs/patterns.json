@@ -9129,84 +9129,84 @@
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_aura-api",
+      "patternId": "@salesforce_aura_aura-api",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_ecma-intrinsics",
+      "patternId": "@salesforce_aura_ecma-intrinsics",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_getevt-markup-prefix",
+      "patternId": "@salesforce_aura_getevt-markup-prefix",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-aura-error",
+      "patternId": "@salesforce_aura_no-deprecated-aura-error",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-component-creation",
+      "patternId": "@salesforce_aura_no-deprecated-component-creation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-event-creation",
+      "patternId": "@salesforce_aura_no-deprecated-event-creation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_secure-document",
+      "patternId": "@salesforce_aura_secure-document",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_secure-window",
+      "patternId": "@salesforce_aura_secure-window",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_no-aura-localization-service",
+      "patternId": "@salesforce_lightning_no-aura-localization-service",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_no-moment",
+      "patternId": "@salesforce_lightning_no-moment",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_prefer-i18n-service",
+      "patternId": "@salesforce_lightning_prefer-i18n-service",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_valid-apex-method-invocation",
+      "patternId": "@salesforce_lightning_valid-apex-method-invocation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
