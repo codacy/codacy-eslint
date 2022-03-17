@@ -1,4 +1,5 @@
-import { rules as angularRules } from "@angular-eslint/eslint-plugin"
+import { rules as angularRules } from "eslint-plugin-angular"
+import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plugin-aura"
 import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
@@ -62,7 +63,8 @@ import { rules as xssRules } from "eslint-plugin-xss"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
-  ["@angular-eslint", angularRules],
+  ["angular", angularRules],
+  ["@angular-eslint", angularEslintRules],
   ["angularjs-security-rules", angularjsSecurityRules],
   ["babel", babelRules],
   ["backbone", backboneRules],

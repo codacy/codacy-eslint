@@ -2863,6 +2863,360 @@
   },
   {
     "parameters": [],
+    "patternId": "angular_angularelement",
+    "title": "Angular: Angularelement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_avoid-scope-typos",
+    "title": "Angular: Avoid scope typos",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_component-limit",
+    "title": "Angular: Component limit",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_component-name",
+    "title": "Angular: Component name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_constant-name",
+    "title": "Angular: Constant name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_controller-as-route",
+    "title": "Angular: Controller as route",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_controller-as-vm",
+    "title": "Angular: Controller as vm",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_controller-as",
+    "title": "Angular: Controller as",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_controller-name",
+    "title": "Angular: Controller name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_deferred",
+    "title": "Angular: Deferred",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_definedundefined",
+    "title": "Angular: Definedundefined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_di-order",
+    "title": "Angular: Di order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_di-unused",
+    "title": "Angular: Di unused",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_di",
+    "title": "Angular: Di",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_directive-name",
+    "title": "Angular: Directive name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_directive-restrict",
+    "title": "Angular: Directive restrict",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_document-service",
+    "title": "Angular: Document service",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_dumb-inject",
+    "title": "Angular: Dumb inject",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_empty-controller",
+    "title": "Angular: Empty controller",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_factory-name",
+    "title": "Angular: Factory name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_file-name",
+    "title": "Angular: File name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_filter-name",
+    "title": "Angular: Filter name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_foreach",
+    "title": "Angular: Foreach",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_function-type",
+    "title": "Angular: Function type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_interval-service",
+    "title": "Angular: Interval service",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_json-functions",
+    "title": "Angular: Json functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_log",
+    "title": "Angular: Log",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_module-dependency-order",
+    "title": "Angular: Module dependency order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_module-getter",
+    "title": "Angular: Module getter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_module-name",
+    "title": "Angular: Module name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_module-setter",
+    "title": "Angular: Module setter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-angular-mock",
+    "title": "Angular: No angular mock",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-controller",
+    "title": "Angular: No controller",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-cookiestore",
+    "title": "Angular: No cookiestore",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-directive-replace",
+    "title": "Angular: No directive replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-http-callback",
+    "title": "Angular: No http callback",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-inline-template",
+    "title": "Angular: No inline template",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-jquery-angularelement",
+    "title": "Angular: No jquery angularelement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-private-call",
+    "title": "Angular: No private call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-run-logic",
+    "title": "Angular: No run logic",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-service-method",
+    "title": "Angular: No service method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_no-services",
+    "title": "Angular: No services",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_on-destroy",
+    "title": "Angular: On destroy",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_on-watch",
+    "title": "Angular: On watch",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_one-dependency-per-line",
+    "title": "Angular: One dependency per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_prefer-component",
+    "title": "Angular: Prefer component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_provider-name",
+    "title": "Angular: Provider name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_rest-service",
+    "title": "Angular: Rest service",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_service-name",
+    "title": "Angular: Service name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_timeout-service",
+    "title": "Angular: Timeout service",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-array",
+    "title": "Angular: Typecheck array",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-date",
+    "title": "Angular: Typecheck date",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-function",
+    "title": "Angular: Typecheck function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-number",
+    "title": "Angular: Typecheck number",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-object",
+    "title": "Angular: Typecheck object",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_typecheck-string",
+    "title": "Angular: Typecheck string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_value-name",
+    "title": "Angular: Value name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_watchers-execution",
+    "title": "Angular: Watchers execution",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "angular_window-service",
+    "title": "Angular: Window service",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_contextual-decorator",
     "title": "@angular eslint: Contextual decorator",
     "description": "Ensures that classes use contextual decorators in its body",
