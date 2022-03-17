@@ -1,6 +1,9 @@
 import { CLIEngine } from "eslint"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
+const baseParserOptions = {
+  requireConfigFile: false,
+}
 const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
@@ -25,7 +28,7 @@ export const defaultOptions: CLIEngine.Options = {
     plugins: [
       "angular",
       "angularjs-security-rules",
-      "babel",
+      "@babel",
       "backbone",
       "better-styled-components",
       "chai-expect",
@@ -83,9 +86,10 @@ export const defaultOptions: CLIEngine.Options = {
       "unicorn",
       "vue",
       "wdio",
-      "xss"
+      "xss",
     ],
-    parser: "babel-eslint",
+    parser: "@babel/eslint-parser",
+    parserOptions: baseParserOptions,
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
@@ -103,6 +107,15 @@ export const defaultOptions: CLIEngine.Options = {
           sourceType: "module",
         },
       },
+      {
+        files: ["**/*.jsx"],
+        parserOptions: {
+          ...baseParserOptions,
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
+        },
+      },
     ],
     settings: {
       "import/parsers": {
@@ -114,8 +127,8 @@ export const defaultOptions: CLIEngine.Options = {
         },
       },
       jest: {
-        version: 26
-      }
+        version: 26,
+      },
     },
   },
 }
