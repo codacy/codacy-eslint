@@ -1,0 +1,3 @@
+<module name="root">
+    <module name="react_default-props-match-prop-types" />
+</module>
