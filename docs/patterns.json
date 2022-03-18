@@ -66,14 +66,14 @@
     },
     {
       "patternId": "arrow-body-style",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "arrow-parens",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -89,7 +89,7 @@
     },
     {
       "patternId": "arrow-spacing",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -140,7 +140,7 @@
     },
     {
       "patternId": "callback-return",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -176,12 +176,7 @@
       "patternId": "class-methods-use-this",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "enforceForClassFields",
-          "default": true
-        }
-      ],
+      "parameters": [],
       "enabled": false
     },
     {
@@ -278,7 +273,7 @@
     },
     {
       "patternId": "constructor-super",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
@@ -365,8 +360,8 @@
     },
     {
       "patternId": "for-direction",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -423,15 +418,15 @@
     },
     {
       "patternId": "generator-star-spacing",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "getter-return",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "allowImplicit",
@@ -442,7 +437,7 @@
     },
     {
       "patternId": "global-require",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -463,7 +458,7 @@
     },
     {
       "patternId": "handle-callback-err",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -505,10 +500,6 @@
         },
         {
           "name": "properties",
-          "default": false
-        },
-        {
-          "name": "classFields",
           "default": false
         },
         {
@@ -889,15 +880,15 @@
     },
     {
       "patternId": "no-async-promise-executor",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-await-in-loop",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -915,7 +906,7 @@
     },
     {
       "patternId": "no-buffer-constructor",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -943,22 +934,22 @@
     },
     {
       "patternId": "no-class-assign",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-compare-neg-zero",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-cond-assign",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "unnamedParam",
@@ -969,38 +960,34 @@
     },
     {
       "patternId": "no-confusing-arrow",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "allowParens",
           "default": true
-        },
-        {
-          "name": "onlyOneSimpleParam",
-          "default": false
         }
       ],
       "enabled": false
     },
     {
       "patternId": "no-console",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-const-assign",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-constant-condition",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "checkLoops",
@@ -1025,15 +1012,15 @@
     },
     {
       "patternId": "no-control-regex",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-debugger",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1053,42 +1040,42 @@
     },
     {
       "patternId": "no-dupe-args",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-dupe-class-members",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-dupe-else-if",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-dupe-keys",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-duplicate-case",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-duplicate-imports",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -1112,8 +1099,8 @@
     },
     {
       "patternId": "no-empty",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "allowEmptyCatch",
@@ -1124,8 +1111,8 @@
     },
     {
       "patternId": "no-empty-character-class",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1164,8 +1151,8 @@
     },
     {
       "patternId": "no-ex-assign",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1185,8 +1172,8 @@
     },
     {
       "patternId": "no-extra-boolean-cast",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "enforceForLogicalOperands",
@@ -1204,15 +1191,15 @@
     },
     {
       "patternId": "no-extra-parens",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-extra-semi",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1237,8 +1224,8 @@
     },
     {
       "patternId": "no-func-assign",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1294,8 +1281,8 @@
     },
     {
       "patternId": "no-import-assign",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1308,8 +1295,8 @@
     },
     {
       "patternId": "no-inner-declarations",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "unnamedParam",
@@ -1320,8 +1307,8 @@
     },
     {
       "patternId": "no-invalid-regexp",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1339,8 +1326,8 @@
     },
     {
       "patternId": "no-irregular-whitespace",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "skipComments",
@@ -1414,10 +1401,10 @@
     },
     {
       "patternId": "no-loss-of-precision",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-magic-numbers",
@@ -1445,8 +1432,8 @@
     },
     {
       "patternId": "no-misleading-character-class",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1464,7 +1451,7 @@
     },
     {
       "patternId": "no-mixed-requires",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -1530,8 +1517,8 @@
     },
     {
       "patternId": "no-negated-in-lhs",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -1565,14 +1552,14 @@
     },
     {
       "patternId": "no-new-require",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-new-symbol",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
@@ -1589,12 +1576,12 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-obj-calls",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1621,7 +1608,7 @@
     },
     {
       "patternId": "no-path-concat",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -1640,22 +1627,22 @@
     },
     {
       "patternId": "no-process-env",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-process-exit",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-promise-executor-return",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -1668,8 +1655,8 @@
     },
     {
       "patternId": "no-prototype-builtins",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1687,14 +1674,14 @@
     },
     {
       "patternId": "no-regex-spaces",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-restricted-exports",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -1708,14 +1695,14 @@
     },
     {
       "patternId": "no-restricted-imports",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-restricted-modules",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -1798,8 +1785,8 @@
     },
     {
       "patternId": "no-setter-return",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1815,10 +1802,6 @@
         {
           "name": "hoist",
           "default": "functions"
-        },
-        {
-          "name": "ignoreOnInitialization",
-          "default": false
         }
       ],
       "enabled": false
@@ -1839,14 +1822,14 @@
     },
     {
       "patternId": "no-sparse-arrays",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-sync",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -1870,8 +1853,8 @@
     },
     {
       "patternId": "no-template-curly-in-string",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -1884,7 +1867,7 @@
     },
     {
       "patternId": "no-this-before-super",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
@@ -1968,8 +1951,8 @@
     },
     {
       "patternId": "no-unexpected-multiline",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -1994,29 +1977,29 @@
     },
     {
       "patternId": "no-unreachable",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-unreachable-loop",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "no-unsafe-finally",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "no-unsafe-negation",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "enforceForOrderingRelations",
@@ -2027,15 +2010,15 @@
     },
     {
       "patternId": "no-unsafe-optional-chaining",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "disallowArithmeticOperators",
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-unused-expressions",
@@ -2069,13 +2052,6 @@
       "enabled": true
     },
     {
-      "patternId": "no-unused-private-class-members",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "no-unused-vars",
       "level": "Info",
       "category": "CodeStyle",
@@ -2091,10 +2067,10 @@
     },
     {
       "patternId": "no-useless-backreference",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-useless-call",
@@ -2112,7 +2088,7 @@
     },
     {
       "patternId": "no-useless-computed-key",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2131,7 +2107,7 @@
     },
     {
       "patternId": "no-useless-constructor",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2145,7 +2121,7 @@
     },
     {
       "patternId": "no-useless-rename",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2172,7 +2148,7 @@
     },
     {
       "patternId": "no-var",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2254,7 +2230,7 @@
     },
     {
       "patternId": "object-shorthand",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2322,7 +2298,7 @@
     },
     {
       "patternId": "prefer-arrow-callback",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2338,7 +2314,7 @@
     },
     {
       "patternId": "prefer-const",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2354,7 +2330,7 @@
     },
     {
       "patternId": "prefer-destructuring",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2375,14 +2351,7 @@
     },
     {
       "patternId": "prefer-numeric-literals",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "prefer-object-has-own",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2408,7 +2377,7 @@
     },
     {
       "patternId": "prefer-reflect",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2427,21 +2396,21 @@
     },
     {
       "patternId": "prefer-rest-params",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "prefer-spread",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "prefer-template",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2482,14 +2451,9 @@
     },
     {
       "patternId": "require-atomic-updates",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowProperties",
-          "default": false
-        }
-      ],
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -2520,14 +2484,14 @@
     },
     {
       "patternId": "require-yield",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "rest-spread-spacing",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2569,7 +2533,7 @@
     },
     {
       "patternId": "sort-imports",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2705,7 +2669,7 @@
     },
     {
       "patternId": "strict",
-      "level": "Info",
+      "level": "Error",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -2733,14 +2697,14 @@
     },
     {
       "patternId": "symbol-description",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "template-curly-spacing",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -2761,8 +2725,8 @@
     },
     {
       "patternId": "use-isnan",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "enforceForSwitchCase",
@@ -2777,8 +2741,8 @@
     },
     {
       "patternId": "valid-jsdoc",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "requireReturn",
@@ -2805,8 +2769,8 @@
     },
     {
       "patternId": "valid-typeof",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "requireStringLiterals",
@@ -2847,7 +2811,7 @@
     },
     {
       "patternId": "yield-star-spacing",
-      "level": "Info",
+      "level": "Warning",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
@@ -3613,42 +3577,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_array-bracket-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_arrow-parens",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_flow-object-type",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_func-params-comma-dangle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_generator-star-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_new-cap",
+      "patternId": "@babel_new-cap",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3668,21 +3597,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_camelcase",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_no-await-in-loop",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_no-invalid-this",
+      "patternId": "@babel_no-invalid-this",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3694,7 +3609,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_no-unused-expressions",
+      "patternId": "@babel_no-unused-expressions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3718,44 +3633,18 @@
       "enabled": false
     },
     {
-      "patternId": "babel_object-curly-spacing",
+      "patternId": "@babel_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "babel_object-shorthand",
+      "patternId": "@babel_semi",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
-    },
-    {
-      "patternId": "babel_quotes",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_semi",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_valid-typeof",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "requireStringLiterals",
-          "default": false
-        }
-      ],
-      "enabled": true
     },
     {
       "patternId": "backbone_collection-model",
@@ -5248,6 +5137,13 @@
     },
     {
       "patternId": "functional_prefer-tacit",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_prefer-type-literal",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10136,13 +10032,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_consistent-type-exports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_consistent-type-imports",
       "level": "Info",
       "category": "CodeStyle",
@@ -10333,8 +10222,8 @@
     },
     {
       "patternId": "@typescript-eslint_no-dupe-class-members",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10387,15 +10276,15 @@
     },
     {
       "patternId": "@typescript-eslint_no-extra-parens",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-extra-semi",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10469,8 +10358,8 @@
     },
     {
       "patternId": "@typescript-eslint_no-loss-of-precision",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10533,15 +10422,15 @@
     },
     {
       "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10561,13 +10450,6 @@
     },
     {
       "patternId": "@typescript-eslint_no-redeclare",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-redundant-type-constituents",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10659,36 +10541,36 @@
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-argument",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-assignment",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-call",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-member-access",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-return",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10724,6 +10606,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-unused-vars-experimental",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-use-before-define",
       "level": "Info",
       "category": "CodeStyle",
@@ -10732,13 +10621,6 @@
     },
     {
       "patternId": "@typescript-eslint_no-useless-constructor",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-useless-empty-export",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10844,8 +10726,8 @@
     },
     {
       "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -10942,13 +10824,6 @@
     },
     {
       "patternId": "@typescript-eslint_sort-type-union-intersection-members",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_space-before-blocks",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12554,7 +12429,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "vue_no-multi-spaces",

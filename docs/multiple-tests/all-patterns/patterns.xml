@@ -212,7 +212,6 @@
   <module name="no-unsafe-optional-chaining" />
   <module name="no-unused-expressions" />
   <module name="no-unused-labels" />
-  <module name="no-unused-private-class-members" />
   <module name="no-unused-vars" />
   <module name="no-use-before-define" />
   <module name="no-useless-backreference" />
@@ -246,7 +245,6 @@
   <module name="prefer-exponentiation-operator" />
   <module name="prefer-named-capture-group" />
   <module name="prefer-numeric-literals" />
-  <module name="prefer-object-has-own" />
   <module name="prefer-object-spread" />
   <module name="prefer-promise-reject-errors" />
   <module name="prefer-reflect" />
@@ -394,21 +392,11 @@
   <module name="angularjs-security-rules_detect-angular-trustAsResourceUrl-method" />
   <module name="angularjs-security-rules_detect-angular-trustAsUrl-method" />
   <module name="angularjs-security-rules_detect-third-party-angular-translate" />
-  <module name="babel_array-bracket-spacing" />
-  <module name="babel_arrow-parens" />
-  <module name="babel_flow-object-type" />
-  <module name="babel_func-params-comma-dangle" />
-  <module name="babel_generator-star-spacing" />
-  <module name="babel_new-cap" />
-  <module name="babel_camelcase" />
-  <module name="babel_no-await-in-loop" />
-  <module name="babel_no-invalid-this" />
-  <module name="babel_no-unused-expressions" />
-  <module name="babel_object-curly-spacing" />
-  <module name="babel_object-shorthand" />
-  <module name="babel_quotes" />
-  <module name="babel_semi" />
-  <module name="babel_valid-typeof" />
+  <module name="@babel_new-cap" />
+  <module name="@babel_no-invalid-this" />
+  <module name="@babel_no-unused-expressions" />
+  <module name="@babel_object-curly-spacing" />
+  <module name="@babel_semi" />
   <module name="backbone_collection-model" />
   <module name="backbone_defaults-on-top" />
   <module name="backbone_event-scope" />
@@ -599,6 +587,7 @@
   <module name="functional_no-try-statement" />
   <module name="functional_prefer-readonly-type" />
   <module name="functional_prefer-tacit" />
+  <module name="functional_prefer-type-literal" />
   <module name="graphql-fragments_limit-complexity" />
   <module name="hapi_hapi-capitalize-modules" />
   <module name="hapi_hapi-for-you" />
@@ -1264,7 +1253,6 @@
   <module name="@typescript-eslint_consistent-indexed-object-style" />
   <module name="@typescript-eslint_consistent-type-assertions" />
   <module name="@typescript-eslint_consistent-type-definitions" />
-  <module name="@typescript-eslint_consistent-type-exports" />
   <module name="@typescript-eslint_consistent-type-imports" />
   <module name="@typescript-eslint_default-param-last" />
   <module name="@typescript-eslint_dot-notation" />
@@ -1313,7 +1301,6 @@
   <module name="@typescript-eslint_no-non-null-assertion" />
   <module name="@typescript-eslint_no-parameter-properties" />
   <module name="@typescript-eslint_no-redeclare" />
-  <module name="@typescript-eslint_no-redundant-type-constituents" />
   <module name="@typescript-eslint_no-require-imports" />
   <module name="@typescript-eslint_no-restricted-imports" />
   <module name="@typescript-eslint_no-shadow" />
@@ -1333,9 +1320,9 @@
   <module name="@typescript-eslint_no-unsafe-return" />
   <module name="@typescript-eslint_no-unused-expressions" />
   <module name="@typescript-eslint_no-unused-vars" />
+  <module name="@typescript-eslint_no-unused-vars-experimental" />
   <module name="@typescript-eslint_no-use-before-define" />
   <module name="@typescript-eslint_no-useless-constructor" />
-  <module name="@typescript-eslint_no-useless-empty-export" />
   <module name="@typescript-eslint_no-var-requires" />
   <module name="@typescript-eslint_non-nullable-type-assertion-style" />
   <module name="@typescript-eslint_object-curly-spacing" />
@@ -1365,7 +1352,6 @@
   <module name="@typescript-eslint_return-await" />
   <module name="@typescript-eslint_semi" />
   <module name="@typescript-eslint_sort-type-union-intersection-members" />
-  <module name="@typescript-eslint_space-before-blocks" />
   <module name="@typescript-eslint_space-before-function-paren" />
   <module name="@typescript-eslint_space-infix-ops" />
   <module name="@typescript-eslint_strict-boolean-expressions" />

@@ -2,6 +2,9 @@ import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
+const baseParserOptions = {
+  requireConfigFile: false,
+}
 const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
@@ -25,9 +28,7 @@ export const defaultOptions: ESLint.Options = {
     },
     plugins: pluginsNames,
     parser: "@babel/eslint-parser",
-    parserOptions: {
-      requireConfigFile: false,
-    },
+    parserOptions: baseParserOptions,
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
@@ -43,6 +44,15 @@ export const defaultOptions: ESLint.Options = {
         parserOptions: {
           ecmaVersion: 2020,
           sourceType: "module",
+        },
+      },
+      {
+        files: ["**/*.jsx"],
+        parserOptions: {
+          ...baseParserOptions,
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
         },
       },
     ],

@@ -170,12 +170,7 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "enforceForClassFields",
-        "description": "enforceForClassFields"
-      }
-    ],
+    "parameters": [],
     "patternId": "class-methods-use-this",
     "title": "Class methods use this",
     "description": "Enforce that class methods utilize `this`",
@@ -500,10 +495,6 @@
       {
         "name": "properties",
         "description": "properties"
-      },
-      {
-        "name": "classFields",
-        "description": "classFields"
       },
       {
         "name": "onlyDeclarations",
@@ -961,10 +952,6 @@
       {
         "name": "allowParens",
         "description": "allowParens"
-      },
-      {
-        "name": "onlyOneSimpleParam",
-        "description": "onlyOneSimpleParam"
       }
     ],
     "patternId": "no-confusing-arrow",
@@ -1801,10 +1788,6 @@
       {
         "name": "hoist",
         "description": "hoist"
-      },
-      {
-        "name": "ignoreOnInitialization",
-        "description": "ignoreOnInitialization"
       }
     ],
     "patternId": "no-shadow",
@@ -2055,13 +2038,6 @@
     "patternId": "no-unused-labels",
     "title": "No unused labels",
     "description": "Disallow unused labels",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-unused-private-class-members",
-    "title": "No unused private class members",
-    "description": "Disallow unused private class members",
     "timeToFix": 5
   },
   {
@@ -2371,13 +2347,6 @@
   },
   {
     "parameters": [],
-    "patternId": "prefer-object-has-own",
-    "title": "Prefer object has own",
-    "description": "Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "prefer-object-spread",
     "title": "Prefer object spread",
     "description": "Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.",
@@ -2470,12 +2439,7 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "allowProperties",
-        "description": "allowProperties"
-      }
-    ],
+    "parameters": [],
     "patternId": "require-atomic-updates",
     "title": "Require atomic updates",
     "description": "Disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
@@ -3529,36 +3493,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "babel_array-bracket-spacing",
-    "title": "Babel: Array bracket spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_arrow-parens",
-    "title": "Babel: Arrow parens",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_flow-object-type",
-    "title": "Babel: Flow object type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_func-params-comma-dangle",
-    "title": "Babel: Func params comma dangle",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_generator-star-spacing",
-    "title": "Babel: Generator star spacing",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "newIsCap",
@@ -3573,22 +3507,9 @@
         "description": "properties"
       }
     ],
-    "patternId": "babel_new-cap",
-    "title": "Babel: New cap",
+    "patternId": "@babel_new-cap",
+    "title": "@babel: New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_camelcase",
-    "title": "Babel: Camelcase",
-    "description": "Enforce camelcase naming convention",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_no-await-in-loop",
-    "title": "Babel: No await in loop",
     "timeToFix": 5
   },
   {
@@ -3598,8 +3519,8 @@
         "description": "capIsConstructor"
       }
     ],
-    "patternId": "babel_no-invalid-this",
-    "title": "Babel: No invalid this",
+    "patternId": "@babel_no-invalid-this",
+    "title": "@babel: No invalid this",
     "description": "Disallow `this` keywords outside of classes or class-like objects",
     "timeToFix": 5
   },
@@ -3622,47 +3543,22 @@
         "description": "enforceForJSX"
       }
     ],
-    "patternId": "babel_no-unused-expressions",
-    "title": "Babel: No unused expressions",
+    "patternId": "@babel_no-unused-expressions",
+    "title": "@babel: No unused expressions",
     "description": "Disallow unused expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-curly-spacing",
-    "title": "Babel: Object curly spacing",
+    "patternId": "@babel_object-curly-spacing",
+    "title": "@babel: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-shorthand",
-    "title": "Babel: Object shorthand",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_quotes",
-    "title": "Babel: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_semi",
-    "title": "Babel: Semi",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "requireStringLiterals",
-        "description": "requireStringLiterals"
-      }
-    ],
-    "patternId": "babel_valid-typeof",
-    "title": "Babel: Valid typeof",
-    "description": "Enforce comparing `typeof` expressions against valid strings",
+    "patternId": "@babel_semi",
+    "title": "@babel: Semi",
     "timeToFix": 5
   },
   {
@@ -5095,6 +4991,13 @@
     "patternId": "functional_prefer-tacit",
     "title": "Functional: Prefer tacit",
     "description": "Replaces `x => f(x)` with just `f`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_prefer-type-literal",
+    "title": "Functional: Prefer type literal",
+    "description": "Prefer Type Literals over Interfaces.",
     "timeToFix": 5
   },
   {
@@ -9703,13 +9606,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-exports",
-    "title": "@typescript eslint: Consistent type exports",
-    "description": "Enforces consistent usage of type exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-imports",
     "title": "@typescript eslint: Consistent type imports",
     "description": "Enforces consistent usage of type imports",
@@ -9976,7 +9872,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-floating-promises",
     "title": "@typescript eslint: No floating promises",
-    "description": "Requires Promise-like statements to be handled appropriately",
+    "description": "Requires Promise-like values to be handled appropriately",
     "timeToFix": 5
   },
   {
@@ -10087,7 +9983,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-promises",
     "title": "@typescript eslint: No misused promises",
-    "description": "Avoid using Promises in places not designed to handle them",
+    "description": "Avoid using promises in places not designed to handle them",
     "timeToFix": 5
   },
   {
@@ -10130,13 +10026,6 @@
     "patternId": "@typescript-eslint_no-redeclare",
     "title": "@typescript eslint: No redeclare",
     "description": "Disallow variable redeclaration",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-redundant-type-constituents",
-    "title": "@typescript eslint: No redundant type constituents",
-    "description": "Disallow members of unions and intersections that do nothing or override type information",
     "timeToFix": 5
   },
   {
@@ -10291,6 +10180,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unused-vars-experimental",
+    "title": "@typescript eslint: No unused vars experimental",
+    "description": "Disallow unused variables and arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-use-before-define",
     "title": "@typescript eslint: No use before define",
     "description": "Disallow the use of variables before they are defined",
@@ -10301,13 +10197,6 @@
     "patternId": "@typescript-eslint_no-useless-constructor",
     "title": "@typescript eslint: No useless constructor",
     "description": "Disallow unnecessary constructors",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-useless-empty-export",
-    "title": "@typescript eslint: No useless empty export",
-    "description": "Disallow empty exports that don't change anything in a module file",
     "timeToFix": 5
   },
   {
@@ -10511,13 +10400,6 @@
     "patternId": "@typescript-eslint_sort-type-union-intersection-members",
     "title": "@typescript eslint: Sort type union intersection members",
     "description": "Enforces that members of a type union/intersection are sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_space-before-blocks",
-    "title": "@typescript eslint: Space before blocks",
-    "description": "Enforces consistent spacing before blocks",
     "timeToFix": 5
   },
   {
