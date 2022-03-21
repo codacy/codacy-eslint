@@ -3692,36 +3692,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "babel_array-bracket-spacing",
-    "title": "Babel: Array bracket spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_arrow-parens",
-    "title": "Babel: Arrow parens",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_flow-object-type",
-    "title": "Babel: Flow object type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_func-params-comma-dangle",
-    "title": "Babel: Func params comma dangle",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_generator-star-spacing",
-    "title": "Babel: Generator star spacing",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "newIsCap",
@@ -3736,22 +3706,9 @@
         "description": "properties"
       }
     ],
-    "patternId": "babel_new-cap",
-    "title": "Babel: New cap",
+    "patternId": "@babel_new-cap",
+    "title": "@babel: New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_camelcase",
-    "title": "Babel: Camelcase",
-    "description": "Enforce camelcase naming convention",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_no-await-in-loop",
-    "title": "Babel: No await in loop",
     "timeToFix": 5
   },
   {
@@ -3761,8 +3718,8 @@
         "description": "capIsConstructor"
       }
     ],
-    "patternId": "babel_no-invalid-this",
-    "title": "Babel: No invalid this",
+    "patternId": "@babel_no-invalid-this",
+    "title": "@babel: No invalid this",
     "description": "Disallow `this` keywords outside of classes or class-like objects",
     "timeToFix": 5
   },
@@ -3785,47 +3742,22 @@
         "description": "enforceForJSX"
       }
     ],
-    "patternId": "babel_no-unused-expressions",
-    "title": "Babel: No unused expressions",
+    "patternId": "@babel_no-unused-expressions",
+    "title": "@babel: No unused expressions",
     "description": "Disallow unused expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-curly-spacing",
-    "title": "Babel: Object curly spacing",
+    "patternId": "@babel_object-curly-spacing",
+    "title": "@babel: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-shorthand",
-    "title": "Babel: Object shorthand",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_quotes",
-    "title": "Babel: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_semi",
-    "title": "Babel: Semi",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "requireStringLiterals",
-        "description": "requireStringLiterals"
-      }
-    ],
-    "patternId": "babel_valid-typeof",
-    "title": "Babel: Valid typeof",
-    "description": "Enforce comparing `typeof` expressions against valid strings",
+    "patternId": "@babel_semi",
+    "title": "@babel: Semi",
     "timeToFix": 5
   },
   {

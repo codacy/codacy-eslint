@@ -3805,42 +3805,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_array-bracket-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_arrow-parens",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_flow-object-type",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_func-params-comma-dangle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_generator-star-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_new-cap",
+      "patternId": "@babel_new-cap",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3860,21 +3825,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_camelcase",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_no-await-in-loop",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_no-invalid-this",
+      "patternId": "@babel_no-invalid-this",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3886,7 +3837,7 @@
       "enabled": false
     },
     {
-      "patternId": "babel_no-unused-expressions",
+      "patternId": "@babel_no-unused-expressions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3910,44 +3861,18 @@
       "enabled": false
     },
     {
-      "patternId": "babel_object-curly-spacing",
+      "patternId": "@babel_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "babel_object-shorthand",
+      "patternId": "@babel_semi",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
-    },
-    {
-      "patternId": "babel_quotes",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_semi",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "babel_valid-typeof",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [
-        {
-          "name": "requireStringLiterals",
-          "default": false
-        }
-      ],
-      "enabled": true
     },
     {
       "patternId": "backbone_collection-model",
