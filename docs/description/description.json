@@ -6510,6 +6510,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "SwitchCase",
         "description": "SwitchCase"
       },
@@ -6779,7 +6783,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "pathPattern",
+        "description": "pathPattern"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      }
+    ],
     "patternId": "jsonc_sort-array-values",
     "title": "Jsonc: Sort array values",
     "description": "Require array values to be sorted",
@@ -9794,6 +9807,58 @@
     "parameters": [],
     "patternId": "scanjs-rules_property__sessionStorage",
     "title": "Scanjs rules: Property_sessionStorage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "comments",
+        "description": "comments"
+      },
+      {
+        "name": "strings",
+        "description": "strings"
+      },
+      {
+        "name": "identifiers",
+        "description": "identifiers"
+      },
+      {
+        "name": "ignoreRequire",
+        "description": "ignoreRequire"
+      },
+      {
+        "name": "templates",
+        "description": "templates"
+      },
+      {
+        "name": "lang",
+        "description": "lang"
+      },
+      {
+        "name": "langDir",
+        "description": "langDir"
+      },
+      {
+        "name": "skipWords",
+        "description": "skipWords"
+      },
+      {
+        "name": "skipIfMatch",
+        "description": "skipIfMatch"
+      },
+      {
+        "name": "skipWordIfMatch",
+        "description": "skipWordIfMatch"
+      },
+      {
+        "name": "minLength",
+        "description": "minLength"
+      }
+    ],
+    "patternId": "spellcheck_spell-checker",
+    "title": "Spellcheck: Spell checker",
+    "description": "Spell check",
     "timeToFix": 5
   },
   {

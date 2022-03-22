@@ -78,6 +78,7 @@ export const defaultOptions: CLIEngine.Options = {
       "@salesforce/eslint-plugin-lightning",
       "scanjs-rules",
       "security",
+      "spellcheck",
       "sonarjs",
       "sort-imports-es6-autofix",
       "sort-keys-fix",

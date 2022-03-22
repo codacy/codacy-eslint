@@ -1249,6 +1249,7 @@
   <module name="scanjs-rules_property__localStorage" />
   <module name="scanjs-rules_property__mgmt" />
   <module name="scanjs-rules_property__sessionStorage" />
+  <module name="spellcheck_spell-checker" />
   <module name="sonarjs_cognitive-complexity" />
   <module name="sonarjs_elseif-without-else" />
   <module name="sonarjs_max-switch-cases" />
