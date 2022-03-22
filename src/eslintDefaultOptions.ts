@@ -51,6 +51,7 @@ export const defaultOptions: CLIEngine.Options = {
       "jest-formatting",
       "jsdoc",
       "json",
+      "jsonc",
       "jsx-a11y",
       "lodash",
       "lodash-fp",
