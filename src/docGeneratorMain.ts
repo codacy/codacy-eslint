@@ -229,19 +229,26 @@ async function main() {
     "@salesforce/lightning"
   )
 
-  console.log("Generate jsonc description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
-    "eslint-plugin-jsonc"
-  )
-
   console.log("Generate xss description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
     "xss", // this is the pattern's prefix, like: xss/some-pattern-id
     false // Add false for plugins not having .md files for all the patterns
+  )
+
+  console.log("Generate storybook description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
+      "storybook"
+  )
+
+  console.log("Generate jsonc description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
+    "eslint-plugin-jsonc"
   )
 }
 
