@@ -244,8 +244,6 @@ async function main() {
   )
 }
 
-
-
 function writeJsonFile(file: string, json: any): Promise<void> {
   return writeFile(file, JSON.stringify(json, null, 2) + EOL)
 }
