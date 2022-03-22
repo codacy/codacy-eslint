@@ -6750,6 +6750,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": 4
+        },
+        {
           "name": "SwitchCase",
           "default": 0
         },
@@ -7019,7 +7023,18 @@
       "patternId": "jsonc_sort-array-values",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "pathPattern",
+          "default": "^$"
+        },
+        {
+          "name": "order",
+          "default": {
+            "type": "asc"
+          }
+        }
+      ],
       "enabled": false
     },
     {
@@ -10215,6 +10230,64 @@
       "category": "Security",
       "subcategory": "InsecureStorage",
       "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "spellcheck_spell-checker",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "comments",
+          "default": true
+        },
+        {
+          "name": "strings",
+          "default": true
+        },
+        {
+          "name": "identifiers",
+          "default": true
+        },
+        {
+          "name": "ignoreRequire",
+          "default": false
+        },
+        {
+          "name": "templates",
+          "default": true
+        },
+        {
+          "name": "lang",
+          "default": "en_US"
+        },
+        {
+          "name": "langDir",
+          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+        },
+        {
+          "name": "skipWords",
+          "default": [
+            "dict",
+            "aff",
+            "hunspellchecker",
+            "hunspell",
+            "utils"
+          ]
+        },
+        {
+          "name": "skipIfMatch",
+          "default": []
+        },
+        {
+          "name": "skipWordIfMatch",
+          "default": []
+        },
+        {
+          "name": "minLength",
+          "default": 1
+        }
+      ],
       "enabled": false
     },
     {
