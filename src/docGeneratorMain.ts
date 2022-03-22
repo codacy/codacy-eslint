@@ -229,7 +229,7 @@ async function main() {
     "@salesforce/lightning"
   )
 
-  console.log("Generate eslint-plugin-jsonc description files")
+  console.log("Generate jsonc description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
