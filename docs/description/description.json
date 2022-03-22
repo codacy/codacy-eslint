@@ -6467,6 +6467,363 @@
   },
   {
     "parameters": [],
+    "patternId": "jsonc_array-bracket-newline",
+    "title": "Jsonc: Array bracket newline",
+    "description": "Enforce line breaks after opening and before closing array brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-bracket-spacing",
+    "title": "Jsonc: Array bracket spacing",
+    "description": "Disallow or enforce spaces inside of brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-element-newline",
+    "title": "Jsonc: Array element newline",
+    "description": "Enforce line breaks between array elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_auto",
+    "title": "Jsonc: Auto",
+    "description": "Apply jsonc rules similar to your configured ESLint core rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-dangle",
+    "title": "Jsonc: Comma dangle",
+    "description": "Require or disallow trailing commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-style",
+    "title": "Jsonc: Comma style",
+    "description": "Enforce consistent comma style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "jsonc_indent",
+    "title": "Jsonc: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "camelCase",
+        "description": "camelCase"
+      },
+      {
+        "name": "PascalCase",
+        "description": "PascalCase"
+      },
+      {
+        "name": "SCREAMING_SNAKE_CASE",
+        "description": "SCREAMING_SNAKE_CASE"
+      },
+      {
+        "name": "kebab-case",
+        "description": "kebab-case"
+      },
+      {
+        "name": "snake_case",
+        "description": "snake_case"
+      }
+    ],
+    "patternId": "jsonc_key-name-casing",
+    "title": "Jsonc: Key name casing",
+    "description": "Enforce naming convention to property key names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_key-spacing",
+    "title": "Jsonc: Key spacing",
+    "description": "Enforce consistent spacing between keys and values in object literal properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-bigint-literals",
+    "title": "Jsonc: No bigint literals",
+    "description": "Disallow BigInt literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-expression",
+    "title": "Jsonc: No binary expression",
+    "description": "Disallow binary expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-numeric-literals",
+    "title": "Jsonc: No binary numeric literals",
+    "description": "Disallow binary numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-comments",
+    "title": "Jsonc: No comments",
+    "description": "Disallow comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-dupe-keys",
+    "title": "Jsonc: No dupe keys",
+    "description": "Disallow duplicate keys in object literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-escape-sequence-in-identifier",
+    "title": "Jsonc: No escape sequence in identifier",
+    "description": "Disallow escape sequences in identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-floating-decimal",
+    "title": "Jsonc: No floating decimal",
+    "description": "Disallow leading or trailing decimal points in numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-hexadecimal-numeric-literals",
+    "title": "Jsonc: No hexadecimal numeric literals",
+    "description": "Disallow hexadecimal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-infinity",
+    "title": "Jsonc: No infinity",
+    "description": "Disallow Infinity",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-multi-str",
+    "title": "Jsonc: No multi str",
+    "description": "Disallow multiline strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-nan",
+    "title": "Jsonc: No nan",
+    "description": "Disallow NaN",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-number-props",
+    "title": "Jsonc: No number props",
+    "description": "Disallow number property keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-numeric-separators",
+    "title": "Jsonc: No numeric separators",
+    "description": "Disallow numeric separators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-escape",
+    "title": "Jsonc: No octal escape",
+    "description": "Disallow octal escape sequences in string literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-numeric-literals",
+    "title": "Jsonc: No octal numeric literals",
+    "description": "Disallow octal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal",
+    "title": "Jsonc: No octal",
+    "description": "Disallow legacy octal literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-parenthesized",
+    "title": "Jsonc: No parenthesized",
+    "description": "Disallow parentheses around the expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-plus-sign",
+    "title": "Jsonc: No plus sign",
+    "description": "Disallow plus sign",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-regexp-literals",
+    "title": "Jsonc: No regexp literals",
+    "description": "Disallow RegExp literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-sparse-arrays",
+    "title": "Jsonc: No sparse arrays",
+    "description": "Disallow sparse arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-template-literals",
+    "title": "Jsonc: No template literals",
+    "description": "Disallow template literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-undefined-value",
+    "title": "Jsonc: No undefined value",
+    "description": "Disallow `undefined`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-unicode-codepoint-escapes",
+    "title": "Jsonc: No unicode codepoint escapes",
+    "description": "Disallow Unicode code point escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-useless-escape",
+    "title": "Jsonc: No useless escape",
+    "description": "Disallow unnecessary escape usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-newline",
+    "title": "Jsonc: Object curly newline",
+    "description": "Enforce consistent line breaks inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-spacing",
+    "title": "Jsonc: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "jsonc_object-property-newline",
+    "title": "Jsonc: Object property newline",
+    "description": "Enforce placing object properties on separate lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quote-props",
+    "title": "Jsonc: Quote props",
+    "description": "Require quotes around object literal property names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quotes",
+    "title": "Jsonc: Quotes",
+    "description": "Enforce use of double or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_sort-array-values",
+    "title": "Jsonc: Sort array values",
+    "description": "Require array values to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_sort-keys",
+    "title": "Jsonc: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "words",
+        "description": "words"
+      },
+      {
+        "name": "nonwords",
+        "description": "nonwords"
+      }
+    ],
+    "patternId": "jsonc_space-unary-ops",
+    "title": "Jsonc: Space unary ops",
+    "description": "Disallow spaces after unary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_valid-json-number",
+    "title": "Jsonc: Valid json number",
+    "description": "Disallow invalid number for JSON",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_vue-custom-block_no-parsing-error",
+    "title": "Jsonc: [Vue custom block] No parsing error",
+    "description": "Disallow parsing errors in Vue custom blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "timeToFix": 5

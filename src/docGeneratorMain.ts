@@ -240,7 +240,7 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
-    "eslint-plugin-jsonc"
+    "jsonc"
   )
 }
 
