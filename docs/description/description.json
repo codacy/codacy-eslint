@@ -9047,6 +9047,58 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "comments",
+        "description": "comments"
+      },
+      {
+        "name": "strings",
+        "description": "strings"
+      },
+      {
+        "name": "identifiers",
+        "description": "identifiers"
+      },
+      {
+        "name": "ignoreRequire",
+        "description": "ignoreRequire"
+      },
+      {
+        "name": "templates",
+        "description": "templates"
+      },
+      {
+        "name": "lang",
+        "description": "lang"
+      },
+      {
+        "name": "langDir",
+        "description": "langDir"
+      },
+      {
+        "name": "skipWords",
+        "description": "skipWords"
+      },
+      {
+        "name": "skipIfMatch",
+        "description": "skipIfMatch"
+      },
+      {
+        "name": "skipWordIfMatch",
+        "description": "skipWordIfMatch"
+      },
+      {
+        "name": "minLength",
+        "description": "minLength"
+      }
+    ],
+    "patternId": "spellcheck_spell-checker",
+    "title": "Spellcheck: Spell checker",
+    "description": "Spell check",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",

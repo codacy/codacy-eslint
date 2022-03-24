@@ -233,6 +233,13 @@ async function main() {
       `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
     "storybook"
   )
+
+  console.log("Generate jsonc description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
+    "jsonc"
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
