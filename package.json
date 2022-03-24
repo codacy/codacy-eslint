@@ -137,7 +137,7 @@
     "eslint-config-loopback": "^13.1.0",
     "eslint-config-next": "^12.1.0",
     "eslint-config-nodesecurity": "^1.3.1",
-    "eslint-config-pixiebrix": "0.10.2",
+    "eslint-config-pixiebrix": "0.15.2",
     "eslint-config-preact": "^1.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-rallycoding": "^3.2.0",
