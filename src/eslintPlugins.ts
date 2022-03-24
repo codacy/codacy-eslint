@@ -27,6 +27,7 @@ import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
 import { rules as jsonRules } from "eslint-plugin-json"
+import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
 import { rules as lodashRules } from "eslint-plugin-lodash"
 import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
@@ -54,6 +55,7 @@ import { rules as securityRules } from "eslint-plugin-security"
 import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
+import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as standardRules } from "eslint-plugin-standard"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
@@ -91,6 +93,7 @@ const plugins = [
   // https://github.com/eslint/eslint/issues/14745
   // ["jsdoc", jsdocRules],
   ["json", jsonRules],
+  ["jsonc", jsoncRules],
   ["jsx-a11y", jsxA11yRules],
   ["lodash", lodashRules],
   ["lodash-fp", lodashFpRules],
@@ -120,6 +123,7 @@ const plugins = [
   ["sonarjs", sonarjsRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
+  ["spellcheck", spellcheckRules],
   ["standard", standardRules],
   ["storybook", storybookRules],
   ["@typescript-eslint", typescriptEslintRules],

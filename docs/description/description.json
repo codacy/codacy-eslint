@@ -170,7 +170,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "enforceForClassFields",
+        "description": "enforceForClassFields"
+      }
+    ],
     "patternId": "class-methods-use-this",
     "title": "Class methods use this",
     "description": "Enforce that class methods utilize `this`",
@@ -495,6 +500,10 @@
       {
         "name": "properties",
         "description": "properties"
+      },
+      {
+        "name": "classFields",
+        "description": "classFields"
       },
       {
         "name": "onlyDeclarations",
@@ -952,6 +961,10 @@
       {
         "name": "allowParens",
         "description": "allowParens"
+      },
+      {
+        "name": "onlyOneSimpleParam",
+        "description": "onlyOneSimpleParam"
       }
     ],
     "patternId": "no-confusing-arrow",
@@ -1788,6 +1801,10 @@
       {
         "name": "hoist",
         "description": "hoist"
+      },
+      {
+        "name": "ignoreOnInitialization",
+        "description": "ignoreOnInitialization"
       }
     ],
     "patternId": "no-shadow",
@@ -2038,6 +2055,13 @@
     "patternId": "no-unused-labels",
     "title": "No unused labels",
     "description": "Disallow unused labels",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "no-unused-private-class-members",
+    "title": "No unused private class members",
+    "description": "Disallow unused private class members",
     "timeToFix": 5
   },
   {
@@ -2347,6 +2371,13 @@
   },
   {
     "parameters": [],
+    "patternId": "prefer-object-has-own",
+    "title": "Prefer object has own",
+    "description": "Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prefer-object-spread",
     "title": "Prefer object spread",
     "description": "Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.",
@@ -2439,7 +2470,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowProperties",
+        "description": "allowProperties"
+      }
+    ],
     "patternId": "require-atomic-updates",
     "title": "Require atomic updates",
     "description": "Disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
@@ -4995,13 +5031,6 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_prefer-type-literal",
-    "title": "Functional: Prefer type literal",
-    "description": "Prefer Type Literals over Interfaces.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "graphql-fragments_limit-complexity",
     "title": "Graphql fragments: Limit complexity",
     "description": "Verifies that your graphql`...` expressions are not too complex.",
@@ -5720,6 +5749,376 @@
     "parameters": [],
     "patternId": "json_schema-resolve-error",
     "title": "Json: Schema resolve error",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-bracket-newline",
+    "title": "Jsonc: Array bracket newline",
+    "description": "Enforce line breaks after opening and before closing array brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-bracket-spacing",
+    "title": "Jsonc: Array bracket spacing",
+    "description": "Disallow or enforce spaces inside of brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-element-newline",
+    "title": "Jsonc: Array element newline",
+    "description": "Enforce line breaks between array elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_auto",
+    "title": "Jsonc: Auto",
+    "description": "Apply jsonc rules similar to your configured ESLint core rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-dangle",
+    "title": "Jsonc: Comma dangle",
+    "description": "Require or disallow trailing commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-style",
+    "title": "Jsonc: Comma style",
+    "description": "Enforce consistent comma style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "jsonc_indent",
+    "title": "Jsonc: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "camelCase",
+        "description": "camelCase"
+      },
+      {
+        "name": "PascalCase",
+        "description": "PascalCase"
+      },
+      {
+        "name": "SCREAMING_SNAKE_CASE",
+        "description": "SCREAMING_SNAKE_CASE"
+      },
+      {
+        "name": "kebab-case",
+        "description": "kebab-case"
+      },
+      {
+        "name": "snake_case",
+        "description": "snake_case"
+      }
+    ],
+    "patternId": "jsonc_key-name-casing",
+    "title": "Jsonc: Key name casing",
+    "description": "Enforce naming convention to property key names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_key-spacing",
+    "title": "Jsonc: Key spacing",
+    "description": "Enforce consistent spacing between keys and values in object literal properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-bigint-literals",
+    "title": "Jsonc: No bigint literals",
+    "description": "Disallow BigInt literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-expression",
+    "title": "Jsonc: No binary expression",
+    "description": "Disallow binary expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-numeric-literals",
+    "title": "Jsonc: No binary numeric literals",
+    "description": "Disallow binary numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-comments",
+    "title": "Jsonc: No comments",
+    "description": "Disallow comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-dupe-keys",
+    "title": "Jsonc: No dupe keys",
+    "description": "Disallow duplicate keys in object literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-escape-sequence-in-identifier",
+    "title": "Jsonc: No escape sequence in identifier",
+    "description": "Disallow escape sequences in identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-floating-decimal",
+    "title": "Jsonc: No floating decimal",
+    "description": "Disallow leading or trailing decimal points in numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-hexadecimal-numeric-literals",
+    "title": "Jsonc: No hexadecimal numeric literals",
+    "description": "Disallow hexadecimal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-infinity",
+    "title": "Jsonc: No infinity",
+    "description": "Disallow Infinity",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-multi-str",
+    "title": "Jsonc: No multi str",
+    "description": "Disallow multiline strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-nan",
+    "title": "Jsonc: No nan",
+    "description": "Disallow NaN",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-number-props",
+    "title": "Jsonc: No number props",
+    "description": "Disallow number property keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-numeric-separators",
+    "title": "Jsonc: No numeric separators",
+    "description": "Disallow numeric separators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-escape",
+    "title": "Jsonc: No octal escape",
+    "description": "Disallow octal escape sequences in string literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-numeric-literals",
+    "title": "Jsonc: No octal numeric literals",
+    "description": "Disallow octal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal",
+    "title": "Jsonc: No octal",
+    "description": "Disallow legacy octal literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-parenthesized",
+    "title": "Jsonc: No parenthesized",
+    "description": "Disallow parentheses around the expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-plus-sign",
+    "title": "Jsonc: No plus sign",
+    "description": "Disallow plus sign",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-regexp-literals",
+    "title": "Jsonc: No regexp literals",
+    "description": "Disallow RegExp literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-sparse-arrays",
+    "title": "Jsonc: No sparse arrays",
+    "description": "Disallow sparse arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-template-literals",
+    "title": "Jsonc: No template literals",
+    "description": "Disallow template literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-undefined-value",
+    "title": "Jsonc: No undefined value",
+    "description": "Disallow `undefined`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-unicode-codepoint-escapes",
+    "title": "Jsonc: No unicode codepoint escapes",
+    "description": "Disallow Unicode code point escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-useless-escape",
+    "title": "Jsonc: No useless escape",
+    "description": "Disallow unnecessary escape usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-newline",
+    "title": "Jsonc: Object curly newline",
+    "description": "Enforce consistent line breaks inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-spacing",
+    "title": "Jsonc: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "jsonc_object-property-newline",
+    "title": "Jsonc: Object property newline",
+    "description": "Enforce placing object properties on separate lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quote-props",
+    "title": "Jsonc: Quote props",
+    "description": "Require quotes around object literal property names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quotes",
+    "title": "Jsonc: Quotes",
+    "description": "Enforce use of double or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "pathPattern",
+        "description": "pathPattern"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      }
+    ],
+    "patternId": "jsonc_sort-array-values",
+    "title": "Jsonc: Sort array values",
+    "description": "Require array values to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_sort-keys",
+    "title": "Jsonc: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "words",
+        "description": "words"
+      },
+      {
+        "name": "nonwords",
+        "description": "nonwords"
+      }
+    ],
+    "patternId": "jsonc_space-unary-ops",
+    "title": "Jsonc: Space unary ops",
+    "description": "Disallow spaces after unary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_valid-json-number",
+    "title": "Jsonc: Valid json number",
+    "description": "Disallow invalid number for JSON",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_vue-custom-block_no-parsing-error",
+    "title": "Jsonc: [Vue custom block] No parsing error",
+    "description": "Disallow parsing errors in Vue custom blocks",
     "timeToFix": 5
   },
   {
@@ -9047,58 +9446,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "comments",
-        "description": "comments"
-      },
-      {
-        "name": "strings",
-        "description": "strings"
-      },
-      {
-        "name": "identifiers",
-        "description": "identifiers"
-      },
-      {
-        "name": "ignoreRequire",
-        "description": "ignoreRequire"
-      },
-      {
-        "name": "templates",
-        "description": "templates"
-      },
-      {
-        "name": "lang",
-        "description": "lang"
-      },
-      {
-        "name": "langDir",
-        "description": "langDir"
-      },
-      {
-        "name": "skipWords",
-        "description": "skipWords"
-      },
-      {
-        "name": "skipIfMatch",
-        "description": "skipIfMatch"
-      },
-      {
-        "name": "skipWordIfMatch",
-        "description": "skipWordIfMatch"
-      },
-      {
-        "name": "minLength",
-        "description": "minLength"
-      }
-    ],
-    "patternId": "spellcheck_spell-checker",
-    "title": "Spellcheck: Spell checker",
-    "description": "Spell check",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
@@ -9428,6 +9775,58 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "comments",
+        "description": "comments"
+      },
+      {
+        "name": "strings",
+        "description": "strings"
+      },
+      {
+        "name": "identifiers",
+        "description": "identifiers"
+      },
+      {
+        "name": "ignoreRequire",
+        "description": "ignoreRequire"
+      },
+      {
+        "name": "templates",
+        "description": "templates"
+      },
+      {
+        "name": "lang",
+        "description": "lang"
+      },
+      {
+        "name": "langDir",
+        "description": "langDir"
+      },
+      {
+        "name": "skipWords",
+        "description": "skipWords"
+      },
+      {
+        "name": "skipIfMatch",
+        "description": "skipIfMatch"
+      },
+      {
+        "name": "skipWordIfMatch",
+        "description": "skipWordIfMatch"
+      },
+      {
+        "name": "minLength",
+        "description": "minLength"
+      }
+    ],
+    "patternId": "spellcheck_spell-checker",
+    "title": "Spellcheck: Spell checker",
+    "description": "Spell check",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "standard_array-bracket-even-spacing",
     "title": "Standard: Array bracket even spacing",
@@ -9654,6 +10053,13 @@
     "patternId": "@typescript-eslint_consistent-type-definitions",
     "title": "@typescript eslint: Consistent type definitions",
     "description": "Consistent with type definition either `interface` or `type`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-exports",
+    "title": "@typescript eslint: Consistent type exports",
+    "description": "Enforces consistent usage of type exports",
     "timeToFix": 5
   },
   {
@@ -9924,7 +10330,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-floating-promises",
     "title": "@typescript eslint: No floating promises",
-    "description": "Requires Promise-like values to be handled appropriately",
+    "description": "Requires Promise-like statements to be handled appropriately",
     "timeToFix": 5
   },
   {
@@ -10035,7 +10441,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-promises",
     "title": "@typescript eslint: No misused promises",
-    "description": "Avoid using promises in places not designed to handle them",
+    "description": "Avoid using Promises in places not designed to handle them",
     "timeToFix": 5
   },
   {
@@ -10078,6 +10484,13 @@
     "patternId": "@typescript-eslint_no-redeclare",
     "title": "@typescript eslint: No redeclare",
     "description": "Disallow variable redeclaration",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-redundant-type-constituents",
+    "title": "@typescript eslint: No redundant type constituents",
+    "description": "Disallow members of unions and intersections that do nothing or override type information",
     "timeToFix": 5
   },
   {
@@ -10232,13 +10645,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-unused-vars-experimental",
-    "title": "@typescript eslint: No unused vars experimental",
-    "description": "Disallow unused variables and arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_no-use-before-define",
     "title": "@typescript eslint: No use before define",
     "description": "Disallow the use of variables before they are defined",
@@ -10249,6 +10655,13 @@
     "patternId": "@typescript-eslint_no-useless-constructor",
     "title": "@typescript eslint: No useless constructor",
     "description": "Disallow unnecessary constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-useless-empty-export",
+    "title": "@typescript eslint: No useless empty export",
+    "description": "Disallow empty exports that don't change anything in a module file",
     "timeToFix": 5
   },
   {
@@ -10452,6 +10865,13 @@
     "patternId": "@typescript-eslint_sort-type-union-intersection-members",
     "title": "@typescript eslint: Sort type union intersection members",
     "description": "Enforces that members of a type union/intersection are sorted alphabetically",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_space-before-blocks",
+    "title": "@typescript eslint: Space before blocks",
+    "description": "Enforces consistent spacing before blocks",
     "timeToFix": 5
   },
   {
