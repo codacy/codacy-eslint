@@ -156,7 +156,7 @@
     "eslint-config-universe": "^10.0.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-config-winedirect": "^1.1.0",
-    "eslint-config-xo": "^0.39.0",
+    "eslint-config-xo": "^0.40.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-config-xo-space": "^0.32.0",
     "eslint-config-xo-typescript": "^0.50.0",
