@@ -1,4 +1,5 @@
-import { CLIEngine } from "eslint"
+import { ESLint } from "eslint"
+import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
 const baseParserOptions = {
@@ -9,7 +10,7 @@ const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/recommended",
 ]
 
-export const defaultOptions: CLIEngine.Options = {
+export const defaultOptions: ESLint.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
@@ -25,71 +26,7 @@ export const defaultOptions: CLIEngine.Options = {
       worker: true,
       qunit: true,
     },
-    plugins: [
-      "angular",
-      "angularjs-security-rules",
-      "@babel",
-      "backbone",
-      "better-styled-components",
-      "chai-expect",
-      "chai-friendly",
-      "compat",
-      "cypress",
-      "drupal",
-      "ember",
-      "ember-suave",
-      "filenames",
-      "flowtype",
-      "functional",
-      "graphql-fragments",
-      "hapi",
-      "html",
-      "i18n-json",
-      "import",
-      "jasmine",
-      "jest",
-      "jest-formatting",
-      "jsdoc",
-      "json",
-      "jsonc",
-      "jsx-a11y",
-      "lodash",
-      "lodash-fp",
-      "meteor",
-      "mocha",
-      "mongodb",
-      "monorepo",
-      "no-only-tests",
-      "no-unsafe-innerhtml",
-      "no-unsanitized",
-      "node",
-      "playwright",
-      "prettier",
-      "prettier-vue",
-      "promise",
-      "ramda",
-      "react-hooks",
-      "react-native",
-      "react",
-      "redux-saga",
-      "regexp",
-      "relay",
-      "@salesforce/eslint-plugin-aura",
-      "@salesforce/eslint-plugin-lightning",
-      "scanjs-rules",
-      "security",
-      "spellcheck",
-      "sonarjs",
-      "sort-imports-es6-autofix",
-      "sort-keys-fix",
-      "standard",
-      "storybook",
-      "@typescript-eslint",
-      "unicorn",
-      "vue",
-      "wdio",
-      "xss",
-    ],
+    plugins: pluginsNames,
     parser: "@babel/eslint-parser",
     parserOptions: baseParserOptions,
     overrides: [
@@ -135,4 +72,4 @@ export const defaultOptions: CLIEngine.Options = {
   },
 }
 
-export const defaultEngine = new CLIEngine(defaultOptions)
+export const defaultEngine = new ESLint(defaultOptions)

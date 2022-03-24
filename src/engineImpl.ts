@@ -1,5 +1,5 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
-import { CLIEngine, Linter } from "eslint"
+import { ESLint, Linter } from "eslint"
 import { pathExists } from "fs-extra"
 
 import { configCreator } from "./configCreator"
@@ -29,12 +29,13 @@ export const engineImpl: Engine = async function (
   const filesToAnalyze = files.length > 0 ? files : ["/src/**"]
   debugWhen(!(files.length > 0), `[codacy]: decided to run tool for all files under /src`)
 
-  const engine = new CLIEngine(options)
-  const eslintResults = engine.executeOnFiles(filesToAnalyze)
+  const eslint = new ESLint(options)
+  const linter = new Linter(options)
+  const eslintResults = await eslint.lintFiles(filesToAnalyze)
 
   debugRun(() => {
     files.forEach(file => {
-      const configUsedOnSpecificFile = engine.getConfigForFile(file)
+      const configUsedOnSpecificFile = eslint.calculateConfigForFile(file)
 
       debugJson(configUsedOnSpecificFile, v => `[codacy] eslint config used for file="${file}":\n${v}`)
     })

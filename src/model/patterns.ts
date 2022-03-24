@@ -15,34 +15,63 @@ export function fromEslintPatternIdAndCategoryToCategory(
     return ["Security", "MaliciousCode"]
   if (patternId.startsWith("scanjs-rules") || patternId.includes("security"))
     return ["Security", patternId.includes("regex") ? "Regex" : undefined]
-  if (patternId.startsWith("no-unsanitized"))
-    return ["Security", "XSS"]
-
+  if (patternId.startsWith("no-unsanitized")) return ["Security", "XSS"]
   switch (category) {
-    case "Possible Errors":
+    case "problem":
       return ["ErrorProne"]
-    case "Best Practices":
+    case "suggestion":
       return ["CodeStyle"]
-    case "Strict Mode":
+    case "layout":
       return ["CodeStyle"]
-    case "Variables":
-      return ["CodeStyle"]
-    case "Node.js and CommonJS":
-      return ["CodeStyle"]
-    case "Stylistic Issues":
-      return ["CodeStyle"]
-    case "ECMAScript 6":
-      return ["CodeStyle"]
-    case "Deprecated":
-      return ["Compatibility"]
-    case "Removed":
-      return ["Compatibility"]
     default:
-      return ["CodeStyle"]
+      return [fromEslintPatternIdAndCategoryToCategoryLegacy(category)]
   }
 }
 
-export function fromEslintCategoryToLevel(category?: string): Level {
+function fromEslintPatternIdAndCategoryToCategoryLegacy(
+  category?: string
+): Category {
+  switch (category) {
+    case "Possible Errors":
+      return "ErrorProne"
+    case "Best Practices":
+      return "CodeStyle"
+    case "Strict Mode":
+      return "CodeStyle"
+    case "Variables":
+      return "CodeStyle"
+    case "Node.js and CommonJS":
+      return "CodeStyle"
+    case "Stylistic Issues":
+      return "CodeStyle"
+    case "ECMAScript 6":
+      return "CodeStyle"
+    case "Deprecated":
+      return "Compatibility"
+    case "Removed":
+      return "Compatibility"
+    default:
+      return "CodeStyle"
+  }
+}
+
+export function fromEslintTypeAndCategoryToLevel(
+  type?: string,
+  category?: string
+): Level {
+  switch (type) {
+    case "problem":
+      return "Error"
+    case "suggestion":
+      return "Warning"
+    case "layout":
+      return "Info"
+    default:
+      return fromEslintCategoryToLevelLegacy(category)
+  }
+}
+
+function fromEslintCategoryToLevelLegacy(category?: string): Level {
   switch (category) {
     case "Possible Errors":
       return "Error"

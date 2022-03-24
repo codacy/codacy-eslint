@@ -1,13 +1,13 @@
 import { FileError, Issue, ToolResult } from "codacy-seed"
-import { CLIEngine, Linter } from "eslint"
+import { ESLint, Linter } from "eslint"
 
 import { isBlacklisted } from "./blacklist"
 import { computeSuggestion } from "./computeSuggestion"
 import { patternIdToCodacy } from "./model/patterns"
 
-export function convertResults(report: CLIEngine.LintReport): ToolResult[] {
+export function convertResults(eslintResults: ESLint.LintResult[]): ToolResult[] {
   const results: ToolResult[] = []
-  report.results.forEach((result) => {
+  eslintResults.forEach((result) => {
     const filename = result.filePath
     const messages = result.messages
     const fatalErrors = messages.filter((m) => m.fatal).map((m) => m.message)

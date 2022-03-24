@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="4.3">
-    <file name="example.js">
-        <error source="m6web-i18n_no-unknown-key" line="31" message="'Welcome to React Translation' is missing from 'fr' language" severity="info" />
-        <error source="m6web-i18n_no-unknown-key-secondary-langs" line="31" message="'Welcome to React Translation' is missing from 'en' language" severity="info" />
+    <file name="example.jsx">
+        <error source="@m6web_i18n_no-unknown-key" line="31" message="'Welcome to React Translation' is missing from 'fr' language" severity="info" />
+        <error source="@m6web_i18n_no-unknown-key-secondary-langs" line="31" message="'Welcome to React Translation' is missing from 'en' language" severity="info" />
     </file>
 </checkstyle>
