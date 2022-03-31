@@ -135,7 +135,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-kentcdodds": "^20.1.0",
     "eslint-config-loopback": "^13.1.0",
-    "eslint-config-next": "^12.1.2",
+    "eslint-config-next": "^12.1.4",
     "eslint-config-nodesecurity": "^1.3.1",
     "eslint-config-pixiebrix": "0.15.2",
     "eslint-config-preact": "^1.3.0",
