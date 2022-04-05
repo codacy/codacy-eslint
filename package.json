@@ -121,7 +121,7 @@
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^16.2.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-alloy": "^4.5.1",
     "eslint-config-angular": "^0.5.0",
     "eslint-config-apiconnect": "^2.0.1",
