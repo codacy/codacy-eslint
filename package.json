@@ -236,7 +236,7 @@
     "eslint-plugin-suitescript": "^1.2.1",
     "eslint-plugin-tsdoc": "^0.2.14",
     "eslint-plugin-unicorn": "^37.0.1",
-    "eslint-plugin-vue": "^8.5.0",
+    "eslint-plugin-vue": "^8.6.0",
     "eslint-plugin-vuejs-accessibility": "^1.1.1",
     "eslint-plugin-wdio": "^7.19.0",
     "eslint-plugin-xss": "^0.1.11",
