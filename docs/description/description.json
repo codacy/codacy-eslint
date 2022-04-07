@@ -1323,7 +1323,7 @@
     ],
     "patternId": "no-invalid-this",
     "title": "No invalid this",
-    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
     "timeToFix": 5
   },
   {
@@ -3557,7 +3557,7 @@
     ],
     "patternId": "@babel_no-invalid-this",
     "title": "@babel: No invalid this",
-    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
     "timeToFix": 5
   },
   {
