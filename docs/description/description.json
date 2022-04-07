@@ -4584,6 +4584,804 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "es_no-accessor-properties",
+    "title": "Es: No accessor properties",
+    "description": "Disallow accessor properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-from",
+    "title": "Es: No array from",
+    "description": "Disallow the `Array.from` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-isarray",
+    "title": "Es: No array isarray",
+    "description": "Disallow the `Array.isArray` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-of",
+    "title": "Es: No array of",
+    "description": "Disallow the `Array.of` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-arrow-functions",
+    "title": "Es: No arrow functions",
+    "description": "Disallow arrow function expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-async-functions",
+    "title": "Es: No async functions",
+    "description": "Disallow async function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-async-iteration",
+    "title": "Es: No async iteration",
+    "description": "Disallow async iteration.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-atomics",
+    "title": "Es: No atomics",
+    "description": "Disallow the `Atomics` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-bigint",
+    "title": "Es: No bigint",
+    "description": "Disallow `bigint` syntax and built-ins",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-binary-numeric-literals",
+    "title": "Es: No binary numeric literals",
+    "description": "Disallow binary numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-block-scoped-functions",
+    "title": "Es: No block scoped functions",
+    "description": "Disallow block-scoped function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-block-scoped-variables",
+    "title": "Es: No block scoped variables",
+    "description": "Disallow block-scoped variable declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-classes",
+    "title": "Es: No classes",
+    "description": "Disallow class declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-computed-properties",
+    "title": "Es: No computed properties",
+    "description": "Disallow computed properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-date-now",
+    "title": "Es: No date now",
+    "description": "Disallow the `Date.now` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-default-parameters",
+    "title": "Es: No default parameters",
+    "description": "Disallow default parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-destructuring",
+    "title": "Es: No destructuring",
+    "description": "Disallow destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-dynamic-import",
+    "title": "Es: No dynamic import",
+    "description": "Disallow `import()` syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-exponential-operators",
+    "title": "Es: No exponential operators",
+    "description": "Disallow exponential operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-export-ns-from",
+    "title": "Es: No export ns from",
+    "description": "Disallow `export * as ns`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-for-of-loops",
+    "title": "Es: No for of loops",
+    "description": "Disallow `for-of` statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-generators",
+    "title": "Es: No generators",
+    "description": "Disallow generator function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-global-this",
+    "title": "Es: No global this",
+    "description": "Disallow the `globalThis` variable",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-import-meta",
+    "title": "Es: No import meta",
+    "description": "Disallow `import.meta` meta property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-json",
+    "title": "Es: No json",
+    "description": "Disallow the `JSON` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-json-superset",
+    "title": "Es: No json superset",
+    "description": "Disallow `\\u2028` and `\\u2029` in string literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-keyword-properties",
+    "title": "Es: No keyword properties",
+    "description": "Disallow reserved words as property names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-logical-assignment-operators",
+    "title": "Es: No logical assignment operators",
+    "description": "Disallow logical assignment operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-malformed-template-literals",
+    "title": "Es: No malformed template literals",
+    "description": "Disallow template literals with invalid escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-map",
+    "title": "Es: No map",
+    "description": "Disallow the `Map` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-acosh",
+    "title": "Es: No math acosh",
+    "description": "Disallow the `Math.acosh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-asinh",
+    "title": "Es: No math asinh",
+    "description": "Disallow the `Math.asinh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-atanh",
+    "title": "Es: No math atanh",
+    "description": "Disallow the `Math.atanh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-cbrt",
+    "title": "Es: No math cbrt",
+    "description": "Disallow the `Math.cbrt` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-clz32",
+    "title": "Es: No math clz32",
+    "description": "Disallow the `Math.clz32` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-cosh",
+    "title": "Es: No math cosh",
+    "description": "Disallow the `Math.cosh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-expm1",
+    "title": "Es: No math expm1",
+    "description": "Disallow the `Math.expm1` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-fround",
+    "title": "Es: No math fround",
+    "description": "Disallow the `Math.fround` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-hypot",
+    "title": "Es: No math hypot",
+    "description": "Disallow the `Math.hypot` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-imul",
+    "title": "Es: No math imul",
+    "description": "Disallow the `Math.imul` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log1p",
+    "title": "Es: No math log1p",
+    "description": "Disallow the `Math.log1p` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log2",
+    "title": "Es: No math log2",
+    "description": "Disallow the `Math.log2` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log10",
+    "title": "Es: No math log10",
+    "description": "Disallow the `Math.log10` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-sign",
+    "title": "Es: No math sign",
+    "description": "Disallow the `Math.sign` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-sinh",
+    "title": "Es: No math sinh",
+    "description": "Disallow the `Math.sinh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-tanh",
+    "title": "Es: No math tanh",
+    "description": "Disallow the `Math.tanh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-trunc",
+    "title": "Es: No math trunc",
+    "description": "Disallow the `Math.trunc` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-modules",
+    "title": "Es: No modules",
+    "description": "Disallow modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-new-target",
+    "title": "Es: No new target",
+    "description": "Disallow `new.target` meta property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-nullish-coalescing-operators",
+    "title": "Es: No nullish coalescing operators",
+    "description": "Disallow nullish coalescing operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-epsilon",
+    "title": "Es: No number epsilon",
+    "description": "Disallow the `Number.EPSILON` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isfinite",
+    "title": "Es: No number isfinite",
+    "description": "Disallow the `Number.isFinite` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isinteger",
+    "title": "Es: No number isinteger",
+    "description": "Disallow the `Number.isInteger` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isnan",
+    "title": "Es: No number isnan",
+    "description": "Disallow the `Number.isNaN` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-issafeinteger",
+    "title": "Es: No number issafeinteger",
+    "description": "Disallow the `Number.isSafeInteger` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-maxsafeinteger",
+    "title": "Es: No number maxsafeinteger",
+    "description": "Disallow the `Number.MAX_SAFE_INTEGER` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-minsafeinteger",
+    "title": "Es: No number minsafeinteger",
+    "description": "Disallow the `Number.MIN_SAFE_INTEGER` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-parsefloat",
+    "title": "Es: No number parsefloat",
+    "description": "Disallow the `Number.parseFloat` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-parseint",
+    "title": "Es: No number parseint",
+    "description": "Disallow the `Number.parseInt` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-numeric-separators",
+    "title": "Es: No numeric separators",
+    "description": "Disallow numeric separators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-assign",
+    "title": "Es: No object assign",
+    "description": "Disallow the `Object.assign` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-defineproperties",
+    "title": "Es: No object defineproperties",
+    "description": "Disallow the `Object.defineProperties` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-defineproperty",
+    "title": "Es: No object defineproperty",
+    "description": "Disallow the `Object.defineProperty` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-entries",
+    "title": "Es: No object entries",
+    "description": "Disallow the `Object.entries` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-freeze",
+    "title": "Es: No object freeze",
+    "description": "Disallow the `Object.freeze` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-fromentries",
+    "title": "Es: No object fromentries",
+    "description": "Disallow the `Object.fromEntries` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertydescriptor",
+    "title": "Es: No object getownpropertydescriptor",
+    "description": "Disallow the `Object.getOwnPropertyDescriptor` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertydescriptors",
+    "title": "Es: No object getownpropertydescriptors",
+    "description": "Disallow the `Object.getOwnPropertyDescriptors` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertynames",
+    "title": "Es: No object getownpropertynames",
+    "description": "Disallow the `Object.getOwnPropertyNames` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertysymbols",
+    "title": "Es: No object getownpropertysymbols",
+    "description": "Disallow the `Object.getOwnPropertySymbols` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getprototypeof",
+    "title": "Es: No object getprototypeof",
+    "description": "Disallow the `Object.getPrototypeOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-is",
+    "title": "Es: No object is",
+    "description": "Disallow the `Object.is` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-isextensible",
+    "title": "Es: No object isextensible",
+    "description": "Disallow the `Object.isExtensible` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-isfrozen",
+    "title": "Es: No object isfrozen",
+    "description": "Disallow the `Object.isFrozen` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-issealed",
+    "title": "Es: No object issealed",
+    "description": "Disallow the `Object.isSealed` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-keys",
+    "title": "Es: No object keys",
+    "description": "Disallow the `Object.keys` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-preventextensions",
+    "title": "Es: No object preventextensions",
+    "description": "Disallow the `Object.preventExtensions` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-seal",
+    "title": "Es: No object seal",
+    "description": "Disallow the `Object.seal` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-setprototypeof",
+    "title": "Es: No object setprototypeof",
+    "description": "Disallow the `Object.setPrototypeOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-super-properties",
+    "title": "Es: No object super properties",
+    "description": "Disallow `super` property accesses in object literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-values",
+    "title": "Es: No object values",
+    "description": "Disallow the `Object.values` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-octal-numeric-literals",
+    "title": "Es: No octal numeric literals",
+    "description": "Disallow octal numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-optional-catch-binding",
+    "title": "Es: No optional catch binding",
+    "description": "Disallow optional `catch` binding.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-optional-chaining",
+    "title": "Es: No optional chaining",
+    "description": "Disallow optional chaining.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise",
+    "title": "Es: No promise",
+    "description": "Disallow the `Promise` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise-all-settled",
+    "title": "Es: No promise all settled",
+    "description": "Disallow `Promise.allSettled` function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise-any",
+    "title": "Es: No promise any",
+    "description": "Disallow `Promise.any` function and `AggregateError` class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-property-shorthands",
+    "title": "Es: No property shorthands",
+    "description": "Disallow property shorthands.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-proxy",
+    "title": "Es: No proxy",
+    "description": "Disallow the `Proxy` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-reflect",
+    "title": "Es: No reflect",
+    "description": "Disallow the `Reflect` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-lookbehind-assertions",
+    "title": "Es: No regexp lookbehind assertions",
+    "description": "Disallow RegExp lookbehind assertions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-named-capture-groups",
+    "title": "Es: No regexp named capture groups",
+    "description": "Disallow RegExp named capture groups.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-s-flag",
+    "title": "Es: No regexp s flag",
+    "description": "Disallow RegExp `s` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-u-flag",
+    "title": "Es: No regexp u flag",
+    "description": "Disallow RegExp `u` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-unicode-property-escapes",
+    "title": "Es: No regexp unicode property escapes",
+    "description": "Disallow RegExp Unicode property escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-unicode-property-escapes-2019",
+    "title": "Es: No regexp unicode property escapes 2019",
+    "description": "Disallow the new values of RegExp Unicode property escape sequences in ES2019",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-y-flag",
+    "title": "Es: No regexp y flag",
+    "description": "Disallow RegExp `y` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-rest-parameters",
+    "title": "Es: No rest parameters",
+    "description": "Disallow rest parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-rest-spread-properties",
+    "title": "Es: No rest spread properties",
+    "description": "Disallow rest/spread properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-set",
+    "title": "Es: No set",
+    "description": "Disallow the `Set` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-shared-array-buffer",
+    "title": "Es: No shared array buffer",
+    "description": "Disallow the `SharedArrayBuffer` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-spread-elements",
+    "title": "Es: No spread elements",
+    "description": "Disallow spread elements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-string-fromcodepoint",
+    "title": "Es: No string fromcodepoint",
+    "description": "Disallow the `String.fromCodePoint` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-string-raw",
+    "title": "Es: No string raw",
+    "description": "Disallow the `String.raw` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-subclassing-builtins",
+    "title": "Es: No subclassing builtins",
+    "description": "Disallow the subclassing of the built-in classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-symbol",
+    "title": "Es: No symbol",
+    "description": "Disallow the `Symbol` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-template-literals",
+    "title": "Es: No template literals",
+    "description": "Disallow template literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-trailing-commas",
+    "title": "Es: No trailing commas",
+    "description": "Disallow trailing commas in array/object literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-trailing-function-commas",
+    "title": "Es: No trailing function commas",
+    "description": "Disallow trailing commas in parameter/argument lists.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-typed-arrays",
+    "title": "Es: No typed arrays",
+    "description": "Disallow ES2015 typed arrays.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-unicode-codepoint-escapes",
+    "title": "Es: No unicode codepoint escapes",
+    "description": "Disallow Unicode code point escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weak-map",
+    "title": "Es: No weak map",
+    "description": "Disallow the `WeakMap` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weak-set",
+    "title": "Es: No weak set",
+    "description": "Disallow the `WeakSet` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weakrefs",
+    "title": "Es: No weakrefs",
+    "description": "Disallow the `WeakRef` and `FinalizationRegistry` class.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "unnamedParam",
