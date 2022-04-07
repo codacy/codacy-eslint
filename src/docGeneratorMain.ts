@@ -71,10 +71,17 @@ async function main() {
     "ember-suave"
   )
 
+  console.log("Generate es description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/mysticatea/eslint-plugin-es/master/docs/rules/${pattern}.md`,
+    "es"
+  )
+
   console.log("Generate eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
+      `${githubBaseUrl}/eslint/eslint/main/docs/src/rules/${pattern}.md`
   )
 
   console.log("Generate functional description files")
