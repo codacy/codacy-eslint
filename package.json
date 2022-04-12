@@ -94,7 +94,7 @@
     "@nodelib/fs.walk": "^1.2.8",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.1",
-    "@salesforce/eslint-config-lwc": "^3.2.4",
+    "@salesforce/eslint-config-lwc": "^3.3.0",
     "@salesforce/eslint-plugin-aura": "^2.1.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
