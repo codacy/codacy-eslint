@@ -90,7 +90,7 @@
     "@lego/prettier-config": "^6.1.2",
     "@lwc/eslint-plugin-lwc": "^1.2.1",
     "@m6web/eslint-plugin-i18n": "^2.0.0",
-    "@next/eslint-plugin-next": "^12.1.2",
+    "@next/eslint-plugin-next": "^12.1.5",
     "@nodelib/fs.walk": "^1.2.8",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.1",
