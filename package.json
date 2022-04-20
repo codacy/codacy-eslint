@@ -222,7 +222,7 @@
     "eslint-plugin-regexp": "^1.6.0",
     "eslint-plugin-relay": "^1.8.3",
     "eslint-plugin-scanjs-rules": "^0.2.1",
-    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-security-node": "1.1.1",
     "eslint-plugin-sfdx": "^1.0.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
