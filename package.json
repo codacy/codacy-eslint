@@ -148,7 +148,7 @@
     "eslint-config-simplifield": "^12.0.0",
     "eslint-config-snak": "^1.0.15",
     "eslint-config-somos": "^3.0.2",
-    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "^11.0.1",
     "eslint-config-standard-with-typescript": "^21.0.1",
