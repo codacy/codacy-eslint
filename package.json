@@ -273,7 +273,7 @@
     "chai": "^4.3.6",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "mocha": "^10.0.0",
     "simple-mock": "^0.8.0",
