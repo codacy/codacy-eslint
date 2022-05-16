@@ -94,6 +94,7 @@
   <module name="no-confusing-arrow" />
   <module name="no-console" />
   <module name="no-const-assign" />
+  <module name="no-constant-binary-expression" />
   <module name="no-constant-condition" />
   <module name="no-constructor-return" />
   <module name="no-continue" />
@@ -444,6 +445,7 @@
   <module name="ember_named-functions-in-promises" />
   <module name="ember_new-module-imports" />
   <module name="ember_no-actions-hash" />
+  <module name="ember_no-array-prototype-extensions" />
   <module name="ember_no-arrow-function-computed-properties" />
   <module name="ember_no-assignment-of-untracked-properties-used-in-tracking-contexts" />
   <module name="ember_no-attrs-in-components" />
@@ -1051,6 +1053,12 @@
   <module name="node_no-unsupported-features" />
   <module name="playwright_missing-playwright-await" />
   <module name="playwright_no-page-pause" />
+  <module name="playwright_no-element-handle" />
+  <module name="playwright_no-eval" />
+  <module name="playwright_no-focused-test" />
+  <module name="playwright_no-skipped-test" />
+  <module name="playwright_no-wait-for-timeout" />
+  <module name="playwright_no-force-option" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="promise_param-names" />
@@ -1433,6 +1441,7 @@
   <module name="@typescript-eslint_no-confusing-non-null-assertion" />
   <module name="@typescript-eslint_no-confusing-void-expression" />
   <module name="@typescript-eslint_no-dupe-class-members" />
+  <module name="@typescript-eslint_no-duplicate-enum-values" />
   <module name="@typescript-eslint_no-duplicate-imports" />
   <module name="@typescript-eslint_no-dynamic-delete" />
   <module name="@typescript-eslint_no-empty-function" />
@@ -1488,6 +1497,7 @@
   <module name="@typescript-eslint_non-nullable-type-assertion-style" />
   <module name="@typescript-eslint_object-curly-spacing" />
   <module name="@typescript-eslint_padding-line-between-statements" />
+  <module name="@typescript-eslint_parameter-properties" />
   <module name="@typescript-eslint_prefer-as-const" />
   <module name="@typescript-eslint_prefer-enum-initializers" />
   <module name="@typescript-eslint_prefer-for-of" />
@@ -1648,6 +1658,7 @@
   <module name="vue_component-options-name-casing" />
   <module name="vue_component-tags-order" />
   <module name="vue_custom-event-name-casing" />
+  <module name="vue_define-macros-order" />
   <module name="vue_dot-location" />
   <module name="vue_dot-notation" />
   <module name="vue_eqeqeq" />
@@ -1668,6 +1679,7 @@
   <module name="vue_key-spacing" />
   <module name="vue_keyword-spacing" />
   <module name="vue_match-component-file-name" />
+  <module name="vue_match-component-import-name" />
   <module name="vue_max-attributes-per-line" />
   <module name="vue_max-len" />
   <module name="vue_multi-word-component-names" />
@@ -1734,6 +1746,7 @@
   <module name="vue_no-restricted-class" />
   <module name="vue_no-restricted-component-options" />
   <module name="vue_no-restricted-custom-event" />
+  <module name="vue_no-restricted-html-elements" />
   <module name="vue_no-restricted-props" />
   <module name="vue_no-restricted-static-attribute" />
   <module name="vue_no-restricted-syntax" />
@@ -1779,6 +1792,7 @@
   <module name="vue_order-in-components" />
   <module name="vue_padding-line-between-blocks" />
   <module name="vue_prefer-import-from-vue" />
+  <module name="vue_prefer-prop-type-boolean-first" />
   <module name="vue_prefer-separate-static-class" />
   <module name="vue_prefer-template" />
   <module name="vue_prefer-true-attribute-shorthand" />

@@ -987,6 +987,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "no-constant-binary-expression",
+    "title": "No constant binary expression",
+    "description": "Disallow expressions where the operation doesn't affect the value",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "checkLoops",
@@ -1948,6 +1955,10 @@
       {
         "name": "allowFunctionParams",
         "description": "allowFunctionParams"
+      },
+      {
+        "name": "enforceInClassFields",
+        "description": "enforceInClassFields"
       }
     ],
     "patternId": "no-underscore-dangle",
@@ -3914,6 +3925,13 @@
     "patternId": "ember_no-actions-hash",
     "title": "Ember: No actions hash",
     "description": "Disallow the actions hash in components, controllers, and routes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_no-array-prototype-extensions",
+    "title": "Ember: No array prototype extensions",
+    "description": "Disallow usage of Ember's `Array` prototype extensions",
     "timeToFix": 5
   },
   {
@@ -8204,6 +8222,48 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-element-handle",
+    "title": "Playwright: No element handle",
+    "description": "The use of ElementHandle is discouraged, use Locator instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-eval",
+    "title": "Playwright: No eval",
+    "description": "The use of `page.$eval` and `page.$$eval` are discouraged, use `locator.evaluate` or `locator.evaluateAll` instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-focused-test",
+    "title": "Playwright: No focused test",
+    "description": "Prevent usage of `.only()` focus test annotation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-skipped-test",
+    "title": "Playwright: No skipped test",
+    "description": "Prevent usage of the `.skip()` skip test annotation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-wait-for-timeout",
+    "title": "Playwright: No wait for timeout",
+    "description": "Prevent usage of page.waitForTimeout()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-force-option",
+    "title": "Playwright: No force option",
+    "description": "Prevent usage of `{ force: true }` option.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
     "timeToFix": 5
@@ -10247,78 +10307,91 @@
     "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
+    "description": "Locates potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-non-literal-regexp",
     "title": "Security: Detect non literal regexp",
+    "description": "Detects \"RegExp(variable)\", which might allow an attacker to DOS your server with a long-running regular expression.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-non-literal-require",
     "title": "Security: Detect non literal require",
+    "description": "Detects \"require(variable)\", which might allow an attacker to load and run arbitrary code, or access arbitrary files on disk. ",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-non-literal-fs-filename",
     "title": "Security: Detect non literal fs filename",
+    "description": "Detects variable in filename argument of \"fs\" calls, which might allow an attacker to access anything on your system.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-eval-with-expression",
     "title": "Security: Detect eval with expression",
+    "description": "Detects \"eval(variable)\" which can allow an attacker to run arbitrary code inside your process.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-pseudoRandomBytes",
     "title": "Security: Detect pseudoRandomBytes",
+    "description": "Detects if \"pseudoRandomBytes()\" is in use, which might not give you the randomness you need and expect.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-possible-timing-attacks",
     "title": "Security: Detect possible timing attacks",
+    "description": "Detects insecure comparisons (`==`, `!=`, `!==` and `===`), which check input sequentially.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-no-csrf-before-method-override",
     "title": "Security: Detect no csrf before method override",
+    "description": "Detects Express \"csrf\" middleware setup before \"method-override\" middleware.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-buffer-noassert",
     "title": "Security: Detect buffer noassert",
+    "description": "Detect calls to \"buffer\" with \"noAssert\" flag set.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-child-process",
     "title": "Security: Detect child process",
+    "description": "Detect instances of \"child_process\" & non-literal \"exec()\" calls.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-disable-mustache-escape",
     "title": "Security: Detect disable mustache escape",
+    "description": "Detects \"object.escapeMarkup = false\", which can be used with some template engines to disable escaping of HTML entities.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-object-injection",
     "title": "Security: Detect object injection",
+    "description": "Detects \"variable[key]\" as a left- or right-hand assignment operand.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "security_detect-new-buffer",
     "title": "Security: Detect new buffer",
+    "description": "Detect instances of new Buffer(argument) where argument is any non-literal value.",
     "timeToFix": 5
   },
   {
@@ -11011,7 +11084,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_method-signature-style",
     "title": "@typescript eslint: Method signature style",
-    "description": "Enforces using a particular method signature syntax.",
+    "description": "Enforces using a particular method signature syntax",
     "timeToFix": 5
   },
   {
@@ -11054,6 +11127,13 @@
     "patternId": "@typescript-eslint_no-dupe-class-members",
     "title": "@typescript eslint: No dupe class members",
     "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-duplicate-enum-values",
+    "title": "@typescript eslint: No duplicate enum values",
+    "description": "Disallow duplicate enum member values",
     "timeToFix": 5
   },
   {
@@ -11488,6 +11568,13 @@
     "patternId": "@typescript-eslint_padding-line-between-statements",
     "title": "@typescript eslint: Padding line between statements",
     "description": "Require or disallow padding lines between statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_parameter-properties",
+    "title": "@typescript eslint: Parameter properties",
+    "description": "Require or disallow the use of parameter properties in class constructors",
     "timeToFix": 5
   },
   {
@@ -12711,6 +12798,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_define-macros-order",
+    "title": "Vue: Define macros order",
+    "description": "Enforce order of `defineEmits` and `defineProps` compiler macros",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_dot-location",
     "title": "Vue: Dot location",
     "description": "Enforce consistent newlines before and after dots in `<template>`",
@@ -12878,6 +12972,13 @@
     "patternId": "vue_match-component-file-name",
     "title": "Vue: Match component file name",
     "description": "Require component name property to match its file name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_match-component-import-name",
+    "title": "Vue: Match component import name",
+    "description": "Require the registered component name to match the imported component name",
     "timeToFix": 5
   },
   {
@@ -13374,6 +13475,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-html-elements",
+    "title": "Vue: No restricted html elements",
+    "description": "Disallow specific HTML elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-props",
     "title": "Vue: No restricted props",
     "description": "Disallow specific props",
@@ -13694,6 +13802,13 @@
     "patternId": "vue_prefer-import-from-vue",
     "title": "Vue: Prefer import from vue",
     "description": "Enforce import from 'vue' instead of import from '@vue/*'",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-prop-type-boolean-first",
+    "title": "Vue: Prefer prop type boolean first",
+    "description": "Enforce `Boolean` comes first in component prop types",
     "timeToFix": 5
   },
   {

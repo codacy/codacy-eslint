@@ -9,6 +9,8 @@ since: v7.9.0
 
 > require valid keys in model option
 
+- :warning: This rule was **deprecated** and replaced by [vue/valid-model-definition](valid-model-definition.md) rule.
+
 ## :book: Rule Details
 
 This rule is aimed at preventing invalid keys in model option.

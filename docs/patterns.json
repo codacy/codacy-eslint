@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.12.0",
+  "version": "8.15.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -998,6 +998,13 @@
       "enabled": true
     },
     {
+      "patternId": "no-constant-binary-expression",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "no-constant-condition",
       "level": "Info",
       "category": "CodeStyle",
@@ -1962,6 +1969,10 @@
         {
           "name": "allowFunctionParams",
           "default": true
+        },
+        {
+          "name": "enforceInClassFields",
+          "default": false
         }
       ],
       "enabled": false
@@ -4006,6 +4017,13 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "ember_no-array-prototype-extensions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "ember_no-arrow-function-computed-properties",
@@ -8521,6 +8539,48 @@
       "enabled": true
     },
     {
+      "patternId": "playwright_no-element-handle",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-eval",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-focused-test",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-skipped-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-wait-for-timeout",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-force-option",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "prettier_prettier",
       "level": "Info",
       "category": "CodeStyle",
@@ -10652,7 +10712,7 @@
       "category": "Security",
       "subcategory": "Regex",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-non-literal-regexp",
@@ -10660,42 +10720,42 @@
       "category": "Security",
       "subcategory": "Regex",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-non-literal-require",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-non-literal-fs-filename",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-eval-with-expression",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-pseudoRandomBytes",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-possible-timing-attacks",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-no-csrf-before-method-override",
@@ -10703,28 +10763,28 @@
       "category": "Security",
       "subcategory": "CSRF",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-buffer-noassert",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-child-process",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-disable-mustache-escape",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-object-injection",
@@ -10732,14 +10792,14 @@
       "category": "Security",
       "subcategory": "CommandInjection",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "security_detect-new-buffer",
       "level": "Info",
       "category": "Security",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "sonarjs_cognitive-complexity",
@@ -11028,7 +11088,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/lorenzo/codacy/github/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/davidmarinho/Documents/proj-js/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
@@ -11492,6 +11552,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-duplicate-enum-values",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-duplicate-imports",
       "level": "Info",
       "category": "CodeStyle",
@@ -11920,6 +11987,13 @@
     },
     {
       "patternId": "@typescript-eslint_padding-line-between-statements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_parameter-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13159,6 +13233,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_define-macros-order",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_dot-location",
       "level": "Info",
       "category": "CodeStyle",
@@ -13324,6 +13405,13 @@
     },
     {
       "patternId": "vue_match-component-file-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_match-component-import-name",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13822,6 +13910,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-restricted-html-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-restricted-props",
       "level": "Info",
       "category": "CodeStyle",
@@ -14140,6 +14235,13 @@
     },
     {
       "patternId": "vue_prefer-import-from-vue",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_prefer-prop-type-boolean-first",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
