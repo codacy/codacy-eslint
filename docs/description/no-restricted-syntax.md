@@ -1,10 +1,15 @@
-# no-restricted-syntax
+---
+title: no-restricted-syntax
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-restricted-syntax.md
+rule_type: suggestion
+---
 
 Disallows specified syntax.
 
 JavaScript has a lot of language features, and not everyone likes all of them. As a result, some projects choose to disallow the use of certain language features altogether. For instance, you might decide to disallow the use of `try-catch` or `class`, or you might decide to disallow the use of the `in` operator.
 
-Rather than creating separate rules for every language feature you want to turn off, this rule allows you to configure the syntax elements you want to restrict use of. These elements are represented by their [ESTree](https://github.com/estree/estree) node types. For example, a function declaration is represented by `FunctionDeclaration` and the `with` statement is represented by `WithStatement`. You may find the full list of AST node names you can use [on GitHub](https://github.com/eslint/espree/blob/master/lib/ast-node-types.js) and use [AST Explorer](https://astexplorer.net/) with the espree parser to see what type of nodes your code consists of.
+Rather than creating separate rules for every language feature you want to turn off, this rule allows you to configure the syntax elements you want to restrict use of. These elements are represented by their [ESTree](https://github.com/estree/estree) node types. For example, a function declaration is represented by `FunctionDeclaration` and the `with` statement is represented by `WithStatement`. You may find the full list of AST node names you can use [on GitHub](https://github.com/eslint/eslint-visitor-keys/blob/main/lib/visitor-keys.js) and use [AST Explorer](https://astexplorer.net/) with the espree parser to see what type of nodes your code consists of.
 
 You can also specify [AST selectors](../developer-guide/selectors) to restrict, allowing much more precise control over syntax patterns.
 
@@ -80,7 +85,7 @@ If you don't want to restrict your code from using any JavaScript features or sy
 
 ## Related Rules
 
-* [no-alert](no-alert.md)
-* [no-console](no-console.md)
-* [no-debugger](no-debugger.md)
-* [no-restricted-properties](no-restricted-properties.md)
+* [no-alert](no-alert)
+* [no-console](no-console)
+* [no-debugger](no-debugger)
+* [no-restricted-properties](no-restricted-properties)
