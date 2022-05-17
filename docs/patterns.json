@@ -11088,7 +11088,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/Documents/proj-js/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
