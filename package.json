@@ -92,7 +92,7 @@
     "@m6web/eslint-plugin-i18n": "^2.0.1",
     "@next/eslint-plugin-next": "^12.1.5",
     "@nodelib/fs.walk": "^1.2.8",
-    "@nrwl/eslint-plugin-nx": "^13.9.3",
+    "@nrwl/eslint-plugin-nx": "^14.1.6",
     "@nrwl/nx": "^7.8.7",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.2",
