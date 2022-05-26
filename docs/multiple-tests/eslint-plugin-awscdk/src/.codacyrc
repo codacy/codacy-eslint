@@ -1,8 +1,0 @@
-{
-    "tools": [
-    {
-        "name": "eslint"
-    }
-    ],
-    "files" : ["example.js"]
-}
