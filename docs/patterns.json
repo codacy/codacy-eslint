@@ -3624,6 +3624,118 @@
       "enabled": false
     },
     {
+      "patternId": "awscdk_require-bucket-encryption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-bucket-private",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-public-ingress",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-iam-star-actions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-iam-admin-permissions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-policy-allow-kms-decrypt",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-bucket-ssl",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-dynamodb-ptr",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-sns-topic-encryption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-dynamodb-autoscale",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-rds-public-access",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-kms-key-delete",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-s3-public-write",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-s3-public-read",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-cloudfront-default-root-object",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-redshift-public-access",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@babel_new-cap",
       "level": "Info",
       "category": "CodeStyle",
@@ -9233,6 +9345,21 @@
       "enabled": true
     },
     {
+      "patternId": "react_jsx-no-leaked-render",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "validStrategies",
+          "default": [
+            "ternary",
+            "coerce"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "react_jsx-no-literals",
       "level": "Info",
       "category": "CodeStyle",
@@ -11088,7 +11215,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/stefan/Documents/Projects/Codacy-app/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
