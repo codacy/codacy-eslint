@@ -5,6 +5,7 @@ import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslin
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { Linter, Rule } from "eslint"
 import { rules as angularjsSecurityRules } from "eslint-plugin-angularjs-security-rules"
+import { rules as awscdkRules} from "eslint-plugin-awscdk"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
@@ -69,6 +70,7 @@ const plugins = [
   ["angular", angularRules],
   ["@angular-eslint", angularEslintRules],
   ["angularjs-security-rules", angularjsSecurityRules],
+  ["awscdk", awscdkRules],
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
