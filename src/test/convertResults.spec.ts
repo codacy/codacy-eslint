@@ -34,7 +34,7 @@ describe("convertResults", () => {
         fixableErrorCount: 0,
         fixableWarningCount: 0,
         usedDeprecatedRules: [],
-        suppressedMessages: [],
+
       },
     ]
 
