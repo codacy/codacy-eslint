@@ -3540,6 +3540,118 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-encryption",
+    "title": "Awscdk: Require bucket encryption",
+    "description": "Encryption should be enabled for all S3 buckets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-private",
+    "title": "Awscdk: Require bucket private",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-public-ingress",
+    "title": "Awscdk: No public ingress",
+    "description": "Security Group rules should not allow access from anywhere",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-star-actions",
+    "title": "Awscdk: No iam star actions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-admin-permissions",
+    "title": "Awscdk: No iam admin permissions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-policy-allow-kms-decrypt",
+    "title": "Awscdk: No policy allow kms decrypt",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-ssl",
+    "title": "Awscdk: Require bucket ssl",
+    "description": "This checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-ptr",
+    "title": "Awscdk: Require dynamodb ptr",
+    "description": "DynamoDB tables should have point-in-time recovery enabled.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-sns-topic-encryption",
+    "title": "Awscdk: Require sns topic encryption",
+    "description": "SNS Topics should be encrypted at rest using AWS KMS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-autoscale",
+    "title": "Awscdk: Require dynamodb autoscale",
+    "description": "This control passes if the table uses either on-demand capacity mode or provisioned mode\n      with auto scaling configured.\n\n      Scaling capacity with demand avoids throttling exceptions, which helps to maintain availability of your applications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-rds-public-access",
+    "title": "Awscdk: No rds public access",
+    "description": "AWS RDS instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-kms-key-delete",
+    "title": "Awscdk: No kms key delete",
+    "description": "KMS Keys should not be scheduled for deletion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-write",
+    "title": "Awscdk: No s3 public write",
+    "description": "Buckets should not allow public write access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-read",
+    "title": "Awscdk: No s3 public read",
+    "description": "Buckets should not allow public read access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-cloudfront-default-root-object",
+    "title": "Awscdk: Require cloudfront default root object",
+    "description": "This control checks whether an Amazon CloudFront distribution is configured to return a specific object that is the default root object.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-redshift-public-access",
+    "title": "Awscdk: No redshift public access",
+    "description": "AWS Redshift instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "newIsCap",
@@ -8893,6 +9005,18 @@
     "patternId": "react_jsx-no-duplicate-props",
     "title": "React: Jsx no duplicate props",
     "description": "Enforce no duplicate props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "validStrategies",
+        "description": "validStrategies"
+      }
+    ],
+    "patternId": "react_jsx-no-leaked-render",
+    "title": "React: Jsx no leaked render",
+    "description": "Prevent problematic leaked values from being rendered",
     "timeToFix": 5
   },
   {
