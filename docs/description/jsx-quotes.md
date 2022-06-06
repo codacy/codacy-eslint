@@ -1,4 +1,15 @@
-# enforce the consistent use of either double or single quotes in JSX attributes (jsx-quotes)
+---
+title: jsx-quotes
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/jsx-quotes.md
+rule_type: layout
+related_rules:
+- quotes
+---
+
+<!--FIXABLE-->
+
+Enforces the consistent use of either double or single quotes in JSX attributes.
 
 JSX attribute values can contain string literals, which are delimited with single or double quotes.
 
@@ -67,7 +78,3 @@ Examples of **correct** code for this rule with the `"prefer-single"` option:
 ## When Not To Use It
 
 You can turn this rule off if you don’t use JSX or if you aren’t concerned with a consistent usage of quotes within JSX attributes.
-
-## Related Rules
-
-* [quotes](quotes.md)

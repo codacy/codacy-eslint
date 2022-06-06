@@ -9,9 +9,13 @@ Examples of **incorrect** code for this rule:
 
 ```jsx
 [<Hello />, <Hello />, <Hello />];
+```
 
+```jsx
 data.map(x => <Hello>{x}</Hello>);
+```
 
+```jsx
 <Hello {...{ key: id, id, caption }} />
 ```
 
@@ -21,9 +25,13 @@ Examples of **correct** code for this rule:
 
 ```jsx
 [<Hello key="first" />, <Hello key="second" />, <Hello key="third" />];
+```
 
-data.map((x, i) => <Hello key={i}>{x}</Hello>);
+```jsx
+data.map((x) => <Hello key={x.id}>{x}</Hello>);
+```
 
+```jsx
 <Hello key={id} {...{ id, caption }} />
 ```
 
@@ -43,7 +51,9 @@ Examples of **incorrect** code for this rule:
 
 ```jsx
 [<></>, <></>, <></>];
+```
 
+```jsx
 data.map(x => <>{x}</>);
 ```
 
@@ -57,7 +67,20 @@ Examples of **incorrect** code for this rule:
 <span {...spread} key={"key-after-spread"} />;
 ```
 
-## When not to use
+### `warnOnDuplicates` (default: `false`)
+
+When `true` the rule will check for any duplicate key prop values.
+
+Examples of **incorrect** code for this rule:
+
+```jsx
+const spans = [
+    <span key="notunique"/>,
+    <span key="notunique"/>,
+];
+```
+
+## When Not To Use It
 
 If you are not using JSX then you can disable this rule.
 

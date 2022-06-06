@@ -1,4 +1,15 @@
-# Disallow unnecessary escape usage (no-useless-escape)
+---
+title: no-useless-escape
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-useless-escape.md
+rule_type: suggestion
+---
+
+<!--RECOMMENDED-->
+
+<!--SUGGESTIONS-->
+
+Disallows unnecessary escape characters.
 
 Escaping non-special characters in strings, template literals, and regular expressions doesn't have any effect, as demonstrated in the following example:
 
@@ -26,7 +37,8 @@ Examples of **incorrect** code for this rule:
 `\#{foo}`;
 /\!/;
 /\@/;
-
+/[\[]/;
+/[a-z\-]/;
 ```
 
 Examples of **correct** code for this rule:
@@ -46,7 +58,9 @@ Examples of **correct** code for this rule:
 /\\/g;
 /\t/g;
 /\w\$\*\^\./;
-
+/[[]/;
+/[\]]/;
+/[a-z-]/;
 ```
 
 ## When Not To Use It

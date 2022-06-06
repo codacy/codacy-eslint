@@ -1,4 +1,15 @@
-# Require parens in arrow function arguments (arrow-parens)
+---
+title: arrow-parens
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/arrow-parens.md
+rule_type: layout
+further_reading:
+- https://github.com/airbnb/javascript#arrows--one-arg-parens
+---
+
+<!--FIXABLE-->
+
+Requires parens in arrow function arguments.
 
 Arrow functions can omit parentheses when they have exactly one parameter. In all other cases the parameter(s) must
 be wrapped in parentheses. This rule enforces the consistent use of parentheses in arrow functions.
@@ -19,7 +30,6 @@ a => {}
 
 Following this style will help you find arrow functions (`=>`) which may be mistakenly included in a condition
 when a comparison such as `>=` was the intent.
-
 
 ```js
 /*eslint-env es6*/
@@ -222,8 +232,3 @@ a((foo) => { if (true) {} });
 ([a, b]) => a;
 ({a, b}) => a;
 ```
-
-## Further Reading
-
-* The `"as-needed", { "requireForBlockBody": true }` rule is directly inspired by the Airbnb
- [JS Style Guide](https://github.com/airbnb/javascript#arrows--one-arg-parens).

@@ -1,8 +1,13 @@
 # Prefer `switch` over multiple `else-if`
 
-A switch statement is easier to read than multiple if statements with simple equality comparisons.
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
 
-This rule is partly fixable.
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
+A switch statement is easier to read than multiple if statements with simple equality comparisons.
 
 ## Fail
 
@@ -48,11 +53,11 @@ switch (foo) {
 }
 ```
 
-### `options`
+## Options
 
 Type: `object`
 
-#### `minimumCases`
+### `minimumCases`
 
 Type: `integer`\
 Minimum: `2`\
@@ -100,7 +105,7 @@ else if (foo === 2) {}
 // Fails
 ```
 
-#### `emptyDefaultCase`
+### `emptyDefaultCase`
 
 Type: `string`\
 Default: `'no-default-comment'`

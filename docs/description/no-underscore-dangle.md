@@ -1,4 +1,11 @@
-# disallow dangling underscores in identifiers (no-underscore-dangle)
+---
+title: no-underscore-dangle
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-underscore-dangle.md
+rule_type: suggestion
+---
+
+Disallows dangling underscores in identifiers.
 
 As far as naming conventions for identifiers go, dangling underscores may be the most polarizing in JavaScript. Dangling underscores are underscores at either the beginning or end of an identifier, such as:
 
@@ -42,12 +49,13 @@ const foo = (_bar) => {};
 
 This rule has an object option:
 
--  `"allow"` allows specified identifiers to have dangling underscores
--  `"allowAfterThis": false` (default) disallows dangling underscores in members of the `this` object
--  `"allowAfterSuper": false` (default) disallows dangling underscores in members of the `super` object
--  `"allowAfterThisConstructor": false` (default) disallows dangling underscores in members of the `this.constructor` object
--  `"enforceInMethodNames": false` (default) allows dangling underscores in method names
--  `"allowFunctionParams": true` (default) allows dangling underscores in function parameter names
+* `"allow"` allows specified identifiers to have dangling underscores
+* `"allowAfterThis": false` (default) disallows dangling underscores in members of the `this` object
+* `"allowAfterSuper": false` (default) disallows dangling underscores in members of the `super` object
+* `"allowAfterThisConstructor": false` (default) disallows dangling underscores in members of the `this.constructor` object
+* `"enforceInMethodNames": false` (default) allows dangling underscores in method names
+* `"enforceInClassFields": false` (default) allows dangling underscores in es2022 class fields names
+* `"allowFunctionParams": true` (default) allows dangling underscores in function parameter names
 
 ### allow
 
@@ -115,6 +123,34 @@ const o = {
 const o = {
   bar_() = {}
 };
+```
+
+### enforceInClassFields
+
+Examples of **incorrect** code for this rule with the `{ "enforceInClassFields": true }` option:
+
+```js
+/*eslint no-underscore-dangle: ["error", { "enforceInClassFields": true }]*/
+
+class Foo {
+    _bar;
+}
+
+class Foo {
+    _bar = () => {};
+}
+
+class Foo {
+    bar_;
+}
+
+class Foo {
+    #_bar;
+}
+
+class Foo {
+    #bar_;
+}
 ```
 
 ### allowFunctionParams

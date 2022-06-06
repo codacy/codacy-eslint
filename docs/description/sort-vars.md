@@ -1,4 +1,16 @@
-# Variable Sorting (sort-vars)
+---
+title: sort-vars
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/sort-vars.md
+rule_type: suggestion
+related_rules:
+- sort-keys
+- sort-imports
+---
+
+<!--FIXABLE-->
+
+Requires variables within the same declaration block to be sorted.
 
 When declaring multiple variables within the same block, some developers prefer to sort variable names alphabetically to be able to find necessary variable easier at the later time. Others feel that it adds complexity and becomes burden to maintain.
 
@@ -71,8 +83,3 @@ var a, B, c;
 ## When Not To Use It
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If you alphabetizing variables isn't a part of your coding standards, then you can leave this rule off.
-
-## Related Rules
-
-* [sort-keys](sort-keys.md)
-* [sort-imports](sort-imports.md)

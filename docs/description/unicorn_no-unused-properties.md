@@ -1,9 +1,12 @@
 # Disallow unused object properties
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+<!-- /RULE_NOTICE -->
+
 Unused properties, much like unused variables, are often a result of incomplete refactoring and may confuse readers.
 
 This rule is primarily useful when you use objects to group constants or model enumerations. It is much harder to predict class properties usage, and practically impossible to predict reflective property access. This rule ignores cases like that.
-
 
 ## Example use cases
 
@@ -28,7 +31,6 @@ const ClassName = {
 };
 ```
 
-
 ## Fail
 
 ```js
@@ -41,7 +43,6 @@ console.log(enum.used);
 
 const {used} = enum;
 ```
-
 
 ## Pass
 
@@ -65,7 +66,6 @@ const foo = {
 	}
 };
 ```
-
 
 ## Scope and limitations
 

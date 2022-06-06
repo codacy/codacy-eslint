@@ -6,6 +6,11 @@ either been renamed for clarity, or replaced with more powerful APIs.
 While typically these deprecated functions are kept in the codebase for a number
 of majors, eventually they are removed completely.
 
+This rule requires knowing which version of Jest you're using - see
+[this section of the readme](../../README.md#jest-version-setting) for details
+on how that is obtained automatically and how you can explicitly provide a
+version if needed.
+
 ## Rule details
 
 This rule warns about calls to deprecated functions, and provides details on
@@ -32,8 +37,7 @@ Originally, the `requireActual` & `requireMock` the `requireActual`&
 
 These functions were later moved onto the `jest` object in order to be easier
 for type checkers to handle, and their use via `require` deprecated. Finally,
-the release of Jest 26 saw them removed from the `require` function all
-together.
+the release of Jest 26 saw them removed from the `require` function altogether.
 
 ### `jest.runTimersToTime`
 

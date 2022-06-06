@@ -1,4 +1,13 @@
-# Disallow return before else (no-else-return)
+---
+title: no-else-return
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-else-return.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Disallows `return` before `else`.
 
 If an `if` block contains a `return` statement, the `else` block becomes unnecessary. Its contents can be placed outside of the block.
 

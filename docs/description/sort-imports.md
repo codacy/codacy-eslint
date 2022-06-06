@@ -1,10 +1,23 @@
-# Import Sorting (sort-imports)
+---
+title: sort-imports
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/sort-imports.md
+rule_type: suggestion
+related_rules:
+- sort-keys
+- sort-vars
+---
+
+<!--FIXABLE-->
+
+Enforces sorted import declarations within modules.
 
 The import statement is used to import members (functions, objects or primitives) that have been exported from an external module. Using a specific member syntax:
 
 ```js
 // single - Import single member.
 import myMember from "my-module.js";
+import {myOtherMember} from "my-other-module.js";
 
 // multiple - Import multiple members.
 import {foo, bar} from "my-module.js";
@@ -21,7 +34,6 @@ import "my-module.js"
 ```
 
 When declaring multiple imports, a sorted list of import declarations make it easier for developers to read the code and find necessary imports later. This rule is purely a matter of style.
-
 
 ## Rule Details
 
@@ -71,7 +83,7 @@ import * as foo from 'foo.js';
 import {alpha, beta} from 'alpha.js';
 import {delta, gamma} from 'delta.js';
 import a from 'baz.js';
-import b from 'qux.js';
+import {b} from 'qux.js';
 
 /*eslint sort-imports: "error"*/
 import a from 'foo.js';
@@ -83,6 +95,7 @@ import 'foo.js'
 import * as bar from 'bar.js';
 import {a, b} from 'baz.js';
 import c from 'qux.js';
+import {d} from 'quux.js';
 
 /*eslint sort-imports: "error"*/
 import {a, b, c} from 'foo.js'
@@ -105,6 +118,10 @@ import {a, b} from 'bar.js';
 
 /*eslint sort-imports: "error"*/
 import a from 'foo.js';
+import {b, c} from 'bar.js';
+
+/*eslint sort-imports: "error"*/
+import {a} from 'foo.js';
 import {b, c} from 'bar.js';
 
 /*eslint sort-imports: "error"*/
@@ -278,8 +295,3 @@ Default is `false`.
 ## When Not To Use It
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If alphabetizing imports isn't a part of your coding standards, then you can leave this rule disabled.
-
-## Related Rules
-
-* [sort-keys](sort-keys.md)
-* [sort-vars](sort-vars.md)

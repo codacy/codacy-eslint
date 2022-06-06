@@ -1,4 +1,18 @@
-# disallow multiple spaces in regular expression literals (no-regex-spaces)
+---
+title: no-regex-spaces
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-regex-spaces.md
+rule_type: suggestion
+related_rules:
+- no-div-regex
+- no-control-regex
+---
+
+<!--RECOMMENDED-->
+
+<!--FIXABLE-->
+
+Disallows multiple spaces in regular expression literals.
 
 Regular expressions can be very complex and difficult to understand, which is why it's important to keep them as simple as possible in order to avoid mistakes. One of the more error-prone things you can do with a regular expression is to use more than one space, such as:
 
@@ -39,8 +53,3 @@ var re = new RegExp("foo {3}bar");
 ## When Not To Use It
 
 If you want to allow multiple spaces in a regular expression, then you can safely turn this rule off.
-
-## Related Rules
-
-* [no-div-regex](no-div-regex.md)
-* [no-control-regex](no-control-regex.md)

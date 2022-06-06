@@ -1,12 +1,19 @@
-# Disallow mixes of different operators (no-mixed-operators)
+---
+title: no-mixed-operators
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-mixed-operators.md
+rule_type: suggestion
+related_rules:
+- no-extra-parens
+---
+
+Disallows mixes of different operators.
 
 Enclosing complex expressions by parentheses clarifies the developer's intention, which makes the code more readable.
 This rule warns when different operators are used consecutively without parentheses in an expression.
 
 ```js
 var foo = a && b || c || d;    /*BAD: Unexpected mix of '&&' and '||'.*/
-var foo = a && b ? c : d;      /*BAD: Unexpected mix of '&&' and '?:'.*/
-var foo = (a && b) ? c : d;    /*GOOD*/
 var foo = (a && b) || c || d;  /*GOOD*/
 var foo = a && (b || c || d);  /*GOOD*/
 ```
@@ -20,29 +27,17 @@ var foo = a && b || c || d;
 
 will generate
 
-```sh
+```shell
 1:13  Unexpected mix of '&&' and '||'. (no-mixed-operators)
 1:18  Unexpected mix of '&&' and '||'. (no-mixed-operators)
 ```
-
-```js
-var foo = a && b ? c : d;
-```
-
-will generate
-
-```sh
-1:13  Unexpected mix of '&&' and '?:'. (no-mixed-operators)
-1:18  Unexpected mix of '&&' and '?:'. (no-mixed-operators)
-```
-
 
 ## Rule Details
 
 This rule checks `BinaryExpression`, `LogicalExpression` and `ConditionalExpression`.
 
-This rule may conflict with [no-extra-parens](no-extra-parens.md) rule.
-If you use both this and [no-extra-parens](no-extra-parens.md) rule together, you need to use the `nestedBinaryExpressions` option of [no-extra-parens](no-extra-parens.md) rule.
+This rule may conflict with [no-extra-parens](no-extra-parens) rule.
+If you use both this and [no-extra-parens](no-extra-parens) rule together, you need to use the `nestedBinaryExpressions` option of [no-extra-parens](no-extra-parens) rule.
 
 Examples of **incorrect** code for this rule:
 
@@ -188,7 +183,3 @@ var foo = (a + b) - c;
 ## When Not To Use It
 
 If you don't want to be notified about mixed operators, then it's safe to disable this rule.
-
-## Related Rules
-
-* [no-extra-parens](no-extra-parens.md)

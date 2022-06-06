@@ -1,4 +1,19 @@
-# Require Or Disallow Space Before Blocks (space-before-blocks)
+---
+title: space-before-blocks
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/space-before-blocks.md
+rule_type: layout
+related_rules:
+- keyword-spacing
+- arrow-spacing
+- switch-colon-spacing
+- block-spacing
+- brace-style
+---
+
+<!--FIXABLE-->
+
+Requires Or disallows space before blocks.
 
 Consistency is an important part of any style guide.
 While it is a personal preference where to put the opening brace of blocks,
@@ -11,6 +26,7 @@ This rule will enforce consistency of spacing before blocks. It is only applied 
 
 * This rule ignores spacing which is between `=>` and a block. The spacing is handled by the `arrow-spacing` rule.
 * This rule ignores spacing which is between a keyword and a block. The spacing is handled by the `keyword-spacing` rule.
+* This rule ignores spacing which is between `:` of a switch case and a block. The spacing is handled by the `switch-colon-spacing` rule.
 
 ## Options
 
@@ -62,6 +78,9 @@ if (a) {
     c();
 }
 
+class C {
+    static{} /*no error. this is checked by `keyword-spacing` rule.*/
+}
 
 function a() {}
 
@@ -205,9 +224,3 @@ class Foo {
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the consistency of spacing before blocks.
-
-## Related Rules
-
-* [keyword-spacing](keyword-spacing.md)
-* [arrow-spacing](arrow-spacing.md)
-* [brace-style](brace-style.md)

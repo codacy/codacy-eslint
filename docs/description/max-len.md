@@ -1,4 +1,17 @@
-# enforce a maximum line length (max-len)
+---
+title: max-len
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/max-len.md
+rule_type: layout
+related_rules:
+- complexity
+- max-depth
+- max-nested-callbacks
+- max-params
+- max-statements
+---
+
+Enforces a maximum line length.
 
 Very long lines of code in any language can be difficult to read. In order to aid in readability and maintainability many coders have developed a convention to limit lines of code to X number of characters (traditionally 80 characters).
 
@@ -151,11 +164,3 @@ Examples of **correct** code for this rule with the `ignorePattern` option:
 
 var dep = require('really/really/really/really/really/really/really/really/long/module');
 ```
-
-## Related Rules
-
-* [complexity](complexity.md)
-* [max-depth](max-depth.md)
-* [max-nested-callbacks](max-nested-callbacks.md)
-* [max-params](max-params.md)
-* [max-statements](max-statements.md)

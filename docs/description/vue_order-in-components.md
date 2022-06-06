@@ -15,7 +15,7 @@ since: v3.2.0
 ## :book: Rule Details
 
 This rule makes sure you keep declared order of properties in components.
-Recommended order of properties can be [found here](https://v3.vuejs.org/style-guide/#component-instance-options-order-recommended).
+Recommended order of properties can be [found here](https://vuejs.org/style-guide/rules-recommended.html#component-instance-options-order).
 
 <eslint-code-block fix :rules="{'vue/order-in-components': ['error']}">
 
@@ -110,11 +110,10 @@ export default {
 
   If an element is an array of strings, it means any of those can be placed there unordered. Default is above.
 
-
 ## :books: Further Reading
 
-- [Style guide - Component/instance options order](https://v3.vuejs.org/style-guide/#component-instance-options-order-recommended)
-- [Style guide (for v2) - Component/instance options order](https://vuejs.org/v2/style-guide/#Component-instance-options-order-recommended)
+- [Style guide - Component/instance options order](https://vuejs.org/style-guide/rules-recommended.html#component-instance-options-order)
+- [Style guide (for v2) - Component/instance options order](https://v2.vuejs.org/v2/style-guide/#Component-instance-options-order-recommended)
 
 ## :rocket: Version
 

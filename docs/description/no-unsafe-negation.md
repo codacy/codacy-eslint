@@ -1,4 +1,15 @@
-# disallow negating the left operand of relational operators (no-unsafe-negation)
+---
+title: no-unsafe-negation
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-unsafe-negation.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+<!--SUGGESTIONS-->
+
+Disallows negating the left operand of relational operators.
 
 Just as developers might type `-a + b` when they mean `-(a + b)` for the negative of a sum, they might type `!key in object` by mistake when they almost certainly mean `!(key in object)` to test that a key is not in an object. `!obj instanceof Ctor` is similar.
 
@@ -6,8 +17,8 @@ Just as developers might type `-a + b` when they mean `-(a + b)` for the negativ
 
 This rule disallows negating the left operand of the following relational operators:
 
-- [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in).
-- [`instanceof` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof).
+* [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in).
+* [`instanceof` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof).
 
 Examples of **incorrect** code for this rule:
 
@@ -74,17 +85,17 @@ if (!(foo) in object) {
 
 This rule has an object option:
 
-- `"enforceForOrderingRelations": false` (default) allows negation of the left-hand side of ordering relational operators (`<`, `>`, `<=`, `>=`)
-- `"enforceForOrderingRelations": true` disallows negation of the left-hand side of ordering relational operators
+* `"enforceForOrderingRelations": false` (default) allows negation of the left-hand side of ordering relational operators (`<`, `>`, `<=`, `>=`)
+* `"enforceForOrderingRelations": true` disallows negation of the left-hand side of ordering relational operators
 
 ### enforceForOrderingRelations
 
 With this option set to `true` the rule is additionally enforced for:
 
-- `<` operator.
-- `>` operator.
-- `<=` operator.
-- `>=` operator.
+* `<` operator.
+* `>` operator.
+* `<=` operator.
+* `>=` operator.
 
 The purpose is to avoid expressions such as `! a < b` (which is equivalent to `(a ? 0 : 1) < b`) when what is really intended is `!(a < b)`.
 

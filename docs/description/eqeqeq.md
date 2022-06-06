@@ -1,4 +1,13 @@
-# Require === and !== (eqeqeq)
+---
+title: eqeqeq
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/eqeqeq.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Requires the use of `===` and `!==`.
 
 It is considered good practice to use the type-safe equality operators `===` and `!==` instead of their regular counterparts `==` and `!=`.
 

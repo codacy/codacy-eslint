@@ -1,4 +1,16 @@
-# Disallow duplicate conditions in `if-else-if` chains (no-dupe-else-if)
+---
+title: no-dupe-else-if
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-dupe-else-if.md
+rule_type: problem
+related_rules:
+- no-duplicate-case
+- no-lonely-if
+---
+
+<!--RECOMMENDED-->
+
+Disallows duplicate conditions in `if-else-if` chains.
 
 `if-else-if` chains are commonly used when there is a need to execute only one branch (or at most one branch) out of several possible branches, based on certain conditions.
 
@@ -171,8 +183,3 @@ if (a) {
 ## When Not To Use It
 
 In rare cases where you really need identical test conditions in the same chain, which necessarily means that the expressions in the chain are causing and relying on side effects, you will have to turn this rule off.
-
-## Related Rules
-
-* [no-duplicate-case](no-duplicate-case.md)
-* [no-lonely-if](no-lonely-if.md)

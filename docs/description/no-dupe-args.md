@@ -1,4 +1,13 @@
-# disallow duplicate arguments in `function` definitions (no-dupe-args)
+---
+title: no-dupe-args
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-dupe-args.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows duplicate arguments in `function` definitions.
 
 If more than one parameter has the same name in a function definition, the last occurrence "shadows" the preceding occurrences. A duplicated name might be a typing error.
 

@@ -1,4 +1,16 @@
-# Disallow Undeclared Variables (no-undef)
+---
+title: no-undef
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-undef.md
+rule_type: problem
+related_rules:
+- no-global-assign
+- no-redeclare
+---
+
+<!--RECOMMENDED-->
+
+Disallows the use of undeclared variables unless mentioned in `/*global */` comments.
 
 This rule can help you locate potential ReferenceErrors resulting from misspellings of variable and parameter names, or accidental implicit globals (for example, from forgetting the `var` keyword in a `for` loop initializer).
 
@@ -26,10 +38,10 @@ var bar = a + 1;
 ```
 
 Note that this rule does not disallow assignments to read-only global variables.
-See [no-global-assign](no-global-assign.md) if you also want to disallow those assignments.
+See [no-global-assign](no-global-assign) if you also want to disallow those assignments.
 
 This rule also does not disallow redeclarations of global variables.
-See [no-redeclare](no-redeclare.md) if you also want to disallow those redeclarations.
+See [no-redeclare](no-redeclare) if you also want to disallow those redeclarations.
 
 ## Options
 
@@ -68,7 +80,7 @@ if(typeof a === "string"){}
 
 ## Environments
 
-For convenience, ESLint provides shortcuts that pre-define global variables exposed by popular libraries and runtime environments. This rule supports these environments, as listed in [Specifying Environments](../user-guide/configuring/language-options.md#specifying-environments).  A few examples are given below.
+For convenience, ESLint provides shortcuts that pre-define global variables exposed by popular libraries and runtime environments. This rule supports these environments, as listed in [Specifying Environments](../user-guide/configuring/language-options#specifying-environments).  A few examples are given below.
 
 ### browser
 
@@ -104,8 +116,3 @@ If explicit declaration of global variables is not to your taste.
 ## Compatibility
 
 This rule provides compatibility with treatment of global variables in [JSHint](http://jshint.com/) and [JSLint](http://www.jslint.com).
-
-## Related Rules
-
-* [no-global-assign](no-global-assign.md)
-* [no-redeclare](no-redeclare.md)

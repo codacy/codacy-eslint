@@ -18,6 +18,7 @@ var Component = createReactClass({
 ...
 });
 ```
+
 ```jsx
 type Props = {
   z: number,
@@ -28,6 +29,7 @@ class Component extends React.Component<Props> {
   ...
 }
 ```
+
 ```jsx
 class Component extends React.Component {
   static propTypes = {
@@ -53,6 +55,7 @@ var Component = createReactClass({
 ...
 });
 ```
+
 ```jsx
 type Props = {
   a: string,
@@ -63,6 +66,7 @@ class Component extends React.Component<Props> {
   ...
 }
 ```
+
 ```jsx
 class Component extends React.Component {
   static propTypes = {
@@ -144,6 +148,7 @@ var Component = createReactClass({
 ...
 });
 ```
+
 ### `noSortAlphabetically`
 
 When `true`, alphabetical order is not enforced:
@@ -159,6 +164,6 @@ var Component = createReactClass({
 });
 ```
 
-## When not to use
+## When Not To Use It
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If alphabetizing props declarations isn't a part of your coding standards, then you can leave this rule off.

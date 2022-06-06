@@ -1,4 +1,17 @@
-# Disallow or enforce spaces inside of brackets (array-bracket-spacing)
+---
+title: array-bracket-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/array-bracket-spacing.md
+rule_type: layout
+related_rules:
+- space-in-parens
+- object-curly-spacing
+- computed-property-spacing
+---
+
+<!--FIXABLE-->
+
+Disallows or enforce spaces inside of brackets.
 
 A number of style guides require or disallow spaces between array brackets and other tokens. This rule
 applies to both array literals and destructuring assignments (ECMAScript 6).
@@ -215,9 +228,3 @@ var arr = [[ 1, 2 ], 2, [ 3, 4 ]];
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the consistency of spacing between array brackets.
-
-## Related Rules
-
-* [space-in-parens](space-in-parens.md)
-* [object-curly-spacing](object-curly-spacing.md)
-* [computed-property-spacing](computed-property-spacing.md)

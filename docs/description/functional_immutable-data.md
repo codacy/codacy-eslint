@@ -9,6 +9,8 @@ it won't stop assignment into or modification of untyped objects or external typ
 
 Examples of **incorrect** code for this rule:
 
+<!-- eslint-skip -->
+
 ```js
 /* eslint functional/immutable-data: "error" */
 
@@ -20,6 +22,8 @@ delete obj.foo; // <- Modifying an existing object/array is not allowed.
 Object.assign(obj, { bar: 2 }); // <- Modifying properties of existing object not allowed.
 ```
 
+<!-- eslint-skip -->
+
 ```js
 /* eslint functional/immutable-data: "error" */
 
@@ -27,6 +31,7 @@ const arr = [0, 1, 2];
 
 arr[0] = 4; // <- Modifying an array is not allowed.
 arr.length = 1; // <- Modifying an array is not allowed.
+delete arr[1]; // <- Modifying an existing array is not allowed.
 arr.push(3); // <- Modifying an array is not allowed.
 ```
 
@@ -39,7 +44,7 @@ const obj = { foo: 1 };
 const arr = [0, 1, 2];
 
 const x = {
-  ...obj
+  ...obj,
   bar: [
     ...arr, 3, 4
   ]
@@ -51,7 +56,7 @@ const x = {
 This rule accepts an options object of the following type:
 
 ```ts
-{
+type Options = {
   assumeTypes:
     | boolean
     | {
@@ -60,25 +65,25 @@ This rule accepts an options object of the following type:
       }
   ignoreClass: boolean | "fieldsOnly";
   ignoreImmediateMutation: boolean;
-  ignorePattern?: string | Array<string>;
-  ignoreAccessorPattern?: string | Array<string>;
+  ignorePattern?: string[] | string;
+  ignoreAccessorPattern?: string[] | string;
 }
 ```
 
 The default options:
 
 ```ts
-{
-  assumeTypes: true,
-  ignoreClass: false,
-  ignoreImmediateMutation: true,
+type Options = {
+  assumeTypes: true;
+  ignoreClass: false;
+  ignoreImmediateMutation: true;
 };
 ```
 
 Note: the `lite` ruleset overrides the default options to:
 
 ```ts
-{
+const defaults = {
   assumeTypes: true,
   ignoreClass: "fieldsOnly",
   ignoreImmediateMutation: true,
@@ -135,28 +140,28 @@ The match string allows you to specify dot separated `.` object paths and has su
 
 For example:
 
-```js
+```jsonc
 {
   // Ignore all reassigning to object properties that are prefixed with "mutable_".
   "ignoreAccessorPattern": "**.mutable_*"
 }
 ```
 
-```js
+```jsonc
 {
   // Ignore all shallow mutations made to object properties that are prefixed with "mutable_".
   "ignoreAccessorPattern": "**.mutable_*.*"
 }
 ```
 
-```js
+```jsonc
 {
   // Ignore all deep mutations made to object properties that are prefixed with "mutable_".
   "ignoreAccessorPattern": "**.mutable_*.*.**"
 }
 ```
 
-```js
+```jsonc
 {
   // Ignore all deep mutations and reassigning to object properties that are prefixed with "mutable_".
   "ignoreAccessorPattern": "**.mutable_*.**"
@@ -168,5 +173,5 @@ For example:
 
 The following wildcards can be used when specifying a pattern:
 
-`**` - Match any depth (including zero). Can only be used as a full accessor.
+`**` - Match any depth (including zero). Can only be used as a full accessor.\
 `*` - When used as a full accessor, match the next accessor (there must be one). When used as part of an accessor, match any characters.

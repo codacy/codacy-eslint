@@ -1,4 +1,16 @@
-# Disallow eval() (no-eval)
+---
+title: no-eval
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-eval.md
+rule_type: suggestion
+related_rules:
+- no-implied-eval
+further_reading:
+- https://ericlippert.com/2003/11/01/eval-is-evil-part-one/
+- https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
+---
+
+Disallows eval().
 
 JavaScript's `eval()` function is potentially dangerous and is often misused. Using `eval()` on untrusted code can open a program up to several different injection attacks. The use of `eval()` in most contexts can be substituted for a better, alternative approach to a problem.
 
@@ -65,6 +77,14 @@ class A {
     }
 
     eval() {
+    }
+
+    static {
+        // This is a user-defined static method.
+        this.eval("var a = 0");
+    }
+
+    static eval() {
     }
 }
 ```
@@ -136,12 +156,3 @@ global.eval("var a = 0");
   var foo = window;
   foo.eval("var a = 0");
   ```
-
-## Further Reading
-
-* [Eval is Evil, Part One](https://blogs.msdn.com/b/ericlippert/archive/2003/11/01/53329.aspx)
-* [How evil is eval](https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/)
-
-## Related Rules
-
-* [no-implied-eval](no-implied-eval.md)

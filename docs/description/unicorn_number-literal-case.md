@@ -1,11 +1,16 @@
 # Enforce proper case for numeric literals
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
 Differentiating the casing of the identifier and value clearly separates them and makes your code more readable.
 
 - Lowercase identifier and uppercase value for [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#BigInt_type).
 - Lowercase `e` for exponential notation.
-
-This rule is fixable.
 
 ## Fail
 

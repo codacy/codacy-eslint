@@ -1,4 +1,6 @@
-# Disallow empty functions (`no-empty-function`)
+# `no-empty-function`
+
+Disallow empty functions.
 
 ## Rule Details
 
@@ -7,7 +9,7 @@ It adds support for handling TypeScript specific code that would otherwise trigg
 
 One example of valid TypeScript specific code that would otherwise trigger the `no-empty-function` rule is the use of [parameter properties](https://www.typescriptlang.org/docs/handbook/classes.html#parameter-properties) in constructor functions.
 
-## How to use
+## How to Use
 
 ```jsonc
 {
@@ -26,7 +28,8 @@ This rule adds the following options:
 type AdditionalAllowOptionEntries =
   | 'private-constructors'
   | 'protected-constructors'
-  | 'decoratedFunctions';
+  | 'decoratedFunctions'
+  | 'overrideMethods';
 
 type AllowOptionEntries =
   | BaseNoEmptyFunctionAllowOptionEntries
@@ -75,7 +78,23 @@ class Foo {
 }
 ```
 
-## How to use
+### allow: `overrideMethods`
+
+Examples of correct code for the `{ "allow": ["overrideMethods"] }` option:
+
+```ts
+abstract class Base {
+  protected greet(): void {
+    console.log('Hello!');
+  }
+}
+
+class Foo extends Base {
+  protected override greet(): void {}
+}
+```
+
+## How to Use
 
 ```jsonc
 {
@@ -85,6 +104,16 @@ class Foo {
 }
 ```
 
----
+<sup>
 
-<sup>Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-empty-function.md)</sup>
+Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/main/docs/rules/no-empty-function.md)
+
+</sup>
+
+## Attributes
+
+- Configs:
+  - [x] ✅ Recommended
+  - [x] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

@@ -1,21 +1,12 @@
 import { writeFile } from "codacy-seed"
 import { EOL } from "os"
-
-import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
-import { defaultEngine } from "./eslintDefaultOptions"
+import { allRules } from "./eslintPlugins"
 
 main()
 
 async function main() {
-  const docGenerator = new DocGenerator(
-    Array.from(defaultEngine.getRules().entries()).filter(
-      ([patternId, _]) =>
-        patternId &&
-        !isBlacklisted(patternId) &&
-        !isBlacklistedOnlyFromDocumentation(patternId)
-    )
-  )
+  const docGenerator = new DocGenerator(allRules)
 
   console.log("Generate patterns.json")
   await writeJsonFile("docs/patterns.json", docGenerator.generatePatterns())
@@ -36,6 +27,13 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
     "angular"
+  )
+
+  console.log("Generate @angular-eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@angular-eslint"
   )
 
   console.log("Generate backbone description files")
@@ -73,17 +71,25 @@ async function main() {
     "ember-suave"
   )
 
+  console.log("Generate es description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/mysticatea/eslint-plugin-es/master/docs/rules/${pattern}.md`,
+    "es"
+  )
+
   console.log("Generate eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/eslint/eslint/master/docs/rules/${pattern}.md`
+      `${githubBaseUrl}/eslint/eslint/main/docs/src/rules/${pattern}.md`
   )
 
   console.log("Generate functional description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/jonaskello/eslint-plugin-functional/master/docs/rules/${pattern}.md`,
-    "functional"
+    "functional",
+    false
   )
 
   console.log("Generate import description files")
@@ -212,6 +218,34 @@ async function main() {
       `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
     "unicorn",
     false
+  )
+
+  console.log("Generate @salesforce/aura description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
+    "@salesforce/aura"
+  )
+
+  console.log("Generate @salesforce/lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/lightning"
+  )
+
+  console.log("Generate storybook description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
+    "storybook"
+  )
+
+  console.log("Generate jsonc description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
+    "jsonc"
   )
 }
 

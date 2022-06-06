@@ -1,4 +1,13 @@
-# Disallow Use of Chained Assignment Expressions (no-multi-assign)
+---
+title: no-multi-assign
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-multi-assign.md
+rule_type: suggestion
+related_rules:
+- max-statements-per-line
+---
+
+Disallows use of chained assignment expressions.
 
 Chaining the assignment of variables can lead to unexpected results and be difficult to read.
 
@@ -93,7 +102,3 @@ class Foo {
     a = b = 10;
 }
 ```
-
-## Related Rules
-
-* [max-statements-per-line](max-statements-per-line.md)

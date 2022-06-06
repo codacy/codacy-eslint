@@ -1,4 +1,13 @@
-# Disallow Self Assignment (no-self-assign)
+---
+title: no-self-assign
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-self-assign.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows assignments where both sides are exactly the same.
 
 Self assignments have no effect, so probably those are an error due to incomplete refactoring.
 Those indicate that what you should do is still remaining.
@@ -24,6 +33,10 @@ foo = foo;
 [a, ...b] = [x, ...b];
 
 ({a, b} = {a, x});
+
+foo &&= foo;
+foo ||= foo;
+foo ??= foo;
 ```
 
 Examples of **correct** code for this rule:
@@ -50,6 +63,10 @@ obj[a] = obj["a"];
 obj.a().b = obj.a().b;
 a().b = a().b;
 
+// `&=` and `|=` have an effect on non-integers.
+foo &= foo;
+foo |= foo;
+
 // Known limitation: this does not support computed properties except single literal or single identifier.
 obj[a + b] = obj[a + b];
 obj["a" + "b"] = obj["a" + "b"];
@@ -65,7 +82,7 @@ This rule has the option to check properties as well.
 }
 ```
 
-- `props` - if this is `true`, `no-self-assign` rule warns self-assignments of properties. Default is `true`.
+* `props` - if this is `true`, `no-self-assign` rule warns self-assignments of properties. Default is `true`.
 
 ### props
 

@@ -9,9 +9,9 @@
     ```
 
 2.  \[Plugins only\] Add the plugin to the plugins section in the file `src/eslintDefaultOptions.ts`
+only if it's stated in the plugin's documentation
 ---
   **NOTE**
-
   Before adding a plugin to the Codacy UI, make sure it has widespread use and is actively maintained. Otherwise, installing it as described in point `1` can be enough for users using configuration files.
 
 ---
@@ -23,7 +23,8 @@ at `src/docGeneratorMain.ts` to include them on the generated documentation. To 
     await docGenerator.downloadDocs(
       (pattern) =>
         `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
-      "xss"
+      "xss", // this is the pattern's prefix, like: xss/some-pattern-id
+      false // Add false for plugins not having .md files for all the patterns
     )
     ```
 

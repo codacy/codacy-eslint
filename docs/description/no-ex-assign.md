@@ -1,6 +1,17 @@
-# disallow reassigning exceptions in `catch` clauses (no-ex-assign)
+---
+title: no-ex-assign
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-ex-assign.md
+rule_type: problem
+further_reading:
+- https://bocoup.com/blog/the-catch-with-try-catch
+---
 
-If a `catch` clause in a `try` statement accidentally (or purposely) assigns another value to the exception parameter, it impossible to refer to the error from that point on.
+<!--RECOMMENDED-->
+
+Disallows reassigning exceptions in `catch` clauses.
+
+If a `catch` clause in a `try` statement accidentally (or purposely) assigns another value to the exception parameter, it is impossible to refer to the error from that point on.
 Since there is no `arguments` object to offer alternative access to this data, assignment of the parameter is absolutely destructive.
 
 ## Rule Details
@@ -30,7 +41,3 @@ try {
     var foo = 10;
 }
 ```
-
-## Further Reading
-
-* [The "catch" with try...catch](https://bocoup.com/blog/the-catch-with-try-catch) by Ben Alman explains how the exception identifier can leak into the outer scope in IE 6-8

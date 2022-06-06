@@ -1,4 +1,14 @@
-# Disallow Use of Alert (no-alert)
+---
+title: no-alert
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-alert.md
+rule_type: suggestion
+related_rules:
+- no-console
+- no-debugger
+---
+
+Disallows the use of `alert`, `confirm`, and `prompt`.
 
 JavaScript's `alert`, `confirm`, and `prompt` functions are widely considered to be obtrusive as UI elements and should be replaced by a more appropriate custom UI implementation. Furthermore, `alert` is often used while debugging code, which should be removed before deployment to production.
 
@@ -38,8 +48,3 @@ function foo() {
     alert();
 }
 ```
-
-## Related Rules
-
-* [no-console](no-console.md)
-* [no-debugger](no-debugger.md)

@@ -1,4 +1,11 @@
-# Enforce the use of `u` flag on RegExp (require-unicode-regexp)
+---
+title: require-unicode-regexp
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/require-unicode-regexp.md
+rule_type: suggestion
+---
+
+Enforces the use of `u` flag on RegExp.
 
 RegExp `u` flag has two effects:
 

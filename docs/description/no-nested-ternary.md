@@ -1,4 +1,14 @@
-# disallow nested ternary expressions (no-nested-ternary)
+---
+title: no-nested-ternary
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-nested-ternary.md
+rule_type: suggestion
+related_rules:
+- no-ternary
+- no-unneeded-ternary
+---
+
+Disallows nested ternary expressions.
 
 Nesting ternary expressions can make code more difficult to understand.
 
@@ -37,8 +47,3 @@ if (foo) {
   thing = foobar;
 }
 ```
-
-## Related Rules
-
-* [no-ternary](no-ternary.md)
-* [no-unneeded-ternary](no-unneeded-ternary.md)

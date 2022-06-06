@@ -1,8 +1,13 @@
 # Prefer `Array#flat()` over legacy techniques to flatten arrays
 
-ES2019 introduced a new method [`Array#flat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) that flatten arrays.
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
 
-This rule is fixable.
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
+ES2019 introduced a new method [`Array#flat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) that flatten arrays.
 
 ## Fail
 

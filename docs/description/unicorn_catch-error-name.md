@@ -1,5 +1,12 @@
 # Enforce a specific parameter name in catch clauses
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
 Applies to
 
 - `try/catch` clauses handlers
@@ -13,8 +20,6 @@ The following names are ignored:
 - `_`, but only if the error is not used.
 - Descriptive names, for example, `fsError` or `authError`.
 - Names matching [`options.ignore`](#ignore).
-
-This rule is fixable.
 
 ## Fail
 

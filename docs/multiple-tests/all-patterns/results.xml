@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
   <file name="empty.js">
-    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
   </file>
 </checkstyle>

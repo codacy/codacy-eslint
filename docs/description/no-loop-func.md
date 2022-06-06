@@ -1,4 +1,11 @@
-# Disallow Functions in Loops (no-loop-func)
+---
+title: no-loop-func
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-loop-func.md
+rule_type: suggestion
+---
+
+Disallows functions in loops.
 
 Writing functions within loops tends to result in errors due to the way the function creates a closure around the loop. For example:
 
@@ -25,7 +32,6 @@ for (let i = 0; i < 10; i++) {
 ```
 
 In this case, each function created within the loop returns a different number as expected.
-
 
 ## Rule Details
 

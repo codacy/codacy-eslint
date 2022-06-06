@@ -1,4 +1,18 @@
-# enforce line breaks between arguments of a function call (function-call-argument-newline)
+---
+title: function-call-argument-newline
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/function-call-argument-newline.md
+rule_type: layout
+related_rules:
+- function-paren-newline
+- func-call-spacing
+- object-property-newline
+- array-element-newline
+---
+
+<!--FIXABLE-->
+
+Enforces line breaks between arguments of a function call.
 
 A number of style guides require or disallow line breaks between arguments of a function call.
 
@@ -13,7 +27,6 @@ This rule has a string option:
 * `"always"` (default) requires line breaks between arguments
 * `"never"` disallows line breaks between arguments
 * `"consistent"` requires consistent usage of line breaks between arguments
-
 
 ### always
 
@@ -68,7 +81,6 @@ baz(
     }
 );
 ```
-
 
 ### never
 
@@ -189,14 +201,6 @@ baz(
 );
 ```
 
-
 ## When Not To Use It
 
 If you don't want to enforce line breaks between arguments, don't enable this rule.
-
-## Related Rules
-
-* [function-paren-newline](function-paren-newline.md)
-* [func-call-spacing](func-call-spacing.md)
-* [object-property-newline](object-property-newline.md)
-* [array-element-newline](array-element-newline.md)

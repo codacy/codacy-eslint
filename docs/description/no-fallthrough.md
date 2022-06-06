@@ -1,4 +1,15 @@
-# Disallow Case Statement Fallthrough (no-fallthrough)
+---
+title: no-fallthrough
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-fallthrough.md
+rule_type: problem
+related_rules:
+- default-case
+---
+
+<!--RECOMMENDED-->
+
+Disallows case statement fallthroughs.
 
 The `switch` statement in JavaScript is one of the more error-prone constructs of the language thanks in part to the ability to "fall through" from one `case` to the next. For example:
 
@@ -185,7 +196,3 @@ switch(foo) {
 ## When Not To Use It
 
 If you don't want to enforce that each `case` statement should end with a `throw`, `return`, `break`, or comment, then you can safely turn this rule off.
-
-## Related Rules
-
-* [default-case](default-case.md)

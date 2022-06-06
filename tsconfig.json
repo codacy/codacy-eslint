@@ -10,8 +10,9 @@
     "sourceMap": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "strict": true,
-    "esModuleInterop": true
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "package.json"],
   "exclude": ["node_modules"]

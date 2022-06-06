@@ -31,7 +31,7 @@ Default casing is set to `PascalCase`.
 - `"PascalCase"` (default) ... enforce component definition names to pascal case.
 - `"kebab-case"` ... enforce component definition names to kebab case.
 
-### `"PascalCase" (default)
+### `"PascalCase"` (default)
 
 <eslint-code-block fix :rules="{'vue/component-definition-name-casing': ['error']}">
 
@@ -64,18 +64,18 @@ export default {
 ```js
 /* ✓ GOOD */
 Vue.component('MyComponent', {
-  
+
 })
 
 /* ✗ BAD */
 Vue.component('my-component', {
-  
+
 })
 ```
 
 </eslint-code-block>
 
-### `"kebab-case"
+### `"kebab-case"`
 
 <eslint-code-block fix :rules="{'vue/component-definition-name-casing': ['error', 'kebab-case']}">
 
@@ -108,12 +108,12 @@ export default {
 ```js
 /* ✓ GOOD */
 Vue.component('my-component', {
-  
+
 })
 
 /* ✗ BAD */
 Vue.component('MyComponent', {
-  
+
 })
 ```
 
@@ -121,7 +121,7 @@ Vue.component('MyComponent', {
 
 ## :books: Further Reading
 
-- [Style guide - Component name casing in JS/JSX](https://v3.vuejs.org/style-guide/#component-name-casing-in-js-jsx-strongly-recommended)
+- [Style guide - Component name casing in JS/JSX](https://vuejs.org/style-guide/rules-strongly-recommended.html#component-name-casing-in-js-jsx)
 
 ## :rocket: Version
 

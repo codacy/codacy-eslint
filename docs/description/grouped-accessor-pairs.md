@@ -1,4 +1,19 @@
-# Require grouped accessor pairs in object literals and classes (grouped-accessor-pairs)
+---
+title: grouped-accessor-pairs
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/grouped-accessor-pairs.md
+rule_type: suggestion
+related_rules:
+- accessor-pairs
+- no-dupe-keys
+- no-dupe-class-members
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+---
+
+Requires grouped accessor pairs in object literals and classes.
 
 A getter and setter for the same property don't necessarily have to be defined adjacent to each other.
 
@@ -36,7 +51,7 @@ This rule requires grouped definitions of accessor functions for the same proper
 
 Optionally, this rule can also enforce consistent order (`getBeforeSet` or `setBeforeGet`).
 
-This rule does not enforce the existence of the pair for a getter or a setter. See [accessor-pairs](accessor-pairs.md) if you also want to enforce getter/setter pairs.
+This rule does not enforce the existence of the pair for a getter or a setter. See [accessor-pairs](accessor-pairs) if you also want to enforce getter/setter pairs.
 
 Examples of **incorrect** code for this rule:
 
@@ -309,18 +324,6 @@ var bar = {
 
 Also, this rule does not report any warnings for properties that have duplicate getters or setters.
 
-See [no-dupe-keys](no-dupe-keys.md) if you also want to disallow duplicate keys in object literals.
+See [no-dupe-keys](no-dupe-keys) if you also want to disallow duplicate keys in object literals.
 
-See [no-dupe-class-members](no-dupe-class-members.md) if you also want to disallow duplicate names in class definitions.
-
-## Further Reading
-
-* [Object Setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
-* [Object Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
-* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-
-## Related Rules
-
-* [accessor-pairs](accessor-pairs.md)
-* [no-dupe-keys](no-dupe-keys.md)
-* [no-dupe-class-members](no-dupe-class-members.md)
+See [no-dupe-class-members](no-dupe-class-members) if you also want to disallow duplicate names in class definitions.

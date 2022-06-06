@@ -1,4 +1,13 @@
-# enforce consistent indentation (indent)
+---
+title: indent
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/indent.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Enforces consistent indentation.
 
 There are several common guidelines which require specific indentation of nested blocks and statements, like:
 
@@ -68,7 +77,7 @@ if (a) {
 
 This rule has an object option:
 
-* `"ignoredNodes"` can be used to disable indentation checking for any AST node. This accepts an array of [selectors](/docs/developer-guide/selectors.md). If an AST node is matched by any of the selectors, the indentation of tokens which are direct children of that node will be ignored. This can be used as an escape hatch to relax the rule if you disagree with the indentation that it enforces for a particular syntactic pattern.
+* `"ignoredNodes"` can be used to disable indentation checking for any AST node. This accepts an array of [selectors](/docs/developer-guide/selectors). If an AST node is matched by any of the selectors, the indentation of tokens which are direct children of that node will be ignored. This can be used as an escape hatch to relax the rule if you disagree with the indentation that it enforces for a particular syntactic pattern.
 * `"SwitchCase"` (default: 0) enforces indentation level for `case` clauses in `switch` statements
 * `"VariableDeclarator"` (default: 1) enforces indentation level for `var` declarators; can also take an object to define separate rules for `var`, `let` and `const` declarations. It can also be `"first"`, indicating all the declarators should be aligned with the first declarator.
 * `"outerIIFEBody"` (default: 1) enforces indentation level for file-level IIFEs. This can also be set to `"off"` to disable checking for file-level IIFEs.
@@ -79,6 +88,8 @@ This rule has an object option:
 * `"FunctionExpression"` takes an object to define rules for function expressions.
     * `parameters` (default: 1) enforces indentation level for parameters in a function expression. This can either be a number indicating indentation level, or the string `"first"` indicating that all parameters of the expression must be aligned with the first parameter. This can also be set to `"off"` to disable checking for FunctionExpression parameters.
     * `body` (default: 1) enforces indentation level for the body of a function expression.
+* `"StaticBlock"` takes an object to define rules for class static blocks.
+    * `body` (default: 1) enforces indentation level for the body of a class static block.
 * `"CallExpression"` takes an object to define rules for function call expressions.
     * `arguments` (default: 1) enforces indentation level for arguments in a call expression. This can either be a number indicating indentation level, or the string `"first"` indicating that all arguments of the expression must be aligned with the first argument. This can also be set to `"off"` to disable checking for CallExpression arguments.
 * `"ArrayExpression"` (default: 1) enforces indentation level for elements in arrays. It can also be set to the string `"first"`, indicating that all the elements in the array should be aligned with the first element. This can also be set to `"off"` to disable checking for array elements.
@@ -315,7 +326,6 @@ Examples of **incorrect** code for this rule with the options `2, { "outerIIFEBo
 
 })();
 
-
 if (y) {
 console.log('foo');
 }
@@ -333,7 +343,6 @@ function foo(x) {
 }
 
 })();
-
 
 if (y) {
    console.log('foo');
@@ -481,6 +490,56 @@ Examples of **correct** code for this rule with the `2, { "FunctionExpression": 
 var foo = function(bar, baz,
                    qux, boop) {
   qux();
+}
+```
+
+### StaticBlock
+
+Examples of **incorrect** code for this rule with the `2, { "StaticBlock": {"body": 1} }` option:
+
+```js
+/*eslint indent: ["error", 2, { "StaticBlock": {"body": 1} }]*/
+
+class C {
+  static {
+      foo();
+  }
+}
+```
+
+Examples of **correct** code for this rule with the `2, { "StaticBlock": {"body": 1} }` option:
+
+```js
+/*eslint indent: ["error", 2, { "StaticBlock": {"body": 1} }]*/
+
+class C {
+  static {
+    foo();
+  }
+}
+```
+
+Examples of **incorrect** code for this rule with the `2, { "StaticBlock": {"body": 2} }` option:
+
+```js
+/*eslint indent: ["error", 2, { "StaticBlock": {"body": 2} }]*/
+
+class C {
+  static {
+    foo();
+  }
+}
+```
+
+Examples of **correct** code for this rule with the `2, { "StaticBlock": {"body": 2} }` option:
+
+```js
+/*eslint indent: ["error", 2, { "StaticBlock": {"body": 2} }]*/
+
+class C {
+  static {
+      foo();
+  }
 }
 ```
 
@@ -789,7 +848,6 @@ if (foo) {
     doSomethingElse();
 }
 ```
-
 
 ## Compatibility
 

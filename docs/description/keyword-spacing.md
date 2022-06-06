@@ -1,4 +1,13 @@
-# enforce consistent spacing before and after keywords (keyword-spacing)
+---
+title: keyword-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/keyword-spacing.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Enforces consistent spacing before and after keywords.
 
 Keywords are syntax elements of JavaScript, such as `try` and `if`.
 These keywords have special meaning to the language and so often appear in a different color in code editors.
@@ -15,11 +24,11 @@ if (foo) {
 
 Of course, you could also have a style guide that disallows spaces around keywords.
 
-However, if you want to enforce the style of spacing between the `function` keyword and the following opening parenthesis, please refer to [space-before-function-paren](space-before-function-paren.md).
+However, if you want to enforce the style of spacing between the `function` keyword and the following opening parenthesis, please refer to [space-before-function-paren](space-before-function-paren).
 
 ## Rule Details
 
-This rule enforces consistent spacing around keywords and keyword-like tokens: `as` (in module declarations), `async` (of async functions), `await` (of await expressions), `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `export`, `extends`, `finally`, `for`, `from` (in module declarations), `function`, `get` (of getters), `if`, `import`, `in`, `instanceof`, `let`, `new`, `of` (in for-of statements), `return`, `set` (of setters), `static`, `super`, `switch`, `this`, `throw`, `try`, `typeof`, `var`, `void`, `while`, `with`, and `yield`. This rule is designed carefully not to conflict with other spacing rules: it does not apply to spacing where other rules report problems.
+This rule enforces consistent spacing around keywords and keyword-like tokens: `as` (in module declarations), `async` (of async functions), `await` (of await expressions), `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `export`, `extends`, `finally`, `for`, `from` (in module declarations), `function`, `get` (of getters), `if`, `import`, `in` (in for-in statements), `let`, `new`, `of` (in for-of statements), `return`, `set` (of setters), `static`, `super`, `switch`, `this`, `throw`, `try`, `typeof`, `var`, `void`, `while`, `with`, and `yield`. This rule is designed carefully not to conflict with other spacing rules: it does not apply to spacing where other rules report problems.
 
 ## Options
 
@@ -243,13 +252,15 @@ if(foo) {
 
 ### overrides
 
-Examples of **correct** code for this rule with the `{ "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false } } }` option:
+Examples of **correct** code for this rule with the `{ "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false }, "static": { "after": false }, "as": { "after": false } } }` option:
 
 ```js
 /*eslint keyword-spacing: ["error", { "overrides": {
   "if": { "after": false },
   "for": { "after": false },
-  "while": { "after": false }
+  "while": { "after": false },
+  "static": { "after": false },
+  "as": { "after": false }
 } }]*/
 
 if(foo) {
@@ -263,8 +274,16 @@ if(foo) {
 for(;;);
 
 while(true) {
-  //...
+    //...
 }
+
+class C {
+    static{
+        //...
+    }
+}
+
+export { C as"my class" };
 ```
 
 ## When Not To Use It

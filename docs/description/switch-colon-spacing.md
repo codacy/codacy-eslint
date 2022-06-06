@@ -1,4 +1,13 @@
-# Enforce spacing around colons of switch statements (switch-colon-spacing)
+---
+title: switch-colon-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/switch-colon-spacing.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Enforces spacing around colons of switch statements.
 
 Spacing around colons improves readability of `case`/`default` clauses.
 
@@ -15,11 +24,10 @@ This rule has 2 options that are boolean value.
 }
 ```
 
-- `"after": true` (Default) requires one or more spaces after colons.
-- `"after": false` disallows spaces after colons.
-- `"before": true` requires one or more spaces before colons.
-- `"before": false` (Default) disallows before colons.
-
+* `"after": true` (Default) requires one or more spaces after colons.
+* `"after": false` disallows spaces after colons.
+* `"before": true` requires one or more spaces before colons.
+* `"before": false` (Default) disallows before colons.
 
 Examples of **incorrect** code for this rule:
 

@@ -1,4 +1,17 @@
-# Comma style (comma-style)
+---
+title: comma-style
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/comma-style.md
+rule_type: layout
+related_rules:
+- operator-linebreak
+further_reading:
+- https://gist.github.com/isaacs/357981
+---
+
+<!--FIXABLE-->
+
+Enforces consistent comma styles.
 
 The Comma Style rule enforces styles for comma-separated lists. There are two comma styles primarily used in JavaScript:
 
@@ -156,16 +169,3 @@ var o = {fst:1,
 ## When Not To Use It
 
 This rule can safely be turned off if your project does not care about enforcing a consistent comma style.
-
-
-## Further Reading
-
-For more information on the Comma First style:
-
-* [A better coding convention for lists and object literals in JavaScript by isaacs](https://gist.github.com/isaacs/357981)
-* [npm coding style guideline](https://docs.npmjs.com/misc/coding-style)
-
-
-## Related Rules
-
-* [operator-linebreak](operator-linebreak.md)

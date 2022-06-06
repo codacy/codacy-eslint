@@ -1,4 +1,15 @@
-# Suggest using Reflect methods where applicable (prefer-reflect)
+---
+title: prefer-reflect
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/prefer-reflect.md
+rule_type: suggestion
+related_rules:
+- no-useless-call
+- prefer-spread
+- no-delete-var
+---
+
+Suggest using Reflect methods where applicable.
 
 This rule was **deprecated** in ESLint v3.9.0 and will not be replaced. The original intent of this rule now seems misguided as we have come to understand that `Reflect` methods are not actually intended to replace the `Object` counterparts the rule suggests, but rather exist as low-level primitives to be used with proxies in order to replicate the default behavior of various previously existing functionality.
 
@@ -19,7 +30,7 @@ The prefer-reflect rule will flag usage of any older method, suggesting to inste
 
 ### Exceptions
 
-```
+```js
 "prefer-reflect": [<enabled>, { "exceptions": [<...exceptions>] }]
 ```
 
@@ -314,7 +325,7 @@ delete bar; // deleting variable
 Reflect.deleteProperty(foo, 'bar');
 ```
 
-Note: For a rule preventing deletion of variables, see [no-delete-var instead](no-delete-var.md)
+Note: For a rule preventing deletion of variables, see [no-delete-var instead](no-delete-var)
 
 Examples of **correct** code for this rule with the `{ "exceptions": ["delete"] }` option:
 
@@ -331,9 +342,3 @@ Reflect.deleteProperty(foo, 'bar');
 This rule should not be used in ES3/5 environments.
 
 In ES2015 (ES6) or later, if you don't want to be notified about places where Reflect could be used, you can safely disable this rule.
-
-## Related Rules
-
-* [no-useless-call](no-useless-call.md)
-* [prefer-spread](prefer-spread.md)
-* [no-delete-var](no-delete-var.md)

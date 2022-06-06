@@ -1,4 +1,16 @@
-# require or disallow an empty line between class members (lines-between-class-members)
+---
+title: lines-between-class-members
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/lines-between-class-members.md
+rule_type: layout
+related_rules:
+- padded-blocks
+- padding-line-between-statements
+---
+
+<!--FIXABLE-->
+
+Requires or disallows an empty line between class members.
 
 This rule improves readability by enforcing lines between class members. It will not check empty lines before the first member and after the last member, since that is already taken care of by padded-blocks.
 
@@ -9,6 +21,7 @@ Examples of **incorrect** code for this rule:
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
 class MyClass {
+  x;
   foo() {
     //...
   }
@@ -23,6 +36,8 @@ Examples of **correct** code for this rule:
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
 class MyClass {
+  x;
+
   foo() {
     //...
   }
@@ -30,6 +45,17 @@ class MyClass {
   bar() {
     //...
   }
+}
+```
+
+Examples of additional **correct** code for this rule:
+
+```js
+/* eslint lines-between-class-members: ["error", "always"]*/
+class MyClass {
+  x = 1
+
+  ;in = 2
 }
 ```
 
@@ -52,12 +78,15 @@ Examples of **incorrect** code for this rule with the string option:
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
 class Foo{
+  x;
   bar(){}
   baz(){}
 }
 
 /* eslint lines-between-class-members: ["error", "never"]*/
 class Foo{
+  x;
+
   bar(){}
 
   baz(){}
@@ -69,6 +98,8 @@ Examples of **correct** code for this rule with the string option:
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
 class Foo{
+  x;
+
   bar(){}
 
   baz(){}
@@ -76,6 +107,7 @@ class Foo{
 
 /* eslint lines-between-class-members: ["error", "never"]*/
 class Foo{
+  x;
   bar(){}
   baz(){}
 }
@@ -86,6 +118,7 @@ Examples of **correct** code for this rule with the object option:
 ```js
 /* eslint lines-between-class-members: ["error", "always", { "exceptAfterSingleLine": true }]*/
 class Foo{
+  x; // single line class member
   bar(){} // single line class member
   baz(){
     // multi line class member
@@ -98,11 +131,6 @@ class Foo{
 ## When Not To Use It
 
 If you don't want to enforce empty lines between class members, you can disable this rule.
-
-## Related Rules
-
-* [padded-blocks](padded-blocks.md)
-* [padding-line-between-statements](padding-line-between-statements.md)
 
 ## Compatibility
 

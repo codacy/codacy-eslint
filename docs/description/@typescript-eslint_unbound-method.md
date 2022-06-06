@@ -1,4 +1,6 @@
-# Enforces unbound methods are called with their expected scope (`unbound-method`)
+# `unbound-method`
+
+Enforces unbound methods are called with their expected scope.
 
 Warns when a method is used outside of a method call.
 
@@ -10,7 +12,11 @@ If you're working with `jest`, you can use [`eslint-plugin-jest`'s version of th
 
 ## Rule Details
 
-Examples of **incorrect** code for this rule
+Examples of code for this rule
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 class MyClass {
@@ -37,7 +43,7 @@ const arith = {
 const { double } = arith;
 ```
 
-Examples of **correct** code for this rule
+### ✅ Correct
 
 ```ts
 class MyClass {
@@ -90,7 +96,7 @@ const { log } = OtherClass;
 log();
 ```
 
-### Example
+## Example
 
 ```json
 {
@@ -112,3 +118,11 @@ If you're wanting to use `toBeCalled` and similar matches in `jest` tests, you c
 ## Related To
 
 - TSLint: [no-unbound-method](https://palantir.github.io/tslint/rules/no-unbound-method/)
+
+## Attributes
+
+- Configs:
+  - [x] ✅ Recommended
+  - [x] 🔒 Strict
+- [ ] 🔧 Fixable
+- [x] 💭 Requires type information

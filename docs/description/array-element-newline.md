@@ -1,4 +1,22 @@
-# enforce line breaks between array elements (array-element-newline)
+---
+title: array-element-newline
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/array-element-newline.md
+rule_type: layout
+related_rules:
+- array-bracket-spacing
+- array-bracket-newline
+- object-property-newline
+- object-curly-spacing
+- object-curly-newline
+- max-statements-per-line
+- block-spacing
+- brace-style
+---
+
+<!--FIXABLE-->
+
+Enforces line breaks between array elements.
 
 A number of style guides require or disallow line breaks between array elements.
 
@@ -42,7 +60,12 @@ Examples of **incorrect** code for this rule with the default `"always"` option:
 
 var c = [1, 2];
 var d = [1, 2, 3];
-var e = [
+var e = [1, 2, 3
+];
+var f = [
+  1, 2, 3
+];
+var g = [
     function foo() {
         dosomething();
     }, function bar() {
@@ -63,6 +86,11 @@ var c = [1,
 var d = [1,
     2,
     3];
+var d = [
+  1, 
+  2, 
+  3
+];
 var e = [
     function foo() {
         dosomething();
@@ -109,6 +137,11 @@ var b = [1];
 var c = [1, 2];
 var d = [1, 2, 3];
 var e = [
+    1, 2, 3];
+var f = [
+  1, 2, 3
+];
+var g = [
     function foo() {
         dosomething();
     }, function bar() {
@@ -362,14 +395,3 @@ If you don't want to enforce linebreaks between array elements, don't enable thi
 ## Compatibility
 
 * **JSCS:** [validateNewlineAfterArrayElements](https://jscs-dev.github.io/rule/validateNewlineAfterArrayElements)
-
-## Related Rules
-
-* [array-bracket-spacing](array-bracket-spacing.md)
-* [array-bracket-newline](array-bracket-newline.md)
-* [object-property-newline](object-property-newline.md)
-* [object-curly-spacing](object-curly-spacing.md)
-* [object-curly-newline](object-curly-newline.md)
-* [max-statements-per-line](max-statements-per-line.md)
-* [block-spacing](block-spacing.md)
-* [brace-style](brace-style.md)

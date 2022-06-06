@@ -1,4 +1,13 @@
-# enforce a particular style for multiline comments (multiline-comment-style)
+---
+title: multiline-comment-style
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/multiline-comment-style.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Enforces a particular style for multiline comments.
 
 Many style guides require a particular style for comments that span multiple lines. For example, some style guides prefer the use of a single block comment for multiline comments, whereas other style guides prefer consecutive line comments.
 
@@ -114,7 +123,6 @@ Examples of **correct** code for this rule with the `"separate-lines"` option:
 // This line
 // calls foo()
 foo();
-
 
 ```
 

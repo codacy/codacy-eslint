@@ -1,4 +1,16 @@
-# Require Guarding for-in (guard-for-in)
+---
+title: guard-for-in
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/guard-for-in.md
+rule_type: suggestion
+related_rules:
+- no-prototype-builtins
+further_reading:
+- https://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/
+- https://2ality.com/2012/01/objects-as-maps.html
+---
+
+Requires `for in` loops to include an `if` statement.
 
 Looping over objects with a `for in` loop will include properties that are inherited through the prototype chain. This behavior can lead to unexpected items in your for loop.
 
@@ -8,7 +20,7 @@ for (key in foo) {
 }
 ```
 
-Note that simply checking `foo.hasOwnProperty(key)` is likely to cause an error in some cases; see [no-prototype-builtins](no-prototype-builtins.md).
+Note that simply checking `foo.hasOwnProperty(key)` is likely to cause an error in some cases; see [no-prototype-builtins](no-prototype-builtins).
 
 ## Rule Details
 
@@ -41,12 +53,3 @@ for (key in foo) {
     }
 }
 ```
-
-## Related Rules
-
-* [no-prototype-builtins](no-prototype-builtins.md)
-
-## Further Reading
-
-* [Exploring JavaScript for-in loops](https://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/)
-* [The pitfalls of using objects as maps in JavaScript](http://2ality.com/2012/01/objects-as-maps.html)

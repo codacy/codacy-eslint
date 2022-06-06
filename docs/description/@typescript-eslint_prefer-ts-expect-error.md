@@ -1,4 +1,6 @@
-# Recommends using `@ts-expect-error` over `@ts-ignore` (`prefer-ts-expect-error`)
+# `prefer-ts-expect-error`
+
+Recommends using `@ts-expect-error` over `@ts-ignore`.
 
 TypeScript allows you to suppress all errors on a line by placing a single-line comment or a comment block line starting with `@ts-ignore` immediately before the erroring line.
 While powerful, there is no way to know if a `@ts-ignore` is actually suppressing an error without manually investigating what happens when the `@ts-ignore` is removed.
@@ -14,7 +16,11 @@ This directive operates in the same manner as `@ts-ignore`, but will error if th
 
 This rule looks for usages of `@ts-ignore`, and flags them to be replaced with `@ts-expect-error`.
 
-Examples of **incorrect** code for this rule:
+Examples of code for this rule:
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 // @ts-ignore
@@ -35,7 +41,7 @@ const isOptionEnabled = (key: string): boolean => {
 };
 ```
 
-Examples of **correct** code for this rule:
+### ✅ Correct
 
 ```ts
 // @ts-expect-error
@@ -56,6 +62,19 @@ const isOptionEnabled = (key: string): boolean => {
 };
 ```
 
+## Options
+
+```jsonc
+// .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/prefer-ts-expect-error": "warn"
+  }
+}
+```
+
+This rule is not configurable.
+
 ## When Not To Use It
 
 If you are **NOT** using TypeScript 3.9 (or greater), then you will not be able to use this rule, as the directive is not supported
@@ -63,3 +82,11 @@ If you are **NOT** using TypeScript 3.9 (or greater), then you will not be able 
 ## Further Reading
 
 - [Original Implementing PR](https://github.com/microsoft/TypeScript/pull/36014)
+
+## Attributes
+
+- Configs:
+  - [ ] ✅ Recommended
+  - [x] 🔒 Strict
+- [x] 🔧 Fixable
+- [ ] 💭 Requires type information

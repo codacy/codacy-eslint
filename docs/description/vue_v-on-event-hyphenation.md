@@ -9,6 +9,7 @@ since: v7.4.0
 
 > enforce v-on event naming style on custom components in template
 
+- :gear: This rule is included in `"plugin:vue/vue3-strongly-recommended"` and `"plugin:vue/vue3-recommended"`.
 - :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
 
 ## :book: Rule Details
@@ -102,16 +103,16 @@ Don't use hyphenated name but allow custom event names
 
 </eslint-code-block>
 
+## :couple: Related Rules
+
+- [vue/custom-event-name-casing](./custom-event-name-casing.md)
+- [vue/attribute-hyphenation](./attribute-hyphenation.md)
+
 ## :books: Further Reading
 
 - [Guide - Custom Events]
 
 [Guide - Custom Events]: https://v3.vuejs.org/guide/component-custom-events.html
-
-## :couple: Related Rules
-
-- [vue/custom-event-name-casing](./custom-event-name-casing.md)
-- [vue/attribute-hyphenation](./attribute-hyphenation.md)
 
 ## :rocket: Version
 

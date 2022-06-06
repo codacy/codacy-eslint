@@ -1,4 +1,13 @@
-# Disallow redundant return statements (no-useless-return)
+---
+title: no-useless-return
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-useless-return.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Disallows redundant return statements.
 
 A `return;` statement with nothing after it is redundant, and has no effect on the runtime behavior of a function. This can be confusing, so it's better to disallow these redundant statements.
 

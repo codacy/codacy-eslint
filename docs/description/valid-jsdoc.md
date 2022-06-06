@@ -1,4 +1,17 @@
-# enforce valid JSDoc comments (valid-jsdoc)
+---
+title: valid-jsdoc
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/valid-jsdoc.md
+rule_type: suggestion
+related_rules:
+- require-jsdoc
+further_reading:
+- https://jsdoc.app
+---
+
+<!--FIXABLE-->
+
+Enforces valid JSDoc comments.
 
 This rule was [**deprecated**](https://eslint.org/blog/2018/11/jsdoc-end-of-life) in ESLint v5.10.0.
 
@@ -383,11 +396,3 @@ function add(num1, num2) {
 ## When Not To Use It
 
 If you aren't using JSDoc, then you can safely turn this rule off.
-
-## Further Reading
-
-* [JSDoc](http://usejsdoc.org)
-
-## Related Rules
-
-* [require-jsdoc](require-jsdoc.md)

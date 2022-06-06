@@ -1,4 +1,6 @@
-# Disallow non-null assertion in locations that may be confusing (`no-confusing-non-null-assertion`)
+# `no-confusing-non-null-assertion`
+
+Disallow non-null assertion in locations that may be confusing.
 
 ## Rule Details
 
@@ -10,7 +12,9 @@ a !== b; // not equals test(`!==`)
 a! === b; // a non-null assertions(`!`) and an triple equals test(`===`)
 ```
 
-Examples of **incorrect** code for this rule:
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 interface Foo {
@@ -23,7 +27,7 @@ const isEqualsBar = foo.bar! == 'hello';
 const isEqualsNum = 1 + foo.num! == 2;
 ```
 
-Examples of **correct** code for this rule:
+### ✅ Correct
 
 <!-- prettier-ignore -->
 ```ts
@@ -37,6 +41,19 @@ const isEqualsBar = foo.bar == 'hello';
 const isEqualsNum = (1 + foo.num!) == 2;
 ```
 
+## Options
+
+```jsonc
+// .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/no-confusing-non-null-assertion": "warn"
+  }
+}
+```
+
+This rule is not configurable.
+
 ## When Not To Use It
 
 If you don't care about this confusion, then you will not need this rule.
@@ -44,3 +61,11 @@ If you don't care about this confusion, then you will not need this rule.
 ## Further Reading
 
 - [`Issue: Easy misunderstanding: "! ==="`](https://github.com/microsoft/TypeScript/issues/37837) in [TypeScript repo](https://github.com/microsoft/TypeScript)
+
+## Attributes
+
+- Configs:
+  - [ ] ✅ Recommended
+  - [x] 🔒 Strict
+- [x] 🔧 Fixable
+- [ ] 💭 Requires type information

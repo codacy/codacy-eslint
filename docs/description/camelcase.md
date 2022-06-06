@@ -1,4 +1,11 @@
-# Require CamelCase (camelcase)
+---
+title: camelcase
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/camelcase.md
+rule_type: suggestion
+---
+
+Enforces camelcase naming convention.
 
 When it comes to naming variables, style guides generally fall into one of two camps: camelcase (`variableName`) and underscores (`variable_name`). This rule focuses on using the camelcase approach. If your style guide calls for camelCasing your variable names, then this rule is for you!
 
@@ -241,7 +248,7 @@ Examples of **correct** code for this rule with the `{ "ignoreGlobals": true }` 
 const foo = no_camelcased;
 ```
 
-## allow
+### allow
 
 Examples of **correct** code for this rule with the `allow` option:
 

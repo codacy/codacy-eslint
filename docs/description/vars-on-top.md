@@ -1,4 +1,16 @@
-# Require Variable Declarations to be at the top of their scope (vars-on-top)
+---
+title: vars-on-top
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/vars-on-top.md
+rule_type: suggestion
+further_reading:
+- https://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
+- https://danhough.com/blog/single-var-pattern-rant/
+- https://benalman.com/news/2012/05/multiple-var-statements-javascript/
+---
+
+Requires variable declarations to be at the top of their scope.
 
 The `vars-on-top` rule generates warnings when variable declarations are not used serially at the top of a function scope or the top of a program.
 By default variable declarations are always moved (“hoisted”) invisibly to the top of their containing scope by the JavaScript interpreter.
@@ -14,11 +26,10 @@ Examples of **incorrect** code for this rule:
 ```js
 /*eslint vars-on-top: "error"*/
 
-// Variable declarations in a block:
+// Variable declaration in a nested block, and a variable declaration after other statements:
 function doSomething() {
-    var first;
     if (true) {
-        first = true;
+        var first = true;
     }
     var second;
 }
@@ -32,9 +43,32 @@ function doSomething() {
 ```js
 /*eslint vars-on-top: "error"*/
 
-// Variables after other statements:
+// Variable declaration after other statements:
 f();
 var a;
+```
+
+```js
+/*eslint vars-on-top: "error"*/
+
+// Variables in class static blocks should be at the top of the static blocks.
+
+class C {
+
+    // Variable declaration in a nested block:
+    static {
+        if (something) {
+            var a = true;
+        }
+    }
+
+    // Variable declaration after other statements:
+    static {
+        f();
+        var a;
+    }
+
+}
 ```
 
 Examples of **correct** code for this rule:
@@ -66,6 +100,26 @@ f();
 ```js
 /*eslint vars-on-top: "error"*/
 
+class C {
+
+    static {
+        var a;
+        if (something) {
+            a = true;
+        }
+    }
+
+    static {
+        var a;
+        f();
+    }
+
+}
+```
+
+```js
+/*eslint vars-on-top: "error"*/
+
 // Directives may precede variable declarations.
 "use strict";
 var a;
@@ -79,10 +133,3 @@ function doSomething() {
     var second
 }
 ```
-
-## Further Reading
-
-* [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
-* [var Hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)
-* [A criticism of the Single Var Pattern in JavaScript, and a simple alternative](http://danielhough.co.uk/blog/single-var-pattern-rant/)
-* [Multiple var statements in JavaScript, not superfluous](http://benalman.com/news/2012/05/multiple-var-statements-javascript/)

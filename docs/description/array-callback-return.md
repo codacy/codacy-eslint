@@ -1,4 +1,11 @@
-# Enforces return statements in callbacks of array's methods (array-callback-return)
+---
+title: array-callback-return
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/array-callback-return.md
+rule_type: problem
+---
+
+Enforces return statements in callbacks of array's methods.
 
 `Array` has several methods for filtering, mapping, and folding.
 If we forget to write `return` statement in a callback of those, it's probably a mistake. If you don't want to use a return or don't need the returned results, consider using [.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) instead.
@@ -13,7 +20,7 @@ var indexMap = myArray.reduce(function(memo, item, index) {
 ## Rule Details
 
 This rule enforces usage of `return` statement in callbacks of array's methods.
-Additionally, it may also enforce the `forEach` array method callback to __not__ return a value by using the `checkForEach` option.
+Additionally, it may also enforce the `forEach` array method callback to **not** return a value by using the `checkForEach` option.
 
 This rule finds callback functions of the following methods, then checks usage of `return` statement.
 
@@ -143,7 +150,6 @@ myArray.forEach(item => {
     handleItem(item);
 });
 ```
-
 
 ## Known Limitations
 

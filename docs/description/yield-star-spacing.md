@@ -1,4 +1,15 @@
-# Enforce spacing around the `*` in `yield*` expressions (yield-star-spacing)
+---
+title: yield-star-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/yield-star-spacing.md
+rule_type: layout
+further_reading:
+- https://leanpub.com/understandinges6/read/#leanpub-auto-generators
+---
+
+<!--FIXABLE-->
+
+Enforces spacing around the `*` in `yield*` expressions.
 
 ## Rule Details
 
@@ -88,7 +99,3 @@ function*generator() {
 ## When Not To Use It
 
 If your project will not be using generators or you are not concerned with spacing consistency, you do not need this rule.
-
-## Further Reading
-
-* [Understanding ES6: Generators](https://leanpub.com/understandinges6/read/#leanpub-auto-generators)

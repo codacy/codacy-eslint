@@ -1,4 +1,13 @@
-# Enforce "for" loop update clause moving the counter in the right direction. (for-direction)
+---
+title: for-direction
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/for-direction.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Enforces `for` loop update clause moving the counter in the right direction.
 
 ## Rule Details
 
@@ -12,6 +21,9 @@ for (var i = 0; i < 10; i--) {
 }
 
 for (var i = 10; i >= 0; i++) {
+}
+
+for (var i = 0; i > 10; i++) {
 }
 ```
 

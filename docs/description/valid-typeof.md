@@ -1,4 +1,17 @@
-# enforce comparing `typeof` expressions against valid strings (valid-typeof)
+---
+title: valid-typeof
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/valid-typeof.md
+rule_type: problem
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+---
+
+<!--RECOMMENDED-->
+
+<!--SUGGESTIONS-->
+
+Enforces comparing `typeof` expressions against valid strings.
 
 For a vast majority of use cases, the result of the `typeof` operator is one of the following string literals: `"undefined"`, `"object"`, `"boolean"`, `"number"`, `"string"`, `"function"`, `"symbol"`, and `"bigint"`. It is usually a typing mistake to compare the result of a `typeof` operator to other string literals.
 
@@ -61,7 +74,3 @@ typeof bar === typeof qux
 ## When Not To Use It
 
 You may want to turn this rule off if you will be using the `typeof` operator on host objects.
-
-## Further Reading
-
-* [MDN: `typeof` documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

@@ -1,4 +1,19 @@
-# disallow unnecessary parentheses (no-extra-parens)
+---
+title: no-extra-parens
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-extra-parens.md
+rule_type: layout
+related_rules:
+- arrow-parens
+- no-cond-assign
+- no-return-assign
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+---
+
+<!--FIXABLE-->
+
+Disallows unnecessary parentheses.
 
 This rule restricts the use of parentheses to only where they are necessary.
 
@@ -6,9 +21,9 @@ This rule restricts the use of parentheses to only where they are necessary.
 
 This rule always ignores extra parentheses around the following:
 
-* RegExp literals such as `(/abc/).test(var)` to avoid conflicts with the [wrap-regex](wrap-regex.md) rule
-* immediately-invoked function expressions (also known as IIFEs) such as `var x = (function () {})();` and `var x = (function () {}());` to avoid conflicts with the [wrap-iife](wrap-iife.md) rule
-* arrow function arguments to avoid conflicts with the [arrow-parens](arrow-parens.md) rule
+* RegExp literals such as `(/abc/).test(var)` to avoid conflicts with the [wrap-regex](wrap-regex) rule
+* immediately-invoked function expressions (also known as IIFEs) such as `var x = (function () {})();` and `var x = (function () {}());` to avoid conflicts with the [wrap-iife](wrap-iife) rule
+* arrow function arguments to avoid conflicts with the [arrow-parens](arrow-parens) rule
 
 ## Options
 
@@ -288,13 +303,3 @@ a = (b * c);
 
 typeof (a);
 ```
-
-## Further Reading
-
-* [MDN: Operator Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
-
-## Related Rules
-
-* [arrow-parens](arrow-parens.md)
-* [no-cond-assign](no-cond-assign.md)
-* [no-return-assign](no-return-assign.md)

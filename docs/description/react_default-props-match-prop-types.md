@@ -127,7 +127,7 @@ MyStatelessComponent.propTypes = {
 };
 
 MyStatelessComponent.defaultProps = {
-    bar: 'some default'
+  bar: 'some default'
 };
 ```
 
@@ -193,8 +193,9 @@ If you don't care about stray `defaultsProps` in your components, you can disabl
 - [require-default-props](./require-default-props.md)
 
 # Resources
+
 - [Official React documentation on defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values)
 
 [PropTypes]: https://reactjs.org/docs/typechecking-with-proptypes.html
-[TypeScript]: http://www.typescriptlang.org/
+[TypeScript]: https://www.typescriptlang.org/
 [Flow]: https://flow.org/

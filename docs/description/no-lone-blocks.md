@@ -1,4 +1,11 @@
-# Disallow Unnecessary Nested Blocks (no-lone-blocks)
+---
+title: no-lone-blocks
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-lone-blocks.md
+rule_type: suggestion
+---
+
+Disallows unnecessary nested blocks.
 
 In JavaScript, prior to ES6, standalone code blocks delimited by curly braces do not create a new scope and have no use. For example, these curly braces do nothing to `foo`:
 
@@ -42,6 +49,14 @@ function bar() {
     aLabel: {
     }
 }
+
+class C {
+    static {
+        {
+            foo();
+        }
+    }
+}
 ```
 
 Examples of **correct** code for this rule with ES6 environment:
@@ -77,6 +92,18 @@ function bar() {
 }
 
 aLabel: {
+}
+
+class C {
+    static {
+        lbl: {
+            if (something) {
+                break lbl;
+            }
+
+            foo();
+        }
+    }
 }
 ```
 

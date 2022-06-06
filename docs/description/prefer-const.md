@@ -1,4 +1,16 @@
-# Suggest using `const` (prefer-const)
+---
+title: prefer-const
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/prefer-const.md
+rule_type: suggestion
+related_rules:
+- no-var
+- no-use-before-define
+---
+
+<!--FIXABLE-->
+
+Requires `const` declarations for variables that are never reassigned after declared.
 
 If a variable is never reassigned, using the `const` declaration is better.
 
@@ -12,7 +24,6 @@ Examples of **incorrect** code for this rule:
 
 ```js
 /*eslint prefer-const: "error"*/
-/*eslint-env es6*/
 
 // it's initialized and never reassigned.
 let a = 3;
@@ -21,6 +32,14 @@ console.log(a);
 let a;
 a = 0;
 console.log(a);
+
+class C {
+    static {
+        let a;
+        a = 0;
+        console.log(a);
+    }
+}
 
 // `i` is redefined (not reassigned) on each loop step.
 for (let i in [1, 2, 3]) {
@@ -37,7 +56,6 @@ Examples of **correct** code for this rule:
 
 ```js
 /*eslint prefer-const: "error"*/
-/*eslint-env es6*/
 
 // using const.
 const a = 0;
@@ -58,6 +76,15 @@ if (true) {
     a = 0;
 }
 console.log(a);
+
+// it's initialized in a different scope.
+let a;
+class C {
+    #x;
+    static {
+        a = obj => obj.#x;
+    }
+}
 
 // it's initialized at a place that we cannot write a variable declaration.
 let a;
@@ -198,8 +225,3 @@ function initialize() {
 ## When Not To Use It
 
 If you don't want to be notified about variables that are never reassigned after initial assignment, you can safely disable this rule.
-
-## Related Rules
-
-* [no-var](no-var.md)
-* [no-use-before-define](no-use-before-define.md)

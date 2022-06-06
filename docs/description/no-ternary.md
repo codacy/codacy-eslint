@@ -1,4 +1,14 @@
-# disallow ternary operators (no-ternary)
+---
+title: no-ternary
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-ternary.md
+rule_type: suggestion
+related_rules:
+- no-nested-ternary
+- no-unneeded-ternary
+---
+
+Disallows ternary operators.
 
 The ternary operator is used to conditionally assign a value to a variable. Some believe that the use of ternary operators leads to unclear code.
 
@@ -43,8 +53,3 @@ function quux() {
     }
 }
 ```
-
-## Related Rules
-
-* [no-nested-ternary](no-nested-ternary.md)
-* [no-unneeded-ternary](no-unneeded-ternary.md)

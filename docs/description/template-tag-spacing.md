@@ -1,4 +1,16 @@
-# Require or disallow spacing between template tags and their literals (template-tag-spacing)
+---
+title: template-tag-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/template-tag-spacing.md
+rule_type: layout
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals
+- https://exploringjs.com/es6/ch_template-literals.html#_examples-of-using-tagged-template-literals
+---
+
+<!--FIXABLE-->
+
+Requires or disallow spacing between template tags and their literals.
 
 With ES6, it's possible to create functions called [tagged template literals](#further-reading) where the function parameters consist of a template literal's strings and expressions.
 
@@ -67,10 +79,3 @@ func `Hello world`;
 ## When Not To Use It
 
 If you don't want to be notified about usage of spacing between tag functions and their template literals, then it's safe to disable this rule.
-
-## Further Reading
-
-If you want to learn more about tagged template literals, check out the links below:
-
-* [Template literals (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals)
-* [Examples of using tagged template literals (Exploring ES6)](http://exploringjs.com/es6/ch_template-literals.html#_examples-of-using-tagged-template-literals)

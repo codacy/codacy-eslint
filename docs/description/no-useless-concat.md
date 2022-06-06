@@ -1,4 +1,11 @@
-# Disallow unnecessary concatenation of strings (no-useless-concat)
+---
+title: no-useless-concat
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-useless-concat.md
+rule_type: suggestion
+---
+
+Disallows unnecessary concatenation of strings.
 
 It's unnecessary to concatenate two strings together, such as:
 

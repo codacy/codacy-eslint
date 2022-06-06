@@ -1,4 +1,16 @@
-# enforce minimum and maximum identifier lengths (id-length)
+---
+title: id-length
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/id-length.md
+rule_type: suggestion
+related_rules:
+- max-len
+- new-cap
+- func-names
+- camelcase
+---
+
+Enforces minimum and maximum identifier lengths.
 
 Very short identifier names like `e`, `x`, `_t` or very long ones like `hashGeneratorResultOutputContainerObject` can make code harder to read and potentially less maintainable. To prevent this, one may enforce a minimum and/or maximum identifier length.
 
@@ -246,10 +258,3 @@ var [E] = arr;
 const { y } = foo;
 const { a: z } = foo;
 ```
-
-## Related Rules
-
-* [max-len](max-len.md)
-* [new-cap](new-cap.md)
-* [func-names](func-names.md)
-* [camelcase](camelcase.md)

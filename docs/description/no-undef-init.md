@@ -1,4 +1,16 @@
-# Disallow Initializing to undefined (no-undef-init)
+---
+title: no-undef-init
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-undef-init.md
+rule_type: suggestion
+related_rules:
+- no-undefined
+- no-void
+---
+
+<!--FIXABLE-->
+
+Disallows initializing variables to `undefined`.
 
 In JavaScript, a variable that is declared and not initialized to any value automatically gets the value of `undefined`. For example:
 
@@ -16,16 +28,14 @@ var foo = undefined;
 
 It's considered a best practice to avoid initializing variables to `undefined`.
 
-
 ## Rule Details
 
-This rule aims to eliminate variable declarations that initialize to `undefined`.
+This rule aims to eliminate `var` and `let` variable declarations that initialize to `undefined`.
 
 Examples of **incorrect** code for this rule:
 
 ```js
 /*eslint no-undef-init: "error"*/
-/*eslint-env es6*/
 
 var foo = undefined;
 let bar = undefined;
@@ -35,11 +45,29 @@ Examples of **correct** code for this rule:
 
 ```js
 /*eslint no-undef-init: "error"*/
-/*eslint-env es6*/
 
 var foo;
 let bar;
-const baz = undefined;
+```
+
+Please note that this rule does not check `const` declarations, destructuring patterns, function parameters, and class fields.
+
+Examples of additional **correct** code for this rule:
+
+```js
+/*eslint no-undef-init: "error"*/
+
+const foo = undefined;
+
+let { bar = undefined } = baz;
+
+[quux = undefined] = quuux;
+
+(foo = undefined) => {};
+
+class Foo {
+    bar = undefined;
+}
 ```
 
 ## When Not To Use It
@@ -104,8 +132,3 @@ for (i = 0; i < 10; i++) {
     x = i;
 }
 ```
-
-## Related Rules
-
-* [no-undefined](no-undefined.md)
-* [no-void](no-void.md)

@@ -29,9 +29,11 @@ Examples of **correct** code for this rule:
   "callbacksLast": <boolean>,
   "shorthandFirst": <boolean>,
   "shorthandLast": <boolean>,
+  "multiline": "ignore" | "first" | "last",
   "ignoreCase": <boolean>,
   "noSortAlphabetically": <boolean>,
   "reservedFirst": <boolean>|<array<string>>,
+  "locale": "auto" | "any valid locale"
 }]
 ...
 ```
@@ -70,6 +72,42 @@ When `true`, short hand props must be listed after all other props (unless `call
 <Hello name="John" tel={5555555} active validate />
 ```
 
+### `multiline`
+
+Enforced sorting for multiline props
+
+* `ignore`: Multiline props will not be taken in consideration for sorting.
+
+* `first`: Multiline props must be listed before all other props (unless `shorthandFirst` is set), but still respecting the alphabetical order.
+
+* `last`: Multiline props must be listed after all other props (unless either `callbacksLast` or `shorthandLast` are set), but still respecting the alphabetical order.
+
+Defaults to `ignore`.
+
+```jsx
+// 'jsx-sort-props': [1, { multiline: 'first' }]
+<Hello
+  classes={{
+    greetings: classes.greetings,
+  }}
+  active
+  validate
+  name="John"
+  tel={5555555}
+/>
+
+// 'jsx-sort-props': [1, { multiline: 'last' }]
+<Hello
+  active
+  validate
+  name="John"
+  tel={5555555}
+  classes={{
+    greetings: classes.greetings,
+  }}
+/>
+```
+
 ### `noSortAlphabetically`
 
 When `true`, alphabetical order is **not** enforced:
@@ -98,6 +136,12 @@ With `reservedFirst: ["key"]`, the following will **not** warn:
 <Hello key={'uuid'} name="John" ref="ref" />
 ```
 
-## When not to use
+### `locale`
+
+Defaults to `"auto"`, meaning, the locale of the current environment.
+
+Any other string provided here may be passed to `String.prototype.localeCompare` - note that an unknown or invalid locale may throw an exception and crash.
+
+## When Not To Use It
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If alphabetizing props isn't a part of your coding standards, then you can leave this rule off.

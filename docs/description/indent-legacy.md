@@ -1,4 +1,15 @@
-# enforce consistent indentation (indent-legacy)
+---
+title: indent-legacy
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/indent-legacy.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Enforces consistent indentation.
+
+This rule was **deprecated** in ESLint v4.0.0.
 
 ESLint 4.0.0 introduced a rewrite of the [`indent`](/docs/rules/indent) rule, which now reports more errors than it did in previous versions. To ease the process of migrating to 4.0.0, the `indent-legacy` rule was introduced as a snapshot of the `indent` rule from ESLint 3.x. If your build is failing after the upgrade to 4.0.0, you can disable `indent` and enable `indent-legacy` as a quick fix. Eventually, you should switch back to the `indent` rule to get bugfixes and improvements in future versions.
 
@@ -245,7 +256,6 @@ Examples of **incorrect** code for this rule with the options `2, { "outerIIFEBo
 
 })();
 
-
 if(y) {
 console.log('foo');
 }
@@ -263,7 +273,6 @@ function foo(x) {
 }
 
 })();
-
 
 if(y) {
    console.log('foo');

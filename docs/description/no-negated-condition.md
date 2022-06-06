@@ -1,4 +1,11 @@
-# disallow negated conditions (no-negated-condition)
+---
+title: no-negated-condition
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-negated-condition.md
+rule_type: suggestion
+---
+
+Disallows negated conditions.
 
 Negated conditions are more difficult to understand. Code can be made more readable by inverting the condition instead.
 

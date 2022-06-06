@@ -1,4 +1,20 @@
-# Disallow Use of `undefined` Variable (no-undefined)
+---
+title: no-undefined
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-undefined.md
+rule_type: suggestion
+related_rules:
+- no-undef-init
+- no-void
+- no-shadow-restricted-names
+- no-global-assign
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
+- https://javascriptweblog.wordpress.com/2010/08/16/understanding-undefined-and-preventing-referenceerrors/
+- https://es5.github.io/#x15.1.1.3
+---
+
+Disallows the use of `undefined` as an identifier.
 
 The `undefined` variable in JavaScript is actually a property of the global object. As such, in ECMAScript 3 it was possible to overwrite the value of `undefined`. While ECMAScript 5 disallows overwriting `undefined`, it's still possible to shadow `undefined`, such as:
 
@@ -20,8 +36,7 @@ Because `undefined` can be overwritten or shadowed, reading `undefined` can give
 * Checking if a value is `undefined` should be done with `typeof`.
 * Using the `void` operator to generate the value of `undefined` if necessary.
 
-As an alternative, you can use the [no-global-assign](no-global-assign.md) and [no-shadow-restricted-names](no-shadow-restricted-names.md) rules to prevent `undefined` from being shadowed or assigned a different value. This ensures that `undefined` will always hold its original, expected value.
-
+As an alternative, you can use the [no-global-assign](no-global-assign) and [no-shadow-restricted-names](no-shadow-restricted-names) rules to prevent `undefined` from being shadowed or assigned a different value. This ensures that `undefined` will always hold its original, expected value.
 
 ## Rule Details
 
@@ -64,16 +79,3 @@ global.undefined = "foo";
 ## When Not To Use It
 
 If you want to allow the use of `undefined` in your code, then you can safely turn this rule off.
-
-## Further Reading
-
-* [undefined - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
-* [Understanding JavaScript’s ‘undefined’ \| JavaScript, JavaScript...](https://javascriptweblog.wordpress.com/2010/08/16/understanding-undefined-and-preventing-referenceerrors/)
-* [ECMA262 edition 5.1 &sect;15.1.1.3: undefined](https://es5.github.io/#x15.1.1.3)
-
-## Related Rules
-
-* [no-undef-init](no-undef-init.md)
-* [no-void](no-void.md)
-* [no-shadow-restricted-names](no-shadow-restricted-names.md)
-* [no-global-assign](no-global-assign.md)

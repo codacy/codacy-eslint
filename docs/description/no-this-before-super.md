@@ -1,4 +1,13 @@
-# Disallow use of `this`/`super` before calling `super()` in constructors. (no-this-before-super)
+---
+title: no-this-before-super
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-this-before-super.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows use of `this`/`super` before calling `super()` in constructors.
 
 In the constructor of derived classes, if `this`/`super` are used before `super()` calls, it raises a reference error.
 

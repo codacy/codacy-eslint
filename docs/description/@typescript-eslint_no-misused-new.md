@@ -1,10 +1,16 @@
-# Enforce valid definition of `new` and `constructor` (`no-misused-new`)
+# `no-misused-new`
+
+Enforce valid definition of `new` and `constructor`.
 
 Warns on apparent attempts to define constructors for interfaces or `new` for classes.
 
 ## Rule Details
 
-Examples of **incorrect** code for this rule.
+Examples of code for this rule:
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 class C {
@@ -17,7 +23,7 @@ interface I {
 }
 ```
 
-Examples of **correct** code for this rule.
+### ✅ Correct
 
 ```ts
 class C {
@@ -30,12 +36,25 @@ interface I {
 
 ## Options
 
-```json
+```jsonc
+// .eslintrc.json
 {
-  "@typescript-eslint/no-misused-new": "error"
+  "rules": {
+    "@typescript-eslint/no-misused-new": "error"
+  }
 }
 ```
 
-## Compatibility
+This rule is not configurable.
+
+## Related To
 
 - TSLint: [no-misused-new](https://palantir.github.io/tslint/rules/no-misused-new/)
+
+## Attributes
+
+- Configs:
+  - [x] ✅ Recommended
+  - [x] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

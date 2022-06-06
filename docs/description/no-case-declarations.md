@@ -1,4 +1,15 @@
-# Disallow lexical declarations in case/default clauses (no-case-declarations)
+---
+title: no-case-declarations
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-case-declarations.md
+rule_type: suggestion
+related_rules:
+- no-fallthrough
+---
+
+<!--RECOMMENDED-->
+
+Disallows lexical declarations in case/default clauses.
 
 This rule disallows lexical declarations (`let`, `const`, `function` and `class`)
 in `case`/`default` clauses. The reason is that the lexical declaration is visible
@@ -69,7 +80,3 @@ switch (foo) {
 ## When Not To Use It
 
 If you depend on fall through behavior and want access to bindings introduced in the case block.
-
-## Related Rules
-
-* [no-fallthrough](no-fallthrough.md)

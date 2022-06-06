@@ -1,11 +1,17 @@
-# Disallow duplicate imports (`no-duplicate-imports`)
+# `no-duplicate-imports`
+
+Disallow duplicate imports.
+
+## DEPRECATED
+
+This rule has been deprecated in favour of the [`import/no-duplicates`](https://github.com/import-js/eslint-plugin-import/blob/HEAD/docs/rules/no-duplicates.md) rule.
 
 ## Rule Details
 
 This rule extends the base [`eslint/no-duplicate-imports`](https://eslint.org/docs/rules/no-duplicate-imports) rule.
 This version adds support for type-only import and export.
 
-## How to use
+## How to Use
 
 ```jsonc
 {
@@ -19,4 +25,16 @@ This version adds support for type-only import and export.
 
 See [`eslint/no-duplicate-imports` options](https://eslint.org/docs/rules/no-duplicate-imports#options).
 
-<sup>Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-duplicate-imports.md)</sup>
+<sup>
+
+Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/main/docs/rules/no-duplicate-imports.md)
+
+</sup>
+
+## Attributes
+
+- Configs:
+  - [ ] ✅ Recommended
+  - [ ] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

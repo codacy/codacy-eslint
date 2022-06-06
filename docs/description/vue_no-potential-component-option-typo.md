@@ -9,11 +9,13 @@ since: v7.0.0
 
 > disallow a potential typo in your component property
 
+- :bulb: Some problems reported by this rule are manually fixable by editor [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
+
 ## :book: Rule Details
 
 This rule disallow a potential typo in your component options
 
-**Here is the config**
+### Here is the config
 
 ```json
 {
@@ -57,7 +59,7 @@ export default {
 
 > we use edit distance to compare two string similarity, threshold is an option to control upper bound of edit distance to report
 
-**Here is the another example about config option `threshold`**
+### Here is the another example about config option `threshold`
 
 ```json
 {

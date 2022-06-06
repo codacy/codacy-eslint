@@ -16,8 +16,9 @@ since: v4.6.0
 This rule is aimed at preventing the use of `v-for` directives together with `v-if` directives on the same element.
 
 There are two common cases where this can be tempting:
- * To filter items in a list (e.g. `v-for="user in users" v-if="user.isActive"`). In these cases, replace `users` with a new computed property that returns your filtered list (e.g. `activeUsers`).
- * To avoid rendering a list if it should be hidden (e.g. `v-for="user in users" v-if="shouldShowUsers"`). In these cases, move the `v-if` to a container element (e.g. `ul`, `ol`).
+
+- To filter items in a list (e.g. `v-for="user in users" v-if="user.isActive"`). In these cases, replace `users` with a new computed property that returns your filtered list (e.g. `activeUsers`).
+- To avoid rendering a list if it should be hidden (e.g. `v-for="user in users" v-if="shouldShowUsers"`). In these cases, move the `v-if` to a container element (e.g. `ul`, `ol`).
 
 <eslint-code-block :rules="{'vue/no-use-v-if-with-v-for': ['error']}">
 
@@ -89,7 +90,7 @@ There are two common cases where this can be tempting:
 
 ## :books: Further Reading
 
-- [Style guide - Avoid v-if with v-for](https://v3.vuejs.org/style-guide/#avoid-v-if-with-v-for-essential)
+- [Style guide - Avoid v-if with v-for](https://vuejs.org/style-guide/rules-essential.html#avoid-v-if-with-v-for)
 - [Guide - Conditional Rendering / v-if with v-for](https://v3.vuejs.org/guide/conditional.html#v-if-with-v-for)
 - [Guide - List Rendering / v-for with v-if](https://v3.vuejs.org/guide/list.html#v-for-with-v-if)
 

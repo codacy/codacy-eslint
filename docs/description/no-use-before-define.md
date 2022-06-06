@@ -1,4 +1,11 @@
-# Disallow Early Use (no-use-before-define)
+---
+title: no-use-before-define
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-use-before-define.md
+rule_type: problem
+---
+
+Disallows the use of variables before they are defined.
 
 In JavaScript, prior to ES6, variable and function declarations are hoisted to the top of a scope, so it's possible to use identifiers before their formal declarations in code. This can be confusing and some believe it is best to always declare variables and functions before using them.
 
@@ -12,7 +19,6 @@ Examples of **incorrect** code for this rule:
 
 ```js
 /*eslint no-use-before-define: "error"*/
-/*eslint-env es6*/
 
 alert(a);
 var a = 10;
@@ -29,13 +35,37 @@ var b = 1;
     alert(c);
     let c = 1;
 }
+
+{
+    class C extends C {}
+}
+
+{
+    class C {
+        static x = "foo";
+        [C.x]() {}
+    }
+}
+
+{
+    const C = class {
+        static x = C;
+    }
+}
+
+{
+    const C = class {
+        static {
+            C.x = "foo";
+        }
+    }
+}
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
 /*eslint no-use-before-define: "error"*/
-/*eslint-env es6*/
 
 var a;
 a = 10;
@@ -53,13 +83,39 @@ function g() {
     let c;
     c++;
 }
+
+{
+    class C {
+        static x = C;
+    }
+}
+
+{
+    const C = class C {
+        static x = C;
+    }
+}
+
+{
+    const C = class {
+        x = C;
+    }
+}
+
+{
+    const C = class C {
+        static {
+            C.x = "foo";
+        }
+    }
+}
 ```
 
 ## Options
 
 ```json
 {
-    "no-use-before-define": ["error", { "functions": true, "classes": true }]
+    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": true }]
 }
 ```
 
@@ -103,10 +159,34 @@ Examples of **incorrect** code for the `{ "classes": false }` option:
 
 ```js
 /*eslint no-use-before-define: ["error", { "classes": false }]*/
-/*eslint-env es6*/
 
 new A();
 class A {
+}
+
+{
+    class C extends C {}
+}
+
+{
+    class C extends D {}
+    class D {}
+}
+
+{
+    class C {
+        static x = "foo";
+        [C.x]() {}
+    }
+}
+
+{
+    class C {
+        static {
+            new D();
+        }
+    }
+    class D {}
 }
 ```
 
@@ -114,7 +194,6 @@ Examples of **correct** code for the `{ "classes": false }` option:
 
 ```js
 /*eslint no-use-before-define: ["error", { "classes": false }]*/
-/*eslint-env es6*/
 
 function foo() {
     return new A();
@@ -139,6 +218,28 @@ const f = () => {};
 
 g();
 const g = function() {};
+
+{
+    const C = class {
+        static x = C;
+    }
+}
+
+{
+    const C = class {
+        static x = foo;
+    }
+    const foo = 1;
+}
+
+{
+    class C {
+        static {
+            this.x = foo;
+        }
+    }
+    const foo = 1;
+}
 ```
 
 Examples of **correct** code for the `{ "variables": false }` option:
@@ -158,4 +259,11 @@ const f = () => {};
 
 const e = function() { return g(); }
 const g = function() {}
+
+{
+    const C = class {
+        x = foo;
+    }
+    const foo = 1;
+}
 ```

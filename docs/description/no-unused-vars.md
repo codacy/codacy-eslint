@@ -1,4 +1,13 @@
-# Disallow Unused Variables (no-unused-vars)
+---
+title: no-unused-vars
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-unused-vars.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows unused variables.
 
 Variables that are declared and not used anywhere in the code are most likely an error due to incomplete refactoring. Such variables take up space in the code and can lead to confusion by readers.
 
@@ -82,24 +91,20 @@ function getY([, y]) {
 
 ### exported
 
-In environments outside of CommonJS or ECMAScript modules, you may use `var` to create a global variable that may be used by other scripts. You can use the comment `/* exported variableName */` or `// exported variableName` to indicate that this variable is being exported and therefore should not be considered unused.
+In environments outside of CommonJS or ECMAScript modules, you may use `var` to create a global variable that may be used by other scripts. You can use the `/* exported variableName */` comment block to indicate that this variable is being exported and therefore should not be considered unused.
 
-Note that the comment has no effect for any of the following:
+Note that `/* exported */` has no effect for any of the following:
 
 * when the environment is `node` or `commonjs`
 * when `parserOptions.sourceType` is `module`
 * when `ecmaFeatures.globalReturn` is `true`
 
-Examples of **correct** code for `exported` operation:
+The line comment `// exported variableName` will not work as `exported` is not line-specific.
+
+Examples of **correct** code for `/* exported variableName */` operation:
 
 ```js
 /* exported global_var */
-
-var global_var = 42;
-```
-
-```js
-// exported global_var
 
 var global_var = 42;
 ```
@@ -240,6 +245,43 @@ function foo(x, _y) {
 foo();
 ```
 
+### destructuredArrayIgnorePattern
+
+The `destructuredArrayIgnorePattern` option specifies exceptions not to check for usage: elements of array destructuring patterns whose names match a regexp pattern. For example, variables whose names begin with an underscore.
+
+Examples of **correct** code for the `{ "destructuredArrayIgnorePattern": "^_" }` option:
+
+```js
+/*eslint no-unused-vars: ["error", { "destructuredArrayIgnorePattern": "^_" }]*/
+
+const [a, _b, c] = ["a", "b", "c"];
+console.log(a+c);
+
+const { x: [_a, foo] } = bar;
+console.log(foo);
+
+function baz([_c, x]) {
+    x;
+}
+baz();
+
+function test({p: [_q, r]}) {
+    r;
+}
+test();
+
+let _m, n;
+foo.forEach(item => {
+    [_m, n] = item;
+    console.log(n);
+});
+
+let _o, p;
+_o = 1;
+[_o, p] = foo;
+p;
+```
+
 ### caughtErrors
 
 The `caughtErrors` option is used for `catch` block arguments validation.
@@ -296,7 +338,6 @@ try {
     console.error("errors");
 }
 ```
-
 
 ## When Not To Use It
 

@@ -1,5 +1,9 @@
 # Disallow identifiers starting with `new` or `class`
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+<!-- /RULE_NOTICE -->
+
 `new Foo` and `newFoo` look very similar. Use alternatives that do not look like keyword usage.
 
 ## Fail
@@ -8,7 +12,6 @@
 const newFoo = 'foo';
 const classFoo = 'foo';
 ```
-
 
 ## Pass
 
@@ -19,12 +22,11 @@ const new_foo = 'foo';
 const fooNew = 'foo';
 ```
 
-
 ## Options
 
 ### `disallowedPrefixes`
 
-If you want a custom list of forbidden prefixes you can set them with `disallowedPrefixes`:
+If you want a custom list of disallowed prefixes you can set them with `disallowedPrefixes`:
 
 ```js
 // eslint unicorn/no-keyword-prefix: ["error", {"disallowedPrefixes": ["new", "for"]}]
@@ -53,7 +55,7 @@ foo.newFoo = 2; // pass
 
 ### `onlyCamelCase`
 
-The default behavior is to check for camel case usage. If you want to forbid the prefix entirely, set `onlyCamelCase` to `false`:
+The default behavior is to check for camel case usage. If you want to disallow the prefix entirely, set `onlyCamelCase` to `false`:
 
 ```js
 // eslint unicorn/no-keyword-prefix: ["error", {"onlyCamelCase": true}]

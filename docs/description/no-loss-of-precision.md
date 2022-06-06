@@ -1,4 +1,13 @@
-# Disallow Number Literals That Lose Precision (no-loss-of-precision)
+---
+title: no-loss-of-precision
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-loss-of-precision.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows number literals that lose precision.
 
 This rule would disallow the use of number literals that immediately lose precision at runtime when converted to a JS `Number` due to 64-bit floating-point rounding.
 

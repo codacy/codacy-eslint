@@ -1,4 +1,18 @@
-# Enforces getter/setter pairs in objects and classes (accessor-pairs)
+---
+title: accessor-pairs
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/accessor-pairs.md
+rule_type: suggestion
+related_rules:
+- no-dupe-keys
+- no-dupe-class-members
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+---
+
+Enforces getter/setter pairs in objects and classes.
 
 It's a common mistake in JavaScript to create an object with just a setter for a property but never have a corresponding getter defined for it. Without a getter, you cannot read the property, so it ends up not being used.
 
@@ -232,7 +246,6 @@ const Quux = class {
 }
 ```
 
-
 ## Known Limitations
 
 Due to the limits of static analysis, this rule does not account for possible side effects and in certain cases
@@ -274,16 +287,10 @@ var o = {
 
 The code above creates an object with just a setter for the property `"a"`.
 
-See [no-dupe-keys](no-dupe-keys.md) if you also want to disallow duplicate keys in object literals.
+See [no-dupe-keys](no-dupe-keys) if you also want to disallow duplicate keys in object literals.
 
-See [no-dupe-class-members](no-dupe-class-members.md) if you also want to disallow duplicate names in class definitions.
+See [no-dupe-class-members](no-dupe-class-members) if you also want to disallow duplicate names in class definitions.
 
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the simultaneous presence of setters and getters on objects.
-
-## Further Reading
-
-* [Object Setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
-* [Object Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
-* [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)

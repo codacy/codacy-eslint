@@ -1,4 +1,15 @@
-# Enforce or disallow newlines between operands of ternary expressions (multiline-ternary)
+---
+title: multiline-ternary
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/multiline-ternary.md
+rule_type: layout
+related_rules:
+- operator-linebreak
+---
+
+<!--FIXABLE-->
+
+Enforces or disallows newlines between operands of ternary expressions.
 
 JavaScript allows operands of ternary expressions to be separated by newlines, which can improve the readability of your program.
 
@@ -19,7 +30,7 @@ var foo = bar > baz ?
 ## Rule Details
 
 This rule enforces or disallows newlines between operands of a ternary expression.
-Note: The location of the operators is not enforced by this rule. Please see the [operator-linebreak](operator-linebreak.md) rule if you are interested in enforcing the location of the operators themselves.
+Note: The location of the operators is not enforced by this rule. Please see the [operator-linebreak](operator-linebreak) rule if you are interested in enforcing the location of the operators themselves.
 
 ## Options
 
@@ -143,10 +154,6 @@ foo > bar ? (
 ## When Not To Use It
 
 You can safely disable this rule if you do not have any strict conventions about whether the operands of a ternary expression should be separated by newlines.
-
-## Related Rules
-
-* [operator-linebreak](operator-linebreak.md)
 
 ## Compatibility
 

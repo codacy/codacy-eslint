@@ -1,4 +1,15 @@
-# disallow `with` statements (no-with)
+---
+title: no-with
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-with.md
+rule_type: suggestion
+further_reading:
+- https://web.archive.org/web/20200717110117/https://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/
+---
+
+<!--RECOMMENDED-->
+
+Disallows `with` statements.
 
 The `with` statement is potentially problematic because it adds members of an object to the current scope, making it impossible to tell what a variable inside the block actually refers to.
 
@@ -30,7 +41,3 @@ const r = ({x, y}) => Math.sqrt(x * x + y * y);
 ## When Not To Use It
 
 If you intentionally use `with` statements then you can disable this rule.
-
-## Further Reading
-
-* [with Statement Considered Harmful](https://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/)

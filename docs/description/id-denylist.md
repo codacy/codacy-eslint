@@ -1,4 +1,11 @@
-# disallow specified identifiers (id-denylist)
+---
+title: id-denylist
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/id-denylist.md
+rule_type: suggestion
+---
+
+Disallows specified identifiers.
 
 > "There are only two hard things in Computer Science: cache invalidation and naming things." — Phil Karlton
 
@@ -10,16 +17,16 @@ This rule disallows specified identifiers in assignments and `function` definiti
 
 This rule will catch disallowed identifiers that are:
 
-- variable declarations
-- function declarations
-- object properties assigned to during object creation
-- class fields
-- class methods
+* variable declarations
+* function declarations
+* object properties assigned to during object creation
+* class fields
+* class methods
 
 It will not catch disallowed identifiers that are:
 
-- function calls (so you can still use functions you do not have control over)
-- object properties (so you can still use objects you do not have control over)
+* function calls (so you can still use functions you do not have control over)
+* object properties (so you can still use objects you do not have control over)
 
 ## Options
 

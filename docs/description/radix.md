@@ -1,4 +1,15 @@
-# Require Radix Parameter (radix)
+---
+title: radix
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/radix.md
+rule_type: suggestion
+further_reading:
+- https://davidwalsh.name/parseint-radix
+---
+
+<!--SUGGESTIONS-->
+
+Enforces the consistent use of the radix argument when using `parseInt()`.
 
 When using the `parseInt()` function it is common to omit the second argument, the radix, and let the function try to determine from the first argument what type of number it is. By default, `parseInt()` will autodetect decimal and hexadecimal (via `0x` prefix). Prior to ECMAScript 5, `parseInt()` also autodetected octal literals, which caused problems because many developers assumed a leading `0` would be ignored.
 
@@ -28,7 +39,6 @@ There are two options for this rule:
 
 * `"always"` enforces providing a radix (default)
 * `"as-needed"` disallows providing the `10` radix
-
 
 ### always
 
@@ -89,7 +99,3 @@ var num = parseFloat(someValue);
 ## When Not To Use It
 
 If you don't want to enforce either presence or omission of the `10` radix value you can turn this rule off.
-
-## Further Reading
-
-* [parseInt and radix](https://davidwalsh.name/parseint-radix)

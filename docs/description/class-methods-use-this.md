@@ -1,4 +1,14 @@
-# Enforce that class methods utilize `this` (class-methods-use-this)
+---
+title: class-methods-use-this
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/class-methods-use-this.md
+rule_type: suggestion
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
+---
+
+Enforces that class methods utilize `this`.
 
 If a class method does not use `this`, it can *sometimes* be made into a static function. If you do convert the method into a static function, instances of the class that call that particular method have to be converted to a static call as well (`MyClass.callStaticMethod()`)
 
@@ -83,14 +93,23 @@ class A {
     static foo() {
         // OK. static methods aren't expected to use this.
     }
+
+    static {
+        // OK. static blocks are exempt.
+    }
 }
 ```
 
 ## Options
 
-### Exceptions
+This rule has two options:
 
-```
+* `"exceptMethods"` allows specified method names to be ignored with this rule.
+* `"enforceForClassFields"` enforces that functions used as instance field initializers utilize `this`. (default: `true`)
+
+### exceptMethods
+
+```js
 "class-methods-use-this": [<enabled>, { "exceptMethods": [<...exceptions>] }]
 ```
 
@@ -110,15 +129,50 @@ class A {
 Examples of **correct** code for this rule when used with exceptMethods:
 
 ```js
-/*eslint class-methods-use-this: ["error", { "exceptMethods": ["foo"] }] */
+/*eslint class-methods-use-this: ["error", { "exceptMethods": ["foo", "#bar"] }] */
 
 class A {
     foo() {
     }
+    #bar() {
+    }
 }
 ```
 
-## Further Reading
+### enforceForClassFields
 
-* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-* [Static Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
+```js
+"class-methods-use-this": [<enabled>, { "enforceForClassFields": true | false }]
+```
+
+The `enforceForClassFields` option enforces that arrow functions and function expressions used as instance field initializers utilize `this`. (default: `true`)
+
+Examples of **incorrect** code for this rule with the `{ "enforceForClassFields": true }` option (default):
+
+```js
+/*eslint class-methods-use-this: ["error", { "enforceForClassFields": true }] */
+
+class A {
+    foo = () => {}
+}
+```
+
+Examples of **correct** code for this rule with the `{ "enforceForClassFields": true }` option (default):
+
+```js
+/*eslint class-methods-use-this: ["error", { "enforceForClassFields": true }] */
+
+class A {
+    foo = () => {this;}
+}
+```
+
+Examples of **correct** code for this rule with the `{ "enforceForClassFields": false }` option:
+
+```js
+/*eslint class-methods-use-this: ["error", { "enforceForClassFields": false }] */
+
+class A {
+    foo = () => {}
+}
+```

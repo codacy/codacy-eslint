@@ -1,4 +1,13 @@
-# disallow octal literals (no-octal)
+---
+title: no-octal
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-octal.md
+rule_type: suggestion
+---
+
+<!--RECOMMENDED-->
+
+Disallows octal literals.
 
 Octal literals are numerals that begin with a leading zero, such as:
 

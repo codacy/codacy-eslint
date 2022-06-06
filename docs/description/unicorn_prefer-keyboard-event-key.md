@@ -1,9 +1,15 @@
 # Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
 Enforces the use of [`KeyboardEvent#key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) over [`KeyboardEvent#keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) which is deprecated. The `.key` property is also more semantic and readable.
 
 This rule is partly fixable. It can only fix direct property access.
-
 
 ## Fail
 
@@ -20,7 +26,6 @@ window.addEventListener('keydown', event => {
 	}
 });
 ```
-
 
 ## Pass
 

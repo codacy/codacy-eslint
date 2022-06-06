@@ -12,12 +12,12 @@ Examples of **incorrect** code for this rule:
 
 ```jsx
 // function expression for named component
-var Component = function (props) {
+const Component = function (props) {
   return <div>{props.content}</div>;
 };
 
 // arrow function for named component
-var Component = (props) => {
+const Component = (props) => {
   return <div>{props.content}</div>;
 };
 
@@ -31,13 +31,15 @@ function getComponent() {
 
 ## Rule Options
 
-This rule takes an options object as a second parameter where the preferred function type for components can be specified. The first property of the options object is `"namedComponents"` which can be `"function-declaration"`, `"function-expression"`, or `"arrow-function"` and has `'function-declaration'` as its default. The second property is `"unnamedComponents"` that can be either `"function-expression"` or `"arrow-function"`, and has `'function-expression'` as its default.
+This rule takes an options object as a second parameter where the preferred function type for components can be specified.
+The first property of the options object is `"namedComponents"` which can be `"function-declaration"`, `"function-expression"`, `"arrow-function"`, or an array containing any of those, and has `'function-declaration'` as its default.
+The second property is `"unnamedComponents"` that can be either `"function-expression"`, `"arrow-function"`, or an array containing any of those, and has `'function-expression'` as its default.
 
 ```js
 ...
 "react/function-component-definition": [<enabled>, {
-  "namedComponents": "function-declaration" | "function-expression" | "arrow-function",
-  "unnamedComponents": "function-expression" | "arrow-function"
+  "namedComponents": "function-declaration" | "function-expression" | "arrow-function" | Array<"function-declaration" | "function-expression" | "arrow-function">,
+  "unnamedComponents": "function-expression" | "arrow-function" | Array<"function-expression" | "arrow-function">
 }]
 ...
 ```
@@ -47,11 +49,11 @@ Examples of **incorrect** code for this rule:
 ```jsx
 // only function declarations for named components
 // [2, { "namedComponents": "function-declaration" }]
-var Component = function (props) {
+const Component = function (props) {
   return <div />;
 };
 
-var Component = (props) => {
+const Component = (props) => {
   return <div />;
 };
 
@@ -61,7 +63,7 @@ function Component (props) {
   return <div />;
 };
 
-var Component = (props) => {
+const Component = (props) => {
   return <div />;
 };
 
@@ -71,7 +73,7 @@ function Component (props) {
   return <div />;
 };
 
-var Component = function (props) {
+const Component = function (props) {
   return <div />;
 };
 
@@ -105,13 +107,13 @@ function Component (props) {
 
 // only function expressions for named components
 // [2, { "namedComponents": "function-expression" }]
-var Component = function (props) {
+const Component = function (props) {
   return <div />;
 };
 
 // only arrow functions for named components
 // [2, { "namedComponents": "arrow-function" }]
-var Component = (props) => {
+const Component = (props) => {
   return <div />;
 };
 
@@ -168,11 +170,11 @@ The following patterns can **not** be autofixed in TypeScript:
 ```tsx
 // function expressions and arrow functions that have type annotations cannot be autofixed to function declarations
 // [2, { "namedComponents": "function-declaration" }]
-var Component: React.FC<Props> = function (props) {
+const Component: React.FC<Props> = function (props) {
   return <div />;
 };
 
-var Component: React.FC<Props> = (props) => {
+const Component: React.FC<Props> = (props) => {
   return <div />;
 };
 
@@ -182,7 +184,7 @@ function Component<T>(props: Props<T>) {
   return <div />;
 };
 
-var Component = function <T>(props: Props<T>) {
+const Component = function <T>(props: Props<T>) {
   return <div />;
 };
 
@@ -201,13 +203,13 @@ The following patterns can be autofixed in TypeScript:
 ```tsx
 // autofix to function expression with type annotation
 // [2, { "namedComponents": "function-expression" }]
-var Component: React.FC<Props> = (props) => {
+const Component: React.FC<Props> = (props) => {
   return <div />;
 };
 
 // autofix to arrow function with type annotation
 // [2, { "namedComponents": "function-expression" }]
-var Component: React.FC<Props> = function (props) {
+const Component: React.FC<Props> = function (props) {
   return <div />;
 };
 
@@ -217,7 +219,7 @@ function Component<T extends {}>(props: Props<T>) {
   return <div />;
 }
 
-var Component = function <T extends {}>(props: Props<T>) {
+const Component = function <T extends {}>(props: Props<T>) {
   return <div />;
 };
 
@@ -227,7 +229,7 @@ function Component<T1, T2>(props: Props<T1, T2>) {
   return <div />;
 }
 
-var Component = function <T1, T2>(props: Props<T2>) {
+const Component = function <T1, T2>(props: Props<T2>) {
   return <div />;
 };
 
@@ -249,6 +251,6 @@ function getComponent() {
 
 ```
 
-## When not to use
+## When Not To Use It
 
 If you are not interested in consistent types of function components.

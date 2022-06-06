@@ -1,4 +1,17 @@
-# Enforce location of semicolons (semi-style)
+---
+title: semi-style
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/semi-style.md
+rule_type: layout
+related_rules:
+- no-extra-semi
+- semi
+- semi-spacing
+---
+
+<!--FIXABLE-->
+
+Enforces location of semicolons.
 
 Generally, semicolons are at the end of lines. However, in semicolon-less style, semicolons are at the beginning of lines. This rule enforces that semicolons are at the configured location.
 
@@ -14,8 +27,8 @@ This rule has an option.
 }
 ```
 
-- `"last"` (Default) enforces that semicolons are at the end of statements.
-- `"first"` enforces that semicolons are at the beginning of statements. Semicolons of `for` loop heads (`for(a;b;c){}`) should be at the end of lines even if you use this option.
+* `"last"` (Default) enforces that semicolons are at the end of statements.
+* `"first"` enforces that semicolons are at the beginning of statements. Semicolons of `for` loop heads (`for(a;b;c){}`) should be at the end of lines even if you use this option.
 
 Examples of **incorrect** code for this rule with `"last"` option:
 
@@ -31,6 +44,13 @@ for (
     ; ++i
 ) {
     foo()
+}
+
+class C {
+    static {
+        foo()
+        ;bar()
+    }
 }
 ```
 
@@ -49,6 +69,13 @@ for (
 ) {
     foo()
 }
+
+class C {
+    static {
+        foo();
+        bar()
+    }
+}
 ```
 
 Examples of **incorrect** code for this rule with `"first"` option:
@@ -65,6 +92,13 @@ for (
     ; ++i
 ) {
     foo()
+}
+
+class C {
+    static {
+        foo();
+        bar()
+    }
 }
 ```
 
@@ -83,14 +117,15 @@ for (
 ) {
     foo()
 }
+
+class C {
+    static {
+        foo()
+        ;bar()
+    }
+}
 ```
 
 ## When Not To Use It
 
 If you don't want to notify the location of semicolons, then it's safe to disable this rule.
-
-## Related rules
-
-- [no-extra-semi](./no-extra-semi.md)
-- [semi](./semi.md)
-- [semi-spacing](./semi-spacing.md)

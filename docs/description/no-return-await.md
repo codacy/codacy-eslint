@@ -1,4 +1,14 @@
-# Disallows unnecessary `return await` (no-return-await)
+---
+title: no-return-await
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-return-await.md
+rule_type: suggestion
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+- https://jakearchibald.com/2017/await-vs-return-vs-return-await/
+---
+
+Disallows unnecessary `return await`.
 
 Using `return await` inside an `async function` keeps the current function in the call stack until the Promise that is being awaited has resolved, at the cost of an extra microtask before resolving the outer Promise. `return await` can also be used in a try/catch statement to catch errors from another function that returns a Promise.
 
@@ -50,12 +60,6 @@ async function foo() {
 
 There are a few reasons you might want to turn this rule off:
 
-- If you want to use `await` to denote a value that is a thenable
-- If you do not want the performance benefit of avoiding `return await`
-- If you want the functions to show up in stack traces (useful for debugging purposes)
-
-## Further Reading
-
-[`async function` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-
-[`await vs return vs return await` by Jake Archibald](https://jakearchibald.com/2017/await-vs-return-vs-return-await/)
+* If you want to use `await` to denote a value that is a thenable
+* If you do not want the performance benefit of avoiding `return await`
+* If you want the functions to show up in stack traces (useful for debugging purposes)

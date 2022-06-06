@@ -9,7 +9,9 @@ since: v7.5.0
 
 > enforce valid `nextTick` function calls
 
+- :gear: This rule is included in all of `"plugin:vue/vue3-essential"`, `"plugin:vue/essential"`, `"plugin:vue/vue3-strongly-recommended"`, `"plugin:vue/strongly-recommended"`, `"plugin:vue/vue3-recommended"` and `"plugin:vue/recommended"`.
 - :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+- :bulb: Some problems reported by this rule are manually fixable by editor [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
 
 ## :book: Rule Details
 
@@ -76,9 +78,9 @@ Nothing.
 
 ## :books: Further Reading
 
-- [`Vue.nextTick` API in Vue 2](https://vuejs.org/v2/api/#Vue-nextTick)
-- [`vm.$nextTick` API in Vue 2](https://vuejs.org/v2/api/#vm-nextTick)
-- [Global API Treeshaking](https://v3.vuejs.org/guide/migration/global-api-treeshaking.html)
+- [`Vue.nextTick` API in Vue 2](https://v2.vuejs.org/v2/api/#Vue-nextTick)
+- [`vm.$nextTick` API in Vue 2](https://v2.vuejs.org/v2/api/#vm-nextTick)
+- [Global API Treeshaking](https://v3-migration.vuejs.org/breaking-changes/global-api-treeshaking.html)
 - [Global `nextTick` API in Vue 3](https://v3.vuejs.org/api/global-api.html#nexttick)
 - [Instance `$nextTick` API in Vue 3](https://v3.vuejs.org/api/instance-methods.html#nexttick)
 

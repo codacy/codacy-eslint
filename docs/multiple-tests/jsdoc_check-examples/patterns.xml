@@ -1,5 +1,7 @@
 <module name="root">
-    <module name="jsdoc_check-examples" />
+    <!-- jsdoc doesn't support ESLint 8 yet -->
+    <!-- https://github.com/eslint/eslint/issues/14745 -->
+    <!-- <module name="jsdoc_check-examples" /> -->
     <module name="BeforeExecutionExclusionFileFilter">
         <property name="fileNamePattern" value="\.eslintrc\.js" />
     </module>

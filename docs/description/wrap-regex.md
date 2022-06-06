@@ -1,4 +1,13 @@
-# Require Regex Literals to be Wrapped (wrap-regex)
+---
+title: wrap-regex
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/wrap-regex.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Requires regex literals to be wrapped.
 
 When a regular expression is used in certain situations, it can end up looking like a division operator. For example:
 

@@ -1,9 +1,16 @@
 # Disallow using the `this` argument in array methods
 
-The rule forbids using the `thisArg` argument in array methods:
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧💡 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) and provides [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).*
+<!-- /RULE_NOTICE -->
+
+The rule disallows using the `thisArg` argument in array methods:
 
 - If the callback is an arrow function or a bound function, the `thisArg` won't affect it.
-- If you intent to use a custom `this` in the callback, it‘s better to use the variable directly or use `callback.bind(thisArg)`.
+- If you intent to use a custom `this` in the callback, it's better to use the variable directly or use `callback.bind(thisArg)`.
 
 This rule checks following array methods accepts `thisArg`:
 

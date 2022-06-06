@@ -9,24 +9,24 @@ This rule aims to prevent user generated link hrefs and form actions from creati
 
 ## Rule Options
 
-```json
+```js
 ...
 "react/jsx-no-target-blank": [<enabled>, {
   "allowReferrer": <allow-referrer>,
   "enforceDynamicLinks": <enforce>,
+  "warnOnSpreadAttributes": <warn>,
   "links": <boolean>,
   "forms": <boolean>,
 }]
 ...
 ```
 
-* `allowReferrer`: optional boolean. If `true` does not require `noreferrer`. Defaults to `false`.
-* `enabled`: for enabling the rule. 0=off, 1=warn, 2=error. Defaults to 0.
-* `enforceDynamicLinks`: optional string, 'always' or 'never'
+* `enabled`: for enabling the rule.
+* `allowReferrer`: optional boolean. If `true` does not require `noreferrer` (i. e. `noopener` alone is enough, this leaves IE vulnerable). Defaults to `false`.
+* `enforceDynamicLinks`: optional string, `'always'` or `'never'`.
 * `warnOnSpreadAttributes`: optional boolean. Defaults to `false`.
-* `enforceDynamicLinks` - enforce: optional string, 'always' or 'never'
-* `links` - Prevent usage of unsafe `target='_blank'` inside links, defaults to `true`
-* `forms` - Prevent usage of unsafe `target='_blank'` inside forms, defaults to `false`
+* `links`: prevent usage of unsafe `target='_blank'` inside links, defaults to `true`.
+* `forms`: prevent usage of unsafe `target='_blank'` inside forms, defaults to `false`.
 
 ### `enforceDynamicLinks`
 
@@ -37,7 +37,7 @@ This rule aims to prevent user generated link hrefs and form actions from creati
 Examples of **incorrect** code for this rule, when configured with `{ "enforceDynamicLinks": "always" }`:
 
 ```jsx
-var Hello = <a target='_blank' href="http://example.com/"></a>
+var Hello = <a target='_blank' href="https://example.com/"></a>
 var Hello = <a target='_blank' href={dynamicLink}></a>
 ```
 
@@ -45,8 +45,8 @@ Examples of **correct** code for this rule:
 
 ```jsx
 var Hello = <p target="_blank"></p>
-var Hello = <a target="_blank" rel="noreferrer" href="http://example.com"></a>
-var Hello = <a target="_blank" rel="noopener noreferrer" href="http://example.com"></a>
+var Hello = <a target="_blank" rel="noreferrer" href="https://example.com"></a>
+var Hello = <a target="_blank" rel="noopener noreferrer" href="https://example.com"></a>
 var Hello = <a target="_blank" href="relative/path/in/the/host"></a>
 var Hello = <a target="_blank" href="/absolute/path/in/the/host"></a>
 var Hello = <a></a>
@@ -68,7 +68,7 @@ Spread attributes are a handy way of passing programmatically-generated props to
 
 ```jsx
 const unsafeProps = {
-  href: "http://example.com",
+  href: "https://example.com",
   target: "_blank",
 };
 
@@ -88,30 +88,30 @@ Defaults to false. If false, this rule will ignore all spread attributes. If tru
 When option `forms` is set to `true`, the following is considered an error:
 
 ```jsx
-var Hello = <form target="_blank" action="http://example.com/"></form>;
+var Hello = <form target="_blank" action="https://example.com/"></form>;
 ```
 
 When option `links` is set to `true`, the following is considered an error:
 
 ```jsx
-var Hello = <a target='_blank' href="http://example.com/"></form>
+var Hello = <a target='_blank' href="https://example.com/"></form>
 ```
 
 ### Custom link components
 
-This rule supports the ability to use custom components for links, such as `<Link />` which is popular in libraries like `react-router`, `next.js` and `gatsby`. To enable this, define your custom link components in the global [shared settings](https://github.com/yannickcr/eslint-plugin-react/blob/master/README.md#configuration) under the `linkComponents` configuration area. Once configured, this rule will check those components as if they were `<a />` elements.
+This rule supports the ability to use custom components for links, such as `<Link />` which is popular in libraries like `react-router`, `next.js` and `gatsby`. To enable this, define your custom link components in the global [shared settings](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/README.md#configuration) under the `linkComponents` configuration area. Once configured, this rule will check those components as if they were `<a />` elements.
 
 Examples of **incorrect** code for this rule:
 
 ```jsx
-var Hello = <Link target="_blank" to="http://example.com/"></Link>
+var Hello = <Link target="_blank" to="https://example.com/"></Link>
 var Hello = <Link target="_blank" to={dynamicLink}></Link>
 ```
 
 Examples of **correct** code for this rule:
 
 ```jsx
-var Hello = <Link target="_blank" rel="noopener noreferrer" to="http://example.com"></Link>
+var Hello = <Link target="_blank" rel="noopener noreferrer" to="https://example.com"></Link>
 var Hello = <Link target="_blank" to="relative/path/in/the/host"></Link>
 var Hello = <Link target="_blank" to="/absolute/path/in/the/host"></Link>
 var Hello = <Link />
@@ -119,11 +119,15 @@ var Hello = <Link />
 
 ### Custom form components
 
-This rule supports the ability to use custom components for forms. To enable this, define your custom form components in the global [shared settings](https://github.com/yannickcr/eslint-plugin-react/blob/master/README.md#configuration) under the `formComponents` configuration area. Once configured, this rule will check those components as if they were `<form />` elements.
+This rule supports the ability to use custom components for forms. To enable this, define your custom form components in the global [shared settings](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/README.md#configuration) under the `formComponents` configuration area. Once configured, this rule will check those components as if they were `<form />` elements.
 
 ## When To Override It
 
+Modern browsers (Chrome ≥ 88, Edge ≥ 88, Firefox ≥ 79 and Safari ≥ 12.2) automatically imply `rel="noopener"`. Therefore this rule is no longer needed, if legacy browsers are not supported. See https://web.dev/external-anchors-use-rel-noopener/ and https://caniuse.com/mdn-html_elements_a_implicit_noopener for more details.
+
 For links to a trusted host (e.g. internal links to your own site, or links to a another host you control, where you can be certain this security vulnerability does not exist), you may want to keep the HTTP Referer header for analytics purposes.
+
+If you do not support Internet Explorer (any version), Chrome < 49, Opera < 36, Firefox < 52, desktop Safari < 10.1 or iOS Safari < 10.3, you may set `allowReferrer` to `true`, keep the HTTP Referer header and only add `rel="noopener"` to your links.
 
 ## When Not To Use It
 

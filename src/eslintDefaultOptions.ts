@@ -1,12 +1,16 @@
-import { CLIEngine } from "eslint"
+import { ESLint } from "eslint"
+import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = ["standard", "plugin:security/recommended"]
+const baseParserOptions = {
+  requireConfigFile: false,
+}
 const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
 ]
 
-export const defaultOptions: CLIEngine.Options = {
+export const defaultOptions: ESLint.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
@@ -22,66 +26,9 @@ export const defaultOptions: CLIEngine.Options = {
       worker: true,
       qunit: true,
     },
-    plugins: [
-      "angular",
-      "angularjs-security-rules",
-      "babel",
-      "backbone",
-      "better-styled-components",
-      "chai-expect",
-      "chai-friendly",
-      "compat",
-      "cypress",
-      "drupal",
-      "ember",
-      "ember-suave",
-      "filenames",
-      "flowtype",
-      "functional",
-      "graphql-fragments",
-      "hapi",
-      "html",
-      "import",
-      "jasmine",
-      "jest",
-      "jest-formatting",
-      "jsdoc",
-      "json",
-      "jsx-a11y",
-      "lodash",
-      "lodash-fp",
-      "meteor",
-      "mocha",
-      "mongodb",
-      "monorepo",
-      "no-only-tests",
-      "no-unsafe-innerhtml",
-      "no-unsanitized",
-      "node",
-      "playwright",
-      "prettier",
-      "prettier-vue",
-      "promise",
-      "ramda",
-      "react-hooks",
-      "react-native",
-      "react",
-      "redux-saga",
-      "regexp",
-      "relay",
-      "scanjs-rules",
-      "security",
-      "sonarjs",
-      "sort-imports-es6-autofix",
-      "sort-keys-fix",
-      "standard",
-      "@typescript-eslint",
-      "unicorn",
-      "vue",
-      "wdio",
-      "xss"
-    ],
-    parser: "babel-eslint",
+    plugins: pluginsNames,
+    parser: "@babel/eslint-parser",
+    parserOptions: baseParserOptions,
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
@@ -99,6 +46,15 @@ export const defaultOptions: CLIEngine.Options = {
           sourceType: "module",
         },
       },
+      {
+        files: ["**/*.jsx"],
+        parserOptions: {
+          ...baseParserOptions,
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
+        },
+      },
     ],
     settings: {
       "import/parsers": {
@@ -110,10 +66,10 @@ export const defaultOptions: CLIEngine.Options = {
         },
       },
       jest: {
-        version: 26
-      }
+        version: 26,
+      },
     },
   },
 }
 
-export const defaultEngine = new CLIEngine(defaultOptions)
+export const defaultEngine = new ESLint(defaultOptions)

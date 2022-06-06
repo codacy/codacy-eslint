@@ -153,7 +153,7 @@ It would seem that some common properties such as `props.children` or `props.cla
 (and alike) need to be treated as exceptions.
 
 As it aptly noticed in
-[#7](https://github.com/yannickcr/eslint-plugin-react/issues/7)
+[#7](https://github.com/jsx-eslint/eslint-plugin-react/issues/7)
 
 > Why should children be an exception?
 > Most components don't need `this.props.children`, so that makes it extra important
@@ -176,5 +176,5 @@ For now we should detect components created with:
 * an ES6 class that inherit from `React.Component` or `Component`
 
 [PropTypes]: https://reactjs.org/docs/typechecking-with-proptypes.html
-[TypeScript]: http://www.typescriptlang.org/
+[TypeScript]: https://www.typescriptlang.org/
 [Flow]: https://flow.org/

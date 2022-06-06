@@ -1,10 +1,16 @@
-# Use function types instead of interfaces with call signatures (`prefer-function-type`)
+# `prefer-function-type`
+
+Use function types instead of interfaces with call signatures.
 
 ## Rule Details
 
 This rule suggests using a function type instead of an interface or object type literal with a single call signature.
 
-Examples of **incorrect** code for this rule:
+Examples of code for this rule:
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 interface Foo {
@@ -31,7 +37,7 @@ interface MixinMethod {
 }
 ```
 
-Examples of **correct** code for this rule:
+### ✅ Correct
 
 ```ts
 interface Foo {
@@ -72,6 +78,19 @@ interface Overloaded {
 type Intersection = ((data: string) => number) & ((id: number) => string);
 ```
 
+## Options
+
+```jsonc
+// .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/prefer-function-type": "warn"
+  }
+}
+```
+
+This rule is not configurable.
+
 ## When Not To Use It
 
 If you specifically want to use an interface or type literal with a single call signature for stylistic reasons, you can disable this rule.
@@ -79,3 +98,11 @@ If you specifically want to use an interface or type literal with a single call 
 ## Further Reading
 
 - TSLint: [`callable-types`](https://palantir.github.io/tslint/rules/callable-types/)
+
+## Attributes
+
+- Configs:
+  - [ ] ✅ Recommended
+  - [x] 🔒 Strict
+- [x] 🔧 Fixable
+- [ ] 💭 Requires type information

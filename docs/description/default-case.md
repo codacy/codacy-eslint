@@ -1,4 +1,13 @@
-# Require Default Case in Switch Statements (default-case)
+---
+title: default-case
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/default-case.md
+rule_type: suggestion
+related_rules:
+- no-fallthrough
+---
+
+Requires a `default` case in switch statements.
 
 Some code conventions require that all `switch` statements have a `default` case, even if the default case is empty, such as:
 
@@ -13,7 +22,7 @@ switch (foo) {
         break;
 
     default:
-        // do nothing
+    // do nothing
 }
 ```
 
@@ -69,7 +78,6 @@ switch (a) {
         break;
 }
 
-
 switch (a) {
     case 1:
         /* code */
@@ -120,7 +128,3 @@ switch(a) {
 ## When Not To Use It
 
 If you don't want to enforce a `default` case for `switch` statements, you can safely disable this rule.
-
-## Related Rules
-
-* [no-fallthrough](no-fallthrough.md)

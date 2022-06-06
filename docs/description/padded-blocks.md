@@ -1,4 +1,16 @@
-# require or disallow padding within blocks (padded-blocks)
+---
+title: padded-blocks
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/padded-blocks.md
+rule_type: layout
+related_rules:
+- lines-between-class-members
+- padding-line-between-statements
+---
+
+<!--FIXABLE-->
+
+Requires or disallows padding within blocks.
 
 Some style guides require block statements to start and end with blank lines. The goal is
 to improve readability by visually separating the block content and the surrounding code.
@@ -27,12 +39,12 @@ The second one is an object option, it can allow exceptions.
 
 String option:
 
-* `"always"` (default) requires empty lines at the beginning and ending of block statements and classes
-* `"never"` disallows empty lines at the beginning and ending of block statements and classes
+* `"always"` (default) requires empty lines at the beginning and ending of block statements, function bodies, class static blocks, classes, and `switch` statements.
+* `"never"` disallows empty lines at the beginning and ending of block statements, function bodies, class static blocks, classes, and `switch` statements.
 
 Object option:
 
-* `"blocks"` require or disallow padding within block statements
+* `"blocks"` require or disallow padding within block statements, function bodies, and class static blocks
 * `"classes"` require or disallow padding within classes
 * `"switches"` require or disallow padding within `switch` statements
 
@@ -68,6 +80,12 @@ if (a) {
     b();
 
 }
+
+class C {
+    static {
+        a();
+    }
+}
 ```
 
 Examples of **correct** code for this rule with the default `"always"` option:
@@ -92,6 +110,16 @@ if (a) {
 
     // comment
     b();
+
+}
+
+class C {
+
+    static {
+
+        a();
+
+    }
 
 }
 ```
@@ -125,6 +153,16 @@ if (a) {
     b();
 
 }
+
+class C {
+
+    static {
+
+        a();
+
+    }
+
+}
 ```
 
 Examples of **correct** code for this rule with the `"never"` option:
@@ -139,6 +177,12 @@ if (a) {
 if (a)
 {
     b();
+}
+
+class C {
+    static {
+        a();
+    }
 }
 ```
 
@@ -175,6 +219,14 @@ if (a) {
     b();
 
 }
+
+class C {
+
+    static {
+        a();
+    }
+
+}
 ```
 
 Examples of **correct** code for this rule with the `{ "blocks": "always" }` option:
@@ -199,6 +251,25 @@ if (a) {
 
     // comment
     b();
+
+}
+
+class C {
+
+    static {
+
+        a();
+
+    }
+
+}
+
+class D {
+    static {
+
+        a();
+
+    }
 
 }
 ```
@@ -230,6 +301,14 @@ if (a) {
     b();
 
 }
+
+class C {
+    static {
+
+        a();
+
+    }
+}
 ```
 
 Examples of **correct** code for this rule with the `{ "blocks": "never" }` option:
@@ -244,6 +323,20 @@ if (a) {
 if (a)
 {
     b();
+}
+
+class C {
+    static {
+        a();
+    }
+}
+
+class D {
+
+    static {
+        a();
+    }
+
 }
 ```
 
@@ -392,8 +485,3 @@ if (a) {
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the consistency of padding within blocks.
-
-## Related Rules
-
-* [lines-between-class-members](lines-between-class-members.md)
-* [padding-line-between-statements](padding-line-between-statements.md)

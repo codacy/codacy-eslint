@@ -1,6 +1,11 @@
 # Disallow useless `undefined`
 
-This rule is fixable.
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
 
 ## Fail
 
@@ -91,7 +96,7 @@ Type: `object`
 Type: `boolean`\
 Default: `true`
 
-Forbid the use of `undefined` at the end of function call arguments. Pass `checkArguments: false` to disable checking them.
+Disallow the use of `undefined` at the end of function call arguments. Pass `checkArguments: false` to disable checking them.
 
 #### Fail
 

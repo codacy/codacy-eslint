@@ -1,4 +1,15 @@
-# require or disallow newlines around variable declarations (one-var-declaration-per-line)
+---
+title: one-var-declaration-per-line
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/one-var-declaration-per-line.md
+rule_type: suggestion
+related_rules:
+- one-var
+---
+
+<!--FIXABLE-->
+
+Requires or disallows newlines around variable declarations.
 
 Some developers declare multiple var statements on the same line:
 
@@ -83,7 +94,3 @@ var a,
 let a,
     b = 0;
 ```
-
-## Related Rules
-
-* [one-var](one-var.md)

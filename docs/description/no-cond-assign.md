@@ -1,4 +1,15 @@
-# disallow assignment operators in conditional statements (no-cond-assign)
+---
+title: no-cond-assign
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-cond-assign.md
+rule_type: problem
+related_rules:
+- no-extra-parens
+---
+
+<!--RECOMMENDED-->
+
+Disallows assignment operators in conditional statements.
 
 In conditional statements, it is very easy to mistype a comparison operator (such as `==`) as an assignment operator (such as `=`). For example:
 
@@ -121,7 +132,3 @@ if (x === 0) {
     var b = 1;
 }
 ```
-
-## Related Rules
-
-* [no-extra-parens](no-extra-parens.md)

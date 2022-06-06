@@ -1,4 +1,25 @@
-# Enforces spacing around commas (comma-spacing)
+---
+title: comma-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/comma-spacing.md
+rule_type: layout
+related_rules:
+- array-bracket-spacing
+- comma-style
+- space-in-brackets
+- space-in-parens
+- space-infix-ops
+- space-after-keywords
+- space-unary-ops
+- space-return-throw-case
+further_reading:
+- https://www.crockford.com/code.html
+- https://dojotoolkit.org/reference-guide/1.9/developer/styleguide.html
+---
+
+<!--FIXABLE-->
+
+Enforces spacing around commas.
 
 Spacing around commas improves readability of a list of items. Although most of the style guidelines for languages prescribe adding a space after a comma and not before it, it is subjective to the preferences of a project.
 
@@ -14,7 +35,7 @@ This rule enforces consistent spacing before and after commas in variable declar
 This rule does not apply in an `ArrayExpression` or `ArrayPattern` in either of the following cases:
 
 * adjacent null elements
-* an initial null element, to avoid conflicts with the [`array-bracket-spacing`](array-bracket-spacing.md) rule
+* an initial null element, to avoid conflicts with the [`array-bracket-spacing`](array-bracket-spacing) rule
 
 ## Options
 
@@ -109,21 +130,3 @@ var arr = [,2 ,3]
 ## When Not To Use It
 
 If your project will not be following a consistent comma-spacing pattern, turn this rule off.
-
-
-## Further Reading
-
-* [JavaScript](http://javascript.crockford.com/code.html)
-* [Dojo Style Guide](https://dojotoolkit.org/reference-guide/1.9/developer/styleguide.html)
-
-
-## Related Rules
-
-* [array-bracket-spacing](array-bracket-spacing.md)
-* [comma-style](comma-style.md)
-* [space-in-brackets](space-in-brackets.md) (deprecated)
-* [space-in-parens](space-in-parens.md)
-* [space-infix-ops](space-infix-ops.md)
-* [space-after-keywords](space-after-keywords.md)
-* [space-unary-ops](space-unary-ops.md)
-* [space-return-throw-case](space-return-throw-case.md)

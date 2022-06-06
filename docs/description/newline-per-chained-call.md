@@ -1,4 +1,13 @@
-# require a newline after each call in a method chain (newline-per-chained-call)
+---
+title: newline-per-chained-call
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/newline-per-chained-call.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Requires a newline after each call in a method chain.
 
 Chained method calls on a single line without line breaks are harder to read, so some developers place a newline character after each method call in the chain to make it more readable and easy to maintain.
 

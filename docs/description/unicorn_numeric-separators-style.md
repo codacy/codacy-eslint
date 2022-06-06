@@ -1,9 +1,14 @@
 # Enforce the style of numeric separators by correctly grouping digits
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).*
+<!-- /RULE_NOTICE -->
+
 Enforces a convention of grouping digits using [numeric separators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators).
 Long numbers can become really hard to read, so cutting it into groups of digits, separated with a `_`, is important to keep your code clear. This rule also enforces a proper usage of the numeric separator, by checking if the groups of digits are of the correct size.
-
-This rule is fixable.
 
 ## Fail
 
@@ -45,7 +50,7 @@ Example:
 
 ```js
 // eslint unicorn/numeric-separators-style: ["error", {"onlyIfContainsSeparator": true, "binary": {"onlyIfContainsSeparator": false}]
-const number = 100000; // Pass, this number does not contains separators
+const number = 100000; // Pass, this number does not contain separators
 const binary = 0b101010001; // Fail, `binary` type don't require separators
 const hexadecimal = 0xD_EED_BEE_F; // Fail, it contain separators and it's incorrectly grouped
 ```
@@ -69,6 +74,7 @@ The size of the first group can be of any length as long as it is equal to or le
 ### Details
 
 Numbers are split into 3 distinct parts:
+
 - The integer part (**123**.456). The remaining digits (that do not fit in a group) have to be placed at the beginning: `12_345`.
 - The fractional part (123.**456**). The remaining digits have to be placed at the end of the number: `1.234_56`.
 - The exponential part (123.456e**789**). It acts exactly as the integer part: groups have to be at the beginning.

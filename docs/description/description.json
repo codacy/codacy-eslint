@@ -170,7 +170,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "enforceForClassFields",
+        "description": "enforceForClassFields"
+      }
+    ],
     "patternId": "class-methods-use-this",
     "title": "Class methods use this",
     "description": "Enforce that class methods utilize `this`",
@@ -495,6 +500,10 @@
       {
         "name": "properties",
         "description": "properties"
+      },
+      {
+        "name": "classFields",
+        "description": "classFields"
       },
       {
         "name": "onlyDeclarations",
@@ -952,6 +961,10 @@
       {
         "name": "allowParens",
         "description": "allowParens"
+      },
+      {
+        "name": "onlyOneSimpleParam",
+        "description": "onlyOneSimpleParam"
       }
     ],
     "patternId": "no-confusing-arrow",
@@ -971,6 +984,13 @@
     "patternId": "no-const-assign",
     "title": "No const assign",
     "description": "Disallow reassigning `const` variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "no-constant-binary-expression",
+    "title": "No constant binary expression",
+    "description": "Disallow expressions where the operation doesn't affect the value",
     "timeToFix": 5
   },
   {
@@ -1310,7 +1330,7 @@
     ],
     "patternId": "no-invalid-this",
     "title": "No invalid this",
-    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
     "timeToFix": 5
   },
   {
@@ -1788,6 +1808,10 @@
       {
         "name": "hoist",
         "description": "hoist"
+      },
+      {
+        "name": "ignoreOnInitialization",
+        "description": "ignoreOnInitialization"
       }
     ],
     "patternId": "no-shadow",
@@ -1931,6 +1955,10 @@
       {
         "name": "allowFunctionParams",
         "description": "allowFunctionParams"
+      },
+      {
+        "name": "enforceInClassFields",
+        "description": "enforceInClassFields"
       }
     ],
     "patternId": "no-underscore-dangle",
@@ -2038,6 +2066,13 @@
     "patternId": "no-unused-labels",
     "title": "No unused labels",
     "description": "Disallow unused labels",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "no-unused-private-class-members",
+    "title": "No unused private class members",
+    "description": "Disallow unused private class members",
     "timeToFix": 5
   },
   {
@@ -2347,6 +2382,13 @@
   },
   {
     "parameters": [],
+    "patternId": "prefer-object-has-own",
+    "title": "Prefer object has own",
+    "description": "Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prefer-object-spread",
     "title": "Prefer object spread",
     "description": "Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.",
@@ -2439,7 +2481,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowProperties",
+        "description": "allowProperties"
+      }
+    ],
     "patternId": "require-atomic-updates",
     "title": "Require atomic updates",
     "description": "Disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
@@ -2827,434 +2874,6 @@
   },
   {
     "parameters": [],
-    "patternId": "node_callback-return",
-    "title": "Node: Callback return",
-    "description": "Require `return` statements after callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_exports-style",
-    "title": "Node: Exports style",
-    "description": "Enforce either `module.exports` or `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_file-extension-in-import",
-    "title": "Node: File extension in import",
-    "description": "Enforce the style of file extensions in `import` declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_global-require",
-    "title": "Node: Global require",
-    "description": "Require `require()` calls to be placed at top-level module scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_handle-callback-err",
-    "title": "Node: Handle callback err",
-    "description": "Require error handling in callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-callback-literal",
-    "title": "Node: No callback literal",
-    "description": "Ensure Node.js-style error-first callback pattern is followed",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-deprecated-api",
-    "title": "Node: No deprecated api",
-    "description": "Disallow deprecated APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-exports-assign",
-    "title": "Node: No exports assign",
-    "description": "Disallow the assignment to `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-import",
-    "title": "Node: No extraneous import",
-    "description": "Disallow `import` declarations which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-require",
-    "title": "Node: No extraneous require",
-    "description": "Disallow `require()` expressions which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-missing-import",
-    "title": "Node: No missing import",
-    "description": "Disallow `import` declarations which import non-existence modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-mixed-requires",
-    "title": "Node: No mixed requires",
-    "description": "Disallow `require` calls to be mixed with regular variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-new-require",
-    "title": "Node: No new require",
-    "description": "Disallow `new` operators with calls to `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-path-concat",
-    "title": "Node: No path concat",
-    "description": "Disallow string concatenation with `__dirname` and `__filename`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-env",
-    "title": "Node: No process env",
-    "description": "Disallow the use of `process.env`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-exit",
-    "title": "Node: No process exit",
-    "description": "Disallow the use of `process.exit()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-import",
-    "title": "Node: No restricted import",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-require",
-    "title": "Node: No restricted require",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAtRootLevel",
-        "description": "allowAtRootLevel"
-      }
-    ],
-    "patternId": "node_no-sync",
-    "title": "Node: No sync",
-    "description": "Disallow synchronous methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-bin",
-    "title": "Node: No unpublished bin",
-    "description": "Disallow `bin` files that npm ignores",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-import",
-    "title": "Node: No unpublished import",
-    "description": "Disallow `import` declarations which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-require",
-    "title": "Node: No unpublished require",
-    "description": "Disallow `require()` expressions which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-builtins",
-    "title": "Node: [No unsupported features] Es builtins",
-    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-syntax",
-    "title": "Node: [No unsupported features] Es syntax",
-    "description": "Disallow unsupported ECMAScript syntax on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_node-builtins",
-    "title": "Node: [No unsupported features] Node builtins",
-    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_buffer",
-    "title": "Node: [Prefer global] Buffer",
-    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_console",
-    "title": "Node: [Prefer global] Console",
-    "description": "Enforce either `console` or `require(\"console\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_process",
-    "title": "Node: [Prefer global] Process",
-    "description": "Enforce either `process` or `require(\"process\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-decoder",
-    "title": "Node: [Prefer global] Text decoder",
-    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-encoder",
-    "title": "Node: [Prefer global] Text encoder",
-    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url-search-params",
-    "title": "Node: [Prefer global] Url search params",
-    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url",
-    "title": "Node: [Prefer global] Url",
-    "description": "Enforce either `URL` or `require(\"url\").URL`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_dns",
-    "title": "Node: [Prefer promises] Dns",
-    "description": "Enforce `require(\"dns\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_fs",
-    "title": "Node: [Prefer promises] Fs",
-    "description": "Enforce `require(\"fs\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_process-exit-as-throw",
-    "title": "Node: Process exit as throw",
-    "description": "Make `process.exit()` expressions the same code path as `throw`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_shebang",
-    "title": "Node: Shebang",
-    "description": "Suggest correct usage of shebang",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-hide-core-modules",
-    "title": "Node: No hide core modules",
-    "description": "Disallow third-party modules which are hiding core modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features",
-    "title": "Node: No unsupported features",
-    "description": "Disallow unsupported ECMAScript features on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_param-names",
-    "title": "Promise: Param names",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-return-wrap",
-    "title": "Promise: No return wrap",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_always-return",
-    "title": "Promise: Always return",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_catch-or-return",
-    "title": "Promise: Catch or return",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_prefer-await-to-callbacks",
-    "title": "Promise: Prefer await to callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_prefer-await-to-then",
-    "title": "Promise: Prefer await to then",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-callback-in-promise",
-    "title": "Promise: No callback in promise",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-promise-in-callback",
-    "title": "Promise: No promise in callback",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-nesting",
-    "title": "Promise: No nesting",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_avoid-new",
-    "title": "Promise: Avoid new",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-new-statics",
-    "title": "Promise: No new statics",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_no-return-in-finally",
-    "title": "Promise: No return in finally",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "promise_valid-params",
-    "title": "Promise: Valid params",
-    "description": "Ensures the proper number of arguments are passed to Promise functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-unsafe-regex",
-    "title": "Security: Detect unsafe regex",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-non-literal-regexp",
-    "title": "Security: Detect non literal regexp",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-non-literal-require",
-    "title": "Security: Detect non literal require",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-non-literal-fs-filename",
-    "title": "Security: Detect non literal fs filename",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-eval-with-expression",
-    "title": "Security: Detect eval with expression",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-pseudoRandomBytes",
-    "title": "Security: Detect pseudoRandomBytes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-possible-timing-attacks",
-    "title": "Security: Detect possible timing attacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-no-csrf-before-method-override",
-    "title": "Security: Detect no csrf before method override",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-buffer-noassert",
-    "title": "Security: Detect buffer noassert",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-child-process",
-    "title": "Security: Detect child process",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-disable-mustache-escape",
-    "title": "Security: Detect disable mustache escape",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-object-injection",
-    "title": "Security: Detect object injection",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "security_detect-new-buffer",
-    "title": "Security: Detect new buffer",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "angular_angularelement",
     "title": "Angular: Angularelement",
     "timeToFix": 5
@@ -3609,6 +3228,235 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_contextual-decorator",
+    "title": "@angular eslint: Contextual decorator",
+    "description": "Ensures that classes use contextual decorators in its body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_component-class-suffix",
+    "title": "@angular eslint: Component class suffix",
+    "description": "Classes decorated with @Component must have suffix \"Component\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_component-max-inline-declarations",
+    "title": "@angular eslint: Component max inline declarations",
+    "description": "Enforces a maximum number of lines in inline template, styles and animations. See more at https://angular.io/guide/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_component-selector",
+    "title": "@angular eslint: Component selector",
+    "description": "Component selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-07, https://angular.io/guide/styleguide#style-05-02\n      and https://angular.io/guide/styleguide#style-05-03.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_contextual-lifecycle",
+    "title": "@angular eslint: Contextual lifecycle",
+    "description": "Ensures that lifecycle methods are used in a correct context",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_directive-class-suffix",
+    "title": "@angular eslint: Directive class suffix",
+    "description": "Classes decorated with @Directive must have suffix \"Directive\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_directive-selector",
+    "title": "@angular eslint: Directive selector",
+    "description": "Directive selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-06 and https://angular.io/guide/styleguide#style-02-08.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-attribute-decorator",
+    "title": "@angular eslint: No attribute decorator",
+    "description": "The @Attribute decorator is used to obtain a single value for an attribute. This is a much less common use-case than getting a stream of values (using @Input), so often the @Attribute decorator is mistakenly used when @Input was what was intended. This rule disallows usage of @Attribute decorator altogether in order to prevent these mistakes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-conflicting-lifecycle",
+    "title": "@angular eslint: No conflicting lifecycle",
+    "description": "Ensures that directives not implement conflicting lifecycle interfaces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-forward-ref",
+    "title": "@angular eslint: No forward ref",
+    "description": "Disallows usage of `forwardRef` references for DI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowStatic",
+        "description": "allowStatic"
+      }
+    ],
+    "patternId": "@angular-eslint_no-host-metadata-property",
+    "title": "@angular eslint: No host metadata property",
+    "description": "Disallows usage of the `host` metadata property. See more at https://angular.io/styleguide#style-06-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-input-prefix",
+    "title": "@angular eslint: No input prefix",
+    "description": "Ensures that input bindings, including aliases, are not named or prefixed by the configured disallowed prefixes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-input-rename",
+    "title": "@angular eslint: No input rename",
+    "description": "Ensures that input bindings are not aliased",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-inputs-metadata-property",
+    "title": "@angular eslint: No inputs metadata property",
+    "description": "Disallows usage of the `inputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-lifecycle-call",
+    "title": "@angular eslint: No lifecycle call",
+    "description": "Disallows explicit calls to lifecycle methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-native",
+    "title": "@angular eslint: No output native",
+    "description": "Ensures that output bindings, including aliases, are not named as standard DOM events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-on-prefix",
+    "title": "@angular eslint: No output on prefix",
+    "description": "Ensures that output bindings, including aliases, are not named \"on\", nor prefixed with it. See more at https://angular.io/guide/styleguide#style-05-16",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-rename",
+    "title": "@angular eslint: No output rename",
+    "description": "Ensures that output bindings are not aliased",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-outputs-metadata-property",
+    "title": "@angular eslint: No outputs metadata property",
+    "description": "Disallows usage of the `outputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-pipe-impure",
+    "title": "@angular eslint: No pipe impure",
+    "description": "Disallows the declaration of impure pipes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-queries-metadata-property",
+    "title": "@angular eslint: No queries metadata property",
+    "description": "Disallows usage of the `queries` metadata property. See more at https://angular.io/styleguide#style-05-12.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-empty-lifecycle-method",
+    "title": "@angular eslint: No empty lifecycle method",
+    "description": "Disallows declaring empty lifecycle methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_prefer-on-push-component-change-detection",
+    "title": "@angular eslint: Prefer on push component change detection",
+    "description": "Ensures component's `changeDetection` is set to `ChangeDetectionStrategy.OnPush`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_prefer-output-readonly",
+    "title": "@angular eslint: Prefer output readonly",
+    "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_relative-url-prefix",
+    "title": "@angular eslint: Relative url prefix",
+    "description": "The ./ and ../ prefix is standard syntax for relative URLs; don't depend on Angular's current ability to do without that prefix. See more at https://angular.io/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
+    "title": "@angular eslint: Sort ngmodule metadata arrays",
+    "description": "Ensures ASC alphabetical order for `NgModule` metadata arrays for easy visual scanning",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-component-selector",
+    "title": "@angular eslint: Use component selector",
+    "description": "Component selector must be declared",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-component-view-encapsulation",
+    "title": "@angular eslint: Use component view encapsulation",
+    "description": "Disallows using `ViewEncapsulation.None`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-injectable-provided-in",
+    "title": "@angular eslint: Use injectable provided in",
+    "description": "Using the `providedIn` property makes `Injectables` tree-shakable",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-lifecycle-interface",
+    "title": "@angular eslint: Use lifecycle interface",
+    "description": "Ensures that classes implement lifecycle interfaces corresponding to the declared lifecycle methods. See more at https://angular.io/styleguide#style-09-01",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-pipe-transform-interface",
+    "title": "@angular eslint: Use pipe transform interface",
+    "description": "Ensures that `Pipes` implement `PipeTransform` interface",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_pipe-prefix",
+    "title": "@angular eslint: Pipe prefix",
+    "description": "Enforce consistent prefix for pipes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "angularjs-security-rules_detect-angular-element-methods",
     "title": "Angularjs security rules: Detect angular element methods",
     "timeToFix": 5
@@ -3693,32 +3541,114 @@
   },
   {
     "parameters": [],
-    "patternId": "babel_array-bracket-spacing",
-    "title": "Babel: Array bracket spacing",
+    "patternId": "awscdk_require-bucket-encryption",
+    "title": "Awscdk: Require bucket encryption",
+    "description": "Encryption should be enabled for all S3 buckets",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_arrow-parens",
-    "title": "Babel: Arrow parens",
+    "patternId": "awscdk_require-bucket-private",
+    "title": "Awscdk: Require bucket private",
+    "description": "Buckets should not be public",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_flow-object-type",
-    "title": "Babel: Flow object type",
+    "patternId": "awscdk_no-public-ingress",
+    "title": "Awscdk: No public ingress",
+    "description": "Security Group rules should not allow access from anywhere",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_func-params-comma-dangle",
-    "title": "Babel: Func params comma dangle",
+    "patternId": "awscdk_no-iam-star-actions",
+    "title": "Awscdk: No iam star actions",
+    "description": "Buckets should not be public",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_generator-star-spacing",
-    "title": "Babel: Generator star spacing",
+    "patternId": "awscdk_no-iam-admin-permissions",
+    "title": "Awscdk: No iam admin permissions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-policy-allow-kms-decrypt",
+    "title": "Awscdk: No policy allow kms decrypt",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-ssl",
+    "title": "Awscdk: Require bucket ssl",
+    "description": "This checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-ptr",
+    "title": "Awscdk: Require dynamodb ptr",
+    "description": "DynamoDB tables should have point-in-time recovery enabled.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-sns-topic-encryption",
+    "title": "Awscdk: Require sns topic encryption",
+    "description": "SNS Topics should be encrypted at rest using AWS KMS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-autoscale",
+    "title": "Awscdk: Require dynamodb autoscale",
+    "description": "This control passes if the table uses either on-demand capacity mode or provisioned mode\n      with auto scaling configured.\n\n      Scaling capacity with demand avoids throttling exceptions, which helps to maintain availability of your applications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-rds-public-access",
+    "title": "Awscdk: No rds public access",
+    "description": "AWS RDS instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-kms-key-delete",
+    "title": "Awscdk: No kms key delete",
+    "description": "KMS Keys should not be scheduled for deletion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-write",
+    "title": "Awscdk: No s3 public write",
+    "description": "Buckets should not allow public write access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-read",
+    "title": "Awscdk: No s3 public read",
+    "description": "Buckets should not allow public read access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-cloudfront-default-root-object",
+    "title": "Awscdk: Require cloudfront default root object",
+    "description": "This control checks whether an Amazon CloudFront distribution is configured to return a specific object that is the default root object.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-redshift-public-access",
+    "title": "Awscdk: No redshift public access",
+    "description": "AWS Redshift instances should not be publicly available",
     "timeToFix": 5
   },
   {
@@ -3736,22 +3666,9 @@
         "description": "properties"
       }
     ],
-    "patternId": "babel_new-cap",
-    "title": "Babel: New cap",
+    "patternId": "@babel_new-cap",
+    "title": "@babel: New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_camelcase",
-    "title": "Babel: Camelcase",
-    "description": "Enforce camelcase naming convention",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_no-await-in-loop",
-    "title": "Babel: No await in loop",
     "timeToFix": 5
   },
   {
@@ -3761,9 +3678,9 @@
         "description": "capIsConstructor"
       }
     ],
-    "patternId": "babel_no-invalid-this",
-    "title": "Babel: No invalid this",
-    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "patternId": "@babel_no-invalid-this",
+    "title": "@babel: No invalid this",
+    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
     "timeToFix": 5
   },
   {
@@ -3785,47 +3702,22 @@
         "description": "enforceForJSX"
       }
     ],
-    "patternId": "babel_no-unused-expressions",
-    "title": "Babel: No unused expressions",
+    "patternId": "@babel_no-unused-expressions",
+    "title": "@babel: No unused expressions",
     "description": "Disallow unused expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-curly-spacing",
-    "title": "Babel: Object curly spacing",
+    "patternId": "@babel_object-curly-spacing",
+    "title": "@babel: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "babel_object-shorthand",
-    "title": "Babel: Object shorthand",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_quotes",
-    "title": "Babel: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "babel_semi",
-    "title": "Babel: Semi",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "requireStringLiterals",
-        "description": "requireStringLiterals"
-      }
-    ],
-    "patternId": "babel_valid-typeof",
-    "title": "Babel: Valid typeof",
-    "description": "Enforce comparing `typeof` expressions against valid strings",
+    "patternId": "@babel_semi",
+    "title": "@babel: Semi",
     "timeToFix": 5
   },
   {
@@ -4048,6 +3940,13 @@
   },
   {
     "parameters": [],
+    "patternId": "cypress_no-pause",
+    "title": "Cypress: No pause",
+    "description": "Disallow using of 'cy.pause' calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "drupal_jquery-var-name",
     "title": "Drupal: Jquery var name",
     "timeToFix": 5
@@ -4138,6 +4037,13 @@
     "patternId": "ember_no-actions-hash",
     "title": "Ember: No actions hash",
     "description": "Disallow the actions hash in components, controllers, and routes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_no-array-prototype-extensions",
+    "title": "Ember: No array prototype extensions",
+    "description": "Disallow usage of Ember's `Array` prototype extensions",
     "timeToFix": 5
   },
   {
@@ -4808,6 +4714,804 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "es_no-accessor-properties",
+    "title": "Es: No accessor properties",
+    "description": "Disallow accessor properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-from",
+    "title": "Es: No array from",
+    "description": "Disallow the `Array.from` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-isarray",
+    "title": "Es: No array isarray",
+    "description": "Disallow the `Array.isArray` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-array-of",
+    "title": "Es: No array of",
+    "description": "Disallow the `Array.of` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-arrow-functions",
+    "title": "Es: No arrow functions",
+    "description": "Disallow arrow function expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-async-functions",
+    "title": "Es: No async functions",
+    "description": "Disallow async function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-async-iteration",
+    "title": "Es: No async iteration",
+    "description": "Disallow async iteration.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-atomics",
+    "title": "Es: No atomics",
+    "description": "Disallow the `Atomics` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-bigint",
+    "title": "Es: No bigint",
+    "description": "Disallow `bigint` syntax and built-ins",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-binary-numeric-literals",
+    "title": "Es: No binary numeric literals",
+    "description": "Disallow binary numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-block-scoped-functions",
+    "title": "Es: No block scoped functions",
+    "description": "Disallow block-scoped function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-block-scoped-variables",
+    "title": "Es: No block scoped variables",
+    "description": "Disallow block-scoped variable declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-classes",
+    "title": "Es: No classes",
+    "description": "Disallow class declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-computed-properties",
+    "title": "Es: No computed properties",
+    "description": "Disallow computed properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-date-now",
+    "title": "Es: No date now",
+    "description": "Disallow the `Date.now` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-default-parameters",
+    "title": "Es: No default parameters",
+    "description": "Disallow default parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-destructuring",
+    "title": "Es: No destructuring",
+    "description": "Disallow destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-dynamic-import",
+    "title": "Es: No dynamic import",
+    "description": "Disallow `import()` syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-exponential-operators",
+    "title": "Es: No exponential operators",
+    "description": "Disallow exponential operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-export-ns-from",
+    "title": "Es: No export ns from",
+    "description": "Disallow `export * as ns`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-for-of-loops",
+    "title": "Es: No for of loops",
+    "description": "Disallow `for-of` statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-generators",
+    "title": "Es: No generators",
+    "description": "Disallow generator function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-global-this",
+    "title": "Es: No global this",
+    "description": "Disallow the `globalThis` variable",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-import-meta",
+    "title": "Es: No import meta",
+    "description": "Disallow `import.meta` meta property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-json",
+    "title": "Es: No json",
+    "description": "Disallow the `JSON` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-json-superset",
+    "title": "Es: No json superset",
+    "description": "Disallow `\\u2028` and `\\u2029` in string literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-keyword-properties",
+    "title": "Es: No keyword properties",
+    "description": "Disallow reserved words as property names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-logical-assignment-operators",
+    "title": "Es: No logical assignment operators",
+    "description": "Disallow logical assignment operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-malformed-template-literals",
+    "title": "Es: No malformed template literals",
+    "description": "Disallow template literals with invalid escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-map",
+    "title": "Es: No map",
+    "description": "Disallow the `Map` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-acosh",
+    "title": "Es: No math acosh",
+    "description": "Disallow the `Math.acosh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-asinh",
+    "title": "Es: No math asinh",
+    "description": "Disallow the `Math.asinh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-atanh",
+    "title": "Es: No math atanh",
+    "description": "Disallow the `Math.atanh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-cbrt",
+    "title": "Es: No math cbrt",
+    "description": "Disallow the `Math.cbrt` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-clz32",
+    "title": "Es: No math clz32",
+    "description": "Disallow the `Math.clz32` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-cosh",
+    "title": "Es: No math cosh",
+    "description": "Disallow the `Math.cosh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-expm1",
+    "title": "Es: No math expm1",
+    "description": "Disallow the `Math.expm1` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-fround",
+    "title": "Es: No math fround",
+    "description": "Disallow the `Math.fround` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-hypot",
+    "title": "Es: No math hypot",
+    "description": "Disallow the `Math.hypot` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-imul",
+    "title": "Es: No math imul",
+    "description": "Disallow the `Math.imul` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log1p",
+    "title": "Es: No math log1p",
+    "description": "Disallow the `Math.log1p` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log2",
+    "title": "Es: No math log2",
+    "description": "Disallow the `Math.log2` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-log10",
+    "title": "Es: No math log10",
+    "description": "Disallow the `Math.log10` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-sign",
+    "title": "Es: No math sign",
+    "description": "Disallow the `Math.sign` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-sinh",
+    "title": "Es: No math sinh",
+    "description": "Disallow the `Math.sinh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-tanh",
+    "title": "Es: No math tanh",
+    "description": "Disallow the `Math.tanh` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-math-trunc",
+    "title": "Es: No math trunc",
+    "description": "Disallow the `Math.trunc` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-modules",
+    "title": "Es: No modules",
+    "description": "Disallow modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-new-target",
+    "title": "Es: No new target",
+    "description": "Disallow `new.target` meta property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-nullish-coalescing-operators",
+    "title": "Es: No nullish coalescing operators",
+    "description": "Disallow nullish coalescing operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-epsilon",
+    "title": "Es: No number epsilon",
+    "description": "Disallow the `Number.EPSILON` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isfinite",
+    "title": "Es: No number isfinite",
+    "description": "Disallow the `Number.isFinite` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isinteger",
+    "title": "Es: No number isinteger",
+    "description": "Disallow the `Number.isInteger` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-isnan",
+    "title": "Es: No number isnan",
+    "description": "Disallow the `Number.isNaN` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-issafeinteger",
+    "title": "Es: No number issafeinteger",
+    "description": "Disallow the `Number.isSafeInteger` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-maxsafeinteger",
+    "title": "Es: No number maxsafeinteger",
+    "description": "Disallow the `Number.MAX_SAFE_INTEGER` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-minsafeinteger",
+    "title": "Es: No number minsafeinteger",
+    "description": "Disallow the `Number.MIN_SAFE_INTEGER` property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-parsefloat",
+    "title": "Es: No number parsefloat",
+    "description": "Disallow the `Number.parseFloat` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-number-parseint",
+    "title": "Es: No number parseint",
+    "description": "Disallow the `Number.parseInt` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-numeric-separators",
+    "title": "Es: No numeric separators",
+    "description": "Disallow numeric separators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-assign",
+    "title": "Es: No object assign",
+    "description": "Disallow the `Object.assign` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-defineproperties",
+    "title": "Es: No object defineproperties",
+    "description": "Disallow the `Object.defineProperties` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-defineproperty",
+    "title": "Es: No object defineproperty",
+    "description": "Disallow the `Object.defineProperty` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-entries",
+    "title": "Es: No object entries",
+    "description": "Disallow the `Object.entries` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-freeze",
+    "title": "Es: No object freeze",
+    "description": "Disallow the `Object.freeze` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-fromentries",
+    "title": "Es: No object fromentries",
+    "description": "Disallow the `Object.fromEntries` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertydescriptor",
+    "title": "Es: No object getownpropertydescriptor",
+    "description": "Disallow the `Object.getOwnPropertyDescriptor` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertydescriptors",
+    "title": "Es: No object getownpropertydescriptors",
+    "description": "Disallow the `Object.getOwnPropertyDescriptors` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertynames",
+    "title": "Es: No object getownpropertynames",
+    "description": "Disallow the `Object.getOwnPropertyNames` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getownpropertysymbols",
+    "title": "Es: No object getownpropertysymbols",
+    "description": "Disallow the `Object.getOwnPropertySymbols` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-getprototypeof",
+    "title": "Es: No object getprototypeof",
+    "description": "Disallow the `Object.getPrototypeOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-is",
+    "title": "Es: No object is",
+    "description": "Disallow the `Object.is` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-isextensible",
+    "title": "Es: No object isextensible",
+    "description": "Disallow the `Object.isExtensible` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-isfrozen",
+    "title": "Es: No object isfrozen",
+    "description": "Disallow the `Object.isFrozen` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-issealed",
+    "title": "Es: No object issealed",
+    "description": "Disallow the `Object.isSealed` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-keys",
+    "title": "Es: No object keys",
+    "description": "Disallow the `Object.keys` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-preventextensions",
+    "title": "Es: No object preventextensions",
+    "description": "Disallow the `Object.preventExtensions` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-seal",
+    "title": "Es: No object seal",
+    "description": "Disallow the `Object.seal` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-setprototypeof",
+    "title": "Es: No object setprototypeof",
+    "description": "Disallow the `Object.setPrototypeOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-super-properties",
+    "title": "Es: No object super properties",
+    "description": "Disallow `super` property accesses in object literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-object-values",
+    "title": "Es: No object values",
+    "description": "Disallow the `Object.values` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-octal-numeric-literals",
+    "title": "Es: No octal numeric literals",
+    "description": "Disallow octal numeric literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-optional-catch-binding",
+    "title": "Es: No optional catch binding",
+    "description": "Disallow optional `catch` binding.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-optional-chaining",
+    "title": "Es: No optional chaining",
+    "description": "Disallow optional chaining.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise",
+    "title": "Es: No promise",
+    "description": "Disallow the `Promise` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise-all-settled",
+    "title": "Es: No promise all settled",
+    "description": "Disallow `Promise.allSettled` function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-promise-any",
+    "title": "Es: No promise any",
+    "description": "Disallow `Promise.any` function and `AggregateError` class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-property-shorthands",
+    "title": "Es: No property shorthands",
+    "description": "Disallow property shorthands.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-proxy",
+    "title": "Es: No proxy",
+    "description": "Disallow the `Proxy` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-reflect",
+    "title": "Es: No reflect",
+    "description": "Disallow the `Reflect` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-lookbehind-assertions",
+    "title": "Es: No regexp lookbehind assertions",
+    "description": "Disallow RegExp lookbehind assertions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-named-capture-groups",
+    "title": "Es: No regexp named capture groups",
+    "description": "Disallow RegExp named capture groups.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-s-flag",
+    "title": "Es: No regexp s flag",
+    "description": "Disallow RegExp `s` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-u-flag",
+    "title": "Es: No regexp u flag",
+    "description": "Disallow RegExp `u` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-unicode-property-escapes",
+    "title": "Es: No regexp unicode property escapes",
+    "description": "Disallow RegExp Unicode property escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-unicode-property-escapes-2019",
+    "title": "Es: No regexp unicode property escapes 2019",
+    "description": "Disallow the new values of RegExp Unicode property escape sequences in ES2019",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-regexp-y-flag",
+    "title": "Es: No regexp y flag",
+    "description": "Disallow RegExp `y` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-rest-parameters",
+    "title": "Es: No rest parameters",
+    "description": "Disallow rest parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-rest-spread-properties",
+    "title": "Es: No rest spread properties",
+    "description": "Disallow rest/spread properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-set",
+    "title": "Es: No set",
+    "description": "Disallow the `Set` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-shared-array-buffer",
+    "title": "Es: No shared array buffer",
+    "description": "Disallow the `SharedArrayBuffer` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-spread-elements",
+    "title": "Es: No spread elements",
+    "description": "Disallow spread elements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-string-fromcodepoint",
+    "title": "Es: No string fromcodepoint",
+    "description": "Disallow the `String.fromCodePoint` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-string-raw",
+    "title": "Es: No string raw",
+    "description": "Disallow the `String.raw` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-subclassing-builtins",
+    "title": "Es: No subclassing builtins",
+    "description": "Disallow the subclassing of the built-in classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-symbol",
+    "title": "Es: No symbol",
+    "description": "Disallow the `Symbol` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-template-literals",
+    "title": "Es: No template literals",
+    "description": "Disallow template literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-trailing-commas",
+    "title": "Es: No trailing commas",
+    "description": "Disallow trailing commas in array/object literals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-trailing-function-commas",
+    "title": "Es: No trailing function commas",
+    "description": "Disallow trailing commas in parameter/argument lists.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-typed-arrays",
+    "title": "Es: No typed arrays",
+    "description": "Disallow ES2015 typed arrays.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-unicode-codepoint-escapes",
+    "title": "Es: No unicode codepoint escapes",
+    "description": "Disallow Unicode code point escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weak-map",
+    "title": "Es: No weak map",
+    "description": "Disallow the `WeakMap` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weak-set",
+    "title": "Es: No weak set",
+    "description": "Disallow the `WeakSet` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es_no-weakrefs",
+    "title": "Es: No weakrefs",
+    "description": "Disallow the `WeakRef` and `FinalizationRegistry` class.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "unnamedParam",
@@ -4900,6 +5604,12 @@
     "parameters": [],
     "patternId": "flowtype_no-dupe-keys",
     "title": "Flowtype: No dupe keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "flowtype_no-duplicate-type-union-intersection-members",
+    "title": "Flowtype: No duplicate type union intersection members",
     "timeToFix": 5
   },
   {
@@ -5066,6 +5776,12 @@
   },
   {
     "parameters": [],
+    "patternId": "flowtype_sort-type-union-intersection-members",
+    "title": "Flowtype: Sort type union intersection members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_space-after-type-colon",
     "title": "Flowtype: Space after type colon",
     "timeToFix": 5
@@ -5174,7 +5890,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreIfReadonly",
+        "description": "ignoreIfReadonly"
+      }
+    ],
     "patternId": "functional_no-method-signature",
     "title": "Functional: No method signature",
     "description": "Prefer property signatures with readonly modifiers over method signatures.",
@@ -5238,13 +5959,6 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_prefer-type-literal",
-    "title": "Functional: Prefer type literal",
-    "description": "Prefer Type Literals over Interfaces.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "graphql-fragments_limit-complexity",
     "title": "Graphql fragments: Limit complexity",
     "description": "Verifies that your graphql`...` expressions are not too complex.",
@@ -5279,6 +5993,34 @@
     "parameters": [],
     "patternId": "hapi_no-arrowception",
     "title": "Hapi: No arrowception",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_valid-json",
+    "title": "I18n json: Valid json",
+    "description": "Validates the JSON translation file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_valid-message-syntax",
+    "title": "I18n json: Valid message syntax",
+    "description": "Validates message syntax for each translation key in the file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_identical-keys",
+    "title": "I18n json: Identical keys",
+    "description": "Verifies the key structure for the translation file matches the key structure specified in the options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_sorted-keys",
+    "title": "I18n json: Sorted keys",
+    "description": "Ensure an order for the translation keys. (Recursive)",
     "timeToFix": 5
   },
   {
@@ -5403,6 +6145,12 @@
   },
   {
     "parameters": [],
+    "patternId": "jasmine_prefer-promise-strategies",
+    "title": "Jasmine: Prefer promise strategies",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_prefer-toHaveBeenCalledWith",
     "title": "Jasmine: Prefer toHaveBeenCalledWith",
     "timeToFix": 5
@@ -5425,18 +6173,6 @@
     "patternId": "jest_expect-expect",
     "title": "Jest: Expect expect",
     "description": "Enforce assertion to be made in a test body",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreTopLevelDescribe",
-        "description": "ignoreTopLevelDescribe"
-      }
-    ],
-    "patternId": "jest_lowercase-name",
-    "title": "Jest: Lowercase name",
-    "description": "Enforce lowercase test names",
     "timeToFix": 5
   },
   {
@@ -5469,6 +6205,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_no-conditional-in-test",
+    "title": "Jest: No conditional in test",
+    "description": "Disallow conditional logic in tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_no-deprecated-functions",
     "title": "Jest: No deprecated functions",
     "description": "Disallow use of deprecated functions",
@@ -5493,13 +6236,6 @@
     "patternId": "jest_no-duplicate-hooks",
     "title": "Jest: No duplicate hooks",
     "description": "Disallow duplicate setup and teardown hooks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-expect-resolves",
-    "title": "Jest: No expect resolves",
-    "description": "Disallow expect.resolves",
     "timeToFix": 5
   },
   {
@@ -5602,23 +6338,23 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_no-truthy-falsy",
-    "title": "Jest: No truthy falsy",
-    "description": "Disallow using `toBeTruthy()` & `toBeFalsy()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-try-expect",
-    "title": "Jest: No try expect",
-    "description": "Prefer using toThrow for exception tests",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jest_prefer-called-with",
     "title": "Jest: Prefer called with",
     "description": "Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-comparison-matcher",
+    "title": "Jest: Prefer comparison matcher",
+    "description": "Suggest using the built-in comparison matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-equality-matcher",
+    "title": "Jest: Prefer equality matcher",
+    "description": "Suggest using the built-in equality matchers",
     "timeToFix": 5
   },
   {
@@ -5630,16 +6366,35 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-expect-resolves",
+    "title": "Jest: Prefer expect resolves",
+    "description": "Prefer `await expect(...).resolves` over `expect(await ...)` syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-hooks-on-top",
     "title": "Jest: Prefer hooks on top",
     "description": "Suggest having hooks before any test cases",
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "ignoreTopLevelDescribe",
+        "description": "ignoreTopLevelDescribe"
+      }
+    ],
+    "patternId": "jest_prefer-lowercase-title",
+    "title": "Jest: Prefer lowercase title",
+    "description": "Enforce lowercase test names",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
-    "patternId": "jest_prefer-inline-snapshots",
-    "title": "Jest: Prefer inline snapshots",
-    "description": "Suggest using inline snapshots",
+    "patternId": "jest_prefer-snapshot-hint",
+    "title": "Jest: Prefer snapshot hint",
+    "description": "Prefer including a hint with external snapshots",
     "timeToFix": 5
   },
   {
@@ -5658,16 +6413,9 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_prefer-to-be-null",
-    "title": "Jest: Prefer to be null",
-    "description": "Suggest using `toBeNull()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_prefer-to-be-undefined",
-    "title": "Jest: Prefer to be undefined",
-    "description": "Suggest using `toBeUndefined()`",
+    "patternId": "jest_prefer-to-be",
+    "title": "Jest: Prefer to be",
+    "description": "Suggest using `toBe()` for primitive literals",
     "timeToFix": 5
   },
   {
@@ -5693,6 +6441,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_require-hook",
+    "title": "Jest: Require hook",
+    "description": "Require setup and teardown code to be within a hook",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_require-to-throw-message",
     "title": "Jest: Require to throw message",
     "description": "Require a message for `toThrow()`",
@@ -5714,8 +6469,8 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_valid-describe",
-    "title": "Jest: Valid describe",
+    "patternId": "jest_valid-describe-callback",
+    "title": "Jest: Valid describe callback",
     "description": "Enforce valid `describe()` callback",
     "timeToFix": 5
   },
@@ -5723,7 +6478,7 @@
     "parameters": [],
     "patternId": "jest_valid-expect-in-promise",
     "title": "Jest: Valid expect in promise",
-    "description": "Enforce having return statement when testing with promises",
+    "description": "Ensure promises that have expectations in their chain are valid",
     "timeToFix": 5
   },
   {
@@ -5796,543 +6551,6 @@
     "parameters": [],
     "patternId": "jest-formatting_padding-around-all",
     "title": "Jest formatting: Padding around all",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-access",
-    "title": "Jsdoc: Check access",
-    "description": "Checks that `@access` tags have a valid value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-alignment",
-    "title": "Jsdoc: Check alignment",
-    "description": "Reports invalid alignment of JSDoc block asterisks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowInlineConfig",
-        "description": "allowInlineConfig"
-      },
-      {
-        "name": "captionRequired",
-        "description": "captionRequired"
-      },
-      {
-        "name": "checkDefaults",
-        "description": "checkDefaults"
-      },
-      {
-        "name": "checkEslintrc",
-        "description": "checkEslintrc"
-      },
-      {
-        "name": "checkParams",
-        "description": "checkParams"
-      },
-      {
-        "name": "checkProperties",
-        "description": "checkProperties"
-      },
-      {
-        "name": "noDefaultExampleRules",
-        "description": "noDefaultExampleRules"
-      },
-      {
-        "name": "paddedIndent",
-        "description": "paddedIndent"
-      },
-      {
-        "name": "reportUnusedDisableDirectives",
-        "description": "reportUnusedDisableDirectives"
-      }
-    ],
-    "patternId": "jsdoc_check-examples",
-    "title": "Jsdoc: Check examples",
-    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-indentation",
-    "title": "Jsdoc: Check indentation",
-    "description": "Reports invalid padding inside JSDoc blocks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "preserveMainDescriptionPostDelimiter",
-        "description": "preserveMainDescriptionPostDelimiter"
-      }
-    ],
-    "patternId": "jsdoc_check-line-alignment",
-    "title": "Jsdoc: Check line alignment",
-    "description": "Reports invalid alignment of JSDoc block lines.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-param-names",
-    "title": "Jsdoc: Check param names",
-    "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-property-names",
-    "title": "Jsdoc: Check property names",
-    "description": "Ensures that property names in JSDoc are not duplicated on the same block and that nested properties have defined roots.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-syntax",
-    "title": "Jsdoc: Check syntax",
-    "description": "Reports against syntax not valid for the mode (e.g., Google Closure Compiler in non-Closure mode).",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-tag-names",
-    "title": "Jsdoc: Check tag names",
-    "description": "Reports invalid block tag names.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-types",
-    "title": "Jsdoc: Check types",
-    "description": "Reports invalid types.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_check-values",
-    "title": "Jsdoc: Check values",
-    "description": "This rule checks the values for a handful of tags: `@version`, `@since`, `@license` and `@author`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_empty-tags",
-    "title": "Jsdoc: Empty tags",
-    "description": "Expects specific tags to be empty of any content.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_implements-on-classes",
-    "title": "Jsdoc: Implements on classes",
-    "description": "Reports an issue with any non-constructor function using `@implements`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_match-description",
-    "title": "Jsdoc: Match description",
-    "description": "Enforces a regular expression pattern on descriptions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_match-name",
-    "title": "Jsdoc: Match name",
-    "description": "Reports the name portion of a JSDoc tag if matching or not matching a given regular expression.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_multiline-blocks",
-    "title": "Jsdoc: Multiline blocks",
-    "description": "Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_newline-after-description",
-    "title": "Jsdoc: Newline after description",
-    "description": "Enforces a consistent padding of the block description.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-bad-blocks",
-    "title": "Jsdoc: No bad blocks",
-    "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-defaults",
-    "title": "Jsdoc: No defaults",
-    "description": "This rule reports defaults being used on the relevant portion of `@param` or `@default`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "contexts",
-        "description": "contexts"
-      }
-    ],
-    "patternId": "jsdoc_no-missing-syntax",
-    "title": "Jsdoc: No missing syntax",
-    "description": "Reports when certain comment structures are always expected.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-multi-asterisks",
-    "title": "Jsdoc: No multi asterisks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-restricted-syntax",
-    "title": "Jsdoc: No restricted syntax",
-    "description": "Reports when certain comment structures are present.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-types",
-    "title": "Jsdoc: No types",
-    "description": "This rule reports types being used on `@param` or `@returns`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_no-undefined-types",
-    "title": "Jsdoc: No undefined types",
-    "description": "Checks that types in jsdoc comments are defined.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-asterisk-prefix",
-    "title": "Jsdoc: Require asterisk prefix",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkConstructors",
-        "description": "checkConstructors"
-      },
-      {
-        "name": "checkGetters",
-        "description": "checkGetters"
-      },
-      {
-        "name": "checkSetters",
-        "description": "checkSetters"
-      }
-    ],
-    "patternId": "jsdoc_require-description",
-    "title": "Jsdoc: Require description",
-    "description": "Requires that all functions have a description.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-description-complete-sentence",
-    "title": "Jsdoc: Require description complete sentence",
-    "description": "Requires that block description, explicit `@description`, and `@param`/`@returns` tag descriptions are written in complete sentences.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkConstructors",
-        "description": "checkConstructors"
-      },
-      {
-        "name": "checkGetters",
-        "description": "checkGetters"
-      },
-      {
-        "name": "checkSetters",
-        "description": "checkSetters"
-      },
-      {
-        "name": "exemptNoArguments",
-        "description": "exemptNoArguments"
-      }
-    ],
-    "patternId": "jsdoc_require-example",
-    "title": "Jsdoc: Require example",
-    "description": "Requires that all functions have examples.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-file-overview",
-    "title": "Jsdoc: Require file overview",
-    "description": "Checks that all files have one `@file`, `@fileoverview`, or `@overview` tag at the beginning of the file.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-hyphen-before-param-description",
-    "title": "Jsdoc: Require hyphen before param description",
-    "description": "Requires a hyphen before the `@param` description.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkConstructors",
-        "description": "checkConstructors"
-      },
-      {
-        "name": "checkGetters",
-        "description": "checkGetters"
-      },
-      {
-        "name": "checkSetters",
-        "description": "checkSetters"
-      },
-      {
-        "name": "enableFixer",
-        "description": "enableFixer"
-      },
-      {
-        "name": "exemptEmptyConstructors",
-        "description": "exemptEmptyConstructors"
-      },
-      {
-        "name": "exemptEmptyFunctions",
-        "description": "exemptEmptyFunctions"
-      },
-      {
-        "name": "fixerMessage",
-        "description": "fixerMessage"
-      },
-      {
-        "name": "require",
-        "description": "require"
-      }
-    ],
-    "patternId": "jsdoc_require-jsdoc",
-    "title": "Jsdoc: Require jsdoc",
-    "description": "Require JSDoc comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "autoIncrementBase",
-        "description": "autoIncrementBase"
-      },
-      {
-        "name": "checkConstructors",
-        "description": "checkConstructors"
-      },
-      {
-        "name": "checkDestructured",
-        "description": "checkDestructured"
-      },
-      {
-        "name": "checkDestructuredRoots",
-        "description": "checkDestructuredRoots"
-      },
-      {
-        "name": "checkGetters",
-        "description": "checkGetters"
-      },
-      {
-        "name": "checkRestProperty",
-        "description": "checkRestProperty"
-      },
-      {
-        "name": "checkSetters",
-        "description": "checkSetters"
-      }
-    ],
-    "patternId": "jsdoc_require-param",
-    "title": "Jsdoc: Require param",
-    "description": "Requires that all function parameters are documented.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-param-description",
-    "title": "Jsdoc: Require param description",
-    "description": "Requires that each `@param` tag has a `description` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-param-name",
-    "title": "Jsdoc: Require param name",
-    "description": "Requires that all function parameters have names.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-param-type",
-    "title": "Jsdoc: Require param type",
-    "description": "Requires that each `@param` tag has a `type` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-property",
-    "title": "Jsdoc: Require property",
-    "description": "Requires that all `@typedef` and `@namespace` tags have `@property` when their type is a plain `object`, `Object`, or `PlainObject`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-property-description",
-    "title": "Jsdoc: Require property description",
-    "description": "Requires that each `@property` tag has a `description` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-property-name",
-    "title": "Jsdoc: Require property name",
-    "description": "Requires that all function `@property` tags have names.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-property-type",
-    "title": "Jsdoc: Require property type",
-    "description": "Requires that each `@property` tag has a `type` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkConstructors",
-        "description": "checkConstructors"
-      },
-      {
-        "name": "checkGetters",
-        "description": "checkGetters"
-      },
-      {
-        "name": "forceRequireReturn",
-        "description": "forceRequireReturn"
-      },
-      {
-        "name": "forceReturnsWithAsync",
-        "description": "forceReturnsWithAsync"
-      }
-    ],
-    "patternId": "jsdoc_require-returns",
-    "title": "Jsdoc: Require returns",
-    "description": "Requires returns are documented.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "exemptAsync",
-        "description": "exemptAsync"
-      },
-      {
-        "name": "reportMissingReturnForUndefinedTypes",
-        "description": "reportMissingReturnForUndefinedTypes"
-      }
-    ],
-    "patternId": "jsdoc_require-returns-check",
-    "title": "Jsdoc: Require returns check",
-    "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-returns-description",
-    "title": "Jsdoc: Require returns description",
-    "description": "Requires that the `@returns` tag has a `description` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-returns-type",
-    "title": "Jsdoc: Require returns type",
-    "description": "Requires that `@returns` tag has `type` value.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_require-throws",
-    "title": "Jsdoc: Require throws",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "forceRequireNext",
-        "description": "forceRequireNext"
-      },
-      {
-        "name": "forceRequireYields",
-        "description": "forceRequireYields"
-      },
-      {
-        "name": "next",
-        "description": "next"
-      },
-      {
-        "name": "nextWithGeneratorTag",
-        "description": "nextWithGeneratorTag"
-      },
-      {
-        "name": "withGeneratorTag",
-        "description": "withGeneratorTag"
-      }
-    ],
-    "patternId": "jsdoc_require-yields",
-    "title": "Jsdoc: Require yields",
-    "description": "Requires yields are documented.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkGeneratorsOnly",
-        "description": "checkGeneratorsOnly"
-      },
-      {
-        "name": "next",
-        "description": "next"
-      }
-    ],
-    "patternId": "jsdoc_require-yields-check",
-    "title": "Jsdoc: Require yields check",
-    "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsdoc_tag-lines",
-    "title": "Jsdoc: Tag lines",
-    "description": "Enforces lines (or no lines) between tags.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowEmptyNamepaths",
-        "description": "allowEmptyNamepaths"
-      }
-    ],
-    "patternId": "jsdoc_valid-types",
-    "title": "Jsdoc: Valid types",
-    "description": "Requires all types to be valid JSDoc or Closure compiler types without syntax errors.",
     "timeToFix": 5
   },
   {
@@ -6459,6 +6677,376 @@
     "parameters": [],
     "patternId": "json_schema-resolve-error",
     "title": "Json: Schema resolve error",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-bracket-newline",
+    "title": "Jsonc: Array bracket newline",
+    "description": "Enforce line breaks after opening and before closing array brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-bracket-spacing",
+    "title": "Jsonc: Array bracket spacing",
+    "description": "Disallow or enforce spaces inside of brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_array-element-newline",
+    "title": "Jsonc: Array element newline",
+    "description": "Enforce line breaks between array elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_auto",
+    "title": "Jsonc: Auto",
+    "description": "Apply jsonc rules similar to your configured ESLint core rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-dangle",
+    "title": "Jsonc: Comma dangle",
+    "description": "Require or disallow trailing commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_comma-style",
+    "title": "Jsonc: Comma style",
+    "description": "Enforce consistent comma style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "jsonc_indent",
+    "title": "Jsonc: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "camelCase",
+        "description": "camelCase"
+      },
+      {
+        "name": "PascalCase",
+        "description": "PascalCase"
+      },
+      {
+        "name": "SCREAMING_SNAKE_CASE",
+        "description": "SCREAMING_SNAKE_CASE"
+      },
+      {
+        "name": "kebab-case",
+        "description": "kebab-case"
+      },
+      {
+        "name": "snake_case",
+        "description": "snake_case"
+      }
+    ],
+    "patternId": "jsonc_key-name-casing",
+    "title": "Jsonc: Key name casing",
+    "description": "Enforce naming convention to property key names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_key-spacing",
+    "title": "Jsonc: Key spacing",
+    "description": "Enforce consistent spacing between keys and values in object literal properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-bigint-literals",
+    "title": "Jsonc: No bigint literals",
+    "description": "Disallow BigInt literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-expression",
+    "title": "Jsonc: No binary expression",
+    "description": "Disallow binary expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-binary-numeric-literals",
+    "title": "Jsonc: No binary numeric literals",
+    "description": "Disallow binary numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-comments",
+    "title": "Jsonc: No comments",
+    "description": "Disallow comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-dupe-keys",
+    "title": "Jsonc: No dupe keys",
+    "description": "Disallow duplicate keys in object literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-escape-sequence-in-identifier",
+    "title": "Jsonc: No escape sequence in identifier",
+    "description": "Disallow escape sequences in identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-floating-decimal",
+    "title": "Jsonc: No floating decimal",
+    "description": "Disallow leading or trailing decimal points in numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-hexadecimal-numeric-literals",
+    "title": "Jsonc: No hexadecimal numeric literals",
+    "description": "Disallow hexadecimal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-infinity",
+    "title": "Jsonc: No infinity",
+    "description": "Disallow Infinity",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-multi-str",
+    "title": "Jsonc: No multi str",
+    "description": "Disallow multiline strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-nan",
+    "title": "Jsonc: No nan",
+    "description": "Disallow NaN",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-number-props",
+    "title": "Jsonc: No number props",
+    "description": "Disallow number property keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-numeric-separators",
+    "title": "Jsonc: No numeric separators",
+    "description": "Disallow numeric separators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-escape",
+    "title": "Jsonc: No octal escape",
+    "description": "Disallow octal escape sequences in string literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal-numeric-literals",
+    "title": "Jsonc: No octal numeric literals",
+    "description": "Disallow octal numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-octal",
+    "title": "Jsonc: No octal",
+    "description": "Disallow legacy octal literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-parenthesized",
+    "title": "Jsonc: No parenthesized",
+    "description": "Disallow parentheses around the expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-plus-sign",
+    "title": "Jsonc: No plus sign",
+    "description": "Disallow plus sign",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-regexp-literals",
+    "title": "Jsonc: No regexp literals",
+    "description": "Disallow RegExp literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-sparse-arrays",
+    "title": "Jsonc: No sparse arrays",
+    "description": "Disallow sparse arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-template-literals",
+    "title": "Jsonc: No template literals",
+    "description": "Disallow template literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-undefined-value",
+    "title": "Jsonc: No undefined value",
+    "description": "Disallow `undefined`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-unicode-codepoint-escapes",
+    "title": "Jsonc: No unicode codepoint escapes",
+    "description": "Disallow Unicode code point escape sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_no-useless-escape",
+    "title": "Jsonc: No useless escape",
+    "description": "Disallow unnecessary escape usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-newline",
+    "title": "Jsonc: Object curly newline",
+    "description": "Enforce consistent line breaks inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_object-curly-spacing",
+    "title": "Jsonc: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "jsonc_object-property-newline",
+    "title": "Jsonc: Object property newline",
+    "description": "Enforce placing object properties on separate lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quote-props",
+    "title": "Jsonc: Quote props",
+    "description": "Require quotes around object literal property names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_quotes",
+    "title": "Jsonc: Quotes",
+    "description": "Enforce use of double or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "pathPattern",
+        "description": "pathPattern"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      }
+    ],
+    "patternId": "jsonc_sort-array-values",
+    "title": "Jsonc: Sort array values",
+    "description": "Require array values to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_sort-keys",
+    "title": "Jsonc: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "words",
+        "description": "words"
+      },
+      {
+        "name": "nonwords",
+        "description": "nonwords"
+      }
+    ],
+    "patternId": "jsonc_space-unary-ops",
+    "title": "Jsonc: Space unary ops",
+    "description": "Disallow spaces after unary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_valid-json-number",
+    "title": "Jsonc: Valid json number",
+    "description": "Disallow invalid number for JSON",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsonc_vue-custom-block_no-parsing-error",
+    "title": "Jsonc: [Vue custom block] No parsing error",
+    "description": "Disallow parsing errors in Vue custom blocks",
     "timeToFix": 5
   },
   {
@@ -7313,6 +7901,13 @@
   },
   {
     "parameters": [],
+    "patternId": "mocha_no-empty-description",
+    "title": "Mocha: No empty description",
+    "description": "Disallow empty test descriptions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "mongodb_check-insert-calls",
     "title": "Mongodb: Check insert calls",
     "timeToFix": 5
@@ -7454,9 +8049,329 @@
   },
   {
     "parameters": [],
+    "patternId": "node_callback-return",
+    "title": "Node: Callback return",
+    "description": "Require `return` statements after callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_exports-style",
+    "title": "Node: Exports style",
+    "description": "Enforce either `module.exports` or `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_file-extension-in-import",
+    "title": "Node: File extension in import",
+    "description": "Enforce the style of file extensions in `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_global-require",
+    "title": "Node: Global require",
+    "description": "Require `require()` calls to be placed at top-level module scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_handle-callback-err",
+    "title": "Node: Handle callback err",
+    "description": "Require error handling in callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-callback-literal",
+    "title": "Node: No callback literal",
+    "description": "Ensure Node.js-style error-first callback pattern is followed",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-deprecated-api",
+    "title": "Node: No deprecated api",
+    "description": "Disallow deprecated APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-exports-assign",
+    "title": "Node: No exports assign",
+    "description": "Disallow the assignment to `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-extraneous-import",
+    "title": "Node: No extraneous import",
+    "description": "Disallow `import` declarations which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-extraneous-require",
+    "title": "Node: No extraneous require",
+    "description": "Disallow `require()` expressions which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-missing-import",
+    "title": "Node: No missing import",
+    "description": "Disallow `import` declarations which import non-existence modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-mixed-requires",
+    "title": "Node: No mixed requires",
+    "description": "Disallow `require` calls to be mixed with regular variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-new-require",
+    "title": "Node: No new require",
+    "description": "Disallow `new` operators with calls to `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-path-concat",
+    "title": "Node: No path concat",
+    "description": "Disallow string concatenation with `__dirname` and `__filename`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-process-env",
+    "title": "Node: No process env",
+    "description": "Disallow the use of `process.env`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-process-exit",
+    "title": "Node: No process exit",
+    "description": "Disallow the use of `process.exit()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-restricted-import",
+    "title": "Node: No restricted import",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-restricted-require",
+    "title": "Node: No restricted require",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAtRootLevel",
+        "description": "allowAtRootLevel"
+      }
+    ],
+    "patternId": "node_no-sync",
+    "title": "Node: No sync",
+    "description": "Disallow synchronous methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unpublished-bin",
+    "title": "Node: No unpublished bin",
+    "description": "Disallow `bin` files that npm ignores",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unpublished-import",
+    "title": "Node: No unpublished import",
+    "description": "Disallow `import` declarations which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unpublished-require",
+    "title": "Node: No unpublished require",
+    "description": "Disallow `require()` expressions which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unsupported-features_es-builtins",
+    "title": "Node: [No unsupported features] Es builtins",
+    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unsupported-features_es-syntax",
+    "title": "Node: [No unsupported features] Es syntax",
+    "description": "Disallow unsupported ECMAScript syntax on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unsupported-features_node-builtins",
+    "title": "Node: [No unsupported features] Node builtins",
+    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_buffer",
+    "title": "Node: [Prefer global] Buffer",
+    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_console",
+    "title": "Node: [Prefer global] Console",
+    "description": "Enforce either `console` or `require(\"console\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_process",
+    "title": "Node: [Prefer global] Process",
+    "description": "Enforce either `process` or `require(\"process\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_text-decoder",
+    "title": "Node: [Prefer global] Text decoder",
+    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_text-encoder",
+    "title": "Node: [Prefer global] Text encoder",
+    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_url-search-params",
+    "title": "Node: [Prefer global] Url search params",
+    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-global_url",
+    "title": "Node: [Prefer global] Url",
+    "description": "Enforce either `URL` or `require(\"url\").URL`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-promises_dns",
+    "title": "Node: [Prefer promises] Dns",
+    "description": "Enforce `require(\"dns\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_prefer-promises_fs",
+    "title": "Node: [Prefer promises] Fs",
+    "description": "Enforce `require(\"fs\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_process-exit-as-throw",
+    "title": "Node: Process exit as throw",
+    "description": "Make `process.exit()` expressions the same code path as `throw`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_shebang",
+    "title": "Node: Shebang",
+    "description": "Suggest correct usage of shebang",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-hide-core-modules",
+    "title": "Node: No hide core modules",
+    "description": "Disallow third-party modules which are hiding core modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node_no-unsupported-features",
+    "title": "Node: No unsupported features",
+    "description": "Disallow unsupported ECMAScript features on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
-    "description": "Enforce expect-playwright matchers to be awaited.",
+    "description": "Identify false positives when async Playwright APIs are not properly awaited.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-page-pause",
+    "title": "Playwright: No page pause",
+    "description": "Prevent usage of page.pause()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-element-handle",
+    "title": "Playwright: No element handle",
+    "description": "The use of ElementHandle is discouraged, use Locator instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-eval",
+    "title": "Playwright: No eval",
+    "description": "The use of `page.$eval` and `page.$$eval` are discouraged, use `locator.evaluate` or `locator.evaluateAll` instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-focused-test",
+    "title": "Playwright: No focused test",
+    "description": "Prevent usage of `.only()` focus test annotation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-skipped-test",
+    "title": "Playwright: No skipped test",
+    "description": "Prevent usage of the `.skip()` skip test annotation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-wait-for-timeout",
+    "title": "Playwright: No wait for timeout",
+    "description": "Prevent usage of page.waitForTimeout()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-force-option",
+    "title": "Playwright: No force option",
+    "description": "Prevent usage of `{ force: true }` option.",
     "timeToFix": 5
   },
   {
@@ -7470,6 +8385,85 @@
     "patternId": "prettier-vue_prettier",
     "title": "Prettier vue: Prettier",
     "description": "Make your code prettier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_param-names",
+    "title": "Promise: Param names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-return-wrap",
+    "title": "Promise: No return wrap",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_always-return",
+    "title": "Promise: Always return",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_catch-or-return",
+    "title": "Promise: Catch or return",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_prefer-await-to-callbacks",
+    "title": "Promise: Prefer await to callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_prefer-await-to-then",
+    "title": "Promise: Prefer await to then",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-callback-in-promise",
+    "title": "Promise: No callback in promise",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-promise-in-callback",
+    "title": "Promise: No promise in callback",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-nesting",
+    "title": "Promise: No nesting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_avoid-new",
+    "title": "Promise: Avoid new",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-new-statics",
+    "title": "Promise: No new statics",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-return-in-finally",
+    "title": "Promise: No return in finally",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_valid-params",
+    "title": "Promise: Valid params",
+    "description": "Ensures the proper number of arguments are passed to Promise functions",
     "timeToFix": 5
   },
   {
@@ -7822,6 +8816,20 @@
   },
   {
     "parameters": [],
+    "patternId": "react_hook-use-state",
+    "title": "React: Hook use state",
+    "description": "Ensure symmetric naming of useState hook value and setter variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_iframe-missing-sandbox",
+    "title": "React: Iframe missing sandbox",
+    "description": "Enforce sandbox attribute on iframe elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_jsx-boolean-value",
     "title": "React: Jsx boolean value",
     "description": "Enforce boolean attributes notation in JSX",
@@ -7913,6 +8921,10 @@
       {
         "name": "checkKeyMustBeforeSpread",
         "description": "checkKeyMustBeforeSpread"
+      },
+      {
+        "name": "warnOnDuplicates",
+        "description": "warnOnDuplicates"
       }
     ],
     "patternId": "react_jsx-key",
@@ -7996,6 +9008,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "validStrategies",
+        "description": "validStrategies"
+      }
+    ],
+    "patternId": "react_jsx-no-leaked-render",
+    "title": "React: Jsx no leaked render",
+    "description": "Prevent problematic leaked values from being rendered",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "react_jsx-no-literals",
     "title": "React: Jsx no literals",
@@ -8010,7 +9034,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "links",
+        "description": "links"
+      },
+      {
+        "name": "forms",
+        "description": "forms"
+      }
+    ],
     "patternId": "react_jsx-no-target-blank",
     "title": "React: Jsx no target blank",
     "description": "Forbid `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
@@ -8080,7 +9113,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "multiline",
+        "description": "multiline"
+      },
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
     "patternId": "react_jsx-sort-props",
     "title": "React: Jsx sort props",
     "description": "Enforce props alphabetical sorting",
@@ -8123,6 +9165,13 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-invalid-html-attribute",
+    "title": "React: No invalid html attribute",
+    "description": "Forbid attribute with an invalid values`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_no-access-state-in-setstate",
     "title": "React: No access state in setstate",
     "description": "Reports when this.state is accessed within setState",
@@ -8144,6 +9193,18 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-arrow-function-lifecycle",
+    "title": "React: No arrow function lifecycle",
+    "description": "Lifecycle methods should be methods on the prototype, not class fields",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowFunctions",
+        "description": "allowFunctions"
+      }
+    ],
     "patternId": "react_no-children-prop",
     "title": "React: No children prop",
     "description": "Prevent passing of children as props.",
@@ -8215,6 +9276,13 @@
     "patternId": "react_no-multi-comp",
     "title": "React: No multi comp",
     "description": "Prevent multiple component definition per file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_no-namespace",
+    "title": "React: No namespace",
+    "description": "Enforce that namespaces are not used in React elements",
     "timeToFix": 5
   },
   {
@@ -8294,6 +9362,13 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-unused-class-component-methods",
+    "title": "React: No unused class component methods",
+    "description": "Prevent declaring unused methods of component class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_no-unused-prop-types",
     "title": "React: No unused prop types",
     "description": "Prevent definitions of unused prop types",
@@ -8318,6 +9393,13 @@
     "patternId": "react_prefer-es6-class",
     "title": "React: Prefer es6 class",
     "description": "Enforce ES5 or ES6 class for React Components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_prefer-exact-props",
+    "title": "React: Prefer exact props",
+    "description": "Prefer exact proptype definitions",
     "timeToFix": 5
   },
   {
@@ -8504,6 +9586,20 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_no-contradiction-with-assertion",
+    "title": "Regexp: No contradiction with assertion",
+    "description": "Disallow elements that contradict assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-control-character",
+    "title": "Regexp: No control character",
+    "description": "Disallow control characters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_no-dupe-characters-character-class",
     "title": "Regexp: No dupe characters character class",
     "description": "Disallow duplicate characters in the RegExp character class",
@@ -8528,6 +9624,13 @@
     "patternId": "regexp_no-empty-capturing-group",
     "title": "Regexp: No empty capturing group",
     "description": "Disallow capturing group that captures empty.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-character-class",
+    "title": "Regexp: No empty character class",
+    "description": "Disallow character classes that match no characters",
     "timeToFix": 5
   },
   {
@@ -8577,6 +9680,13 @@
     "patternId": "regexp_no-legacy-features",
     "title": "Regexp: No legacy features",
     "description": "Disallow legacy RegExp features",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-misleading-unicode-character",
+    "title": "Regexp: No misleading unicode character",
+    "description": "Disallow multi-code-point characters in character classes and quantifiers",
     "timeToFix": 5
   },
   {
@@ -8798,9 +9908,30 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_prefer-lookaround",
+    "title": "Regexp: Prefer lookaround",
+    "description": "Prefer lookarounds over capturing group that do not replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_prefer-named-backreference",
     "title": "Regexp: Prefer named backreference",
     "description": "Enforce using named backreferences",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-capture-group",
+    "title": "Regexp: Prefer named capture group",
+    "description": "Enforce using named capture groups",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-replacement",
+    "title": "Regexp: Prefer named replacement",
+    "description": "Enforce using named replacement",
     "timeToFix": 5
   },
   {
@@ -8854,6 +9985,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_prefer-result-array-groups",
+    "title": "Regexp: Prefer result array groups",
+    "description": "Enforce using result array `groups`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_prefer-star-quantifier",
     "title": "Regexp: Prefer star quantifier",
     "description": "Enforce using `*` quantifier",
@@ -8878,6 +10016,13 @@
     "patternId": "regexp_prefer-w",
     "title": "Regexp: Prefer w",
     "description": "Enforce using `\\w`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_require-unicode-regexp",
+    "title": "Regexp: Require unicode regexp",
+    "description": "Enforce the use of the `u` flag",
     "timeToFix": 5
   },
   {
@@ -8913,6 +10058,13 @@
     "patternId": "regexp_unicode-escape",
     "title": "Regexp: Unicode escape",
     "description": "Enforce consistent usage of unicode escape or unicode codepoint escape",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_use-ignore-case",
+    "title": "Regexp: Use ignore case",
+    "description": "Use the `i` flag if it simplifies the pattern",
     "timeToFix": 5
   },
   {
@@ -8973,6 +10125,90 @@
     "patternId": "relay_hook-required-argument",
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_aura-api",
+    "title": "@salesforce: [Aura] Aura api",
+    "description": "Validate Aura APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_ecma-intrinsics",
+    "title": "@salesforce: [Aura] Ecma intrinsics",
+    "description": "Validate JavaScript intrinsic APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_getevt-markup-prefix",
+    "title": "@salesforce: [Aura] Getevt markup prefix",
+    "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Aura] No deprecated aura error",
+    "description": "Prevent usage of $A.error",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Aura] No deprecated component creation",
+    "description": "Prevent usage of deprecated component creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Aura] No deprecated event creation",
+    "description": "Prevent usage of deprecated event creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-document",
+    "title": "@salesforce: [Aura] Secure document",
+    "description": "Validate secure document public APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-window",
+    "title": "@salesforce: [Aura] Secure window",
+    "description": "Validate secure window public APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_no-aura-localization-service",
+    "title": "@salesforce: [Lightning] No aura localization service",
+    "description": "Disallow usage of \"$A.localizationService\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_no-moment",
+    "title": "@salesforce: [Lightning] No moment",
+    "description": "Prohibit usage of \"moment\" library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_prefer-i18n-service",
+    "title": "@salesforce: [Lightning] Prefer i18n service",
+    "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Lightning] Valid apex method invocation",
+    "description": "Enforce invoking Apex methods with the right arguments",
     "timeToFix": 5
   },
   {
@@ -9189,6 +10425,97 @@
     "parameters": [],
     "patternId": "scanjs-rules_property__sessionStorage",
     "title": "Scanjs rules: Property_sessionStorage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-unsafe-regex",
+    "title": "Security: Detect unsafe regex",
+    "description": "Locates potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-non-literal-regexp",
+    "title": "Security: Detect non literal regexp",
+    "description": "Detects \"RegExp(variable)\", which might allow an attacker to DOS your server with a long-running regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-non-literal-require",
+    "title": "Security: Detect non literal require",
+    "description": "Detects \"require(variable)\", which might allow an attacker to load and run arbitrary code, or access arbitrary files on disk. ",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-non-literal-fs-filename",
+    "title": "Security: Detect non literal fs filename",
+    "description": "Detects variable in filename argument of \"fs\" calls, which might allow an attacker to access anything on your system.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-eval-with-expression",
+    "title": "Security: Detect eval with expression",
+    "description": "Detects \"eval(variable)\" which can allow an attacker to run arbitrary code inside your process.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-pseudoRandomBytes",
+    "title": "Security: Detect pseudoRandomBytes",
+    "description": "Detects if \"pseudoRandomBytes()\" is in use, which might not give you the randomness you need and expect.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-possible-timing-attacks",
+    "title": "Security: Detect possible timing attacks",
+    "description": "Detects insecure comparisons (`==`, `!=`, `!==` and `===`), which check input sequentially.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-no-csrf-before-method-override",
+    "title": "Security: Detect no csrf before method override",
+    "description": "Detects Express \"csrf\" middleware setup before \"method-override\" middleware.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-buffer-noassert",
+    "title": "Security: Detect buffer noassert",
+    "description": "Detect calls to \"buffer\" with \"noAssert\" flag set.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-child-process",
+    "title": "Security: Detect child process",
+    "description": "Detect instances of \"child_process\" & non-literal \"exec()\" calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-disable-mustache-escape",
+    "title": "Security: Detect disable mustache escape",
+    "description": "Detects \"object.escapeMarkup = false\", which can be used with some template engines to disable escaping of HTML entities.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-object-injection",
+    "title": "Security: Detect object injection",
+    "description": "Detects \"variable[key]\" as a left- or right-hand assignment operand.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security_detect-new-buffer",
+    "title": "Security: Detect new buffer",
+    "description": "Detect instances of new Buffer(argument) where argument is any non-literal value.",
     "timeToFix": 5
   },
   {
@@ -9443,6 +10770,58 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "comments",
+        "description": "comments"
+      },
+      {
+        "name": "strings",
+        "description": "strings"
+      },
+      {
+        "name": "identifiers",
+        "description": "identifiers"
+      },
+      {
+        "name": "ignoreRequire",
+        "description": "ignoreRequire"
+      },
+      {
+        "name": "templates",
+        "description": "templates"
+      },
+      {
+        "name": "lang",
+        "description": "lang"
+      },
+      {
+        "name": "langDir",
+        "description": "langDir"
+      },
+      {
+        "name": "skipWords",
+        "description": "skipWords"
+      },
+      {
+        "name": "skipIfMatch",
+        "description": "skipIfMatch"
+      },
+      {
+        "name": "skipWordIfMatch",
+        "description": "skipWordIfMatch"
+      },
+      {
+        "name": "minLength",
+        "description": "minLength"
+      }
+    ],
+    "patternId": "spellcheck_spell-checker",
+    "title": "Spellcheck: Spell checker",
+    "description": "Spell check",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "standard_array-bracket-even-spacing",
     "title": "Standard: Array bracket even spacing",
@@ -9464,6 +10843,97 @@
     "parameters": [],
     "patternId": "standard_no-callback-literal",
     "title": "Standard: No callback literal",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_await-interactions",
+    "title": "Storybook: Await interactions",
+    "description": "Interactions should be awaited",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_context-in-play-function",
+    "title": "Storybook: Context in play function",
+    "description": "Pass a context when invoking play function of another story",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_csf-component",
+    "title": "Storybook: Csf component",
+    "description": "The component property should be set",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_default-exports",
+    "title": "Storybook: Default exports",
+    "description": "Story files should have a default export",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_hierarchy-separator",
+    "title": "Storybook: Hierarchy separator",
+    "description": "Deprecated hierarchy separator in title property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_meta-inline-properties",
+    "title": "Storybook: Meta inline properties",
+    "description": "Meta should only have inline properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-redundant-story-name",
+    "title": "Storybook: No redundant story name",
+    "description": "A story should not have a redundant name property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-stories-of",
+    "title": "Storybook: No stories of",
+    "description": "StoriesOf is deprecated and should not be used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_no-title-property-in-meta",
+    "title": "Storybook: No title property in meta",
+    "description": "Do not define a title in meta",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_prefer-pascal-case",
+    "title": "Storybook: Prefer pascal case",
+    "description": "Stories should use PascalCase",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_story-exports",
+    "title": "Storybook: Story exports",
+    "description": "A story file must contain at least one story export",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_use-storybook-expect",
+    "title": "Storybook: Use storybook expect",
+    "description": "Use expect from `@storybook/jest`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "storybook_use-storybook-testing-library",
+    "title": "Storybook: Use storybook testing library",
+    "description": "Do not use testing-library directly on stories",
     "timeToFix": 5
   },
   {
@@ -9578,6 +11048,13 @@
     "patternId": "@typescript-eslint_consistent-type-definitions",
     "title": "@typescript eslint: Consistent type definitions",
     "description": "Consistent with type definition either `interface` or `type`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-exports",
+    "title": "@typescript eslint: Consistent type exports",
+    "description": "Enforces consistent usage of type exports",
     "timeToFix": 5
   },
   {
@@ -9731,7 +11208,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_method-signature-style",
     "title": "@typescript eslint: Method signature style",
-    "description": "Enforces using a particular method signature syntax.",
+    "description": "Enforces using a particular method signature syntax",
     "timeToFix": 5
   },
   {
@@ -9774,6 +11251,13 @@
     "patternId": "@typescript-eslint_no-dupe-class-members",
     "title": "@typescript eslint: No dupe class members",
     "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-duplicate-enum-values",
+    "title": "@typescript eslint: No duplicate enum values",
+    "description": "Disallow duplicate enum member values",
     "timeToFix": 5
   },
   {
@@ -9848,7 +11332,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-floating-promises",
     "title": "@typescript eslint: No floating promises",
-    "description": "Requires Promise-like values to be handled appropriately",
+    "description": "Requires Promise-like statements to be handled appropriately",
     "timeToFix": 5
   },
   {
@@ -9937,6 +11421,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "checkNever",
+        "description": "checkNever"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-meaningless-void-operator",
+    "title": "@typescript eslint: No meaningless void operator",
+    "description": "Disallow the `void` operator except when used to discard a value",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-new",
     "title": "@typescript eslint: No misused new",
@@ -9947,7 +11443,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-promises",
     "title": "@typescript eslint: No misused promises",
-    "description": "Avoid using promises in places not designed to handle them",
+    "description": "Avoid using Promises in places not designed to handle them",
     "timeToFix": 5
   },
   {
@@ -9955,6 +11451,13 @@
     "patternId": "@typescript-eslint_no-namespace",
     "title": "@typescript eslint: No namespace",
     "description": "Disallow the use of custom TypeScript modules and namespaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
+    "title": "@typescript eslint: No non null asserted nullish coalescing",
+    "description": "Disallows using a non-null assertion in the left operand of the nullish coalescing operator",
     "timeToFix": 5
   },
   {
@@ -9987,9 +11490,23 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-redundant-type-constituents",
+    "title": "@typescript eslint: No redundant type constituents",
+    "description": "Disallow members of unions and intersections that do nothing or override type information",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-require-imports",
     "title": "@typescript eslint: No require imports",
     "description": "Disallows invocation of `require()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-restricted-imports",
+    "title": "@typescript eslint: No restricted imports",
+    "description": "Disallow specified modules when loaded by `import`",
     "timeToFix": 5
   },
   {
@@ -10066,7 +11583,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-argument",
     "title": "@typescript eslint: No unsafe argument",
-    "description": "Disallows calling an function with an any type value",
+    "description": "Disallows calling a function with an any type value",
     "timeToFix": 5
   },
   {
@@ -10130,13 +11647,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-unused-vars-experimental",
-    "title": "@typescript eslint: No unused vars experimental",
-    "description": "Disallow unused variables and arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_no-use-before-define",
     "title": "@typescript eslint: No use before define",
     "description": "Disallow the use of variables before they are defined",
@@ -10147,6 +11657,13 @@
     "patternId": "@typescript-eslint_no-useless-constructor",
     "title": "@typescript eslint: No useless constructor",
     "description": "Disallow unnecessary constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-useless-empty-export",
+    "title": "@typescript eslint: No useless empty export",
+    "description": "Disallow empty exports that don't change anything in a module file",
     "timeToFix": 5
   },
   {
@@ -10168,6 +11685,20 @@
     "patternId": "@typescript-eslint_object-curly-spacing",
     "title": "@typescript eslint: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_padding-line-between-statements",
+    "title": "@typescript eslint: Padding line between statements",
+    "description": "Require or disallow padding lines between statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_parameter-properties",
+    "title": "@typescript eslint: Parameter properties",
+    "description": "Require or disallow the use of parameter properties in class constructors",
     "timeToFix": 5
   },
   {
@@ -10343,6 +11874,13 @@
     "patternId": "@typescript-eslint_sort-type-union-intersection-members",
     "title": "@typescript eslint: Sort type union intersection members",
     "description": "Enforces that members of a type union/intersection are sorted alphabetically",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_space-before-blocks",
+    "title": "@typescript eslint: Space before blocks",
+    "description": "Enforces consistent spacing before blocks",
     "timeToFix": 5
   },
   {
@@ -10624,6 +12162,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-invalid-remove-event-listener",
+    "title": "Unicorn: No invalid remove event listener",
+    "description": "Prevent calling `EventTarget#removeEventListener()` with the result of an expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-keyword-prefix",
     "title": "Unicorn: No keyword prefix",
     "description": "Disallow identifiers starting with `new` or `class`.",
@@ -10716,6 +12261,13 @@
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-useless-fallback-in-spread",
+    "title": "Unicorn: No useless fallback in spread",
+    "description": "Forbid useless fallback when spreading in object literals.",
     "timeToFix": 5
   },
   {
@@ -10987,7 +12539,7 @@
     "parameters": [],
     "patternId": "unicorn_prefer-spread",
     "title": "Unicorn: Prefer spread",
-    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)` and `Array#slice()`.",
+    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#slice()` and `String#split('')`.",
     "timeToFix": 5
   },
   {
@@ -11092,6 +12644,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_template-indent",
+    "title": "Unicorn: Template indent",
+    "description": "Fix whitespace-insensitive template indentation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
@@ -11185,14 +12744,14 @@
     "parameters": [],
     "patternId": "vue_array-bracket-newline",
     "title": "Vue: Array bracket newline",
-    "description": "Enforce linebreaks after opening and before closing array brackets",
+    "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_array-bracket-spacing",
     "title": "Vue: Array bracket spacing",
-    "description": "Enforce consistent spacing inside array brackets",
+    "description": "Enforce consistent spacing inside array brackets in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11208,7 +12767,7 @@
     ],
     "patternId": "vue_arrow-spacing",
     "title": "Vue: Arrow spacing",
-    "description": "Enforce consistent spacing before and after the arrow in arrow functions",
+    "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11236,7 +12795,7 @@
     "parameters": [],
     "patternId": "vue_block-spacing",
     "title": "Vue: Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11259,7 +12818,7 @@
     ],
     "patternId": "vue_brace-style",
     "title": "Vue: Brace style",
-    "description": "Enforce consistent brace style for blocks",
+    "description": "Enforce consistent brace style for blocks in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11279,14 +12838,14 @@
     ],
     "patternId": "vue_camelcase",
     "title": "Vue: Camelcase",
-    "description": "Enforce camelcase naming convention",
+    "description": "Enforce camelcase naming convention in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_comma-dangle",
     "title": "Vue: Comma dangle",
-    "description": "Require or disallow trailing commas",
+    "description": "Require or disallow trailing commas in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11302,14 +12861,14 @@
     ],
     "patternId": "vue_comma-spacing",
     "title": "Vue: Comma spacing",
-    "description": "Enforce consistent spacing before and after commas",
+    "description": "Enforce consistent spacing before and after commas in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_comma-style",
     "title": "Vue: Comma style",
-    "description": "Enforce consistent comma style",
+    "description": "Enforce consistent comma style in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11317,6 +12876,13 @@
     "patternId": "vue_comment-directive",
     "title": "Vue: Comment directive",
     "description": "Support comment-directives in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_component-api-style",
+    "title": "Vue: Component api style",
+    "description": "Enforce component API style",
     "timeToFix": 5
   },
   {
@@ -11335,6 +12901,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_component-options-name-casing",
+    "title": "Vue: Component options name casing",
+    "description": "Enforce the casing of component name in `components` options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_component-tags-order",
     "title": "Vue: Component tags order",
     "description": "Enforce order of component top-level elements",
@@ -11349,9 +12922,16 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_define-macros-order",
+    "title": "Vue: Define macros order",
+    "description": "Enforce order of `defineEmits` and `defineProps` compiler macros",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_dot-location",
     "title": "Vue: Dot location",
-    "description": "Enforce consistent newlines before and after dots",
+    "description": "Enforce consistent newlines before and after dots in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11367,14 +12947,14 @@
     ],
     "patternId": "vue_dot-notation",
     "title": "Vue: Dot notation",
-    "description": "Enforce dot notation whenever possible",
+    "description": "Enforce dot notation whenever possible in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_eqeqeq",
     "title": "Vue: Eqeqeq",
-    "description": "Require the use of `===` and `!==`",
+    "description": "Require the use of `===` and `!==` in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11386,9 +12966,16 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_first-attribute-linebreak",
+    "title": "Vue: First attribute linebreak",
+    "description": "Enforce the location of first attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_func-call-spacing",
     "title": "Vue: Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11485,7 +13072,7 @@
     "parameters": [],
     "patternId": "vue_key-spacing",
     "title": "Vue: Key spacing",
-    "description": "Enforce consistent spacing between keys and values in object literal properties",
+    "description": "Enforce consistent spacing between keys and values in object literal properties in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11501,7 +13088,7 @@
     ],
     "patternId": "vue_keyword-spacing",
     "title": "Vue: Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords",
+    "description": "Enforce consistent spacing before and after keywords in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11509,6 +13096,13 @@
     "patternId": "vue_match-component-file-name",
     "title": "Vue: Match component file name",
     "description": "Require component name property to match its file name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_match-component-import-name",
+    "title": "Vue: Match component import name",
+    "description": "Require the registered component name to match the imported component name",
     "timeToFix": 5
   },
   {
@@ -11522,7 +13116,14 @@
     "parameters": [],
     "patternId": "vue_max-len",
     "title": "Vue: Max len",
-    "description": "Enforce a maximum line length",
+    "description": "Enforce a maximum line length in `.vue` files",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_multi-word-component-names",
+    "title": "Vue: Multi word component names",
+    "description": "Require component names to be always multi-word",
     "timeToFix": 5
   },
   {
@@ -11590,6 +13191,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-child-content",
+    "title": "Vue: No child content",
+    "description": "Disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-computed-properties-in-data",
+    "title": "Vue: No computed properties in data",
+    "description": "Disallow accessing computed properties in `data`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-confusing-v-for-v-if",
     "title": "Vue: No confusing v for v if",
     "description": "Disallow confusing `v-for` and `v-if` on the same element",
@@ -11604,7 +13219,7 @@
     ],
     "patternId": "vue_no-constant-condition",
     "title": "Vue: No constant condition",
-    "description": "Disallow constant expressions in conditions",
+    "description": "Disallow constant expressions in conditions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11682,6 +13297,13 @@
     "patternId": "vue_no-deprecated-props-default-this",
     "title": "Vue: No deprecated props default this",
     "description": "Disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-deprecated-router-link-tag-prop",
+    "title": "Vue: No deprecated router link tag prop",
+    "description": "Disallow using deprecated `tag` property on `RouterLink` (in Vue.js 3.0.0+)",
     "timeToFix": 5
   },
   {
@@ -11779,7 +13401,7 @@
     "parameters": [],
     "patternId": "vue_no-empty-pattern",
     "title": "Vue: No empty pattern",
-    "description": "Disallow empty destructuring patterns",
+    "description": "Disallow empty destructuring patterns in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11791,9 +13413,16 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-expose-after-await",
+    "title": "Vue: No expose after await",
+    "description": "Disallow asynchronously registered `expose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-extra-parens",
     "title": "Vue: No extra parens",
-    "description": "Disallow unnecessary parentheses",
+    "description": "Disallow unnecessary parentheses in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11832,7 +13461,7 @@
     ],
     "patternId": "vue_no-irregular-whitespace",
     "title": "Vue: No irregular whitespace",
-    "description": "Disallow irregular whitespace",
+    "description": "Disallow irregular whitespace in `.vue` files",
     "timeToFix": 5
   },
   {
@@ -11847,6 +13476,13 @@
     "patternId": "vue_no-lone-template",
     "title": "Vue: No lone template",
     "description": "Disallow unnecessary `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-loss-of-precision",
+    "title": "Vue: No loss of precision",
+    "description": "Disallow literal numbers that lose precision in `<template>`",
     "timeToFix": 5
   },
   {
@@ -11921,6 +13557,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-reserved-props",
+    "title": "Vue: No reserved props",
+    "description": "Disallow reserved names in props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-block",
     "title": "Vue: No restricted block",
     "description": "Disallow specific block",
@@ -11935,6 +13578,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-class",
+    "title": "Vue: No restricted class",
+    "description": "Disallow specific classes in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-restricted-component-options",
     "title": "Vue: No restricted component options",
     "description": "Disallow specific component option",
@@ -11945,6 +13595,13 @@
     "patternId": "vue_no-restricted-custom-event",
     "title": "Vue: No restricted custom event",
     "description": "Disallow specific custom event",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-html-elements",
+    "title": "Vue: No restricted html elements",
+    "description": "Disallow specific HTML elements",
     "timeToFix": 5
   },
   {
@@ -11965,7 +13622,7 @@
     "parameters": [],
     "patternId": "vue_no-restricted-syntax",
     "title": "Vue: No restricted syntax",
-    "description": "Disallow specified syntax",
+    "description": "Disallow specified syntax in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12007,7 +13664,7 @@
     "parameters": [],
     "patternId": "vue_no-sparse-arrays",
     "title": "Vue: No sparse arrays",
-    "description": "Disallow sparse arrays",
+    "description": "Disallow sparse arrays in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12050,6 +13707,20 @@
     "patternId": "vue_no-this-in-before-route-enter",
     "title": "Vue: No this in before route enter",
     "description": "Disallow `this` usage in a `beforeRouteEnter` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-undef-components",
+    "title": "Vue: No undef components",
+    "description": "Disallow use of undefined components in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-undef-properties",
+    "title": "Vue: No undef properties",
+    "description": "Disallow undefined properties",
     "timeToFix": 5
   },
   {
@@ -12112,7 +13783,7 @@
     "parameters": [],
     "patternId": "vue_no-useless-concat",
     "title": "Vue: No useless concat",
-    "description": "Disallow unnecessary concatenation of literals or template literals",
+    "description": "Disallow unnecessary concatenation of literals or template literals in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12120,6 +13791,13 @@
     "patternId": "vue_no-useless-mustaches",
     "title": "Vue: No useless mustaches",
     "description": "Disallow unnecessary mustache interpolations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-useless-template-attributes",
+    "title": "Vue: No useless template attributes",
+    "description": "Disallow useless attribute on `<template>`",
     "timeToFix": 5
   },
   {
@@ -12159,6 +13837,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-v-text-v-html-on-component",
+    "title": "Vue: No v text v html on component",
+    "description": "Disallow v-text / v-html on component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-v-text",
+    "title": "Vue: No v text",
+    "description": "Disallow use of v-text",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-watch-after-await",
     "title": "Vue: No watch after await",
     "description": "Disallow asynchronously registered `watch`",
@@ -12168,14 +13860,14 @@
     "parameters": [],
     "patternId": "vue_object-curly-newline",
     "title": "Vue: Object curly newline",
-    "description": "Enforce consistent line breaks after opening and before closing braces",
+    "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "vue_object-curly-spacing",
     "title": "Vue: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
+    "description": "Enforce consistent spacing inside braces in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12191,7 +13883,14 @@
     ],
     "patternId": "vue_object-property-newline",
     "title": "Vue: Object property newline",
-    "description": "Enforce placing object properties on separate lines",
+    "description": "Enforce placing object properties on separate lines in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_object-shorthand",
+    "title": "Vue: Object shorthand",
+    "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12205,7 +13904,7 @@
     "parameters": [],
     "patternId": "vue_operator-linebreak",
     "title": "Vue: Operator linebreak",
-    "description": "Enforce consistent linebreak style for operators",
+    "description": "Enforce consistent linebreak style for operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12224,9 +13923,37 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_prefer-import-from-vue",
+    "title": "Vue: Prefer import from vue",
+    "description": "Enforce import from 'vue' instead of import from '@vue/*'",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-prop-type-boolean-first",
+    "title": "Vue: Prefer prop type boolean first",
+    "description": "Enforce `Boolean` comes first in component prop types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-separate-static-class",
+    "title": "Vue: Prefer separate static class",
+    "description": "Require static class names in template to be in a separate `class` attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_prefer-template",
     "title": "Vue: Prefer template",
-    "description": "Require template literals instead of string concatenation",
+    "description": "Require template literals instead of string concatenation in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-true-attribute-shorthand",
+    "title": "Vue: Prefer true attribute shorthand",
+    "description": "Require shorthand form attribute when `v-bind` value is `true`",
     "timeToFix": 5
   },
   {
@@ -12234,6 +13961,13 @@
     "patternId": "vue_prop-name-casing",
     "title": "Vue: Prop name casing",
     "description": "Enforce specific casing for the Prop name in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_quote-props",
+    "title": "Vue: Quote props",
+    "description": "Require quotes around object literal property names in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12401,7 +14135,7 @@
     "parameters": [],
     "patternId": "vue_space-in-parens",
     "title": "Vue: Space in parens",
-    "description": "Enforce consistent spacing inside parentheses",
+    "description": "Enforce consistent spacing inside parentheses in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12413,7 +14147,7 @@
     ],
     "patternId": "vue_space-infix-ops",
     "title": "Vue: Space infix ops",
-    "description": "Require spacing around infix operators",
+    "description": "Require spacing around infix operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12429,7 +14163,7 @@
     ],
     "patternId": "vue_space-unary-ops",
     "title": "Vue: Space unary ops",
-    "description": "Enforce consistent spacing before or after unary operators",
+    "description": "Enforce consistent spacing before or after unary operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12443,7 +14177,7 @@
     "parameters": [],
     "patternId": "vue_template-curly-spacing",
     "title": "Vue: Template curly spacing",
-    "description": "Require or disallow spacing around embedded expressions of template strings",
+    "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
     "timeToFix": 5
   },
   {
@@ -12647,6 +14381,27 @@
     "patternId": "vue_valid-v-text",
     "title": "Vue: Valid v text",
     "description": "Enforce valid `v-text` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_await-expect",
+    "title": "Wdio: Await expect",
+    "description": "Expect must be prefixed with await",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_no-debug",
+    "title": "Wdio: No debug",
+    "description": "Disallow browser.debug() in tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "wdio_no-pause",
+    "title": "Wdio: No pause",
+    "description": "Disallow browser.pause() in tests",
     "timeToFix": 5
   },
   {

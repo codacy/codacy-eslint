@@ -1,4 +1,15 @@
-# Disallow Labeled Statements (no-labels)
+---
+title: no-labels
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-labels.md
+rule_type: suggestion
+related_rules:
+- no-extra-label
+- no-label-var
+- no-unused-labels
+---
+
+Disallows labeled statements.
 
 Labeled statements in JavaScript are used in conjunction with `break` and `continue` to control flow around multiple loops. For example:
 
@@ -115,9 +126,3 @@ label:
 ## When Not To Use It
 
 If you need to use labeled statements everywhere, then you can safely disable this rule.
-
-## Related Rules
-
-* [no-extra-label](./no-extra-label.md)
-* [no-label-var](./no-label-var.md)
-* [no-unused-labels](./no-unused-labels.md)

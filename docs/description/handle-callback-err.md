@@ -1,4 +1,14 @@
-# Enforce Callback Error Handling (handle-callback-err)
+---
+title: handle-callback-err
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/handle-callback-err.md
+rule_type: suggestion
+further_reading:
+- https://github.com/maxogden/art-of-node#callbacks
+- https://web.archive.org/web/20171224042620/https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions/
+---
+
+Enforces callback error handling.
 
 This rule was **deprecated** in ESLint v7.0.0. Please use the corresponding rule in [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).
 
@@ -76,8 +86,3 @@ If the configured name of the error variable begins with a `^` it is considered 
 
 There are cases where it may be safe for your application to ignore errors, however only ignore errors if you are
 confident that some other form of monitoring will help you catch the problem.
-
-## Further Reading
-
-* [The Art Of Node: Callbacks](https://github.com/maxogden/art-of-node#callbacks)
-* [Nodejitsu: What are the error conventions?](https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions/)

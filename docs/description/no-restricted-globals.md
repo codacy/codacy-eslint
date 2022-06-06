@@ -1,4 +1,14 @@
-# Disallow specific global variables (no-restricted-globals)
+---
+title: no-restricted-globals
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-restricted-globals.md
+rule_type: suggestion
+related_rules:
+- no-restricted-properties
+- no-restricted-syntax
+---
+
+Disallows specific global variables.
 
 Disallowing usage of specific global variables can be useful if you want to allow a set of global
 variables by enabling an environment, but still want to disallow some of those.
@@ -83,8 +93,3 @@ function onClick() {
     console.log(event);    // Unexpected global variable 'event'. Use local parameter instead.
 }
 ```
-
-## Related Rules
-
-* [no-restricted-properties](no-restricted-properties.md)
-* [no-restricted-syntax](no-restricted-syntax.md)

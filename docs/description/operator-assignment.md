@@ -1,4 +1,13 @@
-# require or disallow assignment operator shorthand where possible (operator-assignment)
+---
+title: operator-assignment
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/operator-assignment.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Requires or disallows assignment operator shorthand where possible.
 
 JavaScript provides shorthand operators that combine variable assignment and some simple mathematical operations. For example, `x = x + 4` can be shortened to `x += 4`. The supported shorthand forms are as follows:
 

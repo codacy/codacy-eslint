@@ -1,4 +1,16 @@
-# Disallow Primitive Wrapper Instances (no-new-wrappers)
+---
+title: no-new-wrappers
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-new-wrappers.md
+rule_type: suggestion
+related_rules:
+- no-array-constructor
+- no-new-object
+further_reading:
+- https://www.inkling.com/read/javascript-definitive-guide-david-flanagan-6th/chapter-3/wrapper-objects
+---
+
+Disallows `new` operators with the `String`, `Number`, and `Boolean` objects.
 
 There are three primitive types in JavaScript that have wrapper objects: string, number, and boolean. These are represented by the constructors `String`, `Number`, and `Boolean`, respectively. The primitive wrapper types are used whenever one of these primitive values is read, providing them with object-like capabilities such as methods. Behind the scenes, an object of the associated wrapper type is created and then destroyed, which is why you can call methods on primitive values, such as:
 
@@ -67,12 +79,3 @@ var object = new MyString();
 ## When Not To Use It
 
 If you want to allow the use of primitive wrapper objects, then you can safely disable this rule.
-
-## Further Reading
-
-* [Wrapper objects](https://www.inkling.com/read/javascript-definitive-guide-david-flanagan-6th/chapter-3/wrapper-objects)
-
-## Related Rules
-
-* [no-array-constructor](no-array-constructor.md)
-* [no-new-object](no-new-object.md)

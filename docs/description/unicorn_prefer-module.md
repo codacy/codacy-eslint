@@ -1,16 +1,23 @@
 # Prefer JavaScript modules (ESM) over CommonJS
 
+<!-- Do not manually modify RULE_NOTICE part. Run: `npm run generate-rule-notices` -->
+<!-- RULE_NOTICE -->
+✅ *This rule is part of the [recommended](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) config.*
+
+🔧💡 *This rule is [auto-fixable](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) and provides [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).*
+<!-- /RULE_NOTICE -->
+
 Prefer using the [JavaScript module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) format over the legacy CommonJS module format.
 
-1. Forbids `'use strict'` directive.
+1. Disallows `'use strict'` directive.
 
 	JavaScript modules use “Strict Mode” by default.
 
-1. Forbids “Global Return”.
+1. Disallows “Global Return”.
 
 	This is a CommonJS-only feature.
 
-1. Forbids the global variables `__dirname` and `__filename`.
+1. Disallows the global variables `__dirname` and `__filename`.
 
 	They are [not available in JavaScript modules](https://nodejs.org/api/esm.html#esm_no_filename_or_dirname).
 
@@ -38,11 +45,11 @@ Prefer using the [JavaScript module](https://developer.mozilla.org/en-US/docs/We
 	const foo = new URL('foo.js', import.meta.url);
 	```
 
-1. Forbids `require(…)`.
+1. Disallows `require(…)`.
 
 	`require(…)` can be replaced by `import …` or `import(…)`.
 
-1. Forbids `exports` and `module.exports`.
+1. Disallows `exports` and `module.exports`.
 
 	`export …` should be used in JavaScript modules.
 
@@ -116,4 +123,4 @@ export {foo};
 
 ## Resources
 
-- [Get Ready For ESM](https://blog.sindresorhus.com/get-ready-for-esm-aa53530b3f77) by @sindresorhus
+- [Get Ready For ESM](https://medium.com/sindre-sorhus/get-ready-for-esm-aa53530b3f77) by @sindresorhus

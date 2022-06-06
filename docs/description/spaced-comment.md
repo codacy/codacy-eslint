@@ -1,4 +1,15 @@
-# Requires or disallows a whitespace (space or tab) beginning a comment (spaced-comment)
+---
+title: spaced-comment
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/spaced-comment.md
+rule_type: suggestion
+related_rules:
+- spaced-line-comment
+---
+
+<!--FIXABLE-->
+
+Enforces consistent spacing after the `//` or `/*` in a comment.
 
 Some style guides require or disallow a whitespace immediately after the initial `//` or `/*` of a comment.
 Whitespace after the `//` or `/*` makes it easier to read text in comments.
@@ -24,7 +35,7 @@ The rule takes two options.
     * The `"exceptions"` value is an array of string patterns which are considered exceptions to the rule. The rule will not warn when the pattern starts from the beginning of the comment and repeats until the end of the line or `*/` if the comment is a single line comment.
     Please note that exceptions are ignored if the first argument is `"never"`.
 
-    ```
+    ```js
     "spaced-comment": ["error", "always", { "exceptions": ["-", "+"] }]
     ```
 
@@ -32,7 +43,7 @@ The rule takes two options.
     such as an additional `/`, used to denote documentation read by doxygen, vsdoc, etc. which must have additional characters.
     The `"markers"` array will apply regardless of the value of the first argument, e.g. `"always"` or `"never"`.
 
-    ```
+    ```js
     "spaced-comment": ["error", "always", { "markers": ["/"] }]
     ```
 
@@ -280,8 +291,3 @@ subsequent lines are ignored
 
 /*global ABC*/
 ```
-
-
-## Related Rules
-
-* [spaced-line-comment](spaced-line-comment.md)

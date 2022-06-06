@@ -1,4 +1,19 @@
-# Disallow Unused Labels (no-unused-labels)
+---
+title: no-unused-labels
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-unused-labels.md
+rule_type: suggestion
+related_rules:
+- no-extra-label
+- no-labels
+- no-label-var
+---
+
+<!--RECOMMENDED-->
+
+<!--FIXABLE-->
+
+Disallows unused labels.
 
 Labels that are declared and not used anywhere in the code are most likely an error due to incomplete refactoring.
 
@@ -60,9 +75,3 @@ for (let i = 0; i < 10; ++i) {
 ## When Not To Use It
 
 If you don't want to be notified about unused labels, then it's safe to disable this rule.
-
-## Related Rules
-
-* [no-extra-label](./no-extra-label.md)
-* [no-labels](./no-labels.md)
-* [no-label-var](./no-label-var.md)

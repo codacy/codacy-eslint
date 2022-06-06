@@ -1,4 +1,13 @@
-# enforce consistent spacing between keys and values in object literal properties (key-spacing)
+---
+title: key-spacing
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/key-spacing.md
+rule_type: layout
+---
+
+<!--FIXABLE-->
+
+Enforces consistent spacing between keys and values in object literal properties.
 
 This rule enforces spacing around the colon in object literal properties. It can verify each property individually, or it can ensure horizontal alignment of adjacent properties in an object literal.
 

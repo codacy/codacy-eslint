@@ -1,4 +1,15 @@
-# disallow unnecessary boolean casts (no-extra-boolean-cast)
+---
+title: no-extra-boolean-cast
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-extra-boolean-cast.md
+rule_type: suggestion
+---
+
+<!--RECOMMENDED-->
+
+<!--FIXABLE-->
+
+Disallows unnecessary boolean casts.
 
 In contexts such as an `if` statement's test where the result of the expression will already be coerced to a Boolean, casting to a Boolean via double negation (`!!`) or a `Boolean` call is unnecessary. For example, these `if` statements are equivalent:
 

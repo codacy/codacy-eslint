@@ -1,4 +1,11 @@
-# enforce default parameters to be last (default-param-last)
+---
+title: default-param-last
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/default-param-last.md
+rule_type: suggestion
+---
+
+Enforces default parameters to be last.
 
 Putting default parameter at last allows function calls to omit optional tail arguments.
 

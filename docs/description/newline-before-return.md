@@ -1,6 +1,17 @@
-# require an empty line before `return` statements (newline-before-return)
+---
+title: newline-before-return
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/newline-before-return.md
+rule_type: layout
+related_rules:
+- newline-after-var
+---
 
-This rule was **deprecated** in ESLint v4.0.0 and replaced by the [padding-line-between-statements](padding-line-between-statements.md) rule.
+<!--FIXABLE-->
+
+Requires an empty line before `return` statements.
+
+This rule was **deprecated** in ESLint v4.0.0 and replaced by the [padding-line-between-statements](padding-line-between-statements) rule.
 
 There is no hard and fast rule about whether empty lines should precede `return` statements in JavaScript. However, clearly delineating where a function is returning can greatly increase the readability and clarity of the code. For example:
 
@@ -110,7 +121,3 @@ function foo() {
 ## When Not To Use It
 
 You can safely disable this rule if you do not have any strict conventions about whitespace before `return` statements.
-
-## Related Rules
-
-* [newline-after-var](newline-after-var.md)

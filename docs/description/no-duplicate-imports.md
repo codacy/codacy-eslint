@@ -1,4 +1,11 @@
-# Disallow duplicate imports (no-duplicate-imports)
+---
+title: no-duplicate-imports
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-duplicate-imports.md
+rule_type: problem
+---
+
+Disallows duplicate imports.
 
 Using a single `import` statement per module will make the code clearer because you can see everything being imported from that module on one line.
 

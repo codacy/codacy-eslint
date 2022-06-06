@@ -1,4 +1,19 @@
-# Disallow `\8` and `\9` escape sequences in string literals (no-nonoctal-decimal-escape)
+---
+title: no-nonoctal-decimal-escape
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-nonoctal-decimal-escape.md
+rule_type: suggestion
+related_rules:
+- no-octal-escape
+further_reading:
+- https://tc39.es/ecma262/#prod-annexB-NonOctalDecimalEscapeSequence
+---
+
+<!--RECOMMENDED-->
+
+<!--SUGGESTIONS-->
+
+Disallows `\8` and `\9` escape sequences in string literals.
 
 Although not being specified in the language until ECMAScript 2021, `\8` and `\9` escape sequences in string literals were allowed in most JavaScript engines, and treated as "useless" escapes:
 
@@ -52,11 +67,3 @@ var baz = "Don't use \\8 and \\9 escapes.";
 
 var quux = "\0\u0038";
 ```
-
-## Further Reading
-
-* [NonOctalDecimalEscapeSequence](https://tc39.es/ecma262/#prod-annexB-NonOctalDecimalEscapeSequence) in ECMAScript specification
-
-## Related Rules
-
-* [no-octal-escape](no-octal-escape.md)

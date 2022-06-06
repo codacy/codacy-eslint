@@ -9,6 +9,8 @@ since: v7.3.0
 
 > disallow specific custom event
 
+- :bulb: Some problems reported by this rule are manually fixable by editor [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
+
 ## :book: Rule Details
 
 This rule allows you to specify custom event that you don't want to use in your application.
@@ -29,7 +31,7 @@ This rule takes a list of strings, where each string is a custom event name or p
 <template>
   <!-- ✗ BAD -->
   <input @input="$emit('input', $event.target.value)">
-  <!-- ✗ GOOD -->
+  <!-- ✓ GOOD -->
   <input @input="$emit('update:value', $event.target.value)">
 </template>
 <script>
@@ -50,7 +52,6 @@ export default {
 ```
 
 </eslint-code-block>
-
 
 Alternatively, the rule also accepts objects.
 

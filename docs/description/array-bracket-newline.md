@@ -1,4 +1,15 @@
-# enforce line breaks after opening and before closing array brackets (array-bracket-newline)
+---
+title: array-bracket-newline
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/array-bracket-newline.md
+rule_type: layout
+related_rules:
+- array-bracket-spacing
+---
+
+<!--FIXABLE-->
+
+Enforces line breaks after opening and before closing array brackets.
 
 A number of style guides require or disallow line breaks inside of array brackets.
 
@@ -267,7 +278,6 @@ var e = [
 ];
 ```
 
-
 ## When Not To Use It
 
 If you don't want to enforce line breaks after opening and before closing array brackets, don't enable this rule.
@@ -275,7 +285,3 @@ If you don't want to enforce line breaks after opening and before closing array 
 ## Compatibility
 
 * **JSCS:** [validateNewlineAfterArrayElements](https://jscs-dev.github.io/rule/validateNewlineAfterArrayElements)
-
-## Related Rules
-
-* [array-bracket-spacing](array-bracket-spacing.md)

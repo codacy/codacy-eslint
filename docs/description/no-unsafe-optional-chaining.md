@@ -1,4 +1,13 @@
-# disallow use of optional chaining in contexts where the `undefined` value is not allowed (no-unsafe-optional-chaining)
+---
+title: no-unsafe-optional-chaining
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-unsafe-optional-chaining.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows use of optional chaining in contexts where the `undefined` value is not allowed.
 
 The optional chaining (`?.`) expression can short-circuit with a return value of `undefined`. Therefore, treating an evaluated optional chaining expression as a function, object, number, etc., can cause TypeError or unexpected results. For example:
 
@@ -115,15 +124,15 @@ async function foo () {
 
 This rule has an object option:
 
-- `disallowArithmeticOperators`: Disallow arithmetic operations on optional chaining expressions (Default `false`). If this is `true`, this rule warns arithmetic operations on optional chaining expressions, which possibly result in `NaN`.
+* `disallowArithmeticOperators`: Disallow arithmetic operations on optional chaining expressions (Default `false`). If this is `true`, this rule warns arithmetic operations on optional chaining expressions, which possibly result in `NaN`.
 
 ### disallowArithmeticOperators
 
 With this option set to `true` the rule is enforced for:
 
-- Unary operators: `-`, `+`
-- Arithmetic operators: `+`, `-`, `/`, `*`, `%`, `**`
-- Assignment operators: `+=`, `-=`, `/=`, `*=`, `%=`, `**=`
+* Unary operators: `-`, `+`
+* Arithmetic operators: `+`, `-`, `/`, `*`, `%`, `**`
+* Assignment operators: `+=`, `-=`, `/=`, `*=`, `%=`, `**=`
 
 Examples of additional **incorrect** code for this rule with the `{ "disallowArithmeticOperators": true }` option:
 

@@ -9,8 +9,7 @@ since: v3.8.0
 
 > enforce specific casing for the name property in Vue components
 
-- :warning: This rule was **deprecated** and replaced by [vue/component-definition-name-casing](component-definition-name-casing.md) rule.
-- :wrench: The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+- :no_entry_sign: This rule was **removed** in eslint-plugin-vue v9.0.0 and replaced by [vue/component-definition-name-casing](component-definition-name-casing.md) rule.
 
 ## :book: Rule Details
 
@@ -83,7 +82,7 @@ This rule aims at enforcing the style for the `name` property casing for consist
 
 ## :books: Further Reading
 
-- [Style guide - Component name casing in JS/JSX](https://v3.vuejs.org/style-guide/#component-name-casing-in-js-jsx-strongly-recommended)
+- [Style guide - Component name casing in JS/JSX](https://vuejs.org/style-guide/rules-strongly-recommended.html#component-name-casing-in-js-jsx)
 
 ## :rocket: Version
 

@@ -1,4 +1,15 @@
-# enforce consistent linebreak style for operators (operator-linebreak)
+---
+title: operator-linebreak
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/operator-linebreak.md
+rule_type: layout
+related_rules:
+- comma-style
+---
+
+<!--FIXABLE-->
+
+Enforces consistent linebreak style for operators.
 
 When a statement is too long to fit on a single line, line breaks are generally inserted next to the operators separating expressions. The first style coming to mind would be to place the operator at the end of the line, following the English punctuation rules.
 
@@ -330,7 +341,3 @@ answer = everything
 ## When Not To Use It
 
 If your project will not be using a common operator line break style, turn this rule off.
-
-## Related Rules
-
-* [comma-style](comma-style.md)

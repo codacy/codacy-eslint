@@ -1,4 +1,16 @@
-# Disallow the use of `Math.pow` in favor of the `**` operator (prefer-exponentiation-operator)
+---
+title: prefer-exponentiation-operator
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/prefer-exponentiation-operator.md
+rule_type: suggestion
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation
+- https://bugs.chromium.org/p/v8/issues/detail?id=5848
+---
+
+<!--FIXABLE-->
+
+Disallows the use of `Math.pow` in favor of the `**` operator.
 
 Introduced in ES2016, the infix exponentiation operator `**` is an alternative for the standard `Math.pow` function.
 
@@ -39,8 +51,3 @@ let quux = (-1) ** n;
 ## When Not To Use It
 
 This rule should not be used unless ES2016 is supported in your codebase.
-
-## Further Reading
-
-* [MDN Arithmetic Operators - Exponentiation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation)
-* [Issue 5848: Exponentiation operator ** has different results for numbers and variables from 50 upwards](https://bugs.chromium.org/p/v8/issues/detail?id=5848)

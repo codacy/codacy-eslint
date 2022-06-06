@@ -1,4 +1,16 @@
-# disallow ternary operators when simpler alternatives exist (no-unneeded-ternary)
+---
+title: no-unneeded-ternary
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-unneeded-ternary.md
+rule_type: suggestion
+related_rules:
+- no-ternary
+- no-nested-ternary
+---
+
+<!--FIXABLE-->
+
+Disallows ternary operators when simpler alternatives exist.
 
 It's a common mistake in JavaScript to use a conditional expression to select between two Boolean values instead of using ! to convert the test to a Boolean.
 Here are some examples:
@@ -9,7 +21,6 @@ var isYes = answer === 1 ? true : false;
 
 // Good
 var isYes = answer === 1;
-
 
 // Bad
 var isNo = answer === 1 ? false : true;
@@ -85,8 +96,3 @@ Note that `defaultAssignment: false` still allows expressions of the form `x ? e
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with unnecessary complexity in conditional expressions.
-
-## Related Rules
-
-* [no-ternary](no-ternary.md)
-* [no-nested-ternary](no-nested-ternary.md)

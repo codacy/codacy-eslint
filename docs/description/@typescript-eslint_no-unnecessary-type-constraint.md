@@ -1,4 +1,6 @@
-# Disallows unnecessary constraints on generic types (`no-unnecessary-type-constraint`)
+# `no-unnecessary-type-constraint`
+
+Disallows unnecessary constraints on generic types.
 
 ## Rule Details
 
@@ -10,7 +12,11 @@ When not provided, type parameters happen to default to:
 
 It is therefore redundant to `extend` from these types in later versions of TypeScript.
 
-Examples of **incorrect** code for this rule:
+Examples of code for this rule:
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 interface FooAny<T extends any> {}
@@ -34,7 +40,7 @@ function QuuzAny<T extends any>() {}
 function QuuzUnknown<T extends unknown>() {}
 ```
 
-Examples of **correct** code for this rule:
+### ✅ Correct
 
 ```ts
 interface Foo<T> {}
@@ -50,6 +56,27 @@ const Quux = <T>() => {};
 function Quuz<T>() {}
 ```
 
+## Options
+
+```jsonc
+// .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/no-unnecessary-type-constraint": "error"
+  }
+}
+```
+
+This rule is not configurable.
+
 ## When Not To Use It
 
 If you don't care about the specific styles of your type constraints, or never use them in the first place, then you will not need this rule.
+
+## Attributes
+
+- Configs:
+  - [x] ✅ Recommended
+  - [x] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

@@ -1,4 +1,19 @@
-# enforce a maximum function length (max-lines-per-function)
+---
+title: max-lines-per-function
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/max-lines-per-function.md
+rule_type: suggestion
+related_rules:
+- complexity
+- max-depth
+- max-lines
+- max-nested-callbacks
+- max-params
+- max-statements
+- max-statements-per-line
+---
+
+Enforces a maximum function length.
 
 Some people consider large functions a code smell. Large functions tend to do a lot of things and can make it hard following what's going on. Many coding style guides dictate a limit of the number of lines that a function can comprise of. This rule can help enforce that style.
 
@@ -6,11 +21,11 @@ Some people consider large functions a code smell. Large functions tend to do a 
 
 This rule enforces a maximum number of lines per function, in order to aid in maintainability and reduce complexity.
 
-## Why not use `max-statements` or other complexity measurement rules instead?
+### Why not use `max-statements` or other complexity measurement rules instead?
 
 Nested long method chains like the below example are often broken onto separate lines for readability:
 
-```
+```js
 function() {
     return m("div", [
         m("table", {className: "table table-striped latest-data"}, [
@@ -187,13 +202,3 @@ Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the number of lines in your functions.
-
-## Related Rules
-
-* [complexity](complexity.md)
-* [max-depth](max-depth.md)
-* [max-lines](max-lines.md)
-* [max-nested-callbacks](max-nested-callbacks.md)
-* [max-params](max-params.md)
-* [max-statements](max-statements.md)
-* [max-statements-per-line](max-statements-per-line.md)

@@ -1,4 +1,11 @@
-# Disallow Null Comparisons (no-eq-null)
+---
+title: no-eq-null
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-eq-null.md
+rule_type: suggestion
+---
+
+Disallows `null` comparisons without type-checking operators,
 
 Comparing to `null` without a type-checking operator (`==` or `!=`), can have unintended results as the comparison will evaluate to true when comparing to not just a `null`, but also an `undefined` value.
 
@@ -40,10 +47,10 @@ while (qux !== null) {
 }
 ```
 
-## Compatibility
-
-* **JSHint**: This rule corresponds to `eqnull` rule of JSHint.
-
 ## When Not To Use It
 
 If you want to enforce type-checking operations in general, use the more powerful [eqeqeq](./eqeqeq) instead.
+
+## Compatibility
+
+* **JSHint**: This rule corresponds to `eqnull` rule of JSHint.

@@ -1,4 +1,20 @@
-# enforce a maximum file length (max-lines)
+---
+title: max-lines
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/max-lines.md
+rule_type: suggestion
+related_rules:
+- complexity
+- max-depth
+- max-lines-per-function
+- max-nested-callbacks
+- max-params
+- max-statements
+further_reading:
+- https://web.archive.org/web/20160725154648/http://www.mind2b.com/component/content/article/24-software-module-size-and-file-size
+---
+
+Enforces a maximum file length.
 
 Some people consider large files a code smell. Large files tend to do a lot of things and can make it hard following what's going. While there is not an objective maximum number of lines considered acceptable in a file, most people would agree it should not be in the thousands. Recommendations usually range from 100 to 500 lines.
 
@@ -108,19 +124,6 @@ var a,
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the number of lines in your files.
-
-## Further reading
-
-* [Software Module size and file size](https://web.archive.org/web/20160725154648/http://www.mind2b.com/component/content/article/24-software-module-size-and-file-size)
-
-## Related Rules
-
-* [complexity](complexity.md)
-* [max-depth](max-depth.md)
-* [max-lines-per-function](max-lines-per-function.md)
-* [max-nested-callbacks](max-nested-callbacks.md)
-* [max-params](max-params.md)
-* [max-statements](max-statements.md)
 
 ## Compatibility
 

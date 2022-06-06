@@ -1,4 +1,18 @@
-# Require Brace Style (brace-style)
+---
+title: brace-style
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/brace-style.md
+rule_type: layout
+related_rules:
+- block-spacing
+- space-before-blocks
+further_reading:
+- https://en.wikipedia.org/wiki/Indent_style
+---
+
+<!--FIXABLE-->
+
+Enforces consistent brace style for blocks.
 
 Brace style is closely related to [indent style](https://en.wikipedia.org/wiki/Indent_style) in programming and describes the placement of braces relative to their control statement and body. There are probably a dozen, if not more, brace styles in the world.
 
@@ -85,6 +99,14 @@ if (foo) {
 else {
   baz();
 }
+
+class C
+{
+    static
+    {
+        foo();
+    }
+}
 ```
 
 Examples of **correct** code for this rule with the default `"1tbs"` option:
@@ -110,6 +132,12 @@ try {
   somethingRisky();
 } catch(e) {
   handleError();
+}
+
+class C {
+    static {
+        foo();
+    }
 }
 
 // when there are no braces, there are no problems
@@ -150,6 +178,12 @@ if (foo) { baz(); } else if (bar) {
 try { somethingRisky(); } catch(e) {
   handleError();
 }
+
+class C {
+    static { foo(); }
+}
+
+class D { static { foo(); } }
 ```
 
 ### stroustrup
@@ -175,6 +209,14 @@ try
 } catch(e)
 {
   handleError();
+}
+
+class C
+{
+    static
+    {
+        foo();
+    }
 }
 
 if (foo) {
@@ -211,6 +253,12 @@ catch(e) {
   handleError();
 }
 
+class C {
+    static {
+        foo();
+    }
+}
+
 // when there are no braces, there are no problems
 if (foo) bar();
 else if (baz) boom();
@@ -230,6 +278,12 @@ else { baz(); }
 
 try { somethingRisky(); }
 catch(e) { handleError(); }
+
+class C {
+    static { foo(); }
+}
+
+class D { static { foo(); } }
 ```
 
 ### allman
@@ -253,6 +307,12 @@ try
 } catch(e)
 {
   handleError();
+}
+
+class C {
+    static {
+        foo();
+    }
 }
 
 if (foo) {
@@ -295,6 +355,14 @@ catch(e)
   handleError();
 }
 
+class C
+{
+    static
+    {
+        foo();
+    }
+}
+
 // when there are no braces, there are no problems
 if (foo) bar();
 else if (baz) boom();
@@ -314,12 +382,18 @@ else { baz(); }
 
 try { somethingRisky(); }
 catch(e) { handleError(); }
+
+class C
+{
+    static { foo(); }
+
+    static
+    { foo(); }
+}
+
+class D { static { foo(); } }
 ```
 
 ## When Not To Use It
 
 If you don't want to enforce a particular brace style, don't enable this rule.
-
-## Further Reading
-
-* [Indent style](https://en.wikipedia.org/wiki/Indent_style)

@@ -1,4 +1,6 @@
-# Sets preference level for triple slash directives versus ES6-style import declarations (`triple-slash-reference`)
+# `triple-slash-reference`
+
+Sets preference level for triple slash directives versus ES6-style import declarations.
 
 Use of triple-slash reference type directives is discouraged in favor of the newer `import` style. This rule allows you to ban use of `/// <reference path="" />`, `/// <reference types="" />`, or `/// <reference lib="" />` directives.
 
@@ -42,6 +44,22 @@ import * as foo from 'foo';
 import foo = require('foo');
 ```
 
+## Options
+
+```ts
+type Options = {
+  lib?: 'always' | 'never';
+  path?: 'always' | 'never';
+  types?: 'always' | 'never' | 'prefer-import';
+};
+
+const defaultOptions: Options = {
+  lib: 'always',
+  path: 'never',
+  types: 'prefer-import',
+};
+```
+
 ## When To Use It
 
 If you want to ban use of one or all of the triple slash reference directives, or any time you might use triple-slash type reference directives and ES6 import declarations in the same file.
@@ -50,7 +68,15 @@ If you want to ban use of one or all of the triple slash reference directives, o
 
 If you want to use all flavors of triple slash reference directives.
 
-## Compatibility
+## Related To
 
 - TSLint: [no-reference](http://palantir.github.io/tslint/rules/no-reference/)
 - TSLint: [no-reference-import](https://palantir.github.io/tslint/rules/no-reference-import/)
+
+## Attributes
+
+- Configs:
+  - [x] ✅ Recommended
+  - [x] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

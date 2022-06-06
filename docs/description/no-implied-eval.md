@@ -1,4 +1,13 @@
-# Disallow Implied eval() (no-implied-eval)
+---
+title: no-implied-eval
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-implied-eval.md
+rule_type: suggestion
+related_rules:
+- no-eval
+---
+
+Disallows the use of `eval()`-like methods.
 
 It's considered a good practice to avoid using `eval()` in JavaScript. There are security and performance implications involved with doing so, which is why many linters (including ESLint) recommend disallowing `eval()`. However, there are some other ways to pass a string and have it interpreted as JavaScript code that have similar concerns.
 
@@ -18,7 +27,6 @@ setTimeout(function() {
 ```
 
 The best practice is to always use a function for the first argument of `setTimeout()` and `setInterval()` (and avoid `execScript()`).
-
 
 ## Rule Details
 
@@ -57,7 +65,3 @@ setInterval(function() {
 ## When Not To Use It
 
 If you want to allow `setTimeout()` and `setInterval()` with string arguments, then you can safely disable this rule.
-
-## Related Rules
-
-* [no-eval](no-eval.md)

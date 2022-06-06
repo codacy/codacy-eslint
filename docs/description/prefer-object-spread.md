@@ -1,4 +1,13 @@
-# Prefer use of an object spread over `Object.assign` (prefer-object-spread)
+---
+title: prefer-object-spread
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/prefer-object-spread.md
+rule_type: suggestion
+---
+
+<!--FIXABLE-->
+
+Prefer use of an object spread over `Object.assign`.
 
 When Object.assign is called using an object literal as the first argument, this rule requires using the object spread syntax instead. This rule also warns on cases where an `Object.assign` call is made using a single argument that is an object literal, in this case, the `Object.assign` call is not needed.
 
@@ -11,17 +20,15 @@ Examples of **incorrect** code for this rule:
 ```js
 /*eslint prefer-object-spread: "error"*/
 
-Object.assign({}, foo)
+Object.assign({}, foo);
 
-Object.assign({}, {foo: 'bar'})
+Object.assign({}, {foo: 'bar'});
 
-Object.assign({ foo: 'bar'}, baz)
+Object.assign({ foo: 'bar'}, baz);
 
-Object.assign({ foo: 'bar' }, Object.assign({ bar: 'foo' }))
+Object.assign({}, baz, { foo: 'bar' });
 
-Object.assign({}, { foo, bar, baz })
-
-Object.assign({}, { ...baz })
+Object.assign({}, { ...baz });
 
 // Object.assign with a single argument that is an object literal
 Object.assign({});
@@ -34,14 +41,16 @@ Examples of **correct** code for this rule:
 ```js
 /*eslint prefer-object-spread: "error"*/
 
-Object.assign(...foo);
+({ ...foo });
+
+({ ...baz, foo: 'bar' });
 
 // Any Object.assign call without an object literal as the first argument
 Object.assign(foo, { bar: baz });
 
-Object.assign(foo, Object.assign(bar));
+Object.assign(foo, bar);
 
-Object.assign(foo, { bar, baz })
+Object.assign(foo, { bar, baz });
 
 Object.assign(foo, { ...baz });
 ```

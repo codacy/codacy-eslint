@@ -1,4 +1,11 @@
-# Disallow process.exit() (no-process-exit)
+---
+title: no-process-exit
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-process-exit.md
+rule_type: suggestion
+---
+
+Disallows the use of `process.exit()`.
 
 This rule was **deprecated** in ESLint v7.0.0. Please use the corresponding rule in [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).
 

@@ -1,4 +1,6 @@
-# Prefer initializing each enums member value (`prefer-enum-initializers`)
+# `prefer-enum-initializers`
+
+Prefer initializing each enums member value.
 
 This rule recommends having each `enum`s member value explicitly initialized.
 
@@ -25,7 +27,11 @@ enum Status {
 }
 ```
 
-Examples of **incorrect** code for this rule:
+Examples of code for this rule:
+
+<!--tabs-->
+
+### ❌ Incorrect
 
 ```ts
 enum Status {
@@ -45,7 +51,7 @@ enum Color {
 }
 ```
 
-Examples of **correct** code for this rule:
+### ✅ Correct
 
 ```ts
 enum Status {
@@ -65,6 +71,27 @@ enum Color {
 }
 ```
 
+## Options
+
+```jsonc
+// .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/prefer-enum-initializers": "warn"
+  }
+}
+```
+
+This rule is not configurable.
+
 ## When Not To Use It
 
 If you don't care about `enum`s having implicit values you can safely disable this rule.
+
+## Attributes
+
+- Configs:
+  - [ ] ✅ Recommended
+  - [ ] 🔒 Strict
+- [ ] 🔧 Fixable
+- [ ] 💭 Requires type information

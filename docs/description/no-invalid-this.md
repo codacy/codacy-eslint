@@ -1,12 +1,23 @@
-# Disallow `this` keywords outside of classes or class-like objects. (no-invalid-this)
+---
+title: no-invalid-this
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-invalid-this.md
+rule_type: suggestion
+---
+
+Disallows use of `this` in contexts where the value of `this` is `undefined`.
 
 Under the strict mode, `this` keywords outside of classes or class-like objects might be `undefined` and raise a `TypeError`.
 
 ## Rule Details
 
-This rule aims to flag usage of `this` keywords outside of classes or class-like objects.
+This rule aims to flag usage of `this` keywords in contexts where the value of `this` is `undefined`.
 
-Basically, this rule checks whether or not a function containing `this` keyword is a constructor or a method.
+Top-level `this` in scripts is always considered valid because it refers to the global object regardless of the strict mode.
+
+Top-level `this` in ECMAScript modules is always considered invalid because its value is `undefined`.
+
+For `this` inside functions, this rule basically checks whether or not the function containing `this` keyword is a constructor or a method. Note that arrow functions have lexical `this`, and that therefore this rule checks their enclosing contexts.
 
 This rule judges from following conditions whether or not the function is a constructor:
 
@@ -18,13 +29,19 @@ This rule judges from following conditions whether or not the function is a meth
 
 * The function is on an object literal.
 * The function is assigned to a property.
-* The function is a method/getter/setter of ES2015 Classes. (excepts static methods)
+* The function is a method/getter/setter of ES2015 Classes.
 
 And this rule allows `this` keywords in functions below:
 
 * The `call/apply/bind` method of the function is called directly.
 * The function is a callback of array methods (such as `.forEach()`) if `thisArg` is given.
 * The function has `@this` tag in its JSDoc comment.
+
+And this rule always allows `this` keywords in the following contexts:
+
+* At the top level of scripts.
+* In class field initializers.
+* In class static blocks.
 
 Otherwise are considered problems.
 
@@ -38,9 +55,6 @@ Examples of **incorrect** code for this rule in strict mode:
 /*eslint-env es6*/
 
 "use strict";
-
-this.a = 0;
-baz(() => this);
 
 (function() {
     this.a = 0;
@@ -61,11 +75,6 @@ foo(function() {
     this.a = 0;
     baz(() => this);
 });
-
-obj.foo = () => {
-    // `this` of arrow functions is the outer scope's.
-    this.a = 0;
-};
 
 var obj = {
     aaa: function() {
@@ -90,6 +99,9 @@ Examples of **correct** code for this rule in strict mode:
 /*eslint-env es6*/
 
 "use strict";
+
+this.a = 0;
+baz(() => this);
 
 function Foo() {
     // OK, this is in a legacy style constructor.
@@ -166,6 +178,13 @@ Foo.prototype.foo = function foo() {
 };
 
 class Foo {
+
+    // OK, this is in a class field initializer.
+    a = this.b;
+
+    // OK, static initializers also have valid this.
+    static a = this.b;
+
     foo() {
         // OK, this is in a method.
         this.a = 0;
@@ -174,6 +193,12 @@ class Foo {
 
     static foo() {
         // OK, this is in a method (static methods also have valid this).
+        this.a = 0;
+        baz(() => this);
+    }
+
+    static {
+        // OK, static blocks also have valid this.
         this.a = 0;
         baz(() => this);
     }

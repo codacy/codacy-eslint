@@ -1,4 +1,14 @@
-# disallow the use of `console` (no-console)
+---
+title: no-console
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-console.md
+rule_type: suggestion
+related_rules:
+- no-alert
+- no-debugger
+---
+
+Disallows the use of `console`.
 
 In JavaScript that is designed to be executed in the browser, it's considered a best practice to avoid using methods on `console`. Such messages are considered to be for debugging purposes and therefore not suitable to ship to the client. In general, calls using `console` should be stripped before being pushed to production.
 
@@ -90,8 +100,3 @@ However, you might not want to manually add `eslint-disable-next-line` or `eslin
     }
 }
 ```
-
-## Related Rules
-
-* [no-alert](no-alert.md)
-* [no-debugger](no-debugger.md)

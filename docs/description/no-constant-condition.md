@@ -1,4 +1,15 @@
-# disallow constant expressions in conditions (no-constant-condition)
+---
+title: no-constant-condition
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-constant-condition.md
+rule_type: problem
+related_rules:
+- no-constant-binary-expression
+---
+
+<!--RECOMMENDED-->
+
+Disallows constant expressions in conditions.
 
 A constant expression (for example, a literal) as a test condition might be a typo or development trigger for a specific behavior. For example, the following code looks as if it is not ready for production.
 
@@ -30,6 +41,22 @@ if (void x) {
 
 if (x &&= false) {
     doSomethingNever();
+}
+
+if (class {}) {
+    doSomethingAlways();
+}
+
+if (new Boolean(x)) {
+    doSomethingAlways();
+}
+
+if (Boolean(1)) {
+    doSomethingAlways();
+}
+
+if (undefined) {
+    doSomethingUnfinished();
 }
 
 if (x ||= true) {

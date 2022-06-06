@@ -1,4 +1,16 @@
-# Require or disallow a space before function parenthesis (space-before-function-paren)
+---
+title: space-before-function-paren
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/space-before-function-paren.md
+rule_type: layout
+related_rules:
+- space-after-keywords
+- space-return-throw-case
+---
+
+<!--FIXABLE-->
+
+Requires or disallows a space before function parenthesis.
 
 When formatting a function, whitespace is allowed between the function name or `function` keyword and the opening paren. Named functions also require a space between the `function` keyword and the function name, but anonymous functions require no whitespace. For example:
 
@@ -361,8 +373,3 @@ var foo = {
 ## When Not To Use It
 
 You can turn this rule off if you are not concerned with the consistency of spacing before function parenthesis.
-
-## Related Rules
-
-* [space-after-keywords](space-after-keywords.md)
-* [space-return-throw-case](space-return-throw-case.md)

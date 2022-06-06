@@ -1,4 +1,13 @@
-# Disallow duplicate name in class members (no-dupe-class-members)
+---
+title: no-dupe-class-members
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-dupe-class-members.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows duplicate name in class members.
 
 If there are declarations of the same name in class members, the last declaration overwrites other declarations silently.
 It can cause unexpected behaviors.
@@ -25,7 +34,6 @@ Examples of **incorrect** code for this rule:
 
 ```js
 /*eslint no-dupe-class-members: "error"*/
-/*eslint-env es6*/
 
 class Foo {
   bar() { }
@@ -35,6 +43,16 @@ class Foo {
 class Foo {
   bar() { }
   get bar() { }
+}
+
+class Foo {
+  bar;
+  bar;
+}
+
+class Foo {
+  bar;
+  bar() { }
 }
 
 class Foo {
@@ -47,7 +65,6 @@ Examples of **correct** code for this rule:
 
 ```js
 /*eslint no-dupe-class-members: "error"*/
-/*eslint-env es6*/
 
 class Foo {
   bar() { }
@@ -57,6 +74,16 @@ class Foo {
 class Foo {
   get bar() { }
   set bar(value) { }
+}
+
+class Foo {
+  bar;
+  qux;
+}
+
+class Foo {
+  bar;
+  qux() { }
 }
 
 class Foo {

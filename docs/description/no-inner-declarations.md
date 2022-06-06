@@ -1,4 +1,13 @@
-# disallow variable or `function` declarations in nested blocks (no-inner-declarations)
+---
+title: no-inner-declarations
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-inner-declarations.md
+rule_type: problem
+---
+
+<!--RECOMMENDED-->
+
+Disallows variable or `function` declarations in nested blocks.
 
 In JavaScript, prior to ES6, a function declaration is only allowed in the first level of a program or the body of another function, though parsers sometimes [erroneously accept them elsewhere](https://code.google.com/p/esprima/issues/detail?id=422). This only applies to function declarations; named or anonymous function expressions can occur anywhere an expression is permitted.
 
@@ -56,7 +65,7 @@ function doSomething() {
 
 ## Rule Details
 
-This rule requires that function declarations and, optionally, variable declarations be in the root of a program or the body of a function.
+This rule requires that function declarations and, optionally, variable declarations be in the root of a program, or in the root of the body of a function, or in the root of the body of a class static block.
 
 ## Options
 
@@ -83,6 +92,14 @@ function doSomethingElse() {
 }
 
 if (foo) function f(){}
+
+class C {
+    static {
+        if (test) {
+            function doSomething() { }
+        }
+    }
+}
 ```
 
 Examples of **correct** code for this rule with the default `"functions"` option:
@@ -94,6 +111,12 @@ function doSomething() { }
 
 function doSomethingElse() {
     function doAnotherThing() { }
+}
+
+class C {
+    static {
+        function doSomething() { }
+    }
 }
 
 if (test) {
@@ -125,17 +148,23 @@ function doAnotherThing() {
     }
 }
 
-
 if (foo) var a;
 
 if (foo) function f(){}
+
+class C {
+    static {
+        if (test) {
+            var something;
+        }
+    }
+}
 ```
 
 Examples of **correct** code for this rule with the `"both"` option:
 
 ```js
 /*eslint no-inner-declarations: ["error", "both"]*/
-/*eslint-env es6*/
 
 var bar = 42;
 
@@ -146,8 +175,14 @@ if (test) {
 function doAnotherThing() {
     var baz = 81;
 }
+
+class C {
+    static {
+        var something;
+    }
+}
 ```
 
 ## When Not To Use It
 
-The function declaration portion rule will be rendered obsolete when [block-scoped functions](https://bugzilla.mozilla.org/show_bug.cgi?id=585536) land in ES6, but until then, it should be left on to enforce valid constructions. Disable checking variable declarations when using [block-scoped-var](block-scoped-var.md) or if declaring variables in nested blocks is acceptable despite hoisting.
+The function declaration portion rule will be rendered obsolete when [block-scoped functions](https://bugzilla.mozilla.org/show_bug.cgi?id=585536) land in ES6, but until then, it should be left on to enforce valid constructions. Disable checking variable declarations when using [block-scoped-var](block-scoped-var) or if declaring variables in nested blocks is acceptable despite hoisting.

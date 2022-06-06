@@ -1,4 +1,17 @@
-# Disallow returning values from setters (no-setter-return)
+---
+title: no-setter-return
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-setter-return.md
+rule_type: problem
+related_rules:
+- getter-return
+further_reading:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+---
+
+<!--RECOMMENDED-->
+
+Disallows returning values from setters.
 
 Setters cannot return values.
 
@@ -91,11 +104,3 @@ Object.defineProperty(foo, "bar", {
     }
 });
 ```
-
-## Further Reading
-
-* [MDN setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
-
-## Related Rules
-
-* [getter-return](getter-return.md)

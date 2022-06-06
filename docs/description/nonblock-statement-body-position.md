@@ -1,4 +1,15 @@
-# enforce the location of single-line statements (nonblock-statement-body-position)
+---
+title: nonblock-statement-body-position
+layout: doc
+edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/nonblock-statement-body-position.md
+rule_type: layout
+further_reading:
+- https://jscs-dev.github.io/rule/requireNewlineBeforeSingleStatementsInIf
+---
+
+<!--FIXABLE-->
+
+Enforces the location of single-line statements.
 
 When writing `if`, `else`, `while`, `do-while`, and `for` statements, the body can be a single statement instead of a block. It can be useful to enforce a consistent location for these single statements.
 
@@ -27,7 +38,7 @@ if (foo) bar();
 
 This rule aims to enforce a consistent location for single-line statements.
 
-Note that this rule does not enforce the usage of single-line statements in general. If you would like to disallow single-line statements, use the [`curly`](/docs/rules/curly.md) rule instead.
+Note that this rule does not enforce the usage of single-line statements in general. If you would like to disallow single-line statements, use the [`curly`](/docs/rules/curly) rule instead.
 
 ### Options
 
@@ -151,8 +162,4 @@ while (foo)
 
 ## When Not To Use It
 
-If you're not concerned about consistent locations of single-line statements, you should not turn on this rule. You can also disable this rule if you're using the `"all"` option for the [`curly`](/docs/rules/curly.md) rule, because this will disallow single-line statements entirely.
-
-## Further Reading
-
-* JSCS: [requireNewlineBeforeSingleStatementsInIf](https://jscs-dev.github.io/rule/requireNewlineBeforeSingleStatementsInIf)
+If you're not concerned about consistent locations of single-line statements, you should not turn on this rule. You can also disable this rule if you're using the `"all"` option for the [`curly`](/docs/rules/curly) rule, because this will disallow single-line statements entirely.
