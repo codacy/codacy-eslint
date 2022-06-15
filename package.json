@@ -107,7 +107,7 @@
     "@nrwl/react": "14.3.2",
     "@nrwl/storybook": "13.9.3",
     "@nrwl/tao": "13.9.3",
-    "@nrwl/web": "13.9.3",
+    "@nrwl/web": "14.3.2",
     "@nrwl/workspace": "13.9.3",
     "@nrwl/nx-cloud": "13.1.6",
     "@prodigy/eslint-config-prodigy": "0.0.7",
