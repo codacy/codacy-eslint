@@ -784,6 +784,7 @@
   <module name="jest_prefer-equality-matcher" />
   <module name="jest_prefer-expect-assertions" />
   <module name="jest_prefer-expect-resolves" />
+  <module name="jest_prefer-hooks-in-order" />
   <module name="jest_prefer-hooks-on-top" />
   <module name="jest_prefer-lowercase-title" />
   <module name="jest_prefer-snapshot-hint" />
@@ -1434,6 +1435,7 @@
   <module name="@typescript-eslint_class-literal-property-style" />
   <module name="@typescript-eslint_comma-dangle" />
   <module name="@typescript-eslint_comma-spacing" />
+  <module name="@typescript-eslint_consistent-generic-constructors" />
   <module name="@typescript-eslint_consistent-indexed-object-style" />
   <module name="@typescript-eslint_consistent-type-assertions" />
   <module name="@typescript-eslint_consistent-type-definitions" />

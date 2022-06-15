@@ -6548,6 +6548,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_prefer-hooks-in-order",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_prefer-hooks-on-top",
       "level": "Info",
       "category": "CodeStyle",
@@ -11215,7 +11222,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/stefan/Documents/Projects/Codacy-app/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
@@ -11452,6 +11459,13 @@
           "default": true
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_consistent-generic-constructors",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
