@@ -104,7 +104,7 @@
     "@nrwl/nest": "13.9.3",
     "@nrwl/next": "13.9.3",
     "@nrwl/node": "13.9.3",
-    "@nrwl/react": "13.9.3",
+    "@nrwl/react": "14.3.2",
     "@nrwl/storybook": "13.9.3",
     "@nrwl/tao": "13.9.3",
     "@nrwl/web": "13.9.3",
