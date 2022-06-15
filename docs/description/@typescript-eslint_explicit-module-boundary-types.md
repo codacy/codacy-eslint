@@ -1,6 +1,6 @@
 # `explicit-module-boundary-types`
 
-Require explicit return and argument types on exported functions' and classes' public class methods.
+Requires explicit return and argument types on exported functions' and classes' public class methods.
 
 Explicit types for function return values and arguments makes it clear to any calling code what is the module boundary's input and output.
 
@@ -158,10 +158,9 @@ Examples of code for this rule with `{ allowDirectConstAssertionInArrowFunctions
 
 ```ts
 export const func = (value: number) => ({ type: 'X', value });
-export const foo = () =>
-  ({
-    bar: true,
-  } as const);
+export const foo = () => ({
+  bar: true,
+});
 export const bar = () => 1;
 ```
 
@@ -285,11 +284,3 @@ If you wish to make sure all functions have explicit return types, as opposed to
 ## Further Reading
 
 - TypeScript [Functions](https://www.typescriptlang.org/docs/handbook/functions.html#function-types)
-
-## Attributes
-
-- Configs:
-  - [ ] ✅ Recommended
-  - [ ] 🔒 Strict
-- [ ] 🔧 Fixable
-- [ ] 💭 Requires type information

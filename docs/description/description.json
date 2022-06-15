@@ -6373,6 +6373,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-hooks-in-order",
+    "title": "Jest: Prefer hooks in order",
+    "description": "Prefer having hooks in a consistent order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-hooks-on-top",
     "title": "Jest: Prefer hooks on top",
     "description": "Suggest having hooks before any test cases",
@@ -6464,7 +6471,7 @@
     "parameters": [],
     "patternId": "jest_unbound-method",
     "title": "Jest: Unbound method",
-    "description": "Enforces unbound methods are called with their expected scope",
+    "description": "Enforce unbound methods are called with their expected scope",
     "timeToFix": 5
   },
   {
@@ -10947,14 +10954,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_array-type",
     "title": "@typescript eslint: Array type",
-    "description": "Requires using either `T[]` or `Array<T>` for arrays",
+    "description": "Require using either `T[]` or `Array<T>` for arrays",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_await-thenable",
     "title": "@typescript eslint: Await thenable",
-    "description": "Disallows awaiting a value that is not a Thenable",
+    "description": "Disallow awaiting a value that is not a Thenable",
     "timeToFix": 5
   },
   {
@@ -10966,21 +10973,21 @@
     ],
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
-    "description": "Bans `@ts-<directive>` comments from being used or requires descriptions after directive",
+    "description": "Disallow `@ts-<directive>` comments or require descriptions after directive",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_ban-tslint-comment",
     "title": "@typescript eslint: Ban tslint comment",
-    "description": "Bans `// tslint:<rule-flag>` comments from being used",
+    "description": "Disallow `// tslint:<rule-flag>` comments",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_ban-types",
     "title": "@typescript eslint: Ban types",
-    "description": "Bans specific types from being used",
+    "description": "Disallow certain types",
     "timeToFix": 5
   },
   {
@@ -11003,14 +11010,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_class-literal-property-style",
     "title": "@typescript eslint: Class literal property style",
-    "description": "Ensures that literals on classes are exposed in a consistent style",
+    "description": "Enforce that literals on classes are exposed in a consistent style",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_comma-dangle",
     "title": "@typescript eslint: Comma dangle",
-    "description": "Require or disallow trailing comma",
+    "description": "Require or disallow trailing commas",
     "timeToFix": 5
   },
   {
@@ -11026,42 +11033,49 @@
     ],
     "patternId": "@typescript-eslint_comma-spacing",
     "title": "@typescript eslint: Comma spacing",
-    "description": "Enforces consistent spacing before and after commas",
+    "description": "Enforce consistent spacing before and after commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-generic-constructors",
+    "title": "@typescript eslint: Consistent generic constructors",
+    "description": "Enforce specifying generic type arguments on type annotation or constructor name of a constructor call",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_consistent-indexed-object-style",
     "title": "@typescript eslint: Consistent indexed object style",
-    "description": "Enforce or disallow the use of the record type",
+    "description": "Require or disallow the `Record` type",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-assertions",
     "title": "@typescript eslint: Consistent type assertions",
-    "description": "Enforces consistent usage of type assertions",
+    "description": "Enforce consistent usage of type assertions",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-definitions",
     "title": "@typescript eslint: Consistent type definitions",
-    "description": "Consistent with type definition either `interface` or `type`",
+    "description": "Enforce type definitions to consistently use either `interface` or `type`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-exports",
     "title": "@typescript eslint: Consistent type exports",
-    "description": "Enforces consistent usage of type exports",
+    "description": "Enforce consistent usage of type exports",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_consistent-type-imports",
     "title": "@typescript eslint: Consistent type imports",
-    "description": "Enforces consistent usage of type imports",
+    "description": "Enforce consistent usage of type imports",
     "timeToFix": 5
   },
   {
@@ -11208,14 +11222,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_method-signature-style",
     "title": "@typescript eslint: Method signature style",
-    "description": "Enforces using a particular method signature syntax",
+    "description": "Enforce using a particular method signature syntax",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_naming-convention",
     "title": "@typescript eslint: Naming convention",
-    "description": "Enforces naming conventions for everything across a codebase",
+    "description": "Enforce naming conventions for everything across a codebase",
     "timeToFix": 5
   },
   {
@@ -11229,7 +11243,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-base-to-string",
     "title": "@typescript eslint: No base to string",
-    "description": "Requires that `.toString()` is only called on objects which provide useful information when stringified",
+    "description": "Require `.toString()` to only be called on objects which provide useful information when stringified",
     "timeToFix": 5
   },
   {
@@ -11243,7 +11257,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-confusing-void-expression",
     "title": "@typescript eslint: No confusing void expression",
-    "description": "Requires expressions of type void to appear in statement position",
+    "description": "Require expressions of type void to appear in statement position",
     "timeToFix": 5
   },
   {
@@ -11276,7 +11290,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-dynamic-delete",
     "title": "@typescript eslint: No dynamic delete",
-    "description": "Disallow the delete operator with computed key expressions",
+    "description": "Disallow using the `delete` operator on computed key expressions",
     "timeToFix": 5
   },
   {
@@ -11297,7 +11311,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-explicit-any",
     "title": "@typescript eslint: No explicit any",
-    "description": "Disallow usage of the `any` type",
+    "description": "Disallow the `any` type",
     "timeToFix": 5
   },
   {
@@ -11325,14 +11339,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-extraneous-class",
     "title": "@typescript eslint: No extraneous class",
-    "description": "Forbids the use of classes as namespaces",
+    "description": "Disallow classes used as namespaces",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-floating-promises",
     "title": "@typescript eslint: No floating promises",
-    "description": "Requires Promise-like statements to be handled appropriately",
+    "description": "Require Promise-like statements to be handled appropriately",
     "timeToFix": 5
   },
   {
@@ -11360,7 +11374,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-inferrable-types",
     "title": "@typescript eslint: No inferrable types",
-    "description": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean",
+    "description": "Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean",
     "timeToFix": 5
   },
   {
@@ -11379,7 +11393,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-invalid-void-type",
     "title": "@typescript eslint: No invalid void type",
-    "description": "Disallows usage of `void` type outside of generic or return types",
+    "description": "Disallow `void` type outside of generic or return types",
     "timeToFix": 5
   },
   {
@@ -11443,35 +11457,35 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-misused-promises",
     "title": "@typescript eslint: No misused promises",
-    "description": "Avoid using Promises in places not designed to handle them",
+    "description": "Disallow Promises in places not designed to handle them",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-namespace",
     "title": "@typescript eslint: No namespace",
-    "description": "Disallow the use of custom TypeScript modules and namespaces",
+    "description": "Disallow custom TypeScript modules and namespaces",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
     "title": "@typescript eslint: No non null asserted nullish coalescing",
-    "description": "Disallows using a non-null assertion in the left operand of the nullish coalescing operator",
+    "description": "Disallow non-null assertions in the left operand of a nullish coalescing operator",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
     "title": "@typescript eslint: No non null asserted optional chain",
-    "description": "Disallows using a non-null assertion after an optional chain expression",
+    "description": "Disallow non-null assertions after an optional chain expression",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-non-null-assertion",
     "title": "@typescript eslint: No non null assertion",
-    "description": "Disallows non-null assertions using the `!` postfix operator",
+    "description": "Disallow non-null assertions using the `!` postfix operator",
     "timeToFix": 5
   },
   {
@@ -11499,7 +11513,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-require-imports",
     "title": "@typescript eslint: No require imports",
-    "description": "Disallows invocation of `require()`",
+    "description": "Disallow invocation of `require()`",
     "timeToFix": 5
   },
   {
@@ -11534,84 +11548,84 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-type-alias",
     "title": "@typescript eslint: No type alias",
-    "description": "Disallow the use of type aliases",
+    "description": "Disallow type aliases",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
     "title": "@typescript eslint: No unnecessary boolean literal compare",
-    "description": "Flags unnecessary equality comparisons against boolean literals",
+    "description": "Disallow unnecessary equality comparisons against boolean literals",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-condition",
     "title": "@typescript eslint: No unnecessary condition",
-    "description": "Prevents conditionals where the type is always truthy or always falsy",
+    "description": "Disallow conditionals where the type is always truthy or always falsy",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-qualifier",
     "title": "@typescript eslint: No unnecessary qualifier",
-    "description": "Warns when a namespace qualifier is unnecessary",
+    "description": "Disallow unnecessary namespace qualifiers",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-type-arguments",
     "title": "@typescript eslint: No unnecessary type arguments",
-    "description": "Enforces that type arguments will not be used if not required",
+    "description": "Disallow type arguments that are equal to the default",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-type-assertion",
     "title": "@typescript eslint: No unnecessary type assertion",
-    "description": "Warns if a type assertion does not change the type of an expression",
+    "description": "Disallow type assertions that do not change the type of an expression",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
     "title": "@typescript eslint: No unnecessary type constraint",
-    "description": "Disallows unnecessary constraints on generic types",
+    "description": "Disallow unnecessary constraints on generic types",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-argument",
     "title": "@typescript eslint: No unsafe argument",
-    "description": "Disallows calling a function with an any type value",
+    "description": "Disallow calling a function with a value with type `any`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-assignment",
     "title": "@typescript eslint: No unsafe assignment",
-    "description": "Disallows assigning any to variables and properties",
+    "description": "Disallow assigning a value with type `any` to variables and properties",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-call",
     "title": "@typescript eslint: No unsafe call",
-    "description": "Disallows calling an any type value",
+    "description": "Disallow calling a value with type `any`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-member-access",
     "title": "@typescript eslint: No unsafe member access",
-    "description": "Disallows member access on any typed variables",
+    "description": "Disallow member access on a value with type `any`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-return",
     "title": "@typescript eslint: No unsafe return",
-    "description": "Disallows returning any from a function",
+    "description": "Disallow returning a value with type `any` from a function",
     "timeToFix": 5
   },
   {
@@ -11670,14 +11684,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-var-requires",
     "title": "@typescript eslint: No var requires",
-    "description": "Disallows the use of require statements except in import statements",
+    "description": "Disallow `require` statements except in import statements",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
     "title": "@typescript eslint: Non nullable type assertion style",
-    "description": "Prefers a non-null assertion over explicit type cast when possible",
+    "description": "Enforce non-null assertions over explicit type casts",
     "timeToFix": 5
   },
   {
@@ -11698,35 +11712,35 @@
     "parameters": [],
     "patternId": "@typescript-eslint_parameter-properties",
     "title": "@typescript eslint: Parameter properties",
-    "description": "Require or disallow the use of parameter properties in class constructors",
+    "description": "Require or disallow parameter properties in class constructors",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-as-const",
     "title": "@typescript eslint: Prefer as const",
-    "description": "Prefer usage of `as const` over literal type",
+    "description": "Enforce the use of `as const` over literal type",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-enum-initializers",
     "title": "@typescript eslint: Prefer enum initializers",
-    "description": "Prefer initializing each enums member value",
+    "description": "Require each enum member value to be explicitly initialized",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-for-of",
     "title": "@typescript eslint: Prefer for of",
-    "description": "Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated",
+    "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-function-type",
     "title": "@typescript eslint: Prefer function type",
-    "description": "Use function types instead of interfaces with call signatures",
+    "description": "Enforce using function types instead of interfaces with call signatures",
     "timeToFix": 5
   },
   {
@@ -11740,56 +11754,56 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-literal-enum-member",
     "title": "@typescript eslint: Prefer literal enum member",
-    "description": "Require that all enum members be literal values to prevent unintended enum member name shadow issues",
+    "description": "Require all enum members to be literal values",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-namespace-keyword",
     "title": "@typescript eslint: Prefer namespace keyword",
-    "description": "Require the use of the `namespace` keyword instead of the `module` keyword to declare custom TypeScript modules",
+    "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-nullish-coalescing",
     "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce the usage of the nullish coalescing operator instead of logical chaining",
+    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
-    "description": "Prefer using concise optional chain expressions instead of chained logical ands",
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-readonly",
     "title": "@typescript eslint: Prefer readonly",
-    "description": "Requires that private members are marked as `readonly` if they're never modified outside of the constructor",
+    "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
     "title": "@typescript eslint: Prefer readonly parameter types",
-    "description": "Requires that function parameters are typed as readonly to prevent accidental mutation of inputs",
+    "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-reduce-type-parameter",
     "title": "@typescript eslint: Prefer reduce type parameter",
-    "description": "Prefer using type parameter when calling `Array#reduce` instead of casting",
+    "description": "Enforce using type parameter when calling `Array#reduce` instead of casting",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-regexp-exec",
     "title": "@typescript eslint: Prefer regexp exec",
-    "description": "Enforce that `RegExp#exec` is used instead of `String#match` if no global flag is provided",
+    "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided",
     "timeToFix": 5
   },
   {
@@ -11803,21 +11817,21 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
     "title": "@typescript eslint: Prefer string starts ends with",
-    "description": "Enforce the use of `String#startsWith` and `String#endsWith` instead of other equivalent methods of checking substrings",
+    "description": "Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-ts-expect-error",
     "title": "@typescript eslint: Prefer ts expect error",
-    "description": "Recommends using `@ts-expect-error` over `@ts-ignore`",
+    "description": "Enforce using `@ts-expect-error` over `@ts-ignore`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_promise-function-async",
     "title": "@typescript eslint: Promise function async",
-    "description": "Requires any function or method that returns a Promise to be marked async",
+    "description": "Require any function or method that returns a Promise to be marked async",
     "timeToFix": 5
   },
   {
@@ -11831,7 +11845,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_require-array-sort-compare",
     "title": "@typescript eslint: Require array sort compare",
-    "description": "Requires `Array#sort` calls to always provide a `compareFunction`",
+    "description": "Require `Array#sort` calls to always provide a `compareFunction`",
     "timeToFix": 5
   },
   {
@@ -11845,21 +11859,21 @@
     "parameters": [],
     "patternId": "@typescript-eslint_restrict-plus-operands",
     "title": "@typescript eslint: Restrict plus operands",
-    "description": "When adding two variables, operands must both be of type number or of type string",
+    "description": "Require both operands of addition to have type `number` or `string`",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_restrict-template-expressions",
     "title": "@typescript eslint: Restrict template expressions",
-    "description": "Enforce template literal expressions to be of string type",
+    "description": "Enforce template literal expressions to be of `string` type",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_return-await",
     "title": "@typescript eslint: Return await",
-    "description": "Enforces consistent returning of awaited values",
+    "description": "Enforce consistent returning of awaited values",
     "timeToFix": 5
   },
   {
@@ -11873,21 +11887,21 @@
     "parameters": [],
     "patternId": "@typescript-eslint_sort-type-union-intersection-members",
     "title": "@typescript eslint: Sort type union intersection members",
-    "description": "Enforces that members of a type union/intersection are sorted alphabetically",
+    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_space-before-blocks",
     "title": "@typescript eslint: Space before blocks",
-    "description": "Enforces consistent spacing before blocks",
+    "description": "Enforce consistent spacing before blocks",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_space-before-function-paren",
     "title": "@typescript eslint: Space before function paren",
-    "description": "Enforces consistent spacing before function parenthesis",
+    "description": "Enforce consistent spacing before function parenthesis",
     "timeToFix": 5
   },
   {
@@ -11899,28 +11913,28 @@
     ],
     "patternId": "@typescript-eslint_space-infix-ops",
     "title": "@typescript eslint: Space infix ops",
-    "description": "This rule is aimed at ensuring there are spaces around infix operators.",
+    "description": "Require spacing around infix operators",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_strict-boolean-expressions",
     "title": "@typescript eslint: Strict boolean expressions",
-    "description": "Restricts the types allowed in boolean expressions",
+    "description": "Disallow certain types in boolean expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_switch-exhaustiveness-check",
     "title": "@typescript eslint: Switch exhaustiveness check",
-    "description": "Exhaustiveness checking in switch with union type",
+    "description": "Require switch-case statements to be exhaustive with union type",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_triple-slash-reference",
     "title": "@typescript eslint: Triple slash reference",
-    "description": "Sets preference level for triple slash directives versus ES6-style import declarations",
+    "description": "Disallow certain triple slash directives in favor of ES6-style import declarations",
     "timeToFix": 5
   },
   {
@@ -11934,21 +11948,21 @@
     "parameters": [],
     "patternId": "@typescript-eslint_typedef",
     "title": "@typescript eslint: Typedef",
-    "description": "Requires type annotations to exist",
+    "description": "Require type annotations in certain places",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_unbound-method",
     "title": "@typescript eslint: Unbound method",
-    "description": "Enforces unbound methods are called with their expected scope",
+    "description": "Enforce unbound methods are called with their expected scope",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_unified-signatures",
     "title": "@typescript eslint: Unified signatures",
-    "description": "Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter",
+    "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter",
     "timeToFix": 5
   },
   {
