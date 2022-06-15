@@ -98,7 +98,7 @@
     "@nrwl/cli": "13.9.3",
     "@nrwl/cypress": "13.9.3",
     "@nrwl/devkit": "13.9.3",
-    "@nrwl/express": "13.9.3",
+    "@nrwl/express": "14.3.2",
     "@nrwl/jest": "13.9.3",
     "@nrwl/linter": "13.9.3",
     "@nrwl/nest": "13.9.3",
