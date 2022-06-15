@@ -109,7 +109,7 @@
     "@nrwl/tao": "14.3.2",
     "@nrwl/web": "14.3.3",
     "@nrwl/workspace": "13.9.3",
-    "@nrwl/nx-cloud": "13.1.6",
+    "@nrwl/nx-cloud": "14.1.1",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.2",
     "@salesforce/eslint-config-lwc": "^3.3.2",
