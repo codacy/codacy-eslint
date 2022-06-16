@@ -105,7 +105,7 @@
     "@nrwl/next": "14.3.5",
     "@nrwl/node": "14.3.3",
     "@nrwl/react": "14.3.2",
-    "@nrwl/storybook": "13.9.3",
+    "@nrwl/storybook": "14.3.5",
     "@nrwl/tao": "14.3.5",
     "@nrwl/web": "14.3.3",
     "@nrwl/workspace": "14.3.5",
