@@ -100,7 +100,7 @@
     "@nrwl/devkit": "14.3.6",
     "@nrwl/express": "14.3.6",
     "@nrwl/jest": "14.3.6",
-    "@nrwl/linter": "14.3.5",
+    "@nrwl/linter": "14.3.6",
     "@nrwl/nest": "14.3.6",
     "@nrwl/next": "14.3.6",
     "@nrwl/node": "14.3.6",
