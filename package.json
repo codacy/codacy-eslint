@@ -101,7 +101,7 @@
     "@nrwl/express": "14.3.6",
     "@nrwl/jest": "14.3.5",
     "@nrwl/linter": "14.3.5",
-    "@nrwl/nest": "14.3.2",
+    "@nrwl/nest": "14.3.6",
     "@nrwl/next": "14.3.5",
     "@nrwl/node": "14.3.6",
     "@nrwl/react": "14.3.2",
