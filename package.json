@@ -103,7 +103,7 @@
     "@nrwl/linter": "14.3.5",
     "@nrwl/nest": "14.3.2",
     "@nrwl/next": "14.3.5",
-    "@nrwl/node": "14.3.3",
+    "@nrwl/node": "14.3.6",
     "@nrwl/react": "14.3.2",
     "@nrwl/storybook": "14.3.5",
     "@nrwl/tao": "14.3.5",
