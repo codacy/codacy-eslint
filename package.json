@@ -106,7 +106,7 @@
     "@nrwl/node": "14.3.6",
     "@nrwl/react": "14.3.6",
     "@nrwl/storybook": "14.3.6",
-    "@nrwl/tao": "14.3.5",
+    "@nrwl/tao": "14.3.6",
     "@nrwl/web": "14.3.3",
     "@nrwl/workspace": "14.3.6",
     "@nrwl/nx-cloud": "14.1.1",
