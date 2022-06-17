@@ -97,7 +97,7 @@
     "@nrwl/nx": "^7.8.7",
     "@nrwl/cli": "14.3.6",
     "@nrwl/cypress": "14.3.6",
-    "@nrwl/devkit": "14.3.5",
+    "@nrwl/devkit": "14.3.6",
     "@nrwl/express": "14.3.6",
     "@nrwl/jest": "14.3.5",
     "@nrwl/linter": "14.3.5",
