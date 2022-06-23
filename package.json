@@ -111,7 +111,7 @@
     "@nrwl/workspace": "14.3.6",
     "@nrwl/nx-cloud": "14.1.2",
     "@prodigy/eslint-config-prodigy": "0.0.7",
-    "@react-native-community/eslint-config": "^3.0.2",
+    "@react-native-community/eslint-config": "^3.0.3",
     "@salesforce/eslint-config-lwc": "^3.3.2",
     "@salesforce/eslint-plugin-aura": "^2.1.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
