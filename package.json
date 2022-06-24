@@ -267,7 +267,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "next": "^12.1.6",
     "node-fetch": "2.6.7",
-    "npm": "^8.12.2",
+    "npm": "^8.13.1",
     "prettier": "^2.7.1",
     "react-hot-loader": "^4.13.0",
     "redux-saga": "^1.1.3",
