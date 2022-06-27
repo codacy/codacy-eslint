@@ -136,7 +136,7 @@
     "babel-preset-react-app": "^10.0.1",
     "codacy-seed": "^2.2.0",
     "confusing-browser-globals": "^1.0.11",
-    "dotenv-webpack": "^7.1.0",
+    "dotenv-webpack": "^7.1.1",
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
