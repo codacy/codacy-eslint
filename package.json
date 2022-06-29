@@ -265,7 +265,7 @@
     "jstransformer-babel": "^2.1.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.1",
-    "next": "^12.1.6",
+    "next": "^12.2.0",
     "node-fetch": "2.6.7",
     "npm": "^8.13.1",
     "prettier": "^2.7.1",
