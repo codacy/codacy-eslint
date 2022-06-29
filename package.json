@@ -91,7 +91,7 @@
     "@lego/prettier-config": "^6.1.2",
     "@lwc/eslint-plugin-lwc": "^1.3.0",
     "@m6web/eslint-plugin-i18n": "^2.0.1",
-    "@next/eslint-plugin-next": "^12.1.5",
+    "@next/eslint-plugin-next": "^12.2.0",
     "@nodelib/fs.walk": "^1.2.8",
     "@nrwl/eslint-plugin-nx": "^14.3.6",
     "@nrwl/nx": "^7.8.7",
