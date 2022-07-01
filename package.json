@@ -56,7 +56,7 @@
     "spec": "src/test/**/*.spec.ts"
   },
   "dependencies": {
-    "@1stg/eslint-config": "^4.3.0",
+    "@1stg/eslint-config": "^5.1.0",
     "@angular-eslint/builder": "^14.0.0",
     "@angular-eslint/eslint-plugin": "^14.0.0",
     "@angular-eslint/eslint-plugin-template": "^14.0.0",
