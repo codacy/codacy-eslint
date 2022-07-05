@@ -5,7 +5,6 @@ edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-restrict
 rule_type: suggestion
 ---
 
-Disallows Node.js modules.
 
 This rule was **deprecated** in ESLint v7.0.0. Please use the corresponding rule in [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node).
 
@@ -78,12 +77,16 @@ To restrict the use of all Node.js core modules (via <https://github.com/nodejs/
 
 Examples of **incorrect** code for this rule  with sample `"fs", "cluster", "lodash"` restricted modules:
 
+::: incorrect
+
 ```js
 /*eslint no-restricted-modules: ["error", "fs", "cluster"]*/
 
 var fs = require('fs');
 var cluster = require('cluster');
 ```
+
+:::
 
 ```js
 /*eslint no-restricted-modules: ["error", {"paths": ["cluster"] }]*/
@@ -99,11 +102,15 @@ var pick = require('lodash/pick');
 
 Examples of **correct** code for this rule with sample `"fs", "cluster", "lodash"` restricted modules:
 
+::: correct
+
 ```js
 /*eslint no-restricted-modules: ["error", "fs", "cluster"]*/
 
 var crypto = require('crypto');
 ```
+
+:::
 
 ```js
 /*eslint no-restricted-modules: ["error", {

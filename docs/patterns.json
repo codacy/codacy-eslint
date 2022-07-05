@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.15.0",
+  "version": "8.18.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -11222,7 +11222,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/davidmarinho/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
