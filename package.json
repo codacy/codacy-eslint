@@ -100,7 +100,7 @@
     "@nrwl/express": "14.4.1",
     "@nrwl/jest": "14.3.6",
     "@nrwl/linter": "14.4.0",
-    "@nrwl/nest": "14.4.0",
+    "@nrwl/nest": "14.4.1",
     "@nrwl/next": "14.4.1",
     "@nrwl/node": "14.4.0",
     "@nrwl/nx": "^7.8.7",
