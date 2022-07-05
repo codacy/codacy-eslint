@@ -5,7 +5,6 @@ edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/no-restrict
 rule_type: suggestion
 ---
 
-Disallows specific imports.
 
 Imports are an ES6/ES2015 standard for making the functionality of other modules available in your current module. In CommonJS this is implemented through the `require()` call which makes this ESLint rule roughly equivalent to its CommonJS counterpart `no-restricted-modules`.
 
@@ -109,6 +108,18 @@ Pattern matches can also be configured to be case-sensitive:
 }]
 ```
 
+Pattern matches can restrict specific import names only, similar to the `paths` option:
+
+```json
+"no-restricted-imports": ["error", {
+    "patterns": [{
+      "group": ["utils/*"],
+      "importNames": ["isEmpty"],
+      "message": "Use 'isEmpty' from lodash instead."
+    }]
+}]
+```
+
 To restrict the use of all Node.js core imports (via <https://github.com/nodejs/node/tree/master/lib>):
 
 ```json
@@ -121,11 +132,15 @@ To restrict the use of all Node.js core imports (via <https://github.com/nodejs/
 
 Examples of **incorrect** code for this rule:
 
+::: incorrect
+
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
 
 import fs from 'fs';
 ```
+
+:::
 
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
@@ -203,7 +218,19 @@ import pick from 'lodash/pick';
 import pick from 'fooBar';
 ```
 
+```js
+/*eslint no-restricted-imports: ["error", { patterns: [{
+    group: ["utils/*"],
+    importNames: ['isEmpty'],
+    message: "Use 'isEmpty' from lodash instead."
+}]}]*/
+
+import { isEmpty } from 'utils/collection-utils';
+```
+
 Examples of **correct** code for this rule:
+
+::: correct
 
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
@@ -211,6 +238,8 @@ Examples of **correct** code for this rule:
 import crypto from 'crypto';
 export { foo } from "bar";
 ```
+
+:::
 
 ```js
 /*eslint no-restricted-imports: ["error", { "paths": ["fs"], "patterns": ["eslint/*"] }]*/
@@ -252,6 +281,16 @@ import lodash from 'lodash';
 }]}]*/
 
 import pick from 'food';
+```
+
+```js
+/*eslint no-restricted-imports: ["error", { patterns: [{
+    group: ["utils/*"],
+    importNames: ['isEmpty'],
+    message: "Use 'isEmpty' from lodash instead."
+}]}]*/
+
+import { hasValues } from 'utils/collection-utils';
 ```
 
 ## When Not To Use It

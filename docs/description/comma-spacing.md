@@ -17,9 +17,7 @@ further_reading:
 - https://dojotoolkit.org/reference-guide/1.9/developer/styleguide.html
 ---
 
-<!--FIXABLE-->
 
-Enforces spacing around commas.
 
 Spacing around commas improves readability of a list of items. Although most of the style guidelines for languages prescribe adding a space after a comma and not before it, it is subjective to the preferences of a project.
 
@@ -50,6 +48,8 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "before": false, "after": true }` options:
 
+:::incorrect
+
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
 
@@ -62,7 +62,11 @@ function foo(a ,b){}
 a ,b
 ```
 
+:::
+
 Examples of **correct** code for this rule with the default `{ "before": false, "after": true }` options:
+
+:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
@@ -78,7 +82,11 @@ function foo(a, b){}
 a, b
 ```
 
+:::
+
 Example of **correct** code for this rule with initial null element for the default `{ "before": false, "after": true }` options:
+
+:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
@@ -87,9 +95,13 @@ Example of **correct** code for this rule with initial null element for the defa
 var arr = [ , 2, 3 ]
 ```
 
+:::
+
 ### before
 
 Examples of **incorrect** code for this rule with the `{ "before": true, "after": false }` options:
+
+:::incorrect
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -102,7 +114,11 @@ function foo(a,b){}
 a, b
 ```
 
+:::
+
 Examples of **correct** code for this rule with the `{ "before": true, "after": false }` options:
+
+:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -118,7 +134,11 @@ function foo(a ,b){}
 a ,b
 ```
 
+:::
+
 Examples of **correct** code for this rule with initial null element for the `{ "before": true, "after": false }` options:
+
+:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -126,6 +146,8 @@ Examples of **correct** code for this rule with initial null element for the `{ 
 
 var arr = [,2 ,3]
 ```
+
+:::
 
 ## When Not To Use It
 

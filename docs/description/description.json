@@ -7066,36 +7066,42 @@
     "parameters": [],
     "patternId": "jsx-a11y_alt-text",
     "title": "Jsx a11y: Alt text",
+    "description": "Enforce all elements that require alternative text have meaningful information to relay back to end user.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_anchor-has-content",
     "title": "Jsx a11y: Anchor has content",
+    "description": "Enforce all anchors to contain accessible content.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_anchor-is-valid",
     "title": "Jsx a11y: Anchor is valid",
+    "description": "Enforce all anchors are valid, navigable elements.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_aria-activedescendant-has-tabindex",
     "title": "Jsx a11y: Aria activedescendant has tabindex",
+    "description": "Enforce elements with aria-activedescendant are tabbable.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_aria-props",
     "title": "Jsx a11y: Aria props",
+    "description": "Enforce all `aria-*` props are valid.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_aria-proptypes",
     "title": "Jsx a11y: Aria proptypes",
+    "description": "Enforce ARIA state and property values are valid.",
     "timeToFix": 5
   },
   {
@@ -7107,24 +7113,28 @@
     ],
     "patternId": "jsx-a11y_aria-role",
     "title": "Jsx a11y: Aria role",
+    "description": "Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_aria-unsupported-elements",
     "title": "Jsx a11y: Aria unsupported elements",
+    "description": "Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_autocomplete-valid",
     "title": "Jsx a11y: Autocomplete valid",
+    "description": "Enforce that autocomplete attributes are used correctly.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_click-events-have-key-events",
     "title": "Jsx a11y: Click events have key events",
+    "description": "Enforce a clickable non-interactive element has at least one keyboard event listener.",
     "timeToFix": 5
   },
   {
@@ -7137,36 +7147,42 @@
     "parameters": [],
     "patternId": "jsx-a11y_heading-has-content",
     "title": "Jsx a11y: Heading has content",
+    "description": "Enforce heading (`h1`, `h2`, etc) elements contain accessible content.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_html-has-lang",
     "title": "Jsx a11y: Html has lang",
+    "description": "Enforce `<html>` element has `lang` prop.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_iframe-has-title",
     "title": "Jsx a11y: Iframe has title",
+    "description": "Enforce iframe elements have a title attribute.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_img-redundant-alt",
     "title": "Jsx a11y: Img redundant alt",
+    "description": "Enforce `<img>` alt prop does not contain the word \"image\", \"picture\", or \"photo\".",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_interactive-supports-focus",
     "title": "Jsx a11y: Interactive supports focus",
+    "description": "Enforce that elements with interactive handlers like `onClick` must be focusable.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_label-has-associated-control",
     "title": "Jsx a11y: Label has associated control",
+    "description": "Enforce that a `label` tag has a text label and an associated control.",
     "timeToFix": 5
   },
   {
@@ -7179,24 +7195,28 @@
     "parameters": [],
     "patternId": "jsx-a11y_lang",
     "title": "Jsx a11y: Lang",
+    "description": "Enforce lang attribute has a valid value.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_media-has-caption",
     "title": "Jsx a11y: Media has caption",
+    "description": "Enforces that `<audio>` and `<video>` elements must have a `<track>` for captions.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_mouse-events-have-key-events",
     "title": "Jsx a11y: Mouse events have key events",
+    "description": "Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-access-key",
     "title": "Jsx a11y: No access key",
+    "description": "Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screenreader.",
     "timeToFix": 5
   },
   {
@@ -7208,78 +7228,91 @@
     ],
     "patternId": "jsx-a11y_no-autofocus",
     "title": "Jsx a11y: No autofocus",
+    "description": "Enforce autoFocus prop is not used.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-distracting-elements",
     "title": "Jsx a11y: No distracting elements",
+    "description": "Enforce distracting elements are not used.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-interactive-element-to-noninteractive-role",
     "title": "Jsx a11y: No interactive element to noninteractive role",
+    "description": "Interactive elements should not be assigned non-interactive roles.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-noninteractive-element-interactions",
     "title": "Jsx a11y: No noninteractive element interactions",
+    "description": "Non-interactive elements should not be assigned mouse or keyboard event listeners.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-noninteractive-element-to-interactive-role",
     "title": "Jsx a11y: No noninteractive element to interactive role",
+    "description": "Non-interactive elements should not be assigned interactive roles.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-noninteractive-tabindex",
     "title": "Jsx a11y: No noninteractive tabindex",
+    "description": "`tabIndex` should only be declared on interactive elements.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-onchange",
     "title": "Jsx a11y: No onchange",
+    "description": "Enforce usage of `onBlur` over `onChange` on select menus for accessibility.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-redundant-roles",
     "title": "Jsx a11y: No redundant roles",
+    "description": "Enforce explicit role property is not the same as implicit/default role property on element.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_no-static-element-interactions",
     "title": "Jsx a11y: No static element interactions",
+    "description": "Enforce that non-interactive, visible elements (such as `<div>`) that have click handlers use the role attribute.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_role-has-required-aria-props",
     "title": "Jsx a11y: Role has required aria props",
+    "description": "Enforce that elements with ARIA roles must have all required attributes for that role.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_role-supports-aria-props",
     "title": "Jsx a11y: Role supports aria props",
+    "description": "Enforce that elements with explicit or implicit roles defined contain only `aria-*` properties supported by that `role`.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_scope",
     "title": "Jsx a11y: Scope",
+    "description": "Enforce `scope` prop is only used on `<th>` elements.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsx-a11y_tabindex-no-positive",
     "title": "Jsx a11y: Tabindex no positive",
+    "description": "Enforce `tabIndex` value is not greater than zero.",
     "timeToFix": 5
   },
   {

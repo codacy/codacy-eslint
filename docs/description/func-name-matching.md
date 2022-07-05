@@ -5,13 +5,14 @@ edit_link: https://github.com/eslint/eslint/edit/main/docs/src/rules/func-name-m
 rule_type: suggestion
 ---
 
-Requires function names to match the name of the variable or property to which they are assigned.
 
 ## Rule Details
 
 This rule requires function names to match the name of the variable or property to which they are assigned. The rule will ignore property assignments where the property name is a literal that is not a valid identifier in the ECMAScript version specified in your configuration (default ES5).
 
 Examples of **incorrect** code for this rule:
+
+::: incorrect
 
 ```js
 /*eslint func-name-matching: "error"*/
@@ -27,6 +28,8 @@ class C {
     foo = function bar() {};
 }
 ```
+
+:::
 
 ```js
 /*eslint func-name-matching: ["error", "never"] */
@@ -44,6 +47,8 @@ class C {
 ```
 
 Examples of **correct** code for this rule:
+
+::: correct
 
 ```js
 /*eslint func-name-matching: "error"*/
@@ -87,6 +92,8 @@ class D {
 module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
+
+:::
 
 ```js
 /*eslint func-name-matching: ["error", "never"] */
@@ -140,6 +147,8 @@ A boolean value that defaults to `false`. If `considerPropertyDescriptor` is set
 
 Examples of **correct** code for the `{ considerPropertyDescriptor: true }` option:
 
+::: correct
+
 ```js
 /*eslint func-name-matching: ["error", { "considerPropertyDescriptor": true }]*/
 /*eslint func-name-matching: ["error", "always", { "considerPropertyDescriptor": true }]*/ // these are equivalent
@@ -150,7 +159,11 @@ Object.defineProperties(obj, {baz:{value: function baz() {} }});
 Reflect.defineProperty(obj, 'foo', {value: function foo() {}});
 ```
 
+:::
+
 Examples of **incorrect** code for the `{ considerPropertyDescriptor: true }` option:
+
+::: incorrect
 
 ```js
 /*eslint func-name-matching: ["error", { "considerPropertyDescriptor": true }]*/
@@ -162,11 +175,15 @@ Object.defineProperties(obj, {baz:{value: function foo() {} }});
 Reflect.defineProperty(obj, 'foo', {value: function value() {}});
 ```
 
+:::
+
 ### includeCommonJSModuleExports
 
 A boolean value that defaults to `false`. If `includeCommonJSModuleExports` is set to true, `module.exports` and `module["exports"]` will be checked by this rule.
 
 Examples of **incorrect** code for the `{ includeCommonJSModuleExports: true }` option:
+
+::: incorrect
 
 ```js
 /*eslint func-name-matching: ["error", { "includeCommonJSModuleExports": true }]*/
@@ -175,6 +192,8 @@ Examples of **incorrect** code for the `{ includeCommonJSModuleExports: true }` 
 module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
+
+:::
 
 ## When Not To Use It
 

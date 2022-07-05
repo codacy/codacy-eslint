@@ -9,7 +9,6 @@ related_rules:
 - no-shadow
 ---
 
-Disallows reassignment of native objects.
 
 This rule was **deprecated** in ESLint v3.3.0 and replaced by the [no-global-assign](no-global-assign) rule.
 
@@ -32,12 +31,16 @@ ESLint has the capability to configure global variables as read-only.
 
 Examples of **incorrect** code for this rule:
 
+::: incorrect
+
 ```js
 /*eslint no-native-reassign: "error"*/
 
 Object = null
 undefined = 1
 ```
+
+:::
 
 ```js
 /*eslint no-native-reassign: "error"*/
@@ -57,6 +60,8 @@ a = 1
 
 Examples of **correct** code for this rule:
 
+::: correct
+
 ```js
 /*eslint no-native-reassign: "error"*/
 
@@ -64,6 +69,8 @@ a = 1
 var b = 1
 b = 2
 ```
+
+:::
 
 ```js
 /*eslint no-native-reassign: "error"*/

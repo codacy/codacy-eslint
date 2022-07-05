@@ -13,7 +13,6 @@ related_rules:
 - max-statements-per-line
 ---
 
-Enforces a maximum function length.
 
 Some people consider large functions a code smell. Large functions tend to do a lot of things and can make it hard following what's going on. Many coding style guides dictate a limit of the number of lines that a function can comprise of. This rule can help enforce that style.
 
@@ -77,12 +76,16 @@ is equivalent to
 
 Examples of **incorrect** code for this rule with a max value of `2`:
 
+::: incorrect
+
 ```js
 /*eslint max-lines-per-function: ["error", 2]*/
 function foo() {
     var x = 0;
 }
 ```
+
+:::
 
 ```js
 /*eslint max-lines-per-function: ["error", 2]*/
@@ -103,12 +106,16 @@ function foo() {
 
 Examples of **correct** code for this rule with a max value of `3`:
 
+::: correct
+
 ```js
 /*eslint max-lines-per-function: ["error", 3]*/
 function foo() {
     var x = 0;
 }
 ```
+
+:::
 
 ```js
 /*eslint max-lines-per-function: ["error", 3]*/
@@ -131,6 +138,8 @@ function foo() {
 
 Examples of **incorrect** code for this rule with the `{ "skipBlankLines": true }` option:
 
+::: incorrect
+
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "skipBlankLines": true}]*/
 function foo() {
@@ -139,7 +148,11 @@ function foo() {
 }
 ```
 
+:::
+
 Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
+
+::: correct
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 3, "skipBlankLines": true}]*/
@@ -149,9 +162,13 @@ function foo() {
 }
 ```
 
+:::
+
 ### skipComments
 
 Examples of **incorrect** code for this rule with the `{ "skipComments": true }` option:
+
+::: incorrect
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "skipComments": true}]*/
@@ -161,7 +178,11 @@ function foo() {
 }
 ```
 
+:::
+
 Examples of **correct** code for this rule with the `{ "skipComments": true }` option:
+
+::: correct
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 3, "skipComments": true}]*/
@@ -171,9 +192,13 @@ function foo() {
 }
 ```
 
+:::
+
 ### IIFEs
 
 Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option:
+
+::: incorrect
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "IIFEs": true}]*/
@@ -186,7 +211,11 @@ Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option
 })();
 ```
 
+:::
+
 Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
+
+::: correct
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 3, "IIFEs": true}]*/
@@ -198,6 +227,8 @@ Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
     var x = 0;
 })();
 ```
+
+:::
 
 ## When Not To Use It
 
