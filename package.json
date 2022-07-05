@@ -109,7 +109,7 @@
     "@nrwl/storybook": "14.4.1",
     "@nrwl/tao": "14.3.6",
     "@nrwl/web": "14.3.6",
-    "@nrwl/workspace": "14.4.0",
+    "@nrwl/workspace": "14.4.1",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.3",
     "@salesforce/eslint-config-lwc": "^3.3.2",
