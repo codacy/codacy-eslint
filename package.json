@@ -108,7 +108,7 @@
     "@nrwl/react": "14.4.1",
     "@nrwl/storybook": "14.4.2",
     "@nrwl/tao": "14.3.6",
-    "@nrwl/web": "14.3.6",
+    "@nrwl/web": "14.4.2",
     "@nrwl/workspace": "14.4.2",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.0.3",
