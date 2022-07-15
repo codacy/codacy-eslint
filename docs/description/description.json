@@ -10950,6 +10950,13 @@
   },
   {
     "parameters": [],
+    "patternId": "storybook_no-uninstalled-addons",
+    "title": "Storybook: No uninstalled addons",
+    "description": "This rule identifies storybook addons that are invalid because they are either not installed or contain a typo in their name.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "storybook_prefer-pascal-case",
     "title": "Storybook: Prefer pascal case",
     "description": "Stories should use PascalCase",
