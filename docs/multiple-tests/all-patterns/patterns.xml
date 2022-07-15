@@ -1421,6 +1421,7 @@
   <module name="storybook_no-redundant-story-name" />
   <module name="storybook_no-stories-of" />
   <module name="storybook_no-title-property-in-meta" />
+  <module name="storybook_no-uninstalled-addons" />
   <module name="storybook_prefer-pascal-case" />
   <module name="storybook_story-exports" />
   <module name="storybook_use-storybook-expect" />

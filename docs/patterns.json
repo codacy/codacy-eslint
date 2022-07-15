@@ -11341,6 +11341,13 @@
       "enabled": false
     },
     {
+      "patternId": "storybook_no-uninstalled-addons",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "storybook_prefer-pascal-case",
       "level": "Info",
       "category": "CodeStyle",
