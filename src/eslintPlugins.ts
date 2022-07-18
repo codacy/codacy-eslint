@@ -64,6 +64,7 @@ import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as vueRules } from "eslint-plugin-vue"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
+import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
@@ -132,6 +133,7 @@ const plugins = [
   ["storybook", storybookRules],
   ["@typescript-eslint", typescriptEslintRules],
   ["unicorn", unicornRules],
+  ["unused-imports", unusedImportRules],
   ["vue", vueRules],
   ["wdio", wdioRules],
   ["xss", xssRules],

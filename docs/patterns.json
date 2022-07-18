@@ -6352,6 +6352,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_max-expects",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_max-nested-describe",
       "level": "Info",
       "category": "CodeStyle",
@@ -13195,6 +13202,34 @@
     },
     {
       "patternId": "unicorn_regex-shorthand",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unused-imports_no-unused-vars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unused-imports_no-unused-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unused-imports_no-unused-vars-ts",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unused-imports_no-unused-imports-ts",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

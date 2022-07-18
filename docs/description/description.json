@@ -6177,6 +6177,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_max-expects",
+    "title": "Jest: Max expects",
+    "description": "Enforces a maximum number assertion calls in a test body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_max-nested-describe",
     "title": "Jest: Max nested describe",
     "description": "Enforces a maximum depth to nested describe calls",
@@ -12792,6 +12799,34 @@
     "parameters": [],
     "patternId": "unicorn_regex-shorthand",
     "title": "Unicorn: Regex shorthand",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-vars",
+    "title": "Unused imports: No unused vars",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-imports",
+    "title": "Unused imports: No unused imports",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-vars-ts",
+    "title": "Unused imports: No unused vars ts",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-imports-ts",
+    "title": "Unused imports: No unused imports ts",
+    "description": "Disallow unused variables",
     "timeToFix": 5
   },
   {
