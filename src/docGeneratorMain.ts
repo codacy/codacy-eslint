@@ -247,6 +247,14 @@ async function main() {
       `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
     "jsonc"
   )
+
+  console.log("Generate eslint-plugin-unused-imports description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/sweepline/eslint-plugin-unused-imports/master/docs/rules/${pattern}.md`,
+    "unused-imports",
+    false
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

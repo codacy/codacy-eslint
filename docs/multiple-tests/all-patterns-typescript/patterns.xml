@@ -756,6 +756,7 @@
   <module name="jasmine_prefer-toBeUndefined" />
   <module name="jest_consistent-test-it" />
   <module name="jest_expect-expect" />
+  <module name="jest_max-expects" />
   <module name="jest_max-nested-describe" />
   <module name="jest_no-alias-methods" />
   <module name="jest_no-commented-out-tests" />
@@ -1658,6 +1659,10 @@
   <module name="unicorn_prefer-text-content" />
   <module name="unicorn_prefer-trim-start-end" />
   <module name="unicorn_regex-shorthand" />
+  <module name="unused-imports_no-unused-vars" />
+  <module name="unused-imports_no-unused-imports" />
+  <module name="unused-imports_no-unused-vars-ts" />
+  <module name="unused-imports_no-unused-imports-ts" />
   <module name="vue_array-bracket-newline" />
   <module name="vue_array-bracket-spacing" />
   <module name="vue_arrow-spacing" />
