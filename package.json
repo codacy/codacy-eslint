@@ -117,7 +117,7 @@
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
     "@serverless/eslint-config": "^4.0.1",
-    "@strv/eslint-config-typescript": "^3.1.2",
+    "@strv/eslint-config-typescript": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/eslint-plugin-tslint": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.6",
