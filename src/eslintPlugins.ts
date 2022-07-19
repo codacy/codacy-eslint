@@ -41,6 +41,7 @@ import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
 import { rules as noUnsafeInnerhtmlRules } from "eslint-plugin-no-unsafe-innerhtml"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
 import { rules as nodeRules } from "eslint-plugin-node"
+import { rules as nuxtRules } from "eslint-plugin-nuxt"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
@@ -110,6 +111,7 @@ const plugins = [
   ["no-unsafe-innerhtml", noUnsafeInnerhtmlRules],
   ["no-unsanitized", noUnsanitizedRules],
   ["node", nodeRules],
+  ["nuxt", nuxtRules],
   ["playwright", playwrightRules],
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],

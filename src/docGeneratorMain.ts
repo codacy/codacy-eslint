@@ -255,6 +255,14 @@ async function main() {
     "unused-imports",
     false
   )
+
+  console.log("Generate eslint-plugin-nuxt description files")
+  await docGenerator.downloadDocs(
+  (pattern) =>
+    `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
+  "nuxt",
+  false
+)
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
