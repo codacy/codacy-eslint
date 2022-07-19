@@ -8367,6 +8367,55 @@
   },
   {
     "parameters": [],
+    "patternId": "nuxt_no-env-in-context",
+    "title": "Nuxt: No env in context",
+    "description": "Disallow `context.isServer/context.isClient` in `asyncData/fetch/nuxtServerInit`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_no-env-in-hooks",
+    "title": "Nuxt: No env in hooks",
+    "description": "Disallow process.server and process.client in the following lifecycle hooks: beforeMount, mounted, beforeUpdate, updated, activated, deactivated, beforeDestroy and destroyed",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_no-globals-in-created",
+    "title": "Nuxt: No globals in created",
+    "description": "Disallow `window/document` in `created/beforeCreate`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_no-this-in-fetch-data",
+    "title": "Nuxt: No this in fetch data",
+    "description": "Disallow `this` in `asyncData/fetch`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_no-timing-in-fetch-data",
+    "title": "Nuxt: No timing in fetch data",
+    "description": "Disallow `setTimeout/setInterval` in `asyncData/fetch`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_no-cjs-in-config",
+    "title": "Nuxt: No cjs in config",
+    "description": "Disallow commonjs module api `require/modules.exports/exports` in `nuxt.config.js`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "nuxt_require-func-head",
+    "title": "Nuxt: Require func head",
+    "description": "Enforce component's head property to be a function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
     "description": "Identify false positives when async Playwright APIs are not properly awaited.",

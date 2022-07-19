@@ -1069,6 +1069,13 @@
   <module name="node_shebang" />
   <module name="node_no-hide-core-modules" />
   <module name="node_no-unsupported-features" />
+  <module name="nuxt_no-env-in-context" />
+  <module name="nuxt_no-env-in-hooks" />
+  <module name="nuxt_no-globals-in-created" />
+  <module name="nuxt_no-this-in-fetch-data" />
+  <module name="nuxt_no-timing-in-fetch-data" />
+  <module name="nuxt_no-cjs-in-config" />
+  <module name="nuxt_require-func-head" />
   <module name="playwright_missing-playwright-await" />
   <module name="playwright_no-page-pause" />
   <module name="playwright_no-element-handle" />
