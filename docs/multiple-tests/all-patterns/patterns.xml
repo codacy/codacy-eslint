@@ -788,6 +788,7 @@
   <module name="jest_prefer-hooks-in-order" />
   <module name="jest_prefer-hooks-on-top" />
   <module name="jest_prefer-lowercase-title" />
+  <module name="jest_prefer-mock-promise-shorthand" />
   <module name="jest_prefer-snapshot-hint" />
   <module name="jest_prefer-spy-on" />
   <module name="jest_prefer-strict-equal" />
@@ -1084,6 +1085,8 @@
   <module name="playwright_no-skipped-test" />
   <module name="playwright_no-wait-for-timeout" />
   <module name="playwright_no-force-option" />
+  <module name="playwright_max-nested-describe" />
+  <module name="playwright_no-conditional-in-test" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="promise_param-names" />

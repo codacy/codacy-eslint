@@ -6406,6 +6406,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-mock-promise-shorthand",
+    "title": "Jest: Prefer mock promise shorthand",
+    "description": "Prefer mock resolved/rejected shorthands for promises",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-snapshot-hint",
     "title": "Jest: Prefer snapshot hint",
     "description": "Prefer including a hint with external snapshots",
@@ -8068,7 +8075,20 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "block",
+        "description": "block"
+      },
+      {
+        "name": "focus",
+        "description": "focus"
+      },
+      {
+        "name": "fix",
+        "description": "fix"
+      }
+    ],
     "patternId": "no-only-tests_no-only-tests",
     "title": "No only tests: No only tests",
     "description": "Disallow .only blocks in tests",
@@ -8468,6 +8488,20 @@
     "patternId": "playwright_no-force-option",
     "title": "Playwright: No force option",
     "description": "Prevent usage of `{ force: true }` option.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_max-nested-describe",
+    "title": "Playwright: Max nested describe",
+    "description": "Enforces a maximum depth to nested describe calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-conditional-in-test",
+    "title": "Playwright: No conditional in test",
+    "description": "Disallow conditional logic in tests",
     "timeToFix": 5
   },
   {
