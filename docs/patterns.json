@@ -4135,7 +4135,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-arrow-function-computed-properties",
@@ -4316,7 +4316,7 @@
         },
         {
           "name": "useOptionalChaining",
-          "default": false
+          "default": true
         },
         {
           "name": "catchSafeObjects",
@@ -6581,6 +6581,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_prefer-mock-promise-shorthand",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_prefer-snapshot-hint",
       "level": "Info",
       "category": "CodeStyle",
@@ -8353,7 +8360,30 @@
       "patternId": "no-only-tests_no-only-tests",
       "level": "Error",
       "category": "ErrorProne",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "block",
+          "default": [
+            "describe",
+            "it",
+            "context",
+            "test",
+            "tape",
+            "fixture",
+            "serial"
+          ]
+        },
+        {
+          "name": "focus",
+          "default": [
+            "only"
+          ]
+        },
+        {
+          "name": "fix",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -8754,6 +8784,20 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "playwright_max-nested-describe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_no-conditional-in-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "prettier_prettier",
