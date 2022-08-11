@@ -3926,6 +3926,27 @@
   },
   {
     "parameters": [],
+    "patternId": "cypress_no-single-expect-in-then-or-should",
+    "title": "Cypress: No single expect in then or should",
+    "description": "Simplify tests by avoiding lonely expect().",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cypress_no-useless-then-or-should",
+    "title": "Cypress: No useless then or should",
+    "description": "`.should()` and `.then()` can be removed when they only wrap commands",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cypress_no-expect-for-stub",
+    "title": "Cypress: No expect for stub",
+    "description": "Use cy.get(\"@stub\").should(…) instead of expect(stub)…",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "cypress_require-data-selectors",
     "title": "Cypress: Require data selectors",
     "description": "Use data-* attributes to provide context to your selectors and insulate them from CSS or JS changes https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements",
