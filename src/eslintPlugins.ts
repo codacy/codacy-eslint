@@ -55,6 +55,7 @@ import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
+import { rules as shopifyRules } from "@shopify/eslint-plugin"
 import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
@@ -127,6 +128,7 @@ const plugins = [
   ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
+  ["shopify", shopifyRules],
   ["sonarjs", sonarjsRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],

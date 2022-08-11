@@ -263,6 +263,14 @@ async function main() {
   "nuxt",
   false
 )
+
+  console.log("Generate shopify-eslint-plugin description files")
+  await docGenerator.downloadDocs(
+  (pattern) =>
+    `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
+  "shopify",
+  false
+)
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
