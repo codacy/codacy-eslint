@@ -445,6 +445,9 @@
   <module name="cypress_no-unnecessary-waiting" />
   <module name="cypress_no-async-tests" />
   <module name="cypress_assertion-before-screenshot" />
+  <module name="cypress_no-single-expect-in-then-or-should" />
+  <module name="cypress_no-useless-then-or-should" />
+  <module name="cypress_no-expect-for-stub" />
   <module name="cypress_require-data-selectors" />
   <module name="cypress_no-force" />
   <module name="cypress_no-pause" />

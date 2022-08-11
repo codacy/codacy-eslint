@@ -46,7 +46,7 @@ async function main() {
   console.log("Generate cypress description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/cypress-io/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
     "cypress"
   )
 

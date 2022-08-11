@@ -12,7 +12,7 @@ import { rules as betterStyledComponentsRules } from "eslint-plugin-better-style
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
-import { rules as cypressRules } from "eslint-plugin-cypress"
+import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
 import { rules as drupalRules } from "eslint-plugin-drupal"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"

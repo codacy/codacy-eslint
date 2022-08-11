@@ -4014,6 +4014,27 @@
       "enabled": false
     },
     {
+      "patternId": "cypress_no-single-expect-in-then-or-should",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cypress_no-useless-then-or-should",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cypress_no-expect-for-stub",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "cypress_require-data-selectors",
       "level": "Error",
       "category": "ErrorProne",
@@ -11322,7 +11343,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/stefan/Documents/Projects/Codacy-app/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
