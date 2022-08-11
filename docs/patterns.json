@@ -4135,7 +4135,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-arrow-function-computed-properties",
@@ -4316,7 +4316,7 @@
         },
         {
           "name": "useOptionalChaining",
-          "default": false
+          "default": true
         },
         {
           "name": "catchSafeObjects",
@@ -6581,6 +6581,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_prefer-mock-promise-shorthand",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_prefer-snapshot-hint",
       "level": "Info",
       "category": "CodeStyle",
@@ -8353,7 +8360,30 @@
       "patternId": "no-only-tests_no-only-tests",
       "level": "Error",
       "category": "ErrorProne",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "block",
+          "default": [
+            "describe",
+            "it",
+            "context",
+            "test",
+            "tape",
+            "fixture",
+            "serial"
+          ]
+        },
+        {
+          "name": "focus",
+          "default": [
+            "only"
+          ]
+        },
+        {
+          "name": "fix",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -8754,6 +8784,20 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "playwright_max-nested-describe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_no-conditional-in-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "prettier_prettier",
@@ -10988,6 +11032,237 @@
       "patternId": "security_detect-new-buffer",
       "level": "Info",
       "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_binary-assignment-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_class-property-semi",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_images-no-direct-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_jest_no-all-mocks-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_jest_no-snapshots",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_jsx-no-complex-expressions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_jsx-no-hardcoded-content",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_jsx-prefer-fragment-wrappers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_no-ancestor-directory-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_no-debugger",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_no-namespace-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_no-useless-computed-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_no-fully-static-classes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_polaris-prefer-sectioned-prop",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_polaris-no-bare-stack-item",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_prefer-class-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_prefer-early-return",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_prefer-module-scope-constants",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_prefer-twine",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_react-hooks-strict-return",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_react-initialize-state",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_react-no-multiple-render-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_react-prefer-private-members",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_react-require-autocomplete",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_react-type-state",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_restrict-full-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_sinon-no-restricted-features",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_sinon-prefer-meaningful-assertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_strict-component-boundaries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_typescript_prefer-pascal-case-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_typescript_prefer-singular-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "shopify_typescript_prefer-build-client-schema",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "shopify_webpack_no-unnamed-dynamic-imports",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },

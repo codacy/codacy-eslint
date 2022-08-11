@@ -6406,6 +6406,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_prefer-mock-promise-shorthand",
+    "title": "Jest: Prefer mock promise shorthand",
+    "description": "Prefer mock resolved/rejected shorthands for promises",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-snapshot-hint",
     "title": "Jest: Prefer snapshot hint",
     "description": "Prefer including a hint with external snapshots",
@@ -8068,7 +8075,20 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "block",
+        "description": "block"
+      },
+      {
+        "name": "focus",
+        "description": "focus"
+      },
+      {
+        "name": "fix",
+        "description": "fix"
+      }
+    ],
     "patternId": "no-only-tests_no-only-tests",
     "title": "No only tests: No only tests",
     "description": "Disallow .only blocks in tests",
@@ -8468,6 +8488,20 @@
     "patternId": "playwright_no-force-option",
     "title": "Playwright: No force option",
     "description": "Prevent usage of `{ force: true }` option.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_max-nested-describe",
+    "title": "Playwright: Max nested describe",
+    "description": "Enforces a maximum depth to nested describe calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-conditional-in-test",
+    "title": "Playwright: No conditional in test",
+    "description": "Disallow conditional logic in tests",
     "timeToFix": 5
   },
   {
@@ -10612,6 +10646,237 @@
     "patternId": "security_detect-new-buffer",
     "title": "Security: Detect new buffer",
     "description": "Detect instances of new Buffer(argument) where argument is any non-literal value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_binary-assignment-parens",
+    "title": "Shopify: Binary assignment parens",
+    "description": "Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_class-property-semi",
+    "title": "Shopify: Class property semi",
+    "description": "Require (or disallow) semicolons for class properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_images-no-direct-imports",
+    "title": "Shopify: Images no direct imports",
+    "description": "Prefer importing image files from the index file of the directory instead of the direct path to the image file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_jest_no-all-mocks-methods",
+    "title": "Shopify: [Jest] No all mocks methods",
+    "description": "Disallows jest allMocks methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_jest_no-snapshots",
+    "title": "Shopify: [Jest] No snapshots",
+    "description": "Disallows jest snapshots.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_jsx-no-complex-expressions",
+    "title": "Shopify: Jsx no complex expressions",
+    "description": "Disallow complex expressions embedded in in JSX.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_jsx-no-hardcoded-content",
+    "title": "Shopify: Jsx no hardcoded content",
+    "description": "Disallow hardcoded content in JSX.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_jsx-prefer-fragment-wrappers",
+    "title": "Shopify: Jsx prefer fragment wrappers",
+    "description": "Disallow useless wrapping elements in favour of fragment shorthand in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_no-ancestor-directory-import",
+    "title": "Shopify: No ancestor directory import",
+    "description": "Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_no-debugger",
+    "title": "Shopify: No debugger",
+    "description": "Disallow the use of `debugger`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_no-namespace-imports",
+    "title": "Shopify: No namespace imports",
+    "description": "Prevent namespace import declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_no-useless-computed-properties",
+    "title": "Shopify: No useless computed properties",
+    "description": "Prevent the usage of unnecessary computed properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_no-fully-static-classes",
+    "title": "Shopify: No fully static classes",
+    "description": "Prevent the declaration of classes consisting only of static members.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_polaris-prefer-sectioned-prop",
+    "title": "Shopify: Polaris prefer sectioned prop",
+    "description": "Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_polaris-no-bare-stack-item",
+    "title": "Shopify: Polaris no bare stack item",
+    "description": "Disallow the use of Polaris’s `Stack.Item` without any custom props.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_prefer-class-properties",
+    "title": "Shopify: Prefer class properties",
+    "description": "Prefer class properties to assignment of literals in constructors.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_prefer-early-return",
+    "title": "Shopify: Prefer early return",
+    "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_prefer-module-scope-constants",
+    "title": "Shopify: Prefer module scope constants",
+    "description": "Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_prefer-twine",
+    "title": "Shopify: Prefer twine",
+    "description": "Prefer Twine over Bindings as the name for twine imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-hooks-strict-return",
+    "title": "Shopify: React hooks strict return",
+    "description": "Restrict the number of returned items from React hooks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-initialize-state",
+    "title": "Shopify: React initialize state",
+    "description": "Require that React component state be initialized when it has a non-empty type.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-no-multiple-render-methods",
+    "title": "Shopify: React no multiple render methods",
+    "description": "Disallow multiple render methods in React component classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-prefer-private-members",
+    "title": "Shopify: React prefer private members",
+    "description": "Disallow public members within React component classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-require-autocomplete",
+    "title": "Shopify: React require autocomplete",
+    "description": "Require autocomplete attribute on certain input types.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_react-type-state",
+    "title": "Shopify: React type state",
+    "description": "Require that React component state be typed in TypeScript.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_restrict-full-import",
+    "title": "Shopify: Restrict full import",
+    "description": "Prevent importing the entirety of a package.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_sinon-no-restricted-features",
+    "title": "Shopify: Sinon no restricted features",
+    "description": "Restrict the use of specified sinon features.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_sinon-prefer-meaningful-assertions",
+    "title": "Shopify: Sinon prefer meaningful assertions",
+    "description": "Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_strict-component-boundaries",
+    "title": "Shopify: Strict component boundaries",
+    "description": "Prevent module imports between components.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_typescript_prefer-pascal-case-enums",
+    "title": "Shopify: [Typescript] Prefer pascal case enums",
+    "description": "Enforce Pascal case when naming enums.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_typescript_prefer-singular-enums",
+    "title": "Shopify: [Typescript] Prefer singular enums",
+    "description": "Prefer singular TypeScript enums.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_typescript_prefer-build-client-schema",
+    "title": "Shopify: [Typescript] Prefer build client schema",
+    "description": "Prefer buildClientSchema for schema building",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "shopify_webpack_no-unnamed-dynamic-imports",
+    "title": "Shopify: [Webpack] No unnamed dynamic imports",
+    "description": "Require that all dynamic imports contain a `webpackChunkName` comment.",
     "timeToFix": 5
   },
   {
