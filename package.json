@@ -159,7 +159,7 @@
     "eslint-config-kentcdodds": "^20.3.1",
     "eslint-config-labrys": "^1.0.3",
     "eslint-config-loopback": "^13.1.0",
-    "eslint-config-next": "^12.2.4",
+    "eslint-config-next": "^12.2.5",
     "eslint-config-nodesecurity": "^1.3.1",
     "eslint-config-pixiebrix": "0.17.2",
     "eslint-config-preact": "^1.3.0",
