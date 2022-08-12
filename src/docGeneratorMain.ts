@@ -264,11 +264,11 @@ async function main() {
     false
   )
 
-  console.log("Generate @shopify/eslint-plugin description files")
+  console.log("Generate @shopify_eslint-plugin description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
+    "@shopify_eslint-plugin",
     false
   )
 }
