@@ -258,11 +258,19 @@ async function main() {
 
   console.log("Generate eslint-plugin-nuxt description files")
   await docGenerator.downloadDocs(
-  (pattern) =>
-    `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
-  "nuxt",
-  false
-)
+    (pattern) =>
+      `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
+    "nuxt",
+    false
+  )
+
+  console.log("Generate @shopify_eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@shopify_eslint",
+    false
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
