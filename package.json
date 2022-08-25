@@ -101,7 +101,7 @@
     "@nrwl/eslint-plugin-nx": "^14.5.10",
     "@nrwl/express": "14.5.8",
     "@nrwl/jest": "14.5.8",
-    "@nrwl/linter": "14.5.8",
+    "@nrwl/linter": "14.5.10",
     "@nrwl/nest": "14.5.10",
     "@nrwl/next": "14.5.10",
     "@nrwl/node": "14.5.10",
