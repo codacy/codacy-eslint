@@ -124,7 +124,7 @@
     "@strv/eslint-config-typescript": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/eslint-plugin-tslint": "^5.35.1",
-    "@typescript-eslint/parser": "^5.33.1",
+    "@typescript-eslint/parser": "^5.35.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-airbnb": "^6.0.0",
