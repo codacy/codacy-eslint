@@ -734,6 +734,7 @@
   <module name="i18n-json_valid-message-syntax" />
   <module name="i18n-json_identical-keys" />
   <module name="i18n-json_sorted-keys" />
+  <module name="i18next_no-literal-string" />
   <module name="jasmine_expect-matcher" />
   <module name="jasmine_expect-single-argument" />
   <module name="jasmine_named-spy" />
@@ -1090,6 +1091,12 @@
   <module name="playwright_no-force-option" />
   <module name="playwright_max-nested-describe" />
   <module name="playwright_no-conditional-in-test" />
+  <module name="playwright_no-useless-not" />
+  <module name="playwright_no-restricted-matchers" />
+  <module name="playwright_prefer-lowercase-title" />
+  <module name="playwright_prefer-to-have-length" />
+  <module name="playwright_require-top-level-describe" />
+  <module name="playwright_valid-expect" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="promise_param-names" />

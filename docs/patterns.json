@@ -4156,7 +4156,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-arrow-function-computed-properties",
@@ -6192,6 +6192,13 @@
     },
     {
       "patternId": "i18n-json_sorted-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "i18next_no-literal-string",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -8811,14 +8818,61 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "playwright_no-conditional-in-test",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-useless-not",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-restricted-matchers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
+    },
+    {
+      "patternId": "playwright_prefer-lowercase-title",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreTopLevelDescribe",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_prefer-to-have-length",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_require-top-level-describe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_valid-expect",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
     },
     {
       "patternId": "prettier_prettier",
@@ -9418,6 +9472,10 @@
       "parameters": [
         {
           "name": "prevent",
+          "default": false
+        },
+        {
+          "name": "allowMultilines",
           "default": false
         }
       ],
@@ -11574,7 +11632,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/stefan/Documents/Projects/Codacy-app/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/davidmarinho/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

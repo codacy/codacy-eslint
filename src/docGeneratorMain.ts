@@ -111,7 +111,8 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/jest-community/eslint-plugin-jest/master/docs/rules/${pattern}.md`,
-    "jest"
+    "jest",
+    false
   )
 
   console.log("Generate lodash description files")
@@ -269,6 +270,14 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
     "@shopify_eslint",
+    false
+  )
+
+  console.log("Generate eslint-plugin-i18next description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/edvardchen/eslint-plugin-i18next/next/docs/rules/${pattern}.md`,
+    "i18next",
     false
   )
 }
