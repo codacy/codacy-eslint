@@ -6046,6 +6046,13 @@
   },
   {
     "parameters": [],
+    "patternId": "i18next_no-literal-string",
+    "title": "I18next: No literal string",
+    "description": "Disallow literal string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_expect-matcher",
     "title": "Jasmine: Expect matcher",
     "timeToFix": 5
@@ -8527,6 +8534,53 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-useless-not",
+    "title": "Playwright: No useless not",
+    "description": "Disallow usage of 'not' matchers when a more specific matcher exists",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-restricted-matchers",
+    "title": "Playwright: No restricted matchers",
+    "description": "Disallow specific matchers & modifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreTopLevelDescribe",
+        "description": "ignoreTopLevelDescribe"
+      }
+    ],
+    "patternId": "playwright_prefer-lowercase-title",
+    "title": "Playwright: Prefer lowercase title",
+    "description": "Enforce lowercase test names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-to-have-length",
+    "title": "Playwright: Prefer to have length",
+    "description": "Suggest using `toHaveLength()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_require-top-level-describe",
+    "title": "Playwright: Require top level describe",
+    "description": "Require test cases and hooks to be inside a `test.describe` block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_valid-expect",
+    "title": "Playwright: Valid expect",
+    "description": "Enforce valid `expect()` usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
     "timeToFix": 5
@@ -8889,7 +8943,7 @@
     ],
     "patternId": "react_button-has-type",
     "title": "React: Button has type",
-    "description": "Forbid \"button\" element without an explicit \"type\" attribute",
+    "description": "Disallow usage of `button` elements without an explicit `type` attribute",
     "timeToFix": 5
   },
   {
@@ -8901,7 +8955,7 @@
     ],
     "patternId": "react_default-props-match-prop-types",
     "title": "React: Default props match prop types",
-    "description": "Enforce all defaultProps are defined and not \"required\" in propTypes.",
+    "description": "Enforce all defaultProps have a corresponding non-required PropType",
     "timeToFix": 5
   },
   {
@@ -8920,56 +8974,56 @@
     ],
     "patternId": "react_display-name",
     "title": "React: Display name",
-    "description": "Prevent missing displayName in a React component definition",
+    "description": "Disallow missing displayName in a React component definition",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_forbid-component-props",
     "title": "React: Forbid component props",
-    "description": "Forbid certain props on components",
+    "description": "Disallow certain props on components",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_forbid-dom-props",
     "title": "React: Forbid dom props",
-    "description": "Forbid certain props on DOM Nodes",
+    "description": "Disallow certain props on DOM Nodes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_forbid-elements",
     "title": "React: Forbid elements",
-    "description": "Forbid certain elements",
+    "description": "Disallow certain elements",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_forbid-foreign-prop-types",
     "title": "React: Forbid foreign prop types",
-    "description": "Forbid using another component's propTypes",
+    "description": "Disallow using another component's propTypes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_forbid-prop-types",
     "title": "React: Forbid prop types",
-    "description": "Forbid certain propTypes",
+    "description": "Disallow certain propTypes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_function-component-definition",
     "title": "React: Function component definition",
-    "description": "Standardize the way function component get defined",
+    "description": "Enforce a specific function type for function components",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_hook-use-state",
     "title": "React: Hook use state",
-    "description": "Ensure symmetric naming of useState hook value and setter variables",
+    "description": "Ensure destructuring and symmetric naming of useState hook value and setter variables",
     "timeToFix": 5
   },
   {
@@ -8990,56 +9044,56 @@
     "parameters": [],
     "patternId": "react_jsx-child-element-spacing",
     "title": "React: Jsx child element spacing",
-    "description": "Ensures inline tags are not rendered without spaces between them",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-closing-bracket-location",
     "title": "React: Jsx closing bracket location",
-    "description": "Validate closing bracket location in JSX",
+    "description": "Enforce closing bracket location in JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-closing-tag-location",
     "title": "React: Jsx closing tag location",
-    "description": "Validate closing tag location for multiline JSX",
+    "description": "Enforce closing tag location for multiline JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-curly-spacing",
     "title": "React: Jsx curly spacing",
-    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-curly-newline",
     "title": "React: Jsx curly newline",
-    "description": "Enforce consistent line breaks inside jsx curly",
+    "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-equals-spacing",
     "title": "React: Jsx equals spacing",
-    "description": "Disallow or enforce spaces around equal signs in JSX attributes",
+    "description": "Enforce or disallow spaces around equal signs in JSX attributes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-filename-extension",
     "title": "React: Jsx filename extension",
-    "description": "Restrict file extensions that may contain JSX",
+    "description": "Disallow file extensions that may contain JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-first-prop-new-line",
     "title": "React: Jsx first prop new line",
-    "description": "Ensure proper position of the first property in JSX",
+    "description": "Enforce proper position of the first property in JSX",
     "timeToFix": 5
   },
   {
@@ -9053,14 +9107,14 @@
     "parameters": [],
     "patternId": "react_jsx-indent",
     "title": "React: Jsx indent",
-    "description": "Validate JSX indentation",
+    "description": "Enforce JSX indentation",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-indent-props",
     "title": "React: Jsx indent props",
-    "description": "Validate props indentation in JSX",
+    "description": "Enforce props indentation in JSX",
     "timeToFix": 5
   },
   {
@@ -9080,21 +9134,21 @@
     ],
     "patternId": "react_jsx-key",
     "title": "React: Jsx key",
-    "description": "Report missing `key` props in iterators/collection literals",
+    "description": "Disallow missing `key` props in iterators/collection literals",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-max-depth",
     "title": "React: Jsx max depth",
-    "description": "Validate JSX maximum depth",
+    "description": "Enforce JSX maximum depth",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-max-props-per-line",
     "title": "React: Jsx max props per line",
-    "description": "Limit maximum of props on a single line in JSX",
+    "description": "Enforce maximum of props on a single line in JSX",
     "timeToFix": 5
   },
   {
@@ -9102,6 +9156,10 @@
       {
         "name": "prevent",
         "description": "prevent"
+      },
+      {
+        "name": "allowMultilines",
+        "description": "allowMultilines"
       }
     ],
     "patternId": "react_jsx-newline",
@@ -9134,28 +9192,28 @@
     ],
     "patternId": "react_jsx-no-bind",
     "title": "React: Jsx no bind",
-    "description": "Prevents usage of Function.prototype.bind and arrow functions in React component props",
+    "description": "Disallow `.bind()` or arrow functions in JSX props",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-no-comment-textnodes",
     "title": "React: Jsx no comment textnodes",
-    "description": "Comments inside children section of tag should be placed inside braces",
+    "description": "Disallow comments from being inserted as text nodes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-no-constructed-context-values",
     "title": "React: Jsx no constructed context values",
-    "description": "Prevents JSX context provider values from taking values that will cause needless rerenders.",
+    "description": "Disallows JSX context provider values from taking values that will cause needless rerenders",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-no-duplicate-props",
     "title": "React: Jsx no duplicate props",
-    "description": "Enforce no duplicate props",
+    "description": "Disallow duplicate properties in JSX",
     "timeToFix": 5
   },
   {
@@ -9167,21 +9225,21 @@
     ],
     "patternId": "react_jsx-no-leaked-render",
     "title": "React: Jsx no leaked render",
-    "description": "Prevent problematic leaked values from being rendered",
+    "description": "Disallow problematic leaked values from being rendered",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-no-literals",
     "title": "React: Jsx no literals",
-    "description": "Prevent using string literals in React component definition",
+    "description": "Disallow usage of string literals in JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-no-script-url",
     "title": "React: Jsx no script url",
-    "description": "Forbid `javascript:` URLs",
+    "description": "Disallow usage of `javascript:` URLs",
     "timeToFix": 5
   },
   {
@@ -9197,7 +9255,7 @@
     ],
     "patternId": "react_jsx-no-target-blank",
     "title": "React: Jsx no target blank",
-    "description": "Forbid `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
+    "description": "Disallow `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
     "timeToFix": 5
   },
   {
@@ -9211,7 +9269,7 @@
     "parameters": [],
     "patternId": "react_jsx-one-expression-per-line",
     "title": "React: Jsx one expression per line",
-    "description": "Limit to one expression per line in JSX",
+    "description": "Require one JSX element per line",
     "timeToFix": 5
   },
   {
@@ -9225,7 +9283,7 @@
     "parameters": [],
     "patternId": "react_jsx-curly-brace-presence",
     "title": "React: Jsx curly brace presence",
-    "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enfore JSX expressions on literals in JSX children or attributes",
+    "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
     "timeToFix": 5
   },
   {
@@ -9253,14 +9311,14 @@
     "parameters": [],
     "patternId": "react_jsx-props-no-spreading",
     "title": "React: Jsx props no spreading",
-    "description": "Prevent JSX prop spreading",
+    "description": "Disallow JSX prop spreading",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-sort-default-props",
     "title": "React: Jsx sort default props",
-    "description": "Enforce default props alphabetical sorting",
+    "description": "Enforce defaultProps declarations alphabetical sorting",
     "timeToFix": 5
   },
   {
@@ -9283,63 +9341,63 @@
     "parameters": [],
     "patternId": "react_jsx-space-before-closing",
     "title": "React: Jsx space before closing",
-    "description": "Validate spacing before closing bracket in JSX",
+    "description": "Enforce spacing before closing bracket in JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-tag-spacing",
     "title": "React: Jsx tag spacing",
-    "description": "Validate whitespace in and around the JSX opening and closing brackets",
+    "description": "Enforce whitespace in and around the JSX opening and closing brackets",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-uses-react",
     "title": "React: Jsx uses react",
-    "description": "Prevent React to be marked as unused",
+    "description": "Disallow React to be incorrectly marked as unused",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-uses-vars",
     "title": "React: Jsx uses vars",
-    "description": "Prevent variables used in JSX to be marked as unused",
+    "description": "Disallow variables used in JSX to be incorrectly marked as unused",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_jsx-wrap-multilines",
     "title": "React: Jsx wrap multilines",
-    "description": "Prevent missing parentheses around multilines JSX",
+    "description": "Disallow missing parentheses around multiline JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-invalid-html-attribute",
     "title": "React: No invalid html attribute",
-    "description": "Forbid attribute with an invalid values`",
+    "description": "Disallow usage of invalid attributes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-access-state-in-setstate",
     "title": "React: No access state in setstate",
-    "description": "Reports when this.state is accessed within setState",
+    "description": "Disallow when this.state is accessed within setState",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-adjacent-inline-elements",
     "title": "React: No adjacent inline elements",
-    "description": "Prevent adjacent inline elements not separated by whitespace.",
+    "description": "Disallow adjacent inline elements not separated by whitespace.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-array-index-key",
     "title": "React: No array index key",
-    "description": "Prevent usage of Array index in keys",
+    "description": "Disallow usage of Array index in keys",
     "timeToFix": 5
   },
   {
@@ -9358,63 +9416,63 @@
     ],
     "patternId": "react_no-children-prop",
     "title": "React: No children prop",
-    "description": "Prevent passing of children as props.",
+    "description": "Disallow passing of children as props",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-danger",
     "title": "React: No danger",
-    "description": "Prevent usage of dangerous JSX props",
+    "description": "Disallow usage of dangerous JSX properties",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-danger-with-children",
     "title": "React: No danger with children",
-    "description": "Report when a DOM element is using both children and dangerouslySetInnerHTML",
+    "description": "Disallow when a DOM element is using both children and dangerouslySetInnerHTML",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-deprecated",
     "title": "React: No deprecated",
-    "description": "Prevent usage of deprecated methods",
+    "description": "Disallow usage of deprecated methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-did-mount-set-state",
     "title": "React: No did mount set state",
-    "description": "Prevent usage of setState in componentDidMount",
+    "description": "Disallow usage of setState in componentDidMount",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-did-update-set-state",
     "title": "React: No did update set state",
-    "description": "Prevent usage of setState in componentDidUpdate",
+    "description": "Disallow usage of setState in componentDidUpdate",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-direct-mutation-state",
     "title": "React: No direct mutation state",
-    "description": "Prevent direct mutation of this.state",
+    "description": "Disallow direct mutation of this.state",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-find-dom-node",
     "title": "React: No find dom node",
-    "description": "Prevent usage of findDOMNode",
+    "description": "Disallow usage of findDOMNode",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-is-mounted",
     "title": "React: No is mounted",
-    "description": "Prevent usage of isMounted",
+    "description": "Disallow usage of isMounted",
     "timeToFix": 5
   },
   {
@@ -9426,7 +9484,7 @@
     ],
     "patternId": "react_no-multi-comp",
     "title": "React: No multi comp",
-    "description": "Prevent multiple component definition per file",
+    "description": "Disallow multiple component definition per file",
     "timeToFix": 5
   },
   {
@@ -9440,56 +9498,56 @@
     "parameters": [],
     "patternId": "react_no-set-state",
     "title": "React: No set state",
-    "description": "Prevent usage of setState",
+    "description": "Disallow usage of setState",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-string-refs",
     "title": "React: No string refs",
-    "description": "Prevent string definitions for references and prevent referencing this.refs",
+    "description": "Disallow using string references",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-redundant-should-component-update",
     "title": "React: No redundant should component update",
-    "description": "Flag shouldComponentUpdate when extending PureComponent",
+    "description": "Disallow usage of shouldComponentUpdate when extending React.PureComponent",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-render-return-value",
     "title": "React: No render return value",
-    "description": "Prevent usage of the return value of React.render",
+    "description": "Disallow usage of the return value of ReactDOM.render",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-this-in-sfc",
     "title": "React: No this in sfc",
-    "description": "Report \"this\" being used in stateless components",
+    "description": "Disallow `this` from being used in stateless functional components",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-typos",
     "title": "React: No typos",
-    "description": "Prevent common typos",
+    "description": "Disallow common typos",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unescaped-entities",
     "title": "React: No unescaped entities",
-    "description": "Detect unescaped HTML entities, which might represent malformed tags",
+    "description": "Disallow unescaped HTML entities from appearing in markup",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unknown-property",
     "title": "React: No unknown property",
-    "description": "Prevent usage of unknown DOM property",
+    "description": "Disallow usage of unknown DOM property",
     "timeToFix": 5
   },
   {
@@ -9501,42 +9559,42 @@
     ],
     "patternId": "react_no-unsafe",
     "title": "React: No unsafe",
-    "description": "Prevent usage of unsafe lifecycle methods",
+    "description": "Disallow usage of unsafe lifecycle methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unstable-nested-components",
     "title": "React: No unstable nested components",
-    "description": "Prevent creating unstable components inside components",
+    "description": "Disallow creating unstable components inside components",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unused-class-component-methods",
     "title": "React: No unused class component methods",
-    "description": "Prevent declaring unused methods of component class",
+    "description": "Disallow declaring unused methods of component class",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unused-prop-types",
     "title": "React: No unused prop types",
-    "description": "Prevent definitions of unused prop types",
+    "description": "Disallow definitions of unused propTypes",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-unused-state",
     "title": "React: No unused state",
-    "description": "Prevent definition of unused state fields",
+    "description": "Disallow definitions of unused state",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_no-will-update-set-state",
     "title": "React: No will update set state",
-    "description": "Prevent usage of setState in componentWillUpdate",
+    "description": "Disallow usage of setState in componentWillUpdate",
     "timeToFix": 5
   },
   {
@@ -9557,7 +9615,7 @@
     "parameters": [],
     "patternId": "react_prefer-read-only-props",
     "title": "React: Prefer read only props",
-    "description": "Require read-only props.",
+    "description": "Enforce that props are read-only",
     "timeToFix": 5
   },
   {
@@ -9576,21 +9634,21 @@
     "parameters": [],
     "patternId": "react_prop-types",
     "title": "React: Prop types",
-    "description": "Prevent missing props validation in a React component definition",
+    "description": "Disallow missing props validation in a React component definition",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_react-in-jsx-scope",
     "title": "React: React in jsx scope",
-    "description": "Prevent missing React when using JSX",
+    "description": "Disallow missing React when using JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_require-default-props",
     "title": "React: Require default props",
-    "description": "Enforce a defaultProps definition for every prop that is not a required prop.",
+    "description": "Enforce a defaultProps definition for every prop that is not a required prop",
     "timeToFix": 5
   },
   {
@@ -9620,7 +9678,7 @@
     ],
     "patternId": "react_self-closing-comp",
     "title": "React: Self closing comp",
-    "description": "Prevent extra closing tags for components without children",
+    "description": "Disallow extra closing tags for components without children",
     "timeToFix": 5
   },
   {
@@ -9641,14 +9699,14 @@
     "parameters": [],
     "patternId": "react_state-in-constructor",
     "title": "React: State in constructor",
-    "description": "State initialization in an ES6 class component should be in a constructor",
+    "description": "Enforce class component state initialization style",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "react_static-property-placement",
     "title": "React: Static property placement",
-    "description": "Defines where React component static properties should be positioned.",
+    "description": "Enforces where React component static properties should be positioned.",
     "timeToFix": 5
   },
   {
@@ -9662,7 +9720,7 @@
     "parameters": [],
     "patternId": "react_void-dom-elements-no-children",
     "title": "React: Void dom elements no children",
-    "description": "Prevent passing of children to void DOM elements (e.g. `<br />`).",
+    "description": "Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving children",
     "timeToFix": 5
   },
   {
@@ -12157,7 +12215,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
-    "description": "Enforce using concise optional chain expressions instead of chained logical ands",
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
     "timeToFix": 5
   },
   {

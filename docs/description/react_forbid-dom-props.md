@@ -1,4 +1,6 @@
-# Forbid certain props on DOM Nodes (react/forbid-dom-props)
+# Disallow certain props on DOM Nodes (react/forbid-dom-props)
+
+💼 This rule is enabled in the following [configs](https://github.com/jsx-eslint/eslint-plugin-react#shareable-configurations): `all`.
 
 This rule prevents passing of props to elements. This rule only applies to DOM Nodes (e.g. `<div />`) and not Components (e.g. `<Component />`).
 The list of forbidden props can be customized with the `forbid` option.

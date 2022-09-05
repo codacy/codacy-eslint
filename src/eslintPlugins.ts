@@ -24,6 +24,7 @@ import { rules as graphqlFragmentsRules } from "eslint-plugin-graphql-fragments"
 import { rules as hapiRules } from "eslint-plugin-hapi"
 import { rules as htmlRules } from "eslint-plugin-html"
 import { rules as i18nJsonRules } from "eslint-plugin-i18n-json"
+import { rules as i18nextRules } from "eslint-plugin-i18next"
 import { rules as importRules } from "eslint-plugin-import"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
@@ -92,6 +93,7 @@ const plugins = [
   ["hapi", hapiRules],
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
+  ["i18next", i18nextRules],
   ["import", importRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
