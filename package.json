@@ -158,7 +158,7 @@
     "eslint-config-fliplet": "^1.0.8",
     "eslint-config-gatsby-standard": "^3.0.2",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-kentcdodds": "^20.3.1",
+    "eslint-config-kentcdodds": "^20.4.0",
     "eslint-config-labrys": "^1.0.3",
     "eslint-config-loopback": "^13.1.0",
     "eslint-config-next": "^12.2.5",
