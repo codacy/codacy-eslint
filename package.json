@@ -273,7 +273,7 @@
     "eslint-plugin-wdio": "^7.21.0",
     "eslint-plugin-xss": "^0.1.12",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
-    "gts": "^3.1.0",
+    "gts": "^3.1.1",
     "jstransformer-babel": "^2.1.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.1",
