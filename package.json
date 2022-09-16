@@ -111,7 +111,7 @@
     "@nrwl/storybook": "14.5.10",
     "@nrwl/tao": "14.5.10",
     "@nrwl/web": "14.5.10",
-    "@nrwl/workspace": "14.5.10",
+    "@nrwl/workspace": "14.7.5",
     "@nuxtjs/eslint-config": "^11.0.0",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.1.0",
