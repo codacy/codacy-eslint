@@ -108,7 +108,7 @@
     "@nrwl/nx": "^7.8.7",
     "@nrwl/nx-cloud": "14.6.1",
     "@nrwl/react": "14.7.5",
-    "@nrwl/storybook": "14.5.10",
+    "@nrwl/storybook": "14.7.5",
     "@nrwl/tao": "14.5.10",
     "@nrwl/web": "14.5.10",
     "@nrwl/workspace": "14.7.5",
