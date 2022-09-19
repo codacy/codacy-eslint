@@ -217,7 +217,7 @@
     "eslint-plugin-graphql-fragments": "0.0.2",
     "eslint-plugin-hapi": "^4.1.0",
     "eslint-plugin-html": "^7.1.0",
-    "eslint-plugin-i18n-json": "^3.1.0",
+    "eslint-plugin-i18n-json": "^4.0.0",
     "eslint-plugin-i18next": "^6.0.0-4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jasmine": "^4.1.3",
