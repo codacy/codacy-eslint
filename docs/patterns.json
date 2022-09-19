@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.18.0",
+  "version": "8.23.1",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -1231,6 +1231,10 @@
         {
           "name": "commentPattern",
           "default": ""
+        },
+        {
+          "name": "allowEmptyCase",
+          "default": false
         }
       ],
       "enabled": true
@@ -2622,6 +2626,10 @@
         {
           "name": "minKeys",
           "default": 2
+        },
+        {
+          "name": "allowLineSeparatedGroups",
+          "default": false
         }
       ],
       "enabled": false
@@ -6556,6 +6564,13 @@
     },
     {
       "patternId": "jest_prefer-comparison-matcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest_prefer-each",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -11632,7 +11647,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/stefan/Documents/Projects/Codacy-app/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

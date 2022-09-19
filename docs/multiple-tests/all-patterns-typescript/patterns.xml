@@ -786,6 +786,7 @@
   <module name="jest_no-test-return-statement" />
   <module name="jest_prefer-called-with" />
   <module name="jest_prefer-comparison-matcher" />
+  <module name="jest_prefer-each" />
   <module name="jest_prefer-equality-matcher" />
   <module name="jest_prefer-expect-assertions" />
   <module name="jest_prefer-expect-resolves" />
