@@ -1217,6 +1217,10 @@
       {
         "name": "commentPattern",
         "description": "commentPattern"
+      },
+      {
+        "name": "allowEmptyCase",
+        "description": "allowEmptyCase"
       }
     ],
     "patternId": "no-fallthrough",
@@ -2608,6 +2612,10 @@
       {
         "name": "minKeys",
         "description": "minKeys"
+      },
+      {
+        "name": "allowLineSeparatedGroups",
+        "description": "allowLineSeparatedGroups"
       }
     ],
     "patternId": "sort-keys",
@@ -6383,6 +6391,13 @@
     "patternId": "jest_prefer-comparison-matcher",
     "title": "Jest: Prefer comparison matcher",
     "description": "Suggest using the built-in comparison matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-each",
+    "title": "Jest: Prefer each",
+    "description": "Prefer using `.each` rather than manual loops",
     "timeToFix": 5
   },
   {
@@ -12215,7 +12230,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
-    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands",
     "timeToFix": 5
   },
   {
