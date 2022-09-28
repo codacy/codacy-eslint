@@ -95,7 +95,7 @@
     "@m6web/eslint-plugin-i18n": "^2.0.1",
     "@next/eslint-plugin-next": "^12.3.0",
     "@nodelib/fs.walk": "^1.2.8",
-    "@nrwl/cli": "14.5.10",
+    "@nrwl/cli": "14.7.17",
     "@nrwl/cypress": "14.7.13",
     "@nrwl/devkit": "14.7.8",
     "@nrwl/eslint-plugin-nx": "^14.7.11",
