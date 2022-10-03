@@ -286,7 +286,7 @@
     "prettier": "^2.7.1",
     "react-hot-loader": "^4.13.0",
     "redux-saga": "^1.2.1",
-    "sort-package-json": "^1.57.0",
+    "sort-package-json": "^2.0.0",
     "standard": "^17.0.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "tslint": "^6.1.3",
