@@ -180,7 +180,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "^11.0.1",
-    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-universe": "^11.1.0",
     "eslint-config-vue": "^2.0.2",
