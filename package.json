@@ -109,7 +109,7 @@
     "@nrwl/nx-cloud": "14.7.0",
     "@nrwl/react": "14.8.2",
     "@nrwl/storybook": "14.7.13",
-    "@nrwl/tao": "14.8.2",
+    "@nrwl/tao": "14.8.3",
     "@nrwl/web": "14.8.2",
     "@nrwl/workspace": "14.7.13",
     "@nuxtjs/eslint-config": "^11.0.0",
