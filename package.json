@@ -247,7 +247,7 @@
     "eslint-plugin-prettier-vue": "^4.2.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-ramda": "^2.5.1",
-    "eslint-plugin-react": "^7.31.9",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-intl": "^1.1.2",
     "eslint-plugin-react-native": "^4.0.0",
