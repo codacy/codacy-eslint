@@ -99,7 +99,7 @@
     "@nrwl/cypress": "14.8.4",
     "@nrwl/devkit": "14.8.5",
     "@nrwl/eslint-plugin-nx": "^14.8.5",
-    "@nrwl/express": "14.8.4",
+    "@nrwl/express": "14.8.5",
     "@nrwl/jest": "14.8.4",
     "@nrwl/linter": "14.8.5",
     "@nrwl/nest": "14.8.4",
