@@ -734,6 +734,7 @@
   <module name="i18n-json_valid-message-syntax" />
   <module name="i18n-json_identical-keys" />
   <module name="i18n-json_sorted-keys" />
+  <module name="i18n-json_identical-placeholders" />
   <module name="i18next_no-literal-string" />
   <module name="jasmine_expect-matcher" />
   <module name="jasmine_expect-single-argument" />
@@ -1113,6 +1114,7 @@
   <module name="promise_no-new-statics" />
   <module name="promise_no-return-in-finally" />
   <module name="promise_valid-params" />
+  <module name="promise_no-multiple-resolved" />
   <module name="ramda_always-simplification" />
   <module name="ramda_any-pass-simplification" />
   <module name="ramda_both-simplification" />

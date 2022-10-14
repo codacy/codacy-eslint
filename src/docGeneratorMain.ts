@@ -280,6 +280,14 @@ async function main() {
     "i18next",
     false
   )
+
+  console.log("Generate eslint-plugin-typescript-sort-keys description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/tree/master/docs/rules/${pattern}.md`,
+      "xss",
+      false
+  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

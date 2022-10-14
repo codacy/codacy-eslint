@@ -3415,7 +3415,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
     "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
     "title": "@angular eslint: Sort ngmodule metadata arrays",
     "description": "Ensures ASC alphabetical order for `NgModule` metadata arrays for easy visual scanning",
@@ -3726,6 +3731,7 @@
     "parameters": [],
     "patternId": "@babel_semi",
     "title": "@babel: Semi",
+    "description": "Require or disallow semicolons instead of ASI",
     "timeToFix": 5
   },
   {
@@ -6050,6 +6056,13 @@
     "patternId": "i18n-json_sorted-keys",
     "title": "I18n json: Sorted keys",
     "description": "Ensure an order for the translation keys. (Recursive)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "i18n-json_identical-placeholders",
+    "title": "I18n json: Identical placeholders",
+    "description": "Verifies the ICU message placeholders for the translations matches with the reference language file specified in the options",
     "timeToFix": 5
   },
   {
@@ -8684,6 +8697,12 @@
     "patternId": "promise_valid-params",
     "title": "Promise: Valid params",
     "description": "Ensures the proper number of arguments are passed to Promise functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "promise_no-multiple-resolved",
+    "title": "Promise: No multiple resolved",
     "timeToFix": 5
   },
   {
@@ -11402,14 +11421,14 @@
     "parameters": [],
     "patternId": "@typescript-eslint_adjacent-overload-signatures",
     "title": "@typescript eslint: Adjacent overload signatures",
-    "description": "Require that member overloads be consecutive",
+    "description": "Require that function overload signatures be consecutive",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "@typescript-eslint_array-type",
     "title": "@typescript eslint: Array type",
-    "description": "Require using either `T[]` or `Array<T>` for arrays",
+    "description": "Require consistently using either `T[]` or `Array<T>` for arrays",
     "timeToFix": 5
   },
   {
@@ -11428,7 +11447,7 @@
     ],
     "patternId": "@typescript-eslint_ban-ts-comment",
     "title": "@typescript eslint: Ban ts comment",
-    "description": "Disallow `@ts-<directive>` comments or require descriptions after directive",
+    "description": "Disallow `@ts-<directive>` comments or require descriptions after directives",
     "timeToFix": 5
   },
   {
@@ -11773,7 +11792,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-extra-non-null-assertion",
     "title": "@typescript eslint: No extra non null assertion",
-    "description": "Disallow extra non-null assertion",
+    "description": "Disallow extra non-null assertions",
     "timeToFix": 5
   },
   {
@@ -11919,7 +11938,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_no-namespace",
     "title": "@typescript eslint: No namespace",
-    "description": "Disallow custom TypeScript modules and namespaces",
+    "description": "Disallow TypeScript namespaces",
     "timeToFix": 5
   },
   {
@@ -12314,7 +12333,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_restrict-plus-operands",
     "title": "@typescript eslint: Restrict plus operands",
-    "description": "Require both operands of addition to have type `number` or `string`",
+    "description": "Require both operands of addition to be the same type and be `bigint`, `number`, or `string`",
     "timeToFix": 5
   },
   {

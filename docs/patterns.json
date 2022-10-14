@@ -3488,7 +3488,12 @@
       "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "locale",
+          "default": "en-US"
+        }
+      ],
       "enabled": false
     },
     {
@@ -6204,6 +6209,13 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "i18n-json_identical-placeholders",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "i18next_no-literal-string",
@@ -8989,6 +9001,13 @@
     },
     {
       "patternId": "promise_valid-params",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "promise_no-multiple-resolved",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
