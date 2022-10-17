@@ -11149,231 +11149,231 @@
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
+      "patternId": "@shopify__eslint_binary-assignment-parens",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_class-property-semi",
+      "patternId": "@shopify__eslint_class-property-semi",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
+      "patternId": "@shopify__eslint_images-no-direct-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
+      "patternId": "@shopify__eslint_jest_no-all-mocks-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
+      "patternId": "@shopify__eslint_jest_no-snapshots",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
+      "patternId": "@shopify__eslint_jsx-no-complex-expressions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
+      "patternId": "@shopify__eslint_jsx-no-hardcoded-content",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
+      "patternId": "@shopify__eslint_jsx-prefer-fragment-wrappers",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
+      "patternId": "@shopify__eslint_no-ancestor-directory-import",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-debugger",
+      "patternId": "@shopify__eslint_no-debugger",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-namespace-imports",
+      "patternId": "@shopify__eslint_no-namespace-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
+      "patternId": "@shopify__eslint_no-useless-computed-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
+      "patternId": "@shopify__eslint_no-fully-static-classes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
+      "patternId": "@shopify__eslint_polaris-prefer-sectioned-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
+      "patternId": "@shopify__eslint_polaris-no-bare-stack-item",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_prefer-class-properties",
+      "patternId": "@shopify__eslint_prefer-class-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_prefer-early-return",
+      "patternId": "@shopify__eslint_prefer-early-return",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
+      "patternId": "@shopify__eslint_prefer-module-scope-constants",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_prefer-twine",
+      "patternId": "@shopify__eslint_prefer-twine",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
+      "patternId": "@shopify__eslint_react-hooks-strict-return",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-initialize-state",
+      "patternId": "@shopify__eslint_react-initialize-state",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
+      "patternId": "@shopify__eslint_react-no-multiple-render-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
+      "patternId": "@shopify__eslint_react-prefer-private-members",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
+      "patternId": "@shopify__eslint_react-require-autocomplete",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-type-state",
+      "patternId": "@shopify__eslint_react-type-state",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_restrict-full-import",
+      "patternId": "@shopify__eslint_restrict-full-import",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
+      "patternId": "@shopify__eslint_sinon-no-restricted-features",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
+      "patternId": "@shopify__eslint_sinon-prefer-meaningful-assertions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
+      "patternId": "@shopify__eslint_strict-component-boundaries",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
+      "patternId": "@shopify__eslint_typescript_prefer-pascal-case-enums",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
+      "patternId": "@shopify__eslint_typescript_prefer-singular-enums",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
+      "patternId": "@shopify__eslint_typescript_prefer-build-client-schema",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
+      "patternId": "@shopify__eslint_webpack_no-unnamed-dynamic-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -15349,6 +15349,239 @@
       "level": "Info",
       "category": "Security",
       "subcategory": "XSS",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "typescript-sort-keys_interface",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "typescript-sort-keys_string-enum",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_block-mapping-colon-indicator-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_block-mapping-question-indicator-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_block-mapping",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_block-sequence-hyphen-indicator-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_block-sequence",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_file-extension",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_flow-mapping-curly-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_flow-mapping-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_flow-sequence-bracket-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_flow-sequence-bracket-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_key-name-casing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "camelCase",
+          "default": true
+        },
+        {
+          "name": "PascalCase",
+          "default": false
+        },
+        {
+          "name": "SCREAMING_SNAKE_CASE",
+          "default": false
+        },
+        {
+          "name": "kebab-case",
+          "default": false
+        },
+        {
+          "name": "snake_case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_key-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-empty-document",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-empty-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-empty-mapping-value",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-empty-sequence-entry",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-irregular-whitespace",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "skipComments",
+          "default": false
+        },
+        {
+          "name": "skipQuotedScalars",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-multiple-empty-lines",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_no-tab-indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_plain-scalar",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_quotes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_require-string-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_sort-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_sort-sequence-values",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_spaced-comment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "yml_vue-custom-block_no-parsing-error",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     }

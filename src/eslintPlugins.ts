@@ -56,7 +56,7 @@ import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
-import { rules as shopifyRules } from "@shopify/eslint-plugin"
+import { rules as shopifyRules } from "@Shopify/eslint-plugin"
 import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
@@ -68,6 +68,9 @@ import { rules as vueRules } from "eslint-plugin-vue"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
+import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
+import { rules as ymlRules } from "eslint-plugin-yml"
+
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
@@ -94,7 +97,7 @@ const plugins = [
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],
-  ["import", importRules],
+  ["eslint_plugin_import", importRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-formatting", jestFormattingRules],
@@ -130,7 +133,7 @@ const plugins = [
   ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
-  ["@shopify/eslint-plugin", shopifyRules],
+  ["@shopify_eslint", shopifyRules],
   ["sonarjs", sonarjsRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
@@ -143,6 +146,8 @@ const plugins = [
   ["vue", vueRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
+  ["typescript-sort-keys", typescriptSortKeysRules],
+  ["yml", ymlRules],
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)

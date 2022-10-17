@@ -92,11 +92,11 @@ async function main() {
     false
   )
 
-  console.log("Generate import description files")
+  console.log("Generate eslint_plugin_import description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/benmosher/eslint-plugin-import/master/docs/rules/${pattern}.md`,
-    "import",
+      `${githubBaseUrl}/import-js/eslint-plugin-import/master/docs/rules/${pattern}.md`,
+    "eslint_plugin_import",
     false
   )
 
@@ -265,7 +265,7 @@ async function main() {
     false
   )
 
-  console.log("Generate @shopify_eslint description files")
+  console.log("Generate @shopify_eslint-plugin description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
@@ -284,9 +284,15 @@ async function main() {
   console.log("Generate eslint-plugin-typescript-sort-keys description files")
   await docGenerator.downloadDocs(
       (pattern) =>
-          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/tree/master/docs/rules/${pattern}.md`,
-      "xss",
-      false
+          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/interface.md`,
+      "typescript-sort-keys"
+  )
+
+  console.log("Generate eslint-plugin-yml description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/ota-meshi/eslint-plugin-yml/master/docs/rules/${pattern}.md`,
+      "yml"
   )
 }
 

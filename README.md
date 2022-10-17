@@ -27,7 +27,14 @@ at `src/docGeneratorMain.ts` to include them on the generated documentation. To 
       false // Add false for plugins not having .md files for all the patterns
     )
     ```
-
+    As well, in `src/eslintPlugins.ts` add two new entries
+    ```typescript
+    import { rules as xssRules } from "eslint-plugin-xss" // make sure this one matcher the correct name of the plugin
+    ```
+    and in the const plugins list
+    ```typescript
+      ["xss", xssRules] // the first value has to match the patterns's prefix
+    ```
 4.  Generate documentation so it adds the new plugin documentation
 
 ## Generating documentation
