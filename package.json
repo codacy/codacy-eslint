@@ -293,7 +293,7 @@
     "typescript": "^4.8.4",
     "typescript-eslint": "^0.0.1-alpha.0",
     "vue-eslint-parser": "^9.1.0",
-    "vue-template-compiler": "^2.7.12",
+    "vue-template-compiler": "^2.7.13",
     "webpack": "^5.74.0",
     "webpack-manifest-plugin": "^5.0.0",
     "xml2js": "^0.4.23"
