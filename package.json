@@ -278,7 +278,6 @@
     "eslint-plugin-vuejs-accessibility": "^1.2.0",
     "eslint-plugin-wdio": "^7.21.0",
     "eslint-plugin-xss": "^0.1.12",
-    "eslint-plugin-yml": "^1.2.0",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
     "gts": "^3.1.1",
     "jstransformer-babel": "^2.1.0",

@@ -69,7 +69,6 @@ import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
-import { rules as ymlRules } from "eslint-plugin-yml"
 
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
@@ -147,7 +146,6 @@ const plugins = [
   ["wdio", wdioRules],
   ["xss", xssRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
-  ["yml", ymlRules],
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)

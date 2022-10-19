@@ -288,12 +288,6 @@ async function main() {
       "typescript-sort-keys"
   )
 
-  console.log("Generate eslint-plugin-yml description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/ota-meshi/eslint-plugin-yml/master/docs/rules/${pattern}.md`,
-      "yml"
-  )
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
