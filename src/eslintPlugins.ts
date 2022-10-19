@@ -96,7 +96,7 @@ const plugins = [
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],
-  ["eslint_plugin_import", importRules],
+  ["import", importRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-formatting", jestFormattingRules],
