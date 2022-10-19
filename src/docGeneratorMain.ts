@@ -95,7 +95,7 @@ async function main() {
   console.log("Generate import description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/import-js/eslint-plugin-import/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/benmosher/eslint-plugin-import/master/docs/rules/${pattern}.md`,
     "import",
     false
   )
@@ -265,11 +265,11 @@ async function main() {
     false
   )
 
-  console.log("Generate @shopify/eslint-plugin description files")
+  console.log("Generate @shopify_eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify_eslint",
+    "@shopify/eslint-plugin",
     false
   )
 

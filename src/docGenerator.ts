@@ -20,8 +20,6 @@ import {
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
-import * as Console from "console";
-
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
@@ -158,7 +156,6 @@ export class DocGenerator {
         : this.eslintPatternIds()
     const promises: Promise<void>[] = patterns.map(async (pattern) => {
       const url: string = urlFromPatternId(pattern)
-      console.log(url)
       const result = await fetch(url)
       if (result.ok) {
         const text = await result.text()

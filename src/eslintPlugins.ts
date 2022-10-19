@@ -132,7 +132,7 @@ const plugins = [
   ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
-  ["@shopify_eslint", shopifyRules],
+  ["@shopify/eslint-plugin", shopifyRules],
   ["sonarjs", sonarjsRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
