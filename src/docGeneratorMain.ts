@@ -269,7 +269,7 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify_eslint",
+    "@shopify/eslint-plugin",
     false
   )
 
@@ -280,6 +280,14 @@ async function main() {
     "i18next",
     false
   )
+
+  console.log("Generate eslint-plugin-typescript-sort-keys description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/interface.md`,
+      "typescript-sort-keys"
+  )
+
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

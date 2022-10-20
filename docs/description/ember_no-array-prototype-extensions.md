@@ -1,14 +1,16 @@
 # no-array-prototype-extensions
 
+🔧 The `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by this rule.
+
 By default, Ember extends certain native JavaScript objects with additional methods. This can lead to problems in some situations. One example is relying on these methods in an addon that is used inside an app that has the extensions disabled.
 
-The prototype extensions for the `Array` object will likely become deprecated in the future.
+The prototype extensions for the `Array` object were deprecated in [RFC #848](https://rfcs.emberjs.com/id/0848-deprecate-array-prototype-extensions).
 
 Some alternatives:
 
-* Use native array functions instead of `.filterBy()`, `.toArray()` in Ember modules
-* Use lodash helper functions instead of `.uniqBy()`, `.sortBy()` in Ember modules
-* Use immutable update style with `@tracked` properties or `TrackedArray` from `tracked-built-ins` instead of `.pushObject`, `removeObject` in Ember modules
+- Use native array functions instead of `.filterBy()`, `.toArray()` in Ember modules
+- Use lodash helper functions instead of `.uniqBy()`, `.sortBy()` in Ember modules
+- Use immutable update style with `@tracked` properties or `TrackedArray` from `tracked-built-ins` instead of `.pushObject`, `removeObject` in Ember modules
 
 Note: this rule is not in the `recommended` configuration because of the risk of false positives.
 
@@ -18,10 +20,10 @@ This rule will disallow method calls that match any of the forbidden `Array` pro
 
 Note that to reduce false positives, the rule ignores some common known-non-array classes/objects whose functions overlap with the array extension function names:
 
-* `Set.clear()`
-* `Map.clear()`
-* `Promise.reject()`
-* etc
+- `Set.clear()`
+- `Map.clear()`
+- `Promise.reject()`
+- etc
 
 If you run into additional false positives, please file a bug or submit a PR to add it to the rule's hardcoded ignore list.
 
@@ -113,14 +115,14 @@ export default class SampleComponent extends Component {
 
 ## References
 
-* [EmberArray](https://api.emberjs.com/ember/release/classes/EmberArray)
-* Ember [MutableArray](https://api.emberjs.com/ember/release/classes/MutableArray)
-* [Ember Prototype extensions documentation](https://guides.emberjs.com/release/configuring-ember/disabling-prototype-extensions/)
-* Ember Array prototype extensions deprecation RFC (TODO: add link when available)
-* [Native JavaScript array functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [EmberArray](https://api.emberjs.com/ember/release/classes/EmberArray)
+- Ember [MutableArray](https://api.emberjs.com/ember/release/classes/MutableArray)
+- [Ember Prototype extensions documentation](https://guides.emberjs.com/release/configuring-ember/disabling-prototype-extensions/)
+- [Ember Array prototype extensions deprecation RFC](https://rfcs.emberjs.com/id/0848-deprecate-array-prototype-extensions)
+- [Native JavaScript array functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ## Related Rules
 
-* [no-array-prototype-extensions](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-array-prototype-extensions.md) from ember-template-lint
-* [no-function-prototype-extensions](no-function-prototype-extensions.md)
-* [no-string-prototype-extensions](no-string-prototype-extensions.md)
+- [no-array-prototype-extensions](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-array-prototype-extensions.md) from ember-template-lint
+- [no-function-prototype-extensions](no-function-prototype-extensions.md)
+- [no-string-prototype-extensions](no-string-prototype-extensions.md)

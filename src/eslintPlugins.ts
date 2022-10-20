@@ -68,6 +68,8 @@ import { rules as vueRules } from "eslint-plugin-vue"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
+import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
+
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
@@ -143,6 +145,7 @@ const plugins = [
   ["vue", vueRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
+  ["typescript-sort-keys", typescriptSortKeysRules],
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)

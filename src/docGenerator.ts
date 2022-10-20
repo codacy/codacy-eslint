@@ -20,7 +20,6 @@ import {
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
-
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
