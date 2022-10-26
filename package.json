@@ -110,7 +110,7 @@
     "@nrwl/react": "15.0.1",
     "@nrwl/storybook": "15.0.2",
     "@nrwl/tao": "15.0.0",
-    "@nrwl/web": "15.0.1",
+    "@nrwl/web": "15.0.3",
     "@nrwl/workspace": "15.0.0",
     "@nuxtjs/eslint-config": "^11.0.0",
     "@prodigy/eslint-config-prodigy": "0.0.7",
