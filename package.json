@@ -98,7 +98,7 @@
     "@nrwl/cli": "15.0.3",
     "@nrwl/cypress": "15.0.1",
     "@nrwl/devkit": "15.0.0",
-    "@nrwl/eslint-plugin-nx": "^15.0.1",
+    "@nrwl/eslint-plugin-nx": "^15.0.4",
     "@nrwl/express": "15.0.2",
     "@nrwl/jest": "14.8.4",
     "@nrwl/linter": "15.0.3",
