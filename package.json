@@ -96,7 +96,7 @@
     "@next/eslint-plugin-next": "^13.0.1",
     "@nodelib/fs.walk": "^1.2.8",
     "@nrwl/cli": "15.0.12",
-    "@nrwl/cypress": "15.0.5",
+    "@nrwl/cypress": "15.0.13",
     "@nrwl/devkit": "15.0.4",
     "@nrwl/eslint-plugin-nx": "^15.0.4",
     "@nrwl/express": "15.0.4",
