@@ -292,7 +292,7 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "react-hot-loader": "^4.13.1",
     "redux-saga": "^1.2.1",
-    "sort-package-json": "^2.0.0",
+    "sort-package-json": "^2.1.0",
     "standard": "^17.0.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "tslint": "^6.1.3",
