@@ -100,7 +100,7 @@
     "@nrwl/devkit": "15.2.1",
     "@nrwl/eslint-plugin-nx": "^15.0.4",
     "@nrwl/express": "15.1.0",
-    "@nrwl/jest": "15.2.1",
+    "@nrwl/jest": "15.2.4",
     "@nrwl/linter": "15.2.3",
     "@nrwl/nest": "15.0.13",
     "@nrwl/next": "15.2.4",
