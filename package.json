@@ -318,7 +318,7 @@
     "@types/simple-mock": "^0.8.2",
     "chai": "^4.3.7",
     "husky": "^8.0.2",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "^13.1.0",
     "mocha": "^10.1.0",
     "simple-mock": "^0.8.0",
     "ts-loader": "^9.4.1",
