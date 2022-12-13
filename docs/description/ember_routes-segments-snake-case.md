@@ -1,6 +1,8 @@
-# routes-segments-snake-case
+# ember/routes-segments-snake-case
 
-✅ The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/ember-cli/eslint-plugin-ember#-configurations).
+
+<!-- end auto-generated rule header -->
 
 Dynamic segments in routes should use _snake case_, so Ember doesn't have to do extra serialization in order to resolve promises.
 

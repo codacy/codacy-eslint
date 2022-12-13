@@ -1,6 +1,8 @@
-# no-test-this-render
+# ember/no-test-this-render
 
-✅ The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/ember-cli/eslint-plugin-ember#-configurations).
+
+<!-- end auto-generated rule header -->
 
 Ember's `this.render`/`this.clearRender` method and [`@ember/test-helpers`](https://github.com/emberjs/ember-test-helpers)'s `render`/`clearRender` method are equivalent, but using `@ember/test-helpers`' `render`/`clearRender` method is the recommended approach.
 

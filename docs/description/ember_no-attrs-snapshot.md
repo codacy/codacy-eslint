@@ -1,6 +1,8 @@
-# no-attrs-snapshot
+# ember/no-attrs-snapshot
 
-✅ The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/ember-cli/eslint-plugin-ember#-configurations).
+
+<!-- end auto-generated rule header -->
 
 Disallow use of attrs snapshot in `didReceiveAttrs` and `didUpdateAttrs`.
 
@@ -47,11 +49,11 @@ export default Component({
     this.updated = false;
   },
   didReceiveAttrs() {
-    if (this._valueCache !== this.value) {
+    if (this._valueCache === this.value) {
+      this.set('updated', false);
+    } else {
       this._valueCache = this.value;
       this.set('updated', true);
-    } else {
-      this.set('updated', false);
     }
   }
 });

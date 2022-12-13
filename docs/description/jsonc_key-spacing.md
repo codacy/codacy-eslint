@@ -5,6 +5,7 @@ title: "jsonc/key-spacing"
 description: "enforce consistent spacing between keys and values in object literal properties"
 since: "v0.1.0"
 ---
+
 # jsonc/key-spacing
 
 > enforce consistent spacing between keys and values in object literal properties
@@ -46,7 +47,7 @@ This rule enforces consistent spacing between keys and values in object literal 
 }
 ```
 
-Same as [key-spacing] rule option. See [here](https://eslint.org/docs/rules/key-spacing#options) for details. 
+Same as [key-spacing] rule option. See [here](https://eslint.org/docs/rules/key-spacing#options) for details.
 
 ## :couple: Related rules
 

@@ -6925,6 +6925,30 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "skipComments",
+        "description": "skipComments"
+      },
+      {
+        "name": "skipStrings",
+        "description": "skipStrings"
+      },
+      {
+        "name": "skipTemplates",
+        "description": "skipTemplates"
+      },
+      {
+        "name": "skipRegExps",
+        "description": "skipRegExps"
+      }
+    ],
+    "patternId": "jsonc_no-irregular-whitespace",
+    "title": "Jsonc: No irregular whitespace",
+    "description": "Disallow irregular whitespace",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "jsonc_no-multi-str",
     "title": "Jsonc: No multi str",
@@ -8492,6 +8516,27 @@
   },
   {
     "parameters": [],
+    "patternId": "package-json_order-properties",
+    "title": "Package json: Order properties",
+    "description": "Package properties must be declared in standard order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "package-json_sort-collections",
+    "title": "Package json: Sort collections",
+    "description": "Dependencies, scripts, and configuration values must be declared in alphabetical order.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "package-json_valid-package-def",
+    "title": "Package json: Valid package def",
+    "description": "Enforce that package.json has all properties required by NPM spec",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
     "description": "Identify false positives when async Playwright APIs are not properly awaited.",
@@ -9899,6 +9944,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_no-extra-lookaround-assertions",
+    "title": "Regexp: No extra lookaround assertions",
+    "description": "Disallow unnecessary nested lookaround assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_no-invalid-regexp",
     "title": "Regexp: No invalid regexp",
     "description": "Disallow invalid regular expression strings in `RegExp` constructors",
@@ -9930,6 +9982,13 @@
     "patternId": "regexp_no-misleading-unicode-character",
     "title": "Regexp: No misleading unicode character",
     "description": "Disallow multi-code-point characters in character classes and quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-missing-g-flag",
+    "title": "Regexp: No missing g flag",
+    "description": "Disallow missing `g` flag in patterns used in `String#matchAll` and `String#replaceAll`",
     "timeToFix": 5
   },
   {
@@ -10763,232 +10822,232 @@
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_binary-assignment-parens",
-    "title": "@shopify_eslint: Binary assignment parens",
+    "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
+    "title": "@shopify: [Eslint plugin] Binary assignment parens",
     "description": "Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_class-property-semi",
-    "title": "@shopify_eslint: Class property semi",
+    "patternId": "@shopify_eslint-plugin_class-property-semi",
+    "title": "@shopify: [Eslint plugin] Class property semi",
     "description": "Require (or disallow) semicolons for class properties.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_images-no-direct-imports",
-    "title": "@shopify_eslint: Images no direct imports",
+    "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
+    "title": "@shopify: [Eslint plugin] Images no direct imports",
     "description": "Prefer importing image files from the index file of the directory instead of the direct path to the image file.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_jest_no-all-mocks-methods",
-    "title": "@shopify_eslint: [Jest] No all mocks methods",
+    "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
+    "title": "@shopify: [Eslint plugin] [Jest] No all mocks methods",
     "description": "Disallows jest allMocks methods.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_jest_no-snapshots",
-    "title": "@shopify_eslint: [Jest] No snapshots",
+    "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
+    "title": "@shopify: [Eslint plugin] [Jest] No snapshots",
     "description": "Disallows jest snapshots.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_jsx-no-complex-expressions",
-    "title": "@shopify_eslint: Jsx no complex expressions",
+    "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
+    "title": "@shopify: [Eslint plugin] Jsx no complex expressions",
     "description": "Disallow complex expressions embedded in in JSX.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_jsx-no-hardcoded-content",
-    "title": "@shopify_eslint: Jsx no hardcoded content",
+    "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
+    "title": "@shopify: [Eslint plugin] Jsx no hardcoded content",
     "description": "Disallow hardcoded content in JSX.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_jsx-prefer-fragment-wrappers",
-    "title": "@shopify_eslint: Jsx prefer fragment wrappers",
+    "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
+    "title": "@shopify: [Eslint plugin] Jsx prefer fragment wrappers",
     "description": "Disallow useless wrapping elements in favour of fragment shorthand in JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_no-ancestor-directory-import",
-    "title": "@shopify_eslint: No ancestor directory import",
+    "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
+    "title": "@shopify: [Eslint plugin] No ancestor directory import",
     "description": "Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_no-debugger",
-    "title": "@shopify_eslint: No debugger",
+    "patternId": "@shopify_eslint-plugin_no-debugger",
+    "title": "@shopify: [Eslint plugin] No debugger",
     "description": "Disallow the use of `debugger`.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_no-namespace-imports",
-    "title": "@shopify_eslint: No namespace imports",
+    "patternId": "@shopify_eslint-plugin_no-namespace-imports",
+    "title": "@shopify: [Eslint plugin] No namespace imports",
     "description": "Prevent namespace import declarations.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_no-useless-computed-properties",
-    "title": "@shopify_eslint: No useless computed properties",
+    "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
+    "title": "@shopify: [Eslint plugin] No useless computed properties",
     "description": "Prevent the usage of unnecessary computed properties.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_no-fully-static-classes",
-    "title": "@shopify_eslint: No fully static classes",
+    "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
+    "title": "@shopify: [Eslint plugin] No fully static classes",
     "description": "Prevent the declaration of classes consisting only of static members.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_polaris-prefer-sectioned-prop",
-    "title": "@shopify_eslint: Polaris prefer sectioned prop",
+    "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
+    "title": "@shopify: [Eslint plugin] Polaris prefer sectioned prop",
     "description": "Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_polaris-no-bare-stack-item",
-    "title": "@shopify_eslint: Polaris no bare stack item",
+    "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
+    "title": "@shopify: [Eslint plugin] Polaris no bare stack item",
     "description": "Disallow the use of Polaris’s `Stack.Item` without any custom props.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_prefer-class-properties",
-    "title": "@shopify_eslint: Prefer class properties",
+    "patternId": "@shopify_eslint-plugin_prefer-class-properties",
+    "title": "@shopify: [Eslint plugin] Prefer class properties",
     "description": "Prefer class properties to assignment of literals in constructors.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_prefer-early-return",
-    "title": "@shopify_eslint: Prefer early return",
+    "patternId": "@shopify_eslint-plugin_prefer-early-return",
+    "title": "@shopify: [Eslint plugin] Prefer early return",
     "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_prefer-module-scope-constants",
-    "title": "@shopify_eslint: Prefer module scope constants",
+    "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
+    "title": "@shopify: [Eslint plugin] Prefer module scope constants",
     "description": "Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_prefer-twine",
-    "title": "@shopify_eslint: Prefer twine",
+    "patternId": "@shopify_eslint-plugin_prefer-twine",
+    "title": "@shopify: [Eslint plugin] Prefer twine",
     "description": "Prefer Twine over Bindings as the name for twine imports.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-hooks-strict-return",
-    "title": "@shopify_eslint: React hooks strict return",
+    "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
+    "title": "@shopify: [Eslint plugin] React hooks strict return",
     "description": "Restrict the number of returned items from React hooks.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-initialize-state",
-    "title": "@shopify_eslint: React initialize state",
+    "patternId": "@shopify_eslint-plugin_react-initialize-state",
+    "title": "@shopify: [Eslint plugin] React initialize state",
     "description": "Require that React component state be initialized when it has a non-empty type.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-no-multiple-render-methods",
-    "title": "@shopify_eslint: React no multiple render methods",
+    "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
+    "title": "@shopify: [Eslint plugin] React no multiple render methods",
     "description": "Disallow multiple render methods in React component classes",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-prefer-private-members",
-    "title": "@shopify_eslint: React prefer private members",
+    "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
+    "title": "@shopify: [Eslint plugin] React prefer private members",
     "description": "Disallow public members within React component classes",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-require-autocomplete",
-    "title": "@shopify_eslint: React require autocomplete",
+    "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
+    "title": "@shopify: [Eslint plugin] React require autocomplete",
     "description": "Require autocomplete attribute on certain input types.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_react-type-state",
-    "title": "@shopify_eslint: React type state",
+    "patternId": "@shopify_eslint-plugin_react-type-state",
+    "title": "@shopify: [Eslint plugin] React type state",
     "description": "Require that React component state be typed in TypeScript.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_restrict-full-import",
-    "title": "@shopify_eslint: Restrict full import",
+    "patternId": "@shopify_eslint-plugin_restrict-full-import",
+    "title": "@shopify: [Eslint plugin] Restrict full import",
     "description": "Prevent importing the entirety of a package.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_sinon-no-restricted-features",
-    "title": "@shopify_eslint: Sinon no restricted features",
+    "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
+    "title": "@shopify: [Eslint plugin] Sinon no restricted features",
     "description": "Restrict the use of specified sinon features.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_sinon-prefer-meaningful-assertions",
-    "title": "@shopify_eslint: Sinon prefer meaningful assertions",
+    "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
+    "title": "@shopify: [Eslint plugin] Sinon prefer meaningful assertions",
     "description": "Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_strict-component-boundaries",
-    "title": "@shopify_eslint: Strict component boundaries",
+    "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
+    "title": "@shopify: [Eslint plugin] Strict component boundaries",
     "description": "Prevent module imports between components.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_typescript_prefer-pascal-case-enums",
-    "title": "@shopify_eslint: [Typescript] Prefer pascal case enums",
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer pascal case enums",
     "description": "Enforce Pascal case when naming enums.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_typescript_prefer-singular-enums",
-    "title": "@shopify_eslint: [Typescript] Prefer singular enums",
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer singular enums",
     "description": "Prefer singular TypeScript enums.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_typescript_prefer-build-client-schema",
-    "title": "@shopify_eslint: [Typescript] Prefer build client schema",
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer build client schema",
     "description": "Prefer buildClientSchema for schema building",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify__eslint_webpack_no-unnamed-dynamic-imports",
-    "title": "@shopify_eslint: [Webpack] No unnamed dynamic imports",
+    "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
+    "title": "@shopify: [Eslint plugin] [Webpack] No unnamed dynamic imports",
     "description": "Require that all dynamic imports contain a `webpackChunkName` comment.",
     "timeToFix": 5
   },
@@ -12090,6 +12149,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
+    "title": "@typescript eslint: No unsafe declaration merging",
+    "description": "Disallow unsafe declaration merging",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-unsafe-member-access",
     "title": "@typescript eslint: No unsafe member access",
     "description": "Disallow member access on a value with type `any`",
@@ -12249,7 +12315,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
-    "description": "Enforce using concise optional chain expressions instead of chained logical ands",
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
     "timeToFix": 5
   },
   {
@@ -12355,6 +12421,13 @@
     "patternId": "@typescript-eslint_semi",
     "title": "@typescript eslint: Semi",
     "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_sort-type-constituents",
+    "title": "@typescript eslint: Sort type constituents",
+    "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {
@@ -14945,225 +15018,6 @@
     "patternId": "typescript-sort-keys_string-enum",
     "title": "Typescript sort keys: String enum",
     "description": "Require string enum members to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_block-mapping-colon-indicator-newline",
-    "title": "Yml: Block mapping colon indicator newline",
-    "description": "Enforce consistent line breaks after `:` indicator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_block-mapping-question-indicator-newline",
-    "title": "Yml: Block mapping question indicator newline",
-    "description": "Enforce consistent line breaks after `?` indicator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_block-mapping",
-    "title": "Yml: Block mapping",
-    "description": "Require or disallow block style mappings.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_block-sequence-hyphen-indicator-newline",
-    "title": "Yml: Block sequence hyphen indicator newline",
-    "description": "Enforce consistent line breaks after `-` indicator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_block-sequence",
-    "title": "Yml: Block sequence",
-    "description": "Require or disallow block style sequences.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_file-extension",
-    "title": "Yml: File extension",
-    "description": "Enforce YAML file extension",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_flow-mapping-curly-newline",
-    "title": "Yml: Flow mapping curly newline",
-    "description": "Enforce consistent line breaks inside braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_flow-mapping-curly-spacing",
-    "title": "Yml: Flow mapping curly spacing",
-    "description": "Enforce consistent spacing inside braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_flow-sequence-bracket-newline",
-    "title": "Yml: Flow sequence bracket newline",
-    "description": "Enforce linebreaks after opening and before closing flow sequence brackets",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_flow-sequence-bracket-spacing",
-    "title": "Yml: Flow sequence bracket spacing",
-    "description": "Enforce consistent spacing inside flow sequence brackets",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_indent",
-    "title": "Yml: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "camelCase",
-        "description": "camelCase"
-      },
-      {
-        "name": "PascalCase",
-        "description": "PascalCase"
-      },
-      {
-        "name": "SCREAMING_SNAKE_CASE",
-        "description": "SCREAMING_SNAKE_CASE"
-      },
-      {
-        "name": "kebab-case",
-        "description": "kebab-case"
-      },
-      {
-        "name": "snake_case",
-        "description": "snake_case"
-      }
-    ],
-    "patternId": "yml_key-name-casing",
-    "title": "Yml: Key name casing",
-    "description": "Enforce naming convention to key names",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_key-spacing",
-    "title": "Yml: Key spacing",
-    "description": "Enforce consistent spacing between keys and values in mapping pairs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-empty-document",
-    "title": "Yml: No empty document",
-    "description": "Disallow empty document",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-empty-key",
-    "title": "Yml: No empty key",
-    "description": "Disallow empty mapping keys",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-empty-mapping-value",
-    "title": "Yml: No empty mapping value",
-    "description": "Disallow empty mapping values",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-empty-sequence-entry",
-    "title": "Yml: No empty sequence entry",
-    "description": "Disallow empty sequence entries",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "skipComments",
-        "description": "skipComments"
-      },
-      {
-        "name": "skipQuotedScalars",
-        "description": "skipQuotedScalars"
-      }
-    ],
-    "patternId": "yml_no-irregular-whitespace",
-    "title": "Yml: No irregular whitespace",
-    "description": "Disallow irregular whitespace",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-multiple-empty-lines",
-    "title": "Yml: No multiple empty lines",
-    "description": "Disallow multiple empty lines",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_no-tab-indent",
-    "title": "Yml: No tab indent",
-    "description": "Disallow tabs for indentation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_plain-scalar",
-    "title": "Yml: Plain scalar",
-    "description": "Require or disallow plain style scalar.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_quotes",
-    "title": "Yml: Quotes",
-    "description": "Enforce the consistent use of either double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_require-string-key",
-    "title": "Yml: Require string key",
-    "description": "Disallow mapping keys other than strings",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_sort-keys",
-    "title": "Yml: Sort keys",
-    "description": "Require mapping keys to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_sort-sequence-values",
-    "title": "Yml: Sort sequence values",
-    "description": "Require sequence values to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_spaced-comment",
-    "title": "Yml: Spaced comment",
-    "description": "Enforce consistent spacing after the `#` in a comment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_vue-custom-block_no-parsing-error",
-    "title": "Yml: [Vue custom block] No parsing error",
-    "description": "Disallow parsing errors in Vue custom blocks",
     "timeToFix": 5
   }
 ]
