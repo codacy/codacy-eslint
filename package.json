@@ -183,7 +183,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "^12.0.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-config-standard-with-typescript": "^24.0.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-ts-important-stuff": "^1.1.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
