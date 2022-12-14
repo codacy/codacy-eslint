@@ -1,6 +1,8 @@
-# avoid-leaking-state-in-ember-objects
+# ember/avoid-leaking-state-in-ember-objects
 
-✅ The `"extends": "plugin:ember/recommended"` property in a configuration file enables this rule.
+💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/ember-cli/eslint-plugin-ember#-configurations).
+
+<!-- end auto-generated rule header -->
 
 Don't use arrays and objects as default properties in classic classes or mixins. In native classes, it is safe to assign objects to fields.
 

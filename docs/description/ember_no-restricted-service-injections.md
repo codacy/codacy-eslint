@@ -1,4 +1,6 @@
-# no-restricted-service-injections
+# ember/no-restricted-service-injections
+
+<!-- end auto-generated rule header -->
 
 In some parts of your application, you may prefer to disallow certain services from being injected. This can be useful for:
 
@@ -45,7 +47,7 @@ class MyComponent extends Component {
 
 - object[] -- containing the following properties:
   - string[] -- `services` -- list of (kebab-case) service names that should be disallowed from being injected under the specified paths
-  - string[] -- `paths` -- optional list of regexp file paths that injecting the specified services should be disallowed under (omit this field to match any path)
+  - string[] -- `paths` -- optional list of regexp file paths that injecting the specified services should be disallowed under (omit this field to match any path) (for glob patterns, use [ESLint `overrides`](https://eslint.org/docs/latest/user-guide/configuring/configuration-files#configuration-based-on-glob-patterns) instead)
   - string -- `message` -- optional custom error message to display for violations
 
 ## Related Rules

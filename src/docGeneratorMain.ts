@@ -288,6 +288,13 @@ async function main() {
       "typescript-sort-keys"
   )
 
+  console.log("Generate eslint-plugin-package-json description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/zetlen/eslint-plugin-package-json/master/docs/rules/${pattern}.md`,
+      "package-json"
+  )
+
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

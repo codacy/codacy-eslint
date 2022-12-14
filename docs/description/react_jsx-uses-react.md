@@ -1,6 +1,8 @@
-# Disallow React to be incorrectly marked as unused (react/jsx-uses-react)
+# Disallow React to be incorrectly marked as unused (`react/jsx-uses-react`)
 
-💼 This rule is enabled in the following [configs](https://github.com/jsx-eslint/eslint-plugin-react#shareable-configurations): `all`, `recommended`. This rule is disabled in the following configs: `jsx-runtime`.
+💼🚫 This rule is enabled in the ☑️ `recommended` [config](https://github.com/jsx-eslint/eslint-plugin-react/#shareable-configs). This rule is _disabled_ in the 🏃 `jsx-runtime` [config](https://github.com/jsx-eslint/eslint-plugin-react/#shareable-configs).
+
+<!-- end auto-generated rule header -->
 
 JSX expands to a call to `React.createElement`, a file which includes `React`
 but only uses JSX should consider the `React` variable as used.
