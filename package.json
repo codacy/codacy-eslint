@@ -119,7 +119,7 @@
     "@salesforce/eslint-config-lwc": "^3.3.3",
     "@salesforce/eslint-plugin-aura": "^2.1.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
-    "@salesforce/sfdx-lwc-jest": "^1.1.3",
+    "@salesforce/sfdx-lwc-jest": "^1.2.1",
     "@serverless/eslint-config": "^5.0.1",
     "@shopify/eslint-plugin": "^42.0.2",
     "@strv/eslint-config-typescript": "^3.2.0",
