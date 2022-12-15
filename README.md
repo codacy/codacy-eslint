@@ -36,6 +36,8 @@ at `src/docGeneratorMain.ts` to include them on the generated documentation. To 
       ["xss", xssRules] // the first value has to match the patterns's prefix
     ```
 4.  Generate documentation so it adds the new plugin documentation
+5.  Add a new test in `/docs/multiple-tests` that uses the newly added plugin or config.
+    You can use the Getting Started section of the package documentation to find a small usage example. 
 
 ## Generating documentation
 
