@@ -112,7 +112,7 @@
     "@nrwl/storybook": "15.3.3",
     "@nrwl/tao": "15.4.1",
     "@nrwl/web": "15.3.3",
-    "@nrwl/workspace": "15.4.0",
+    "@nrwl/workspace": "15.4.1",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@prodigy/eslint-config-prodigy": "0.0.7",
     "@react-native-community/eslint-config": "^3.2.0",
