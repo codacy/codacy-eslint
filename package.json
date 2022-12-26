@@ -104,7 +104,7 @@
     "@nrwl/jest": "15.3.3",
     "@nrwl/linter": "15.3.3",
     "@nrwl/nest": "15.3.3",
-    "@nrwl/next": "15.4.0",
+    "@nrwl/next": "15.4.1",
     "@nrwl/node": "15.4.0",
     "@nrwl/nx": "^7.8.7",
     "@nrwl/nx-cloud": "15.0.2",
