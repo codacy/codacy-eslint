@@ -121,7 +121,7 @@
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.2.1",
     "@serverless/eslint-config": "^5.0.1",
-    "@shopify/eslint-plugin": "^42.0.2",
+    "@shopify/eslint-plugin": "^42.0.3",
     "@strv/eslint-config-typescript": "^3.2.0",
     "@teambit/eslint-config-bit-react": "^0.0.367",
     "@teambit/react.eslint-config-bit-react": "^0.0.600",
