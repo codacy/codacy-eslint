@@ -294,7 +294,7 @@
     "mini-css-extract-plugin": "^2.7.2",
     "next": "^13.1.1",
     "node-fetch": "2.6.7",
-    "npm": "^9.3.0",
+    "npm": "^9.3.1",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "react-hot-loader": "^4.13.1",
