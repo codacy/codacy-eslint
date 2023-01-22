@@ -3,7 +3,7 @@ ARG NODE_IMAGE_VERSION=16.13.0-alpine
 FROM node:$NODE_IMAGE_VERSION as builder
 
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps && npm cache clean --force;
 
 COPY . .
 
@@ -18,7 +18,7 @@ COPY --from=builder package.json ./
 COPY --from=builder package-lock.json ./
 COPY --from=builder docs docs
 
-RUN npm install --legacy-peer-deps --production
+RUN npm install --legacy-peer-deps --production && npm cache clean --force;
 
 # Removing this plugin because it gets loaded by prettier and forces a fixed order for imports
 RUN rm -rf /package.json /package-lock.json /node_modules/prettier-plugin-organize-imports
