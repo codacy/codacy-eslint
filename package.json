@@ -94,7 +94,7 @@
     "@lwc/eslint-plugin-lwc": "^1.5.1",
     "@m6web/eslint-plugin-i18n": "^2.0.1",
     "@magento/eslint-config": "^1.5.3",
-    "@next/eslint-plugin-next": "^13.0.6",
+    "@next/eslint-plugin-next": "^13.1.4",
     "@nodelib/fs.walk": "^1.2.8",
     "@nrwl/cli": "15.5.2",
     "@nrwl/cypress": "15.5.1",
