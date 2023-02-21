@@ -323,6 +323,7 @@
     "@types/node-fetch": "^2.6.1",
     "@types/simple-mock": "^0.8.2",
     "chai": "^4.3.7",
+    "eslint-config-qiwi": "^2.0.8",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "mocha": "^10.2.0",
