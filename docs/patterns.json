@@ -6100,21 +6100,21 @@
       "enabled": false
     },
     {
-      "patternId": "functional_no-classes",
+      "patternId": "functional_no-class",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "functional_no-conditional-statements",
+      "patternId": "functional_no-conditional-statement",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "functional_no-expression-statements",
+      "patternId": "functional_no-expression-statement",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -6128,14 +6128,26 @@
       "enabled": false
     },
     {
-      "patternId": "functional_no-loop-statements",
+      "patternId": "functional_no-loop-statement",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "functional_no-mixed-types",
+      "patternId": "functional_no-method-signature",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreIfReadonly",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "functional_no-mixed-type",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -6156,43 +6168,24 @@
       "enabled": false
     },
     {
-      "patternId": "functional_no-this-expressions",
+      "patternId": "functional_no-this-expression",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "functional_no-throw-statements",
+      "patternId": "functional_no-throw-statement",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "functional_no-try-statements",
+      "patternId": "functional_no-try-statement",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "functional_prefer-immutable-types",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "functional_prefer-property-signatures",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreIfReadonlyWrapped",
-          "default": false
-        }
-      ],
       "enabled": false
     },
     {
@@ -6204,20 +6197,6 @@
     },
     {
       "patternId": "functional_prefer-tacit",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "functional_readonly-type",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "functional_type-declaration-immutability",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -6602,6 +6581,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_no-jest-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_no-large-snapshots",
       "level": "Info",
       "category": "CodeStyle",
@@ -6610,13 +6596,6 @@
     },
     {
       "patternId": "jest_no-mocks-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_no-restricted-jest-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -6645,13 +6624,6 @@
     },
     {
       "patternId": "jest_no-test-return-statement",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "jest_no-untyped-mock-factory",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -9554,12 +9526,7 @@
       "patternId": "react_hook-use-state",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowDestructuredState",
-          "default": false
-        }
-      ],
+      "parameters": [],
       "enabled": false
     },
     {
@@ -10130,13 +10097,6 @@
       "enabled": false
     },
     {
-      "patternId": "react_no-object-type-as-default-prop",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "react_no-will-update-set-state",
       "level": "Info",
       "category": "CodeStyle",
@@ -10229,13 +10189,6 @@
     },
     {
       "patternId": "react_sort-comp",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react_sort-default-props",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12101,13 +12054,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_block-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_brace-style",
       "level": "Info",
       "category": "CodeStyle",
@@ -12288,13 +12234,6 @@
     },
     {
       "patternId": "@typescript-eslint_init-declarations",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_key-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12489,13 +12428,6 @@
     },
     {
       "patternId": "@typescript-eslint_no-implied-eval",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-import-type-side-effects",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13216,6 +13148,18 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_import-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreImports",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_import-style",
       "level": "Info",
       "category": "CodeStyle",
@@ -13277,13 +13221,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-await-expression-member",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-console-spaces",
       "level": "Info",
       "category": "CodeStyle",
@@ -13292,13 +13229,6 @@
     },
     {
       "patternId": "unicorn_no-document-cookie",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-empty-file",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13341,13 +13271,6 @@
     },
     {
       "patternId": "unicorn_no-lonely-if",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-negated-condition",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13408,13 +13331,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-thenable",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-this-assignment",
       "level": "Info",
       "category": "CodeStyle",
@@ -13422,33 +13338,7 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-typeof-undefined",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkGlobalVariables",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-unnecessary-await",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-unreadable-array-destructuring",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-unreadable-iife",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13483,21 +13373,7 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-useless-promise-resolve-reject",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-useless-spread",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-useless-switch-case",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13547,12 +13423,7 @@
       "patternId": "unicorn_prefer-array-find",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkFromLast",
-          "default": false
-        }
-      ],
+      "parameters": [],
       "enabled": false
     },
     {
@@ -13593,13 +13464,6 @@
           "default": false
         }
       ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-code-point",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
       "enabled": false
     },
     {
@@ -13645,25 +13509,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_prefer-event-target",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-export-from",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreUsedVariables",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_prefer-includes",
       "level": "Info",
       "category": "CodeStyle",
@@ -13671,21 +13516,7 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_prefer-json-parse-buffer",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_prefer-keyboard-event-key",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-logical-operator-over-ternary",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13706,21 +13537,7 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_prefer-modern-math-apis",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_prefer-module",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-native-coercion-functions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13737,7 +13554,12 @@
       "patternId": "unicorn_prefer-node-protocol",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "checkRequire",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -13754,6 +13576,13 @@
     },
     {
       "patternId": "unicorn_prefer-object-from-entries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-object-has-own",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13796,13 +13625,6 @@
     },
     {
       "patternId": "unicorn_prefer-set-has",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-set-size",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13888,13 +13710,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_relative-url-style",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_require-array-join-separator",
       "level": "Info",
       "category": "CodeStyle",
@@ -13923,13 +13738,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_switch-case-braces",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_template-indent",
       "level": "Info",
       "category": "CodeStyle",
@@ -13937,21 +13745,7 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_text-encoding-identifier-case",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_throw-new-error",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_import-index",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14015,13 +13809,6 @@
     },
     {
       "patternId": "unicorn_prefer-node-remove",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-object-has-own",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14099,13 +13886,6 @@
     },
     {
       "patternId": "vue_array-bracket-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_array-element-newline",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14278,21 +14058,7 @@
       "enabled": false
     },
     {
-      "patternId": "vue_define-emits-declaration",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "vue_define-macros-order",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_define-props-declaration",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14323,6 +14089,13 @@
     },
     {
       "patternId": "vue_eqeqeq",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_experimental-script-setup-vars",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14498,14 +14271,14 @@
       "enabled": false
     },
     {
-      "patternId": "vue_multiline-ternary",
+      "patternId": "vue_mustache-interpolation-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "vue_mustache-interpolation-spacing",
+      "patternId": "vue_name-property-casing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14562,6 +14335,13 @@
     },
     {
       "patternId": "vue_no-computed-properties-in-data",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-confusing-v-for-v-if",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14899,20 +14679,6 @@
       "enabled": false
     },
     {
-      "patternId": "vue_no-ref-object-destructure",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_no-required-prop-with-default",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "vue_no-reserved-component-names",
       "level": "Info",
       "category": "CodeStyle",
@@ -15089,6 +14855,13 @@
     },
     {
       "patternId": "vue_no-undef-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-unregistered-components",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -15286,20 +15059,6 @@
       "enabled": false
     },
     {
-      "patternId": "vue_padding-line-between-tags",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_padding-lines-in-component-definition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "vue_prefer-import-from-vue",
       "level": "Info",
       "category": "CodeStyle",
@@ -15392,13 +15151,6 @@
     },
     {
       "patternId": "vue_require-name-property",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_require-prop-comment",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -15608,13 +15360,6 @@
       "enabled": false
     },
     {
-      "patternId": "vue_v-on-handler-style",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "vue_v-on-style",
       "level": "Info",
       "category": "CodeStyle",
@@ -15629,13 +15374,6 @@
       "enabled": false
     },
     {
-      "patternId": "vue_valid-attribute-name",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "vue_valid-define-emits",
       "level": "Info",
       "category": "CodeStyle",
@@ -15644,13 +15382,6 @@
     },
     {
       "patternId": "vue_valid-define-props",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "vue_valid-model-definition",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
