@@ -1571,6 +1571,7 @@
   <module name="@typescript-eslint_no-meaningless-void-operator" />
   <module name="@typescript-eslint_no-misused-new" />
   <module name="@typescript-eslint_no-misused-promises" />
+  <module name="@typescript-eslint_no-mixed-enums" />
   <module name="@typescript-eslint_no-namespace" />
   <module name="@typescript-eslint_no-non-null-asserted-nullish-coalescing" />
   <module name="@typescript-eslint_no-non-null-asserted-optional-chain" />

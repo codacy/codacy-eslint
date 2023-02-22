@@ -12596,6 +12596,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-mixed-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-namespace",
       "level": "Info",
       "category": "CodeStyle",

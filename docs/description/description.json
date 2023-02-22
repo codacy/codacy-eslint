@@ -12191,6 +12191,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-mixed-enums",
+    "title": "@typescript eslint: No mixed enums",
+    "description": "Disallow enums from having both number and string members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-namespace",
     "title": "@typescript eslint: No namespace",
     "description": "Disallow TypeScript namespaces",
