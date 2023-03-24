@@ -124,6 +124,7 @@
     "@serverless/eslint-config": "^5.0.1",
     "@shopify/eslint-plugin": "^42.0.3",
     "@strv/eslint-config-typescript": "^3.2.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@teambit/eslint-config-bit-react": "^0.0.367",
     "@teambit/react.eslint-config-bit-react": "^0.0.600",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
