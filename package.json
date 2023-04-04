@@ -283,7 +283,7 @@
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-turbo": "^0.0.7",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
-    "eslint-plugin-unicorn": "^37.0.1",
+    "eslint-plugin-unicorn": "^46.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "eslint-plugin-vue": "^8.7.1",
     "eslint-plugin-vuejs-accessibility": "^1.2.0",
