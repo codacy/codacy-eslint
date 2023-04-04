@@ -57,6 +57,9 @@ export const defaultOptions: ESLint.Options = {
       },
     ],
     settings: {
+      "node": {
+        "tryExtensions": [".js", ".json", ".node", ".ts"]
+      },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"],
       },
