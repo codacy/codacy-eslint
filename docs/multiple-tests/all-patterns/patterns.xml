@@ -1668,6 +1668,7 @@
   <module name="unicorn_no-await-expression-member" />
   <module name="unicorn_no-console-spaces" />
   <module name="unicorn_no-document-cookie" />
+  <module name="unicorn_no-empty-file" />
   <module name="unicorn_no-for-loop" />
   <module name="unicorn_no-hex-escape" />
   <module name="unicorn_no-instanceof-array" />

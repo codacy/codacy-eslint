@@ -14,7 +14,7 @@ module.exports = {
     sourceType: "module",
     projects: ["./tsconfig.json"],
   },
-  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports","jest"],
   rules: {
     "simple-import-sort/imports": "error",
   },
