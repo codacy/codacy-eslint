@@ -17,5 +17,6 @@ module.exports = {
   plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports","jest"],
   rules: {
     "simple-import-sort/imports": "error",
+    '@typescript-eslint/unbound-method': 'off'
   },
 }
