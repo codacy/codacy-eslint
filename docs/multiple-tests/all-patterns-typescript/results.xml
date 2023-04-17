@@ -37,6 +37,5 @@
     <error source="@shopify_eslint-plugin_typescript_prefer-pascal-case-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-pascal-case-enums' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_typescript_prefer-singular-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-singular-enums' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/webpack/no-unnamed-dynamic-imports' was not found." severity="info" />
-    <error source="@unicorn_no-empty-file" line="1" message="Definition for rule 'unicorn_no-empty-file' was not found." severity="info" />
   </file>
 </checkstyle>
