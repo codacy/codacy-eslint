@@ -687,6 +687,10 @@
       {
         "name": "allowBlockEnd",
         "description": "allowBlockEnd"
+      },
+      {
+        "name": "afterHashbangComment",
+        "description": "afterHashbangComment"
       }
     ],
     "patternId": "lines-around-comment",
@@ -721,7 +725,7 @@
     "parameters": [],
     "patternId": "logical-assignment-operators",
     "title": "Logical assignment operators",
-    "description": "Require or disallow logical assignment logical operator shorthand",
+    "description": "Require or disallow logical assignment operator shorthand",
     "timeToFix": 5
   },
   {
@@ -1051,7 +1055,7 @@
     "parameters": [],
     "patternId": "no-div-regex",
     "title": "No div regex",
-    "description": "Disallow division operators explicitly at the beginning of regular expressions",
+    "description": "Disallow equal signs explicitly at the beginning of regular expressions",
     "timeToFix": 5
   },
   {
@@ -5952,22 +5956,22 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_no-class",
-    "title": "Functional: No class",
+    "patternId": "functional_no-classes",
+    "title": "Functional: No classes",
     "description": "Disallow classes.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "functional_no-conditional-statement",
-    "title": "Functional: No conditional statement",
+    "patternId": "functional_no-conditional-statements",
+    "title": "Functional: No conditional statements",
     "description": "Disallow conditional statements.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "functional_no-expression-statement",
-    "title": "Functional: No expression statement",
+    "patternId": "functional_no-expression-statements",
+    "title": "Functional: No expression statements",
     "description": "Disallow expression statements.",
     "timeToFix": 5
   },
@@ -5980,28 +5984,16 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_no-loop-statement",
-    "title": "Functional: No loop statement",
+    "patternId": "functional_no-loop-statements",
+    "title": "Functional: No loop statements",
     "description": "Disallow imperative loops.",
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "ignoreIfReadonly",
-        "description": "ignoreIfReadonly"
-      }
-    ],
-    "patternId": "functional_no-method-signature",
-    "title": "Functional: No method signature",
-    "description": "Prefer property signatures with readonly modifiers over method signatures.",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
-    "patternId": "functional_no-mixed-type",
-    "title": "Functional: No mixed type",
-    "description": "Restrict types so that only members of the same kind of are allowed in them.",
+    "patternId": "functional_no-mixed-types",
+    "title": "Functional: No mixed types",
+    "description": "Restrict types so that only members of the same kind are allowed in them.",
     "timeToFix": 5
   },
   {
@@ -6020,30 +6012,49 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_no-this-expression",
-    "title": "Functional: No this expression",
+    "patternId": "functional_no-this-expressions",
+    "title": "Functional: No this expressions",
     "description": "Disallow this access.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "functional_no-throw-statement",
-    "title": "Functional: No throw statement",
+    "patternId": "functional_no-throw-statements",
+    "title": "Functional: No throw statements",
     "description": "Disallow throwing exceptions.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "functional_no-try-statement",
-    "title": "Functional: No try statement",
+    "patternId": "functional_no-try-statements",
+    "title": "Functional: No try statements",
     "description": "Disallow try-catch[-finally] and try-finally patterns.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_prefer-immutable-types",
+    "title": "Functional: Prefer immutable types",
+    "description": "Require function parameters to be typed as certain immutability",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreIfReadonlyWrapped",
+        "description": "ignoreIfReadonlyWrapped"
+      }
+    ],
+    "patternId": "functional_prefer-property-signatures",
+    "title": "Functional: Prefer property signatures",
+    "description": "Prefer property signatures over method signatures.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "functional_prefer-readonly-type",
     "title": "Functional: Prefer readonly type",
-    "description": "Prefer readonly array over mutable arrays.",
+    "description": "Prefer readonly types over mutable types.",
     "timeToFix": 5
   },
   {
@@ -6051,6 +6062,20 @@
     "patternId": "functional_prefer-tacit",
     "title": "Functional: Prefer tacit",
     "description": "Replaces `x => f(x)` with just `f`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_readonly-type",
+    "title": "Functional: Readonly type",
+    "description": "Require consistently using either `readonly` keywords or `Readonly<T>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "functional_type-declaration-immutability",
+    "title": "Functional: Type declaration immutability",
+    "description": "Enforce the immutability of types based on patterns.",
     "timeToFix": 5
   },
   {
@@ -9205,7 +9230,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowDestructuredState",
+        "description": "allowDestructuredState"
+      }
+    ],
     "patternId": "react_hook-use-state",
     "title": "React: Hook use state",
     "description": "Ensure destructuring and symmetric naming of useState hook value and setter variables",
@@ -9777,6 +9807,13 @@
   },
   {
     "parameters": [],
+    "patternId": "react_no-object-type-as-default-prop",
+    "title": "React: No object type as default prop",
+    "description": "Disallow usage of referential-type variables as default param in functional component",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react_no-will-update-set-state",
     "title": "React: No will update set state",
     "description": "Disallow usage of setState in componentWillUpdate",
@@ -9871,6 +9908,13 @@
     "patternId": "react_sort-comp",
     "title": "React: Sort comp",
     "description": "Enforce component methods order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_sort-default-props",
+    "title": "React: Sort default props",
+    "description": "Enforce defaultProps declarations alphabetical sorting",
     "timeToFix": 5
   },
   {
@@ -11042,7 +11086,7 @@
     "parameters": [],
     "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
     "title": "@shopify: [Eslint plugin] Polaris no bare stack item",
-    "description": "Disallow the use of Polaris’s `Stack.Item` without any custom props.",
+    "description": "Disallow the use of Polaris’s `Stack.Item` and `LegacyStack.Item` without any custom props.",
     "timeToFix": 5
   },
   {
@@ -11259,7 +11303,7 @@
     "parameters": [],
     "patternId": "sonarjs_no-identical-conditions",
     "title": "Sonarjs: No identical conditions",
-    "description": "Related \"if/else if\" statements should not have the same condition",
+    "description": "Related \"if-else-if\" and \"switch-case\" statements should not have the same condition",
     "timeToFix": 5
   },
   {
@@ -11648,6 +11692,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "@typescript-eslint_block-spacing",
+    "title": "@typescript eslint: Block spacing",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "unnamedParam",
@@ -11834,6 +11885,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "@typescript-eslint_key-spacing",
+    "title": "@typescript eslint: Key spacing",
+    "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "before",
@@ -11847,6 +11905,38 @@
     "patternId": "@typescript-eslint_keyword-spacing",
     "title": "@typescript eslint: Keyword spacing",
     "description": "Enforce consistent spacing before and after keywords",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "beforeBlockComment",
+        "description": "beforeBlockComment"
+      },
+      {
+        "name": "afterBlockComment",
+        "description": "afterBlockComment"
+      },
+      {
+        "name": "beforeLineComment",
+        "description": "beforeLineComment"
+      },
+      {
+        "name": "afterLineComment",
+        "description": "afterLineComment"
+      },
+      {
+        "name": "allowBlockStart",
+        "description": "allowBlockStart"
+      },
+      {
+        "name": "allowBlockEnd",
+        "description": "allowBlockEnd"
+      }
+    ],
+    "patternId": "@typescript-eslint_lines-around-comment",
+    "title": "@typescript eslint: Lines around comment",
+    "description": "Require empty lines around comments",
     "timeToFix": 5
   },
   {
@@ -11945,6 +12035,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-duplicate-type-constituents",
+    "title": "@typescript eslint: No duplicate type constituents",
+    "description": "Disallow duplicate constituents of union or intersection types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-dynamic-delete",
     "title": "@typescript eslint: No dynamic delete",
     "description": "Disallow using the `delete` operator on computed key expressions",
@@ -12025,6 +12122,13 @@
     "patternId": "@typescript-eslint_no-implied-eval",
     "title": "@typescript eslint: No implied eval",
     "description": "Disallow the use of `eval()`-like methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-import-type-side-effects",
+    "title": "@typescript eslint: No import type side effects",
+    "description": "Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers",
     "timeToFix": 5
   },
   {
@@ -12119,6 +12223,13 @@
     "patternId": "@typescript-eslint_no-misused-promises",
     "title": "@typescript eslint: No misused promises",
     "description": "Disallow Promises in places not designed to handle them",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-mixed-enums",
+    "title": "@typescript eslint: No mixed enums",
+    "description": "Disallow enums from having both number and string members",
     "timeToFix": 5
   },
   {
@@ -12280,6 +12391,13 @@
     "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
     "title": "@typescript eslint: No unsafe declaration merging",
     "description": "Disallow unsafe declaration merging",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
+    "title": "@typescript eslint: No unsafe enum comparison",
+    "description": "Disallow comparing an enum value with a non-enum value",
     "timeToFix": 5
   },
   {
@@ -13472,6 +13590,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "vue_array-element-newline",
+    "title": "Vue: Array element newline",
+    "description": "Enforce line breaks after each array element in `<template>`",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "before",
@@ -13639,9 +13764,23 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_define-emits-declaration",
+    "title": "Vue: Define emits declaration",
+    "description": "Enforce declaration style of `defineEmits`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_define-macros-order",
     "title": "Vue: Define macros order",
     "description": "Enforce order of `defineEmits` and `defineProps` compiler macros",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_define-props-declaration",
+    "title": "Vue: Define props declaration",
+    "description": "Enforce declaration style of `defineProps`",
     "timeToFix": 5
   },
   {
@@ -13672,13 +13811,6 @@
     "patternId": "vue_eqeqeq",
     "title": "Vue: Eqeqeq",
     "description": "Require the use of `===` and `!==` in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_experimental-script-setup-vars",
-    "title": "Vue: Experimental script setup vars",
-    "description": "Prevent variables defined in `<script setup>` to be marked as undefined",
     "timeToFix": 5
   },
   {
@@ -13852,16 +13984,16 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_mustache-interpolation-spacing",
-    "title": "Vue: Mustache interpolation spacing",
-    "description": "Enforce unified spacing in mustache interpolations",
+    "patternId": "vue_multiline-ternary",
+    "title": "Vue: Multiline ternary",
+    "description": "Enforce newlines between operands of ternary expressions in `<template>`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "vue_name-property-casing",
-    "title": "Vue: Name property casing",
-    "description": "Enforce specific casing for the name property in Vue components",
+    "patternId": "vue_mustache-interpolation-spacing",
+    "title": "Vue: Mustache interpolation spacing",
+    "description": "Enforce unified spacing in mustache interpolations",
     "timeToFix": 5
   },
   {
@@ -13918,13 +14050,6 @@
     "patternId": "vue_no-computed-properties-in-data",
     "title": "Vue: No computed properties in data",
     "description": "Disallow accessing computed properties in `data`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_no-confusing-v-for-v-if",
-    "title": "Vue: No confusing v for v if",
-    "description": "Disallow confusing `v-for` and `v-if` on the same element",
     "timeToFix": 5
   },
   {
@@ -14260,6 +14385,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-ref-object-destructure",
+    "title": "Vue: No ref object destructure",
+    "description": "Disallow destructuring of ref objects that can lead to loss of reactivity",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-required-prop-with-default",
+    "title": "Vue: No required prop with default",
+    "description": "Enforce props with default values to be optional",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-reserved-component-names",
     "title": "Vue: No reserved component names",
     "description": "Disallow the use of reserved names in component definitions",
@@ -14438,13 +14577,6 @@
     "patternId": "vue_no-undef-properties",
     "title": "Vue: No undef properties",
     "description": "Disallow undefined properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_no-unregistered-components",
-    "title": "Vue: No unregistered components",
-    "description": "Disallow using components that are not registered inside templates",
     "timeToFix": 5
   },
   {
@@ -14640,6 +14772,20 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_padding-line-between-tags",
+    "title": "Vue: Padding line between tags",
+    "description": "Require or disallow newlines between sibling tags in template",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_padding-lines-in-component-definition",
+    "title": "Vue: Padding lines in component definition",
+    "description": "Require or disallow padding lines in component definition",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_prefer-import-from-vue",
     "title": "Vue: Prefer import from vue",
     "description": "Enforce import from 'vue' instead of import from '@vue/*'",
@@ -14734,6 +14880,13 @@
     "patternId": "vue_require-name-property",
     "title": "Vue: Require name property",
     "description": "Require a name property in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-prop-comment",
+    "title": "Vue: Require prop comment",
+    "description": "Require props to have a comment",
     "timeToFix": 5
   },
   {
@@ -14941,6 +15094,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_v-on-handler-style",
+    "title": "Vue: V on handler style",
+    "description": "Enforce writing style for handlers in `v-on` directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_v-on-style",
     "title": "Vue: V on style",
     "description": "Enforce `v-on` directive style",
@@ -14955,6 +15115,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_valid-attribute-name",
+    "title": "Vue: Valid attribute name",
+    "description": "Require valid attribute names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_valid-define-emits",
     "title": "Vue: Valid define emits",
     "description": "Enforce valid `defineEmits` compiler macro",
@@ -14965,6 +15132,13 @@
     "patternId": "vue_valid-define-props",
     "title": "Vue: Valid define props",
     "description": "Enforce valid `defineProps` compiler macro",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-model-definition",
+    "title": "Vue: Valid model definition",
+    "description": "Require valid keys in model option",
     "timeToFix": 5
   },
   {

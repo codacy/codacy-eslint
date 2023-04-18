@@ -717,20 +717,23 @@
   <module name="flowtype_valid-syntax" />
   <module name="functional_functional-parameters" />
   <module name="functional_immutable-data" />
-  <module name="functional_no-class" />
-  <module name="functional_no-conditional-statement" />
-  <module name="functional_no-expression-statement" />
+  <module name="functional_no-classes" />
+  <module name="functional_no-conditional-statements" />
+  <module name="functional_no-expression-statements" />
   <module name="functional_no-let" />
-  <module name="functional_no-loop-statement" />
-  <module name="functional_no-method-signature" />
-  <module name="functional_no-mixed-type" />
+  <module name="functional_no-loop-statements" />
+  <module name="functional_no-mixed-types" />
   <module name="functional_no-promise-reject" />
   <module name="functional_no-return-void" />
-  <module name="functional_no-this-expression" />
-  <module name="functional_no-throw-statement" />
-  <module name="functional_no-try-statement" />
+  <module name="functional_no-this-expressions" />
+  <module name="functional_no-throw-statements" />
+  <module name="functional_no-try-statements" />
+  <module name="functional_prefer-immutable-types" />
+  <module name="functional_prefer-property-signatures" />
   <module name="functional_prefer-readonly-type" />
   <module name="functional_prefer-tacit" />
+  <module name="functional_readonly-type" />
+  <module name="functional_type-declaration-immutability" />
   <module name="graphql-fragments_limit-complexity" />
   <module name="hapi_hapi-capitalize-modules" />
   <module name="hapi_hapi-for-you" />
@@ -1248,6 +1251,7 @@
   <module name="react_no-unused-class-component-methods" />
   <module name="react_no-unused-prop-types" />
   <module name="react_no-unused-state" />
+  <module name="react_no-object-type-as-default-prop" />
   <module name="react_no-will-update-set-state" />
   <module name="react_prefer-es6-class" />
   <module name="react_prefer-exact-props" />
@@ -1260,6 +1264,7 @@
   <module name="react_require-render-return" />
   <module name="react_self-closing-comp" />
   <module name="react_sort-comp" />
+  <module name="react_sort-default-props" />
   <module name="react_sort-prop-types" />
   <module name="react_state-in-constructor" />
   <module name="react_static-property-placement" />
@@ -1510,6 +1515,7 @@
   <module name="@typescript-eslint_ban-ts-comment" />
   <module name="@typescript-eslint_ban-tslint-comment" />
   <module name="@typescript-eslint_ban-types" />
+  <module name="@typescript-eslint_block-spacing" />
   <module name="@typescript-eslint_brace-style" />
   <module name="@typescript-eslint_class-literal-property-style" />
   <module name="@typescript-eslint_comma-dangle" />
@@ -1528,7 +1534,9 @@
   <module name="@typescript-eslint_func-call-spacing" />
   <module name="@typescript-eslint_indent" />
   <module name="@typescript-eslint_init-declarations" />
+  <module name="@typescript-eslint_key-spacing" />
   <module name="@typescript-eslint_keyword-spacing" />
+  <module name="@typescript-eslint_lines-around-comment" />
   <module name="@typescript-eslint_lines-between-class-members" />
   <module name="@typescript-eslint_member-delimiter-style" />
   <module name="@typescript-eslint_member-ordering" />
@@ -1541,6 +1549,7 @@
   <module name="@typescript-eslint_no-dupe-class-members" />
   <module name="@typescript-eslint_no-duplicate-enum-values" />
   <module name="@typescript-eslint_no-duplicate-imports" />
+  <module name="@typescript-eslint_no-duplicate-type-constituents" />
   <module name="@typescript-eslint_no-dynamic-delete" />
   <module name="@typescript-eslint_no-empty-function" />
   <module name="@typescript-eslint_no-empty-interface" />
@@ -1553,6 +1562,7 @@
   <module name="@typescript-eslint_no-for-in-array" />
   <module name="@typescript-eslint_no-implicit-any-catch" />
   <module name="@typescript-eslint_no-implied-eval" />
+  <module name="@typescript-eslint_no-import-type-side-effects" />
   <module name="@typescript-eslint_no-inferrable-types" />
   <module name="@typescript-eslint_no-invalid-this" />
   <module name="@typescript-eslint_no-invalid-void-type" />
@@ -1562,6 +1572,7 @@
   <module name="@typescript-eslint_no-meaningless-void-operator" />
   <module name="@typescript-eslint_no-misused-new" />
   <module name="@typescript-eslint_no-misused-promises" />
+  <module name="@typescript-eslint_no-mixed-enums" />
   <module name="@typescript-eslint_no-namespace" />
   <module name="@typescript-eslint_no-non-null-asserted-nullish-coalescing" />
   <module name="@typescript-eslint_no-non-null-asserted-optional-chain" />
@@ -1585,6 +1596,7 @@
   <module name="@typescript-eslint_no-unsafe-assignment" />
   <module name="@typescript-eslint_no-unsafe-call" />
   <module name="@typescript-eslint_no-unsafe-declaration-merging" />
+  <module name="@typescript-eslint_no-unsafe-enum-comparison" />
   <module name="@typescript-eslint_no-unsafe-member-access" />
   <module name="@typescript-eslint_no-unsafe-return" />
   <module name="@typescript-eslint_no-unused-expressions" />
@@ -1744,6 +1756,7 @@
   <module name="unused-imports_no-unused-imports-ts" />
   <module name="vue_array-bracket-newline" />
   <module name="vue_array-bracket-spacing" />
+  <module name="vue_array-element-newline" />
   <module name="vue_arrow-spacing" />
   <module name="vue_attribute-hyphenation" />
   <module name="vue_attributes-order" />
@@ -1762,11 +1775,12 @@
   <module name="vue_component-options-name-casing" />
   <module name="vue_component-tags-order" />
   <module name="vue_custom-event-name-casing" />
+  <module name="vue_define-emits-declaration" />
   <module name="vue_define-macros-order" />
+  <module name="vue_define-props-declaration" />
   <module name="vue_dot-location" />
   <module name="vue_dot-notation" />
   <module name="vue_eqeqeq" />
-  <module name="vue_experimental-script-setup-vars" />
   <module name="vue_first-attribute-linebreak" />
   <module name="vue_func-call-spacing" />
   <module name="vue_html-button-has-type" />
@@ -1788,8 +1802,8 @@
   <module name="vue_max-len" />
   <module name="vue_multi-word-component-names" />
   <module name="vue_multiline-html-element-content-newline" />
+  <module name="vue_multiline-ternary" />
   <module name="vue_mustache-interpolation-spacing" />
-  <module name="vue_name-property-casing" />
   <module name="vue_new-line-between-multi-line-property" />
   <module name="vue_next-tick-style" />
   <module name="vue_no-arrow-functions-in-watch" />
@@ -1798,7 +1812,6 @@
   <module name="vue_no-boolean-default" />
   <module name="vue_no-child-content" />
   <module name="vue_no-computed-properties-in-data" />
-  <module name="vue_no-confusing-v-for-v-if" />
   <module name="vue_no-constant-condition" />
   <module name="vue_no-custom-modifiers-on-v-model" />
   <module name="vue_no-deprecated-data-object-declaration" />
@@ -1842,6 +1855,8 @@
   <module name="vue_no-parsing-error" />
   <module name="vue_no-potential-component-option-typo" />
   <module name="vue_no-ref-as-operand" />
+  <module name="vue_no-ref-object-destructure" />
+  <module name="vue_no-required-prop-with-default" />
   <module name="vue_no-reserved-component-names" />
   <module name="vue_no-reserved-keys" />
   <module name="vue_no-reserved-props" />
@@ -1868,7 +1883,6 @@
   <module name="vue_no-this-in-before-route-enter" />
   <module name="vue_no-undef-components" />
   <module name="vue_no-undef-properties" />
-  <module name="vue_no-unregistered-components" />
   <module name="vue_no-unsupported-features" />
   <module name="vue_no-unused-components" />
   <module name="vue_no-unused-properties" />
@@ -1895,6 +1909,8 @@
   <module name="vue_operator-linebreak" />
   <module name="vue_order-in-components" />
   <module name="vue_padding-line-between-blocks" />
+  <module name="vue_padding-line-between-tags" />
+  <module name="vue_padding-lines-in-component-definition" />
   <module name="vue_prefer-import-from-vue" />
   <module name="vue_prefer-prop-type-boolean-first" />
   <module name="vue_prefer-separate-static-class" />
@@ -1909,6 +1925,7 @@
   <module name="vue_require-explicit-emits" />
   <module name="vue_require-expose" />
   <module name="vue_require-name-property" />
+  <module name="vue_require-prop-comment" />
   <module name="vue_require-prop-type-constructor" />
   <module name="vue_require-prop-types" />
   <module name="vue_require-render-return" />
@@ -1933,10 +1950,13 @@
   <module name="vue_v-for-delimiter-style" />
   <module name="vue_v-on-event-hyphenation" />
   <module name="vue_v-on-function-call" />
+  <module name="vue_v-on-handler-style" />
   <module name="vue_v-on-style" />
   <module name="vue_v-slot-style" />
+  <module name="vue_valid-attribute-name" />
   <module name="vue_valid-define-emits" />
   <module name="vue_valid-define-props" />
+  <module name="vue_valid-model-definition" />
   <module name="vue_valid-next-tick" />
   <module name="vue_valid-template-root" />
   <module name="vue_valid-v-bind-sync" />
