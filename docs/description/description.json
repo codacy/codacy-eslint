@@ -6300,7 +6300,7 @@
     "parameters": [],
     "patternId": "jest_consistent-test-it",
     "title": "Jest: Consistent test it",
-    "description": "Enforce `test` and `it` usage conventions",
+    "description": "Have control over `test` and `it` usages",
     "timeToFix": 5
   },
   {
@@ -6342,7 +6342,7 @@
     "parameters": [],
     "patternId": "jest_no-conditional-expect",
     "title": "Jest: No conditional expect",
-    "description": "Disallow calling `expect` conditionally",
+    "description": "Prevent calling `expect` conditionally",
     "timeToFix": 5
   },
   {
@@ -6370,7 +6370,7 @@
     "parameters": [],
     "patternId": "jest_no-done-callback",
     "title": "Jest: No done callback",
-    "description": "Disallow using a callback in asynchronous tests and hooks",
+    "description": "Avoid using a callback in asynchronous tests and hooks",
     "timeToFix": 5
   },
   {
@@ -6431,6 +6431,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_no-jest-import",
+    "title": "Jest: No jest import",
+    "description": "Disallow importing Jest",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_no-large-snapshots",
     "title": "Jest: No large snapshots",
     "description": "Disallow large snapshots",
@@ -6441,13 +6448,6 @@
     "patternId": "jest_no-mocks-import",
     "title": "Jest: No mocks import",
     "description": "Disallow manually importing from `__mocks__`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-restricted-jest-methods",
-    "title": "Jest: No restricted jest methods",
-    "description": "Disallow specific `jest.` methods",
     "timeToFix": 5
   },
   {
@@ -6468,7 +6468,7 @@
     "parameters": [],
     "patternId": "jest_no-test-prefixes",
     "title": "Jest: No test prefixes",
-    "description": "Require using `.only` and `.skip` over `f` and `x`",
+    "description": "Use `.only` and `.skip` over `f` and `x`",
     "timeToFix": 5
   },
   {
@@ -6476,13 +6476,6 @@
     "patternId": "jest_no-test-return-statement",
     "title": "Jest: No test return statement",
     "description": "Disallow explicitly returning from tests",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jest_no-untyped-mock-factory",
-    "title": "Jest: No untyped mock factory",
-    "description": "Disallow using `jest.mock()` factories without an explicit type parameter",
     "timeToFix": 5
   },
   {
@@ -6648,7 +6641,7 @@
     "parameters": [],
     "patternId": "jest_valid-expect-in-promise",
     "title": "Jest: Valid expect in promise",
-    "description": "Require promises that have expectations in their chain to be valid",
+    "description": "Ensure promises that have expectations in their chain are valid",
     "timeToFix": 5
   },
   {
@@ -12867,6 +12860,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "ignoreImports",
+        "description": "ignoreImports"
+      }
+    ],
+    "patternId": "unicorn_import-index",
+    "title": "Unicorn: Import index",
+    "description": "Enforce importing index files with `.`.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "unicorn_import-style",
     "title": "Unicorn: Import style",
@@ -12898,7 +12903,7 @@
     "parameters": [],
     "patternId": "unicorn_no-array-for-each",
     "title": "Unicorn: No array for each",
-    "description": "Prefer `for…of` over the `forEach` method.",
+    "description": "Prefer `for…of` over `Array#forEach(…)`.",
     "timeToFix": 5
   },
   {
@@ -12929,13 +12934,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-await-expression-member",
-    "title": "Unicorn: No await expression member",
-    "description": "Disallow member access from await expression.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_no-console-spaces",
     "title": "Unicorn: No console spaces",
     "description": "Do not use leading/trailing space between `console.log` parameters.",
@@ -12946,13 +12944,6 @@
     "patternId": "unicorn_no-document-cookie",
     "title": "Unicorn: No document cookie",
     "description": "Do not use `document.cookie` directly.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-empty-file",
-    "title": "Unicorn: No empty file",
-    "description": "Disallow empty files.",
     "timeToFix": 5
   },
   {
@@ -12995,13 +12986,6 @@
     "patternId": "unicorn_no-lonely-if",
     "title": "Unicorn: No lonely if",
     "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-negated-condition",
-    "title": "Unicorn: No negated condition",
-    "description": "Disallow negated conditions.",
     "timeToFix": 5
   },
   {
@@ -13055,14 +13039,7 @@
     "parameters": [],
     "patternId": "unicorn_no-static-only-class",
     "title": "Unicorn: No static only class",
-    "description": "Disallow classes that only have static members.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-thenable",
-    "title": "Unicorn: No thenable",
-    "description": "Disallow `then` property.",
+    "description": "Forbid classes that only have static members.",
     "timeToFix": 5
   },
   {
@@ -13073,36 +13050,10 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "checkGlobalVariables",
-        "description": "checkGlobalVariables"
-      }
-    ],
-    "patternId": "unicorn_no-typeof-undefined",
-    "title": "Unicorn: No typeof undefined",
-    "description": "Disallow comparing `undefined` using `typeof`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-unnecessary-await",
-    "title": "Unicorn: No unnecessary await",
-    "description": "Disallow awaiting non-promise values.",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "unicorn_no-unreadable-array-destructuring",
     "title": "Unicorn: No unreadable array destructuring",
     "description": "Disallow unreadable array destructuring.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-unreadable-iife",
-    "title": "Unicorn: No unreadable iife",
-    "description": "Disallow unreadable IIFEs.",
     "timeToFix": 5
   },
   {
@@ -13123,7 +13074,7 @@
     "parameters": [],
     "patternId": "unicorn_no-useless-fallback-in-spread",
     "title": "Unicorn: No useless fallback in spread",
-    "description": "Disallow useless fallback when spreading in object literals.",
+    "description": "Forbid useless fallback when spreading in object literals.",
     "timeToFix": 5
   },
   {
@@ -13135,23 +13086,9 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-useless-promise-resolve-reject",
-    "title": "Unicorn: No useless promise resolve reject",
-    "description": "Disallow returning/yielding `Promise.resolve/reject()` in async functions or promise callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_no-useless-spread",
     "title": "Unicorn: No useless spread",
     "description": "Disallow unnecessary spread.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-useless-switch-case",
-    "title": "Unicorn: No useless switch case",
-    "description": "Disallow useless case in switch statements.",
     "timeToFix": 5
   },
   {
@@ -13195,15 +13132,10 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "checkFromLast",
-        "description": "checkFromLast"
-      }
-    ],
+    "parameters": [],
     "patternId": "unicorn_prefer-array-find",
     "title": "Unicorn: Prefer array find",
-    "description": "Prefer `.find(…)` and `.findLast(…)` over the first or last element from `.filter(…)`.",
+    "description": "Prefer `.find(…)` over the first element from `.filter(…)`.",
     "timeToFix": 5
   },
   {
@@ -13224,14 +13156,14 @@
     "parameters": [],
     "patternId": "unicorn_prefer-array-index-of",
     "title": "Unicorn: Prefer array index of",
-    "description": "Prefer `Array#{indexOf,lastIndexOf}()` over `Array#{findIndex,findLastIndex}()` when looking for the index of an item.",
+    "description": "Prefer `Array#indexOf()` over `Array#findIndex()` when looking for the index of an item.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "unicorn_prefer-array-some",
     "title": "Unicorn: Prefer array some",
-    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast}(…)`.",
+    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.find(…)`.",
     "timeToFix": 5
   },
   {
@@ -13244,13 +13176,6 @@
     "patternId": "unicorn_prefer-at",
     "title": "Unicorn: Prefer at",
     "description": "Prefer `.at()` method for index access and `String#charAt()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-code-point",
-    "title": "Unicorn: Prefer code point",
-    "description": "Prefer `String#codePointAt(…)` over `String#charCodeAt(…)` and `String.fromCodePoint(…)` over `String.fromCharCode(…)`.",
     "timeToFix": 5
   },
   {
@@ -13278,7 +13203,7 @@
     "parameters": [],
     "patternId": "unicorn_prefer-dom-node-dataset",
     "title": "Unicorn: Prefer dom node dataset",
-    "description": "Prefer using `.dataset` on DOM elements over calling attribute methods.",
+    "description": "Prefer using `.dataset` on DOM elements over `.setAttribute(…)`.",
     "timeToFix": 5
   },
   {
@@ -13297,25 +13222,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_prefer-event-target",
-    "title": "Unicorn: Prefer event target",
-    "description": "Prefer `EventTarget` over `EventEmitter`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreUsedVariables",
-        "description": "ignoreUsedVariables"
-      }
-    ],
-    "patternId": "unicorn_prefer-export-from",
-    "title": "Unicorn: Prefer export from",
-    "description": "Prefer `export…from` when re-exporting.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_prefer-includes",
     "title": "Unicorn: Prefer includes",
     "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
@@ -13323,23 +13229,9 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_prefer-json-parse-buffer",
-    "title": "Unicorn: Prefer json parse buffer",
-    "description": "Prefer reading a JSON file as a buffer.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_prefer-keyboard-event-key",
     "title": "Unicorn: Prefer keyboard event key",
     "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-logical-operator-over-ternary",
-    "title": "Unicorn: Prefer logical operator over ternary",
-    "description": "Prefer using a logical operator over a ternary.",
     "timeToFix": 5
   },
   {
@@ -13358,13 +13250,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_prefer-modern-math-apis",
-    "title": "Unicorn: Prefer modern math apis",
-    "description": "Prefer modern `Math` APIs over legacy patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_prefer-module",
     "title": "Unicorn: Prefer module",
     "description": "Prefer JavaScript modules (ESM) over CommonJS.",
@@ -13372,20 +13257,18 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_prefer-native-coercion-functions",
-    "title": "Unicorn: Prefer native coercion functions",
-    "description": "Prefer using `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` directly.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_prefer-negative-index",
     "title": "Unicorn: Prefer negative index",
-    "description": "Prefer negative index over `.length - index` when possible.",
+    "description": "Prefer negative index over `.length - index` for `{String,Array,TypedArray}#slice()`, `Array#splice()` and `Array#at()`.",
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "checkRequire",
+        "description": "checkRequire"
+      }
+    ],
     "patternId": "unicorn_prefer-node-protocol",
     "title": "Unicorn: Prefer node protocol",
     "description": "Prefer using the `node:` protocol when importing Node.js builtin modules.",
@@ -13408,6 +13291,13 @@
     "patternId": "unicorn_prefer-object-from-entries",
     "title": "Unicorn: Prefer object from entries",
     "description": "Prefer using `Object.fromEntries(…)` to transform a list of key-value pairs into an object.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-object-has-own",
+    "title": "Unicorn: Prefer object has own",
+    "description": "Prefer `Object.hasOwn(…)` over `Object.prototype.hasOwnProperty.call(…)`.",
     "timeToFix": 5
   },
   {
@@ -13454,16 +13344,9 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_prefer-set-size",
-    "title": "Unicorn: Prefer set size",
-    "description": "Prefer using `Set#size` instead of `Array#length`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_prefer-spread",
     "title": "Unicorn: Prefer spread",
-    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#{slice,toSpliced}()` and `String#split('')`.",
+    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#slice()` and `String#split('')`.",
     "timeToFix": 5
   },
   {
@@ -13540,13 +13423,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_relative-url-style",
-    "title": "Unicorn: Relative url style",
-    "description": "Enforce consistent relative URL style.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_require-array-join-separator",
     "title": "Unicorn: Require array join separator",
     "description": "Enforce using the separator argument with `Array#join()`.",
@@ -13575,13 +13451,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_switch-case-braces",
-    "title": "Unicorn: Switch case braces",
-    "description": "Enforce consistent brace style for `case` clauses.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_template-indent",
     "title": "Unicorn: Template indent",
     "description": "Fix whitespace-insensitive template indentation.",
@@ -13589,22 +13458,9 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_text-encoding-identifier-case",
-    "title": "Unicorn: Text encoding identifier case",
-    "description": "Enforce consistent case for text encoding identifiers.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_import-index",
-    "title": "Unicorn: Import index",
     "timeToFix": 5
   },
   {
@@ -13659,12 +13515,6 @@
     "parameters": [],
     "patternId": "unicorn_prefer-node-remove",
     "title": "Unicorn: Prefer node remove",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-object-has-own",
-    "title": "Unicorn: Prefer object has own",
     "timeToFix": 5
   },
   {
