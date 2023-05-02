@@ -1382,13 +1382,13 @@
   <module name="scanjs-rules_assign__to__protocol" />
   <module name="scanjs-rules_assign__to__search" />
   <module name="scanjs-rules_assign__to__src" />
-  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__addEventListener" />
   <module name="scanjs-rules_call__addEventListener__deviceproximity" />
   <module name="scanjs-rules_call__addEventListener__message" />
   <module name="scanjs-rules_call__connect" />
   <module name="scanjs-rules_call__eval" />
   <module name="scanjs-rules_call__execScript" />
+  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__hide" />
   <module name="scanjs-rules_call__open__remote=true" />
   <module name="scanjs-rules_call__parseFromString" />
@@ -1983,4 +1983,19 @@
   <module name="xss_no-mixed-html" />
   <module name="typescript-sort-keys_interface" />
   <module name="typescript-sort-keys_string-enum" />
+  <module name="vue-scoped-css_enforce-style-type" />
+  <module name="vue-scoped-css_no-deprecated-deep-combinator" />
+  <module name="vue-scoped-css_no-deprecated-v-enter-v-leave-class" />
+  <module name="vue-scoped-css_no-parent-of-v-global" />
+  <module name="vue-scoped-css_no-parsing-error" />
+  <module name="vue-scoped-css_no-unused-keyframes" />
+  <module name="vue-scoped-css_no-unused-selector" />
+  <module name="vue-scoped-css_require-scoped" />
+  <module name="vue-scoped-css_require-selector-used-inside" />
+  <module name="vue-scoped-css_require-v-deep-argument" />
+  <module name="vue-scoped-css_require-v-global-argument" />
+  <module name="vue-scoped-css_require-v-slotted-argument" />
+  <module name="vue-scoped-css_v-deep-pseudo-style" />
+  <module name="vue-scoped-css_v-global-pseudo-style" />
+  <module name="vue-scoped-css_v-slotted-pseudo-style" />
 </module>

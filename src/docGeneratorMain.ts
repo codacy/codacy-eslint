@@ -295,6 +295,13 @@ async function main() {
       "package-json"
   )
 
+  console.log("Generate eslint-plugin-vue-scoped-css description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
+      "vue-scoped-css"
+  )
+
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
