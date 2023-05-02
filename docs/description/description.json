@@ -15419,5 +15419,110 @@
     "title": "Typescript sort keys: String enum",
     "description": "Require string enum members to be sorted",
     "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_enforce-style-type",
+    "title": "Vue scoped css: Enforce style type",
+    "description": "Enforce the `<style>` tags to be plain or have the `scoped` or `module` attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-deprecated-deep-combinator",
+    "title": "Vue scoped css: No deprecated deep combinator",
+    "description": "Disallow using deprecated deep combinators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-deprecated-v-enter-v-leave-class",
+    "title": "Vue scoped css: No deprecated v enter v leave class",
+    "description": "Disallow v-enter and v-leave classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-parent-of-v-global",
+    "title": "Vue scoped css: No parent of v global",
+    "description": "Disallow parent selector for `::v-global` pseudo-element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-parsing-error",
+    "title": "Vue scoped css: No parsing error",
+    "description": "Disallow parsing errors in `<style>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-unused-keyframes",
+    "title": "Vue scoped css: No unused keyframes",
+    "description": "Disallow `@keyframes` which don't use in Scoped CSS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_no-unused-selector",
+    "title": "Vue scoped css: No unused selector",
+    "description": "Disallow selectors defined in Scoped CSS that don't use in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_require-scoped",
+    "title": "Vue scoped css: Require scoped",
+    "description": "Enforce the `<style>` tags to has the `scoped` attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_require-selector-used-inside",
+    "title": "Vue scoped css: Require selector used inside",
+    "description": "Disallow selectors defined that is not used inside `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_require-v-deep-argument",
+    "title": "Vue scoped css: Require v deep argument",
+    "description": "Require selector argument to be passed to `::v-deep()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_require-v-global-argument",
+    "title": "Vue scoped css: Require v global argument",
+    "description": "Require selector argument to be passed to `::v-global()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_require-v-slotted-argument",
+    "title": "Vue scoped css: Require v slotted argument",
+    "description": "Require selector argument to be passed to `::v-slotted()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_v-deep-pseudo-style",
+    "title": "Vue scoped css: V deep pseudo style",
+    "description": "Enforce `:deep()`/`::v-deep()` style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_v-global-pseudo-style",
+    "title": "Vue scoped css: V global pseudo style",
+    "description": "Enforce `:global()`/`::v-global()` style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue-scoped-css_v-slotted-pseudo-style",
+    "title": "Vue scoped css: V slotted pseudo style",
+    "description": "Enforce `:slotted()`/`::v-slotted()` style",
+    "timeToFix": 5
   }
 ]
