@@ -20,7 +20,7 @@ COPY --from=builder docs docs
 
 RUN npm install --legacy-peer-deps --production &&\
     # Removing this plugin because it gets loaded by prettier and forces a fixed order for imports
-    rm -rf /package.json /package-lock.json /node_modules/prettier-plugin-organize-imports &&\
+    # rm -rf /package.json /package-lock.json /node_modules/prettier-plugin-organize-imports &&\
     adduser -u 2004 -D docker &&\
     chown -R docker:docker /docs
 

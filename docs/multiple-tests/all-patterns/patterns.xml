@@ -816,6 +816,7 @@
   <module name="jest_require-hook" />
   <module name="jest_require-to-throw-message" />
   <module name="jest_require-top-level-describe" />
+  <module name="jest_unbound-method" />
   <module name="jest_valid-describe-callback" />
   <module name="jest_valid-expect-in-promise" />
   <module name="jest_valid-expect" />

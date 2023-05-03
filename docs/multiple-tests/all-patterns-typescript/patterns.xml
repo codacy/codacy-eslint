@@ -816,6 +816,7 @@
   <module name="jest_require-hook" />
   <module name="jest_require-to-throw-message" />
   <module name="jest_require-top-level-describe" />
+  <module name="jest_unbound-method" />
   <module name="jest_valid-describe-callback" />
   <module name="jest_valid-expect-in-promise" />
   <module name="jest_valid-expect" />
@@ -1432,7 +1433,6 @@
   <module name="@shopify_eslint-plugin_jsx-no-hardcoded-content" />
   <module name="@shopify_eslint-plugin_jsx-prefer-fragment-wrappers" />
   <module name="@shopify_eslint-plugin_no-ancestor-directory-import" />
-  <module name="@shopify_eslint-plugin_no-debugger" />
   <module name="@shopify_eslint-plugin_no-namespace-imports" />
   <module name="@shopify_eslint-plugin_no-useless-computed-properties" />
   <module name="@shopify_eslint-plugin_no-fully-static-classes" />
