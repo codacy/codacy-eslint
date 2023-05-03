@@ -10,18 +10,23 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
-    projects: ["./tsconfig.json"],
+    project: "tsconfig.json",
   },
   plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
   rules: {
     "simple-import-sort/imports": "error",
-    '@typescript-eslint/unbound-method': 'off'
+    '@typescript-eslint/unbound-method': 'error',
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"]
-    }
-  ]
+      files: ["src/**"],
+      plugins: ["jest"],
+      rules: {
+        '@typescript-eslint/unbound-method': 'off',
+        'jest/unbound-method': 'error',
+      },
+    },
+  ],
 }
