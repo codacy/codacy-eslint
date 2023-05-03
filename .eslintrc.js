@@ -19,4 +19,9 @@ module.exports = {
     "simple-import-sort/imports": "error",
     '@typescript-eslint/unbound-method': 'off'
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx']
+    }
+  ]
 }
