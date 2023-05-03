@@ -13,6 +13,7 @@
     <error source="@shopify_eslint-plugin_jsx-no-hardcoded-content" line="1" message="Definition for rule '@shopify/eslint-plugin/jsx-no-hardcoded-content' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_jsx-prefer-fragment-wrappers" line="1" message="Definition for rule '@shopify/eslint-plugin/jsx-prefer-fragment-wrappers' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_no-ancestor-directory-import" line="1" message="Definition for rule '@shopify/eslint-plugin/no-ancestor-directory-import' was not found." severity="info" />
+    <error source="@shopify_eslint-plugin_no-debugger" line="1" message="Definition for rule '@shopify/eslint-plugin/no-debugger' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_no-fully-static-classes" line="1" message="Definition for rule '@shopify/eslint-plugin/no-fully-static-classes' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_no-namespace-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/no-namespace-imports' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_no-useless-computed-properties" line="1" message="Definition for rule '@shopify/eslint-plugin/no-useless-computed-properties' was not found." severity="info" />
