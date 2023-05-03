@@ -111,8 +111,7 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/jest-community/eslint-plugin-jest/master/docs/rules/${pattern}.md`,
-    "jest",
-    false
+    "jest"
   )
 
   console.log("Generate lodash description files")
@@ -144,7 +143,8 @@ async function main() {
   )
 
   console.log("Generate node description files")
-  await docGenerator.downloadDocs((pattern) => {
+  await docGenerator.downloadDocs(
+    (pattern) => {
     const patternFoldered = pattern.split("_").join("/")
     return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
   }, "node")
@@ -220,7 +220,7 @@ async function main() {
     "unicorn",
     false
   )
-
+  
   console.log("Generate @salesforce/aura description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -295,7 +295,7 @@ async function main() {
       "package-json"
   )
 
-  console.log("Generate eslint-plugin-vue-scoped-css description files")
+  console.log("Generate vue-scoped-css description files")
   await docGenerator.downloadDocs(
       (pattern) =>
           `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
