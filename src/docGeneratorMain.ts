@@ -305,6 +305,20 @@ async function main() {
   )
 
 
+<<<<<<< HEAD
+  console.log("Generate vue-scoped-css description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
+      "vue-scoped-css"
+=======
+  console.log("Generate eslint-plugin-rxjs description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
+      "rxjs"
+>>>>>>> 8f055ffd (add rxjs plugin TS-346)
+  )
 
 }
 

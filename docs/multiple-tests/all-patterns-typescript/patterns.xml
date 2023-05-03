@@ -2047,6 +2047,14 @@
   <module name="vue_valid-v-show" />
   <module name="vue_valid-v-slot" />
   <module name="vue_valid-v-text" />
+  <module name="wdio_await-expect" />
+  <module name="wdio_no-debug" />
+  <module name="wdio_no-pause" />
+  <module name="xss_no-location-href-assign" />
+  <module name="xss_no-mixed-html" />
+  <module name="typescript-sort-keys_interface" />
+  <module name="typescript-sort-keys_string-enum" />
+<<<<<<< HEAD
   <module name="vue-scoped-css_enforce-style-type" />
   <module name="vue-scoped-css_no-deprecated-deep-combinator" />
   <module name="vue-scoped-css_no-deprecated-v-enter-v-leave-class" />
@@ -2069,4 +2077,47 @@
   <module name="xss_no-mixed-html" />
   <module name="typescript-sort-keys_interface" />
   <module name="typescript-sort-keys_string-enum" />
+=======
+  <module name="rxjs_ban-observables" />
+  <module name="rxjs_ban-operators" />
+  <module name="rxjs_finnish" />
+  <module name="rxjs_just" />
+  <module name="rxjs_macro" />
+  <module name="rxjs_no-async-subscribe" />
+  <module name="rxjs_no-compat" />
+  <module name="rxjs_no-connectable" />
+  <module name="rxjs_no-create" />
+  <module name="rxjs_no-cyclic-action" />
+  <module name="rxjs_no-explicit-generics" />
+  <module name="rxjs_no-exposed-subjects" />
+  <module name="rxjs_no-finnish" />
+  <module name="rxjs_no-ignored-error" />
+  <module name="rxjs_no-ignored-notifier" />
+  <module name="rxjs_no-ignored-observable" />
+  <module name="rxjs_no-ignored-replay-buffer" />
+  <module name="rxjs_no-ignored-subscribe" />
+  <module name="rxjs_no-ignored-subscription" />
+  <module name="rxjs_no-ignored-takewhile-value" />
+  <module name="rxjs_no-implicit-any-catch" />
+  <module name="rxjs_no-index" />
+  <module name="rxjs_no-internal" />
+  <module name="rxjs_no-nested-subscribe" />
+  <module name="rxjs_no-redundant-notify" />
+  <module name="rxjs_no-sharereplay" />
+  <module name="rxjs_no-subclass" />
+  <module name="rxjs_no-subject-unsubscribe" />
+  <module name="rxjs_no-subject-value" />
+  <module name="rxjs_no-subscribe-handlers" />
+  <module name="rxjs_no-tap" />
+  <module name="rxjs_no-topromise" />
+  <module name="rxjs_no-unbound-methods" />
+  <module name="rxjs_no-unsafe-catch" />
+  <module name="rxjs_no-unsafe-first" />
+  <module name="rxjs_no-unsafe-subject-next" />
+  <module name="rxjs_no-unsafe-switchmap" />
+  <module name="rxjs_no-unsafe-takeuntil" />
+  <module name="rxjs_prefer-observer" />
+  <module name="rxjs_suffix-subjects" />
+  <module name="rxjs_throw-error" />
+>>>>>>> 8f055ffd (add rxjs plugin TS-346)
 </module>
