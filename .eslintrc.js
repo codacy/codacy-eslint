@@ -4,8 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    "prettier",
-    'plugin:vue-scoped-css/vue3-recommended'
+    "prettier"
   ],
   globals: {
     Atomics: "readonly",
