@@ -206,6 +206,13 @@ async function main() {
     "vue"
   )
 
+  console.log("Generate vue-scoped-css description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
+    "vue-scoped-css"
+  )
+
   console.log("Generate xss description files")
   await docGenerator.downloadDocs(
     (pattern) =>
