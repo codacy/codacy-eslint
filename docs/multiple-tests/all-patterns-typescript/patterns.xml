@@ -1382,13 +1382,13 @@
   <module name="scanjs-rules_assign__to__protocol" />
   <module name="scanjs-rules_assign__to__search" />
   <module name="scanjs-rules_assign__to__src" />
-  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__addEventListener" />
   <module name="scanjs-rules_call__addEventListener__deviceproximity" />
   <module name="scanjs-rules_call__addEventListener__message" />
   <module name="scanjs-rules_call__connect" />
   <module name="scanjs-rules_call__eval" />
   <module name="scanjs-rules_call__execScript" />
+  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__hide" />
   <module name="scanjs-rules_call__open__remote=true" />
   <module name="scanjs-rules_call__parseFromString" />
@@ -1432,7 +1432,6 @@
   <module name="@shopify_eslint-plugin_jsx-no-hardcoded-content" />
   <module name="@shopify_eslint-plugin_jsx-prefer-fragment-wrappers" />
   <module name="@shopify_eslint-plugin_no-ancestor-directory-import" />
-  <module name="@shopify_eslint-plugin_no-debugger" />
   <module name="@shopify_eslint-plugin_no-namespace-imports" />
   <module name="@shopify_eslint-plugin_no-useless-computed-properties" />
   <module name="@shopify_eslint-plugin_no-fully-static-classes" />
@@ -1976,6 +1975,21 @@
   <module name="vue_valid-v-show" />
   <module name="vue_valid-v-slot" />
   <module name="vue_valid-v-text" />
+  <module name="vue-scoped-css_enforce-style-type" />
+  <module name="vue-scoped-css_no-deprecated-deep-combinator" />
+  <module name="vue-scoped-css_no-deprecated-v-enter-v-leave-class" />
+  <module name="vue-scoped-css_no-parent-of-v-global" />
+  <module name="vue-scoped-css_no-parsing-error" />
+  <module name="vue-scoped-css_no-unused-keyframes" />
+  <module name="vue-scoped-css_no-unused-selector" />
+  <module name="vue-scoped-css_require-scoped" />
+  <module name="vue-scoped-css_require-selector-used-inside" />
+  <module name="vue-scoped-css_require-v-deep-argument" />
+  <module name="vue-scoped-css_require-v-global-argument" />
+  <module name="vue-scoped-css_require-v-slotted-argument" />
+  <module name="vue-scoped-css_v-deep-pseudo-style" />
+  <module name="vue-scoped-css_v-global-pseudo-style" />
+  <module name="vue-scoped-css_v-slotted-pseudo-style" />
   <module name="wdio_await-expect" />
   <module name="wdio_no-debug" />
   <module name="wdio_no-pause" />

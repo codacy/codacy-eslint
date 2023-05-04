@@ -66,6 +66,7 @@ import { rules as standardRules } from "eslint-plugin-standard"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as vueRules } from "eslint-plugin-vue"
+import { rules as vueScopedCssRules } from "eslint-plugin-vue-scoped-css"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
@@ -145,9 +146,11 @@ const plugins = [
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
   ["vue", vueRules],
+  ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
+
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)
