@@ -12,21 +12,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
-    project: "tsconfig.json",
+    project: "tsconfig.json"
   },
-  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports", "jest"],
   rules: {
     "simple-import-sort/imports": "error",
-    '@typescript-eslint/unbound-method': 'error',
-  },
-  overrides: [
-    {
-      files: ["src/**"],
-      plugins: ["jest"],
-      rules: {
-        '@typescript-eslint/unbound-method': 'off',
-        'jest/unbound-method': 'error',
-      },
-    },
-  ],
+    '@typescript-eslint/unbound-method': "error",
+    "unused-imports/no-unused-imports-ts": "off",
+		"unused-imports/no-unused-vars": "off",
+    "jest/unbound-method": "off"
+  }
 }
