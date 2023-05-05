@@ -6625,13 +6625,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_unbound-method",
-    "title": "Jest: Unbound method",
-    "description": "Enforce unbound methods are called with their expected scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jest_valid-describe-callback",
     "title": "Jest: Valid describe callback",
     "description": "Enforce valid `describe()` callback",

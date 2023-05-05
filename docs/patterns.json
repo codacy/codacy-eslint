@@ -6800,13 +6800,6 @@
       "enabled": false
     },
     {
-      "patternId": "jest_unbound-method",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "jest_valid-describe-callback",
       "level": "Error",
       "category": "ErrorProne",
