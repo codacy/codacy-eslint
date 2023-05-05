@@ -1,5 +1,8 @@
 # Codacy ESLint
 
+
+
+
 ## Adding new plugins / configs
 
 1.  Install the package using npm:
