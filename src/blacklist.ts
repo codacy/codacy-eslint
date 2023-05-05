@@ -3,6 +3,7 @@ const blacklistRegexes: RegExp[] = [
   /node\/no-missing-require/,
   /promise\/no-native/,
   /ember\/no-restricted-property-modifications/,
+  /jest\/unbound-method/,
 ]
 
 const documentationBlacklistRegexes: RegExp[] = []
