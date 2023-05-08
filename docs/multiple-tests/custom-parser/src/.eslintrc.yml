@@ -74,12 +74,6 @@ rules:
     spaced-comment: error
     yoda: error
     babel/object-curly-spacing: [error, never]
-    babel/generator-star-spacing: error
-    babel/array-bracket-spacing: error
-    babel/arrow-parens: error
-    babel/no-await-in-loop: error
-    babel/func-params-comma-dangle: error
-    babel/flow-object-type: error
     react/display-name: error
     react/jsx-boolean-value: [error, always]
     react/jsx-closing-bracket-location: error
