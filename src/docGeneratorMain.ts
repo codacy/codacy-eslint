@@ -145,9 +145,18 @@ async function main() {
   console.log("Generate node description files")
   await docGenerator.downloadDocs(
     (pattern) => {
-    const patternFoldered = pattern.split("_").join("/")
-    return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
-  }, "node")
+      const patternFoldered = pattern.split("_").join("/")
+      return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
+    },
+    "node"
+  )
+
+  console.log("Generate package-json description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/zetlen/eslint-plugin-package-json/master/docs/rules/${pattern}.md`,
+      "package-json"
+  )
 
   console.log("Generate promise description files")
   await docGenerator.downloadDocs(
@@ -256,7 +265,7 @@ async function main() {
     "jsonc"
   )
 
-  console.log("Generate eslint-plugin-unused-imports description files")
+  console.log("Generate unused-imports description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/sweepline/eslint-plugin-unused-imports/master/docs/rules/${pattern}.md`,
@@ -264,7 +273,7 @@ async function main() {
     false
   )
 
-  console.log("Generate eslint-plugin-nuxt description files")
+  console.log("Generate nuxt description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
@@ -280,7 +289,7 @@ async function main() {
     false
   )
 
-  console.log("Generate eslint-plugin-i18next description files")
+  console.log("Generate i18next description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/edvardchen/eslint-plugin-i18next/next/docs/rules/${pattern}.md`,
@@ -288,26 +297,14 @@ async function main() {
     false
   )
 
-  console.log("Generate eslint-plugin-typescript-sort-keys description files")
+  console.log("Generate typescript-sort-keys description files")
   await docGenerator.downloadDocs(
       (pattern) =>
           `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/interface.md`,
       "typescript-sort-keys"
   )
 
-  console.log("Generate eslint-plugin-package-json description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/zetlen/eslint-plugin-package-json/master/docs/rules/${pattern}.md`,
-      "package-json"
-  )
 
-  console.log("Generate vue-scoped-css description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
-      "vue-scoped-css"
-  )
 
 }
 

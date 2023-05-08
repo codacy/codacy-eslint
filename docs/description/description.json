@@ -6632,13 +6632,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_unbound-method",
-    "title": "Jest: Unbound method",
-    "description": "Enforce unbound methods are called with their expected scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jest_valid-describe-callback",
     "title": "Jest: Valid describe callback",
     "description": "Enforce valid `describe()` callback",
@@ -6721,6 +6714,574 @@
     "parameters": [],
     "patternId": "jest-formatting_padding-around-all",
     "title": "Jest formatting: Padding around all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-access",
+    "title": "Jsdoc: Check access",
+    "description": "Checks that `@access` tags have a valid value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-alignment",
+    "title": "Jsdoc: Check alignment",
+    "description": "Reports invalid alignment of JSDoc block asterisks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInlineConfig",
+        "description": "allowInlineConfig"
+      },
+      {
+        "name": "captionRequired",
+        "description": "captionRequired"
+      },
+      {
+        "name": "checkDefaults",
+        "description": "checkDefaults"
+      },
+      {
+        "name": "checkEslintrc",
+        "description": "checkEslintrc"
+      },
+      {
+        "name": "checkParams",
+        "description": "checkParams"
+      },
+      {
+        "name": "checkProperties",
+        "description": "checkProperties"
+      },
+      {
+        "name": "noDefaultExampleRules",
+        "description": "noDefaultExampleRules"
+      },
+      {
+        "name": "paddedIndent",
+        "description": "paddedIndent"
+      },
+      {
+        "name": "reportUnusedDisableDirectives",
+        "description": "reportUnusedDisableDirectives"
+      }
+    ],
+    "patternId": "jsdoc_check-examples",
+    "title": "Jsdoc: Check examples",
+    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-indentation",
+    "title": "Jsdoc: Check indentation",
+    "description": "Reports invalid padding inside JSDoc blocks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "preserveMainDescriptionPostDelimiter",
+        "description": "preserveMainDescriptionPostDelimiter"
+      }
+    ],
+    "patternId": "jsdoc_check-line-alignment",
+    "title": "Jsdoc: Check line alignment",
+    "description": "Reports invalid alignment of JSDoc block lines.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-param-names",
+    "title": "Jsdoc: Check param names",
+    "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-property-names",
+    "title": "Jsdoc: Check property names",
+    "description": "Ensures that property names in JSDoc are not duplicated on the same block and that nested properties have defined roots.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-syntax",
+    "title": "Jsdoc: Check syntax",
+    "description": "Reports against syntax not valid for the mode (e.g., Google Closure Compiler in non-Closure mode).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-tag-names",
+    "title": "Jsdoc: Check tag names",
+    "description": "Reports invalid block tag names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-types",
+    "title": "Jsdoc: Check types",
+    "description": "Reports invalid types.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_check-values",
+    "title": "Jsdoc: Check values",
+    "description": "This rule checks the values for a handful of tags: `@version`, `@since`, `@license` and `@author`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_empty-tags",
+    "title": "Jsdoc: Empty tags",
+    "description": "Expects specific tags to be empty of any content.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_implements-on-classes",
+    "title": "Jsdoc: Implements on classes",
+    "description": "Reports an issue with any non-constructor function using `@implements`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_informative-docs",
+    "title": "Jsdoc: Informative docs",
+    "description": "This rule reports doc comments that only restate their attached name.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_match-description",
+    "title": "Jsdoc: Match description",
+    "description": "Enforces a regular expression pattern on descriptions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_match-name",
+    "title": "Jsdoc: Match name",
+    "description": "Reports the name portion of a JSDoc tag if matching or not matching a given regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_multiline-blocks",
+    "title": "Jsdoc: Multiline blocks",
+    "description": "Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_newline-after-description",
+    "title": "Jsdoc: Newline after description",
+    "description": "Enforces a consistent padding of the block description.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-bad-blocks",
+    "title": "Jsdoc: No bad blocks",
+    "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-blank-block-descriptions",
+    "title": "Jsdoc: No blank block descriptions",
+    "description": "Detects and removes extra lines of a blank block description",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-defaults",
+    "title": "Jsdoc: No defaults",
+    "description": "This rule reports defaults being used on the relevant portion of `@param` or `@default`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "contexts",
+        "description": "contexts"
+      }
+    ],
+    "patternId": "jsdoc_no-missing-syntax",
+    "title": "Jsdoc: No missing syntax",
+    "description": "Reports when certain comment structures are always expected.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-multi-asterisks",
+    "title": "Jsdoc: No multi asterisks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-restricted-syntax",
+    "title": "Jsdoc: No restricted syntax",
+    "description": "Reports when certain comment structures are present.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-types",
+    "title": "Jsdoc: No types",
+    "description": "This rule reports types being used on `@param` or `@returns`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_no-undefined-types",
+    "title": "Jsdoc: No undefined types",
+    "description": "Checks that types in jsdoc comments are defined.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-asterisk-prefix",
+    "title": "Jsdoc: Require asterisk prefix",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      }
+    ],
+    "patternId": "jsdoc_require-description",
+    "title": "Jsdoc: Require description",
+    "description": "Requires that all functions have a description.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-description-complete-sentence",
+    "title": "Jsdoc: Require description complete sentence",
+    "description": "Requires that block description, explicit `@description`, and `@param`/`@returns` tag descriptions are written in complete sentences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      },
+      {
+        "name": "enableFixer",
+        "description": "enableFixer"
+      },
+      {
+        "name": "exemptNoArguments",
+        "description": "exemptNoArguments"
+      }
+    ],
+    "patternId": "jsdoc_require-example",
+    "title": "Jsdoc: Require example",
+    "description": "Requires that all functions have examples.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-file-overview",
+    "title": "Jsdoc: Require file overview",
+    "description": "Checks that all files have one `@file`, `@fileoverview`, or `@overview` tag at the beginning of the file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-hyphen-before-param-description",
+    "title": "Jsdoc: Require hyphen before param description",
+    "description": "Requires a hyphen before the `@param` description.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      },
+      {
+        "name": "enableFixer",
+        "description": "enableFixer"
+      },
+      {
+        "name": "exemptEmptyConstructors",
+        "description": "exemptEmptyConstructors"
+      },
+      {
+        "name": "exemptEmptyFunctions",
+        "description": "exemptEmptyFunctions"
+      },
+      {
+        "name": "fixerMessage",
+        "description": "fixerMessage"
+      },
+      {
+        "name": "require",
+        "description": "require"
+      }
+    ],
+    "patternId": "jsdoc_require-jsdoc",
+    "title": "Jsdoc: Require jsdoc",
+    "description": "Require JSDoc comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "autoIncrementBase",
+        "description": "autoIncrementBase"
+      },
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkDestructured",
+        "description": "checkDestructured"
+      },
+      {
+        "name": "checkDestructuredRoots",
+        "description": "checkDestructuredRoots"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "checkRestProperty",
+        "description": "checkRestProperty"
+      },
+      {
+        "name": "checkSetters",
+        "description": "checkSetters"
+      }
+    ],
+    "patternId": "jsdoc_require-param",
+    "title": "Jsdoc: Require param",
+    "description": "Requires that all function parameters are documented.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-param-description",
+    "title": "Jsdoc: Require param description",
+    "description": "Requires that each `@param` tag has a `description` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-param-name",
+    "title": "Jsdoc: Require param name",
+    "description": "Requires that all function parameters have names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-param-type",
+    "title": "Jsdoc: Require param type",
+    "description": "Requires that each `@param` tag has a `type` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-property",
+    "title": "Jsdoc: Require property",
+    "description": "Requires that all `@typedef` and `@namespace` tags have `@property` when their type is a plain `object`, `Object`, or `PlainObject`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-property-description",
+    "title": "Jsdoc: Require property description",
+    "description": "Requires that each `@property` tag has a `description` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-property-name",
+    "title": "Jsdoc: Require property name",
+    "description": "Requires that all function `@property` tags have names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-property-type",
+    "title": "Jsdoc: Require property type",
+    "description": "Requires that each `@property` tag has a `type` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkConstructors",
+        "description": "checkConstructors"
+      },
+      {
+        "name": "checkGetters",
+        "description": "checkGetters"
+      },
+      {
+        "name": "forceRequireReturn",
+        "description": "forceRequireReturn"
+      },
+      {
+        "name": "forceReturnsWithAsync",
+        "description": "forceReturnsWithAsync"
+      }
+    ],
+    "patternId": "jsdoc_require-returns",
+    "title": "Jsdoc: Require returns",
+    "description": "Requires that returns are documented.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "exemptAsync",
+        "description": "exemptAsync"
+      },
+      {
+        "name": "reportMissingReturnForUndefinedTypes",
+        "description": "reportMissingReturnForUndefinedTypes"
+      }
+    ],
+    "patternId": "jsdoc_require-returns-check",
+    "title": "Jsdoc: Require returns check",
+    "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-returns-description",
+    "title": "Jsdoc: Require returns description",
+    "description": "Requires that the `@returns` tag has a `description` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-returns-type",
+    "title": "Jsdoc: Require returns type",
+    "description": "Requires that `@returns` tag has `type` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-throws",
+    "title": "Jsdoc: Require throws",
+    "description": "Requires that throw statements are documented.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "forceRequireNext",
+        "description": "forceRequireNext"
+      },
+      {
+        "name": "forceRequireYields",
+        "description": "forceRequireYields"
+      },
+      {
+        "name": "next",
+        "description": "next"
+      },
+      {
+        "name": "nextWithGeneratorTag",
+        "description": "nextWithGeneratorTag"
+      },
+      {
+        "name": "withGeneratorTag",
+        "description": "withGeneratorTag"
+      }
+    ],
+    "patternId": "jsdoc_require-yields",
+    "title": "Jsdoc: Require yields",
+    "description": "Requires yields are documented.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkGeneratorsOnly",
+        "description": "checkGeneratorsOnly"
+      },
+      {
+        "name": "next",
+        "description": "next"
+      }
+    ],
+    "patternId": "jsdoc_require-yields-check",
+    "title": "Jsdoc: Require yields check",
+    "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_sort-tags",
+    "title": "Jsdoc: Sort tags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_tag-lines",
+    "title": "Jsdoc: Tag lines",
+    "description": "Enforces lines (or no lines) between tags.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_text-escaping",
+    "title": "Jsdoc: Text escaping",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowEmptyNamepaths",
+        "description": "allowEmptyNamepaths"
+      }
+    ],
+    "patternId": "jsdoc_valid-types",
+    "title": "Jsdoc: Valid types",
+    "description": "Requires all types to be valid JSDoc or Closure compiler types without syntax errors.",
     "timeToFix": 5
   },
   {
@@ -13596,6 +14157,102 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_import-index",
+    "title": "Unicorn: Import index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-instanceof",
+    "title": "Unicorn: No array instanceof",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-fn-reference-in-iterator",
+    "title": "Unicorn: No fn reference in iterator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-reduce",
+    "title": "Unicorn: No reduce",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dataset",
+    "title": "Unicorn: Prefer dataset",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-event-key",
+    "title": "Unicorn: Prefer event key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-exponentiation-operator",
+    "title": "Unicorn: Prefer exponentiation operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-flat-map",
+    "title": "Unicorn: Prefer flat map",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-append",
+    "title": "Unicorn: Prefer node append",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-remove",
+    "title": "Unicorn: Prefer node remove",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-object-has-own",
+    "title": "Unicorn: Prefer object has own",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-replace-all",
+    "title": "Unicorn: Prefer replace all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-starts-ends-with",
+    "title": "Unicorn: Prefer starts ends with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-text-content",
+    "title": "Unicorn: Prefer text content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-trim-start-end",
+    "title": "Unicorn: Prefer trim start end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_regex-shorthand",
+    "title": "Unicorn: Regex shorthand",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unused-imports_no-unused-vars",
     "title": "Unused imports: No unused vars",
     "description": "Disallow unused variables",
@@ -15472,111 +16129,6 @@
     "patternId": "typescript-sort-keys_string-enum",
     "title": "Typescript sort keys: String enum",
     "description": "Require string enum members to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_enforce-style-type",
-    "title": "Vue scoped css: Enforce style type",
-    "description": "Enforce the `<style>` tags to be plain or have the `scoped` or `module` attribute",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-deprecated-deep-combinator",
-    "title": "Vue scoped css: No deprecated deep combinator",
-    "description": "Disallow using deprecated deep combinators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-deprecated-v-enter-v-leave-class",
-    "title": "Vue scoped css: No deprecated v enter v leave class",
-    "description": "Disallow v-enter and v-leave classes.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-parent-of-v-global",
-    "title": "Vue scoped css: No parent of v global",
-    "description": "Disallow parent selector for `::v-global` pseudo-element",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-parsing-error",
-    "title": "Vue scoped css: No parsing error",
-    "description": "Disallow parsing errors in `<style>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-unused-keyframes",
-    "title": "Vue scoped css: No unused keyframes",
-    "description": "Disallow `@keyframes` which don't use in Scoped CSS",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_no-unused-selector",
-    "title": "Vue scoped css: No unused selector",
-    "description": "Disallow selectors defined in Scoped CSS that don't use in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_require-scoped",
-    "title": "Vue scoped css: Require scoped",
-    "description": "Enforce the `<style>` tags to has the `scoped` attribute",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_require-selector-used-inside",
-    "title": "Vue scoped css: Require selector used inside",
-    "description": "Disallow selectors defined that is not used inside `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_require-v-deep-argument",
-    "title": "Vue scoped css: Require v deep argument",
-    "description": "Require selector argument to be passed to `::v-deep()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_require-v-global-argument",
-    "title": "Vue scoped css: Require v global argument",
-    "description": "Require selector argument to be passed to `::v-global()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_require-v-slotted-argument",
-    "title": "Vue scoped css: Require v slotted argument",
-    "description": "Require selector argument to be passed to `::v-slotted()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_v-deep-pseudo-style",
-    "title": "Vue scoped css: V deep pseudo style",
-    "description": "Enforce `:deep()`/`::v-deep()` style",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_v-global-pseudo-style",
-    "title": "Vue scoped css: V global pseudo style",
-    "description": "Enforce `:global()`/`::v-global()` style",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue-scoped-css_v-slotted-pseudo-style",
-    "title": "Vue scoped css: V slotted pseudo style",
-    "description": "Enforce `:slotted()`/`::v-slotted()` style",
     "timeToFix": 5
   }
 ]

@@ -29,6 +29,7 @@ import { rules as importRules } from "eslint-plugin-import"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
+import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
@@ -71,7 +72,6 @@ import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
-import { rules as vueScopedCssRules } from "eslint-plugin-vue-scoped-css"
 
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
@@ -103,9 +103,7 @@ const plugins = [
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-formatting", jestFormattingRules],
-  // jsdoc doesn't support ESLint 8 yet
-  // https://github.com/eslint/eslint/issues/14745
-  // ["jsdoc", jsdocRules],
+  ["jsdoc", jsdocRules],
   ["json", jsonRules],
   ["jsonc", jsoncRules],
   ["jsx-a11y", jsxA11yRules],
@@ -151,7 +149,6 @@ const plugins = [
   ["wdio", wdioRules],
   ["xss", xssRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
-  ["vue-scoped-css", vueScopedCssRules],
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)
