@@ -198,7 +198,7 @@ async function main() {
   console.log("Generate react description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/yannickcr/eslint-plugin-react/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/jsx-eslint/eslint-plugin-react/master/docs/rules/${pattern}.md`,
     "react"
   )
 
