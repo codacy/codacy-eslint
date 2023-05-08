@@ -32,7 +32,6 @@
     "meteor",
     "mocha",
     "mongodb",
-    "no-unsafe-innerhtml",
     "node",
     "promise",
     "react",
