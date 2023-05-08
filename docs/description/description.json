@@ -10091,13 +10091,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "react_jsx-sort-default-props",
-    "title": "React: Jsx sort default props",
-    "description": "Enforce defaultProps declarations alphabetical sorting",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "multiline",
@@ -10111,13 +10104,6 @@
     "patternId": "react_jsx-sort-props",
     "title": "React: Jsx sort props",
     "description": "Enforce props alphabetical sorting",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react_jsx-space-before-closing",
-    "title": "React: Jsx space before closing",
-    "description": "Enforce spacing before closing bracket in JSX",
     "timeToFix": 5
   },
   {
@@ -11163,13 +11149,6 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_finnish",
-    "title": "Rxjs: Finnish",
-    "description": "Enforces the use of Finnish notation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "rxjs_just",
     "title": "Rxjs: Just",
     "description": "Enforces the use of a `just` alias for `of`.",
@@ -11180,13 +11159,6 @@
     "patternId": "rxjs_macro",
     "title": "Rxjs: Macro",
     "description": "Enforces the use of the RxJS Tools Babel macro.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-async-subscribe",
-    "title": "Rxjs: No async subscribe",
-    "description": "Forbids passing `async` functions to `subscribe`.",
     "timeToFix": 5
   },
   {

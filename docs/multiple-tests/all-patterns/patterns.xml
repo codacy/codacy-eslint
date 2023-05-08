@@ -1266,9 +1266,7 @@
   <module name="react_jsx-fragments" />
   <module name="react_jsx-props-no-multi-spaces" />
   <module name="react_jsx-props-no-spreading" />
-  <module name="react_jsx-sort-default-props" />
   <module name="react_jsx-sort-props" />
-  <module name="react_jsx-space-before-closing" />
   <module name="react_jsx-tag-spacing" />
   <module name="react_jsx-uses-react" />
   <module name="react_jsx-uses-vars" />
@@ -1414,10 +1412,8 @@
   <module name="relay_hook-required-argument" />
   <module name="rxjs_ban-observables" />
   <module name="rxjs_ban-operators" />
-  <module name="rxjs_finnish" />
   <module name="rxjs_just" />
   <module name="rxjs_macro" />
-  <module name="rxjs_no-async-subscribe" />
   <module name="rxjs_no-compat" />
   <module name="rxjs_no-connectable" />
   <module name="rxjs_no-create" />

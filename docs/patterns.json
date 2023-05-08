@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.39.0",
+  "version": "8.40.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -10416,13 +10416,6 @@
       "enabled": false
     },
     {
-      "patternId": "react_jsx-sort-default-props",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "react_jsx-sort-props",
       "level": "Info",
       "category": "CodeStyle",
@@ -10436,13 +10429,6 @@
           "default": "auto"
         }
       ],
-      "enabled": false
-    },
-    {
-      "patternId": "react_jsx-space-before-closing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
       "enabled": false
     },
     {
@@ -11490,13 +11476,6 @@
       "enabled": false
     },
     {
-      "patternId": "rxjs_finnish",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "rxjs_just",
       "level": "Info",
       "category": "CodeStyle",
@@ -11505,13 +11484,6 @@
     },
     {
       "patternId": "rxjs_macro",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "rxjs_no-async-subscribe",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
