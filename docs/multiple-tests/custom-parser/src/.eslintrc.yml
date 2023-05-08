@@ -88,7 +88,6 @@ rules:
     react/jsx-no-duplicate-props: error
     react/jsx-no-undef: error
     react/jsx-pascal-case: error
-    react/jsx-space-before-closing: error
     react/jsx-uses-react: error
     react/jsx-uses-vars: error
     react/no-comment-textnodes: error
