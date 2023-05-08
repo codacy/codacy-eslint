@@ -131,6 +131,7 @@ const plugins = [
   ["redux-saga", reduxSagaRules],
   ["regexp", regexpRules],
   ["relay", relayRules],
+  ["rxjs", rxjsRules],
   ["@salesforce/aura", salesforceEslintPluginAuraRules],
   ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
@@ -143,14 +144,13 @@ const plugins = [
   ["standard", standardRules],
   ["storybook", storybookRules],
   ["@typescript-eslint", typescriptEslintRules],
+  ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
   ["vue", vueRules],
   ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
-  ["typescript-sort-keys", typescriptSortKeysRules],
-  ["vue-scoped-css", vueScopedCssRules],
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)

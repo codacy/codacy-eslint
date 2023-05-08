@@ -6883,13 +6883,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jsdoc_newline-after-description",
-    "title": "Jsdoc: Newline after description",
-    "description": "Enforces a consistent padding of the block description.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jsdoc_no-bad-blocks",
     "title": "Jsdoc: No bad blocks",
     "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
@@ -11156,6 +11149,293 @@
   },
   {
     "parameters": [],
+    "patternId": "rxjs_ban-observables",
+    "title": "Rxjs: Ban observables",
+    "description": "Forbids the use of banned observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_ban-operators",
+    "title": "Rxjs: Ban operators",
+    "description": "Forbids the use of banned operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_finnish",
+    "title": "Rxjs: Finnish",
+    "description": "Enforces the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_just",
+    "title": "Rxjs: Just",
+    "description": "Enforces the use of a `just` alias for `of`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_macro",
+    "title": "Rxjs: Macro",
+    "description": "Enforces the use of the RxJS Tools Babel macro.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-async-subscribe",
+    "title": "Rxjs: No async subscribe",
+    "description": "Forbids passing `async` functions to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-compat",
+    "title": "Rxjs: No compat",
+    "description": "Forbids importation from locations that depend upon `rxjs-compat`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-connectable",
+    "title": "Rxjs: No connectable",
+    "description": "Forbids operators that return connectable observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-create",
+    "title": "Rxjs: No create",
+    "description": "Forbids the calling of `Observable.create`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-cyclic-action",
+    "title": "Rxjs: No cyclic action",
+    "description": "Forbids effects and epics that re-emit filtered actions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-explicit-generics",
+    "title": "Rxjs: No explicit generics",
+    "description": "Forbids explicit generic type arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-exposed-subjects",
+    "title": "Rxjs: No exposed subjects",
+    "description": "Forbids exposed (i.e. non-private) subjects.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-finnish",
+    "title": "Rxjs: No finnish",
+    "description": "Forbids the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-error",
+    "title": "Rxjs: No ignored error",
+    "description": "Forbids the calling of `subscribe` without specifying an error handler.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-notifier",
+    "title": "Rxjs: No ignored notifier",
+    "description": "Forbids observables not composed from the `repeatWhen` or `retryWhen` notifier.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-observable",
+    "title": "Rxjs: No ignored observable",
+    "description": "Forbids the ignoring of observables returned by functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-replay-buffer",
+    "title": "Rxjs: No ignored replay buffer",
+    "description": "Forbids using `ReplaySubject`, `publishReplay` or `shareReplay` without specifying the buffer size.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscribe",
+    "title": "Rxjs: No ignored subscribe",
+    "description": "Forbids the calling of `subscribe` without specifying arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscription",
+    "title": "Rxjs: No ignored subscription",
+    "description": "Forbids ignoring the subscription returned by `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-takewhile-value",
+    "title": "Rxjs: No ignored takewhile value",
+    "description": "Forbids ignoring the value within `takeWhile`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-implicit-any-catch",
+    "title": "Rxjs: No implicit any catch",
+    "description": "Forbids implicit `any` error parameters in `catchError` operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-index",
+    "title": "Rxjs: No index",
+    "description": "Forbids the importation from index modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-internal",
+    "title": "Rxjs: No internal",
+    "description": "Forbids the importation of internals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-nested-subscribe",
+    "title": "Rxjs: No nested subscribe",
+    "description": "Forbids the calling of `subscribe` within a `subscribe` callback.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-redundant-notify",
+    "title": "Rxjs: No redundant notify",
+    "description": "Forbids redundant notifications from completed or errored observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-sharereplay",
+    "title": "Rxjs: No sharereplay",
+    "description": "Forbids using the `shareReplay` operator.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subclass",
+    "title": "Rxjs: No subclass",
+    "description": "Forbids subclassing RxJS classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-unsubscribe",
+    "title": "Rxjs: No subject unsubscribe",
+    "description": "Forbids calling the `unsubscribe` method of a subject instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-value",
+    "title": "Rxjs: No subject value",
+    "description": "Forbids accessing the `value` property of a `BehaviorSubject` instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subscribe-handlers",
+    "title": "Rxjs: No subscribe handlers",
+    "description": "Forbids the passing of handlers to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-tap",
+    "title": "Rxjs: No tap",
+    "description": "Forbids the use of the `tap` operator.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-topromise",
+    "title": "Rxjs: No topromise",
+    "description": "Forbids the use of the `toPromise` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unbound-methods",
+    "title": "Rxjs: No unbound methods",
+    "description": "Forbids the passing of unbound methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-catch",
+    "title": "Rxjs: No unsafe catch",
+    "description": "Forbids unsafe `catchError` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-first",
+    "title": "Rxjs: No unsafe first",
+    "description": "Forbids unsafe `first`/`take` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-subject-next",
+    "title": "Rxjs: No unsafe subject next",
+    "description": "Forbids unsafe optional `next` calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-switchmap",
+    "title": "Rxjs: No unsafe switchmap",
+    "description": "Forbids unsafe `switchMap` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-takeuntil",
+    "title": "Rxjs: No unsafe takeuntil",
+    "description": "Forbids the application of operators after `takeUntil`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_prefer-observer",
+    "title": "Rxjs: Prefer observer",
+    "description": "Forbids the passing separate handlers to `subscribe` and `tap`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_suffix-subjects",
+    "title": "Rxjs: Suffix subjects",
+    "description": "Enforces the use of a suffix in subject identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_throw-error",
+    "title": "Rxjs: Throw error",
+    "description": "Enforces the passing of `Error` values to error notifications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@salesforce_aura_aura-api",
     "title": "@salesforce: [Aura] Aura api",
     "description": "Validate Aura APIs",
@@ -13320,6 +13600,20 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "typescript-sort-keys_interface",
+    "title": "Typescript sort keys: Interface",
+    "description": "Require interface keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "typescript-sort-keys_string-enum",
+    "title": "Typescript sort keys: String enum",
+    "description": "Require string enum members to be sorted",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "sortCharacterClasses",
@@ -14157,102 +14451,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_import-index",
-    "title": "Unicorn: Import index",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-array-instanceof",
-    "title": "Unicorn: No array instanceof",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-fn-reference-in-iterator",
-    "title": "Unicorn: No fn reference in iterator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-reduce",
-    "title": "Unicorn: No reduce",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dataset",
-    "title": "Unicorn: Prefer dataset",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-event-key",
-    "title": "Unicorn: Prefer event key",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-exponentiation-operator",
-    "title": "Unicorn: Prefer exponentiation operator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-flat-map",
-    "title": "Unicorn: Prefer flat map",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-node-append",
-    "title": "Unicorn: Prefer node append",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-node-remove",
-    "title": "Unicorn: Prefer node remove",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-object-has-own",
-    "title": "Unicorn: Prefer object has own",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-replace-all",
-    "title": "Unicorn: Prefer replace all",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-starts-ends-with",
-    "title": "Unicorn: Prefer starts ends with",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-text-content",
-    "title": "Unicorn: Prefer text content",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-trim-start-end",
-    "title": "Unicorn: Prefer trim start end",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_regex-shorthand",
-    "title": "Unicorn: Regex shorthand",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unused-imports_no-unused-vars",
     "title": "Unused imports: No unused vars",
     "description": "Disallow unused variables",
@@ -14262,20 +14460,6 @@
     "parameters": [],
     "patternId": "unused-imports_no-unused-imports",
     "title": "Unused imports: No unused imports",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unused-imports_no-unused-vars-ts",
-    "title": "Unused imports: No unused vars ts",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unused-imports_no-unused-imports-ts",
-    "title": "Unused imports: No unused imports ts",
     "description": "Disallow unused variables",
     "timeToFix": 5
   },
@@ -15987,23 +16171,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_ban-observables",
-    "title": "Rxjs: Ban observables",
-    "description": "Forbids the use of banned observables.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_no-deprecated-deep-combinator",
     "title": "Vue scoped css: No deprecated deep combinator",
     "description": "Disallow using deprecated deep combinators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_ban-operators",
-    "title": "Rxjs: Ban operators",
-    "description": "Forbids the use of banned operators.",
     "timeToFix": 5
   },
   {
@@ -16015,23 +16185,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_finnish",
-    "title": "Rxjs: Finnish",
-    "description": "Enforces the use of Finnish notation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_no-parent-of-v-global",
     "title": "Vue scoped css: No parent of v global",
     "description": "Disallow parent selector for `::v-global` pseudo-element",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_just",
-    "title": "Rxjs: Just",
-    "description": "Enforces the use of a `just` alias for `of`.",
     "timeToFix": 5
   },
   {
@@ -16043,23 +16199,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_macro",
-    "title": "Rxjs: Macro",
-    "description": "Enforces the use of the RxJS Tools Babel macro.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_no-unused-keyframes",
     "title": "Vue scoped css: No unused keyframes",
     "description": "Disallow `@keyframes` which don't use in Scoped CSS",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-async-subscribe",
-    "title": "Rxjs: No async subscribe",
-    "description": "Forbids passing `async` functions to `subscribe`.",
     "timeToFix": 5
   },
   {
@@ -16071,23 +16213,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_no-compat",
-    "title": "Rxjs: No compat",
-    "description": "Forbids importation from locations that depend upon `rxjs-compat`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_require-scoped",
     "title": "Vue scoped css: Require scoped",
     "description": "Enforce the `<style>` tags to has the `scoped` attribute",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-connectable",
-    "title": "Rxjs: No connectable",
-    "description": "Forbids operators that return connectable observables.",
     "timeToFix": 5
   },
   {
@@ -16099,23 +16227,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_no-create",
-    "title": "Rxjs: No create",
-    "description": "Forbids the calling of `Observable.create`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_require-v-deep-argument",
     "title": "Vue scoped css: Require v deep argument",
     "description": "Require selector argument to be passed to `::v-deep()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-cyclic-action",
-    "title": "Rxjs: No cyclic action",
-    "description": "Forbids effects and epics that re-emit filtered actions.",
     "timeToFix": 5
   },
   {
@@ -16127,23 +16241,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_no-explicit-generics",
-    "title": "Rxjs: No explicit generics",
-    "description": "Forbids explicit generic type arguments.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_require-v-slotted-argument",
     "title": "Vue scoped css: Require v slotted argument",
     "description": "Require selector argument to be passed to `::v-slotted()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-exposed-subjects",
-    "title": "Rxjs: No exposed subjects",
-    "description": "Forbids exposed (i.e. non-private) subjects.",
     "timeToFix": 5
   },
   {
@@ -16155,13 +16255,6 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_no-finnish",
-    "title": "Rxjs: No finnish",
-    "description": "Forbids the use of Finnish notation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_v-global-pseudo-style",
     "title": "Vue scoped css: V global pseudo style",
     "description": "Enforce `:global()`/`::v-global()` style",
@@ -16169,198 +16262,9 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs_no-ignored-error",
-    "title": "Rxjs: No ignored error",
-    "description": "Forbids the calling of `subscribe` without specifying an error handler.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-notifier",
-    "title": "Rxjs: No ignored notifier",
-    "description": "Forbids observables not composed from the `repeatWhen` or `retryWhen` notifier.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-observable",
-    "title": "Rxjs: No ignored observable",
-    "description": "Forbids the ignoring of observables returned by functions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-replay-buffer",
-    "title": "Rxjs: No ignored replay buffer",
-    "description": "Forbids using `ReplaySubject`, `publishReplay` or `shareReplay` without specifying the buffer size.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-subscribe",
-    "title": "Rxjs: No ignored subscribe",
-    "description": "Forbids the calling of `subscribe` without specifying arguments.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-subscription",
-    "title": "Rxjs: No ignored subscription",
-    "description": "Forbids ignoring the subscription returned by `subscribe`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-ignored-takewhile-value",
-    "title": "Rxjs: No ignored takewhile value",
-    "description": "Forbids ignoring the value within `takeWhile`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-implicit-any-catch",
-    "title": "Rxjs: No implicit any catch",
-    "description": "Forbids implicit `any` error parameters in `catchError` operators.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-index",
-    "title": "Rxjs: No index",
-    "description": "Forbids the importation from index modules.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-internal",
-    "title": "Rxjs: No internal",
-    "description": "Forbids the importation of internals.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-nested-subscribe",
-    "title": "Rxjs: No nested subscribe",
-    "description": "Forbids the calling of `subscribe` within a `subscribe` callback.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-redundant-notify",
-    "title": "Rxjs: No redundant notify",
-    "description": "Forbids redundant notifications from completed or errored observables.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-sharereplay",
-    "title": "Rxjs: No sharereplay",
-    "description": "Forbids using the `shareReplay` operator.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-subclass",
-    "title": "Rxjs: No subclass",
-    "description": "Forbids subclassing RxJS classes.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-subject-unsubscribe",
-    "title": "Rxjs: No subject unsubscribe",
-    "description": "Forbids calling the `unsubscribe` method of a subject instance.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-subject-value",
-    "title": "Rxjs: No subject value",
-    "description": "Forbids accessing the `value` property of a `BehaviorSubject` instance.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-subscribe-handlers",
-    "title": "Rxjs: No subscribe handlers",
-    "description": "Forbids the passing of handlers to `subscribe`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-tap",
-    "title": "Rxjs: No tap",
-    "description": "Forbids the use of the `tap` operator.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-topromise",
-    "title": "Rxjs: No topromise",
-    "description": "Forbids the use of the `toPromise` method.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unbound-methods",
-    "title": "Rxjs: No unbound methods",
-    "description": "Forbids the passing of unbound methods.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unsafe-catch",
-    "title": "Rxjs: No unsafe catch",
-    "description": "Forbids unsafe `catchError` usage in effects and epics.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unsafe-first",
-    "title": "Rxjs: No unsafe first",
-    "description": "Forbids unsafe `first`/`take` usage in effects and epics.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unsafe-subject-next",
-    "title": "Rxjs: No unsafe subject next",
-    "description": "Forbids unsafe optional `next` calls.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unsafe-switchmap",
-    "title": "Rxjs: No unsafe switchmap",
-    "description": "Forbids unsafe `switchMap` usage in effects and epics.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_no-unsafe-takeuntil",
-    "title": "Rxjs: No unsafe takeuntil",
-    "description": "Forbids the application of operators after `takeUntil`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_prefer-observer",
-    "title": "Rxjs: Prefer observer",
-    "description": "Forbids the passing separate handlers to `subscribe` and `tap`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_suffix-subjects",
-    "title": "Rxjs: Suffix subjects",
-    "description": "Enforces the use of a suffix in subject identifiers.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs_throw-error",
-    "title": "Rxjs: Throw error",
-    "description": "Enforces the passing of `Error` values to error notifications.",
+    "patternId": "vue-scoped-css_v-slotted-pseudo-style",
+    "title": "Vue scoped css: V slotted pseudo style",
+    "description": "Enforce `:slotted()`/`::v-slotted()` style",
     "timeToFix": 5
   },
   {
@@ -16395,20 +16299,6 @@
     "parameters": [],
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "typescript-sort-keys_interface",
-    "title": "Typescript sort keys: Interface",
-    "description": "Require interface keys to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "typescript-sort-keys_string-enum",
-    "title": "Typescript sort keys: String enum",
-    "description": "Require string enum members to be sorted",
     "timeToFix": 5
   }
 ]

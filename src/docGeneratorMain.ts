@@ -92,6 +92,14 @@ async function main() {
     false
   )
 
+  console.log("Generate i18next description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/edvardchen/eslint-plugin-i18next/next/docs/rules/${pattern}.md`,
+    "i18next",
+    false
+  )
+
   console.log("Generate import description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -112,6 +120,20 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/jest-community/eslint-plugin-jest/master/docs/rules/${pattern}.md`,
     "jest"
+  )
+
+  console.log("Generate jsdoc description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/gajus/eslint-plugin-jsdoc/main/docs/rules/${pattern}.md`,
+    "jsdoc"
+  )
+
+  console.log("Generate jsonc description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
+    "jsonc"
   )
 
   console.log("Generate lodash description files")
@@ -149,6 +171,14 @@ async function main() {
       return `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/${patternFoldered}.md`
     },
     "node"
+  )
+
+  console.log("Generate nuxt description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
+    "nuxt",
+    false
   )
 
   console.log("Generate package-json description files")
@@ -193,6 +223,35 @@ async function main() {
     "regexp"
   )
 
+  console.log("Generate rxjs description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
+      "rxjs"
+  )
+
+  console.log("Generate @salesforce/aura description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
+    "@salesforce/aura"
+  )
+
+  console.log("Generate @salesforce/lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/lightning"
+  )
+
+  console.log("Generate @shopify_eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@shopify/eslint-plugin",
+    false
+  )
+
   console.log("Generate sonarjs description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -200,11 +259,41 @@ async function main() {
     "sonarjs"
   )
 
+  console.log("Generate storybook description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
+    "storybook"
+  )
+
   console.log("Generate typescript-eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
     "@typescript-eslint",
+    false
+  )
+
+  console.log("Generate typescript-sort-keys description files")
+  await docGenerator.downloadDocs(
+      (pattern) =>
+          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/${pattern}.md`,
+      "typescript-sort-keys"
+  )
+
+  console.log("Generate unicorn description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
+    "unicorn",
+    false
+  )
+
+  console.log("Generate unused-imports description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/sweepline/eslint-plugin-unused-imports/master/docs/rules/${pattern}.md`,
+    "unused-imports",
     false
   )
 
@@ -228,98 +317,7 @@ async function main() {
       `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
     "xss"
   )
-
-  console.log("Generate unicorn description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
-    "unicorn",
-    false
-  )
   
-  console.log("Generate @salesforce/aura description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
-    "@salesforce/aura"
-  )
-
-  console.log("Generate @salesforce/lightning description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
-    "@salesforce/lightning"
-  )
-
-  console.log("Generate storybook description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/${pattern}.md`,
-    "storybook"
-  )
-
-  console.log("Generate jsonc description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/ota-meshi/eslint-plugin-jsonc/master/docs/rules/${pattern}.md`,
-    "jsonc"
-  )
-
-  console.log("Generate unused-imports description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/sweepline/eslint-plugin-unused-imports/master/docs/rules/${pattern}.md`,
-    "unused-imports",
-    false
-  )
-
-  console.log("Generate nuxt description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/${pattern}.md`,
-    "nuxt",
-    false
-  )
-
-  console.log("Generate @shopify_eslint description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
-    false
-  )
-
-  console.log("Generate i18next description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/edvardchen/eslint-plugin-i18next/next/docs/rules/${pattern}.md`,
-    "i18next",
-    false
-  )
-
-  console.log("Generate typescript-sort-keys description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/interface.md`,
-      "typescript-sort-keys"
-  )
-
-
-<<<<<<< HEAD
-  console.log("Generate vue-scoped-css description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
-      "vue-scoped-css"
-=======
-  console.log("Generate eslint-plugin-rxjs description files")
-  await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
-      "rxjs"
->>>>>>> 8f055ffd (add rxjs plugin TS-346)
-  )
-
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {
