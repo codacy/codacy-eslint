@@ -1,11 +1,11 @@
 const blacklistRegexes: RegExp[] = [
   /import\/.+/,
   /node\/no-missing-require/,
-  /promise\/no-native/,
   /ember\/no-restricted-property-modifications/,
   /jest\/unbound-method/,
   /jsdoc\/newline-after-description/,
-  /unused-imports\/no-unused-.+-ts/,
+  /promise\/no-native/,
+  /rxjs\/finnish/,
   /unicorn\/import-index/,
   /unicorn\/no-array-instanceof/,
   /unicorn\/no-fn-reference-in-iterator/,
@@ -22,6 +22,7 @@ const blacklistRegexes: RegExp[] = [
   /unicorn\/prefer-text-content/,
   /unicorn\/prefer-trim-start-end/,
   /unicorn\/regex-shorthand/,
+  /unused-imports\/no-unused-.+-ts/,
 ]
 
 const documentationBlacklistRegexes: RegExp[] = []
