@@ -4,7 +4,6 @@ import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plu
 import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { Linter, Rule } from "eslint"
-import { rules as angularjsSecurityRules } from "eslint-plugin-angularjs-security-rules"
 import { rules as awscdkRules} from "eslint-plugin-awscdk"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
@@ -40,11 +39,9 @@ import { rules as mochaRules } from "eslint-plugin-mocha"
 import { rules as mongodbRules } from "eslint-plugin-mongodb"
 import { rules as monorepoRules } from "eslint-plugin-monorepo"
 import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
-import { rules as noUnsafeInnerhtmlRules } from "eslint-plugin-no-unsafe-innerhtml"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
 import { rules as nodeRules } from "eslint-plugin-node"
 import { rules as nuxtRules } from "eslint-plugin-nuxt"
-import { rules as packagejsonRules } from "eslint-plugin-package-json"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
@@ -79,7 +76,6 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["angular", angularRules],
   ["@angular-eslint", angularEslintRules],
-  ["angularjs-security-rules", angularjsSecurityRules],
   ["awscdk", awscdkRules],
   ["@babel", babelRules],
   ["backbone", backboneRules],
@@ -115,11 +111,9 @@ const plugins = [
   ["mongodb", mongodbRules],
   ["monorepo", monorepoRules],
   ["no-only-tests", noOnlyTestsRules],
-  ["no-unsafe-innerhtml", noUnsafeInnerhtmlRules],
   ["no-unsanitized", noUnsanitizedRules],
   ["node", nodeRules],
   ["nuxt", nuxtRules],
-  ["package-json", packagejsonRules],
   ["playwright", playwrightRules],
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],

@@ -3507,90 +3507,6 @@
   },
   {
     "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-element-methods",
-    "title": "Angularjs security rules: Detect angular element methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-open-redirect",
-    "title": "Angularjs security rules: Detect angular open redirect",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-orderBy-expressions",
-    "title": "Angularjs security rules: Detect angular orderBy expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-resource-loading",
-    "title": "Angularjs security rules: Detect angular resource loading",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-sce-disabled",
-    "title": "Angularjs security rules: Detect angular sce disabled",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-scope-expressions",
-    "title": "Angularjs security rules: Detect angular scope expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-service-expressions",
-    "title": "Angularjs security rules: Detect angular service expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAs-methods",
-    "title": "Angularjs security rules: Detect angular trustAs methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAsCss-method",
-    "title": "Angularjs security rules: Detect angular trustAsCss method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAsHtml-method",
-    "title": "Angularjs security rules: Detect angular trustAsHtml method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAsJs-method",
-    "title": "Angularjs security rules: Detect angular trustAsJs method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAsResourceUrl-method",
-    "title": "Angularjs security rules: Detect angular trustAsResourceUrl method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-angular-trustAsUrl-method",
-    "title": "Angularjs security rules: Detect angular trustAsUrl method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angularjs-security-rules_detect-third-party-angular-translate",
-    "title": "Angularjs security rules: Detect third party angular translate",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "awscdk_require-bucket-encryption",
     "title": "Awscdk: Require bucket encryption",
     "description": "Encryption should be enabled for all S3 buckets",
@@ -8847,12 +8763,6 @@
   },
   {
     "parameters": [],
-    "patternId": "no-unsafe-innerhtml_no-unsafe-innerhtml",
-    "title": "No unsafe innerhtml: No unsafe innerhtml",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "no-unsanitized_property",
     "title": "No unsanitized: Property",
     "description": "ESLint rule to disallow unsanitized property assignment",
@@ -9183,27 +9093,6 @@
     "patternId": "nuxt_require-func-head",
     "title": "Nuxt: Require func head",
     "description": "Enforce component's head property to be a function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "package-json_order-properties",
-    "title": "Package json: Order properties",
-    "description": "Package properties must be declared in standard order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "package-json_sort-collections",
-    "title": "Package json: Sort collections",
-    "description": "Dependencies, scripts, and configuration values must be declared in alphabetical order.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "package-json_valid-package-def",
-    "title": "Package json: Valid package def",
-    "description": "Enforce that package.json has all properties required by NPM spec",
     "timeToFix": 5
   },
   {
