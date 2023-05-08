@@ -17,6 +17,7 @@ const blacklistRegexes: RegExp[] = [
   /rxjs\/no-async-subscribe/,
   /rxjs\/no-connectable/,
   /rxjs\/.+/,
+  /shopify\/no-debugger/,
   /unicorn\/import-index/,
   /unicorn\/no-array-instanceof/,
   /unicorn\/no-fn-reference-in-iterator/,
