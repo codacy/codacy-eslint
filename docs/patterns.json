@@ -6828,6 +6828,13 @@
       "enabled": false
     },
     {
+      "patternId": "jsdoc_no-blank-blocks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsdoc_no-defaults",
       "level": "Info",
       "category": "CodeStyle",
