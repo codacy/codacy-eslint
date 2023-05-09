@@ -1399,7 +1399,6 @@
   <module name="@shopify_eslint-plugin_jsx-no-hardcoded-content" />
   <module name="@shopify_eslint-plugin_jsx-prefer-fragment-wrappers" />
   <module name="@shopify_eslint-plugin_no-ancestor-directory-import" />
-  <module name="@shopify_eslint-plugin_no-debugger" />
   <module name="@shopify_eslint-plugin_no-namespace-imports" />
   <module name="@shopify_eslint-plugin_no-useless-computed-properties" />
   <module name="@shopify_eslint-plugin_no-fully-static-classes" />
@@ -1671,6 +1670,7 @@
   <module name="unicorn_prefer-array-index-of" />
   <module name="unicorn_prefer-array-some" />
   <module name="unicorn_prefer-at" />
+  <module name="unicorn_prefer-blob-reading-methods" />
   <module name="unicorn_prefer-code-point" />
   <module name="unicorn_prefer-date-now" />
   <module name="unicorn_prefer-default-parameters" />

@@ -11416,13 +11416,6 @@
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-debugger",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
       "patternId": "@shopify_eslint-plugin_no-namespace-imports",
       "level": "Info",
       "category": "CodeStyle",
@@ -13606,6 +13599,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-blob-reading-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {

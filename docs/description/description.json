@@ -11059,13 +11059,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-debugger",
-    "title": "@shopify: [Eslint plugin] No debugger",
-    "description": "Disallow the use of `debugger`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@shopify_eslint-plugin_no-namespace-imports",
     "title": "@shopify: [Eslint plugin] No namespace imports",
     "description": "Prevent namespace import declarations.",
@@ -13237,6 +13230,13 @@
     "patternId": "unicorn_prefer-at",
     "title": "Unicorn: Prefer at",
     "description": "Prefer `.at()` method for index access and `String#charAt()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-blob-reading-methods",
+    "title": "Unicorn: Prefer blob reading methods",
+    "description": "Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and `Blob#text()` over `FileReader#readAsText(…)`.",
     "timeToFix": 5
   },
   {
