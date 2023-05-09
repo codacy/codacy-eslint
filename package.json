@@ -92,7 +92,7 @@
     "@nrwl/linter": "^16.1.2",
     "@nrwl/nest": "^16.1.2",
     "@nrwl/next": "^16.1.2",
-    "@nrwl/node": "^16.1.2",
+    "@nrwl/node": "^16.1.3",
     "@nrwl/nx-cloud": "^16.0.5",
     "@nrwl/react": "^16.1.2",
     "@nrwl/storybook": "^16.1.2",
