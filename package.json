@@ -79,7 +79,7 @@
     "@emotion/eslint-plugin": "^11.10.0",
     "@finsit/eslint-plugin-cypress": "^3.1.1",
     "@formatjs/icu-messageformat-parser": "^2.4.0",
-    "@hapi/eslint-plugin-hapi": "^4.3.6",
+    "@hapi/eslint-plugin": "^6.0.0",
     "@lwc/eslint-plugin-lwc": "^1.6.2",
     "@next/eslint-plugin-next": "^13.3.0",
     "@nodelib/fs.walk": "^1.2.8",
