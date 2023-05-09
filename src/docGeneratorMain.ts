@@ -331,7 +331,14 @@ async function main() {
       `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
     "xss"
   )
-  
+
+  console.log("Generate yml description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/ota-meshi/eslint-plugin-yml/master/docs/rules/${pattern}.md`,
+    "yml"
+  )
+
 }
 
 function writeJsonFile(file: string, json: any): Promise<void> {

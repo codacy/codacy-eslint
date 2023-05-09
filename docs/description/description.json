@@ -15438,5 +15438,231 @@
     "patternId": "xss_no-mixed-html",
     "title": "Xss: No mixed html",
     "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_block-mapping-colon-indicator-newline",
+    "title": "Yml: Block mapping colon indicator newline",
+    "description": "Enforce consistent line breaks after `:` indicator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_block-mapping-question-indicator-newline",
+    "title": "Yml: Block mapping question indicator newline",
+    "description": "Enforce consistent line breaks after `?` indicator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_block-mapping",
+    "title": "Yml: Block mapping",
+    "description": "Require or disallow block style mappings.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_block-sequence-hyphen-indicator-newline",
+    "title": "Yml: Block sequence hyphen indicator newline",
+    "description": "Enforce consistent line breaks after `-` indicator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_block-sequence",
+    "title": "Yml: Block sequence",
+    "description": "Require or disallow block style sequences.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_file-extension",
+    "title": "Yml: File extension",
+    "description": "Enforce YAML file extension",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_flow-mapping-curly-newline",
+    "title": "Yml: Flow mapping curly newline",
+    "description": "Enforce consistent line breaks inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_flow-mapping-curly-spacing",
+    "title": "Yml: Flow mapping curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_flow-sequence-bracket-newline",
+    "title": "Yml: Flow sequence bracket newline",
+    "description": "Enforce linebreaks after opening and before closing flow sequence brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_flow-sequence-bracket-spacing",
+    "title": "Yml: Flow sequence bracket spacing",
+    "description": "Enforce consistent spacing inside flow sequence brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_indent",
+    "title": "Yml: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "camelCase",
+        "description": "camelCase"
+      },
+      {
+        "name": "PascalCase",
+        "description": "PascalCase"
+      },
+      {
+        "name": "SCREAMING_SNAKE_CASE",
+        "description": "SCREAMING_SNAKE_CASE"
+      },
+      {
+        "name": "kebab-case",
+        "description": "kebab-case"
+      },
+      {
+        "name": "snake_case",
+        "description": "snake_case"
+      }
+    ],
+    "patternId": "yml_key-name-casing",
+    "title": "Yml: Key name casing",
+    "description": "Enforce naming convention to key names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_key-spacing",
+    "title": "Yml: Key spacing",
+    "description": "Enforce consistent spacing between keys and values in mapping pairs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-empty-document",
+    "title": "Yml: No empty document",
+    "description": "Disallow empty document",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-empty-key",
+    "title": "Yml: No empty key",
+    "description": "Disallow empty mapping keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-empty-mapping-value",
+    "title": "Yml: No empty mapping value",
+    "description": "Disallow empty mapping values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-empty-sequence-entry",
+    "title": "Yml: No empty sequence entry",
+    "description": "Disallow empty sequence entries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "skipComments",
+        "description": "skipComments"
+      },
+      {
+        "name": "skipQuotedScalars",
+        "description": "skipQuotedScalars"
+      }
+    ],
+    "patternId": "yml_no-irregular-whitespace",
+    "title": "Yml: No irregular whitespace",
+    "description": "Disallow irregular whitespace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-multiple-empty-lines",
+    "title": "Yml: No multiple empty lines",
+    "description": "Disallow multiple empty lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-tab-indent",
+    "title": "Yml: No tab indent",
+    "description": "Disallow tabs for indentation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_no-trailing-zeros",
+    "title": "Yml: No trailing zeros",
+    "description": "Disallow trailing zeros for floats",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_plain-scalar",
+    "title": "Yml: Plain scalar",
+    "description": "Require or disallow plain style scalar.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_quotes",
+    "title": "Yml: Quotes",
+    "description": "Enforce the consistent use of either double, or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_require-string-key",
+    "title": "Yml: Require string key",
+    "description": "Disallow mapping keys other than strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_sort-keys",
+    "title": "Yml: Sort keys",
+    "description": "Require mapping keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_sort-sequence-values",
+    "title": "Yml: Sort sequence values",
+    "description": "Require sequence values to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_spaced-comment",
+    "title": "Yml: Spaced comment",
+    "description": "Enforce consistent spacing after the `#` in a comment",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_vue-custom-block_no-parsing-error",
+    "title": "Yml: [Vue custom block] No parsing error",
+    "description": "Disallow parsing errors in Vue custom blocks",
+    "timeToFix": 5
   }
 ]
