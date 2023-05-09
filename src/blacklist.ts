@@ -37,6 +37,7 @@ const blacklistRegexes: RegExp[] = [
   /unicorn\/prefer-trim-start-end/,
   /unicorn\/regex-shorthand/,
   /unused-imports\/no-unused-.+-ts/,
+  /yml\/sort-sequence-values/
 ]
 
 const documentationBlacklistRegexes: RegExp[] = []

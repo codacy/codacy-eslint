@@ -59,13 +59,14 @@ import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as storybookRules } from "eslint-plugin-storybook"
+import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
+import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
 import { rules as vueRules } from "eslint-plugin-vue"
 import { rules as vueScopedCssRules } from "eslint-plugin-vue-scoped-css"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
-import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
-import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
+import { rules as ymlRules } from "eslint-plugin-yml"
 
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
@@ -137,6 +138,7 @@ const plugins = [
   ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
+  ["yml", ymlRules]
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)
