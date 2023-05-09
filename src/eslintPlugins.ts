@@ -4,8 +4,6 @@ import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plu
 import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { Linter, Rule } from "eslint"
-import { rules as angularjsSecurityRules } from "eslint-plugin-angularjs-security-rules"
-import { rules as awscdkRules} from "eslint-plugin-awscdk"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
@@ -20,8 +18,6 @@ import { rules as esRules } from "eslint-plugin-es"
 import { rules as filenamesRules } from "eslint-plugin-filenames"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
-import { rules as graphqlFragmentsRules } from "eslint-plugin-graphql-fragments"
-import { rules as hapiRules } from "eslint-plugin-hapi"
 import { rules as htmlRules } from "eslint-plugin-html"
 import { rules as i18nJsonRules } from "eslint-plugin-i18n-json"
 import { rules as i18nextRules } from "eslint-plugin-i18next"
@@ -29,6 +25,7 @@ import { rules as importRules } from "eslint-plugin-import"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
+import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
@@ -39,11 +36,9 @@ import { rules as mochaRules } from "eslint-plugin-mocha"
 import { rules as mongodbRules } from "eslint-plugin-mongodb"
 import { rules as monorepoRules } from "eslint-plugin-monorepo"
 import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
-import { rules as noUnsafeInnerhtmlRules } from "eslint-plugin-no-unsafe-innerhtml"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
 import { rules as nodeRules } from "eslint-plugin-node"
 import { rules as nuxtRules } from "eslint-plugin-nuxt"
-import { rules as packagejsonRules } from "eslint-plugin-package-json"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
@@ -55,6 +50,7 @@ import { rules as reactNativeRules } from "eslint-plugin-react-native"
 import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
 import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
+import { rules as rxjsRules } from "eslint-plugin-rxjs"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -62,7 +58,6 @@ import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
-import { rules as standardRules } from "eslint-plugin-standard"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as vueRules } from "eslint-plugin-vue"
@@ -77,8 +72,6 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["angular", angularRules],
   ["@angular-eslint", angularEslintRules],
-  ["angularjs-security-rules", angularjsSecurityRules],
-  ["awscdk", awscdkRules],
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
@@ -93,8 +86,6 @@ const plugins = [
   ["filenames", filenamesRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
-  ["graphql-fragments", graphqlFragmentsRules],
-  ["hapi", hapiRules],
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],
@@ -102,9 +93,7 @@ const plugins = [
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-formatting", jestFormattingRules],
-  // jsdoc doesn't support ESLint 8 yet
-  // https://github.com/eslint/eslint/issues/14745
-  // ["jsdoc", jsdocRules],
+  ["jsdoc", jsdocRules],
   ["json", jsonRules],
   ["jsonc", jsoncRules],
   ["jsx-a11y", jsxA11yRules],
@@ -115,11 +104,9 @@ const plugins = [
   ["mongodb", mongodbRules],
   ["monorepo", monorepoRules],
   ["no-only-tests", noOnlyTestsRules],
-  ["no-unsafe-innerhtml", noUnsafeInnerhtmlRules],
   ["no-unsanitized", noUnsanitizedRules],
   ["node", nodeRules],
   ["nuxt", nuxtRules],
-  ["package-json", packagejsonRules],
   ["playwright", playwrightRules],
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],
@@ -131,6 +118,7 @@ const plugins = [
   ["redux-saga", reduxSagaRules],
   ["regexp", regexpRules],
   ["relay", relayRules],
+  ["rxjs", rxjsRules],
   ["@salesforce/aura", salesforceEslintPluginAuraRules],
   ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
@@ -140,17 +128,15 @@ const plugins = [
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
   ["spellcheck", spellcheckRules],
-  ["standard", standardRules],
   ["storybook", storybookRules],
   ["@typescript-eslint", typescriptEslintRules],
+  ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
   ["vue", vueRules],
   ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
-  ["typescript-sort-keys", typescriptSortKeysRules],
-
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)
