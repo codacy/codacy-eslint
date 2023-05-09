@@ -3342,13 +3342,6 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_contextual-decorator",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@angular-eslint_component-class-suffix",
       "level": "Info",
       "category": "CodeStyle",
@@ -3364,6 +3357,13 @@
     },
     {
       "patternId": "@angular-eslint_component-selector",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@angular-eslint_contextual-decorator",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3399,6 +3399,13 @@
     },
     {
       "patternId": "@angular-eslint_no-conflicting-lifecycle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@angular-eslint_no-empty-lifecycle-method",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3494,7 +3501,7 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_no-empty-lifecycle-method",
+      "patternId": "@angular-eslint_pipe-prefix",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3563,13 +3570,6 @@
     },
     {
       "patternId": "@angular-eslint_use-pipe-transform-interface",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@angular-eslint_pipe-prefix",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -16011,13 +16011,6 @@
     },
     {
       "patternId": "yml_sort-keys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "yml_sort-sequence-values",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

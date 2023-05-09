@@ -352,15 +352,16 @@
   <module name="angular_value-name" />
   <module name="angular_watchers-execution" />
   <module name="angular_window-service" />
-  <module name="@angular-eslint_contextual-decorator" />
   <module name="@angular-eslint_component-class-suffix" />
   <module name="@angular-eslint_component-max-inline-declarations" />
   <module name="@angular-eslint_component-selector" />
+  <module name="@angular-eslint_contextual-decorator" />
   <module name="@angular-eslint_contextual-lifecycle" />
   <module name="@angular-eslint_directive-class-suffix" />
   <module name="@angular-eslint_directive-selector" />
   <module name="@angular-eslint_no-attribute-decorator" />
   <module name="@angular-eslint_no-conflicting-lifecycle" />
+  <module name="@angular-eslint_no-empty-lifecycle-method" />
   <module name="@angular-eslint_no-forward-ref" />
   <module name="@angular-eslint_no-host-metadata-property" />
   <module name="@angular-eslint_no-input-prefix" />
@@ -373,7 +374,7 @@
   <module name="@angular-eslint_no-outputs-metadata-property" />
   <module name="@angular-eslint_no-pipe-impure" />
   <module name="@angular-eslint_no-queries-metadata-property" />
-  <module name="@angular-eslint_no-empty-lifecycle-method" />
+  <module name="@angular-eslint_pipe-prefix" />
   <module name="@angular-eslint_prefer-on-push-component-change-detection" />
   <module name="@angular-eslint_prefer-output-readonly" />
   <module name="@angular-eslint_relative-url-prefix" />
@@ -383,7 +384,6 @@
   <module name="@angular-eslint_use-injectable-provided-in" />
   <module name="@angular-eslint_use-lifecycle-interface" />
   <module name="@angular-eslint_use-pipe-transform-interface" />
-  <module name="@angular-eslint_pipe-prefix" />
   <module name="@babel_new-cap" />
   <module name="@babel_no-invalid-this" />
   <module name="@babel_no-unused-expressions" />
@@ -1987,7 +1987,6 @@
   <module name="yml_quotes" />
   <module name="yml_require-string-key" />
   <module name="yml_sort-keys" />
-  <module name="yml_sort-sequence-values" />
   <module name="yml_spaced-comment" />
   <module name="yml_vue-custom-block_no-parsing-error" />
 </module>

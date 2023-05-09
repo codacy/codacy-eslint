@@ -3273,13 +3273,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_contextual-decorator",
-    "title": "@angular eslint: Contextual decorator",
-    "description": "Ensures that classes use contextual decorators in its body",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@angular-eslint_component-class-suffix",
     "title": "@angular eslint: Component class suffix",
     "description": "Classes decorated with @Component must have suffix \"Component\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
@@ -3297,6 +3290,13 @@
     "patternId": "@angular-eslint_component-selector",
     "title": "@angular eslint: Component selector",
     "description": "Component selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-07, https://angular.io/guide/styleguide#style-05-02\n      and https://angular.io/guide/styleguide#style-05-03.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_contextual-decorator",
+    "title": "@angular eslint: Contextual decorator",
+    "description": "Ensures that classes use contextual decorators in its body",
     "timeToFix": 5
   },
   {
@@ -3332,6 +3332,13 @@
     "patternId": "@angular-eslint_no-conflicting-lifecycle",
     "title": "@angular eslint: No conflicting lifecycle",
     "description": "Ensures that directives not implement conflicting lifecycle interfaces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-empty-lifecycle-method",
+    "title": "@angular eslint: No empty lifecycle method",
+    "description": "Disallows declaring empty lifecycle methods",
     "timeToFix": 5
   },
   {
@@ -3425,9 +3432,9 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_no-empty-lifecycle-method",
-    "title": "@angular eslint: No empty lifecycle method",
-    "description": "Disallows declaring empty lifecycle methods",
+    "patternId": "@angular-eslint_pipe-prefix",
+    "title": "@angular eslint: Pipe prefix",
+    "description": "Enforce consistent prefix for pipes.",
     "timeToFix": 5
   },
   {
@@ -3496,13 +3503,6 @@
     "patternId": "@angular-eslint_use-pipe-transform-interface",
     "title": "@angular eslint: Use pipe transform interface",
     "description": "Ensures that `Pipes` implement `PipeTransform` interface",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_pipe-prefix",
-    "title": "@angular eslint: Pipe prefix",
-    "description": "Enforce consistent prefix for pipes.",
     "timeToFix": 5
   },
   {
@@ -15642,13 +15642,6 @@
     "patternId": "yml_sort-keys",
     "title": "Yml: Sort keys",
     "description": "Require mapping keys to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yml_sort-sequence-values",
-    "title": "Yml: Sort sequence values",
-    "description": "Require sequence values to be sorted",
     "timeToFix": 5
   },
   {
