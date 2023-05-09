@@ -1670,6 +1670,7 @@
   <module name="unicorn_prefer-array-index-of" />
   <module name="unicorn_prefer-array-some" />
   <module name="unicorn_prefer-at" />
+  <module name="unicorn_prefer-blob-reading-methods" />
   <module name="unicorn_prefer-code-point" />
   <module name="unicorn_prefer-date-now" />
   <module name="unicorn_prefer-default-parameters" />

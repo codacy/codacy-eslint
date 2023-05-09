@@ -13602,6 +13602,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_prefer-blob-reading-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_prefer-code-point",
       "level": "Info",
       "category": "CodeStyle",

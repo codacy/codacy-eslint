@@ -13234,6 +13234,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_prefer-blob-reading-methods",
+    "title": "Unicorn: Prefer blob reading methods",
+    "description": "Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and `Blob#text()` over `FileReader#readAsText(…)`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_prefer-code-point",
     "title": "Unicorn: Prefer code point",
     "description": "Prefer `String#codePointAt(…)` over `String#charCodeAt(…)` and `String.fromCodePoint(…)` over `String.fromCharCode(…)`.",
