@@ -11059,6 +11059,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@shopify_eslint-plugin_no-debugger",
+    "title": "@shopify: [Eslint plugin] No debugger",
+    "description": "Disallow the use of `debugger`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@shopify_eslint-plugin_no-namespace-imports",
     "title": "@shopify: [Eslint plugin] No namespace imports",
     "description": "Prevent namespace import declarations.",

@@ -11416,6 +11416,13 @@
       "enabled": false
     },
     {
+      "patternId": "@shopify_eslint-plugin_no-debugger",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "@shopify_eslint-plugin_no-namespace-imports",
       "level": "Info",
       "category": "CodeStyle",
