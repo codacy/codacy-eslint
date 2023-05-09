@@ -8,6 +8,7 @@ const baseParserOptions = {
 const typescriptConfigs: string[] = [
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
+  "plugin:node/recommended"
 ]
 
 export const defaultOptions: ESLint.Options = {
@@ -58,7 +59,7 @@ export const defaultOptions: ESLint.Options = {
     ],
     settings: {
       "node": {
-        "tryExtensions": [".js", ".json", ".node", ".ts"]
+        "tryExtensions": [".js", ".json", ".node"]
       },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"],
