@@ -136,10 +136,17 @@ async function main() {
     "jsonc"
   )
 
+  console.log("Generate jsx-a11y description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/jsx-eslint/eslint-plugin-jsx-a11y/main/docs/rules/${pattern}.md`,
+    "jsx-a11y"
+  )
+
   console.log("Generate lodash description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/wix/eslint-plugin-lodash/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/wix-incubator/eslint-plugin-lodash/master/docs/rules/${pattern}.md`,
     "lodash"
   )
 
@@ -309,6 +316,13 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/${pattern}.md`,
     "vue-scoped-css"
+  )
+
+  console.log("Generate wdio description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/webdriverio/webdriverio/main/packages/eslint-plugin-wdio/docs/rules/${pattern}.md`,
+    "wdio"
   )
 
   console.log("Generate xss description files")

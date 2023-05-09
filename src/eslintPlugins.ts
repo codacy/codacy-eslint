@@ -4,7 +4,6 @@ import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plu
 import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { Linter, Rule } from "eslint"
-import { rules as awscdkRules} from "eslint-plugin-awscdk"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
@@ -76,7 +75,6 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["angular", angularRules],
   ["@angular-eslint", angularEslintRules],
-  ["awscdk", awscdkRules],
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
