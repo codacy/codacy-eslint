@@ -6018,48 +6018,6 @@
       "enabled": false
     },
     {
-      "patternId": "graphql-fragments_limit-complexity",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "hapi_hapi-capitalize-modules",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "hapi_hapi-for-you",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "hapi_hapi-no-var",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "hapi_hapi-scope-start",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "hapi_no-arrowception",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "i18n-json_valid-json",
       "level": "Info",
       "category": "CodeStyle",
@@ -11927,34 +11885,6 @@
           "default": 1
         }
       ],
-      "enabled": false
-    },
-    {
-      "patternId": "standard_array-bracket-even-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "standard_computed-property-even-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "standard_object-curly-even-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "standard_no-callback-literal",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
       "enabled": false
     },
     {

@@ -704,12 +704,6 @@
   <module name="functional_prefer-tacit" />
   <module name="functional_readonly-type" />
   <module name="functional_type-declaration-immutability" />
-  <module name="graphql-fragments_limit-complexity" />
-  <module name="hapi_hapi-capitalize-modules" />
-  <module name="hapi_hapi-for-you" />
-  <module name="hapi_hapi-no-var" />
-  <module name="hapi_hapi-scope-start" />
-  <module name="hapi_no-arrowception" />
   <module name="i18n-json_valid-json" />
   <module name="i18n-json_valid-message-syntax" />
   <module name="i18n-json_identical-keys" />
@@ -1462,10 +1456,6 @@
   <module name="sort-imports-es6-autofix_sort-imports-es6" />
   <module name="sort-keys-fix_sort-keys-fix" />
   <module name="spellcheck_spell-checker" />
-  <module name="standard_array-bracket-even-spacing" />
-  <module name="standard_computed-property-even-spacing" />
-  <module name="standard_object-curly-even-spacing" />
-  <module name="standard_no-callback-literal" />
   <module name="storybook_await-interactions" />
   <module name="storybook_context-in-play-function" />
   <module name="storybook_csf-component" />

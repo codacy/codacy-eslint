@@ -18,8 +18,6 @@ import { rules as esRules } from "eslint-plugin-es"
 import { rules as filenamesRules } from "eslint-plugin-filenames"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
-import { rules as graphqlFragmentsRules } from "eslint-plugin-graphql-fragments"
-import { rules as hapiRules } from "eslint-plugin-hapi"
 import { rules as htmlRules } from "eslint-plugin-html"
 import { rules as i18nJsonRules } from "eslint-plugin-i18n-json"
 import { rules as i18nextRules } from "eslint-plugin-i18next"
@@ -60,7 +58,6 @@ import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
-import { rules as standardRules } from "eslint-plugin-standard"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as vueRules } from "eslint-plugin-vue"
@@ -89,8 +86,6 @@ const plugins = [
   ["filenames", filenamesRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
-  ["graphql-fragments", graphqlFragmentsRules],
-  ["hapi", hapiRules],
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],
@@ -133,7 +128,6 @@ const plugins = [
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
   ["spellcheck", spellcheckRules],
-  ["standard", standardRules],
   ["storybook", storybookRules],
   ["@typescript-eslint", typescriptEslintRules],
   ["typescript-sort-keys", typescriptSortKeysRules],

@@ -5884,44 +5884,6 @@
   },
   {
     "parameters": [],
-    "patternId": "graphql-fragments_limit-complexity",
-    "title": "Graphql fragments: Limit complexity",
-    "description": "Verifies that your graphql`...` expressions are not too complex.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "hapi_hapi-capitalize-modules",
-    "title": "Hapi: Hapi capitalize modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "hapi_hapi-for-you",
-    "title": "Hapi: Hapi for you",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "hapi_hapi-no-var",
-    "title": "Hapi: Hapi no var",
-    "description": "Require `let` or `const` instead of `var` when outside of try...catch",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "hapi_hapi-scope-start",
-    "title": "Hapi: Hapi scope start",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "hapi_no-arrowception",
-    "title": "Hapi: No arrowception",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "i18n-json_valid-json",
     "title": "I18n json: Valid json",
     "description": "Validates the JSON translation file",
@@ -11553,30 +11515,6 @@
     "patternId": "spellcheck_spell-checker",
     "title": "Spellcheck: Spell checker",
     "description": "Spell check",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_array-bracket-even-spacing",
-    "title": "Standard: Array bracket even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_computed-property-even-spacing",
-    "title": "Standard: Computed property even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_object-curly-even-spacing",
-    "title": "Standard: Object curly even spacing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "standard_no-callback-literal",
-    "title": "Standard: No callback literal",
     "timeToFix": 5
   },
   {
