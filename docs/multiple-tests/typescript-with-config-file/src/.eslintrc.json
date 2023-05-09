@@ -36,7 +36,6 @@
     "promise",
     "react",
     "security",
-    "standard",
     "vue",
     "@typescript-eslint"
   ],
