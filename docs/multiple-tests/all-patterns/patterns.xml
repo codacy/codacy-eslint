@@ -811,6 +811,7 @@
   <module name="jsdoc_multiline-blocks" />
   <module name="jsdoc_no-bad-blocks" />
   <module name="jsdoc_no-blank-block-descriptions" />
+  <module name="jsdoc_no-blank-blocks" />
   <module name="jsdoc_no-defaults" />
   <module name="jsdoc_no-missing-syntax" />
   <module name="jsdoc_no-multi-asterisks" />

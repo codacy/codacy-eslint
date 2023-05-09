@@ -6663,6 +6663,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jsdoc_no-blank-blocks",
+    "title": "Jsdoc: No blank blocks",
+    "description": "Removes empty blocks with nothing but possibly line breaks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsdoc_no-defaults",
     "title": "Jsdoc: No defaults",
     "description": "This rule reports defaults being used on the relevant portion of `@param` or `@default`.",
@@ -7016,6 +7023,7 @@
     "parameters": [],
     "patternId": "jsdoc_sort-tags",
     "title": "Jsdoc: Sort tags",
+    "description": "Sorts tags by a specified sequence according to tag name.",
     "timeToFix": 5
   },
   {
