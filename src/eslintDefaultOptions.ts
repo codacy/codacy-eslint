@@ -2,7 +2,6 @@ import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = [
-  "better-styled-components",
   "eslint:recommended",
   "plugin:backbone/recommended",
   "plugin:canonical/recommended",
@@ -14,10 +13,11 @@ const baseConfigs: string[] = [
   "plugin:ember-suave/recommended",
   "plugin:flowtype/recommended",
   "plugin:@mysticatea/eslint-plugin",
+  "plugin:react/recommended",
   "plugin:security/recommended",
   "plugin:@typescript-eslint/recommended",
-  "prettier",
-  "standard"
+  "standard",
+  "plugin:prettier/recommended"
 ]
 
 const typescriptConfigs: string[] = [
@@ -51,6 +51,9 @@ export const defaultOptions: ESLint.Options = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
       requireConfigFile: false,
+      ecmaFeatures: {
+        "jsx": true
+      }
     },
     overrides: [
       {
@@ -101,6 +104,9 @@ export const defaultOptions: ESLint.Options = {
       jest: {
         version: 26,
       },
+      react: {
+        version: "lastest"
+      }
     },
   },
 }

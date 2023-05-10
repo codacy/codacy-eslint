@@ -18,6 +18,7 @@ const blacklistRegexes: RegExp[] = [
   /rxjs\/.+/,
   /@shopify\/eslint-plugin\/no-debugger/,
   /@typescript-eslint\/await-thenable/,
+  /@nx\/enforce-module-boundaries/,
   /unicorn\/import-index/,
   /unicorn\/no-array-instanceof/,
   /unicorn\/no-fn-reference-in-iterator/,
