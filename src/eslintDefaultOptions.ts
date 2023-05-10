@@ -16,7 +16,6 @@ const baseConfigs: string[] = [
   //"plugin:@mysticatea/+eslint-plugin",
   "plugin:react/recommended",
   "plugin:security/recommended",
-  "plugin:@typescript-eslint/recommended",
   "standard",
   "plugin:prettier/recommended"
 ]
@@ -27,8 +26,7 @@ const typescriptConfigs: string[] = [
   "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
-  "plugin:node/recommended",
-  "@typescript-eslint"
+  "plugin:node/recommended"
 ]
 
 export const defaultOptions: ESLint.Options = {
