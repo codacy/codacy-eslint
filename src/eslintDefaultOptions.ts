@@ -2,22 +2,22 @@ import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = [
-  // "eslint:recommended",
-  // "plugin:backbone/recommended",
-  // "plugin:canonical/recommended",
-  // "plugin:chai-expect/recommended",
-  // "plugin:chai-friendly/recommended",
-  // "plugin:compat/recommended",
-  // "plugin:cypress/recommended",
-  // "plugin:ember/recommended",
-  // "plugin:ember-suave/recommended",
-  // "plugin:flowtype/recommended",
-  // //"plugin:@mysticatea/es2015",
-  // //"plugin:@mysticatea/+eslint-plugin",
-  // "plugin:react/recommended",
-  // "plugin:security/recommended",
-  // "standard",
-  // "plugin:prettier/recommended"
+  "standard",
+  "eslint:recommended",
+  "plugin:backbone/recommended",
+  "plugin:canonical/recommended",
+  "plugin:chai-expect/recommended",
+  "plugin:chai-friendly/recommended",
+  "plugin:compat/recommended",
+  "plugin:cypress/recommended",
+  "plugin:ember/recommended",
+  "plugin:ember-suave/recommended",
+  "plugin:flowtype/recommended",
+  //"plugin:@mysticatea/es2015",
+  //"plugin:@mysticatea/+eslint-plugin",
+  "plugin:react/recommended",
+  "plugin:security/recommended",
+  "plugin:prettier/recommended"
 ]
 
 const typescriptConfigs: string[] = [
@@ -57,7 +57,7 @@ export const defaultOptions: ESLint.Options = {
         extends: baseConfigs.concat(typescriptConfigs),
         parserOptions: {
           sourceType: "module",
-          project: "tsconfig.json"
+          //project: "tsconfig.json"
         },
       },
       {
@@ -76,14 +76,14 @@ export const defaultOptions: ESLint.Options = {
           sourceType: "module",
         },
       },
-//      {
-//        files: ["**/*.jsx"],
-//        parserOptions: {
-//          babelOptions: {
-//            presets: ["@babel/preset-react"],
-//          }
-//        },
-//      },
+      {
+        files: ["**/*.jsx"],
+        parserOptions: {
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
+        },
+      },
       {
         files: ["**/*.html"],
         extends: [
