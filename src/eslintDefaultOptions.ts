@@ -3,8 +3,6 @@ import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = [
   "eslint:recommended",
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:backbone/recommended",
   "plugin:canonical/recommended",
   "plugin:chai-expect/recommended",
@@ -55,12 +53,19 @@ export const defaultOptions: ESLint.Options = {
     },
     overrides: [
       {
+        files: ["**/*.ts"],
+        extends: [
+          "plugin:@angular-eslint/recommended",
+          "plugin:@angular-eslint/template/process-inline-templates",
+ 
+        ]
+      },
+      {
         files: ["**/*.ts", "**/*.tsx"],
         extends: baseConfigs.concat(typescriptConfigs),
-        parser: "@typescript-eslint/parser",
         parserOptions: {
           sourceType: "module",
-          project: "./tsconfig.json"
+//          project: "./tsconfig.json"
         },
       },
       {
@@ -71,14 +76,14 @@ export const defaultOptions: ESLint.Options = {
           sourceType: "module",
         },
       },
-      {
-        files: ["**/*.jsx"],
-        parserOptions: {
-          babelOptions: {
-            presets: ["@babel/preset-react"],
-          }
-        },
-      },
+//      {
+//        files: ["**/*.jsx"],
+//        parserOptions: {
+//          babelOptions: {
+//            presets: ["@babel/preset-react"],
+//          }
+//        },
+//      },
       {
         files: ["**/*.html"],
         extends: [
