@@ -1,21 +1,17 @@
+import { Linter, Rule } from "eslint"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
-import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plugin-aura"
-import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
-import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
-import { Linter, Rule } from "eslint"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
+import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
 import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
-import { rules as drupalRules } from "eslint-plugin-drupal"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
-import { rules as esRules } from "eslint-plugin-es"
-import { rules as filenamesRules } from "eslint-plugin-filenames"
+import { rules as esXRules } from "eslint-plugin-es-x"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
 import { rules as htmlRules } from "eslint-plugin-html"
@@ -51,6 +47,8 @@ import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
 import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as rxjsRules } from "eslint-plugin-rxjs"
+import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plugin-aura"
+import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -59,6 +57,7 @@ import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as storybookRules } from "eslint-plugin-storybook"
+import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
@@ -76,15 +75,14 @@ const plugins = [
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
+  ["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
   ["cypress", cypressRules],
-  ["drupal", drupalRules],
   ["ember", emberRules],
   ["ember-suave", emberSuaveRules],
-  ["es", esRules],
-  ["filenames", filenamesRules],
+  ["es-x", esXRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
   ["html", htmlRules],

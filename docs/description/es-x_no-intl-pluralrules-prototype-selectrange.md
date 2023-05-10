@@ -1,0 +1,55 @@
+---
+title: "es-x/no-intl-pluralrules-prototype-selectrange"
+description: "disallow the `PluralRules.prototype.selectRange` method"
+since: "v6.0.0"
+---
+
+# es-x/no-intl-pluralrules-prototype-selectrange
+> disallow the `PluralRules.prototype.selectRange` method
+
+- ✅ The following configurations enable this rule: `plugin:es-x/no-new-in-esnext-intl-api`
+
+This rule reports ES2023 Intl API `PluralRules.prototype.selectRange` as errors.
+
+This rule is silent by default because it's hard to know types. You need to configure [the aggressive mode](../#the-aggressive-mode) or TypeScript in order to enable this rule.
+
+## 💡 Examples
+
+⛔ Examples of **incorrect** code for this rule:
+
+<eslint-playground type="bad">
+
+```js
+/*eslint es-x/no-intl-pluralrules-prototype-selectrange: [error, { aggressive: true }] */
+const nf = new Intl.PluralRules("en-US", {
+  style: "currency",
+  currency: "EUR",
+  maximumFractionDigits: 0,
+});
+console.log(nf.selectRange(2.9, 3.1));
+```
+
+</eslint-playground>
+
+## 🔧 Options
+
+This rule has an option.
+
+```yml
+rules:
+  es-x/no-intl-pluralrules-prototype-selectrange: [error, { aggressive: false }]
+```
+
+### aggressive: boolean
+
+Configure the aggressive mode for only this rule.
+This is prior to the `settings['es-x'].aggressive` setting.
+
+## 🚀 Version
+
+This rule was introduced in v6.0.0.
+
+## 📚 References
+
+- [Rule source](https://github.com/eslint-community/eslint-plugin-es-x/blob/master/lib/rules/no-intl-pluralrules-prototype-selectrange.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-es-x/blob/master/tests/lib/rules/no-intl-pluralrules-prototype-selectrange.js)
