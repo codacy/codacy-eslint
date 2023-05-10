@@ -37,7 +37,8 @@ export const defaultOptions: ESLint.Options = {
         parser: "@typescript-eslint/parser",
         parserOptions: {
           sourceType: "module",
-        },
+          project: "./tsconfig.json"
+        }
       },
       {
         files: ["./**/*.vue"],
