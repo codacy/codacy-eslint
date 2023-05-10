@@ -3,6 +3,8 @@ import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = [
   "eslint:recommended",
+  "plugin:@angular-eslint/recommended",
+  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:backbone/recommended",
   "plugin:canonical/recommended",
   "plugin:chai-expect/recommended",
@@ -21,9 +23,6 @@ const baseConfigs: string[] = [
 ]
 
 const typescriptConfigs: string[] = [
-  "eslint:recommended",
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
   "plugin:node/recommended"
@@ -61,7 +60,7 @@ export const defaultOptions: ESLint.Options = {
         parser: "@typescript-eslint/parser",
         parserOptions: {
           sourceType: "module",
-          project: "tsconfig.json"
+          project: "./tsconfig.json"
         },
       },
       {

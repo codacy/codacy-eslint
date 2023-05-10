@@ -7,6 +7,7 @@ const blacklistRegexes: RegExp[] = [
   /babel\/no-await-in-loop/,
   /babel\/func-params-comma-dangle/,
   /babel\/flow-object-type/,
+  /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
   /jest\/unbound-method/,
   /jsdoc\/newline-after-description/,
