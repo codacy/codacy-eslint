@@ -2,22 +2,22 @@ import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
 
 const baseConfigs: string[] = [
-  "eslint:recommended",
-  "plugin:backbone/recommended",
-  "plugin:canonical/recommended",
-  "plugin:chai-expect/recommended",
-  "plugin:chai-friendly/recommended",
-  "plugin:compat/recommended",
-  "plugin:cypress/recommended",
-  "plugin:ember/recommended",
-  "plugin:ember-suave/recommended",
-  "plugin:flowtype/recommended",
-  //"plugin:@mysticatea/es2015",
-  //"plugin:@mysticatea/+eslint-plugin",
-  "plugin:react/recommended",
-  "plugin:security/recommended",
-  "standard",
-  "plugin:prettier/recommended"
+  // "eslint:recommended",
+  // "plugin:backbone/recommended",
+  // "plugin:canonical/recommended",
+  // "plugin:chai-expect/recommended",
+  // "plugin:chai-friendly/recommended",
+  // "plugin:compat/recommended",
+  // "plugin:cypress/recommended",
+  // "plugin:ember/recommended",
+  // "plugin:ember-suave/recommended",
+  // "plugin:flowtype/recommended",
+  // //"plugin:@mysticatea/es2015",
+  // //"plugin:@mysticatea/+eslint-plugin",
+  // "plugin:react/recommended",
+  // "plugin:security/recommended",
+  // "standard",
+  // "plugin:prettier/recommended"
 ]
 
 const typescriptConfigs: string[] = [
@@ -53,20 +53,20 @@ export const defaultOptions: ESLint.Options = {
     },
     overrides: [
       {
+        files: ["**/*.ts", "**/*.tsx"],
+        extends: baseConfigs.concat(typescriptConfigs),
+        parserOptions: {
+          sourceType: "module",
+          project: "tsconfig.json"
+        },
+      },
+      {
         files: ["**/*.ts"],
         extends: [
           "plugin:@angular-eslint/recommended",
           "plugin:@angular-eslint/template/process-inline-templates",
  
         ]
-      },
-      {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: baseConfigs.concat(typescriptConfigs),
-        parserOptions: {
-          sourceType: "module",
-//          project: "./tsconfig.json"
-        },
       },
       {
         files: ["**/*.vue"],
