@@ -43,13 +43,9 @@ async function createOptions(
   if (codacyInput && codacyInput.tools) {
     const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
     if (eslintTool && eslintTool.patterns) {
-      debug(`[codacy]: it appears we are going to use our own settings...`)
-      debug("[codacy]: read the following patterns to process from .codacyrc:")
-      debug(`[codacy]: # patterns to use: ${eslintTool.patterns.length}`)
-      debugEach(
-        eslintTool.patterns,
-        (pattern) => `[codacy]:  |- pattern name: ${pattern}`
-      )
+      debug("codacy: it appears we are going to use our own settings...")
+      debug("codacy: read the following " + eslintTool.patterns.length + " patterns to process from .codacyrc:")
+      debugEach(eslintTool.patterns)
 
       const isTypescriptAnalysis =
         codacyInput.files &&
