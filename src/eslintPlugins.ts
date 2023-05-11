@@ -11,11 +11,9 @@ import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
 import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
-import { rules as drupalRules } from "eslint-plugin-drupal"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
-import { rules as esRules } from "eslint-plugin-es"
-import { rules as filenamesRules } from "eslint-plugin-filenames"
+import { rules as esXRules } from "eslint-plugin-es-x"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
 import { rules as htmlRules } from "eslint-plugin-html"
@@ -80,11 +78,9 @@ const plugins = [
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
   ["cypress", cypressRules],
-  ["drupal", drupalRules],
   ["ember", emberRules],
   ["ember-suave", emberSuaveRules],
-  ["es", esRules],
-  ["filenames", filenamesRules],
+  ["es-x", esXRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
   ["html", htmlRules],

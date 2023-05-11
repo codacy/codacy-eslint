@@ -3896,20 +3896,6 @@
       "enabled": false
     },
     {
-      "patternId": "drupal_jquery-var-name",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "drupal_check-closure-globals",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "ember_alias-model-in-controller",
       "level": "Info",
       "category": "CodeStyle",
@@ -4705,829 +4691,1351 @@
       "enabled": false
     },
     {
-      "patternId": "es_no-accessor-properties",
+      "patternId": "es-x_no-accessor-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-array-from",
+      "patternId": "es-x_no-arbitrary-module-namespace-names",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-array-isarray",
+      "patternId": "es-x_no-array-from",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-array-of",
+      "patternId": "es-x_no-array-isarray",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-arrow-functions",
+      "patternId": "es-x_no-array-of",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-async-functions",
+      "patternId": "es-x_no-array-prototype-copywithin",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-async-iteration",
+      "patternId": "es-x_no-array-prototype-entries",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-atomics",
+      "patternId": "es-x_no-array-prototype-every",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-bigint",
+      "patternId": "es-x_no-array-prototype-fill",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-binary-numeric-literals",
+      "patternId": "es-x_no-array-prototype-filter",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-block-scoped-functions",
+      "patternId": "es-x_no-array-prototype-find",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-block-scoped-variables",
+      "patternId": "es-x_no-array-prototype-findindex",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-classes",
+      "patternId": "es-x_no-array-prototype-findlast-findlastindex",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-computed-properties",
+      "patternId": "es-x_no-array-prototype-flat",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-date-now",
+      "patternId": "es-x_no-array-prototype-foreach",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-default-parameters",
+      "patternId": "es-x_no-array-prototype-includes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-destructuring",
+      "patternId": "es-x_no-array-prototype-indexof",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-dynamic-import",
+      "patternId": "es-x_no-array-prototype-keys",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-exponential-operators",
+      "patternId": "es-x_no-array-prototype-lastindexof",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-export-ns-from",
+      "patternId": "es-x_no-array-prototype-map",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-for-of-loops",
+      "patternId": "es-x_no-array-prototype-reduce",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-generators",
+      "patternId": "es-x_no-array-prototype-reduceright",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-global-this",
+      "patternId": "es-x_no-array-prototype-some",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-import-meta",
+      "patternId": "es-x_no-array-prototype-toreversed",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-json",
+      "patternId": "es-x_no-array-prototype-tosorted",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-json-superset",
+      "patternId": "es-x_no-array-prototype-tospliced",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-keyword-properties",
+      "patternId": "es-x_no-array-prototype-values",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-logical-assignment-operators",
+      "patternId": "es-x_no-array-prototype-with",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-malformed-template-literals",
+      "patternId": "es-x_no-array-string-prototype-at",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-map",
+      "patternId": "es-x_no-arrow-functions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-acosh",
+      "patternId": "es-x_no-async-functions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-asinh",
+      "patternId": "es-x_no-async-iteration",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-atanh",
+      "patternId": "es-x_no-atomics",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-cbrt",
+      "patternId": "es-x_no-bigint",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-clz32",
+      "patternId": "es-x_no-binary-numeric-literals",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-cosh",
+      "patternId": "es-x_no-block-scoped-functions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-expm1",
+      "patternId": "es-x_no-block-scoped-variables",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-fround",
+      "patternId": "es-x_no-class-fields",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-hypot",
+      "patternId": "es-x_no-class-static-block",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-imul",
+      "patternId": "es-x_no-classes",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-log1p",
+      "patternId": "es-x_no-computed-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-log2",
+      "patternId": "es-x_no-date-now",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-log10",
+      "patternId": "es-x_no-date-prototype-getyear-setyear",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-sign",
+      "patternId": "es-x_no-date-prototype-togmtstring",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-sinh",
+      "patternId": "es-x_no-default-parameters",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-tanh",
+      "patternId": "es-x_no-destructuring",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-math-trunc",
+      "patternId": "es-x_no-dynamic-import",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-modules",
+      "patternId": "es-x_no-error-cause",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-new-target",
+      "patternId": "es-x_no-escape-unescape",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-nullish-coalescing-operators",
+      "patternId": "es-x_no-exponential-operators",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-epsilon",
+      "patternId": "es-x_no-export-ns-from",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-isfinite",
+      "patternId": "es-x_no-for-of-loops",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-isinteger",
+      "patternId": "es-x_no-function-declarations-in-if-statement-clauses-without-block",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-isnan",
+      "patternId": "es-x_no-function-prototype-bind",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-issafeinteger",
+      "patternId": "es-x_no-generators",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-maxsafeinteger",
+      "patternId": "es-x_no-global-this",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-minsafeinteger",
+      "patternId": "es-x_no-hashbang",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-parsefloat",
+      "patternId": "es-x_no-import-meta",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-number-parseint",
+      "patternId": "es-x_no-initializers-in-for-in",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-numeric-separators",
+      "patternId": "es-x_no-intl-datetimeformat-prototype-formatrange",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-assign",
+      "patternId": "es-x_no-intl-datetimeformat-prototype-formattoparts",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-defineproperties",
+      "patternId": "es-x_no-intl-displaynames",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-defineproperty",
+      "patternId": "es-x_no-intl-getcanonicallocales",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-entries",
+      "patternId": "es-x_no-intl-listformat",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-freeze",
+      "patternId": "es-x_no-intl-locale",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-fromentries",
+      "patternId": "es-x_no-intl-numberformat-prototype-formatrange",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-getownpropertydescriptor",
+      "patternId": "es-x_no-intl-numberformat-prototype-formatrangetoparts",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-getownpropertydescriptors",
+      "patternId": "es-x_no-intl-numberformat-prototype-formattoparts",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-getownpropertynames",
+      "patternId": "es-x_no-intl-pluralrules",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-getownpropertysymbols",
+      "patternId": "es-x_no-intl-pluralrules-prototype-selectrange",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-getprototypeof",
+      "patternId": "es-x_no-intl-relativetimeformat",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-is",
+      "patternId": "es-x_no-intl-segmenter",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-isextensible",
+      "patternId": "es-x_no-intl-supportedvaluesof",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-isfrozen",
+      "patternId": "es-x_no-json",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-issealed",
+      "patternId": "es-x_no-json-superset",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-keys",
+      "patternId": "es-x_no-keyword-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-preventextensions",
+      "patternId": "es-x_no-labelled-function-declarations",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-seal",
+      "patternId": "es-x_no-legacy-object-prototype-accessor-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-setprototypeof",
+      "patternId": "es-x_no-logical-assignment-operators",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-super-properties",
+      "patternId": "es-x_no-malformed-template-literals",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-object-values",
+      "patternId": "es-x_no-map",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-octal-numeric-literals",
+      "patternId": "es-x_no-math-acosh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-optional-catch-binding",
+      "patternId": "es-x_no-math-asinh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-optional-chaining",
+      "patternId": "es-x_no-math-atanh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-promise",
+      "patternId": "es-x_no-math-cbrt",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-promise-all-settled",
+      "patternId": "es-x_no-math-clz32",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-promise-any",
+      "patternId": "es-x_no-math-cosh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-property-shorthands",
+      "patternId": "es-x_no-math-expm1",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-proxy",
+      "patternId": "es-x_no-math-fround",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-reflect",
+      "patternId": "es-x_no-math-hypot",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-lookbehind-assertions",
+      "patternId": "es-x_no-math-imul",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-named-capture-groups",
+      "patternId": "es-x_no-math-log1p",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-s-flag",
+      "patternId": "es-x_no-math-log2",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-u-flag",
+      "patternId": "es-x_no-math-log10",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-unicode-property-escapes",
+      "patternId": "es-x_no-math-sign",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-unicode-property-escapes-2019",
+      "patternId": "es-x_no-math-sinh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-regexp-y-flag",
+      "patternId": "es-x_no-math-tanh",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-rest-parameters",
+      "patternId": "es-x_no-math-trunc",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-rest-spread-properties",
+      "patternId": "es-x_no-modules",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-set",
+      "patternId": "es-x_no-new-target",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-shared-array-buffer",
+      "patternId": "es-x_no-nullish-coalescing-operators",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-spread-elements",
+      "patternId": "es-x_no-number-epsilon",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-string-fromcodepoint",
+      "patternId": "es-x_no-number-isfinite",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-string-raw",
+      "patternId": "es-x_no-number-isinteger",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-subclassing-builtins",
+      "patternId": "es-x_no-number-isnan",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-symbol",
+      "patternId": "es-x_no-number-issafeinteger",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-template-literals",
+      "patternId": "es-x_no-number-maxsafeinteger",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-trailing-commas",
+      "patternId": "es-x_no-number-minsafeinteger",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-trailing-function-commas",
+      "patternId": "es-x_no-number-parsefloat",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-typed-arrays",
+      "patternId": "es-x_no-number-parseint",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-unicode-codepoint-escapes",
+      "patternId": "es-x_no-numeric-separators",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-weak-map",
+      "patternId": "es-x_no-object-assign",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-weak-set",
+      "patternId": "es-x_no-object-create",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "es_no-weakrefs",
+      "patternId": "es-x_no-object-defineproperties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "filenames_match-regex",
+      "patternId": "es-x_no-object-defineproperty",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "unnamedParam",
-          "default": "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"
-        }
-      ],
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-entries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-freeze",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-fromentries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-getownpropertydescriptor",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-getownpropertydescriptors",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-getownpropertynames",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-getownpropertysymbols",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-getprototypeof",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-hasown",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-is",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-isextensible",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-isfrozen",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-issealed",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-preventextensions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-seal",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-setprototypeof",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-super-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-object-values",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-octal-numeric-literals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-optional-catch-binding",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-optional-chaining",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-private-in",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-promise",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-promise-all-settled",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-promise-any",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-promise-prototype-finally",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-property-shorthands",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-proxy",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-reflect",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-d-flag",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-lookbehind-assertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-named-capture-groups",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-prototype-compile",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-prototype-flags",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-s-flag",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-u-flag",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-unicode-property-escapes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "filenames_match-exported",
+      "patternId": "es-x_no-regexp-unicode-property-escapes-2019",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "unnamedParam",
-          "default": "camel"
-        }
-      ],
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-unicode-property-escapes-2020",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-unicode-property-escapes-2021",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-unicode-property-escapes-2022",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-unicode-property-escapes-2023",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-regexp-y-flag",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-rest-parameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-rest-spread-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-set",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-shadow-catch-param",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-shared-array-buffer",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-spread-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-create-html-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-fromcodepoint",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-codepointat",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-endswith",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-includes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-matchall",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-normalize",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-padstart-padend",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-repeat",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-replaceall",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-startswith",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-substr",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-trim",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-trimleft-trimright",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-trimstart-trimend",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-raw",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-subclassing-builtins",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-symbol",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-symbol-prototype-description",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-template-literals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-top-level-await",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-trailing-commas",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-trailing-function-commas",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-typed-arrays",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-unicode-codepoint-escapes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-weak-map",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-weak-set",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "filenames_no-index",
+      "patternId": "es-x_no-weakrefs",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12001,13 +12509,6 @@
     },
     {
       "patternId": "@typescript-eslint_array-type",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_await-thenable",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

@@ -50,13 +50,6 @@ async function main() {
     "cypress"
   )
 
-  console.log("Generate drupal description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/theodoreb/eslint-plugin-drupal/master/docs/rules/${pattern}.md`,
-    "drupal"
-  )
-
   console.log("Generate ember description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -71,11 +64,11 @@ async function main() {
     "ember-suave"
   )
 
-  console.log("Generate es description files")
+  console.log("Generate es-x description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/mysticatea/eslint-plugin-es/master/docs/rules/${pattern}.md`,
-    "es"
+      `${githubBaseUrl}/eslint-community/eslint-plugin-es-x/master/docs/rules/${pattern}.md`,
+    "es-x"
   )
 
   console.log("Generate eslint description files")
