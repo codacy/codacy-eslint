@@ -21,9 +21,11 @@ const baseConfigs: string[] = [
 ]
 
 const typescriptConfigs: string[] = [
+  "plugin:node/recommended",
+  "plugin:@angular-eslint/recommended",
+  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/eslint-recommended",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:node/recommended"
+  "plugin:@typescript-eslint/recommended"
 ]
 
 export const defaultOptions: ESLint.Options = {
@@ -59,14 +61,6 @@ export const defaultOptions: ESLint.Options = {
           sourceType: "module",
           //project: "tsconfig.json"
         },
-      },
-      {
-        files: ["**/*.ts"],
-        extends: [
-          "plugin:@angular-eslint/recommended",
-          "plugin:@angular-eslint/template/process-inline-templates",
- 
-        ]
       },
       {
         files: ["**/*.vue"],
