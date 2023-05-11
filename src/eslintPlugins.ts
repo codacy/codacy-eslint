@@ -1,4 +1,3 @@
-import { Linter, Rule } from "eslint"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
@@ -67,6 +66,7 @@ import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as ymlRules } from "eslint-plugin-yml"
 
+import { Linter, Rule } from "eslint"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
