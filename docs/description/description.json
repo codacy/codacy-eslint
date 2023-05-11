@@ -3709,6 +3709,132 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      }
+    ],
+    "patternId": "canonical_destructuring-property-newline",
+    "title": "Canonical: Destructuring property newline",
+    "description": "Like `object-property-newline`, but for destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_export-specifier-newline",
+    "title": "Canonical: Export specifier newline",
+    "description": "Forces every export specifier to be on a new line.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-exported",
+    "title": "Canonical: Filename match exported",
+    "description": "Match the file name against the default exported value in the module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-regex",
+    "title": "Canonical: Filename match regex",
+    "description": "Enforce a certain file naming convention using a regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-no-index",
+    "title": "Canonical: Filename no index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "classFields",
+        "description": "classFields"
+      },
+      {
+        "name": "ignoreDestructuring",
+        "description": "ignoreDestructuring"
+      },
+      {
+        "name": "ignoreNamedImports",
+        "description": "ignoreNamedImports"
+      },
+      {
+        "name": "onlyDeclarations",
+        "description": "onlyDeclarations"
+      },
+      {
+        "name": "properties",
+        "description": "properties"
+      }
+    ],
+    "patternId": "canonical_id-match",
+    "title": "Canonical: Id match",
+    "description": "Require identifiers to match a specified regular expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_import-specifier-newline",
+    "title": "Canonical: Import specifier newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-restricted-strings",
+    "title": "Canonical: No restricted strings",
+    "description": "Disallowed string.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-unused-exports",
+    "title": "Canonical: No unused exports",
+    "description": "Identifies unused exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-use-extend-native",
+    "title": "Canonical: No use extend native",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-import-alias",
+    "title": "Canonical: Prefer import alias",
+    "description": "Restrict imports to path aliases or relative imports limited by depth.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-inline-type-import",
+    "title": "Canonical: Prefer inline type import",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-use-mount",
+    "title": "Canonical: Prefer use mount",
+    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_sort-keys",
+    "title": "Canonical: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_virtual-module",
+    "title": "Canonical: Virtual module",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "chai-expect_no-inner-compare",
     "title": "Chai expect: No inner compare",

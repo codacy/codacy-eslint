@@ -3779,6 +3779,137 @@
       "enabled": false
     },
     {
+      "patternId": "canonical_destructuring-property-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAllPropertiesOnSameLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_export-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-exported",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-no-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_id-match",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "classFields",
+          "default": false
+        },
+        {
+          "name": "ignoreDestructuring",
+          "default": false
+        },
+        {
+          "name": "ignoreNamedImports",
+          "default": false
+        },
+        {
+          "name": "onlyDeclarations",
+          "default": false
+        },
+        {
+          "name": "properties",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_import-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-restricted-strings",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-unused-exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-use-extend-native",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-import-alias",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-inline-type-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-use-mount",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_sort-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_virtual-module",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "chai-expect_no-inner-compare",
       "level": "Info",
       "category": "CodeStyle",
