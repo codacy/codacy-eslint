@@ -1,6 +1,7 @@
 const blacklistRegexes: RegExp[] = [
   /import\/.+/,
   /node\/no-missing-require/,
+  /angular\/service-name/,
   /babel\/generator-star-spacing/,
   /babel\/array-bracket-spacing/,
   /babel\/arrow-parens/,
