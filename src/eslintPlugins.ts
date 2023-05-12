@@ -1,10 +1,9 @@
-import { Linter, Rule } from "eslint"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-import { rules as canonicalRules } from "eslint-plugin-canonical"
+//import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
@@ -26,7 +25,7 @@ import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
 import { rules as lodashRules } from "eslint-plugin-lodash"
-import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
+//import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
 import { rules as meteorRules } from "eslint-plugin-meteor"
 import { rules as mochaRules } from "eslint-plugin-mocha"
 import { rules as mongodbRules } from "eslint-plugin-mongodb"
@@ -67,6 +66,7 @@ import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as ymlRules } from "eslint-plugin-yml"
 
+import { Linter, Rule } from "eslint"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
@@ -75,7 +75,7 @@ const plugins = [
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  ["canonical", canonicalRules],
+  //["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
@@ -97,7 +97,7 @@ const plugins = [
   ["jsonc", jsoncRules],
   ["jsx-a11y", jsxA11yRules],
   ["lodash", lodashRules],
-  ["lodash-fp", lodashFpRules],
+//  ["lodash-fp", lodashFpRules],
   ["meteor", meteorRules],
   ["mocha", mochaRules],
   ["mongodb", mongodbRules],
