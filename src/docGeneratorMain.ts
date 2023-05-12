@@ -43,13 +43,13 @@ async function main() {
     "backbone"
   )
 
-  console.log("Generate better-styled-components description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      // not the best way on how to deal with wrong name of rule ¯\_(ツ)_/¯
-      `${githubBaseUrl}/tinloof/eslint-plugin-better-styled-components/master/docs/rules/sort-rules-alphabetically.md`,
-    "better-styled-components"
-  )
+  // console.log("Generate better-styled-components description files")
+  // await docGenerator.downloadDocs(
+  //   (pattern) =>
+  //     // not the best way on how to deal with wrong name of rule ¯\_(ツ)_/¯
+  //     `${githubBaseUrl}/tinloof/eslint-plugin-better-styled-components/master/docs/rules/sort-rules-alphabetically.md`,
+  //   "better-styled-components"
+  // )
 
   console.log("Generate cypress description files")
   await docGenerator.downloadDocs(
@@ -58,12 +58,12 @@ async function main() {
     "cypress"
   )
 
-  console.log("Generate compat description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/amilajack/eslint-plugin-compat/main/docs/rules/${pattern}.md`,
-    "compat"
-  )
+  // console.log("Generate compat description files")
+  // await docGenerator.downloadDocs(
+  //   (pattern) =>
+  //     `${githubBaseUrl}/amilajack/eslint-plugin-compat/main/docs/rules/${pattern}.md`,
+  //   "compat"
+  // )
 
   console.log("Generate ember description files")
   await docGenerator.downloadDocs(
@@ -156,6 +156,13 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/wix-incubator/eslint-plugin-lodash/master/docs/rules/${pattern}.md`,
     "lodash"
+  )
+
+  console.log("Generate lodash-fp description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/jfmengels/eslint-plugin-lodash-fp/master/docs/rules/${pattern}.md`,
+    "lodash-fp"
   )
 
   console.log("Generate meteor description files")
