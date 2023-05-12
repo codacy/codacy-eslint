@@ -7,7 +7,6 @@ const baseConfigs: string[] = [
   "plugin:security/recommended"
 ]
 const typescriptConfigs: string[] = [
-  "lodash-fp",
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
   "plugin:node/recommended"
@@ -41,7 +40,27 @@ export const defaultOptions: ESLint.Options = {
         parser: "@typescript-eslint/parser",
         parserOptions: {
           sourceType: "module",
+        }
+      },
+      {
+        files: ["./**/*.vue"],
+        parser: require.resolve("vue-eslint-parser"),
+        parserOptions: {
+          ecmaVersion: 2020,
+          sourceType: "module",
         },
+      },
+      {
+        files: ["**/*.jsx"],
+        parserOptions: {
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
+        },
+      },
+      {
+        files: ["**/*.js"],
+        plugins: ["lodash-fp"],
         rules: {
           "lodash-fp/consistent-compose": "off",
           "lodash-fp/consistent-name": [
@@ -78,23 +97,7 @@ export const defaultOptions: ESLint.Options = {
           "lodash-fp/preferred-alias": "off",
           "lodash-fp/use-fp": "error"
         }
-      },
-      {
-        files: ["./**/*.vue"],
-        parser: require.resolve("vue-eslint-parser"),
-        parserOptions: {
-          ecmaVersion: 2020,
-          sourceType: "module",
-        },
-      },
-      {
-        files: ["**/*.jsx"],
-        parserOptions: {
-          babelOptions: {
-            presets: ["@babel/preset-react"],
-          }
-        },
-      },
+      },       
     ],
     settings: {
       "node": {
