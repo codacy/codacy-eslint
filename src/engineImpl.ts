@@ -17,11 +17,10 @@ export const engineImpl: Engine = async function (
     (await pathExists(tsconfigFile)) ? tsconfigFile : undefined
   )
 
-  debug("[codacy]: calculated the following eslint config:")
-  debugJson(options, o => `[codacy]: ${o}`)
-  debug("[codacy]: read the following files to process from .codacyrc:")
-  debug(`[codacy]: # files to process: ${files.length}`)
-  debugEach(files, file => `[codacy]  |- filename: ${file}`)
+  debug("codacy: calculated the following eslint config:")
+  debugJson(options)
+  debug("codacy: read the following " + files.length + " files to process from .codacyrc:")
+  debugEach(files)
 
   options.resolvePluginsRelativeTo = "/"
   options.cwd = srcDirPath
@@ -36,8 +35,8 @@ export const engineImpl: Engine = async function (
   debugRun(() => {
     files.forEach(file => {
       const configUsedOnSpecificFile = eslint.calculateConfigForFile(file)
-
-      debugJson(configUsedOnSpecificFile, v => `[codacy] eslint config used for file="${file}":\n${v}`)
+      debug("config file: " + file)
+      debugJson(configUsedOnSpecificFile)
     })
   })
 

@@ -5,3 +5,5 @@
 tsconfig.tsbuildinfo
 .DS_Store
 .vscode
+.codarcyrc
+/tests
