@@ -94,7 +94,7 @@
     "@nrwl/next": "^16.1.2",
     "@nrwl/node": "^16.1.3",
     "@nrwl/nx-cloud": "^16.0.5",
-    "@nrwl/react": "^16.1.2",
+    "@nrwl/react": "^16.2.1",
     "@nrwl/storybook": "^16.1.2",
     "@nrwl/tao": "^16.1.2",
     "@nrwl/web": "^16.1.2",
