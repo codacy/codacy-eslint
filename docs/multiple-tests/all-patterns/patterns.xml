@@ -1364,13 +1364,13 @@
   <module name="scanjs-rules_assign__to__protocol" />
   <module name="scanjs-rules_assign__to__search" />
   <module name="scanjs-rules_assign__to__src" />
+  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__addEventListener" />
   <module name="scanjs-rules_call__addEventListener__deviceproximity" />
   <module name="scanjs-rules_call__addEventListener__message" />
   <module name="scanjs-rules_call__connect" />
   <module name="scanjs-rules_call__eval" />
   <module name="scanjs-rules_call__execScript" />
-  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__hide" />
   <module name="scanjs-rules_call__open__remote=true" />
   <module name="scanjs-rules_call__parseFromString" />
