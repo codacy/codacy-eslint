@@ -83,7 +83,8 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/eslint-community/eslint-plugin-es-x/master/docs/rules/${pattern}.md`,
-    "es-x"
+    "es-x",
+      false
   )
 
   console.log("Generate eslint description files")
