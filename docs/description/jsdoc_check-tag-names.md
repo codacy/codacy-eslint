@@ -764,6 +764,15 @@ function Test() {
  */
 // "jsdoc/check-tag-names": ["error"|"warn", {"typed":true}]
 // Message: '@typedef' is redundant when using a type system.
+
+/**
+ * @todo
+ */
+function quux () {
+
+}
+// Settings: {"jsdoc":{"tagNamePreference":{"todo":{"message":"Please don't use todo"}}}}
+// Message: Please don't use todo
 ````
 
 
@@ -1113,5 +1122,11 @@ interface WebTwain {
  * @satisfies
  */
 // Settings: {"jsdoc":{"mode":"typescript"}}
+
+/**
+ * @module
+ * A comment related to the module
+ */
+// "jsdoc/check-tag-names": ["error"|"warn", {"typed":true}]
 ````
 
