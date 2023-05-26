@@ -281,7 +281,7 @@
     "lint-config-qiwi": "^0.0.1-security",
     "lint-staged": "^13.2.1",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.7.5",
+    "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
     "next": "^13.3.0",
     "node-fetch": "^2.6.11",
