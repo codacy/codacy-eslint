@@ -4096,6 +4096,10 @@
       {
         "name": "catchUnsafeObjects",
         "description": "catchUnsafeObjects"
+      },
+      {
+        "name": "useAt",
+        "description": "useAt"
       }
     ],
     "patternId": "ember_no-get",
@@ -4828,6 +4832,13 @@
     "patternId": "es-x_no-atomics",
     "title": "Es x: No atomics",
     "description": "Disallow the `Atomics` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-atomics-waitasync",
+    "title": "Es x: No atomics waitasync",
+    "description": "Disallow the `Atomics.waitAsync` method.",
     "timeToFix": 5
   },
   {
@@ -5787,6 +5798,13 @@
     "patternId": "es-x_no-string-prototype-includes",
     "title": "Es x: No string prototype includes",
     "description": "Disallow the `String.prototype.includes` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-string-prototype-iswellformed-towellformed",
+    "title": "Es x: No string prototype iswellformed towellformed",
+    "description": "Disallow the `String.prototype.{isWellFormed,toWellFormed}` methods.",
     "timeToFix": 5
   },
   {
@@ -7225,6 +7243,7 @@
     "parameters": [],
     "patternId": "jsdoc_require-asterisk-prefix",
     "title": "Jsdoc: Require asterisk prefix",
+    "description": "Requires that each JSDoc line starts with an `*`.",
     "timeToFix": 5
   },
   {
@@ -14698,6 +14717,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-root-v-if",
+    "title": "Vue: No root v if",
+    "description": "Disallow `v-if` directives on root element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-setup-props-destructure",
     "title": "Vue: No setup props destructure",
     "description": "Disallow destructuring of `props` passed to `setup`",
@@ -14990,6 +15016,13 @@
     "patternId": "vue_padding-lines-in-component-definition",
     "title": "Vue: Padding lines in component definition",
     "description": "Require or disallow padding lines in component definition",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_prefer-define-options",
+    "title": "Vue: Prefer define options",
+    "description": "Enforce use of `defineOptions` instead of default export.",
     "timeToFix": 5
   },
   {
@@ -15333,6 +15366,13 @@
     "patternId": "vue_valid-define-emits",
     "title": "Vue: Valid define emits",
     "description": "Enforce valid `defineEmits` compiler macro",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_valid-define-options",
+    "title": "Vue: Valid define options",
+    "description": "Enforce valid `defineOptions` compiler macro",
     "timeToFix": 5
   },
   {

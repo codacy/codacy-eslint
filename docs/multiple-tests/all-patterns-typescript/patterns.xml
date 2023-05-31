@@ -551,6 +551,7 @@
   <module name="es-x_no-async-functions" />
   <module name="es-x_no-async-iteration" />
   <module name="es-x_no-atomics" />
+  <module name="es-x_no-atomics-waitasync" />
   <module name="es-x_no-bigint" />
   <module name="es-x_no-binary-numeric-literals" />
   <module name="es-x_no-block-scoped-functions" />
@@ -688,6 +689,7 @@
   <module name="es-x_no-string-prototype-codepointat" />
   <module name="es-x_no-string-prototype-endswith" />
   <module name="es-x_no-string-prototype-includes" />
+  <module name="es-x_no-string-prototype-iswellformed-towellformed" />
   <module name="es-x_no-string-prototype-matchall" />
   <module name="es-x_no-string-prototype-normalize" />
   <module name="es-x_no-string-prototype-padstart-padend" />
@@ -1872,6 +1874,7 @@
   <module name="vue_no-restricted-static-attribute" />
   <module name="vue_no-restricted-syntax" />
   <module name="vue_no-restricted-v-bind" />
+  <module name="vue_no-root-v-if" />
   <module name="vue_no-setup-props-destructure" />
   <module name="vue_no-shared-component-data" />
   <module name="vue_no-side-effects-in-computed-properties" />
@@ -1913,6 +1916,7 @@
   <module name="vue_padding-line-between-blocks" />
   <module name="vue_padding-line-between-tags" />
   <module name="vue_padding-lines-in-component-definition" />
+  <module name="vue_prefer-define-options" />
   <module name="vue_prefer-import-from-vue" />
   <module name="vue_prefer-prop-type-boolean-first" />
   <module name="vue_prefer-separate-static-class" />
@@ -1957,6 +1961,7 @@
   <module name="vue_v-slot-style" />
   <module name="vue_valid-attribute-name" />
   <module name="vue_valid-define-emits" />
+  <module name="vue_valid-define-options" />
   <module name="vue_valid-define-props" />
   <module name="vue_valid-model-definition" />
   <module name="vue_valid-next-tick" />
