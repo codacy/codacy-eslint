@@ -2,7 +2,7 @@ import { Codacyrc, Pattern } from "codacy-seed"
 import { ESLint, Linter } from "eslint"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 import { defaultOptions } from "./eslintDefaultOptions"
-import { debug, debugEach } from "./logging"
+import { debug, debugWhen, debugEach } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
 
@@ -43,17 +43,15 @@ async function createOptions(
   if (codacyInput && codacyInput.tools) {
     const eslintTool = codacyInput.tools.find((tool) => tool.name === toolName)
     if (eslintTool && eslintTool.patterns) {
-      debug("codacy: it appears we are going to use our own settings...")
-      debug("codacy: read the following " + eslintTool.patterns.length + " patterns to process from .codacyrc:")
+      debug("[DEBUG] it appears we are going to use our own settings...")
+      debug("[DEBUG] read the following " + eslintTool.patterns.length + " patterns to process from .codacyrc:")
       debugEach(eslintTool.patterns)
 
       const isTypescriptAnalysis =
         codacyInput.files &&
         codacyInput.files.every((f) => f.endsWith(".ts") || f.endsWith(".tsx"))
 
-      debug(
-        `[codacy]: does the project appear to be a typescript one? - ${isTypescriptAnalysis}`
-      )
+      debugWhen(isTypescriptAnalysis, "[DEBUG] the project appears to be typescript")
 
       // typescript patterns require a typescript parser which will fail for different file types
       // so we are removing typescript patterns when analysing different file types
@@ -70,24 +68,20 @@ async function createOptions(
       //   example: a rule for the storybook should only apply to files with
       //            "story" or "stories" in the name. If enabled for all files it
       //            reports false positives on normal files.
-      //            check: conf file @ eslint-plugin-storybook/configs/recomneded.js
+      //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
       const [storybookPatterns, otherPatterns] = partition(patterns, (p) =>
         p.patternId.startsWith("storybook")
       )
 
-      debug(
-        `[codacy]: do we have plugins to apply only to some file types? - ${
-          storybookPatterns.length > 0
-        }`
-      )
+      debugWhen(storybookPatterns.length > 0, "[DEBUG] we have plugins to apply only to some file extensions")
 
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
         // remove extends and overrides from our default config.
-        result.baseConfig.extends = []
-        result.baseConfig.overrides?.forEach(
-          (override: any) => (override.extends = [])
-        )
+        //result.baseConfig.extends = []
+        //result.baseConfig.overrides?.forEach(
+        //  (override: any) => (override.extends = [])
+        //)
 
         // explicitly use the rules being passed by codacyrc
         result.baseConfig.rules = patternsToRules(otherPatterns)
