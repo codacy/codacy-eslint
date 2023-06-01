@@ -102,6 +102,9 @@ export const defaultOptions: ESLint.Options = {
       jest: {
         version: 26,
       },
+      react: {
+        version: "detect"
+      },
     },
   },
 }
