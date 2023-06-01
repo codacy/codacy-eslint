@@ -2,5 +2,21 @@
 <checkstyle version="4.3">
     <file name="accessor-pairs.js">
         <error source="accessor-pairs" line="5" message="Getter is not present for setter 'a'." severity="info" />
+        <error source="acccanonical_sort-keys" line="15" message="Expected object keys to be in natural insensitive ascending order. 'get' should be before 'set'." severity="info" />
+        <error source="ember-suave_lines-between-object-properties" line="15" message="Expected blank line between object properties." severity="info" />
+        <error source="no-redeclare" line="10" message="'o' is already defined." severity="info" />
+        <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
+        <error source="no-var" line="10" message="Unexpected var, use let or const instead." severity="info" />
+        <error source="object-shorthand" line="12" message="Expected method shorthand." severity="info" />
+        <error source="object-shorthand" line="15" message="Expected method shorthand." severity="info" />
+        <error source="prettier_prettier" line="7" message="Insert `,`" severity="info" />
+        <error source="prettier_prettier" line="17" message="Insert `,`" severity="info" />
+        <error source="prettier_prettier" line="12" message="Insert `\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="15" message="Insert `\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="18" message="Insert `\u23ce`" severity="info" />
+        <error source="prettier_prettier" line="11" message="Replace `'c'` with `\"c\"`" severity="info" />
+        <error source="prettier_prettier" line="10" message="Replace `d:\u00b71` with `\u00b7d:\u00b71\u00b7`" severity="info" />
+        <error source="spaced-comment" line="1" message="Expected space or tab after '//' in comment." severity="info" />
+        <error source="spaced-comment" line="5" message="Expected space or tab after '//' in comment." severity="info" />
     </file>
 </checkstyle>

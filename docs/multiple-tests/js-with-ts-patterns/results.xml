@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
+    <file name="test.js">
+        <error source="no-unused-vars" line="2" message="'a' is assigned a value but never used." severity="info" />
+        <error source="no-var" line="2" message="Unexpected var, use let or const instead." severity="info" />
+        <error source="prettier_prettier" line="2" message="Insert `;\u23ce`" severity="info" />
+    </file>
 </checkstyle>

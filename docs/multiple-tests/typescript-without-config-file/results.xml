@@ -4,5 +4,54 @@
         <error source="@typescript-eslint_explicit-function-return-type" line="10" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="17" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="40" message="Missing return type on function." severity="info" />
+        <error source="ember-suave_no-const-outside-module-scope" line="19" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
+        <error source="ember-suave_no-const-outside-module-scope" line="26" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
+        <error source="ember-suave_no-const-outside-module-scope" line="41" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
+        <error source="eqeqeq" line="29" message="Expected '===' and instead saw '=='." severity="info" />
+        <error source="eqeqeq" line="34" message="Expected '===' and instead saw '=='." severity="info" />
+        <error source="eqeqeq" line="51" message="Expected '===' and instead saw '=='." severity="info" />
+        <error source="flowtype_no-types-missing-file-annotation" line="7" message="Type exports require valid Flow declaration." severity="info" />
+        <error source="node_no-unsupported-features_es" line="7" message="Import and export declarations are not supported yet." severity="error" />
+        <error source="node_no-unsupported-features_es" line="10" message="Import and export declarations are not supported yet." severity="error" />
+        <error source="node_no-unsupported-features_es" line="46" message="Import and export declarations are not supported yet." severity="error" />
+        <error source="padding-line-between-statements" line="14" message="Expected blank line before this statement." severity="info" />
+        <error source="padding-line-between-statements" line="34" message="Expected blank line before this statement." severity="info" />
+        <error source="padding-line-between-statements" line="37" message="Expected blank line before this statement." severity="info" />
+        <error source="padding-line-between-statements" line="54" message="Expected blank line before this statement." severity="info" />
+        <error source="padding-line-between-statements" line="57" message="Expected blank line before this statement." severity="info" />
+        <error source="prefer-const" line="60" message="'testArray' is never reassigned. Use 'const' instead." severity="info" />
+        <error source="prefer-const" line="57" message="'testArray' is never reassigned. Use 'const' instead." severity="info" />
+        <error source="prettier_prettier" line="55" message="Delete `\u23ce`" severity="info" />
+        <error source="prettier_prettier" line="63" message="Delete `\u23ce\u23ce`" severity="info" />
+        <error source="prettier_prettier" line="31" message="Insert `;`" severity="info" />
+        <error source="prettier_prettier" line="18" message="Insert `\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="26" message="Insert `\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="27" message="Insert `\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="11" message="Replace `(array.length\u00b7<=\u00b71\u00b7||\u00b7array\u00b7==\u00b7null)` with `\u00b7(array.length\u00b7<=\u00b71\u00b7||\u00b7array\u00b7==\u00b7null)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="34" message="Replace `(compare(array[high],\u00b7array[i+1])\u00b7==\u00b7-1)` with `\u00b7(compare(array[high],\u00b7array[i\u00b7+\u00b71])\u00b7==\u00b7-1)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="29" message="Replace `(compare(array[j],\u00b7pivot)\u00b7==\u00b7-1)` with `\u00b7(compare(array[j],\u00b7pivot)\u00b7==\u00b7-1)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="28" message="Replace `(let\u00b7j\u00b7=\u00b7low;\u00b7j<=high-1;\u00b7j++)` with `\u00b7(let\u00b7j\u00b7=\u00b7low;\u00b7j\u00b7<=\u00b7high\u00b7-\u00b71;\u00b7j++)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="60" message="Replace `(let\u00b7testArray\u00b7of\u00b7tests)` with `\u00b7(let\u00b7testArray\u00b7of\u00b7tests)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="49" message="Replace `(o1\u00b7<\u00b7o2)` with `\u00b7(o1\u00b7<\u00b7o2)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="21" message="Replace `+` with `\u00b7+\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="35" message="Replace `+` with `\u00b7+\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="37" message="Replace `+` with `\u00b7+\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="14" message="Replace `+` with `\u00b7+\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="20" message="Replace `+` with `\u00b7+\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="25" message="Replace `array:\u00b7T[],\u00b7compare:\u00b7Comparator<T>,\u00b7low:\u00b7number,\u00b7high:\u00b7number):\u00b7number` with `\u23ce\u00b7\u00b7array:\u00b7T[],\u23ce\u00b7\u00b7compare:\u00b7Comparator<T>,\u23ce\u00b7\u00b7low:\u00b7number,\u23ce\u00b7\u00b7high:\u00b7number\u23ce):\u00b7number\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="17" message="Replace `array:\u00b7T[],\u00b7compare:\u00b7Comparator<T>,\u00b7low:\u00b7number,\u00b7high:\u00b7number` with `\u23ce\u00b7\u00b7array:\u00b7T[],\u23ce\u00b7\u00b7compare:\u00b7Comparator<T>,\u23ce\u00b7\u00b7low:\u00b7number,\u23ce\u00b7\u00b7high:\u00b7number\u23ce`" severity="info" />
+        <error source="prettier_prettier" line="51" message="Replace `else\u00b7if(o1\u00b7==\u00b7o2)` with `\u00b7else\u00b7if\u00b7(o1\u00b7==\u00b7o2)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="40" message="Replace `number)` with `\u00b7number)\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="46" message="Replace `{\u23ce` with `\u00b7{`" severity="info" />
+        <error source="prettier_prettier" line="57" message="Replace `\u00b7[],\u00b7[1],\u00b7[2,\u00b71],\u00b7[-1,\u00b72,\u00b7-3],\u00b7[3,\u00b716,\u00b78,\u00b7-5,\u00b76,\u00b74],\u00b7[1,2,3,4,5,6],\u00b7[1,2,3,4,5]` with `\u23ce\u00b7\u00b7\u00b7\u00b7[],\u23ce\u00b7\u00b7\u00b7\u00b7[1],\u23ce\u00b7\u00b7\u00b7\u00b7[2,\u00b71],\u23ce\u00b7\u00b7\u00b7\u00b7[-1,\u00b72,\u00b7-3],\u23ce\u00b7\u00b7\u00b7\u00b7[3,\u00b716,\u00b78,\u00b7-5,\u00b76,\u00b74],\u23ce\u00b7\u00b7\u00b7\u00b7[1,\u00b72,\u00b73,\u00b74,\u00b75,\u00b76],\u23ce\u00b7\u00b7\u00b7\u00b7[1,\u00b72,\u00b73,\u00b74,\u00b75],\u23ce\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="9" message="Replace `\u23ceexport\u00b7function\u00b7quickSort<T>(array:\u00b7T[],\u00b7compare:\u00b7Comparator<T>)` with `export\u00b7function\u00b7quickSort<T>(array:\u00b7T[],\u00b7compare:\u00b7Comparator<T>)\u00b7`" severity="info" />
+        <error source="security_detect-object-injection" line="29" message="Function Call Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="34" message="Function Call Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="42" message="Generic Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="42" message="Generic Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="43" message="Generic Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="26" message="Variable Assigned to Object Injection Sink" severity="info" />
+        <error source="security_detect-object-injection" line="41" message="Variable Assigned to Object Injection Sink" severity="info" />
+        <error source="spaced-comment" line="6" message="Expected space or tab after '//' in comment." severity="info" />
     </file>
 </checkstyle>
