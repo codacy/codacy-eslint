@@ -13,7 +13,7 @@
         <error source="prettier_prettier" line="17" message="Insert `,`" severity="info" />
         <error source="prettier_prettier" line="12" message="Insert `&#183;`" severity="info" />
         <error source="prettier_prettier" line="15" message="Insert `&#183;`" severity="info" />
-        <error source="prettier_prettier" line="18" message="Insert `&#92;u23ce`" severity="info" />
+        <error source="prettier_prettier" line="18" message="Insert `&#9166;`" severity="info" />
         <error source="prettier_prettier" line="11" message="Replace `'c'` with `&quot;c&quot;`" severity="info" />
         <error source="prettier_prettier" line="10" message="Replace `d:&#183;1` with `&#183;d:&#183;1&#183;`" severity="info" />
         <error source="spaced-comment" line="1" message="Expected space or tab after '//' in comment." severity="info" />
