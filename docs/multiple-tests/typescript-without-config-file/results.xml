@@ -36,8 +36,8 @@
         <error source="prettier_prettier" line="21" message="Replace `+` with `&#183;+&#183;`" severity="info" />
         <error source="prettier_prettier" line="35" message="Replace `+` with `&#183;+&#183;`" severity="info" />
         <error source="prettier_prettier" line="37" message="Replace `+` with `&#183;+&#183;`" severity="info" />
-        <error source="prettier_prettier" line="14" message="Replace `+` with `&#183;+&#183;`" severity="info" />
-        <error source="prettier_prettier" line="20" message="Replace `+` with `&#183;+&#183;`" severity="info" />
+        <error source="prettier_prettier" line="14" message="Replace `-` with `&#183;-&#183;`" severity="info" />
+        <error source="prettier_prettier" line="20" message="Replace `-` with `&#183;-&#183;`" severity="info" />
         <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;):&#183;number&#183;`" severity="info" />
         <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;`" severity="info" />
         <error source="prettier_prettier" line="51" message="Replace `else&#183;if(o1&#183;==&#183;o2)` with `&#183;else&#183;if&#183;(o1&#183;==&#183;o2)&#183;`" severity="info" />
