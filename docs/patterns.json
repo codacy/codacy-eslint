@@ -11234,6 +11234,14 @@
       "enabled": false
     },
     {
+      "patternId": "scanjs-rules_call__Function",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_call__addEventListener",
       "level": "Info",
       "category": "Security",
@@ -11275,14 +11283,6 @@
     },
     {
       "patternId": "scanjs-rules_call__execScript",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__Function",
       "level": "Info",
       "category": "Security",
       "subcategory": "CommandInjection",
@@ -12058,7 +12058,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "/Users/vrhpires/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

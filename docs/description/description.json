@@ -10937,6 +10937,12 @@
   },
   {
     "parameters": [],
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "scanjs-rules_call__addEventListener",
     "title": "Scanjs rules: Call_addEventListener",
     "timeToFix": 5
@@ -10969,12 +10975,6 @@
     "parameters": [],
     "patternId": "scanjs-rules_call__execScript",
     "title": "Scanjs rules: Call_execScript",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
     "timeToFix": 5
   },
   {

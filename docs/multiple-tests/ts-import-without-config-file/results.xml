@@ -4,6 +4,6 @@
         <error source="@typescript-eslint_explicit-function-return-type" line="4" message="Missing return type on function." severity="info" />
         <error source="node_no-unsupported-features_es-syntax" line="1" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="4" message="Import and export declarations are not supported yet." severity="error" />
-        <error source="prettier_prettier" line="3" message="Replace `\u23ceexport\u00b7function\u00b7test()` with `export\u00b7function\u00b7test()\u00b7`" severity="info" />
+        <error source="prettier_prettier" line="3" message="Replace `\\u23ceexport\\u00b7function\\u00b7test()` with `export\\u00b7function\\u00b7test()\\u00b7`" severity="info" />
     </file>
 </checkstyle>
