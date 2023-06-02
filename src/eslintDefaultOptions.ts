@@ -60,7 +60,8 @@ export const defaultOptions: ESLint.Options = {
         extends: baseConfigs.concat(typescriptConfigs),
         parserOptions: {
           sourceType: "module",
-        }
+          project: ['./tsconfig.json'],
+        },
       },
       {
         files: ["**/*.vue"],
@@ -100,6 +101,9 @@ export const defaultOptions: ESLint.Options = {
       },
       jest: {
         version: 26,
+      },
+      react: {
+        version: "detect"
       },
     },
   },

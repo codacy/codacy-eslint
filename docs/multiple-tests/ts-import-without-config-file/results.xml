@@ -2,5 +2,8 @@
 <checkstyle version="4.3">
     <file name="test.ts">
         <error source="@typescript-eslint_explicit-function-return-type" line="4" message="Missing return type on function." severity="info" />
+        <error source="node_no-unsupported-features_es-syntax" line="1" message="Import and export declarations are not supported yet." severity="error" />
+        <error source="node_no-unsupported-features_es-syntax" line="4" message="Import and export declarations are not supported yet." severity="error" />
+        <error source="prettier_prettier" line="3" message="Replace `&#9166;export&#183;function&#183;test()` with `export&#183;function&#183;test()&#183;`" severity="info" />
     </file>
 </checkstyle>

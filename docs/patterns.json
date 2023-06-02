@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.40.0",
+  "version": "8.41.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -4172,6 +4172,10 @@
         {
           "name": "catchUnsafeObjects",
           "default": false
+        },
+        {
+          "name": "useAt",
+          "default": false
         }
       ],
       "enabled": true
@@ -4909,6 +4913,13 @@
     },
     {
       "patternId": "es-x_no-atomics",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-atomics-waitasync",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -5868,6 +5879,13 @@
     },
     {
       "patternId": "es-x_no-string-prototype-includes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "es-x_no-string-prototype-iswellformed-towellformed",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -7496,7 +7514,7 @@
           "default": {}
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "jsdoc_require-param",
@@ -11216,6 +11234,14 @@
       "enabled": false
     },
     {
+      "patternId": "scanjs-rules_call__Function",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_call__addEventListener",
       "level": "Info",
       "category": "Security",
@@ -11257,14 +11283,6 @@
     },
     {
       "patternId": "scanjs-rules_call__execScript",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__Function",
       "level": "Info",
       "category": "Security",
       "subcategory": "CommandInjection",
@@ -12040,7 +12058,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "/Users/vrhpires/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
@@ -15057,6 +15075,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-root-v-if",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-setup-props-destructure",
       "level": "Info",
       "category": "CodeStyle",
@@ -15347,6 +15372,13 @@
     },
     {
       "patternId": "vue_padding-lines-in-component-definition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_prefer-define-options",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -15690,6 +15722,13 @@
     },
     {
       "patternId": "vue_valid-define-emits",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_valid-define-options",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

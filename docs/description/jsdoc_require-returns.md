@@ -61,7 +61,7 @@ Will also report if multiple `@returns` tags are present.
 | Tags     | `returns` |
 | Aliases  | `return` |
 |Recommended|true|
-| Options  | `checkConstructors`, `checkGetters`, `contexts`, `exemptedBy`, `forceRequireReturn`, `forceReturnsWithAsync` |
+| Options  |`checkConstructors`, `checkGetters`, `contexts`, `exemptedBy`, `forceRequireReturn`, `forceReturnsWithAsync`|
 | Settings | `ignoreReplacesDocs`, `overrideReplacesDocs`, `augmentsExtendsReplacesDocs`, `implementsReplacesDocs` |
 
 <a name="user-content-require-returns-failing-examples"></a>
@@ -634,6 +634,20 @@ export default async function demo() {
   return true;
 }
 // Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+function quux () {}
+
+class Test {
+  /**
+   *
+   */
+  abstract Test(): string;
+}
+// "jsdoc/require-returns": ["error"|"warn", {"contexts":["FunctionDeclaration",{"context":"TSEmptyBodyFunctionExpression","forceRequireReturn":true}]}]
+// Message: Missing JSDoc @returns declaration.
 ````
 
 
@@ -1160,5 +1174,18 @@ export function readFixture(path: string): void;
  * Reads a test fixture.
  */
 export function readFixture(path: string);
+
+/**
+ *
+ */
+function quux () {}
+
+class Test {
+  /**
+   * @returns {string} The test value
+   */
+  abstract Test(): string;
+}
+// "jsdoc/require-returns": ["error"|"warn", {"contexts":["FunctionDeclaration",{"context":"TSEmptyBodyFunctionExpression","forceRequireReturn":true}]}]
 ````
 
