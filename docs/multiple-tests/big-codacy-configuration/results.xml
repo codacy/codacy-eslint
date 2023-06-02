@@ -10,6 +10,6 @@
         <error source="no-var" line="2" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="6" message="Unexpected var, use let or const instead." severity="info" />
-        <error source="prettier_prettier" line="4" message="Replace `&middot;:&middot;42` with `:&middot;42,`" severity="info" />
+        <error source="prettier_prettier" line="4" message="Replace `&#183;:&#183;42` with `:&#183;42,`" severity="info" />
     </file>
 </checkstyle>
