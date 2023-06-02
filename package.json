@@ -87,7 +87,7 @@
     "@nrwl/cypress": "^16.3.0",
     "@nrwl/devkit": "^16.3.0",
     "@nrwl/eslint-plugin-nx": "^16.3.0",
-    "@nrwl/express": "^16.3.0",
+    "@nrwl/express": "^16.3.1",
     "@nrwl/jest": "^16.3.0",
     "@nrwl/linter": "^16.3.0",
     "@nrwl/nest": "^16.3.0",
