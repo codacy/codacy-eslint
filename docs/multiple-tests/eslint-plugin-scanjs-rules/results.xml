@@ -4,6 +4,6 @@
         <error source="scanjs-rules_assign__to__href" line="1" message="Assignment to href can be unsafe" severity="info" />
         <error source="no-undef" line="1" message="'bar' is not defined." severity="info" />
         <error source="no-undef" line="1" message="'foo' is not defined." severity="info" />
-        <error source="prettier_prettier" line="1" message="Replace `=bar` with `&#92;u00b7=&#92;u00b7bar;`" severity="info" />
+        <error source="prettier_prettier" line="1" message="Replace `=bar` with `&middot;=&middot;bar;`" severity="info" />
     </file>
 </checkstyle>
