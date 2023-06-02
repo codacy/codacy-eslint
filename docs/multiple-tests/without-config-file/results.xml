@@ -11,11 +11,11 @@
         <error source="object-shorthand" line="15" message="Expected method shorthand." severity="info" />
         <error source="prettier_prettier" line="7" message="Insert `,`" severity="info" />
         <error source="prettier_prettier" line="17" message="Insert `,`" severity="info" />
-        <error source="prettier_prettier" line="12" message="Insert `&bsol;u00b7`" severity="info" />
-        <error source="prettier_prettier" line="15" message="Insert `&bsol;u00b7`" severity="info" />
-        <error source="prettier_prettier" line="18" message="Insert `&bsol;u23ce`" severity="info" />
+        <error source="prettier_prettier" line="12" message="Insert `&#92;u00b7`" severity="info" />
+        <error source="prettier_prettier" line="15" message="Insert `&#92;u00b7`" severity="info" />
+        <error source="prettier_prettier" line="18" message="Insert `&#92;u23ce`" severity="info" />
         <error source="prettier_prettier" line="11" message="Replace `'c'` with `&quot;c&quot;`" severity="info" />
-        <error source="prettier_prettier" line="10" message="Replace `d:&bsol;u00b71` with `&bsol;u00b7d:&bsol;u00b71&bsol;u00b7`" severity="info" />
+        <error source="prettier_prettier" line="10" message="Replace `d:&#92;u00b71` with `&#92;u00b7d:&#92;u00b71&#92;u00b7`" severity="info" />
         <error source="spaced-comment" line="1" message="Expected space or tab after '//' in comment." severity="info" />
         <error source="spaced-comment" line="4" message="Expected space or tab after '//' in comment." severity="info" />
     </file>

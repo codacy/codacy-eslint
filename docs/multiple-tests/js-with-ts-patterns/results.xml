@@ -3,6 +3,6 @@
     <file name="test.js">
         <error source="no-unused-vars" line="2" message="'a' is assigned a value but never used." severity="info" />
         <error source="no-var" line="2" message="Unexpected var, use let or const instead." severity="info" />
-        <error source="prettier_prettier" line="2" message="Insert `;&bsol;u23ce`" severity="info" />
+        <error source="prettier_prettier" line="2" message="Insert `;&#92;u23ce`" severity="info" />
     </file>
 </checkstyle>
