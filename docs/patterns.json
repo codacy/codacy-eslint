@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.41.0",
+  "version": "8.42.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -7299,6 +7299,13 @@
     },
     {
       "patternId": "jsdoc_implements-on-classes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_imports-as-dependencies",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
