@@ -90,7 +90,7 @@
     "@nrwl/express": "^16.3.0",
     "@nrwl/jest": "^16.3.0",
     "@nrwl/linter": "^16.3.0",
-    "@nrwl/nest": "^16.3.0",
+    "@nrwl/nest": "^16.3.2",
     "@nrwl/next": "^16.3.0",
     "@nrwl/node": "^16.3.0",
     "@nrwl/nx-cloud": "^16.0.5",
