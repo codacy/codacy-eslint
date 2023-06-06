@@ -7146,6 +7146,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jsdoc_imports-as-dependencies",
+    "title": "Jsdoc: Imports as dependencies",
+    "description": "Reports if JSDoc `import()` statements point to a package which is not listed in `dependencies` or `devDependencies`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsdoc_informative-docs",
     "title": "Jsdoc: Informative docs",
     "description": "This rule reports doc comments that only restate their attached name.",

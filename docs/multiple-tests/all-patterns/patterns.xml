@@ -880,6 +880,7 @@
   <module name="jsdoc_check-values" />
   <module name="jsdoc_empty-tags" />
   <module name="jsdoc_implements-on-classes" />
+  <module name="jsdoc_imports-as-dependencies" />
   <module name="jsdoc_informative-docs" />
   <module name="jsdoc_match-description" />
   <module name="jsdoc_match-name" />
