@@ -181,7 +181,7 @@
     "eslint-config-strongloop": "^2.1.0",
     "eslint-config-ts-important-stuff": "^1.1.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
-    "eslint-config-turbo": "^1.10.1",
+    "eslint-config-turbo": "^1.10.2",
     "eslint-config-universe": "^11.2.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-config-winedirect": "^1.1.0",
