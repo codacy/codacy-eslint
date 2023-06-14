@@ -3,7 +3,7 @@ import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-import { rules as canonicalRules } from "eslint-plugin-canonical"
+//import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
@@ -76,7 +76,7 @@ const plugins = [
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  ["canonical", canonicalRules],
+  //["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
