@@ -3772,6 +3772,109 @@
       "enabled": false
     },
     {
+      "patternId": "canonical_destructuring-property-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAllPropertiesOnSameLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_export-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-exported",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-no-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_import-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-restricted-strings",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-unused-exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-use-extend-native",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-import-alias",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-inline-type-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-use-mount",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_sort-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_virtual-module",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "chai-expect_no-inner-compare",
       "level": "Info",
       "category": "CodeStyle",
@@ -9643,6 +9746,309 @@
       "enabled": false
     },
     {
+      "patternId": "perfectionist_sort-array-includes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "spread-last",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-classes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "groups",
+          "default": [
+            "property",
+            "constructor",
+            "method",
+            "unknown"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "groups",
+          "default": []
+        },
+        {
+          "name": "internal-pattern",
+          "default": [
+            "~/**"
+          ]
+        },
+        {
+          "name": "newlines-between",
+          "default": "always"
+        },
+        {
+          "name": "read-tsconfig",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-interfaces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "ignore-pattern",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-jsx-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "always-on-top",
+          "default": []
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-map-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-named-exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-named-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-object-types",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-objects",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "always-on-top",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-union-types",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "natural"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "playwright_missing-playwright-await",
       "level": "Error",
       "category": "ErrorProne",
@@ -11241,14 +11647,6 @@
       "enabled": false
     },
     {
-      "patternId": "scanjs-rules_call__Function",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "scanjs-rules_call__addEventListener",
       "level": "Info",
       "category": "Security",
@@ -11290,6 +11688,14 @@
     },
     {
       "patternId": "scanjs-rules_call__execScript",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "scanjs-rules_call__Function",
       "level": "Info",
       "category": "Security",
       "subcategory": "CommandInjection",
@@ -12065,7 +12471,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/vrhpires/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
         },
         {
           "name": "skipWords",

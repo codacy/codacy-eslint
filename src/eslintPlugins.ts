@@ -3,7 +3,7 @@ import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-//import { rules as canonicalRules } from "eslint-plugin-canonical"
+import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
@@ -34,6 +34,7 @@ import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
 import { rules as nodeRules } from "eslint-plugin-node"
 import { rules as nuxtRules } from "eslint-plugin-nuxt"
+import { rules as perfectionistRules } from "eslint-plugin-perfectionist"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
@@ -75,7 +76,7 @@ const plugins = [
   ["@babel", babelRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  //["canonical", canonicalRules],
+  ["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
@@ -106,6 +107,7 @@ const plugins = [
   ["no-unsanitized", noUnsanitizedRules],
   ["node", nodeRules],
   ["nuxt", nuxtRules],
+  ["perfectionist", perfectionistRules],
   ["playwright", playwrightRules],
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],

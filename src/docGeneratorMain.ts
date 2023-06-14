@@ -51,18 +51,18 @@ async function main() {
     "better-styled-components"
   )
 
-  console.log("Generate cypress description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
-    "cypress"
-  )
-
   console.log("Generate compat description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/amilajack/eslint-plugin-compat/main/docs/rules/${pattern}.md`,
     "compat"
+  )
+
+  console.log("Generate cypress description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
+    "cypress"
   )
 
   console.log("Generate ember description files")
@@ -129,6 +129,13 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/jest-community/eslint-plugin-jest/master/docs/rules/${pattern}.md`,
     "jest"
+  )
+
+  console.log("Generate jest-formating description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/dangreenisrael/eslint-plugin-jest-formatting/master/docs/rules/${pattern}.md`,
+    "jest-formating"
   )
 
   console.log("Generate jsdoc description files")
@@ -204,11 +211,11 @@ async function main() {
     false
   )
 
-  console.log("Generate package-json description files")
+  console.log("Generate perfectionist description files")
   await docGenerator.downloadDocs(
       (pattern) =>
-          `${githubBaseUrl}/zetlen/eslint-plugin-package-json/master/docs/rules/${pattern}.md`,
-      "package-json"
+          `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/${pattern}.md`,
+      "perfectionist"
   )
 
   console.log("Generate promise description files")

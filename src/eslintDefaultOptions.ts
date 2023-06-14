@@ -13,9 +13,14 @@ const baseConfigs: string[] = [
   "plugin:ember/recommended",
   "plugin:ember-suave/recommended",
   "plugin:flowtype/recommended",
+  "plugin:jest-formatting/recommended",
+  "plugin:json/recommended",
   "plugin:lodash/recommended",
+  "plugin:monorepo/recommended",
   //"plugin:@mysticatea/es2015",
   //"plugin:@mysticatea/+eslint-plugin",
+  "plugin:package-json/recommended",
+  "plugin:perfectionist/recommended-natural",
   "plugin:react/recommended",
   "plugin:security/recommended",
   "plugin:prettier/recommended"
@@ -57,7 +62,7 @@ export const defaultOptions: ESLint.Options = {
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
-        extends: baseConfigs.concat(typescriptConfigs),
+        extends: typescriptConfigs,
         parserOptions: {
           sourceType: "module",
           project: ['./tsconfig.json'],
