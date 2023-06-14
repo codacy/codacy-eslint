@@ -112,6 +112,7 @@
     "@shopify/eslint-plugin": "^42.1.0",
     "@strv/eslint-config-typescript": "^3.2.0",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@tanstack/eslint-plugin-query": "^4.29.9",
     "@teambit/eslint-config-bit-react": "^0.0.367",
     "@teambit/react.eslint-config-bit-react": "^0.0.798",
     "@types/eslint": "^8.40.2",

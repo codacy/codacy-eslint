@@ -1,13 +1,16 @@
-import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
+import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
+import { rules as auraRules } from "@salesforce/eslint-plugin-aura"
+import { rules as lightningRules } from "@salesforce/eslint-plugin-lightning"
+import { rules as queryRules } from "@tanstack/eslint-plugin-query"
+import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
 //import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
-import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
 import { rules as esXRules } from "eslint-plugin-es-x"
@@ -47,8 +50,6 @@ import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
 import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as rxjsRules } from "eslint-plugin-rxjs"
-import { rules as salesforceEslintPluginAuraRules } from "@salesforce/eslint-plugin-aura"
-import { rules as salesforceEslintPluginLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -71,9 +72,14 @@ import { Linter, Rule } from "eslint"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 
 const plugins = [
-  ["angular", angularRules],
   ["@angular-eslint", angularEslintRules],
   ["@babel", babelRules],
+  ["@salesforce/aura", auraRules],
+  ["@salesforce/lightning", lightningRules],
+  ["@shopify/eslint-plugin", shopifyRules],
+  ["@tanstack/eslint-plugin-query", queryRules],
+  ["@typescript-eslint", typescriptEslintRules],
+  ["angular", angularRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
   //["canonical", canonicalRules],
@@ -120,17 +126,13 @@ const plugins = [
   ["regexp", regexpRules],
   ["relay", relayRules],
   ["rxjs", rxjsRules],
-  ["@salesforce/aura", salesforceEslintPluginAuraRules],
-  ["@salesforce/lightning", salesforceEslintPluginLightningRules],
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
-  ["@shopify/eslint-plugin", shopifyRules],
   ["sonarjs", sonarjsRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
   ["spellcheck", spellcheckRules],
   ["storybook", storybookRules],
-  ["@typescript-eslint", typescriptEslintRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
