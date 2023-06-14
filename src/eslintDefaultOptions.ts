@@ -19,7 +19,6 @@ const baseConfigs: string[] = [
   "plugin:monorepo/recommended",
   //"plugin:@mysticatea/es2015",
   //"plugin:@mysticatea/+eslint-plugin",
-  "plugin:package-json/recommended",
   "plugin:perfectionist/recommended-natural",
   "plugin:react/recommended",
   "plugin:security/recommended",
