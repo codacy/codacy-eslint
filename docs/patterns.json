@@ -5318,6 +5318,13 @@
       "enabled": false
     },
     {
+      "patternId": "deprecation_deprecation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_alias-model-in-controller",
       "level": "Info",
       "category": "CodeStyle",

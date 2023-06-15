@@ -604,6 +604,7 @@
   <module name="cypress_require-data-selectors" />
   <module name="cypress_no-force" />
   <module name="cypress_no-pause" />
+  <module name="deprecation_deprecation" />
   <module name="ember_alias-model-in-controller" />
   <module name="ember_avoid-leaking-state-in-ember-objects" />
   <module name="ember_avoid-using-needs-in-controllers" />

@@ -5246,6 +5246,13 @@
   },
   {
     "parameters": [],
+    "patternId": "deprecation_deprecation",
+    "title": "Deprecation: Deprecation",
+    "description": "Do not use deprecated APIs.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_alias-model-in-controller",
     "title": "Ember: Alias model in controller",
     "description": "Enforce aliasing model in controllers",

@@ -12,6 +12,7 @@ import { rules as betterStyledComponentsRules } from "eslint-plugin-better-style
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
+import { rules as deprecationRules } from "eslint-plugin-deprecation"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
 import { rules as esXRules } from "eslint-plugin-es-x"
@@ -92,6 +93,7 @@ const plugins = [
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
   ["cypress", cypressRules],
+  ["deprecation", deprecationRules],
   ["ember", emberRules],
   ["ember-suave", emberSuaveRules],
   ["es-x", esXRules],
