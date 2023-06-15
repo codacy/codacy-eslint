@@ -1043,6 +1043,11 @@
   <module name="jest_valid-expect-in-promise" />
   <module name="jest_valid-expect" />
   <module name="jest_valid-title" />
+  <module name="jest-extended_prefer-to-be-array" />
+  <module name="jest-extended_prefer-to-be-false" />
+  <module name="jest-extended_prefer-to-be-object" />
+  <module name="jest-extended_prefer-to-be-true" />
+  <module name="jest-extended_prefer-to-have-been-called-once" />
   <module name="jest-formatting_padding-around-after-all-blocks" />
   <module name="jest-formatting_padding-around-after-each-blocks" />
   <module name="jest-formatting_padding-around-before-all-blocks" />

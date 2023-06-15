@@ -24,6 +24,7 @@ import { rules as i18nextRules } from "eslint-plugin-i18next"
 import { rules as importRules } from "eslint-plugin-import"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
+import { rules as jestExtendedRules } from "eslint-plugin-jest-extended"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
 import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
@@ -103,6 +104,7 @@ const plugins = [
   ["import", importRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
+  ["jest-extended", jestExtendedRules],
   ["jest-formatting", jestFormattingRules],
   ["jsdoc", jsdocRules],
   ["json", jsonRules],

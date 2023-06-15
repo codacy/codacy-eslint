@@ -8572,6 +8572,41 @@
       "enabled": false
     },
     {
+      "patternId": "jest-extended_prefer-to-be-array",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest-extended_prefer-to-be-false",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest-extended_prefer-to-be-object",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest-extended_prefer-to-be-true",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest-extended_prefer-to-have-been-called-once",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest-formatting_padding-around-after-all-blocks",
       "level": "Info",
       "category": "CodeStyle",

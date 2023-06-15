@@ -8418,6 +8418,41 @@
   },
   {
     "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-array",
+    "title": "Jest extended: Prefer to be array",
+    "description": "Suggest using `toBeArray()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-false",
+    "title": "Jest extended: Prefer to be false",
+    "description": "Suggest using `toBeFalse()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-object",
+    "title": "Jest extended: Prefer to be object",
+    "description": "Suggest using `toBeObject()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-true",
+    "title": "Jest extended: Prefer to be true",
+    "description": "Suggest using `toBeTrue()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-have-been-called-once",
+    "title": "Jest extended: Prefer to have been called once",
+    "description": "Suggest using `toHaveBeenCalledOnce()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest-formatting_padding-around-after-all-blocks",
     "title": "Jest formatting: Padding around after all blocks",
     "timeToFix": 5
