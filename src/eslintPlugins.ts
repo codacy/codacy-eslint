@@ -19,6 +19,7 @@ import { rules as esXRules } from "eslint-plugin-es-x"
 import { rules as filenamesRules } from "eslint-plugin-filenames"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
+import { rules as headerRules } from "eslint-plugin-header"
 import { rules as htmlRules } from "eslint-plugin-html"
 import { rules as i18nJsonRules } from "eslint-plugin-i18n-json"
 import { rules as i18nextRules } from "eslint-plugin-i18next"
@@ -100,6 +101,7 @@ const plugins = [
   ["filenames", filenamesRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
+  ["header", headerRules],
   ["html", htmlRules],
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],

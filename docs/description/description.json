@@ -7873,6 +7873,12 @@
   },
   {
     "parameters": [],
+    "patternId": "header_header",
+    "title": "Header: Header",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "i18n-json_valid-json",
     "title": "I18n json: Valid json",
     "description": "Validates the JSON translation file",

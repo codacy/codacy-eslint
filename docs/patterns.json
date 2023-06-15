@@ -8004,6 +8004,13 @@
       "enabled": false
     },
     {
+      "patternId": "header_header",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "i18n-json_valid-json",
       "level": "Info",
       "category": "CodeStyle",
