@@ -11,6 +11,7 @@ const blacklistRegexes: RegExp[] = [
   /babel\/flow-object-type/,
   /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
+  /header\/header/,
   /import\/.+/,
   /jest\/unbound-method/,
   /jsdoc\/newline-after-description/,
