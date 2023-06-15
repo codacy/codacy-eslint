@@ -7482,6 +7482,37 @@
       "enabled": false
     },
     {
+      "patternId": "filenames_match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "filenames_match-exported",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "camel"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "filenames_no-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "flowtype_array-style-complex-type",
       "level": "Info",
       "category": "CodeStyle",
@@ -12818,27 +12849,6 @@
       "enabled": false
     },
     {
-      "patternId": "rxjs-angular_prefer-async-pipe",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "rxjs-angular_prefer-composition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "rxjs-angular_prefer-takeuntil",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "scanjs-rules_accidental__assignment",
       "level": "Info",
       "category": "Security",
@@ -14069,357 +14079,6 @@
           "default": false
         }
       ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-add-event-listener",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-array-find",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkFromLast",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-array-flat-map",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-array-flat",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-array-index-of",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-array-some",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-at",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkAllIndexAccess",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-blob-reading-methods",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-code-point",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-date-now",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-default-parameters",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-dom-node-append",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-dom-node-dataset",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-dom-node-remove",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-dom-node-text-content",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-event-target",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-export-from",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreUsedVariables",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-includes",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-json-parse-buffer",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-keyboard-event-key",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-logical-operator-over-ternary",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-math-trunc",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-modern-dom-apis",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-modern-math-apis",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-module",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-native-coercion-functions",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-negative-index",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-node-protocol",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-number-properties",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "checkInfinity",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-object-from-entries",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-optional-catch-binding",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-prototype-methods",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-query-selector",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-reflect-apply",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-regexp-test",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-set-has",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-set-size",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-spread",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-string-replace-all",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-string-slice",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-string-starts-ends-with",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-string-trim-start-end",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-switch",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "minimumCases",
-          "default": 3
-        },
-        {
-          "name": "emptyDefaultCase",
-          "default": "no-default-comment"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-ternary",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-top-level-await",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_prefer-type-error",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
       "enabled": false
     },
     {

@@ -27,7 +27,8 @@ Rule `perfectionist/sort-imports` works in a similar way to rule `import/order`,
 
 1. Supporting for new import types: `'side-effect'`, `'style'`, `'builtin-type'`, `'internal-type'`, `'parent-type'`, `'sibling-type'`, `'index-type'`
 2. Parsing `tsconfig.json` with the `read-tsconfig` option enabled to recognize internal imports
-3. Sorting not only alphabetically, but also naturally and by line length
+3. Supporting for adding custom import groups
+4. Sorting not only alphabetically, but also naturally and by line length
 
 ## 💡 Examples
 
@@ -114,6 +115,14 @@ interface Options {
   order?: 'asc' | 'desc'
   'ignore-case'?: boolean
   groups?: (Group | Group[])[]
+  'custom-groups'?: {
+    value?: {
+      [key: string]: string | string[]
+    }
+    type?: {
+      [key: string]: string | string[]
+    }
+  }
   'internal-pattern'?: string[]
   'newlines-between'?: 'always' | 'ignore' | 'never'
   'read-tsconfig'?: boolean
@@ -196,6 +205,28 @@ If you use [one of the configs](/configs/) exported by this plugin, you get the 
 }
 ```
 
+### custom-groups
+
+<sub>(default: `{ value: {}, type: {} }`)</sub>
+
+You can define your own groups for importing values or types. The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern matching.
+
+Example:
+
+```
+{
+  "custom-groups": {
+    "value": {
+      "react": ["react", "react-*"],
+      "lodash": "lodash"
+    },
+    "type": {
+      "react": ["react", "react-*"]
+    }
+  }
+}
+```
+
 ### internal-pattern
 
 <sub>(default: `['~/**']`)</sub>
@@ -234,6 +265,8 @@ If your project is written in TypeScript, you can read `tsconfig.json` and use `
         "order": "asc",
         "groups": [
           "type",
+          "react",
+          "nanostores",
           ["builtin", "external"],
           "internal-type",
           "internal",
@@ -244,6 +277,15 @@ If your project is written in TypeScript, you can read `tsconfig.json` and use `
           "object",
           "unknown"
         ],
+        "custom-groups": {
+          "value": {
+            "react": ["react", "react-*"],
+            "nanostores": "@nanostores/**"
+          },
+          "type": {
+            "react": "react"
+          }
+        },
         "newlines-between": "always",
         "internal-pattern": [
           "@/components/**",
@@ -275,6 +317,8 @@ export default [
           order: 'asc',
           groups: [
             'type',
+            'react',
+            'nanostores',
             ['builtin', 'external'],
             'internal-type',
             'internal',
@@ -285,6 +329,15 @@ export default [
             'object',
             'unknown',
           ],
+          'custom-groups': {
+            value: {
+              react: ['react', 'react-*'],
+              nanostores: '@nanostores/**',
+            },
+            type: {
+              react: 'react'
+            }
+          },
           'newlines-between': 'always',
           'internal-pattern': [
             '@/components/**',

@@ -7398,6 +7398,34 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "filenames_match-regex",
+    "title": "Filenames: Match regex",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "filenames_match-exported",
+    "title": "Filenames: Match exported",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "filenames_no-index",
+    "title": "Filenames: No index",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "flowtype_array-style-complex-type",
     "title": "Flowtype: Array style complex type",
@@ -12531,27 +12559,6 @@
   },
   {
     "parameters": [],
-    "patternId": "rxjs-angular_prefer-async-pipe",
-    "title": "Rxjs angular: Prefer async pipe",
-    "description": "Forbids the calling of `subscribe` within Angular components.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs-angular_prefer-composition",
-    "title": "Rxjs angular: Prefer composition",
-    "description": "Forbids `subscribe` calls that are not composed within Angular components (and, optionally, within services, directives, and pipes).",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rxjs-angular_prefer-takeuntil",
-    "title": "Rxjs angular: Prefer takeuntil",
-    "description": "Forbids `subscribe` calls without an accompanying `takeUntil` within Angular components (and, optionally, within services, directives, and pipes).",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "scanjs-rules_accidental__assignment",
     "title": "Scanjs rules: Accidental_assignment",
     "timeToFix": 5
@@ -13703,357 +13710,6 @@
     "patternId": "unicorn_numeric-separators-style",
     "title": "Unicorn: Numeric separators style",
     "description": "Enforce the style of numeric separators by correctly grouping digits.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-add-event-listener",
-    "title": "Unicorn: Prefer add event listener",
-    "description": "Prefer `.addEventListener()` and `.removeEventListener()` over `on`-functions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkFromLast",
-        "description": "checkFromLast"
-      }
-    ],
-    "patternId": "unicorn_prefer-array-find",
-    "title": "Unicorn: Prefer array find",
-    "description": "Prefer `.find(…)` and `.findLast(…)` over the first or last element from `.filter(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-flat-map",
-    "title": "Unicorn: Prefer array flat map",
-    "description": "Prefer `.flatMap(…)` over `.map(…).flat()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-flat",
-    "title": "Unicorn: Prefer array flat",
-    "description": "Prefer `Array#flat()` over legacy techniques to flatten arrays.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-index-of",
-    "title": "Unicorn: Prefer array index of",
-    "description": "Prefer `Array#{indexOf,lastIndexOf}()` over `Array#{findIndex,findLastIndex}()` when looking for the index of an item.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-some",
-    "title": "Unicorn: Prefer array some",
-    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast}(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkAllIndexAccess",
-        "description": "checkAllIndexAccess"
-      }
-    ],
-    "patternId": "unicorn_prefer-at",
-    "title": "Unicorn: Prefer at",
-    "description": "Prefer `.at()` method for index access and `String#charAt()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-blob-reading-methods",
-    "title": "Unicorn: Prefer blob reading methods",
-    "description": "Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and `Blob#text()` over `FileReader#readAsText(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-code-point",
-    "title": "Unicorn: Prefer code point",
-    "description": "Prefer `String#codePointAt(…)` over `String#charCodeAt(…)` and `String.fromCodePoint(…)` over `String.fromCharCode(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-date-now",
-    "title": "Unicorn: Prefer date now",
-    "description": "Prefer `Date.now()` to get the number of milliseconds since the Unix Epoch.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-default-parameters",
-    "title": "Unicorn: Prefer default parameters",
-    "description": "Prefer default parameters over reassignment.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-append",
-    "title": "Unicorn: Prefer dom node append",
-    "description": "Prefer `Node#append()` over `Node#appendChild()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-dataset",
-    "title": "Unicorn: Prefer dom node dataset",
-    "description": "Prefer using `.dataset` on DOM elements over calling attribute methods.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-remove",
-    "title": "Unicorn: Prefer dom node remove",
-    "description": "Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-text-content",
-    "title": "Unicorn: Prefer dom node text content",
-    "description": "Prefer `.textContent` over `.innerText`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-event-target",
-    "title": "Unicorn: Prefer event target",
-    "description": "Prefer `EventTarget` over `EventEmitter`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreUsedVariables",
-        "description": "ignoreUsedVariables"
-      }
-    ],
-    "patternId": "unicorn_prefer-export-from",
-    "title": "Unicorn: Prefer export from",
-    "description": "Prefer `export…from` when re-exporting.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-includes",
-    "title": "Unicorn: Prefer includes",
-    "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-json-parse-buffer",
-    "title": "Unicorn: Prefer json parse buffer",
-    "description": "Prefer reading a JSON file as a buffer.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-keyboard-event-key",
-    "title": "Unicorn: Prefer keyboard event key",
-    "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-logical-operator-over-ternary",
-    "title": "Unicorn: Prefer logical operator over ternary",
-    "description": "Prefer using a logical operator over a ternary.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-math-trunc",
-    "title": "Unicorn: Prefer math trunc",
-    "description": "Enforce the use of `Math.trunc` instead of bitwise operators.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-modern-dom-apis",
-    "title": "Unicorn: Prefer modern dom apis",
-    "description": "Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()` or `.prepend()` over `insertAdjacentText()` and `insertAdjacentElement()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-modern-math-apis",
-    "title": "Unicorn: Prefer modern math apis",
-    "description": "Prefer modern `Math` APIs over legacy patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-module",
-    "title": "Unicorn: Prefer module",
-    "description": "Prefer JavaScript modules (ESM) over CommonJS.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-native-coercion-functions",
-    "title": "Unicorn: Prefer native coercion functions",
-    "description": "Prefer using `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` directly.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-negative-index",
-    "title": "Unicorn: Prefer negative index",
-    "description": "Prefer negative index over `.length - index` when possible.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-node-protocol",
-    "title": "Unicorn: Prefer node protocol",
-    "description": "Prefer using the `node:` protocol when importing Node.js builtin modules.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkInfinity",
-        "description": "checkInfinity"
-      }
-    ],
-    "patternId": "unicorn_prefer-number-properties",
-    "title": "Unicorn: Prefer number properties",
-    "description": "Prefer `Number` static properties over global ones.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-object-from-entries",
-    "title": "Unicorn: Prefer object from entries",
-    "description": "Prefer using `Object.fromEntries(…)` to transform a list of key-value pairs into an object.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-optional-catch-binding",
-    "title": "Unicorn: Prefer optional catch binding",
-    "description": "Prefer omitting the `catch` binding parameter.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-prototype-methods",
-    "title": "Unicorn: Prefer prototype methods",
-    "description": "Prefer borrowing methods from the prototype instead of the instance.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-query-selector",
-    "title": "Unicorn: Prefer query selector",
-    "description": "Prefer `.querySelector()` over `.getElementById()`, `.querySelectorAll()` over `.getElementsByClassName()` and `.getElementsByTagName()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-reflect-apply",
-    "title": "Unicorn: Prefer reflect apply",
-    "description": "Prefer `Reflect.apply()` over `Function#apply()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-regexp-test",
-    "title": "Unicorn: Prefer regexp test",
-    "description": "Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-set-has",
-    "title": "Unicorn: Prefer set has",
-    "description": "Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-set-size",
-    "title": "Unicorn: Prefer set size",
-    "description": "Prefer using `Set#size` instead of `Array#length`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-spread",
-    "title": "Unicorn: Prefer spread",
-    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#{slice,toSpliced}()` and `String#split('')`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-replace-all",
-    "title": "Unicorn: Prefer string replace all",
-    "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-slice",
-    "title": "Unicorn: Prefer string slice",
-    "description": "Prefer `String#slice()` over `String#substr()` and `String#substring()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-starts-ends-with",
-    "title": "Unicorn: Prefer string starts ends with",
-    "description": "Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-trim-start-end",
-    "title": "Unicorn: Prefer string trim start end",
-    "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "minimumCases",
-        "description": "minimumCases"
-      },
-      {
-        "name": "emptyDefaultCase",
-        "description": "emptyDefaultCase"
-      }
-    ],
-    "patternId": "unicorn_prefer-switch",
-    "title": "Unicorn: Prefer switch",
-    "description": "Prefer `switch` over multiple `else-if`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-ternary",
-    "title": "Unicorn: Prefer ternary",
-    "description": "Prefer ternary expressions over simple `if-else` statements.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-top-level-await",
-    "title": "Unicorn: Prefer top level await",
-    "description": "Prefer top-level await over top-level promises and async function calls.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-type-error",
-    "title": "Unicorn: Prefer type error",
-    "description": "Enforce throwing `TypeError` in type checking conditions.",
     "timeToFix": 5
   },
   {

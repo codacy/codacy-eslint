@@ -14,6 +14,7 @@ import { rules as compatRules } from "eslint-plugin-compat"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
 import { rules as esXRules } from "eslint-plugin-es-x"
+import { rules as filenamesRules } from "eslint-plugin-filenames"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
 import { rules as functionalRules } from "eslint-plugin-functional"
 import { rules as htmlRules } from "eslint-plugin-html"
@@ -91,6 +92,7 @@ const plugins = [
   ["ember", emberRules],
   ["ember-suave", emberSuaveRules],
   ["es-x", esXRules],
+  ["filenames", filenamesRules],
   ["flowtype", flowtypeRules],
   ["functional", functionalRules],
   ["html", htmlRules],
