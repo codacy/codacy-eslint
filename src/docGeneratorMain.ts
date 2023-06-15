@@ -22,13 +22,6 @@ async function main() {
 
   const githubBaseUrl = "https://raw.githubusercontent.com"
 
-  console.log("Generate angular description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
-    "angular"
-  )
-
   console.log("Generate @angular-eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -56,6 +49,21 @@ async function main() {
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
     "@shopify/eslint-plugin",
     false
+  )
+
+  console.log("Generate @typescript-eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@typescript-eslint",
+    false
+  )
+
+  console.log("Generate angular description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
+    "angular"
   )
 
   console.log("Generate backbone description files")
@@ -303,12 +311,11 @@ async function main() {
     "storybook"
   )
 
-  console.log("Generate typescript-eslint description files")
+  console.log("Generate tailwindcss description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@typescript-eslint",
-    false
+      `${githubBaseUrl}/francoismassart/eslint-plugin-tailwindcss/master/docs/rules/${pattern}.md`,
+    "tailwindcss"
   )
 
   console.log("Generate typescript-sort-keys description files")

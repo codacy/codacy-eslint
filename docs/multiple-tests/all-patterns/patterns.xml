@@ -1664,6 +1664,13 @@
   <module name="storybook_story-exports" />
   <module name="storybook_use-storybook-expect" />
   <module name="storybook_use-storybook-testing-library" />
+  <module name="tailwindcss_classnames-order" />
+  <module name="tailwindcss_enforces-negative-arbitrary-values" />
+  <module name="tailwindcss_enforces-shorthand" />
+  <module name="tailwindcss_migration-from-tailwind-2" />
+  <module name="tailwindcss_no-arbitrary-value" />
+  <module name="tailwindcss_no-contradicting-classname" />
+  <module name="tailwindcss_no-custom-classname" />
   <module name="typescript-sort-keys_interface" />
   <module name="typescript-sort-keys_string-enum" />
   <module name="unicorn_better-regex" />

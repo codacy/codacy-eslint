@@ -267,6 +267,7 @@
     "eslint-plugin-spellcheck": "^0.0.20",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-suitescript": "^1.2.1",
+    "eslint-plugin-tailwindcss": "^3.12.1",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-turbo": "^1.10.3",
     "eslint-plugin-typescript-sort-keys": "^2.3.0",

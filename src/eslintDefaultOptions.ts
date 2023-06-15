@@ -20,9 +20,10 @@ const baseConfigs: string[] = [
   //"plugin:@mysticatea/es2015",
   //"plugin:@mysticatea/+eslint-plugin",
   "plugin:perfectionist/recommended-natural",
+  "plugin:prettier/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
-  "plugin:prettier/recommended"
+  "plugin:tailwindcss/recommended"
 ]
 
 const typescriptConfigs: string[] = [

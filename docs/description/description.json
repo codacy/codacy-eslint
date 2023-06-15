@@ -13285,6 +13285,55 @@
   },
   {
     "parameters": [],
+    "patternId": "tailwindcss_classnames-order",
+    "title": "Tailwindcss: Classnames order",
+    "description": "Enforce a consistent and logical order of the Tailwind CSS classnames",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_enforces-negative-arbitrary-values",
+    "title": "Tailwindcss: Enforces negative arbitrary values",
+    "description": "Warns about dash prefixed classnames using arbitrary values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_enforces-shorthand",
+    "title": "Tailwindcss: Enforces shorthand",
+    "description": "Enforces the usage of shorthand Tailwind CSS classnames",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_migration-from-tailwind-2",
+    "title": "Tailwindcss: Migration from tailwind 2",
+    "description": "Detect obsolete classnames when upgrading to Tailwind CSS v3",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_no-arbitrary-value",
+    "title": "Tailwindcss: No arbitrary value",
+    "description": "Forbid using arbitrary values in classnames",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_no-contradicting-classname",
+    "title": "Tailwindcss: No contradicting classname",
+    "description": "Avoid contradicting Tailwind CSS classnames (e.g. \"w-3 w-5\")",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tailwindcss_no-custom-classname",
+    "title": "Tailwindcss: No custom classname",
+    "description": "Detect classnames which do not belong to Tailwind CSS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "typescript-sort-keys_interface",
     "title": "Typescript sort keys: Interface",
     "description": "Require interface keys to be sorted",

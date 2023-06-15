@@ -4,6 +4,7 @@ import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
 import { rules as auraRules } from "@salesforce/eslint-plugin-aura"
 import { rules as lightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as queryRules } from "@tanstack/eslint-plugin-query"
+import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
@@ -61,7 +62,7 @@ import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as storybookRules } from "eslint-plugin-storybook"
-import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
+import { rules as tailwindcssRules } from "eslint-plugin-tailwindcss"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
@@ -139,6 +140,7 @@ const plugins = [
   ["sort-keys-fix", sortKeysFixRules],
   ["spellcheck", spellcheckRules],
   ["storybook", storybookRules],
+  ["tailwindcss", tailwindcssRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
