@@ -12,6 +12,7 @@ const baseConfigs: string[] = [
   "plugin:cypress/recommended",
   "plugin:ember/recommended",
   "plugin:ember-suave/recommended",
+  "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
   "plugin:jest-formatting/recommended",
   "plugin:json/recommended",

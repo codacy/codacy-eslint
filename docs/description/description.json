@@ -7405,6 +7405,198 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "eslint-plugin_consistent-output",
+    "title": "Eslint plugin: Consistent output",
+    "description": "Enforce consistent use of `output` assertions in rule tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_fixer-return",
+    "title": "Eslint plugin: Fixer return",
+    "description": "Require fixer functions to return a fix",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_meta-property-ordering",
+    "title": "Eslint plugin: Meta property ordering",
+    "description": "Enforce the order of meta properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-deprecated-context-methods",
+    "title": "Eslint plugin: No deprecated context methods",
+    "description": "Disallow usage of deprecated methods on rule context objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-deprecated-report-api",
+    "title": "Eslint plugin: No deprecated report api",
+    "description": "Disallow the version of `context.report()` with multiple arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-identical-tests",
+    "title": "Eslint plugin: No identical tests",
+    "description": "Disallow identical tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-missing-message-ids",
+    "title": "Eslint plugin: No missing message ids",
+    "description": "Disallow `messageId`s that are missing from `meta.messages`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-missing-placeholders",
+    "title": "Eslint plugin: No missing placeholders",
+    "description": "Disallow missing placeholders in rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-only-tests",
+    "title": "Eslint plugin: No only tests",
+    "description": "Disallow the test case property `only`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-unused-message-ids",
+    "title": "Eslint plugin: No unused message ids",
+    "description": "Disallow unused `messageId`s in `meta.messages`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-unused-placeholders",
+    "title": "Eslint plugin: No unused placeholders",
+    "description": "Disallow unused placeholders in rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-useless-token-range",
+    "title": "Eslint plugin: No useless token range",
+    "description": "Disallow unnecessary calls to `sourceCode.getFirstToken()` and `sourceCode.getLastToken()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-message-ids",
+    "title": "Eslint plugin: Prefer message ids",
+    "description": "Require using `messageId` instead of `message` to report rule violations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-object-rule",
+    "title": "Eslint plugin: Prefer object rule",
+    "description": "Disallow function-style rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-output-null",
+    "title": "Eslint plugin: Prefer output null",
+    "description": "Disallow invalid RuleTester test cases where the `output` matches the `code`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-placeholders",
+    "title": "Eslint plugin: Prefer placeholders",
+    "description": "Require using placeholders for dynamic report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-replace-text",
+    "title": "Eslint plugin: Prefer replace text",
+    "description": "Require using `replaceText()` instead of `replaceTextRange()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_report-message-format",
+    "title": "Eslint plugin: Report message format",
+    "description": "Enforce a consistent format for rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-docs-description",
+    "title": "Eslint plugin: Require meta docs description",
+    "description": "Require rules to implement a `meta.docs.description` property with the correct format",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-docs-url",
+    "title": "Eslint plugin: Require meta docs url",
+    "description": "Require rules to implement a `meta.docs.url` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "catchNoFixerButFixableProperty",
+        "description": "catchNoFixerButFixableProperty"
+      }
+    ],
+    "patternId": "eslint-plugin_require-meta-fixable",
+    "title": "Eslint plugin: Require meta fixable",
+    "description": "Require rules to implement a `meta.fixable` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-has-suggestions",
+    "title": "Eslint plugin: Require meta has suggestions",
+    "description": "Require suggestable rules to implement a `meta.hasSuggestions` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requireSchemaPropertyWhenOptionless",
+        "description": "requireSchemaPropertyWhenOptionless"
+      }
+    ],
+    "patternId": "eslint-plugin_require-meta-schema",
+    "title": "Eslint plugin: Require meta schema",
+    "description": "Require rules to implement a `meta.schema` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-type",
+    "title": "Eslint plugin: Require meta type",
+    "description": "Require rules to implement a `meta.type` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_test-case-property-ordering",
+    "title": "Eslint plugin: Test case property ordering",
+    "description": "Require the properties of a test case to be placed in a consistent order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_test-case-shorthand-strings",
+    "title": "Eslint plugin: Test case shorthand strings",
+    "description": "Enforce consistent usage of shorthand strings for test cases with no options",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "unnamedParam",
@@ -7869,12 +8061,6 @@
     "patternId": "functional_type-declaration-immutability",
     "title": "Functional: Type declaration immutability",
     "description": "Enforce the immutability of types based on patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "header_header",
-    "title": "Header: Header",
     "timeToFix": 5
   },
   {

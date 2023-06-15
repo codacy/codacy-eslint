@@ -113,14 +113,20 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/eslint-community/eslint-plugin-es-x/master/docs/rules/${pattern}.md`,
-    "es-x",
-      false
+    "es-x"
   )
 
   console.log("Generate eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/eslint/eslint/main/docs/src/rules/${pattern}.md`
+  )
+
+  console.log("Generate eslint-plugin description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/eslint-community/eslint-plugin-eslint-plugin/main/docs/rules/${pattern}.md`,
+    "eslint-plugin"
   )
 
   console.log("Generate functional description files")
