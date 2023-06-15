@@ -58,6 +58,25 @@ export const defaultOptions: ESLint.Options = {
         "jsx": true
       }
     },
+    settings: {
+      "node": {
+        "tryExtensions": [".js", ".json", ".node"]
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+      jest: {
+        version: 26,
+      },
+      react: {
+        version: "latest"
+      },
+    },
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
@@ -91,25 +110,6 @@ export const defaultOptions: ESLint.Options = {
         ]
       },       
     ],
-    settings: {
-      "node": {
-        "tryExtensions": [".js", ".json", ".node"]
-      },
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
-      },
-      "import/resolver": {
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
-      jest: {
-        version: 26,
-      },
-      react: {
-        version: "detect"
-      },
-    },
   },
 }
 
