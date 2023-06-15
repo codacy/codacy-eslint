@@ -11544,6 +11544,13 @@
       "enabled": true
     },
     {
+      "patternId": "prefer-object-spread_prefer-object-spread",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "prettier_prettier",
       "level": "Info",
       "category": "CodeStyle",

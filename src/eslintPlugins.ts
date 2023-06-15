@@ -40,6 +40,7 @@ import { rules as nodeRules } from "eslint-plugin-node"
 import { rules as nuxtRules } from "eslint-plugin-nuxt"
 import { rules as perfectionistRules } from "eslint-plugin-perfectionist"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
+import { rules as preferObjectSpreadRules } from "eslint-plugin-prefer-object-spread"
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
 import { rules as promiseRules } from "eslint-plugin-promise"
@@ -118,6 +119,7 @@ const plugins = [
   ["nuxt", nuxtRules],
   ["perfectionist", perfectionistRules],
   ["playwright", playwrightRules],
+  ["prefer-object-spread", preferObjectSpreadRules],
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],
   ["promise", promiseRules],

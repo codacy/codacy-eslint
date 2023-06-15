@@ -1387,6 +1387,7 @@
   <module name="playwright_require-top-level-describe" />
   <module name="playwright_require-soft-assertions" />
   <module name="playwright_valid-expect" />
+  <module name="prefer-object-spread_prefer-object-spread" />
   <module name="prettier_prettier" />
   <module name="prettier-vue_prettier" />
   <module name="promise_param-names" />

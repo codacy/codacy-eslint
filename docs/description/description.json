@@ -11277,6 +11277,13 @@
   },
   {
     "parameters": [],
+    "patternId": "prefer-object-spread_prefer-object-spread",
+    "title": "Prefer object spread: Prefer object spread",
+    "description": "Use a spread property instead of Object.assign().",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prettier_prettier",
     "title": "Prettier: Prettier",
     "timeToFix": 5
