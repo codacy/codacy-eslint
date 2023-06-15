@@ -74,7 +74,7 @@ export const defaultOptions: ESLint.Options = {
         version: 26,
       },
       react: {
-        version: "latest"
+        version: "18.2.0"
       },
     },
     overrides: [
@@ -95,11 +95,17 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["**/*.jsx"],
+        files: ["**/*.jsx", "**/*.js"],
+        parser: "@babel/eslint-parser",
         parserOptions: {
           babelOptions: {
             presets: ["@babel/preset-react"],
           }
+        },
+        rules: {
+          "rxjs-angular_prefer-async-pipe": "off",
+          "rxjs-angular_prefer-composition": "off",
+          "rxjs-angular_prefer-takeunti": "off",
         },
       },
       {
