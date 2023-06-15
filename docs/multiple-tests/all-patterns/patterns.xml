@@ -1561,6 +1561,9 @@
   <module name="relay_must-colocate-fragment-spreads" />
   <module name="relay_function-required-argument" />
   <module name="relay_hook-required-argument" />
+  <module name="rxjs-angular_prefer-async-pipe" />
+  <module name="rxjs-angular_prefer-composition" />
+  <module name="rxjs-angular_prefer-takeuntil" />
   <module name="scanjs-rules_accidental__assignment" />
   <module name="scanjs-rules_assign__to__hostname" />
   <module name="scanjs-rules_assign__to__href" />

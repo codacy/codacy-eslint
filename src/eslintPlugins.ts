@@ -50,6 +50,7 @@ import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
 import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as rxjsRules } from "eslint-plugin-rxjs"
+import { rules as rxjsAngularRules } from "eslint-plugin-rxjs-angular"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -126,6 +127,7 @@ const plugins = [
   ["regexp", regexpRules],
   ["relay", relayRules],
   ["rxjs", rxjsRules],
+  ["rxjs-angular", rxjsAngularRules],
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
   ["sonarjs", sonarjsRules],

@@ -12818,6 +12818,27 @@
       "enabled": false
     },
     {
+      "patternId": "rxjs-angular_prefer-async-pipe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "rxjs-angular_prefer-composition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "rxjs-angular_prefer-takeuntil",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_accidental__assignment",
       "level": "Info",
       "category": "Security",

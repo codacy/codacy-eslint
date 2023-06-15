@@ -36,6 +36,28 @@ async function main() {
     "@angular-eslint"
   )
 
+  console.log("Generate @salesforce/aura description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
+    "@salesforce/aura"
+  )
+
+  console.log("Generate @salesforce/lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/lightning"
+  )
+
+  console.log("Generate @shopify_eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@shopify/eslint-plugin",
+    false
+  )
+
   console.log("Generate backbone description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -260,26 +282,11 @@ async function main() {
       "rxjs"
   )
 
-  console.log("Generate @salesforce/aura description files")
+  console.log("Generate rxjs-angular description files")
   await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
-    "@salesforce/aura"
-  )
-
-  console.log("Generate @salesforce/lightning description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
-    "@salesforce/lightning"
-  )
-
-  console.log("Generate @shopify_eslint description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
-    false
+      (pattern) =>
+          `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
+      "rxjs-angular"
   )
 
   console.log("Generate sonarjs description files")

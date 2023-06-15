@@ -12531,6 +12531,27 @@
   },
   {
     "parameters": [],
+    "patternId": "rxjs-angular_prefer-async-pipe",
+    "title": "Rxjs angular: Prefer async pipe",
+    "description": "Forbids the calling of `subscribe` within Angular components.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-composition",
+    "title": "Rxjs angular: Prefer composition",
+    "description": "Forbids `subscribe` calls that are not composed within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-takeuntil",
+    "title": "Rxjs angular: Prefer takeuntil",
+    "description": "Forbids `subscribe` calls without an accompanying `takeUntil` within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "scanjs-rules_accidental__assignment",
     "title": "Scanjs rules: Accidental_assignment",
     "timeToFix": 5
