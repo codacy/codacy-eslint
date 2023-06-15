@@ -8107,6 +8107,13 @@
   },
   {
     "parameters": [],
+    "patternId": "import-alias_import-alias",
+    "title": "Import alias: Import alias",
+    "description": "Restrict imports to path aliases or relative imports limited by a depth",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_expect-matcher",
     "title": "Jasmine: Expect matcher",
     "timeToFix": 5

@@ -26,6 +26,7 @@ import { rules as htmlRules } from "eslint-plugin-html"
 import { rules as i18nJsonRules } from "eslint-plugin-i18n-json"
 import { rules as i18nextRules } from "eslint-plugin-i18next"
 import { rules as importRules } from "eslint-plugin-import"
+import { rules as importAliasRules } from "eslint-plugin-import-alias"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestExtendedRules } from "eslint-plugin-jest-extended"
@@ -108,6 +109,7 @@ const plugins = [
   ["i18n-json", i18nJsonRules],
   ["i18next", i18nextRules],
   ["import", importRules],
+  ["import-alias", importAliasRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
   ["jest-extended", jestExtendedRules],

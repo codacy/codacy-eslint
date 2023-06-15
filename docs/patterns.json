@@ -8238,6 +8238,13 @@
       "enabled": true
     },
     {
+      "patternId": "import-alias_import-alias",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "jasmine_expect-matcher",
       "level": "Info",
       "category": "CodeStyle",
