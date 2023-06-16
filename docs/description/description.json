@@ -15962,48 +15962,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vuetify_grid-unknown-attributes",
-    "title": "Vuetify: Grid unknown attributes",
-    "description": "Warn about unknown attributes not being converted to classes on new grid components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-classes",
-    "title": "Vuetify: No deprecated classes",
-    "description": "Disallow the use of classes that have been removed from Vuetify",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-colors",
-    "title": "Vuetify: No deprecated colors",
-    "description": "Disallow the use of classes that have been removed from Vuetify",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-components",
-    "title": "Vuetify: No deprecated components",
-    "description": "Prevent the use of components that have been removed from Vuetify",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-events",
-    "title": "Vuetify: No deprecated events",
-    "description": "Prevent the use of removed and deprecated events.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-props",
-    "title": "Vuetify: No deprecated props",
-    "description": "Prevent the use of removed and deprecated props.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_enforce-style-type",
     "title": "Vue scoped css: Enforce style type",
     "description": "Enforce the `<style>` tags to be plain or have the `scoped` or `module` attribute",

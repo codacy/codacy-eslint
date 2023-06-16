@@ -368,13 +368,6 @@ async function main() {
     "vue"
   )
 
-  console.log("Generate vuetify description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/vuetifyjs/eslint-plugin-vuetify/master/docs/rules/${pattern}.md`,
-    "vuetify"
-  )
-
   console.log("Generate vue-scoped-css description files")
   await docGenerator.downloadDocs(
     (pattern) =>
