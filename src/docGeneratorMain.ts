@@ -202,6 +202,13 @@ async function main() {
     "jsx-a11y"
   )
 
+  console.log("Generate lit description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/43081j/eslint-plugin-lit/master/docs/rules/${pattern}.md`,
+    "lit"
+  )
+
   console.log("Generate lodash description files")
   await docGenerator.downloadDocs(
     (pattern) =>

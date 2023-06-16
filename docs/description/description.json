@@ -10087,6 +10087,153 @@
   },
   {
     "parameters": [],
+    "patternId": "lit_attribute-value-entities",
+    "title": "Lit: Attribute value entities",
+    "description": "Disallows unencoded HTML entities in attribute values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_ban-attributes",
+    "title": "Lit: Ban attributes",
+    "description": "Disallows a set of attributes from being used in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_binding-positions",
+    "title": "Lit: Binding positions",
+    "description": "Disallows invalid binding positions in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-duplicate-template-bindings",
+    "title": "Lit: No duplicate template bindings",
+    "description": "Disallows duplicate names in template bindings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-invalid-escape-sequences",
+    "title": "Lit: No invalid escape sequences",
+    "description": "Disallows invalid escape sequences in template strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-invalid-html",
+    "title": "Lit: No invalid html",
+    "description": "Disallows invalid HTML in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-legacy-imports",
+    "title": "Lit: No legacy imports",
+    "description": "Detects usages of legacy lit imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-legacy-template-syntax",
+    "title": "Lit: No legacy template syntax",
+    "description": "Detects usages of legacy binding syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-native-attributes",
+    "title": "Lit: No native attributes",
+    "description": "Disallows use of native attributes as properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-private-properties",
+    "title": "Lit: No private properties",
+    "description": "Disallows usages of \"non-public\" property bindings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-property-change-update",
+    "title": "Lit: No property change update",
+    "description": "Disallows property changes in the `update` lifecycle method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-arrow",
+    "title": "Lit: No template arrow",
+    "description": "Disallows arrow functions in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-bind",
+    "title": "Lit: No template bind",
+    "description": "Disallows `.bind` in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-map",
+    "title": "Lit: No template map",
+    "description": "Disallows array `.map` in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-this-assign-in-render",
+    "title": "Lit: No this assign in render",
+    "description": "Disallows assignments to members of `this` in render methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-useless-template-literals",
+    "title": "Lit: No useless template literals",
+    "description": "Disallows redundant literal values in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-value-attribute",
+    "title": "Lit: No value attribute",
+    "description": "Detects usages of the `value` attribute where the equivalent property should be used instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_prefer-nothing",
+    "title": "Lit: Prefer nothing",
+    "description": "Enforces use of `nothing` constant over empty templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_prefer-static-styles",
+    "title": "Lit: Prefer static styles",
+    "description": "Enforces the use of static styles in elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_quoted-expressions",
+    "title": "Lit: Quoted expressions",
+    "description": "Enforces the presence or absence of quotes around expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_value-after-constraints",
+    "title": "Lit: Value after constraints",
+    "description": "Enforces that `value` is bound on an input after constraints",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "lodash_callback-binding",
     "title": "Lodash: Callback binding",
     "timeToFix": 5

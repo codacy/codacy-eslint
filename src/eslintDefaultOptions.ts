@@ -16,6 +16,7 @@ const baseConfigs: string[] = [
   "plugin:flowtype/recommended",
   "plugin:jest-formatting/recommended",
   "plugin:json/recommended",
+  "plugin:lit/recommended",
   "plugin:lodash/recommended",
   "plugin:monorepo/recommended",
   //"plugin:@mysticatea/es2015",

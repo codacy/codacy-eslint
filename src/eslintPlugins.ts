@@ -35,6 +35,7 @@ import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
+import { rules as litRules } from "eslint-plugin-lit"
 import { rules as lodashRules } from "eslint-plugin-lodash"
 import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
 import { rules as meteorRules } from "eslint-plugin-meteor"
@@ -118,6 +119,7 @@ const plugins = [
   ["json", jsonRules],
   ["jsonc", jsoncRules],
   ["jsx-a11y", jsxA11yRules],
+  ["lit", litRules],
   ["lodash", lodashRules],
   ["lodash-fp", lodashFpRules],
   ["meteor", meteorRules],
