@@ -25,8 +25,7 @@ const baseConfigs: string[] = [
   "plugin:putout/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
-  "plugin:tailwindcss/recommended",
-  "plugin:you-dont-need-lodash-underscore/compatible"
+  "plugin:tailwindcss/recommended"
 ]
 
 const typescriptConfigs: string[] = [
