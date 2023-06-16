@@ -77,6 +77,7 @@ import { rules as vueScopedCssRules } from "eslint-plugin-vue-scoped-css"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as ymlRules } from "eslint-plugin-yml"
+import { rules as youDontNeedLodashUnderscoreRules } from "eslint-plugin-you-dont-need-lodash-underscore"
 
 import { Linter, Rule } from "eslint"
 import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
@@ -160,7 +161,8 @@ const plugins = [
   ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],
-  ["yml", ymlRules]
+  ["yml", ymlRules],
+  ["you-dont-need-lodash-underscore", youDontNeedLodashUnderscoreRules]
 ]
 
 export const pluginsNames = plugins.map(([name, _]) => name)
