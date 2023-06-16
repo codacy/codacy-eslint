@@ -29,8 +29,6 @@ const blacklistRegexes: RegExp[] = [
   /unicorn\/prefer-.+/,
   /unicorn\/regex-shorthand/,
   /unused-imports\/no-unused-.+-ts/,
-  /vuetify\/grid-unknown-attributes/,
-  /vuetify\/no-deprecated-classes/,
   /yml\/sort-sequence-values/
 ]
 

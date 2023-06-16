@@ -41,7 +41,6 @@ const typescriptConfigs: string[] = [
 
 export const defaultOptions: ESLint.Options = {
   baseConfig: {
-    root: true,
     extends: baseConfigs,
     env: {
       es6: true,
