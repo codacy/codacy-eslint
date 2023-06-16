@@ -73,6 +73,7 @@ import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
 import { rules as vueRules } from "eslint-plugin-vue"
+import { rules as vuetifyRules } from "eslint-plugin-vuetify"
 import { rules as vueScopedCssRules } from "eslint-plugin-vue-scoped-css"
 import { rules as wdioRules } from "eslint-plugin-wdio"
 import { rules as xssRules } from "eslint-plugin-xss"
@@ -157,6 +158,7 @@ const plugins = [
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],
   ["vue", vueRules],
+  ["vuetify", vuetifyRules],
   ["vue-scoped-css", vueScopedCssRules],
   ["wdio", wdioRules],
   ["xss", xssRules],

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es6",
-    "module": "commonjs",
+    "module": "CommonJS",
     "lib": [
       "es2015",
       "dom"

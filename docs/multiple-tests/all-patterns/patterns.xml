@@ -2018,6 +2018,12 @@
   <module name="vue_valid-v-show" />
   <module name="vue_valid-v-slot" />
   <module name="vue_valid-v-text" />
+  <module name="vuetify_grid-unknown-attributes" />
+  <module name="vuetify_no-deprecated-classes" />
+  <module name="vuetify_no-deprecated-colors" />
+  <module name="vuetify_no-deprecated-components" />
+  <module name="vuetify_no-deprecated-events" />
+  <module name="vuetify_no-deprecated-props" />
   <module name="vue-scoped-css_enforce-style-type" />
   <module name="vue-scoped-css_no-deprecated-deep-combinator" />
   <module name="vue-scoped-css_no-deprecated-v-enter-v-leave-class" />
