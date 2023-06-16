@@ -15962,20 +15962,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vuetify_grid-unknown-attributes",
-    "title": "Vuetify: Grid unknown attributes",
-    "description": "Warn about unknown attributes not being converted to classes on new grid components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuetify_no-deprecated-classes",
-    "title": "Vuetify: No deprecated classes",
-    "description": "Disallow the use of classes that have been removed from Vuetify",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vuetify_no-deprecated-colors",
     "title": "Vuetify: No deprecated colors",
     "description": "Disallow the use of classes that have been removed from Vuetify",
