@@ -22,6 +22,7 @@ const baseConfigs: string[] = [
   //"plugin:@mysticatea/+eslint-plugin",
   "plugin:perfectionist/recommended-natural",
   "plugin:prettier/recommended",
+  "plugin:putout/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
   "plugin:tailwindcss/recommended",

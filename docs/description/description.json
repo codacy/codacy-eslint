@@ -11623,6 +11623,207 @@
   },
   {
     "parameters": [],
+    "patternId": "putout_array-element-newline",
+    "title": "Putout: Array element newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_single-property-destructuring",
+    "title": "Putout: Single property destructuring",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_multiple-properties-destructuring",
+    "title": "Putout: Multiple properties destructuring",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_for-of-multiple-properties-destructuring",
+    "title": "Putout: For of multiple properties destructuring",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_long-properties-destructuring",
+    "title": "Putout: Long properties destructuring",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_destructuring-as-function-argument",
+    "title": "Putout: Destructuring as function argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_align-spaces",
+    "title": "Putout: Align spaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_keyword-spacing",
+    "title": "Putout: Keyword spacing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_newline-function-call-arguments",
+    "title": "Putout: Newline function call arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_function-declaration-paren-newline",
+    "title": "Putout: Function declaration paren newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_add-newlines-between-types-in-union",
+    "title": "Putout: Add newlines between types in union",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_add-newlines-between-specifiers",
+    "title": "Putout: Add newlines between specifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_add-newline-before-return",
+    "title": "Putout: Add newline before return",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_add-newline-before-function-call",
+    "title": "Putout: Add newline before function call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_add-newline-after-function-call",
+    "title": "Putout: Add newline after function call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-newline-after-default-import",
+    "title": "Putout: Remove newline after default import",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-newline-from-empty-object",
+    "title": "Putout: Remove newline from empty object",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-newline-before-first-specifier",
+    "title": "Putout: Remove empty newline before first specifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-newline-after-last-specifier",
+    "title": "Putout: Remove empty newline after last specifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-newline-after-last-element",
+    "title": "Putout: Remove empty newline after last element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-specifiers",
+    "title": "Putout: Remove empty specifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_objects-braces-inside-array",
+    "title": "Putout: Objects braces inside array",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_object-property-newline",
+    "title": "Putout: Object property newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_no-unresolved",
+    "title": "Putout: No unresolved",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-duplicate-extensions",
+    "title": "Putout: Remove duplicate extensions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_evaluate",
+    "title": "Putout: Evaluate",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_tape-add-newline-before-assertion",
+    "title": "Putout: Tape add newline before assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_tape-add-newline-between-tests",
+    "title": "Putout: Tape add newline between tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_tape-remove-newline-before-t-end",
+    "title": "Putout: Tape remove newline before t end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_nonblock-statement-body-newline",
+    "title": "Putout: Nonblock statement body newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_putout",
+    "title": "Putout: Putout",
+    "description": "Putout",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-newline-after-import",
+    "title": "Putout: Remove empty newline after import",
+    "description": "Putout",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "putout_remove-empty-newline-between-declarations",
+    "title": "Putout: Remove empty newline between declarations",
+    "description": "Remove newline between declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react-hooks_rules-of-hooks",
     "title": "React hooks: Rules of hooks",
     "description": "Enforces the Rules of Hooks",

@@ -51,6 +51,7 @@ import { rules as preferObjectSpreadRules } from "eslint-plugin-prefer-object-sp
 import { rules as prettierRules } from "eslint-plugin-prettier"
 import { rules as prettierVueRules } from "eslint-plugin-prettier-vue"
 import { rules as promiseRules } from "eslint-plugin-promise"
+import { rules as putoutRules } from "eslint-plugin-putout"
 import { rules as ramdaRules } from "eslint-plugin-ramda"
 import { rules as reactRules } from "eslint-plugin-react"
 import { rules as reactHooksRules } from "eslint-plugin-react-hooks"
@@ -135,6 +136,7 @@ const plugins = [
   ["prettier", prettierRules],
   ["prettier-vue", prettierVueRules],
   ["promise", promiseRules],
+  ["putout", putoutRules],
   ["ramda", ramdaRules],
   ["react-hooks", reactHooksRules],
   ["react-native", reactNativeRules],
