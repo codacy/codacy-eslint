@@ -1725,6 +1725,14 @@
   <module name="tailwindcss_no-arbitrary-value" />
   <module name="tailwindcss_no-contradicting-classname" />
   <module name="tailwindcss_no-custom-classname" />
+  <module name="test-selectors_anchor" />
+  <module name="test-selectors_button" />
+  <module name="test-selectors_input" />
+  <module name="test-selectors_onChange" />
+  <module name="test-selectors_onClick" />
+  <module name="test-selectors_onKeyDown" />
+  <module name="test-selectors_onKeyUp" />
+  <module name="test-selectors_onSubmit" />
   <module name="typescript-sort-keys_interface" />
   <module name="typescript-sort-keys_string-enum" />
   <module name="unicorn_better-regex" />

@@ -338,6 +338,13 @@ async function main() {
     "tailwindcss"
   )
 
+  console.log("Generate test-selectors description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/davidcalhoun/eslint-plugin-test-selectors/master/docs/rules/${pattern}.md`,
+    "test-selectors"
+  )
+
   console.log("Generate typescript-sort-keys description files")
   await docGenerator.downloadDocs(
       (pattern) =>

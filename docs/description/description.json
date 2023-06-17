@@ -13722,6 +13722,62 @@
   },
   {
     "parameters": [],
+    "patternId": "test-selectors_anchor",
+    "title": "Test selectors: Anchor",
+    "description": "Requires test attributes on anchors.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_button",
+    "title": "Test selectors: Button",
+    "description": "Requires test attributes on buttons.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_input",
+    "title": "Test selectors: Input",
+    "description": "Requires test attributes on inputs.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onChange",
+    "title": "Test selectors: OnChange",
+    "description": "Requires test attribute data-test-id on elements with the onChange property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onClick",
+    "title": "Test selectors: OnClick",
+    "description": "Requires test attribute data-test-id on elements with the onClick property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onKeyDown",
+    "title": "Test selectors: OnKeyDown",
+    "description": "Requires test attribute data-test-id on elements with the onKeyDown property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onKeyUp",
+    "title": "Test selectors: OnKeyUp",
+    "description": "Requires test attribute data-test-id on elements with the onKeyUp property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onSubmit",
+    "title": "Test selectors: OnSubmit",
+    "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "typescript-sort-keys_interface",
     "title": "Typescript sort keys: Interface",
     "description": "Require interface keys to be sorted",
