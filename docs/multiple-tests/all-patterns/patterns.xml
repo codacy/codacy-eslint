@@ -1085,6 +1085,7 @@
   <module name="jest-formatting_padding-around-expect-groups" />
   <module name="jest-formatting_padding-around-test-blocks" />
   <module name="jest-formatting_padding-around-all" />
+  <module name="eslint-plugin-jira-ticket-todo-comment_jira-ticket-todo-comment" />
   <module name="jsdoc_check-access" />
   <module name="jsdoc_check-alignment" />
   <module name="jsdoc_check-examples" />

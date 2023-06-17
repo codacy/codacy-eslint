@@ -8714,6 +8714,13 @@
   },
   {
     "parameters": [],
+    "patternId": "eslint-plugin-jira-ticket-todo-comment_jira-ticket-todo-comment",
+    "title": "Eslint plugin jira ticket todo comment: Jira ticket todo comment",
+    "description": "Checks TODO comments and informs about missing Jira ticket mentions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsdoc_check-access",
     "title": "Jsdoc: Check access",
     "description": "Checks that `@access` tags have a valid value.",

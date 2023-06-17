@@ -8876,6 +8876,13 @@
       "enabled": false
     },
     {
+      "patternId": "eslint-plugin-jira-ticket-todo-comment_jira-ticket-todo-comment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "jsdoc_check-access",
       "level": "Info",
       "category": "CodeStyle",

@@ -32,7 +32,8 @@ import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestExtendedRules } from "eslint-plugin-jest-extended"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
-import { rules as jsdocRules } from "eslint-plugin-jsdoc"
+import { rules as jiraTicketTodoCommentRules } from "eslint-plugin-jira-ticket-todo-comment"
+ import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
@@ -119,6 +120,7 @@ const plugins = [
   ["jest", jestRules],
   ["jest-extended", jestExtendedRules],
   ["jest-formatting", jestFormattingRules],
+  ["eslint-plugin-jira-ticket-todo-comment", jiraTicketTodoCommentRules],
   ["jsdoc", jsdocRules],
   ["json", jsonRules],
   ["jsonc", jsoncRules],
