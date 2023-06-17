@@ -4,6 +4,16 @@
         <error source="accessor-pairs" line="5" message="Getter is not present for setter 'a'." severity="info" />
         <error source="canonical_sort-keys" line="15" message="Expected object keys to be in natural insensitive ascending order. 'get' should be before 'set'." severity="info" />
         <error source="ember-suave_lines-between-object-properties" line="15" message="Expected blank line between object properties." severity="info" />
+        <error source="fp_no-get-set" line="5" message="Unallowed use of `set`" severity="info" />
+        <error source="fp_no-mutating-methods" line="11" message="The use of method `Object.defineProperty` is not allowed as it will mutate its arguments" severity="info" />
+        <error source="fp_no-mutation" line="6" message="Unallowed reassignment" severity="info" />
+        <error source="fp_no-mutation" line="13" message="Unallowed reassignment" severity="info" />
+        <error source="fp_no-nil" line="5" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="12" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-this" line="6" message="Unallowed use of `this`" severity="info" />
+        <error source="fp_no-this" line="13" message="Unallowed use of `this`" severity="info" />
+        <error source="fp_no-this" line="16" message="Unallowed use of `this`" severity="info" />
+        <error source="fp_no-unused-expression" line="11" message="Unused expression" severity="info" />
         <error source="no-redeclare" line="10" message="'o' is already defined." severity="info" />
         <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="10" message="Unexpected var, use let or const instead." severity="info" />

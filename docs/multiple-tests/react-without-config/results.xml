@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="4.3">
     <file name="test.jsx">
+        <error source="fp_no-unused-expression" line="1" message="Unused expression" severity="info" />
         <error source="no-undef" line="1" message="'ReactDOM' is not defined." severity="info" />
         <error source="prettier_prettier" line="1" message="Insert `;`" severity="info" />
         <error source="react_react-in-jsx-scope" line="1" message="'React' must be in scope when using JSX" severity="error" />
