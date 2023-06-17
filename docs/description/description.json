@@ -8114,6 +8114,13 @@
   },
   {
     "parameters": [],
+    "patternId": "import-newlines_enforce",
+    "title": "Import newlines: Enforce",
+    "description": "Enforce multiple lines for import statements past a certain number of items",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jasmine_expect-matcher",
     "title": "Jasmine: Expect matcher",
     "timeToFix": 5

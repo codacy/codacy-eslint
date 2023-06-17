@@ -997,6 +997,7 @@
   <module name="i18n-json_identical-placeholders" />
   <module name="i18next_no-literal-string" />
   <module name="import-alias_import-alias" />
+  <module name="import-newlines_enforce" />
   <module name="jasmine_expect-matcher" />
   <module name="jasmine_expect-single-argument" />
   <module name="jasmine_named-spy" />

@@ -8245,6 +8245,13 @@
       "enabled": true
     },
     {
+      "patternId": "import-newlines_enforce",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jasmine_expect-matcher",
       "level": "Info",
       "category": "CodeStyle",
