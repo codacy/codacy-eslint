@@ -120,7 +120,7 @@ const plugins = [
   ["jest", jestRules],
   ["jest-extended", jestExtendedRules],
   ["jest-formatting", jestFormattingRules],
-  ["eslint-plugin-jira-ticket-todo-comment", jiraTicketTodoCommentRules],
+  ["jira-ticket-todo-comment", jiraTicketTodoCommentRules],
   ["jsdoc", jsdocRules],
   ["json", jsonRules],
   ["jsonc", jsoncRules],

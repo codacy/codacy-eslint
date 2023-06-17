@@ -8714,8 +8714,8 @@
   },
   {
     "parameters": [],
-    "patternId": "eslint-plugin-jira-ticket-todo-comment_jira-ticket-todo-comment",
-    "title": "Eslint plugin jira ticket todo comment: Jira ticket todo comment",
+    "patternId": "jira-ticket-todo-comment_jira-ticket-todo-comment",
+    "title": "Jira ticket todo comment: Jira ticket todo comment",
     "description": "Checks TODO comments and informs about missing Jira ticket mentions",
     "timeToFix": 5
   },
