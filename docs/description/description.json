@@ -7927,6 +7927,125 @@
   },
   {
     "parameters": [],
+    "patternId": "fp_no-arguments",
+    "title": "Fp: No arguments",
+    "description": "Forbid the use of `arguments`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-class",
+    "title": "Fp: No class",
+    "description": "Forbid the use of `class`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-delete",
+    "title": "Fp: No delete",
+    "description": "Forbid the use of `delete`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-events",
+    "title": "Fp: No events",
+    "description": "Forbid the use of the `events` module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-get-set",
+    "title": "Fp: No get set",
+    "description": "Forbid the use of getters and setters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-let",
+    "title": "Fp: No let",
+    "description": "Forbid the use of `let`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-loops",
+    "title": "Fp: No loops",
+    "description": "Forbid the use of loops.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutating-assign",
+    "title": "Fp: No mutating assign",
+    "description": "Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutating-methods",
+    "title": "Fp: No mutating methods",
+    "description": "Forbid the use of mutating methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutation",
+    "title": "Fp: No mutation",
+    "description": "Forbid the use of mutating operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-nil",
+    "title": "Fp: No nil",
+    "description": "Forbid the use of `null` and `undefined`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-proxy",
+    "title": "Fp: No proxy",
+    "description": "Forbid the use of `Proxy`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-rest-parameters",
+    "title": "Fp: No rest parameters",
+    "description": "Forbid the use of rest parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-this",
+    "title": "Fp: No this",
+    "description": "Forbid the use of `this`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-throw",
+    "title": "Fp: No throw",
+    "description": "Forbid the use of `throw`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-unused-expression",
+    "title": "Fp: No unused expression",
+    "description": "Enforce that an expression gets used.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-valueof-field",
+    "title": "Fp: No valueof field",
+    "description": "Forbid the creation of `valueOf` fields.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "functional_functional-parameters",
     "title": "Functional: Functional parameters",
     "description": "Enforce functional parameters.",

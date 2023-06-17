@@ -20,6 +20,7 @@ import { rules as eslintPluginRules } from "eslint-plugin-eslint-plugin"
 import { rules as esXRules } from "eslint-plugin-es-x"
 import { rules as filenamesRules } from "eslint-plugin-filenames"
 import { rules as flowtypeRules } from "eslint-plugin-flowtype"
+import { rules as fpRules } from "eslint-plugin-fp"
 import { rules as functionalRules } from "eslint-plugin-functional"
 import { rules as headerRules } from "eslint-plugin-header"
 import { rules as htmlRules } from "eslint-plugin-html"
@@ -108,6 +109,7 @@ const plugins = [
   ["eslint-plugin", eslintPluginRules],
   ["filenames", filenamesRules],
   ["flowtype", flowtypeRules],
+  ["fp", fpRules],
   ["functional", functionalRules],
   ["header", headerRules],
   ["html", htmlRules],
