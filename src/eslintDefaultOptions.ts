@@ -64,6 +64,7 @@ export const defaultOptions: ESLint.Options = {
         "jsx": true
       }
     },
+    root: true,
     settings: {
       "node": {
         "tryExtensions": [".js", ".json", ".node"]
