@@ -8,8 +8,8 @@
         <error source="fp_no-mutating-methods" line="11" message="The use of method `Object.defineProperty` is not allowed as it will mutate its arguments" severity="info" />
         <error source="fp_no-mutation" line="6" message="Unallowed reassignment" severity="info" />
         <error source="fp_no-mutation" line="13" message="Unallowed reassignment" severity="info" />
-        <error source="fp_no-nil" line="5" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="12" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="5" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="12" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
         <error source="fp_no-this" line="6" message="Unallowed use of `this`" severity="info" />
         <error source="fp_no-this" line="13" message="Unallowed use of `this`" severity="info" />
         <error source="fp_no-this" line="16" message="Unallowed use of `this`" severity="info" />

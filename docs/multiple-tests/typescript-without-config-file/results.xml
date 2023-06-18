@@ -21,10 +21,10 @@
         <error source="fp_no-mutation" line="42" message="Unallowed reassignment" severity="info" />
         <error source="fp_no-mutation" line="43" message="Unallowed reassignment" severity="info" />
         <error source="fp_no-mutation" line="28" message="Unallowed use of `++` operator" severity="info" />
-        <error source="fp_no-nil" line="10" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="17" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="40" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="46" message="Funcion must end with a rteturn statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="10" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="17" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="40" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-nil" line="46" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
         <error source="fp_no-nil" line="12" message="Return statement must return an explicit value, so that it doesn't evaluate to `undefined`" severity="info" />
         <error source="fp_no-nil" line="60" message="Variable must be initialized, so that it doesn't evaluate to `undefined`" severity="info" />
         <error source="fp_no-unused-expression" line="14" message="Unused expression" severity="info" />
