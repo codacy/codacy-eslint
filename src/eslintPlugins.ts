@@ -34,7 +34,7 @@ import { rules as jestRules } from "eslint-plugin-jest"
 import { rules as jestExtendedRules } from "eslint-plugin-jest-extended"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
 import { rules as jiraTicketTodoCommentRules } from "eslint-plugin-jira-ticket-todo-comment"
- import { rules as jsdocRules } from "eslint-plugin-jsdoc"
+import { rules as jsdocRules } from "eslint-plugin-jsdoc"
 import { rules as jsonRules } from "eslint-plugin-json"
 import { rules as jsoncRules } from "eslint-plugin-jsonc"
 import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
@@ -72,6 +72,7 @@ import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as tailwindcssRules } from "eslint-plugin-tailwindcss"
+import { rules as testingLibraryRules } from "eslint-plugin-testing-library"
 import { rules as testSelectorsRules } from "eslint-plugin-test-selectors"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
@@ -161,6 +162,7 @@ const plugins = [
   ["spellcheck", spellcheckRules],
   ["storybook", storybookRules],
   ["tailwindcss", tailwindcssRules],
+  ["testing-library", testingLibraryRules],
   ["test-selectors", testSelectorsRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],

@@ -1386,6 +1386,10 @@
         {
           "name": "skipRegExps",
           "default": false
+        },
+        {
+          "name": "skipJSXText",
+          "default": false
         }
       ],
       "enabled": true
@@ -9915,6 +9919,10 @@
         {
           "name": "skipRegExps",
           "default": false
+        },
+        {
+          "name": "skipJSXText",
+          "default": false
         }
       ],
       "enabled": false
@@ -11888,6 +11896,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "partition-by-comment",
+          "default": false
+        },
+        {
           "name": "type",
           "default": "natural"
         },
@@ -11927,6 +11939,20 @@
       "enabled": false
     },
     {
+      "patternId": "playwright_expect-expect",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_max-nested-describe",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "playwright_missing-playwright-await",
       "level": "Error",
       "category": "ErrorProne",
@@ -11934,9 +11960,9 @@
       "enabled": true
     },
     {
-      "patternId": "playwright_no-page-pause",
-      "level": "Error",
-      "category": "ErrorProne",
+      "patternId": "playwright_no-conditional-in-test",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
@@ -11962,20 +11988,6 @@
       "enabled": true
     },
     {
-      "patternId": "playwright_no-skipped-test",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "playwright_no-wait-for-timeout",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
       "patternId": "playwright_no-force-option",
       "level": "Info",
       "category": "CodeStyle",
@@ -11983,16 +11995,51 @@
       "enabled": true
     },
     {
-      "patternId": "playwright_max-nested-describe",
+      "patternId": "playwright_no-nested-step",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "playwright_no-conditional-in-test",
+      "patternId": "playwright_no-networkidle",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-nth-methods",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-page-pause",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-restricted-matchers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_no-skipped-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-useless-await",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -12004,11 +12051,11 @@
       "enabled": true
     },
     {
-      "patternId": "playwright_no-restricted-matchers",
+      "patternId": "playwright_no-wait-for-timeout",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "playwright_prefer-lowercase-title",
@@ -12037,6 +12084,13 @@
       "enabled": false
     },
     {
+      "patternId": "playwright_prefer-to-contain",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "playwright_prefer-to-have-length",
       "level": "Info",
       "category": "CodeStyle",
@@ -12044,14 +12098,21 @@
       "enabled": false
     },
     {
-      "patternId": "playwright_require-top-level-describe",
+      "patternId": "playwright_prefer-web-first-assertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_require-soft-assertions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "playwright_require-soft-assertions",
+      "patternId": "playwright_require-top-level-describe",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14223,6 +14284,210 @@
       "enabled": false
     },
     {
+      "patternId": "testing-library_await-async-query",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_await-async-utils",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_await-fire-event",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_consistent-data-testid",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "testIdAttribute",
+          "default": "data-testid"
+        },
+        {
+          "name": "customMessage"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-await-sync-events",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-await-sync-query",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-container",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-debugging-utils",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-dom-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-global-regexp-flag-in-query",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-manual-cleanup",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-node-access",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-promise-in-fire-event",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-render-in-setup",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-unnecessary-act",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-wait-for-empty-callback",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-wait-for-multiple-assertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-wait-for-side-effects",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_no-wait-for-snapshot",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-explicit-assert",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-find-by",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-presence-queries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-query-by-disappearance",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-query-matchers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-screen-queries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-user-event",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_prefer-wait-for",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "testing-library_render-result-naming-convention",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "test-selectors_anchor",
       "level": "Error",
       "category": "ErrorProne",
@@ -15192,6 +15457,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_max-lines-per-block",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_multi-word-component-names",
       "level": "Info",
       "category": "CodeStyle",
@@ -15270,6 +15542,13 @@
     },
     {
       "patternId": "vue_no-computed-properties-in-data",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-console",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -15657,6 +15936,13 @@
     },
     {
       "patternId": "vue_no-restricted-class",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-restricted-component-names",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -16113,6 +16399,34 @@
       "enabled": false
     },
     {
+      "patternId": "vue_require-macro-variable-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "defineProps",
+          "default": "props"
+        },
+        {
+          "name": "defineEmits",
+          "default": "emit"
+        },
+        {
+          "name": "defineSlots",
+          "default": "slots"
+        },
+        {
+          "name": "useSlots",
+          "default": "slots"
+        },
+        {
+          "name": "useAttrs",
+          "default": "attrs"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "vue_require-name-property",
       "level": "Info",
       "category": "CodeStyle",
@@ -16156,6 +16470,13 @@
     },
     {
       "patternId": "vue_require-toggle-inside-transition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_require-typed-ref",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

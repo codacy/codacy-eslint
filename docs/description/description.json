@@ -1372,6 +1372,10 @@
       {
         "name": "skipRegExps",
         "description": "skipRegExps"
+      },
+      {
+        "name": "skipJSXText",
+        "description": "skipJSXText"
       }
     ],
     "patternId": "no-irregular-whitespace",
@@ -9726,6 +9730,10 @@
       {
         "name": "skipRegExps",
         "description": "skipRegExps"
+      },
+      {
+        "name": "skipJSXText",
+        "description": "skipJSXText"
       }
     ],
     "patternId": "jsonc_no-irregular-whitespace",
@@ -11617,6 +11625,10 @@
   {
     "parameters": [
       {
+        "name": "partition-by-comment",
+        "description": "partition-by-comment"
+      },
+      {
         "name": "type",
         "description": "type"
       },
@@ -11660,6 +11672,20 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_expect-expect",
+    "title": "Playwright: Expect expect",
+    "description": "Enforce assertion to be made in a test body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_max-nested-describe",
+    "title": "Playwright: Max nested describe",
+    "description": "Enforces a maximum depth to nested describe calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
     "description": "Identify false positives when async Playwright APIs are not properly awaited.",
@@ -11667,9 +11693,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-page-pause",
-    "title": "Playwright: No page pause",
-    "description": "Prevent usage of page.pause()",
+    "patternId": "playwright_no-conditional-in-test",
+    "title": "Playwright: No conditional in test",
+    "description": "Disallow conditional logic in tests",
     "timeToFix": 5
   },
   {
@@ -11695,20 +11721,6 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-skipped-test",
-    "title": "Playwright: No skipped test",
-    "description": "Prevent usage of the `.skip()` skip test annotation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "playwright_no-wait-for-timeout",
-    "title": "Playwright: No wait for timeout",
-    "description": "Prevent usage of page.waitForTimeout()",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "playwright_no-force-option",
     "title": "Playwright: No force option",
     "description": "Prevent usage of `{ force: true }` option.",
@@ -11716,16 +11728,51 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_max-nested-describe",
-    "title": "Playwright: Max nested describe",
-    "description": "Enforces a maximum depth to nested describe calls",
+    "patternId": "playwright_no-nested-step",
+    "title": "Playwright: No nested step",
+    "description": "Disallow nested `test.step()` methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-conditional-in-test",
-    "title": "Playwright: No conditional in test",
-    "description": "Disallow conditional logic in tests",
+    "patternId": "playwright_no-networkidle",
+    "title": "Playwright: No networkidle",
+    "description": "Prevent usage of the networkidle option",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-nth-methods",
+    "title": "Playwright: No nth methods",
+    "description": "Disallow usage of nth methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-page-pause",
+    "title": "Playwright: No page pause",
+    "description": "Prevent usage of page.pause()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-restricted-matchers",
+    "title": "Playwright: No restricted matchers",
+    "description": "Disallow specific matchers & modifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-skipped-test",
+    "title": "Playwright: No skipped test",
+    "description": "Prevent usage of the `.skip()` skip test annotation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-useless-await",
+    "title": "Playwright: No useless await",
+    "description": "Disallow unnecessary awaits for Playwright methods",
     "timeToFix": 5
   },
   {
@@ -11737,9 +11784,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-restricted-matchers",
-    "title": "Playwright: No restricted matchers",
-    "description": "Disallow specific matchers & modifiers",
+    "patternId": "playwright_no-wait-for-timeout",
+    "title": "Playwright: No wait for timeout",
+    "description": "Prevent usage of page.waitForTimeout()",
     "timeToFix": 5
   },
   {
@@ -11770,6 +11817,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_prefer-to-contain",
+    "title": "Playwright: Prefer to contain",
+    "description": "Suggest using toContain()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_prefer-to-have-length",
     "title": "Playwright: Prefer to have length",
     "description": "Suggest using `toHaveLength()`",
@@ -11777,9 +11831,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_require-top-level-describe",
-    "title": "Playwright: Require top level describe",
-    "description": "Require test cases and hooks to be inside a `test.describe` block",
+    "patternId": "playwright_prefer-web-first-assertions",
+    "title": "Playwright: Prefer web first assertions",
+    "description": "Prefer web first assertions",
     "timeToFix": 5
   },
   {
@@ -11787,6 +11841,13 @@
     "patternId": "playwright_require-soft-assertions",
     "title": "Playwright: Require soft assertions",
     "description": "Require all assertions to use `expect.soft`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_require-top-level-describe",
+    "title": "Playwright: Require top level describe",
+    "description": "Require test cases and hooks to be inside a `test.describe` block",
     "timeToFix": 5
   },
   {
@@ -13855,6 +13916,211 @@
   },
   {
     "parameters": [],
+    "patternId": "testing-library_await-async-query",
+    "title": "Testing library: Await async query",
+    "description": "Enforce promises from async queries to be handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-utils",
+    "title": "Testing library: Await async utils",
+    "description": "Enforce promises from async utils to be awaited properly",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-fire-event",
+    "title": "Testing library: Await fire event",
+    "description": "Enforce promises from `fireEvent` methods to be handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "testIdAttribute",
+        "description": "testIdAttribute"
+      },
+      {
+        "name": "customMessage",
+        "description": "customMessage"
+      }
+    ],
+    "patternId": "testing-library_consistent-data-testid",
+    "title": "Testing library: Consistent data testid",
+    "description": "Ensures consistent usage of `data-testid`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-await-sync-events",
+    "title": "Testing library: No await sync events",
+    "description": "Disallow unnecessary `await` for sync events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-await-sync-query",
+    "title": "Testing library: No await sync query",
+    "description": "Disallow unnecessary `await` for sync queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-container",
+    "title": "Testing library: No container",
+    "description": "Disallow the use of `container` methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-debugging-utils",
+    "title": "Testing library: No debugging utils",
+    "description": "Disallow the use of debugging utilities like `debug`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-dom-import",
+    "title": "Testing library: No dom import",
+    "description": "Disallow importing from DOM Testing Library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-global-regexp-flag-in-query",
+    "title": "Testing library: No global regexp flag in query",
+    "description": "Disallow the use of the global RegExp flag (/g) in queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-manual-cleanup",
+    "title": "Testing library: No manual cleanup",
+    "description": "Disallow the use of `cleanup`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-node-access",
+    "title": "Testing library: No node access",
+    "description": "Disallow direct Node access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-promise-in-fire-event",
+    "title": "Testing library: No promise in fire event",
+    "description": "Disallow the use of promises passed to a `fireEvent` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-render-in-setup",
+    "title": "Testing library: No render in setup",
+    "description": "Disallow the use of `render` in testing frameworks setup functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-unnecessary-act",
+    "title": "Testing library: No unnecessary act",
+    "description": "Disallow wrapping Testing Library utils or empty callbacks in `act`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-empty-callback",
+    "title": "Testing library: No wait for empty callback",
+    "description": "Disallow empty callbacks for `waitFor` and `waitForElementToBeRemoved`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-multiple-assertions",
+    "title": "Testing library: No wait for multiple assertions",
+    "description": "Disallow the use of multiple `expect` calls inside `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-side-effects",
+    "title": "Testing library: No wait for side effects",
+    "description": "Disallow the use of side effects in `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-snapshot",
+    "title": "Testing library: No wait for snapshot",
+    "description": "Ensures no snapshot is generated inside of a `waitFor` call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-explicit-assert",
+    "title": "Testing library: Prefer explicit assert",
+    "description": "Suggest using explicit assertions rather than standalone queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-find-by",
+    "title": "Testing library: Prefer find by",
+    "description": "Suggest using `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-presence-queries",
+    "title": "Testing library: Prefer presence queries",
+    "description": "Ensure appropriate `get*`/`query*` queries are used with their respective matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-by-disappearance",
+    "title": "Testing library: Prefer query by disappearance",
+    "description": "Suggest using `queryBy*` queries when waiting for disappearance",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-matchers",
+    "title": "Testing library: Prefer query matchers",
+    "description": "Ensure the configured `get*`/`query*` query is used with the corresponding matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-screen-queries",
+    "title": "Testing library: Prefer screen queries",
+    "description": "Suggest using `screen` while querying",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-user-event",
+    "title": "Testing library: Prefer user event",
+    "description": "Suggest using `userEvent` over `fireEvent` for simulating user interactions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-wait-for",
+    "title": "Testing library: Prefer wait for",
+    "description": "Use `waitFor` instead of deprecated wait methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_render-result-naming-convention",
+    "title": "Testing library: Render result naming convention",
+    "description": "Enforce a valid naming for return value from `render`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "test-selectors_anchor",
     "title": "Test selectors: Anchor",
     "description": "Requires test attributes on anchors.",
@@ -14824,6 +15090,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_max-lines-per-block",
+    "title": "Vue: Max lines per block",
+    "description": "Enforce maximum number of lines in Vue SFC blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_multi-word-component-names",
     "title": "Vue: Multi word component names",
     "description": "Require component names to be always multi-word",
@@ -14904,6 +15177,13 @@
     "patternId": "vue_no-computed-properties-in-data",
     "title": "Vue: No computed properties in data",
     "description": "Disallow accessing computed properties in `data`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-console",
+    "title": "Vue: No console",
+    "description": "Disallow the use of `console` in `<template>`",
     "timeToFix": 5
   },
   {
@@ -15291,6 +15571,13 @@
     "patternId": "vue_no-restricted-class",
     "title": "Vue: No restricted class",
     "description": "Disallow specific classes in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-component-names",
+    "title": "Vue: No restricted component names",
+    "description": "Disallow specific component names",
     "timeToFix": 5
   },
   {
@@ -15744,6 +16031,34 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "defineProps",
+        "description": "defineProps"
+      },
+      {
+        "name": "defineEmits",
+        "description": "defineEmits"
+      },
+      {
+        "name": "defineSlots",
+        "description": "defineSlots"
+      },
+      {
+        "name": "useSlots",
+        "description": "useSlots"
+      },
+      {
+        "name": "useAttrs",
+        "description": "useAttrs"
+      }
+    ],
+    "patternId": "vue_require-macro-variable-name",
+    "title": "Vue: Require macro variable name",
+    "description": "Require a certain macro variable name",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "vue_require-name-property",
     "title": "Vue: Require name property",
@@ -15790,6 +16105,13 @@
     "patternId": "vue_require-toggle-inside-transition",
     "title": "Vue: Require toggle inside transition",
     "description": "Require control the display of the content inside `<transition>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-typed-ref",
+    "title": "Vue: Require typed ref",
+    "description": "Require `ref` and `shallowRef` functions to be strongly typed",
     "timeToFix": 5
   },
   {
