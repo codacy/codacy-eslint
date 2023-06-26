@@ -13202,12 +13202,6 @@
   },
   {
     "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "scanjs-rules_call__addEventListener",
     "title": "Scanjs rules: Call_addEventListener",
     "timeToFix": 5
@@ -13240,6 +13234,12 @@
     "parameters": [],
     "patternId": "scanjs-rules_call__execScript",
     "title": "Scanjs rules: Call_execScript",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
     "timeToFix": 5
   },
   {
@@ -13912,211 +13912,6 @@
     "patternId": "tailwindcss_no-custom-classname",
     "title": "Tailwindcss: No custom classname",
     "description": "Detect classnames which do not belong to Tailwind CSS",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_await-async-query",
-    "title": "Testing library: Await async query",
-    "description": "Enforce promises from async queries to be handled",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_await-async-utils",
-    "title": "Testing library: Await async utils",
-    "description": "Enforce promises from async utils to be awaited properly",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_await-fire-event",
-    "title": "Testing library: Await fire event",
-    "description": "Enforce promises from `fireEvent` methods to be handled",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "testIdAttribute",
-        "description": "testIdAttribute"
-      },
-      {
-        "name": "customMessage",
-        "description": "customMessage"
-      }
-    ],
-    "patternId": "testing-library_consistent-data-testid",
-    "title": "Testing library: Consistent data testid",
-    "description": "Ensures consistent usage of `data-testid`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-await-sync-events",
-    "title": "Testing library: No await sync events",
-    "description": "Disallow unnecessary `await` for sync events",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-await-sync-query",
-    "title": "Testing library: No await sync query",
-    "description": "Disallow unnecessary `await` for sync queries",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-container",
-    "title": "Testing library: No container",
-    "description": "Disallow the use of `container` methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-debugging-utils",
-    "title": "Testing library: No debugging utils",
-    "description": "Disallow the use of debugging utilities like `debug`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-dom-import",
-    "title": "Testing library: No dom import",
-    "description": "Disallow importing from DOM Testing Library",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-global-regexp-flag-in-query",
-    "title": "Testing library: No global regexp flag in query",
-    "description": "Disallow the use of the global RegExp flag (/g) in queries",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-manual-cleanup",
-    "title": "Testing library: No manual cleanup",
-    "description": "Disallow the use of `cleanup`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-node-access",
-    "title": "Testing library: No node access",
-    "description": "Disallow direct Node access",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-promise-in-fire-event",
-    "title": "Testing library: No promise in fire event",
-    "description": "Disallow the use of promises passed to a `fireEvent` method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-render-in-setup",
-    "title": "Testing library: No render in setup",
-    "description": "Disallow the use of `render` in testing frameworks setup functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-unnecessary-act",
-    "title": "Testing library: No unnecessary act",
-    "description": "Disallow wrapping Testing Library utils or empty callbacks in `act`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-wait-for-empty-callback",
-    "title": "Testing library: No wait for empty callback",
-    "description": "Disallow empty callbacks for `waitFor` and `waitForElementToBeRemoved`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-wait-for-multiple-assertions",
-    "title": "Testing library: No wait for multiple assertions",
-    "description": "Disallow the use of multiple `expect` calls inside `waitFor`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-wait-for-side-effects",
-    "title": "Testing library: No wait for side effects",
-    "description": "Disallow the use of side effects in `waitFor`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_no-wait-for-snapshot",
-    "title": "Testing library: No wait for snapshot",
-    "description": "Ensures no snapshot is generated inside of a `waitFor` call",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-explicit-assert",
-    "title": "Testing library: Prefer explicit assert",
-    "description": "Suggest using explicit assertions rather than standalone queries",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-find-by",
-    "title": "Testing library: Prefer find by",
-    "description": "Suggest using `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-presence-queries",
-    "title": "Testing library: Prefer presence queries",
-    "description": "Ensure appropriate `get*`/`query*` queries are used with their respective matchers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-query-by-disappearance",
-    "title": "Testing library: Prefer query by disappearance",
-    "description": "Suggest using `queryBy*` queries when waiting for disappearance",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-query-matchers",
-    "title": "Testing library: Prefer query matchers",
-    "description": "Ensure the configured `get*`/`query*` query is used with the corresponding matchers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-screen-queries",
-    "title": "Testing library: Prefer screen queries",
-    "description": "Suggest using `screen` while querying",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-user-event",
-    "title": "Testing library: Prefer user event",
-    "description": "Suggest using `userEvent` over `fireEvent` for simulating user interactions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_prefer-wait-for",
-    "title": "Testing library: Prefer wait for",
-    "description": "Use `waitFor` instead of deprecated wait methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "testing-library_render-result-naming-convention",
-    "title": "Testing library: Render result naming convention",
-    "description": "Enforce a valid naming for return value from `render`",
     "timeToFix": 5
   },
   {

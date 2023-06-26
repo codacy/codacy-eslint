@@ -345,13 +345,6 @@ async function main() {
     "test-selectors"
   )
 
-  console.log("Generate testing-library description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/testing-library/eslint-plugin-testing-library/main/docs/rules/${pattern}.md`,
-    "testing-library"
-  )
-
   console.log("Generate typescript-sort-keys description files")
   await docGenerator.downloadDocs(
       (pattern) =>
