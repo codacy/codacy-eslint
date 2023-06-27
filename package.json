@@ -103,7 +103,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@prodigy/eslint-config-prodigy": "^0.0.7",
     "@react-native-community/eslint-config": "^3.2.0",
-    "@remix-run/eslint-config": "^1.16.1",
+    "@remix-run/eslint-config": "^1.18.0",
     "@salesforce/eslint-config-lwc": "^3.4.0",
     "@salesforce/eslint-plugin-aura": "^2.1.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
