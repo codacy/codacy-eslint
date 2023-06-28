@@ -2,6 +2,8 @@
 <checkstyle version="4.3">
     <file name="test.ts">
         <error source="@typescript-eslint_explicit-function-return-type" line="4" message="Missing return type on function." severity="info" />
+        <error source="fp_no-nil" line="4" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
+        <error source="fp_no-unused-expression" line="5" message="Unused expression" severity="info" />
         <error source="node_no-unsupported-features_es-syntax" line="1" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="4" message="Import and export declarations are not supported yet." severity="error" />
         <error source="prettier_prettier" line="3" message="Replace `&#9166;export&#183;function&#183;test()` with `export&#183;function&#183;test()&#183;`" severity="info" />

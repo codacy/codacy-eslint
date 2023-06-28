@@ -22,18 +22,48 @@ async function main() {
 
   const githubBaseUrl = "https://raw.githubusercontent.com"
 
-  console.log("Generate angular description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
-    "angular"
-  )
-
   console.log("Generate @angular-eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
     "@angular-eslint"
+  )
+
+  console.log("Generate @salesforce/aura description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
+    "@salesforce/aura"
+  )
+
+  console.log("Generate @salesforce/lightning description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
+    "@salesforce/lightning"
+  )
+
+  console.log("Generate @shopify_eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@shopify/eslint-plugin",
+    false
+  )
+
+  console.log("Generate @typescript-eslint description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
+    "@typescript-eslint",
+    false
+  )
+
+  console.log("Generate angular description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/${pattern}.md`,
+    "angular"
   )
 
   console.log("Generate backbone description files")
@@ -51,18 +81,18 @@ async function main() {
     "better-styled-components"
   )
 
-  console.log("Generate cypress description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
-    "cypress"
-  )
-
   console.log("Generate compat description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/amilajack/eslint-plugin-compat/main/docs/rules/${pattern}.md`,
     "compat"
+  )
+
+  console.log("Generate cypress description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
+    "cypress"
   )
 
   console.log("Generate ember description files")
@@ -83,14 +113,20 @@ async function main() {
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/eslint-community/eslint-plugin-es-x/master/docs/rules/${pattern}.md`,
-    "es-x",
-      false
+    "es-x"
   )
 
   console.log("Generate eslint description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/eslint/eslint/main/docs/src/rules/${pattern}.md`
+  )
+
+  console.log("Generate eslint-plugin description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/eslint-community/eslint-plugin-eslint-plugin/main/docs/rules/${pattern}.md`,
+    "eslint-plugin"
   )
 
   console.log("Generate functional description files")
@@ -131,6 +167,27 @@ async function main() {
     "jest"
   )
 
+  console.log("Generate jest-dom description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/testing-library/eslint-plugin-jest-dom/main/docs/rules/${pattern}.md`,
+    "jest-dom"
+  )
+
+  console.log("Generate jest-extended description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/jest-community/eslint-plugin-jest-extended/main/docs/rules/${pattern}.md`,
+    "jest-extended"
+  )
+
+  console.log("Generate jest-formating description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/dangreenisrael/eslint-plugin-jest-formatting/master/docs/rules/${pattern}.md`,
+    "jest-formating"
+  )
+
   console.log("Generate jsdoc description files")
   await docGenerator.downloadDocs(
     (pattern) =>
@@ -150,6 +207,13 @@ async function main() {
     (pattern) =>
       `${githubBaseUrl}/jsx-eslint/eslint-plugin-jsx-a11y/main/docs/rules/${pattern}.md`,
     "jsx-a11y"
+  )
+
+  console.log("Generate lit description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/43081j/eslint-plugin-lit/master/docs/rules/${pattern}.md`,
+    "lit"
   )
 
   console.log("Generate lodash description files")
@@ -204,11 +268,11 @@ async function main() {
     false
   )
 
-  console.log("Generate package-json description files")
+  console.log("Generate perfectionist description files")
   await docGenerator.downloadDocs(
       (pattern) =>
-          `${githubBaseUrl}/zetlen/eslint-plugin-package-json/master/docs/rules/${pattern}.md`,
-      "package-json"
+          `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/${pattern}.md`,
+      "perfectionist"
   )
 
   console.log("Generate promise description files")
@@ -253,26 +317,11 @@ async function main() {
       "rxjs"
   )
 
-  console.log("Generate @salesforce/aura description files")
+  console.log("Generate rxjs-angular description files")
   await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/${pattern}.md`,
-    "@salesforce/aura"
-  )
-
-  console.log("Generate @salesforce/lightning description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/salesforce/eslint-plugin-lightning/master/docs/rules/${pattern}.md`,
-    "@salesforce/lightning"
-  )
-
-  console.log("Generate @shopify_eslint description files")
-  await docGenerator.downloadDocs(
-    (pattern) =>
-      `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
-    false
+      (pattern) =>
+          `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
+      "rxjs-angular"
   )
 
   console.log("Generate sonarjs description files")
@@ -289,12 +338,25 @@ async function main() {
     "storybook"
   )
 
-  console.log("Generate typescript-eslint description files")
+  console.log("Generate tailwindcss description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/typescript-eslint/typescript-eslint/master/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@typescript-eslint",
-    false
+      `${githubBaseUrl}/francoismassart/eslint-plugin-tailwindcss/master/docs/rules/${pattern}.md`,
+    "tailwindcss"
+  )
+
+  console.log("Generate test-selectors description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/davidcalhoun/eslint-plugin-test-selectors/master/docs/rules/${pattern}.md`,
+    "test-selectors"
+  )
+
+  console.log("Generate test-library description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/testing-library/eslint-plugin-testing-library/main/docs/rules/${pattern}.md`,
+    "test-library"
   )
 
   console.log("Generate typescript-sort-keys description files")

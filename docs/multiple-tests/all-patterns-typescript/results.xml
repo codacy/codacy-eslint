@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
   <file name="empty.ts">
-    <error source="cypress_no-expect-for-stub" line="1" message="Definition for rule 'cypress/no-expect-for-stub' was not found." severity="info" />
-    <error source="cypress_no-single-expect-in-then-or-should" line="1" message="Definition for rule 'cypress/no-single-expect-in-then-or-should' was not found." severity="info" />
-    <error source="cypress_no-useless-then-or-should" line="1" message="Definition for rule 'cypress/no-useless-then-or-should' was not found." severity="info" />
-    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
     <error source="@shopify_eslint-plugin_binary-assignment-parens" line="1" message="Definition for rule '@shopify/eslint-plugin/binary-assignment-parens' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_class-property-semi" line="1" message="Definition for rule '@shopify/eslint-plugin/class-property-semi' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_images-no-direct-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/images-no-direct-imports' was not found." severity="info" />
@@ -37,6 +33,12 @@
     <error source="@shopify_eslint-plugin_typescript_prefer-pascal-case-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-pascal-case-enums' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_typescript_prefer-singular-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-singular-enums' was not found." severity="info" />
     <error source="@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/webpack/no-unnamed-dynamic-imports' was not found." severity="info" />
+    <error source="@tanstack_eslint-plugin-query_exhaustive-deps" line="1" message="Definition for rule '@tanstack/eslint-plugin-query/exhaustive-deps' was not found." severity="info" />
+    <error source="@tanstack_eslint-plugin-query_prefer-query-object-syntax" line="1" message="Definition for rule '@tanstack/eslint-plugin-query/prefer-query-object-syntax' was not found." severity="info" />
+    <error source="cypress_no-expect-for-stub" line="1" message="Definition for rule 'cypress/no-expect-for-stub' was not found." severity="info" />
+    <error source="cypress_no-single-expect-in-then-or-should" line="1" message="Definition for rule 'cypress/no-single-expect-in-then-or-should' was not found." severity="info" />
+    <error source="cypress_no-useless-then-or-should" line="1" message="Definition for rule 'cypress/no-useless-then-or-should' was not found." severity="info" />
+    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
     <error source="unicorn_no-empty-file" line="1" message="Empty files are not allowed." severity="info" />
   </file>
 </checkstyle>

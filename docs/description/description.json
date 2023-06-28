@@ -1372,6 +1372,10 @@
       {
         "name": "skipRegExps",
         "description": "skipRegExps"
+      },
+      {
+        "name": "skipJSXText",
+        "description": "skipJSXText"
       }
     ],
     "patternId": "no-irregular-whitespace",
@@ -2919,6 +2923,1739 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_component-class-suffix",
+    "title": "@angular eslint: Component class suffix",
+    "description": "Classes decorated with @Component must have suffix \"Component\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_component-max-inline-declarations",
+    "title": "@angular eslint: Component max inline declarations",
+    "description": "Enforces a maximum number of lines in inline template, styles and animations. See more at https://angular.io/guide/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_component-selector",
+    "title": "@angular eslint: Component selector",
+    "description": "Component selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-07, https://angular.io/guide/styleguide#style-05-02\n      and https://angular.io/guide/styleguide#style-05-03.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_contextual-decorator",
+    "title": "@angular eslint: Contextual decorator",
+    "description": "Ensures that classes use contextual decorators in its body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_contextual-lifecycle",
+    "title": "@angular eslint: Contextual lifecycle",
+    "description": "Ensures that lifecycle methods are used in a correct context",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_directive-class-suffix",
+    "title": "@angular eslint: Directive class suffix",
+    "description": "Classes decorated with @Directive must have suffix \"Directive\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_directive-selector",
+    "title": "@angular eslint: Directive selector",
+    "description": "Directive selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-06 and https://angular.io/guide/styleguide#style-02-08.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-attribute-decorator",
+    "title": "@angular eslint: No attribute decorator",
+    "description": "The @Attribute decorator is used to obtain a single value for an attribute. This is a much less common use-case than getting a stream of values (using @Input), so often the @Attribute decorator is mistakenly used when @Input was what was intended. This rule disallows usage of @Attribute decorator altogether in order to prevent these mistakes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-conflicting-lifecycle",
+    "title": "@angular eslint: No conflicting lifecycle",
+    "description": "Ensures that directives not implement conflicting lifecycle interfaces.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-empty-lifecycle-method",
+    "title": "@angular eslint: No empty lifecycle method",
+    "description": "Disallows declaring empty lifecycle methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-forward-ref",
+    "title": "@angular eslint: No forward ref",
+    "description": "Disallows usage of `forwardRef` references for DI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowStatic",
+        "description": "allowStatic"
+      }
+    ],
+    "patternId": "@angular-eslint_no-host-metadata-property",
+    "title": "@angular eslint: No host metadata property",
+    "description": "Disallows usage of the `host` metadata property. See more at https://angular.io/styleguide#style-06-03",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-input-prefix",
+    "title": "@angular eslint: No input prefix",
+    "description": "Ensures that input bindings, including aliases, are not named or prefixed by the configured disallowed prefixes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-input-rename",
+    "title": "@angular eslint: No input rename",
+    "description": "Ensures that input bindings are not aliased",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-inputs-metadata-property",
+    "title": "@angular eslint: No inputs metadata property",
+    "description": "Disallows usage of the `inputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-lifecycle-call",
+    "title": "@angular eslint: No lifecycle call",
+    "description": "Disallows explicit calls to lifecycle methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-native",
+    "title": "@angular eslint: No output native",
+    "description": "Ensures that output bindings, including aliases, are not named as standard DOM events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-on-prefix",
+    "title": "@angular eslint: No output on prefix",
+    "description": "Ensures that output bindings, including aliases, are not named \"on\", nor prefixed with it. See more at https://angular.io/guide/styleguide#style-05-16",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-output-rename",
+    "title": "@angular eslint: No output rename",
+    "description": "Ensures that output bindings are not aliased",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-outputs-metadata-property",
+    "title": "@angular eslint: No outputs metadata property",
+    "description": "Disallows usage of the `outputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-pipe-impure",
+    "title": "@angular eslint: No pipe impure",
+    "description": "Disallows the declaration of impure pipes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_no-queries-metadata-property",
+    "title": "@angular eslint: No queries metadata property",
+    "description": "Disallows usage of the `queries` metadata property. See more at https://angular.io/styleguide#style-05-12.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_pipe-prefix",
+    "title": "@angular eslint: Pipe prefix",
+    "description": "Enforce consistent prefix for pipes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_prefer-on-push-component-change-detection",
+    "title": "@angular eslint: Prefer on push component change detection",
+    "description": "Ensures component's `changeDetection` is set to `ChangeDetectionStrategy.OnPush`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_prefer-output-readonly",
+    "title": "@angular eslint: Prefer output readonly",
+    "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_relative-url-prefix",
+    "title": "@angular eslint: Relative url prefix",
+    "description": "The ./ and ../ prefix is standard syntax for relative URLs; don't depend on Angular's current ability to do without that prefix. See more at https://angular.io/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
+    "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
+    "title": "@angular eslint: Sort ngmodule metadata arrays",
+    "description": "Ensures ASC alphabetical order for `NgModule` metadata arrays for easy visual scanning",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-component-selector",
+    "title": "@angular eslint: Use component selector",
+    "description": "Component selector must be declared",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-component-view-encapsulation",
+    "title": "@angular eslint: Use component view encapsulation",
+    "description": "Disallows using `ViewEncapsulation.None`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-injectable-provided-in",
+    "title": "@angular eslint: Use injectable provided in",
+    "description": "Using the `providedIn` property makes `Injectables` tree-shakable",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-lifecycle-interface",
+    "title": "@angular eslint: Use lifecycle interface",
+    "description": "Ensures that classes implement lifecycle interfaces corresponding to the declared lifecycle methods. See more at https://angular.io/styleguide#style-09-01",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@angular-eslint_use-pipe-transform-interface",
+    "title": "@angular eslint: Use pipe transform interface",
+    "description": "Ensures that `Pipes` implement `PipeTransform` interface",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "newIsCap",
+        "description": "newIsCap"
+      },
+      {
+        "name": "capIsNew",
+        "description": "capIsNew"
+      },
+      {
+        "name": "properties",
+        "description": "properties"
+      }
+    ],
+    "patternId": "@babel_new-cap",
+    "title": "@babel: New cap",
+    "description": "Require constructor names to begin with a capital letter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "capIsConstructor",
+        "description": "capIsConstructor"
+      }
+    ],
+    "patternId": "@babel_no-invalid-this",
+    "title": "@babel: No invalid this",
+    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": "allowShortCircuit"
+      },
+      {
+        "name": "allowTernary",
+        "description": "allowTernary"
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
+      }
+    ],
+    "patternId": "@babel_no-unused-expressions",
+    "title": "@babel: No unused expressions",
+    "description": "Disallow unused expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@babel_object-curly-spacing",
+    "title": "@babel: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@babel_semi",
+    "title": "@babel: Semi",
+    "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_aura-api",
+    "title": "@salesforce: [Aura] Aura api",
+    "description": "Validate Aura APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_ecma-intrinsics",
+    "title": "@salesforce: [Aura] Ecma intrinsics",
+    "description": "Validate JavaScript intrinsic APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_getevt-markup-prefix",
+    "title": "@salesforce: [Aura] Getevt markup prefix",
+    "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Aura] No deprecated aura error",
+    "description": "Prevent usage of $A.error",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Aura] No deprecated component creation",
+    "description": "Prevent usage of deprecated component creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Aura] No deprecated event creation",
+    "description": "Prevent usage of deprecated event creation methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-document",
+    "title": "@salesforce: [Aura] Secure document",
+    "description": "Validate secure document public APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_aura_secure-window",
+    "title": "@salesforce: [Aura] Secure window",
+    "description": "Validate secure window public APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_no-aura-localization-service",
+    "title": "@salesforce: [Lightning] No aura localization service",
+    "description": "Disallow usage of \"$A.localizationService\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_no-moment",
+    "title": "@salesforce: [Lightning] No moment",
+    "description": "Prohibit usage of \"moment\" library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_prefer-i18n-service",
+    "title": "@salesforce: [Lightning] Prefer i18n service",
+    "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Lightning] Valid apex method invocation",
+    "description": "Enforce invoking Apex methods with the right arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
+    "title": "@shopify: [Eslint plugin] Binary assignment parens",
+    "description": "Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_class-property-semi",
+    "title": "@shopify: [Eslint plugin] Class property semi",
+    "description": "Require (or disallow) semicolons for class properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
+    "title": "@shopify: [Eslint plugin] Images no direct imports",
+    "description": "Prefer importing image files from the index file of the directory instead of the direct path to the image file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
+    "title": "@shopify: [Eslint plugin] [Jest] No all mocks methods",
+    "description": "Disallows jest allMocks methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
+    "title": "@shopify: [Eslint plugin] [Jest] No snapshots",
+    "description": "Disallows jest snapshots.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
+    "title": "@shopify: [Eslint plugin] Jsx no complex expressions",
+    "description": "Disallow complex expressions embedded in in JSX.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
+    "title": "@shopify: [Eslint plugin] Jsx no hardcoded content",
+    "description": "Disallow hardcoded content in JSX.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
+    "title": "@shopify: [Eslint plugin] Jsx prefer fragment wrappers",
+    "description": "Disallow useless wrapping elements in favour of fragment shorthand in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
+    "title": "@shopify: [Eslint plugin] No ancestor directory import",
+    "description": "Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_no-namespace-imports",
+    "title": "@shopify: [Eslint plugin] No namespace imports",
+    "description": "Prevent namespace import declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
+    "title": "@shopify: [Eslint plugin] No useless computed properties",
+    "description": "Prevent the usage of unnecessary computed properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
+    "title": "@shopify: [Eslint plugin] No fully static classes",
+    "description": "Prevent the declaration of classes consisting only of static members.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
+    "title": "@shopify: [Eslint plugin] Polaris prefer sectioned prop",
+    "description": "Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
+    "title": "@shopify: [Eslint plugin] Polaris no bare stack item",
+    "description": "Disallow the use of Polaris’s `Stack.Item` and `LegacyStack.Item` without any custom props.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_prefer-class-properties",
+    "title": "@shopify: [Eslint plugin] Prefer class properties",
+    "description": "Prefer class properties to assignment of literals in constructors.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_prefer-early-return",
+    "title": "@shopify: [Eslint plugin] Prefer early return",
+    "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
+    "title": "@shopify: [Eslint plugin] Prefer module scope constants",
+    "description": "Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_prefer-twine",
+    "title": "@shopify: [Eslint plugin] Prefer twine",
+    "description": "Prefer Twine over Bindings as the name for twine imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
+    "title": "@shopify: [Eslint plugin] React hooks strict return",
+    "description": "Restrict the number of returned items from React hooks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-initialize-state",
+    "title": "@shopify: [Eslint plugin] React initialize state",
+    "description": "Require that React component state be initialized when it has a non-empty type.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
+    "title": "@shopify: [Eslint plugin] React no multiple render methods",
+    "description": "Disallow multiple render methods in React component classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
+    "title": "@shopify: [Eslint plugin] React prefer private members",
+    "description": "Disallow public members within React component classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
+    "title": "@shopify: [Eslint plugin] React require autocomplete",
+    "description": "Require autocomplete attribute on certain input types.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_react-type-state",
+    "title": "@shopify: [Eslint plugin] React type state",
+    "description": "Require that React component state be typed in TypeScript.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_restrict-full-import",
+    "title": "@shopify: [Eslint plugin] Restrict full import",
+    "description": "Prevent importing the entirety of a package.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
+    "title": "@shopify: [Eslint plugin] Sinon no restricted features",
+    "description": "Restrict the use of specified sinon features.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
+    "title": "@shopify: [Eslint plugin] Sinon prefer meaningful assertions",
+    "description": "Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
+    "title": "@shopify: [Eslint plugin] Strict component boundaries",
+    "description": "Prevent module imports between components.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer pascal case enums",
+    "description": "Enforce Pascal case when naming enums.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer singular enums",
+    "description": "Prefer singular TypeScript enums.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
+    "title": "@shopify: [Eslint plugin] [Typescript] Prefer build client schema",
+    "description": "Prefer buildClientSchema for schema building",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
+    "title": "@shopify: [Eslint plugin] [Webpack] No unnamed dynamic imports",
+    "description": "Require that all dynamic imports contain a `webpackChunkName` comment.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@tanstack_eslint-plugin-query_exhaustive-deps",
+    "title": "@tanstack: [Eslint plugin query] Exhaustive deps",
+    "description": "Exhaustive deps rule for useQuery",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@tanstack_eslint-plugin-query_prefer-query-object-syntax",
+    "title": "@tanstack: [Eslint plugin query] Prefer query object syntax",
+    "description": "Prefer object syntax for useQuery",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_adjacent-overload-signatures",
+    "title": "@typescript eslint: Adjacent overload signatures",
+    "description": "Require that function overload signatures be consecutive",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_array-type",
+    "title": "@typescript eslint: Array type",
+    "description": "Require consistently using either `T[]` or `Array<T>` for arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "minimumDescriptionLength",
+        "description": "minimumDescriptionLength"
+      }
+    ],
+    "patternId": "@typescript-eslint_ban-ts-comment",
+    "title": "@typescript eslint: Ban ts comment",
+    "description": "Disallow `@ts-<directive>` comments or require descriptions after directives",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_ban-tslint-comment",
+    "title": "@typescript eslint: Ban tslint comment",
+    "description": "Disallow `// tslint:<rule-flag>` comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_ban-types",
+    "title": "@typescript eslint: Ban types",
+    "description": "Disallow certain types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_block-spacing",
+    "title": "@typescript eslint: Block spacing",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "allowSingleLine",
+        "description": "allowSingleLine"
+      }
+    ],
+    "patternId": "@typescript-eslint_brace-style",
+    "title": "@typescript eslint: Brace style",
+    "description": "Enforce consistent brace style for blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_class-literal-property-style",
+    "title": "@typescript eslint: Class literal property style",
+    "description": "Enforce that literals on classes are exposed in a consistent style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_comma-dangle",
+    "title": "@typescript eslint: Comma dangle",
+    "description": "Require or disallow trailing commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@typescript-eslint_comma-spacing",
+    "title": "@typescript eslint: Comma spacing",
+    "description": "Enforce consistent spacing before and after commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-generic-constructors",
+    "title": "@typescript eslint: Consistent generic constructors",
+    "description": "Enforce specifying generic type arguments on type annotation or constructor name of a constructor call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-indexed-object-style",
+    "title": "@typescript eslint: Consistent indexed object style",
+    "description": "Require or disallow the `Record` type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-assertions",
+    "title": "@typescript eslint: Consistent type assertions",
+    "description": "Enforce consistent usage of type assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-definitions",
+    "title": "@typescript eslint: Consistent type definitions",
+    "description": "Enforce type definitions to consistently use either `interface` or `type`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-exports",
+    "title": "@typescript eslint: Consistent type exports",
+    "description": "Enforce consistent usage of type exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_consistent-type-imports",
+    "title": "@typescript eslint: Consistent type imports",
+    "description": "Enforce consistent usage of type imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_default-param-last",
+    "title": "@typescript eslint: Default param last",
+    "description": "Enforce default parameters to be last",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowKeywords",
+        "description": "allowKeywords"
+      },
+      {
+        "name": "allowPattern",
+        "description": "allowPattern"
+      },
+      {
+        "name": "allowPrivateClassPropertyAccess",
+        "description": "allowPrivateClassPropertyAccess"
+      },
+      {
+        "name": "allowProtectedClassPropertyAccess",
+        "description": "allowProtectedClassPropertyAccess"
+      },
+      {
+        "name": "allowIndexSignaturePropertyAccess",
+        "description": "allowIndexSignaturePropertyAccess"
+      }
+    ],
+    "patternId": "@typescript-eslint_dot-notation",
+    "title": "@typescript eslint: Dot notation",
+    "description": "Enforce dot notation whenever possible",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_explicit-function-return-type",
+    "title": "@typescript eslint: Explicit function return type",
+    "description": "Require explicit return types on functions and class methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_explicit-member-accessibility",
+    "title": "@typescript eslint: Explicit member accessibility",
+    "description": "Require explicit accessibility modifiers on class properties and methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_explicit-module-boundary-types",
+    "title": "@typescript eslint: Explicit module boundary types",
+    "description": "Require explicit return and argument types on exported functions' and classes' public class methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_func-call-spacing",
+    "title": "@typescript eslint: Func call spacing",
+    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@typescript-eslint_indent",
+    "title": "@typescript eslint: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_init-declarations",
+    "title": "@typescript eslint: Init declarations",
+    "description": "Require or disallow initialization in variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_key-spacing",
+    "title": "@typescript eslint: Key spacing",
+    "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@typescript-eslint_keyword-spacing",
+    "title": "@typescript eslint: Keyword spacing",
+    "description": "Enforce consistent spacing before and after keywords",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "beforeBlockComment",
+        "description": "beforeBlockComment"
+      },
+      {
+        "name": "afterBlockComment",
+        "description": "afterBlockComment"
+      },
+      {
+        "name": "beforeLineComment",
+        "description": "beforeLineComment"
+      },
+      {
+        "name": "afterLineComment",
+        "description": "afterLineComment"
+      },
+      {
+        "name": "allowBlockStart",
+        "description": "allowBlockStart"
+      },
+      {
+        "name": "allowBlockEnd",
+        "description": "allowBlockEnd"
+      }
+    ],
+    "patternId": "@typescript-eslint_lines-around-comment",
+    "title": "@typescript eslint: Lines around comment",
+    "description": "Require empty lines around comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "exceptAfterSingleLine",
+        "description": "exceptAfterSingleLine"
+      }
+    ],
+    "patternId": "@typescript-eslint_lines-between-class-members",
+    "title": "@typescript eslint: Lines between class members",
+    "description": "Require or disallow an empty line between class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_member-delimiter-style",
+    "title": "@typescript eslint: Member delimiter style",
+    "description": "Require a specific member delimiter style for interfaces and type literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_member-ordering",
+    "title": "@typescript eslint: Member ordering",
+    "description": "Require a consistent member declaration order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_method-signature-style",
+    "title": "@typescript eslint: Method signature style",
+    "description": "Enforce using a particular method signature syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_naming-convention",
+    "title": "@typescript eslint: Naming convention",
+    "description": "Enforce naming conventions for everything across a codebase",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-array-constructor",
+    "title": "@typescript eslint: No array constructor",
+    "description": "Disallow generic `Array` constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-base-to-string",
+    "title": "@typescript eslint: No base to string",
+    "description": "Require `.toString()` to only be called on objects which provide useful information when stringified",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-confusing-non-null-assertion",
+    "title": "@typescript eslint: No confusing non null assertion",
+    "description": "Disallow non-null assertion in locations that may be confusing",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-confusing-void-expression",
+    "title": "@typescript eslint: No confusing void expression",
+    "description": "Require expressions of type void to appear in statement position",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-dupe-class-members",
+    "title": "@typescript eslint: No dupe class members",
+    "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-duplicate-enum-values",
+    "title": "@typescript eslint: No duplicate enum values",
+    "description": "Disallow duplicate enum member values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "includeExports",
+        "description": "includeExports"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-duplicate-imports",
+    "title": "@typescript eslint: No duplicate imports",
+    "description": "Disallow duplicate imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-duplicate-type-constituents",
+    "title": "@typescript eslint: No duplicate type constituents",
+    "description": "Disallow duplicate constituents of union or intersection types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-dynamic-delete",
+    "title": "@typescript eslint: No dynamic delete",
+    "description": "Disallow using the `delete` operator on computed key expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-empty-function",
+    "title": "@typescript eslint: No empty function",
+    "description": "Disallow empty functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-empty-interface",
+    "title": "@typescript eslint: No empty interface",
+    "description": "Disallow the declaration of empty interfaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-explicit-any",
+    "title": "@typescript eslint: No explicit any",
+    "description": "Disallow the `any` type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-extra-non-null-assertion",
+    "title": "@typescript eslint: No extra non null assertion",
+    "description": "Disallow extra non-null assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-extra-parens",
+    "title": "@typescript eslint: No extra parens",
+    "description": "Disallow unnecessary parentheses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-extra-semi",
+    "title": "@typescript eslint: No extra semi",
+    "description": "Disallow unnecessary semicolons",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-extraneous-class",
+    "title": "@typescript eslint: No extraneous class",
+    "description": "Disallow classes used as namespaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-floating-promises",
+    "title": "@typescript eslint: No floating promises",
+    "description": "Require Promise-like statements to be handled appropriately",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-for-in-array",
+    "title": "@typescript eslint: No for in array",
+    "description": "Disallow iterating over an array with a for-in loop",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-implicit-any-catch",
+    "title": "@typescript eslint: No implicit any catch",
+    "description": "Disallow usage of the implicit `any` type in catch clauses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-implied-eval",
+    "title": "@typescript eslint: No implied eval",
+    "description": "Disallow the use of `eval()`-like methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-import-type-side-effects",
+    "title": "@typescript eslint: No import type side effects",
+    "description": "Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-inferrable-types",
+    "title": "@typescript eslint: No inferrable types",
+    "description": "Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "capIsConstructor",
+        "description": "capIsConstructor"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-invalid-this",
+    "title": "@typescript eslint: No invalid this",
+    "description": "Disallow `this` keywords outside of classes or class-like objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-invalid-void-type",
+    "title": "@typescript eslint: No invalid void type",
+    "description": "Disallow `void` type outside of generic or return types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-loop-func",
+    "title": "@typescript eslint: No loop func",
+    "description": "Disallow function declarations that contain unsafe references inside loop statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-loss-of-precision",
+    "title": "@typescript eslint: No loss of precision",
+    "description": "Disallow literal numbers that lose precision",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "detectObjects",
+        "description": "detectObjects"
+      },
+      {
+        "name": "enforceConst",
+        "description": "enforceConst"
+      },
+      {
+        "name": "ignoreArrayIndexes",
+        "description": "ignoreArrayIndexes"
+      },
+      {
+        "name": "ignoreDefaultValues",
+        "description": "ignoreDefaultValues"
+      },
+      {
+        "name": "ignoreClassFieldInitialValues",
+        "description": "ignoreClassFieldInitialValues"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-magic-numbers",
+    "title": "@typescript eslint: No magic numbers",
+    "description": "Disallow magic numbers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkNever",
+        "description": "checkNever"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-meaningless-void-operator",
+    "title": "@typescript eslint: No meaningless void operator",
+    "description": "Disallow the `void` operator except when used to discard a value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-misused-new",
+    "title": "@typescript eslint: No misused new",
+    "description": "Enforce valid definition of `new` and `constructor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-misused-promises",
+    "title": "@typescript eslint: No misused promises",
+    "description": "Disallow Promises in places not designed to handle them",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-mixed-enums",
+    "title": "@typescript eslint: No mixed enums",
+    "description": "Disallow enums from having both number and string members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-namespace",
+    "title": "@typescript eslint: No namespace",
+    "description": "Disallow TypeScript namespaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
+    "title": "@typescript eslint: No non null asserted nullish coalescing",
+    "description": "Disallow non-null assertions in the left operand of a nullish coalescing operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
+    "title": "@typescript eslint: No non null asserted optional chain",
+    "description": "Disallow non-null assertions after an optional chain expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-non-null-assertion",
+    "title": "@typescript eslint: No non null assertion",
+    "description": "Disallow non-null assertions using the `!` postfix operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-parameter-properties",
+    "title": "@typescript eslint: No parameter properties",
+    "description": "Disallow the use of parameter properties in class constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-redeclare",
+    "title": "@typescript eslint: No redeclare",
+    "description": "Disallow variable redeclaration",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-redundant-type-constituents",
+    "title": "@typescript eslint: No redundant type constituents",
+    "description": "Disallow members of unions and intersections that do nothing or override type information",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-require-imports",
+    "title": "@typescript eslint: No require imports",
+    "description": "Disallow invocation of `require()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-restricted-imports",
+    "title": "@typescript eslint: No restricted imports",
+    "description": "Disallow specified modules when loaded by `import`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-shadow",
+    "title": "@typescript eslint: No shadow",
+    "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-this-alias",
+    "title": "@typescript eslint: No this alias",
+    "description": "Disallow aliasing `this`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-throw-literal",
+    "title": "@typescript eslint: No throw literal",
+    "description": "Disallow throwing literals as exceptions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-type-alias",
+    "title": "@typescript eslint: No type alias",
+    "description": "Disallow type aliases",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
+    "title": "@typescript eslint: No unnecessary boolean literal compare",
+    "description": "Disallow unnecessary equality comparisons against boolean literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-condition",
+    "title": "@typescript eslint: No unnecessary condition",
+    "description": "Disallow conditionals where the type is always truthy or always falsy",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-qualifier",
+    "title": "@typescript eslint: No unnecessary qualifier",
+    "description": "Disallow unnecessary namespace qualifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-type-arguments",
+    "title": "@typescript eslint: No unnecessary type arguments",
+    "description": "Disallow type arguments that are equal to the default",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-type-assertion",
+    "title": "@typescript eslint: No unnecessary type assertion",
+    "description": "Disallow type assertions that do not change the type of an expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
+    "title": "@typescript eslint: No unnecessary type constraint",
+    "description": "Disallow unnecessary constraints on generic types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-argument",
+    "title": "@typescript eslint: No unsafe argument",
+    "description": "Disallow calling a function with a value with type `any`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-assignment",
+    "title": "@typescript eslint: No unsafe assignment",
+    "description": "Disallow assigning a value with type `any` to variables and properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-call",
+    "title": "@typescript eslint: No unsafe call",
+    "description": "Disallow calling a value with type `any`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
+    "title": "@typescript eslint: No unsafe declaration merging",
+    "description": "Disallow unsafe declaration merging",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
+    "title": "@typescript eslint: No unsafe enum comparison",
+    "description": "Disallow comparing an enum value with a non-enum value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-member-access",
+    "title": "@typescript eslint: No unsafe member access",
+    "description": "Disallow member access on a value with type `any`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-return",
+    "title": "@typescript eslint: No unsafe return",
+    "description": "Disallow returning a value with type `any` from a function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowShortCircuit",
+        "description": "allowShortCircuit"
+      },
+      {
+        "name": "allowTernary",
+        "description": "allowTernary"
+      },
+      {
+        "name": "allowTaggedTemplates",
+        "description": "allowTaggedTemplates"
+      },
+      {
+        "name": "enforceForJSX",
+        "description": "enforceForJSX"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-unused-expressions",
+    "title": "@typescript eslint: No unused expressions",
+    "description": "Disallow unused expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unused-vars",
+    "title": "@typescript eslint: No unused vars",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-use-before-define",
+    "title": "@typescript eslint: No use before define",
+    "description": "Disallow the use of variables before they are defined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-useless-constructor",
+    "title": "@typescript eslint: No useless constructor",
+    "description": "Disallow unnecessary constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-useless-empty-export",
+    "title": "@typescript eslint: No useless empty export",
+    "description": "Disallow empty exports that don't change anything in a module file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-var-requires",
+    "title": "@typescript eslint: No var requires",
+    "description": "Disallow `require` statements except in import statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
+    "title": "@typescript eslint: Non nullable type assertion style",
+    "description": "Enforce non-null assertions over explicit type casts",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_object-curly-spacing",
+    "title": "@typescript eslint: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_padding-line-between-statements",
+    "title": "@typescript eslint: Padding line between statements",
+    "description": "Require or disallow padding lines between statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_parameter-properties",
+    "title": "@typescript eslint: Parameter properties",
+    "description": "Require or disallow parameter properties in class constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-as-const",
+    "title": "@typescript eslint: Prefer as const",
+    "description": "Enforce the use of `as const` over literal type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-enum-initializers",
+    "title": "@typescript eslint: Prefer enum initializers",
+    "description": "Require each enum member value to be explicitly initialized",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-for-of",
+    "title": "@typescript eslint: Prefer for of",
+    "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-function-type",
+    "title": "@typescript eslint: Prefer function type",
+    "description": "Enforce using function types instead of interfaces with call signatures",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-includes",
+    "title": "@typescript eslint: Prefer includes",
+    "description": "Enforce `includes` method over `indexOf` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-literal-enum-member",
+    "title": "@typescript eslint: Prefer literal enum member",
+    "description": "Require all enum members to be literal values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-namespace-keyword",
+    "title": "@typescript eslint: Prefer namespace keyword",
+    "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-nullish-coalescing",
+    "title": "@typescript eslint: Prefer nullish coalescing",
+    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-optional-chain",
+    "title": "@typescript eslint: Prefer optional chain",
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-readonly",
+    "title": "@typescript eslint: Prefer readonly",
+    "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
+    "title": "@typescript eslint: Prefer readonly parameter types",
+    "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-reduce-type-parameter",
+    "title": "@typescript eslint: Prefer reduce type parameter",
+    "description": "Enforce using type parameter when calling `Array#reduce` instead of casting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-regexp-exec",
+    "title": "@typescript eslint: Prefer regexp exec",
+    "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-return-this-type",
+    "title": "@typescript eslint: Prefer return this type",
+    "description": "Enforce that `this` is used when only `this` type is returned",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
+    "title": "@typescript eslint: Prefer string starts ends with",
+    "description": "Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-ts-expect-error",
+    "title": "@typescript eslint: Prefer ts expect error",
+    "description": "Enforce using `@ts-expect-error` over `@ts-ignore`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_promise-function-async",
+    "title": "@typescript eslint: Promise function async",
+    "description": "Require any function or method that returns a Promise to be marked async",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_quotes",
+    "title": "@typescript eslint: Quotes",
+    "description": "Enforce the consistent use of either backticks, double, or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_require-array-sort-compare",
+    "title": "@typescript eslint: Require array sort compare",
+    "description": "Require `Array#sort` calls to always provide a `compareFunction`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_require-await",
+    "title": "@typescript eslint: Require await",
+    "description": "Disallow async functions which have no `await` expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_restrict-plus-operands",
+    "title": "@typescript eslint: Restrict plus operands",
+    "description": "Require both operands of addition to be the same type and be `bigint`, `number`, or `string`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_restrict-template-expressions",
+    "title": "@typescript eslint: Restrict template expressions",
+    "description": "Enforce template literal expressions to be of `string` type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_return-await",
+    "title": "@typescript eslint: Return await",
+    "description": "Enforce consistent returning of awaited values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_semi",
+    "title": "@typescript eslint: Semi",
+    "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_sort-type-constituents",
+    "title": "@typescript eslint: Sort type constituents",
+    "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
+    "title": "@typescript eslint: Sort type union intersection members",
+    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_space-before-blocks",
+    "title": "@typescript eslint: Space before blocks",
+    "description": "Enforce consistent spacing before blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_space-before-function-paren",
+    "title": "@typescript eslint: Space before function paren",
+    "description": "Enforce consistent spacing before function parenthesis",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": "int32Hint"
+      }
+    ],
+    "patternId": "@typescript-eslint_space-infix-ops",
+    "title": "@typescript eslint: Space infix ops",
+    "description": "Require spacing around infix operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_strict-boolean-expressions",
+    "title": "@typescript eslint: Strict boolean expressions",
+    "description": "Disallow certain types in boolean expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_switch-exhaustiveness-check",
+    "title": "@typescript eslint: Switch exhaustiveness check",
+    "description": "Require switch-case statements to be exhaustive with union type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_triple-slash-reference",
+    "title": "@typescript eslint: Triple slash reference",
+    "description": "Disallow certain triple slash directives in favor of ES6-style import declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_type-annotation-spacing",
+    "title": "@typescript eslint: Type annotation spacing",
+    "description": "Require consistent spacing around type annotations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_typedef",
+    "title": "@typescript eslint: Typedef",
+    "description": "Require type annotations in certain places",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_unbound-method",
+    "title": "@typescript eslint: Unbound method",
+    "description": "Enforce unbound methods are called with their expected scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_unified-signatures",
+    "title": "@typescript eslint: Unified signatures",
+    "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "angular_angularelement",
     "title": "Angular: Angularelement",
     "timeToFix": 5
@@ -3267,310 +5004,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_component-class-suffix",
-    "title": "@angular eslint: Component class suffix",
-    "description": "Classes decorated with @Component must have suffix \"Component\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_component-max-inline-declarations",
-    "title": "@angular eslint: Component max inline declarations",
-    "description": "Enforces a maximum number of lines in inline template, styles and animations. See more at https://angular.io/guide/styleguide#style-05-04",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_component-selector",
-    "title": "@angular eslint: Component selector",
-    "description": "Component selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-07, https://angular.io/guide/styleguide#style-05-02\n      and https://angular.io/guide/styleguide#style-05-03.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_contextual-decorator",
-    "title": "@angular eslint: Contextual decorator",
-    "description": "Ensures that classes use contextual decorators in its body",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_contextual-lifecycle",
-    "title": "@angular eslint: Contextual lifecycle",
-    "description": "Ensures that lifecycle methods are used in a correct context",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_directive-class-suffix",
-    "title": "@angular eslint: Directive class suffix",
-    "description": "Classes decorated with @Directive must have suffix \"Directive\" (or custom) in their name. See more at https://angular.io/styleguide#style-02-03",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_directive-selector",
-    "title": "@angular eslint: Directive selector",
-    "description": "Directive selectors should follow given naming rules. See more at https://angular.io/guide/styleguide#style-02-06 and https://angular.io/guide/styleguide#style-02-08.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-attribute-decorator",
-    "title": "@angular eslint: No attribute decorator",
-    "description": "The @Attribute decorator is used to obtain a single value for an attribute. This is a much less common use-case than getting a stream of values (using @Input), so often the @Attribute decorator is mistakenly used when @Input was what was intended. This rule disallows usage of @Attribute decorator altogether in order to prevent these mistakes.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-conflicting-lifecycle",
-    "title": "@angular eslint: No conflicting lifecycle",
-    "description": "Ensures that directives not implement conflicting lifecycle interfaces.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-empty-lifecycle-method",
-    "title": "@angular eslint: No empty lifecycle method",
-    "description": "Disallows declaring empty lifecycle methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-forward-ref",
-    "title": "@angular eslint: No forward ref",
-    "description": "Disallows usage of `forwardRef` references for DI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowStatic",
-        "description": "allowStatic"
-      }
-    ],
-    "patternId": "@angular-eslint_no-host-metadata-property",
-    "title": "@angular eslint: No host metadata property",
-    "description": "Disallows usage of the `host` metadata property. See more at https://angular.io/styleguide#style-06-03",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-input-prefix",
-    "title": "@angular eslint: No input prefix",
-    "description": "Ensures that input bindings, including aliases, are not named or prefixed by the configured disallowed prefixes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-input-rename",
-    "title": "@angular eslint: No input rename",
-    "description": "Ensures that input bindings are not aliased",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-inputs-metadata-property",
-    "title": "@angular eslint: No inputs metadata property",
-    "description": "Disallows usage of the `inputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-lifecycle-call",
-    "title": "@angular eslint: No lifecycle call",
-    "description": "Disallows explicit calls to lifecycle methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-output-native",
-    "title": "@angular eslint: No output native",
-    "description": "Ensures that output bindings, including aliases, are not named as standard DOM events",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-output-on-prefix",
-    "title": "@angular eslint: No output on prefix",
-    "description": "Ensures that output bindings, including aliases, are not named \"on\", nor prefixed with it. See more at https://angular.io/guide/styleguide#style-05-16",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-output-rename",
-    "title": "@angular eslint: No output rename",
-    "description": "Ensures that output bindings are not aliased",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-outputs-metadata-property",
-    "title": "@angular eslint: No outputs metadata property",
-    "description": "Disallows usage of the `outputs` metadata property. See more at https://angular.io/styleguide#style-05-12",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-pipe-impure",
-    "title": "@angular eslint: No pipe impure",
-    "description": "Disallows the declaration of impure pipes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_no-queries-metadata-property",
-    "title": "@angular eslint: No queries metadata property",
-    "description": "Disallows usage of the `queries` metadata property. See more at https://angular.io/styleguide#style-05-12.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_pipe-prefix",
-    "title": "@angular eslint: Pipe prefix",
-    "description": "Enforce consistent prefix for pipes.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_prefer-on-push-component-change-detection",
-    "title": "@angular eslint: Prefer on push component change detection",
-    "description": "Ensures component's `changeDetection` is set to `ChangeDetectionStrategy.OnPush`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_prefer-output-readonly",
-    "title": "@angular eslint: Prefer output readonly",
-    "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_relative-url-prefix",
-    "title": "@angular eslint: Relative url prefix",
-    "description": "The ./ and ../ prefix is standard syntax for relative URLs; don't depend on Angular's current ability to do without that prefix. See more at https://angular.io/styleguide#style-05-04",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "locale",
-        "description": "locale"
-      }
-    ],
-    "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
-    "title": "@angular eslint: Sort ngmodule metadata arrays",
-    "description": "Ensures ASC alphabetical order for `NgModule` metadata arrays for easy visual scanning",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_use-component-selector",
-    "title": "@angular eslint: Use component selector",
-    "description": "Component selector must be declared",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_use-component-view-encapsulation",
-    "title": "@angular eslint: Use component view encapsulation",
-    "description": "Disallows using `ViewEncapsulation.None`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_use-injectable-provided-in",
-    "title": "@angular eslint: Use injectable provided in",
-    "description": "Using the `providedIn` property makes `Injectables` tree-shakable",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_use-lifecycle-interface",
-    "title": "@angular eslint: Use lifecycle interface",
-    "description": "Ensures that classes implement lifecycle interfaces corresponding to the declared lifecycle methods. See more at https://angular.io/styleguide#style-09-01",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@angular-eslint_use-pipe-transform-interface",
-    "title": "@angular eslint: Use pipe transform interface",
-    "description": "Ensures that `Pipes` implement `PipeTransform` interface",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "newIsCap",
-        "description": "newIsCap"
-      },
-      {
-        "name": "capIsNew",
-        "description": "capIsNew"
-      },
-      {
-        "name": "properties",
-        "description": "properties"
-      }
-    ],
-    "patternId": "@babel_new-cap",
-    "title": "@babel: New cap",
-    "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "capIsConstructor",
-        "description": "capIsConstructor"
-      }
-    ],
-    "patternId": "@babel_no-invalid-this",
-    "title": "@babel: No invalid this",
-    "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowShortCircuit",
-        "description": "allowShortCircuit"
-      },
-      {
-        "name": "allowTernary",
-        "description": "allowTernary"
-      },
-      {
-        "name": "allowTaggedTemplates",
-        "description": "allowTaggedTemplates"
-      },
-      {
-        "name": "enforceForJSX",
-        "description": "enforceForJSX"
-      }
-    ],
-    "patternId": "@babel_no-unused-expressions",
-    "title": "@babel: No unused expressions",
-    "description": "Disallow unused expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@babel_object-curly-spacing",
-    "title": "@babel: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@babel_semi",
-    "title": "@babel: Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "backbone_collection-model",
     "title": "Backbone: Collection model",
     "description": "Require all collections to declare model",
@@ -3813,6 +5246,13 @@
     "patternId": "cypress_no-pause",
     "title": "Cypress: No pause",
     "description": "Disallow using of 'cy.pause' calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "deprecation_deprecation",
+    "title": "Deprecation: Deprecation",
+    "description": "Do not use deprecated APIs.",
     "timeToFix": 5
   },
   {
@@ -5970,6 +7410,226 @@
   },
   {
     "parameters": [],
+    "patternId": "eslint-plugin_consistent-output",
+    "title": "Eslint plugin: Consistent output",
+    "description": "Enforce consistent use of `output` assertions in rule tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_fixer-return",
+    "title": "Eslint plugin: Fixer return",
+    "description": "Require fixer functions to return a fix",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_meta-property-ordering",
+    "title": "Eslint plugin: Meta property ordering",
+    "description": "Enforce the order of meta properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-deprecated-context-methods",
+    "title": "Eslint plugin: No deprecated context methods",
+    "description": "Disallow usage of deprecated methods on rule context objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-deprecated-report-api",
+    "title": "Eslint plugin: No deprecated report api",
+    "description": "Disallow the version of `context.report()` with multiple arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-identical-tests",
+    "title": "Eslint plugin: No identical tests",
+    "description": "Disallow identical tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-missing-message-ids",
+    "title": "Eslint plugin: No missing message ids",
+    "description": "Disallow `messageId`s that are missing from `meta.messages`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-missing-placeholders",
+    "title": "Eslint plugin: No missing placeholders",
+    "description": "Disallow missing placeholders in rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-only-tests",
+    "title": "Eslint plugin: No only tests",
+    "description": "Disallow the test case property `only`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-unused-message-ids",
+    "title": "Eslint plugin: No unused message ids",
+    "description": "Disallow unused `messageId`s in `meta.messages`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-unused-placeholders",
+    "title": "Eslint plugin: No unused placeholders",
+    "description": "Disallow unused placeholders in rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-useless-token-range",
+    "title": "Eslint plugin: No useless token range",
+    "description": "Disallow unnecessary calls to `sourceCode.getFirstToken()` and `sourceCode.getLastToken()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-message-ids",
+    "title": "Eslint plugin: Prefer message ids",
+    "description": "Require using `messageId` instead of `message` to report rule violations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-object-rule",
+    "title": "Eslint plugin: Prefer object rule",
+    "description": "Disallow function-style rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-output-null",
+    "title": "Eslint plugin: Prefer output null",
+    "description": "Disallow invalid RuleTester test cases where the `output` matches the `code`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-placeholders",
+    "title": "Eslint plugin: Prefer placeholders",
+    "description": "Require using placeholders for dynamic report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_prefer-replace-text",
+    "title": "Eslint plugin: Prefer replace text",
+    "description": "Require using `replaceText()` instead of `replaceTextRange()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_report-message-format",
+    "title": "Eslint plugin: Report message format",
+    "description": "Enforce a consistent format for rule report messages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-docs-description",
+    "title": "Eslint plugin: Require meta docs description",
+    "description": "Require rules to implement a `meta.docs.description` property with the correct format",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-docs-url",
+    "title": "Eslint plugin: Require meta docs url",
+    "description": "Require rules to implement a `meta.docs.url` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "catchNoFixerButFixableProperty",
+        "description": "catchNoFixerButFixableProperty"
+      }
+    ],
+    "patternId": "eslint-plugin_require-meta-fixable",
+    "title": "Eslint plugin: Require meta fixable",
+    "description": "Require rules to implement a `meta.fixable` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-has-suggestions",
+    "title": "Eslint plugin: Require meta has suggestions",
+    "description": "Require suggestable rules to implement a `meta.hasSuggestions` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requireSchemaPropertyWhenOptionless",
+        "description": "requireSchemaPropertyWhenOptionless"
+      }
+    ],
+    "patternId": "eslint-plugin_require-meta-schema",
+    "title": "Eslint plugin: Require meta schema",
+    "description": "Require rules to implement a `meta.schema` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_require-meta-type",
+    "title": "Eslint plugin: Require meta type",
+    "description": "Require rules to implement a `meta.type` property",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_test-case-property-ordering",
+    "title": "Eslint plugin: Test case property ordering",
+    "description": "Require the properties of a test case to be placed in a consistent order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_test-case-shorthand-strings",
+    "title": "Eslint plugin: Test case shorthand strings",
+    "description": "Enforce consistent usage of shorthand strings for test cases with no options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "filenames_match-regex",
+    "title": "Filenames: Match regex",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "filenames_match-exported",
+    "title": "Filenames: Match exported",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "filenames_no-index",
+    "title": "Filenames: No index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "flowtype_array-style-complex-type",
     "title": "Flowtype: Array style complex type",
     "timeToFix": 5
@@ -6271,6 +7931,125 @@
   },
   {
     "parameters": [],
+    "patternId": "fp_no-arguments",
+    "title": "Fp: No arguments",
+    "description": "Forbid the use of `arguments`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-class",
+    "title": "Fp: No class",
+    "description": "Forbid the use of `class`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-delete",
+    "title": "Fp: No delete",
+    "description": "Forbid the use of `delete`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-events",
+    "title": "Fp: No events",
+    "description": "Forbid the use of the `events` module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-get-set",
+    "title": "Fp: No get set",
+    "description": "Forbid the use of getters and setters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-let",
+    "title": "Fp: No let",
+    "description": "Forbid the use of `let`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-loops",
+    "title": "Fp: No loops",
+    "description": "Forbid the use of loops.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutating-assign",
+    "title": "Fp: No mutating assign",
+    "description": "Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutating-methods",
+    "title": "Fp: No mutating methods",
+    "description": "Forbid the use of mutating methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-mutation",
+    "title": "Fp: No mutation",
+    "description": "Forbid the use of mutating operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-nil",
+    "title": "Fp: No nil",
+    "description": "Forbid the use of `null` and `undefined`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-proxy",
+    "title": "Fp: No proxy",
+    "description": "Forbid the use of `Proxy`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-rest-parameters",
+    "title": "Fp: No rest parameters",
+    "description": "Forbid the use of rest parameters.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-this",
+    "title": "Fp: No this",
+    "description": "Forbid the use of `this`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-throw",
+    "title": "Fp: No throw",
+    "description": "Forbid the use of `throw`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-unused-expression",
+    "title": "Fp: No unused expression",
+    "description": "Enforce that an expression gets used.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "fp_no-valueof-field",
+    "title": "Fp: No valueof field",
+    "description": "Forbid the creation of `valueOf` fields.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "functional_functional-parameters",
     "title": "Functional: Functional parameters",
     "description": "Enforce functional parameters.",
@@ -6447,6 +8226,20 @@
     "patternId": "i18next_no-literal-string",
     "title": "I18next: No literal string",
     "description": "Disallow literal string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import-alias_import-alias",
+    "title": "Import alias: Import alias",
+    "description": "Restrict imports to path aliases or relative imports limited by a depth",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import-newlines_enforce",
+    "title": "Import newlines: Enforce",
+    "description": "Enforce multiple lines for import statements past a certain number of items",
     "timeToFix": 5
   },
   {
@@ -6961,6 +8754,118 @@
   },
   {
     "parameters": [],
+    "patternId": "jest-dom_prefer-checked",
+    "title": "Jest dom: Prefer checked",
+    "description": "Prefer toBeChecked over checking attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-empty",
+    "title": "Jest dom: Prefer empty",
+    "description": "Prefer toBeEmpty over checking innerHTML",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-enabled-disabled",
+    "title": "Jest dom: Prefer enabled disabled",
+    "description": "Prefer toBeDisabled or toBeEnabled over checking attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-focus",
+    "title": "Jest dom: Prefer focus",
+    "description": "Prefer toHaveFocus over checking document.activeElement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-in-document",
+    "title": "Jest dom: Prefer in document",
+    "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-required",
+    "title": "Jest dom: Prefer required",
+    "description": "Prefer toBeRequired over checking properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-attribute",
+    "title": "Jest dom: Prefer to have attribute",
+    "description": "Prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-class",
+    "title": "Jest dom: Prefer to have class",
+    "description": "Prefer toHaveClass over checking element className",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-style",
+    "title": "Jest dom: Prefer to have style",
+    "description": "Prefer toHaveStyle over checking element style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-text-content",
+    "title": "Jest dom: Prefer to have text content",
+    "description": "Prefer toHaveTextContent over checking element.textContent",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-value",
+    "title": "Jest dom: Prefer to have value",
+    "description": "Prefer toHaveValue over checking element.value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-array",
+    "title": "Jest extended: Prefer to be array",
+    "description": "Suggest using `toBeArray()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-false",
+    "title": "Jest extended: Prefer to be false",
+    "description": "Suggest using `toBeFalse()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-object",
+    "title": "Jest extended: Prefer to be object",
+    "description": "Suggest using `toBeObject()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-be-true",
+    "title": "Jest extended: Prefer to be true",
+    "description": "Suggest using `toBeTrue()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-extended_prefer-to-have-been-called-once",
+    "title": "Jest extended: Prefer to have been called once",
+    "description": "Suggest using `toHaveBeenCalledOnce()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest-formatting_padding-around-after-all-blocks",
     "title": "Jest formatting: Padding around after all blocks",
     "timeToFix": 5
@@ -7005,6 +8910,13 @@
     "parameters": [],
     "patternId": "jest-formatting_padding-around-all",
     "title": "Jest formatting: Padding around all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jira-ticket-todo-comment_jira-ticket-todo-comment",
+    "title": "Jira ticket todo comment: Jira ticket todo comment",
+    "description": "Checks TODO comments and informs about missing Jira ticket mentions",
     "timeToFix": 5
   },
   {
@@ -7895,6 +9807,10 @@
       {
         "name": "skipRegExps",
         "description": "skipRegExps"
+      },
+      {
+        "name": "skipJSXText",
+        "description": "skipJSXText"
       }
     ],
     "patternId": "jsonc_no-irregular-whitespace",
@@ -8385,6 +10301,153 @@
     "patternId": "jsx-a11y_tabindex-no-positive",
     "title": "Jsx a11y: Tabindex no positive",
     "description": "Enforce `tabIndex` value is not greater than zero.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_attribute-value-entities",
+    "title": "Lit: Attribute value entities",
+    "description": "Disallows unencoded HTML entities in attribute values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_ban-attributes",
+    "title": "Lit: Ban attributes",
+    "description": "Disallows a set of attributes from being used in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_binding-positions",
+    "title": "Lit: Binding positions",
+    "description": "Disallows invalid binding positions in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-duplicate-template-bindings",
+    "title": "Lit: No duplicate template bindings",
+    "description": "Disallows duplicate names in template bindings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-invalid-escape-sequences",
+    "title": "Lit: No invalid escape sequences",
+    "description": "Disallows invalid escape sequences in template strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-invalid-html",
+    "title": "Lit: No invalid html",
+    "description": "Disallows invalid HTML in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-legacy-imports",
+    "title": "Lit: No legacy imports",
+    "description": "Detects usages of legacy lit imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-legacy-template-syntax",
+    "title": "Lit: No legacy template syntax",
+    "description": "Detects usages of legacy binding syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-native-attributes",
+    "title": "Lit: No native attributes",
+    "description": "Disallows use of native attributes as properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-private-properties",
+    "title": "Lit: No private properties",
+    "description": "Disallows usages of \"non-public\" property bindings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-property-change-update",
+    "title": "Lit: No property change update",
+    "description": "Disallows property changes in the `update` lifecycle method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-arrow",
+    "title": "Lit: No template arrow",
+    "description": "Disallows arrow functions in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-bind",
+    "title": "Lit: No template bind",
+    "description": "Disallows `.bind` in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-template-map",
+    "title": "Lit: No template map",
+    "description": "Disallows array `.map` in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-this-assign-in-render",
+    "title": "Lit: No this assign in render",
+    "description": "Disallows assignments to members of `this` in render methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-useless-template-literals",
+    "title": "Lit: No useless template literals",
+    "description": "Disallows redundant literal values in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_no-value-attribute",
+    "title": "Lit: No value attribute",
+    "description": "Detects usages of the `value` attribute where the equivalent property should be used instead",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_prefer-nothing",
+    "title": "Lit: Prefer nothing",
+    "description": "Enforces use of `nothing` constant over empty templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_prefer-static-styles",
+    "title": "Lit: Prefer static styles",
+    "description": "Enforces the use of static styles in elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_quoted-expressions",
+    "title": "Lit: Quoted expressions",
+    "description": "Enforces the presence or absence of quotes around expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_value-after-constraints",
+    "title": "Lit: Value after constraints",
+    "description": "Enforces that `value` is bound on an input after constraints",
     "timeToFix": 5
   },
   {
@@ -9385,6 +11448,320 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "spread-last",
+        "description": "spread-last"
+      }
+    ],
+    "patternId": "perfectionist_sort-array-includes",
+    "title": "Perfectionist: Sort array includes",
+    "description": "Enforce sorted arrays before include method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "groups",
+        "description": "groups"
+      }
+    ],
+    "patternId": "perfectionist_sort-classes",
+    "title": "Perfectionist: Sort classes",
+    "description": "Enforce sorted classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      }
+    ],
+    "patternId": "perfectionist_sort-enums",
+    "title": "Perfectionist: Sort enums",
+    "description": "Enforce sorted TypeScript enums",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-exports",
+    "title": "Perfectionist: Sort exports",
+    "description": "Enforce sorted exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "groups",
+        "description": "groups"
+      },
+      {
+        "name": "internal-pattern",
+        "description": "internal-pattern"
+      },
+      {
+        "name": "newlines-between",
+        "description": "newlines-between"
+      },
+      {
+        "name": "read-tsconfig",
+        "description": "read-tsconfig"
+      }
+    ],
+    "patternId": "perfectionist_sort-imports",
+    "title": "Perfectionist: Sort imports",
+    "description": "Enforce sorted imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "ignore-pattern",
+        "description": "ignore-pattern"
+      }
+    ],
+    "patternId": "perfectionist_sort-interfaces",
+    "title": "Perfectionist: Sort interfaces",
+    "description": "Enforce sorted interface properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "always-on-top",
+        "description": "always-on-top"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-jsx-props",
+    "title": "Perfectionist: Sort jsx props",
+    "description": "Enforce sorted JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-map-elements",
+    "title": "Perfectionist: Sort map elements",
+    "description": "Enforce sorted Map elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-named-exports",
+    "title": "Perfectionist: Sort named exports",
+    "description": "Enforce sorted named exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-named-imports",
+    "title": "Perfectionist: Sort named imports",
+    "description": "Enforce sorted named imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-object-types",
+    "title": "Perfectionist: Sort object types",
+    "description": "Enforce sorted object types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "partition-by-comment",
+        "description": "partition-by-comment"
+      },
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      },
+      {
+        "name": "always-on-top",
+        "description": "always-on-top"
+      }
+    ],
+    "patternId": "perfectionist_sort-objects",
+    "title": "Perfectionist: Sort objects",
+    "description": "Enforce sorted objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-union-types",
+    "title": "Perfectionist: Sort union types",
+    "description": "Enforce sorted union types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_expect-expect",
+    "title": "Playwright: Expect expect",
+    "description": "Enforce assertion to be made in a test body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_max-nested-describe",
+    "title": "Playwright: Max nested describe",
+    "description": "Enforces a maximum depth to nested describe calls",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "playwright_missing-playwright-await",
     "title": "Playwright: Missing playwright await",
@@ -9393,9 +11770,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-page-pause",
-    "title": "Playwright: No page pause",
-    "description": "Prevent usage of page.pause()",
+    "patternId": "playwright_no-conditional-in-test",
+    "title": "Playwright: No conditional in test",
+    "description": "Disallow conditional logic in tests",
     "timeToFix": 5
   },
   {
@@ -9421,20 +11798,6 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-skipped-test",
-    "title": "Playwright: No skipped test",
-    "description": "Prevent usage of the `.skip()` skip test annotation.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "playwright_no-wait-for-timeout",
-    "title": "Playwright: No wait for timeout",
-    "description": "Prevent usage of page.waitForTimeout()",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "playwright_no-force-option",
     "title": "Playwright: No force option",
     "description": "Prevent usage of `{ force: true }` option.",
@@ -9442,16 +11805,51 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_max-nested-describe",
-    "title": "Playwright: Max nested describe",
-    "description": "Enforces a maximum depth to nested describe calls",
+    "patternId": "playwright_no-nested-step",
+    "title": "Playwright: No nested step",
+    "description": "Disallow nested `test.step()` methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-conditional-in-test",
-    "title": "Playwright: No conditional in test",
-    "description": "Disallow conditional logic in tests",
+    "patternId": "playwright_no-networkidle",
+    "title": "Playwright: No networkidle",
+    "description": "Prevent usage of the networkidle option",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-nth-methods",
+    "title": "Playwright: No nth methods",
+    "description": "Disallow usage of nth methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-page-pause",
+    "title": "Playwright: No page pause",
+    "description": "Prevent usage of page.pause()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-restricted-matchers",
+    "title": "Playwright: No restricted matchers",
+    "description": "Disallow specific matchers & modifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-skipped-test",
+    "title": "Playwright: No skipped test",
+    "description": "Prevent usage of the `.skip()` skip test annotation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-useless-await",
+    "title": "Playwright: No useless await",
+    "description": "Disallow unnecessary awaits for Playwright methods",
     "timeToFix": 5
   },
   {
@@ -9463,9 +11861,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_no-restricted-matchers",
-    "title": "Playwright: No restricted matchers",
-    "description": "Disallow specific matchers & modifiers",
+    "patternId": "playwright_no-wait-for-timeout",
+    "title": "Playwright: No wait for timeout",
+    "description": "Prevent usage of page.waitForTimeout()",
     "timeToFix": 5
   },
   {
@@ -9496,6 +11894,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_prefer-to-contain",
+    "title": "Playwright: Prefer to contain",
+    "description": "Suggest using toContain()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_prefer-to-have-length",
     "title": "Playwright: Prefer to have length",
     "description": "Suggest using `toHaveLength()`",
@@ -9503,9 +11908,9 @@
   },
   {
     "parameters": [],
-    "patternId": "playwright_require-top-level-describe",
-    "title": "Playwright: Require top level describe",
-    "description": "Require test cases and hooks to be inside a `test.describe` block",
+    "patternId": "playwright_prefer-web-first-assertions",
+    "title": "Playwright: Prefer web first assertions",
+    "description": "Prefer web first assertions",
     "timeToFix": 5
   },
   {
@@ -9517,9 +11922,23 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_require-top-level-describe",
+    "title": "Playwright: Require top level describe",
+    "description": "Require test cases and hooks to be inside a `test.describe` block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_valid-expect",
     "title": "Playwright: Valid expect",
     "description": "Enforce valid `expect()` usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "prefer-object-spread_prefer-object-spread",
+    "title": "Prefer object spread: Prefer object spread",
+    "description": "Use a spread property instead of Object.assign().",
     "timeToFix": 5
   },
   {
@@ -10806,90 +13225,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_aura-api",
-    "title": "@salesforce: [Aura] Aura api",
-    "description": "Validate Aura APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_ecma-intrinsics",
-    "title": "@salesforce: [Aura] Ecma intrinsics",
-    "description": "Validate JavaScript intrinsic APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_getevt-markup-prefix",
-    "title": "@salesforce: [Aura] Getevt markup prefix",
-    "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-aura-error",
-    "title": "@salesforce: [Aura] No deprecated aura error",
-    "description": "Prevent usage of $A.error",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-component-creation",
-    "title": "@salesforce: [Aura] No deprecated component creation",
-    "description": "Prevent usage of deprecated component creation methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-event-creation",
-    "title": "@salesforce: [Aura] No deprecated event creation",
-    "description": "Prevent usage of deprecated event creation methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_secure-document",
-    "title": "@salesforce: [Aura] Secure document",
-    "description": "Validate secure document public APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_aura_secure-window",
-    "title": "@salesforce: [Aura] Secure window",
-    "description": "Validate secure window public APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_lightning_no-aura-localization-service",
-    "title": "@salesforce: [Lightning] No aura localization service",
-    "description": "Disallow usage of \"$A.localizationService\"",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_lightning_no-moment",
-    "title": "@salesforce: [Lightning] No moment",
-    "description": "Prohibit usage of \"moment\" library",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_lightning_prefer-i18n-service",
-    "title": "@salesforce: [Lightning] Prefer i18n service",
-    "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
-    "title": "@salesforce: [Lightning] Valid apex method invocation",
-    "description": "Enforce invoking Apex methods with the right arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "scanjs-rules_accidental__assignment",
     "title": "Scanjs rules: Accidental_assignment",
     "timeToFix": 5
@@ -10944,12 +13279,6 @@
   },
   {
     "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "scanjs-rules_call__addEventListener",
     "title": "Scanjs rules: Call_addEventListener",
     "timeToFix": 5
@@ -10982,6 +13311,12 @@
     "parameters": [],
     "patternId": "scanjs-rules_call__execScript",
     "title": "Scanjs rules: Call_execScript",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
     "timeToFix": 5
   },
   {
@@ -11200,230 +13535,6 @@
     "patternId": "security_detect-bidi-characters",
     "title": "Security: Detect bidi characters",
     "description": "Detects trojan source attacks that employ unicode bidi attacks to inject malicious code.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
-    "title": "@shopify: [Eslint plugin] Binary assignment parens",
-    "description": "Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_class-property-semi",
-    "title": "@shopify: [Eslint plugin] Class property semi",
-    "description": "Require (or disallow) semicolons for class properties.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
-    "title": "@shopify: [Eslint plugin] Images no direct imports",
-    "description": "Prefer importing image files from the index file of the directory instead of the direct path to the image file.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
-    "title": "@shopify: [Eslint plugin] [Jest] No all mocks methods",
-    "description": "Disallows jest allMocks methods.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
-    "title": "@shopify: [Eslint plugin] [Jest] No snapshots",
-    "description": "Disallows jest snapshots.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
-    "title": "@shopify: [Eslint plugin] Jsx no complex expressions",
-    "description": "Disallow complex expressions embedded in in JSX.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
-    "title": "@shopify: [Eslint plugin] Jsx no hardcoded content",
-    "description": "Disallow hardcoded content in JSX.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
-    "title": "@shopify: [Eslint plugin] Jsx prefer fragment wrappers",
-    "description": "Disallow useless wrapping elements in favour of fragment shorthand in JSX",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
-    "title": "@shopify: [Eslint plugin] No ancestor directory import",
-    "description": "Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-namespace-imports",
-    "title": "@shopify: [Eslint plugin] No namespace imports",
-    "description": "Prevent namespace import declarations.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
-    "title": "@shopify: [Eslint plugin] No useless computed properties",
-    "description": "Prevent the usage of unnecessary computed properties.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
-    "title": "@shopify: [Eslint plugin] No fully static classes",
-    "description": "Prevent the declaration of classes consisting only of static members.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
-    "title": "@shopify: [Eslint plugin] Polaris prefer sectioned prop",
-    "description": "Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
-    "title": "@shopify: [Eslint plugin] Polaris no bare stack item",
-    "description": "Disallow the use of Polaris’s `Stack.Item` and `LegacyStack.Item` without any custom props.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-class-properties",
-    "title": "@shopify: [Eslint plugin] Prefer class properties",
-    "description": "Prefer class properties to assignment of literals in constructors.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-early-return",
-    "title": "@shopify: [Eslint plugin] Prefer early return",
-    "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
-    "title": "@shopify: [Eslint plugin] Prefer module scope constants",
-    "description": "Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-twine",
-    "title": "@shopify: [Eslint plugin] Prefer twine",
-    "description": "Prefer Twine over Bindings as the name for twine imports.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
-    "title": "@shopify: [Eslint plugin] React hooks strict return",
-    "description": "Restrict the number of returned items from React hooks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-initialize-state",
-    "title": "@shopify: [Eslint plugin] React initialize state",
-    "description": "Require that React component state be initialized when it has a non-empty type.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
-    "title": "@shopify: [Eslint plugin] React no multiple render methods",
-    "description": "Disallow multiple render methods in React component classes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
-    "title": "@shopify: [Eslint plugin] React prefer private members",
-    "description": "Disallow public members within React component classes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
-    "title": "@shopify: [Eslint plugin] React require autocomplete",
-    "description": "Require autocomplete attribute on certain input types.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-type-state",
-    "title": "@shopify: [Eslint plugin] React type state",
-    "description": "Require that React component state be typed in TypeScript.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_restrict-full-import",
-    "title": "@shopify: [Eslint plugin] Restrict full import",
-    "description": "Prevent importing the entirety of a package.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
-    "title": "@shopify: [Eslint plugin] Sinon no restricted features",
-    "description": "Restrict the use of specified sinon features.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
-    "title": "@shopify: [Eslint plugin] Sinon prefer meaningful assertions",
-    "description": "Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
-    "title": "@shopify: [Eslint plugin] Strict component boundaries",
-    "description": "Prevent module imports between components.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer pascal case enums",
-    "description": "Enforce Pascal case when naming enums.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer singular enums",
-    "description": "Prefer singular TypeScript enums.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer build client schema",
-    "description": "Prefer buildClientSchema for schema building",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
-    "title": "@shopify: [Eslint plugin] [Webpack] No unnamed dynamic imports",
-    "description": "Require that all dynamic imports contain a `webpackChunkName` comment.",
     "timeToFix": 5
   },
   {
@@ -11833,1109 +13944,312 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_adjacent-overload-signatures",
-    "title": "@typescript eslint: Adjacent overload signatures",
-    "description": "Require that function overload signatures be consecutive",
+    "patternId": "tailwindcss_classnames-order",
+    "title": "Tailwindcss: Classnames order",
+    "description": "Enforce a consistent and logical order of the Tailwind CSS classnames",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_array-type",
-    "title": "@typescript eslint: Array type",
-    "description": "Require consistently using either `T[]` or `Array<T>` for arrays",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "minimumDescriptionLength",
-        "description": "minimumDescriptionLength"
-      }
-    ],
-    "patternId": "@typescript-eslint_ban-ts-comment",
-    "title": "@typescript eslint: Ban ts comment",
-    "description": "Disallow `@ts-<directive>` comments or require descriptions after directives",
+    "patternId": "tailwindcss_enforces-negative-arbitrary-values",
+    "title": "Tailwindcss: Enforces negative arbitrary values",
+    "description": "Warns about dash prefixed classnames using arbitrary values",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_ban-tslint-comment",
-    "title": "@typescript eslint: Ban tslint comment",
-    "description": "Disallow `// tslint:<rule-flag>` comments",
+    "patternId": "tailwindcss_enforces-shorthand",
+    "title": "Tailwindcss: Enforces shorthand",
+    "description": "Enforces the usage of shorthand Tailwind CSS classnames",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_ban-types",
-    "title": "@typescript eslint: Ban types",
-    "description": "Disallow certain types",
+    "patternId": "tailwindcss_migration-from-tailwind-2",
+    "title": "Tailwindcss: Migration from tailwind 2",
+    "description": "Detect obsolete classnames when upgrading to Tailwind CSS v3",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_block-spacing",
-    "title": "@typescript eslint: Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "@typescript-eslint_brace-style",
-    "title": "@typescript eslint: Brace style",
-    "description": "Enforce consistent brace style for blocks",
+    "patternId": "tailwindcss_no-arbitrary-value",
+    "title": "Tailwindcss: No arbitrary value",
+    "description": "Forbid using arbitrary values in classnames",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_class-literal-property-style",
-    "title": "@typescript eslint: Class literal property style",
-    "description": "Enforce that literals on classes are exposed in a consistent style",
+    "patternId": "tailwindcss_no-contradicting-classname",
+    "title": "Tailwindcss: No contradicting classname",
+    "description": "Avoid contradicting Tailwind CSS classnames (e.g. \"w-3 w-5\")",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_comma-dangle",
-    "title": "@typescript eslint: Comma dangle",
-    "description": "Require or disallow trailing commas",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "@typescript-eslint_comma-spacing",
-    "title": "@typescript eslint: Comma spacing",
-    "description": "Enforce consistent spacing before and after commas",
+    "patternId": "tailwindcss_no-custom-classname",
+    "title": "Tailwindcss: No custom classname",
+    "description": "Detect classnames which do not belong to Tailwind CSS",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-generic-constructors",
-    "title": "@typescript eslint: Consistent generic constructors",
-    "description": "Enforce specifying generic type arguments on type annotation or constructor name of a constructor call",
+    "patternId": "test-selectors_anchor",
+    "title": "Test selectors: Anchor",
+    "description": "Requires test attributes on anchors.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-indexed-object-style",
-    "title": "@typescript eslint: Consistent indexed object style",
-    "description": "Require or disallow the `Record` type",
+    "patternId": "test-selectors_button",
+    "title": "Test selectors: Button",
+    "description": "Requires test attributes on buttons.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-assertions",
-    "title": "@typescript eslint: Consistent type assertions",
-    "description": "Enforce consistent usage of type assertions",
+    "patternId": "test-selectors_input",
+    "title": "Test selectors: Input",
+    "description": "Requires test attributes on inputs.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-definitions",
-    "title": "@typescript eslint: Consistent type definitions",
-    "description": "Enforce type definitions to consistently use either `interface` or `type`",
+    "patternId": "test-selectors_onChange",
+    "title": "Test selectors: OnChange",
+    "description": "Requires test attribute data-test-id on elements with the onChange property.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-exports",
-    "title": "@typescript eslint: Consistent type exports",
-    "description": "Enforce consistent usage of type exports",
+    "patternId": "test-selectors_onClick",
+    "title": "Test selectors: OnClick",
+    "description": "Requires test attribute data-test-id on elements with the onClick property.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-imports",
-    "title": "@typescript eslint: Consistent type imports",
-    "description": "Enforce consistent usage of type imports",
+    "patternId": "test-selectors_onKeyDown",
+    "title": "Test selectors: OnKeyDown",
+    "description": "Requires test attribute data-test-id on elements with the onKeyDown property.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_default-param-last",
-    "title": "@typescript eslint: Default param last",
-    "description": "Enforce default parameters to be last",
+    "patternId": "test-selectors_onKeyUp",
+    "title": "Test selectors: OnKeyUp",
+    "description": "Requires test attribute data-test-id on elements with the onKeyUp property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "test-selectors_onSubmit",
+    "title": "Test selectors: OnSubmit",
+    "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-query",
+    "title": "Testing library: Await async query",
+    "description": "Enforce promises from async queries to be handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-utils",
+    "title": "Testing library: Await async utils",
+    "description": "Enforce promises from async utils to be awaited properly",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-fire-event",
+    "title": "Testing library: Await fire event",
+    "description": "Enforce promises from `fireEvent` methods to be handled",
     "timeToFix": 5
   },
   {
     "parameters": [
       {
-        "name": "allowKeywords",
-        "description": "allowKeywords"
+        "name": "testIdAttribute",
+        "description": "testIdAttribute"
       },
       {
-        "name": "allowPattern",
-        "description": "allowPattern"
-      },
-      {
-        "name": "allowPrivateClassPropertyAccess",
-        "description": "allowPrivateClassPropertyAccess"
-      },
-      {
-        "name": "allowProtectedClassPropertyAccess",
-        "description": "allowProtectedClassPropertyAccess"
-      },
-      {
-        "name": "allowIndexSignaturePropertyAccess",
-        "description": "allowIndexSignaturePropertyAccess"
+        "name": "customMessage",
+        "description": "customMessage"
       }
     ],
-    "patternId": "@typescript-eslint_dot-notation",
-    "title": "@typescript eslint: Dot notation",
-    "description": "Enforce dot notation whenever possible",
+    "patternId": "testing-library_consistent-data-testid",
+    "title": "Testing library: Consistent data testid",
+    "description": "Ensures consistent usage of `data-testid`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_explicit-function-return-type",
-    "title": "@typescript eslint: Explicit function return type",
-    "description": "Require explicit return types on functions and class methods",
+    "patternId": "testing-library_no-await-sync-events",
+    "title": "Testing library: No await sync events",
+    "description": "Disallow unnecessary `await` for sync events",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_explicit-member-accessibility",
-    "title": "@typescript eslint: Explicit member accessibility",
-    "description": "Require explicit accessibility modifiers on class properties and methods",
+    "patternId": "testing-library_no-await-sync-query",
+    "title": "Testing library: No await sync query",
+    "description": "Disallow unnecessary `await` for sync queries",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_explicit-module-boundary-types",
-    "title": "@typescript eslint: Explicit module boundary types",
-    "description": "Require explicit return and argument types on exported functions' and classes' public class methods",
+    "patternId": "testing-library_no-container",
+    "title": "Testing library: No container",
+    "description": "Disallow the use of `container` methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_func-call-spacing",
-    "title": "@typescript eslint: Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "patternId": "testing-library_no-debugging-utils",
+    "title": "Testing library: No debugging utils",
+    "description": "Disallow the use of debugging utilities like `debug`",
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_init-declarations",
-    "title": "@typescript eslint: Init declarations",
-    "description": "Require or disallow initialization in variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_key-spacing",
-    "title": "@typescript eslint: Key spacing",
-    "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "@typescript-eslint_keyword-spacing",
-    "title": "@typescript eslint: Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "beforeBlockComment",
-        "description": "beforeBlockComment"
-      },
-      {
-        "name": "afterBlockComment",
-        "description": "afterBlockComment"
-      },
-      {
-        "name": "beforeLineComment",
-        "description": "beforeLineComment"
-      },
-      {
-        "name": "afterLineComment",
-        "description": "afterLineComment"
-      },
-      {
-        "name": "allowBlockStart",
-        "description": "allowBlockStart"
-      },
-      {
-        "name": "allowBlockEnd",
-        "description": "allowBlockEnd"
-      }
-    ],
-    "patternId": "@typescript-eslint_lines-around-comment",
-    "title": "@typescript eslint: Lines around comment",
-    "description": "Require empty lines around comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "exceptAfterSingleLine",
-        "description": "exceptAfterSingleLine"
-      }
-    ],
-    "patternId": "@typescript-eslint_lines-between-class-members",
-    "title": "@typescript eslint: Lines between class members",
-    "description": "Require or disallow an empty line between class members",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_member-delimiter-style",
-    "title": "@typescript eslint: Member delimiter style",
-    "description": "Require a specific member delimiter style for interfaces and type literals",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_member-ordering",
-    "title": "@typescript eslint: Member ordering",
-    "description": "Require a consistent member declaration order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_method-signature-style",
-    "title": "@typescript eslint: Method signature style",
-    "description": "Enforce using a particular method signature syntax",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_naming-convention",
-    "title": "@typescript eslint: Naming convention",
-    "description": "Enforce naming conventions for everything across a codebase",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-array-constructor",
-    "title": "@typescript eslint: No array constructor",
-    "description": "Disallow generic `Array` constructors",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-base-to-string",
-    "title": "@typescript eslint: No base to string",
-    "description": "Require `.toString()` to only be called on objects which provide useful information when stringified",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-confusing-non-null-assertion",
-    "title": "@typescript eslint: No confusing non null assertion",
-    "description": "Disallow non-null assertion in locations that may be confusing",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-confusing-void-expression",
-    "title": "@typescript eslint: No confusing void expression",
-    "description": "Require expressions of type void to appear in statement position",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-dupe-class-members",
-    "title": "@typescript eslint: No dupe class members",
-    "description": "Disallow duplicate class members",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-duplicate-enum-values",
-    "title": "@typescript eslint: No duplicate enum values",
-    "description": "Disallow duplicate enum member values",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "includeExports",
-        "description": "includeExports"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-duplicate-imports",
-    "title": "@typescript eslint: No duplicate imports",
-    "description": "Disallow duplicate imports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-duplicate-type-constituents",
-    "title": "@typescript eslint: No duplicate type constituents",
-    "description": "Disallow duplicate constituents of union or intersection types",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-dynamic-delete",
-    "title": "@typescript eslint: No dynamic delete",
-    "description": "Disallow using the `delete` operator on computed key expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-empty-function",
-    "title": "@typescript eslint: No empty function",
-    "description": "Disallow empty functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-empty-interface",
-    "title": "@typescript eslint: No empty interface",
-    "description": "Disallow the declaration of empty interfaces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-explicit-any",
-    "title": "@typescript eslint: No explicit any",
-    "description": "Disallow the `any` type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extra-non-null-assertion",
-    "title": "@typescript eslint: No extra non null assertion",
-    "description": "Disallow extra non-null assertions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extra-parens",
-    "title": "@typescript eslint: No extra parens",
-    "description": "Disallow unnecessary parentheses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extra-semi",
-    "title": "@typescript eslint: No extra semi",
-    "description": "Disallow unnecessary semicolons",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extraneous-class",
-    "title": "@typescript eslint: No extraneous class",
-    "description": "Disallow classes used as namespaces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-floating-promises",
-    "title": "@typescript eslint: No floating promises",
-    "description": "Require Promise-like statements to be handled appropriately",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-for-in-array",
-    "title": "@typescript eslint: No for in array",
-    "description": "Disallow iterating over an array with a for-in loop",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-implicit-any-catch",
-    "title": "@typescript eslint: No implicit any catch",
-    "description": "Disallow usage of the implicit `any` type in catch clauses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-implied-eval",
-    "title": "@typescript eslint: No implied eval",
-    "description": "Disallow the use of `eval()`-like methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-import-type-side-effects",
-    "title": "@typescript eslint: No import type side effects",
-    "description": "Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-inferrable-types",
-    "title": "@typescript eslint: No inferrable types",
-    "description": "Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "capIsConstructor",
-        "description": "capIsConstructor"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-invalid-this",
-    "title": "@typescript eslint: No invalid this",
-    "description": "Disallow `this` keywords outside of classes or class-like objects",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-invalid-void-type",
-    "title": "@typescript eslint: No invalid void type",
-    "description": "Disallow `void` type outside of generic or return types",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-loop-func",
-    "title": "@typescript eslint: No loop func",
-    "description": "Disallow function declarations that contain unsafe references inside loop statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-loss-of-precision",
-    "title": "@typescript eslint: No loss of precision",
-    "description": "Disallow literal numbers that lose precision",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "detectObjects",
-        "description": "detectObjects"
-      },
-      {
-        "name": "enforceConst",
-        "description": "enforceConst"
-      },
-      {
-        "name": "ignoreArrayIndexes",
-        "description": "ignoreArrayIndexes"
-      },
-      {
-        "name": "ignoreDefaultValues",
-        "description": "ignoreDefaultValues"
-      },
-      {
-        "name": "ignoreClassFieldInitialValues",
-        "description": "ignoreClassFieldInitialValues"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-magic-numbers",
-    "title": "@typescript eslint: No magic numbers",
-    "description": "Disallow magic numbers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkNever",
-        "description": "checkNever"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-meaningless-void-operator",
-    "title": "@typescript eslint: No meaningless void operator",
-    "description": "Disallow the `void` operator except when used to discard a value",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-misused-new",
-    "title": "@typescript eslint: No misused new",
-    "description": "Enforce valid definition of `new` and `constructor`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-misused-promises",
-    "title": "@typescript eslint: No misused promises",
-    "description": "Disallow Promises in places not designed to handle them",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-mixed-enums",
-    "title": "@typescript eslint: No mixed enums",
-    "description": "Disallow enums from having both number and string members",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-namespace",
-    "title": "@typescript eslint: No namespace",
-    "description": "Disallow TypeScript namespaces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
-    "title": "@typescript eslint: No non null asserted nullish coalescing",
-    "description": "Disallow non-null assertions in the left operand of a nullish coalescing operator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
-    "title": "@typescript eslint: No non null asserted optional chain",
-    "description": "Disallow non-null assertions after an optional chain expression",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-non-null-assertion",
-    "title": "@typescript eslint: No non null assertion",
-    "description": "Disallow non-null assertions using the `!` postfix operator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-parameter-properties",
-    "title": "@typescript eslint: No parameter properties",
-    "description": "Disallow the use of parameter properties in class constructors",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-redeclare",
-    "title": "@typescript eslint: No redeclare",
-    "description": "Disallow variable redeclaration",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-redundant-type-constituents",
-    "title": "@typescript eslint: No redundant type constituents",
-    "description": "Disallow members of unions and intersections that do nothing or override type information",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-require-imports",
-    "title": "@typescript eslint: No require imports",
-    "description": "Disallow invocation of `require()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-restricted-imports",
-    "title": "@typescript eslint: No restricted imports",
-    "description": "Disallow specified modules when loaded by `import`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-shadow",
-    "title": "@typescript eslint: No shadow",
-    "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-this-alias",
-    "title": "@typescript eslint: No this alias",
-    "description": "Disallow aliasing `this`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-throw-literal",
-    "title": "@typescript eslint: No throw literal",
-    "description": "Disallow throwing literals as exceptions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-type-alias",
-    "title": "@typescript eslint: No type alias",
-    "description": "Disallow type aliases",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
-    "title": "@typescript eslint: No unnecessary boolean literal compare",
-    "description": "Disallow unnecessary equality comparisons against boolean literals",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-condition",
-    "title": "@typescript eslint: No unnecessary condition",
-    "description": "Disallow conditionals where the type is always truthy or always falsy",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-qualifier",
-    "title": "@typescript eslint: No unnecessary qualifier",
-    "description": "Disallow unnecessary namespace qualifiers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-type-arguments",
-    "title": "@typescript eslint: No unnecessary type arguments",
-    "description": "Disallow type arguments that are equal to the default",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-type-assertion",
-    "title": "@typescript eslint: No unnecessary type assertion",
-    "description": "Disallow type assertions that do not change the type of an expression",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
-    "title": "@typescript eslint: No unnecessary type constraint",
-    "description": "Disallow unnecessary constraints on generic types",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-argument",
-    "title": "@typescript eslint: No unsafe argument",
-    "description": "Disallow calling a function with a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-assignment",
-    "title": "@typescript eslint: No unsafe assignment",
-    "description": "Disallow assigning a value with type `any` to variables and properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-call",
-    "title": "@typescript eslint: No unsafe call",
-    "description": "Disallow calling a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
-    "title": "@typescript eslint: No unsafe declaration merging",
-    "description": "Disallow unsafe declaration merging",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
-    "title": "@typescript eslint: No unsafe enum comparison",
-    "description": "Disallow comparing an enum value with a non-enum value",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-member-access",
-    "title": "@typescript eslint: No unsafe member access",
-    "description": "Disallow member access on a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-return",
-    "title": "@typescript eslint: No unsafe return",
-    "description": "Disallow returning a value with type `any` from a function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowShortCircuit",
-        "description": "allowShortCircuit"
-      },
-      {
-        "name": "allowTernary",
-        "description": "allowTernary"
-      },
-      {
-        "name": "allowTaggedTemplates",
-        "description": "allowTaggedTemplates"
-      },
-      {
-        "name": "enforceForJSX",
-        "description": "enforceForJSX"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-unused-expressions",
-    "title": "@typescript eslint: No unused expressions",
-    "description": "Disallow unused expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unused-vars",
-    "title": "@typescript eslint: No unused vars",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-use-before-define",
-    "title": "@typescript eslint: No use before define",
-    "description": "Disallow the use of variables before they are defined",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-useless-constructor",
-    "title": "@typescript eslint: No useless constructor",
-    "description": "Disallow unnecessary constructors",
+    "patternId": "testing-library_no-dom-import",
+    "title": "Testing library: No dom import",
+    "description": "Disallow importing from DOM Testing Library",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-useless-empty-export",
-    "title": "@typescript eslint: No useless empty export",
-    "description": "Disallow empty exports that don't change anything in a module file",
+    "patternId": "testing-library_no-global-regexp-flag-in-query",
+    "title": "Testing library: No global regexp flag in query",
+    "description": "Disallow the use of the global RegExp flag (/g) in queries",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-var-requires",
-    "title": "@typescript eslint: No var requires",
-    "description": "Disallow `require` statements except in import statements",
+    "patternId": "testing-library_no-manual-cleanup",
+    "title": "Testing library: No manual cleanup",
+    "description": "Disallow the use of `cleanup`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
-    "title": "@typescript eslint: Non nullable type assertion style",
-    "description": "Enforce non-null assertions over explicit type casts",
+    "patternId": "testing-library_no-node-access",
+    "title": "Testing library: No node access",
+    "description": "Disallow direct Node access",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_object-curly-spacing",
-    "title": "@typescript eslint: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
+    "patternId": "testing-library_no-promise-in-fire-event",
+    "title": "Testing library: No promise in fire event",
+    "description": "Disallow the use of promises passed to a `fireEvent` method",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_padding-line-between-statements",
-    "title": "@typescript eslint: Padding line between statements",
-    "description": "Require or disallow padding lines between statements",
+    "patternId": "testing-library_no-render-in-setup",
+    "title": "Testing library: No render in setup",
+    "description": "Disallow the use of `render` in testing frameworks setup functions",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_parameter-properties",
-    "title": "@typescript eslint: Parameter properties",
-    "description": "Require or disallow parameter properties in class constructors",
+    "patternId": "testing-library_no-unnecessary-act",
+    "title": "Testing library: No unnecessary act",
+    "description": "Disallow wrapping Testing Library utils or empty callbacks in `act`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-as-const",
-    "title": "@typescript eslint: Prefer as const",
-    "description": "Enforce the use of `as const` over literal type",
+    "patternId": "testing-library_no-wait-for-empty-callback",
+    "title": "Testing library: No wait for empty callback",
+    "description": "Disallow empty callbacks for `waitFor` and `waitForElementToBeRemoved`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-enum-initializers",
-    "title": "@typescript eslint: Prefer enum initializers",
-    "description": "Require each enum member value to be explicitly initialized",
+    "patternId": "testing-library_no-wait-for-multiple-assertions",
+    "title": "Testing library: No wait for multiple assertions",
+    "description": "Disallow the use of multiple `expect` calls inside `waitFor`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-for-of",
-    "title": "@typescript eslint: Prefer for of",
-    "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible",
+    "patternId": "testing-library_no-wait-for-side-effects",
+    "title": "Testing library: No wait for side effects",
+    "description": "Disallow the use of side effects in `waitFor`",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-function-type",
-    "title": "@typescript eslint: Prefer function type",
-    "description": "Enforce using function types instead of interfaces with call signatures",
+    "patternId": "testing-library_no-wait-for-snapshot",
+    "title": "Testing library: No wait for snapshot",
+    "description": "Ensures no snapshot is generated inside of a `waitFor` call",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-includes",
-    "title": "@typescript eslint: Prefer includes",
-    "description": "Enforce `includes` method over `indexOf` method",
+    "patternId": "testing-library_prefer-explicit-assert",
+    "title": "Testing library: Prefer explicit assert",
+    "description": "Suggest using explicit assertions rather than standalone queries",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-literal-enum-member",
-    "title": "@typescript eslint: Prefer literal enum member",
-    "description": "Require all enum members to be literal values",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-namespace-keyword",
-    "title": "@typescript eslint: Prefer namespace keyword",
-    "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-nullish-coalescing",
-    "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-optional-chain",
-    "title": "@typescript eslint: Prefer optional chain",
-    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-readonly",
-    "title": "@typescript eslint: Prefer readonly",
-    "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-readonly-parameter-types",
-    "title": "@typescript eslint: Prefer readonly parameter types",
-    "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-reduce-type-parameter",
-    "title": "@typescript eslint: Prefer reduce type parameter",
-    "description": "Enforce using type parameter when calling `Array#reduce` instead of casting",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-regexp-exec",
-    "title": "@typescript eslint: Prefer regexp exec",
-    "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-return-this-type",
-    "title": "@typescript eslint: Prefer return this type",
-    "description": "Enforce that `this` is used when only `this` type is returned",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
-    "title": "@typescript eslint: Prefer string starts ends with",
-    "description": "Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_prefer-ts-expect-error",
-    "title": "@typescript eslint: Prefer ts expect error",
-    "description": "Enforce using `@ts-expect-error` over `@ts-ignore`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_promise-function-async",
-    "title": "@typescript eslint: Promise function async",
-    "description": "Require any function or method that returns a Promise to be marked async",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_quotes",
-    "title": "@typescript eslint: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_require-array-sort-compare",
-    "title": "@typescript eslint: Require array sort compare",
-    "description": "Require `Array#sort` calls to always provide a `compareFunction`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_require-await",
-    "title": "@typescript eslint: Require await",
-    "description": "Disallow async functions which have no `await` expression",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_restrict-plus-operands",
-    "title": "@typescript eslint: Restrict plus operands",
-    "description": "Require both operands of addition to be the same type and be `bigint`, `number`, or `string`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_restrict-template-expressions",
-    "title": "@typescript eslint: Restrict template expressions",
-    "description": "Enforce template literal expressions to be of `string` type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_return-await",
-    "title": "@typescript eslint: Return await",
-    "description": "Enforce consistent returning of awaited values",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_semi",
-    "title": "@typescript eslint: Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-constituents",
-    "title": "@typescript eslint: Sort type constituents",
-    "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
-    "title": "@typescript eslint: Sort type union intersection members",
-    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_space-before-blocks",
-    "title": "@typescript eslint: Space before blocks",
-    "description": "Enforce consistent spacing before blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_space-before-function-paren",
-    "title": "@typescript eslint: Space before function paren",
-    "description": "Enforce consistent spacing before function parenthesis",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "int32Hint",
-        "description": "int32Hint"
-      }
-    ],
-    "patternId": "@typescript-eslint_space-infix-ops",
-    "title": "@typescript eslint: Space infix ops",
-    "description": "Require spacing around infix operators",
+    "patternId": "testing-library_prefer-find-by",
+    "title": "Testing library: Prefer find by",
+    "description": "Suggest using `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_strict-boolean-expressions",
-    "title": "@typescript eslint: Strict boolean expressions",
-    "description": "Disallow certain types in boolean expressions",
+    "patternId": "testing-library_prefer-presence-queries",
+    "title": "Testing library: Prefer presence queries",
+    "description": "Ensure appropriate `get*`/`query*` queries are used with their respective matchers",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_switch-exhaustiveness-check",
-    "title": "@typescript eslint: Switch exhaustiveness check",
-    "description": "Require switch-case statements to be exhaustive with union type",
+    "patternId": "testing-library_prefer-query-by-disappearance",
+    "title": "Testing library: Prefer query by disappearance",
+    "description": "Suggest using `queryBy*` queries when waiting for disappearance",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_triple-slash-reference",
-    "title": "@typescript eslint: Triple slash reference",
-    "description": "Disallow certain triple slash directives in favor of ES6-style import declarations",
+    "patternId": "testing-library_prefer-query-matchers",
+    "title": "Testing library: Prefer query matchers",
+    "description": "Ensure the configured `get*`/`query*` query is used with the corresponding matchers",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_type-annotation-spacing",
-    "title": "@typescript eslint: Type annotation spacing",
-    "description": "Require consistent spacing around type annotations",
+    "patternId": "testing-library_prefer-screen-queries",
+    "title": "Testing library: Prefer screen queries",
+    "description": "Suggest using `screen` while querying",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_typedef",
-    "title": "@typescript eslint: Typedef",
-    "description": "Require type annotations in certain places",
+    "patternId": "testing-library_prefer-user-event",
+    "title": "Testing library: Prefer user event",
+    "description": "Suggest using `userEvent` over `fireEvent` for simulating user interactions",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_unbound-method",
-    "title": "@typescript eslint: Unbound method",
-    "description": "Enforce unbound methods are called with their expected scope",
+    "patternId": "testing-library_prefer-wait-for",
+    "title": "Testing library: Prefer wait for",
+    "description": "Use `waitFor` instead of deprecated wait methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_unified-signatures",
-    "title": "@typescript eslint: Unified signatures",
-    "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter",
+    "patternId": "testing-library_render-result-naming-convention",
+    "title": "Testing library: Render result naming convention",
+    "description": "Enforce a valid naming for return value from `render`",
     "timeToFix": 5
   },
   {
@@ -13372,357 +14686,6 @@
     "patternId": "unicorn_numeric-separators-style",
     "title": "Unicorn: Numeric separators style",
     "description": "Enforce the style of numeric separators by correctly grouping digits.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-add-event-listener",
-    "title": "Unicorn: Prefer add event listener",
-    "description": "Prefer `.addEventListener()` and `.removeEventListener()` over `on`-functions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkFromLast",
-        "description": "checkFromLast"
-      }
-    ],
-    "patternId": "unicorn_prefer-array-find",
-    "title": "Unicorn: Prefer array find",
-    "description": "Prefer `.find(…)` and `.findLast(…)` over the first or last element from `.filter(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-flat-map",
-    "title": "Unicorn: Prefer array flat map",
-    "description": "Prefer `.flatMap(…)` over `.map(…).flat()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-flat",
-    "title": "Unicorn: Prefer array flat",
-    "description": "Prefer `Array#flat()` over legacy techniques to flatten arrays.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-index-of",
-    "title": "Unicorn: Prefer array index of",
-    "description": "Prefer `Array#{indexOf,lastIndexOf}()` over `Array#{findIndex,findLastIndex}()` when looking for the index of an item.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-array-some",
-    "title": "Unicorn: Prefer array some",
-    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast}(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkAllIndexAccess",
-        "description": "checkAllIndexAccess"
-      }
-    ],
-    "patternId": "unicorn_prefer-at",
-    "title": "Unicorn: Prefer at",
-    "description": "Prefer `.at()` method for index access and `String#charAt()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-blob-reading-methods",
-    "title": "Unicorn: Prefer blob reading methods",
-    "description": "Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and `Blob#text()` over `FileReader#readAsText(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-code-point",
-    "title": "Unicorn: Prefer code point",
-    "description": "Prefer `String#codePointAt(…)` over `String#charCodeAt(…)` and `String.fromCodePoint(…)` over `String.fromCharCode(…)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-date-now",
-    "title": "Unicorn: Prefer date now",
-    "description": "Prefer `Date.now()` to get the number of milliseconds since the Unix Epoch.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-default-parameters",
-    "title": "Unicorn: Prefer default parameters",
-    "description": "Prefer default parameters over reassignment.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-append",
-    "title": "Unicorn: Prefer dom node append",
-    "description": "Prefer `Node#append()` over `Node#appendChild()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-dataset",
-    "title": "Unicorn: Prefer dom node dataset",
-    "description": "Prefer using `.dataset` on DOM elements over calling attribute methods.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-remove",
-    "title": "Unicorn: Prefer dom node remove",
-    "description": "Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-dom-node-text-content",
-    "title": "Unicorn: Prefer dom node text content",
-    "description": "Prefer `.textContent` over `.innerText`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-event-target",
-    "title": "Unicorn: Prefer event target",
-    "description": "Prefer `EventTarget` over `EventEmitter`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreUsedVariables",
-        "description": "ignoreUsedVariables"
-      }
-    ],
-    "patternId": "unicorn_prefer-export-from",
-    "title": "Unicorn: Prefer export from",
-    "description": "Prefer `export…from` when re-exporting.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-includes",
-    "title": "Unicorn: Prefer includes",
-    "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-json-parse-buffer",
-    "title": "Unicorn: Prefer json parse buffer",
-    "description": "Prefer reading a JSON file as a buffer.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-keyboard-event-key",
-    "title": "Unicorn: Prefer keyboard event key",
-    "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-logical-operator-over-ternary",
-    "title": "Unicorn: Prefer logical operator over ternary",
-    "description": "Prefer using a logical operator over a ternary.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-math-trunc",
-    "title": "Unicorn: Prefer math trunc",
-    "description": "Enforce the use of `Math.trunc` instead of bitwise operators.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-modern-dom-apis",
-    "title": "Unicorn: Prefer modern dom apis",
-    "description": "Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()` or `.prepend()` over `insertAdjacentText()` and `insertAdjacentElement()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-modern-math-apis",
-    "title": "Unicorn: Prefer modern math apis",
-    "description": "Prefer modern `Math` APIs over legacy patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-module",
-    "title": "Unicorn: Prefer module",
-    "description": "Prefer JavaScript modules (ESM) over CommonJS.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-native-coercion-functions",
-    "title": "Unicorn: Prefer native coercion functions",
-    "description": "Prefer using `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` directly.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-negative-index",
-    "title": "Unicorn: Prefer negative index",
-    "description": "Prefer negative index over `.length - index` when possible.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-node-protocol",
-    "title": "Unicorn: Prefer node protocol",
-    "description": "Prefer using the `node:` protocol when importing Node.js builtin modules.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "checkInfinity",
-        "description": "checkInfinity"
-      }
-    ],
-    "patternId": "unicorn_prefer-number-properties",
-    "title": "Unicorn: Prefer number properties",
-    "description": "Prefer `Number` static properties over global ones.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-object-from-entries",
-    "title": "Unicorn: Prefer object from entries",
-    "description": "Prefer using `Object.fromEntries(…)` to transform a list of key-value pairs into an object.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-optional-catch-binding",
-    "title": "Unicorn: Prefer optional catch binding",
-    "description": "Prefer omitting the `catch` binding parameter.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-prototype-methods",
-    "title": "Unicorn: Prefer prototype methods",
-    "description": "Prefer borrowing methods from the prototype instead of the instance.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-query-selector",
-    "title": "Unicorn: Prefer query selector",
-    "description": "Prefer `.querySelector()` over `.getElementById()`, `.querySelectorAll()` over `.getElementsByClassName()` and `.getElementsByTagName()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-reflect-apply",
-    "title": "Unicorn: Prefer reflect apply",
-    "description": "Prefer `Reflect.apply()` over `Function#apply()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-regexp-test",
-    "title": "Unicorn: Prefer regexp test",
-    "description": "Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-set-has",
-    "title": "Unicorn: Prefer set has",
-    "description": "Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-set-size",
-    "title": "Unicorn: Prefer set size",
-    "description": "Prefer using `Set#size` instead of `Array#length`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-spread",
-    "title": "Unicorn: Prefer spread",
-    "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#{slice,toSpliced}()` and `String#split('')`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-replace-all",
-    "title": "Unicorn: Prefer string replace all",
-    "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-slice",
-    "title": "Unicorn: Prefer string slice",
-    "description": "Prefer `String#slice()` over `String#substr()` and `String#substring()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-starts-ends-with",
-    "title": "Unicorn: Prefer string starts ends with",
-    "description": "Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-string-trim-start-end",
-    "title": "Unicorn: Prefer string trim start end",
-    "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "minimumCases",
-        "description": "minimumCases"
-      },
-      {
-        "name": "emptyDefaultCase",
-        "description": "emptyDefaultCase"
-      }
-    ],
-    "patternId": "unicorn_prefer-switch",
-    "title": "Unicorn: Prefer switch",
-    "description": "Prefer `switch` over multiple `else-if`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-ternary",
-    "title": "Unicorn: Prefer ternary",
-    "description": "Prefer ternary expressions over simple `if-else` statements.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-top-level-await",
-    "title": "Unicorn: Prefer top level await",
-    "description": "Prefer top-level await over top-level promises and async function calls.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_prefer-type-error",
-    "title": "Unicorn: Prefer type error",
-    "description": "Enforce throwing `TypeError` in type checking conditions.",
     "timeToFix": 5
   },
   {
@@ -14204,6 +15167,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_max-lines-per-block",
+    "title": "Vue: Max lines per block",
+    "description": "Enforce maximum number of lines in Vue SFC blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_multi-word-component-names",
     "title": "Vue: Multi word component names",
     "description": "Require component names to be always multi-word",
@@ -14284,6 +15254,13 @@
     "patternId": "vue_no-computed-properties-in-data",
     "title": "Vue: No computed properties in data",
     "description": "Disallow accessing computed properties in `data`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-console",
+    "title": "Vue: No console",
+    "description": "Disallow the use of `console` in `<template>`",
     "timeToFix": 5
   },
   {
@@ -14671,6 +15648,13 @@
     "patternId": "vue_no-restricted-class",
     "title": "Vue: No restricted class",
     "description": "Disallow specific classes in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-restricted-component-names",
+    "title": "Vue: No restricted component names",
+    "description": "Disallow specific component names",
     "timeToFix": 5
   },
   {
@@ -15124,6 +16108,34 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "defineProps",
+        "description": "defineProps"
+      },
+      {
+        "name": "defineEmits",
+        "description": "defineEmits"
+      },
+      {
+        "name": "defineSlots",
+        "description": "defineSlots"
+      },
+      {
+        "name": "useSlots",
+        "description": "useSlots"
+      },
+      {
+        "name": "useAttrs",
+        "description": "useAttrs"
+      }
+    ],
+    "patternId": "vue_require-macro-variable-name",
+    "title": "Vue: Require macro variable name",
+    "description": "Require a certain macro variable name",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "vue_require-name-property",
     "title": "Vue: Require name property",
@@ -15170,6 +16182,13 @@
     "patternId": "vue_require-toggle-inside-transition",
     "title": "Vue: Require toggle inside transition",
     "description": "Require control the display of the content inside `<transition>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-typed-ref",
+    "title": "Vue: Require typed ref",
+    "description": "Require `ref` and `shallowRef` functions to be strongly typed",
     "timeToFix": 5
   },
   {
@@ -15885,6 +16904,402 @@
     "patternId": "yml_vue-custom-block_no-parsing-error",
     "title": "Yml: [Vue custom block] No parsing error",
     "description": "Disallow parsing errors in Vue custom blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_concat",
+    "title": "You dont need lodash underscore: Concat",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_drop",
+    "title": "You dont need lodash underscore: Drop",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_drop-right",
+    "title": "You dont need lodash underscore: Drop right",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_index-of",
+    "title": "You dont need lodash underscore: Index of",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_join",
+    "title": "You dont need lodash underscore: Join",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_last",
+    "title": "You dont need lodash underscore: Last",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_last-index-of",
+    "title": "You dont need lodash underscore: Last index of",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_reverse",
+    "title": "You dont need lodash underscore: Reverse",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_fill",
+    "title": "You dont need lodash underscore: Fill",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_find",
+    "title": "You dont need lodash underscore: Find",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_detect",
+    "title": "You dont need lodash underscore: Detect",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_first",
+    "title": "You dont need lodash underscore: First",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_find-index",
+    "title": "You dont need lodash underscore: Find index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-array",
+    "title": "You dont need lodash underscore: Is array",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_each",
+    "title": "You dont need lodash underscore: Each",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_for-each",
+    "title": "You dont need lodash underscore: For each",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_every",
+    "title": "You dont need lodash underscore: Every",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_all",
+    "title": "You dont need lodash underscore: All",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_filter",
+    "title": "You dont need lodash underscore: Filter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_select",
+    "title": "You dont need lodash underscore: Select",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_map",
+    "title": "You dont need lodash underscore: Map",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_collect",
+    "title": "You dont need lodash underscore: Collect",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_reduce",
+    "title": "You dont need lodash underscore: Reduce",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_inject",
+    "title": "You dont need lodash underscore: Inject",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_foldl",
+    "title": "You dont need lodash underscore: Foldl",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_reduce-right",
+    "title": "You dont need lodash underscore: Reduce right",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_foldr",
+    "title": "You dont need lodash underscore: Foldr",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_size",
+    "title": "You dont need lodash underscore: Size",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_some",
+    "title": "You dont need lodash underscore: Some",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_any",
+    "title": "You dont need lodash underscore: Any",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_includes",
+    "title": "You dont need lodash underscore: Includes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_contains",
+    "title": "You dont need lodash underscore: Contains",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_slice",
+    "title": "You dont need lodash underscore: Slice",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_take-right",
+    "title": "You dont need lodash underscore: Take right",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_bind",
+    "title": "You dont need lodash underscore: Bind",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-finite",
+    "title": "You dont need lodash underscore: Is finite",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-integer",
+    "title": "You dont need lodash underscore: Is integer",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-nan",
+    "title": "You dont need lodash underscore: Is nan",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-nil",
+    "title": "You dont need lodash underscore: Is nil",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-null",
+    "title": "You dont need lodash underscore: Is null",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-undefined",
+    "title": "You dont need lodash underscore: Is undefined",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_keys",
+    "title": "You dont need lodash underscore: Keys",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_extend-own",
+    "title": "You dont need lodash underscore: Extend own",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_assign",
+    "title": "You dont need lodash underscore: Assign",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_values",
+    "title": "You dont need lodash underscore: Values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_entries",
+    "title": "You dont need lodash underscore: Entries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_to-pairs",
+    "title": "You dont need lodash underscore: To pairs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_pairs",
+    "title": "You dont need lodash underscore: Pairs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_get",
+    "title": "You dont need lodash underscore: Get",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_split",
+    "title": "You dont need lodash underscore: Split",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_starts-with",
+    "title": "You dont need lodash underscore: Starts with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_ends-with",
+    "title": "You dont need lodash underscore: Ends with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_to-lower",
+    "title": "You dont need lodash underscore: To lower",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_to-upper",
+    "title": "You dont need lodash underscore: To upper",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_trim",
+    "title": "You dont need lodash underscore: Trim",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_pad-start",
+    "title": "You dont need lodash underscore: Pad start",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_pad-end",
+    "title": "You dont need lodash underscore: Pad end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_repeat",
+    "title": "You dont need lodash underscore: Repeat",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_uniq",
+    "title": "You dont need lodash underscore: Uniq",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_replace",
+    "title": "You dont need lodash underscore: Replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_omit",
+    "title": "You dont need lodash underscore: Omit",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_flatten",
+    "title": "You dont need lodash underscore: Flatten",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_throttle",
+    "title": "You dont need lodash underscore: Throttle",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-string",
+    "title": "You dont need lodash underscore: Is string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_cast-array",
+    "title": "You dont need lodash underscore: Cast array",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-function",
+    "title": "You dont need lodash underscore: Is function",
     "timeToFix": 5
   }
 ]

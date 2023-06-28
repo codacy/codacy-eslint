@@ -30,6 +30,7 @@ module.exports = {
     "react",
     "jest"
   ],
+  root: true,
   rules: {
     "simple-import-sort/imports": "error",
     '@typescript-eslint/unbound-method': 'off'

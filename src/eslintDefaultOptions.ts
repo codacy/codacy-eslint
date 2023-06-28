@@ -12,13 +12,24 @@ const baseConfigs: string[] = [
   "plugin:cypress/recommended",
   "plugin:ember/recommended",
   "plugin:ember-suave/recommended",
+  "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
+  "plugin:fp/recommended",
+  "plugin:jest-dom/recommended",
+  "plugin:jest-formatting/recommended",
+  "plugin:json/recommended",
+  "plugin:lit/recommended",
   "plugin:lodash/recommended",
+  "plugin:monorepo/recommended",
   //"plugin:@mysticatea/es2015",
   //"plugin:@mysticatea/+eslint-plugin",
+  "plugin:perfectionist/recommended-natural",
+  "plugin:prettier/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
-  "plugin:prettier/recommended"
+  "plugin:tailwindcss/recommended",
+  "plugin:test-selectors/recommended",
+  "plugin:you-dont-need-lodash-underscore/compatible"
 ]
 
 const typescriptConfigs: string[] = [
@@ -54,39 +65,7 @@ export const defaultOptions: ESLint.Options = {
         "jsx": true
       }
     },
-    overrides: [
-      {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: baseConfigs.concat(typescriptConfigs),
-        parserOptions: {
-          sourceType: "module",
-          project: ['./tsconfig.json'],
-        },
-      },
-      {
-        files: ["**/*.vue"],
-        parser: require.resolve("vue-eslint-parser"),
-        parserOptions: {
-          ecmaVersion: 2020,
-          sourceType: "module",
-        },
-      },
-      {
-        files: ["**/*.jsx"],
-        parserOptions: {
-          babelOptions: {
-            presets: ["@babel/preset-react"],
-          }
-        },
-      },
-      {
-        files: ["**/*.html"],
-        extends: [
-          "plugin:@angular-eslint/template/recommended",
-          "plugin:@angular-eslint/template/accessibility"
-        ]
-      },       
-    ],
+    root: true,
     settings: {
       "node": {
         "tryExtensions": [".js", ".json", ".node"]
@@ -103,9 +82,47 @@ export const defaultOptions: ESLint.Options = {
         version: 26,
       },
       react: {
-        version: "detect"
+        version: "18.2.0"
       },
     },
+    overrides: [
+      {
+        files: ["**/*.ts", "**/*.tsx"],
+        extends: typescriptConfigs,
+        parserOptions: {
+          sourceType: "module",
+          project: ['./tsconfig.json'],
+        },
+      },
+      {
+        files: ["**/*.vue"],
+        parser: require.resolve("vue-eslint-parser"),
+        parserOptions: {
+          ecmaVersion: 2020,
+          sourceType: "module",
+        },
+      },
+      {
+        files: ["**/*.jsx"],
+        parser: "@babel/eslint-parser",
+        parserOptions: {
+          babelOptions: {
+            presets: ["@babel/preset-react"],
+          }
+        },
+      },
+      {
+        files: ["**/*.html"],
+        extends: [
+          "plugin:@angular-eslint/template/recommended",
+          "plugin:@angular-eslint/template/accessibility"
+        ]
+      },   
+      {
+        files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+        extends: ['plugin:testing-library/react'],
+      },
+    ],
   },
 }
 
