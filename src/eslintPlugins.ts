@@ -74,6 +74,7 @@ import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
 import { rules as storybookRules } from "eslint-plugin-storybook"
 import { rules as tailwindcssRules } from "eslint-plugin-tailwindcss"
 import { rules as testSelectorsRules } from "eslint-plugin-test-selectors"
+import { rules as testingLibraryRules } from "eslint-plugin-testing-library"
 import { rules as typescriptSortKeysRules } from "eslint-plugin-typescript-sort-keys"
 import { rules as unicornRules } from "eslint-plugin-unicorn"
 import { rules as unusedImportRules } from "eslint-plugin-unused-imports"
@@ -164,6 +165,7 @@ const plugins = [
   ["storybook", storybookRules],
   ["tailwindcss", tailwindcssRules],
   ["test-selectors", testSelectorsRules],
+  ["testing-library", testingLibraryRules],
   ["typescript-sort-keys", typescriptSortKeysRules],
   ["unicorn", unicornRules],
   ["unused-imports", unusedImportRules],

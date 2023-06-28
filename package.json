@@ -282,6 +282,7 @@
     "eslint-plugin-suitescript": "^1.2.1",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-test-selectors": "^2.0.4",
+    "eslint-plugin-testing-library": "^5.11.0",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-turbo": "^1.10.3",
     "eslint-plugin-typescript-sort-keys": "^2.3.0",

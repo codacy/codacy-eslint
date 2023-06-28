@@ -22,6 +22,7 @@ const blacklistRegexes: RegExp[] = [
   /react\/jsx-.+/,
   /rxjs\/.+/,
   /rxjs-angular\/.+/,
+  /testing-library\/.+/,
   /unicorn\/import-index/,
   /unicorn\/no-array-instanceof/,
   /unicorn\/no-fn-reference-in-iterator/,

@@ -117,7 +117,11 @@ export const defaultOptions: ESLint.Options = {
           "plugin:@angular-eslint/template/recommended",
           "plugin:@angular-eslint/template/accessibility"
         ]
-      },       
+      },   
+      {
+        files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+        extends: ['plugin:testing-library/react'],
+      },
     ],
   },
 }
