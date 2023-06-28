@@ -31,6 +31,7 @@ import { rules as importAliasRules } from "eslint-plugin-import-alias"
 import { rules as importNewlinesRules } from "eslint-plugin-import-newlines"
 import { rules as jasmineRules } from "eslint-plugin-jasmine"
 import { rules as jestRules } from "eslint-plugin-jest"
+import { rules as jestDomRules } from "eslint-plugin-jest-dom"
 import { rules as jestExtendedRules } from "eslint-plugin-jest-extended"
 import { rules as jestFormattingRules } from "eslint-plugin-jest-formatting"
 import { rules as jiraTicketTodoCommentRules } from "eslint-plugin-jira-ticket-todo-comment"
@@ -120,6 +121,7 @@ const plugins = [
   ["import-newlines", importNewlinesRules],
   ["jasmine", jasmineRules],
   ["jest", jestRules],
+  ["jest-dom", jestDomRules],
   ["jest-extended", jestExtendedRules],
   ["jest-formatting", jestFormattingRules],
   ["jira-ticket-todo-comment", jiraTicketTodoCommentRules],

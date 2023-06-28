@@ -167,6 +167,13 @@ async function main() {
     "jest"
   )
 
+  console.log("Generate jest-dom description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/testing-library/eslint-plugin-jest-dom/main/docs/rules/${pattern}.md`,
+    "jest-dom"
+  )
+
   console.log("Generate jest-extended description files")
   await docGenerator.downloadDocs(
     (pattern) =>

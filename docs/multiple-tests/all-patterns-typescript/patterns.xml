@@ -1089,6 +1089,17 @@
   <module name="jest_valid-expect-in-promise" />
   <module name="jest_valid-expect" />
   <module name="jest_valid-title" />
+  <module name="jest-dom_prefer-checked" />
+  <module name="jest-dom_prefer-empty" />
+  <module name="jest-dom_prefer-enabled-disabled" />
+  <module name="jest-dom_prefer-focus" />
+  <module name="jest-dom_prefer-in-document" />
+  <module name="jest-dom_prefer-required" />
+  <module name="jest-dom_prefer-to-have-attribute" />
+  <module name="jest-dom_prefer-to-have-class" />
+  <module name="jest-dom_prefer-to-have-style" />
+  <module name="jest-dom_prefer-to-have-text-content" />
+  <module name="jest-dom_prefer-to-have-value" />
   <module name="jest-extended_prefer-to-be-array" />
   <module name="jest-extended_prefer-to-be-false" />
   <module name="jest-extended_prefer-to-be-object" />

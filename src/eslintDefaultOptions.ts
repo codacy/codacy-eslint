@@ -15,6 +15,7 @@ const baseConfigs: string[] = [
   "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
   "plugin:fp/recommended",
+  "plugin:jest-dom/recommended",
   "plugin:jest-formatting/recommended",
   "plugin:json/recommended",
   "plugin:lit/recommended",

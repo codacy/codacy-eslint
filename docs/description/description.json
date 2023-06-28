@@ -8754,6 +8754,83 @@
   },
   {
     "parameters": [],
+    "patternId": "jest-dom_prefer-checked",
+    "title": "Jest dom: Prefer checked",
+    "description": "Prefer toBeChecked over checking attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-empty",
+    "title": "Jest dom: Prefer empty",
+    "description": "Prefer toBeEmpty over checking innerHTML",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-enabled-disabled",
+    "title": "Jest dom: Prefer enabled disabled",
+    "description": "Prefer toBeDisabled or toBeEnabled over checking attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-focus",
+    "title": "Jest dom: Prefer focus",
+    "description": "Prefer toHaveFocus over checking document.activeElement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-in-document",
+    "title": "Jest dom: Prefer in document",
+    "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-required",
+    "title": "Jest dom: Prefer required",
+    "description": "Prefer toBeRequired over checking properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-attribute",
+    "title": "Jest dom: Prefer to have attribute",
+    "description": "Prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-class",
+    "title": "Jest dom: Prefer to have class",
+    "description": "Prefer toHaveClass over checking element className",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-style",
+    "title": "Jest dom: Prefer to have style",
+    "description": "Prefer toHaveStyle over checking element style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-text-content",
+    "title": "Jest dom: Prefer to have text content",
+    "description": "Prefer toHaveTextContent over checking element.textContent",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest-dom_prefer-to-have-value",
+    "title": "Jest dom: Prefer to have value",
+    "description": "Prefer toHaveValue over checking element.value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest-extended_prefer-to-be-array",
     "title": "Jest extended: Prefer to be array",
     "description": "Suggest using `toBeArray()`",
