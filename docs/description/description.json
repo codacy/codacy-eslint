@@ -13762,6 +13762,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "sort-destructure-keys_sort-destructure-keys",
+    "title": "Sort destructure keys: Sort destructure keys",
+    "description": "Require object destructure keys to be sorted",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "ignoreCase",

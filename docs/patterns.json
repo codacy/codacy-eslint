@@ -14120,6 +14120,13 @@
       "enabled": false
     },
     {
+      "patternId": "sort-destructure-keys_sort-destructure-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "sort-imports-es6-autofix_sort-imports-es6",
       "level": "Warning",
       "category": "CodeStyle",
