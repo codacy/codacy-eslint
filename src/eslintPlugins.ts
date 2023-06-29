@@ -68,6 +68,7 @@ import { rules as rxjsAngularRules } from "eslint-plugin-rxjs-angular"
 import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
+import { rules as sortDestructureKeysRules } from "eslint-plugin-sort-destructure-keys"
 import { rules as sortImportsEs6AutofixRules } from "eslint-plugin-sort-imports-es6-autofix"
 import { rules as sortKeysFixRules } from "eslint-plugin-sort-keys-fix"
 import { rules as spellcheckRules } from "eslint-plugin-spellcheck"
@@ -159,6 +160,7 @@ const plugins = [
   ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
   ["sonarjs", sonarjsRules],
+  ["sort-destructure-keys", sortDestructureKeysRules],
   ["sort-imports-es6-autofix", sortImportsEs6AutofixRules],
   ["sort-keys-fix", sortKeysFixRules],
   ["spellcheck", spellcheckRules],

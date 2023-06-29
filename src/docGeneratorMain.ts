@@ -331,6 +331,13 @@ async function main() {
     "sonarjs"
   )
 
+  console.log("Generate sort-destructure-keys description files")
+  await docGenerator.downloadDocs(
+    (pattern) =>
+      `${githubBaseUrl}/mthadley/eslint-plugin-sort-destructure-keys/master/docs/rules/${pattern}.md`,
+    "sort-destructure-keys"
+  )
+
   console.log("Generate storybook description files")
   await docGenerator.downloadDocs(
     (pattern) =>

@@ -639,7 +639,7 @@ export default class Test {
     this.a = a;
   }
 }
-// "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":["MethodDefinition:not([accessibility=\"private\"]) > FunctionExpression"],"publicOnly":true,"require":{"ArrowFunctionExpression":false,"ClassDeclaration":false,"ClassExpression":false,"FunctionDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
+// "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":["MethodDefinition > FunctionExpression"],"publicOnly":true,"require":{"ArrowFunctionExpression":false,"ClassDeclaration":false,"ClassExpression":false,"FunctionDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
 // Message: Missing JSDoc comment.
 
 e = function () {
@@ -989,6 +989,19 @@ class A {
   }
 }
 // "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":[{"context":"MethodDefinition","minLineCount":3}],"require":{"ClassDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
+// Message: Missing JSDoc comment.
+
+export class MyClass {
+
+  public myPublicProperty: number = 1;
+      /* ^ Missing JSDoc comment. eslint(jsdoc/require-jsdoc) - expected ✅ */
+
+  private myPrivateProp: number = -1;
+      /* ^ Missing JSDoc comment. eslint(jsdoc/require-jsdoc) - unexpected ❌ */
+
+  // ...
+}
+// "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":["PropertyDefinition"],"publicOnly":true}]
 // Message: Missing JSDoc comment.
 ````
 
@@ -1662,7 +1675,7 @@ export default class Test {
     this.a = a;
   }
 }
-// "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":["MethodDefinition:not([accessibility=\"private\"]) > FunctionExpression"],"publicOnly":true,"require":{"ArrowFunctionExpression":false,"ClassDeclaration":false,"ClassExpression":false,"FunctionDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
+// "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":["MethodDefinition > FunctionExpression"],"publicOnly":true,"require":{"ArrowFunctionExpression":false,"ClassDeclaration":false,"ClassExpression":false,"FunctionDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
 
 /**
  * Basic application controller.
@@ -1833,5 +1846,12 @@ class A {
   }
 }
 // "jsdoc/require-jsdoc": ["error"|"warn", {"contexts":[{"context":"MethodDefinition","minLineCount":4}],"require":{"ClassDeclaration":false,"FunctionExpression":false,"MethodDefinition":false}}]
+
+export default class Test {
+  private abc(a) {
+    this.a = a;
+  }
+}
+// "jsdoc/require-jsdoc": ["error"|"warn", {"publicOnly":true,"require":{"ArrowFunctionExpression":false,"ClassDeclaration":false,"ClassExpression":false,"FunctionDeclaration":false,"FunctionExpression":false,"MethodDefinition":true}}]
 ````
 
