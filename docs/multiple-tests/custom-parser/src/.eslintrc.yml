@@ -14,10 +14,13 @@ parserOptions:
     sourceType: module
     ecmaFeatures: {jsx: true, experimentalObjectRestSpread: true}
 plugins:
-    - babel
+    - "@babel"
     - react
     - mocha
 rules:
+    "@babel/object-curly-spacing": [error, never]
+    "@babel/object-shorthand": off
+    "@babel/new-cap": off
     array-bracket-spacing: [error, never]
     arrow-spacing: error
     arrow-parens: error
@@ -73,7 +76,6 @@ rules:
     space-unary-ops: [error, {words: true, nonwords: false}]
     spaced-comment: error
     yoda: error
-    babel/object-curly-spacing: [error, never]
     react/display-name: error
     react/jsx-boolean-value: [error, always]
     react/jsx-closing-bracket-location: error
@@ -129,5 +131,3 @@ rules:
     mocha/no-synchronous-tests: off
     mocha/valid-suite-description: off
     mocha/valid-test-description: off
-    babel/object-shorthand: off
-    babel/new-cap: off

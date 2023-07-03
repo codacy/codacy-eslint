@@ -12,7 +12,7 @@
     "worker": true,
     "qunit": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": "2017",
     "ecmaFeatures": {
@@ -20,8 +20,8 @@
     }
   },
   "plugins": [
+    "@babel",
     "angular",
-    "babel",
     "backbone",
     "flowtype",
     "html",
