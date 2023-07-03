@@ -38,6 +38,7 @@
     <error source="cypress_no-expect-for-stub" line="1" message="Definition for rule 'cypress/no-expect-for-stub' was not found." severity="info" />
     <error source="cypress_no-single-expect-in-then-or-should" line="1" message="Definition for rule 'cypress/no-single-expect-in-then-or-should' was not found." severity="info" />
     <error source="cypress_no-useless-then-or-should" line="1" message="Definition for rule 'cypress/no-useless-then-or-should' was not found." severity="info" />
+    <error source="import_unambiguous" line="1" message="This module could be parsed as a valid script." severity="info" />
     <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
     <error source="unicorn_no-empty-file" line="1" message="Empty files are not allowed." severity="info" />
   </file>

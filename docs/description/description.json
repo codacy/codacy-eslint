@@ -3746,34 +3746,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
@@ -8226,6 +8198,288 @@
     "patternId": "i18next_no-literal-string",
     "title": "I18next: No literal string",
     "description": "Disallow literal string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "caseSensitiveStrict",
+        "description": "caseSensitiveStrict"
+      }
+    ],
+    "patternId": "import_no-unresolved",
+    "title": "Import: No unresolved",
+    "description": "Ensure imports point to a file/module that can be resolved.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-namespace",
+    "title": "Import: No namespace",
+    "description": "Forbid namespace (a.k.a. \"wildcard\" `*`) imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_export",
+    "title": "Import: Export",
+    "description": "Forbid any invalid exports, i.e. re-export of the same name.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-mutable-exports",
+    "title": "Import: No mutable exports",
+    "description": "Forbid the use of mutable exports with `var` or `let`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_extensions",
+    "title": "Import: Extensions",
+    "description": "Ensure consistent use of file extension within the import path.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-restricted-paths",
+    "title": "Import: No restricted paths",
+    "description": "Enforce which files can be imported in a given folder.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-internal-modules",
+    "title": "Import: No internal modules",
+    "description": "Forbid importing the submodules of other modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_group-exports",
+    "title": "Import: Group exports",
+    "description": "Prefer named exports to be grouped together in a single export declaration",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-relative-packages",
+    "title": "Import: No relative packages",
+    "description": "Forbid importing packages through relative paths.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-relative-parent-imports",
+    "title": "Import: No relative parent imports",
+    "description": "Forbid importing modules from parent directories.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_consistent-type-specifier-style",
+    "title": "Import: Consistent type specifier style",
+    "description": "Enforce or ban the use of inline type-only markers for named imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-self-import",
+    "title": "Import: No self import",
+    "description": "Forbid a module from importing itself.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-named-default",
+    "title": "Import: No named default",
+    "description": "Forbid named default exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-anonymous-default-export",
+    "title": "Import: No anonymous default export",
+    "description": "Forbid anonymous values as default exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-commonjs",
+    "title": "Import: No commonjs",
+    "description": "Forbid CommonJS `require` calls and `module.exports` or `exports.*`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-amd",
+    "title": "Import: No amd",
+    "description": "Forbid AMD `require` and `define` calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-duplicates",
+    "title": "Import: No duplicates",
+    "description": "Forbid repeated import of the same module in multiple places.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_first",
+    "title": "Import: First",
+    "description": "Ensure all imports appear before other statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_max-dependencies",
+    "title": "Import: Max dependencies",
+    "description": "Enforce the maximum number of dependencies a module can have.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-extraneous-dependencies",
+    "title": "Import: No extraneous dependencies",
+    "description": "Forbid the use of extraneous packages.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-absolute-path",
+    "title": "Import: No absolute path",
+    "description": "Forbid import of modules using absolute paths.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-nodejs-modules",
+    "title": "Import: No nodejs modules",
+    "description": "Forbid Node.js builtin modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-webpack-loader-syntax",
+    "title": "Import: No webpack loader syntax",
+    "description": "Forbid webpack loader syntax in imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "distinctGroup",
+        "description": "distinctGroup"
+      },
+      {
+        "name": "warnOnUnassignedImports",
+        "description": "warnOnUnassignedImports"
+      }
+    ],
+    "patternId": "import_order",
+    "title": "Import: Order",
+    "description": "Enforce a convention in module import order.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_newline-after-import",
+    "title": "Import: Newline after import",
+    "description": "Enforce a newline after import statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "target",
+        "description": "target"
+      }
+    ],
+    "patternId": "import_prefer-default-export",
+    "title": "Import: Prefer default export",
+    "description": "Prefer a default export if module exports a single name or multiple names.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-default-export",
+    "title": "Import: No default export",
+    "description": "Forbid default exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-named-export",
+    "title": "Import: No named export",
+    "description": "Forbid named exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-dynamic-require",
+    "title": "Import: No dynamic require",
+    "description": "Forbid `require()` calls with expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_unambiguous",
+    "title": "Import: Unambiguous",
+    "description": "Forbid potentially ambiguous parse goal (`script` vs. `module`).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-unassigned-import",
+    "title": "Import: No unassigned import",
+    "description": "Forbid unassigned imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-useless-path-segments",
+    "title": "Import: No useless path segments",
+    "description": "Forbid unnecessary path segments in import and require statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_dynamic-import-chunkname",
+    "title": "Import: Dynamic import chunkname",
+    "description": "Enforce a leading comment with the webpackChunkName for dynamic imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-import-module-exports",
+    "title": "Import: No import module exports",
+    "description": "Forbid import statements with CommonJS module.exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-empty-named-blocks",
+    "title": "Import: No empty named blocks",
+    "description": "Forbid empty named import blocks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_exports-last",
+    "title": "Import: Exports last",
+    "description": "Ensure all exports appear after other statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_imports-first",
+    "title": "Import: Imports first",
+    "description": "Replaced by `import/first`.",
     "timeToFix": 5
   },
   {
