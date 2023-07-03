@@ -99,7 +99,7 @@
     "@nx/next": "^16.4.0",
     "@nx/node": "^16.4.0",
     "@nx/react": "^16.4.0",
-    "@nx/storybook": "^16.4.0",
+    "@nx/storybook": "^16.4.2",
     "@nx/web": "^16.4.0",
     "@nx/workspace": "^16.4.0",
     "@prodigy/eslint-config-prodigy": "^0.0.7",
