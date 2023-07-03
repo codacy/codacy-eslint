@@ -1,2 +1,5 @@
-docs/tests
-dist
+node_modules/*
+dist/*
+build/*
+bin/*
+docs/tests/*

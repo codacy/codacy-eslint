@@ -15,6 +15,9 @@ const baseConfigs: string[] = [
   "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
   "plugin:fp/recommended",
+  "plugin:i18next/recommended",
+  "plugin:import/recommended",
+  "plugin:import/typescript",
   "plugin:jest-dom/recommended",
   "plugin:jest-formatting/recommended",
   "plugin:json/recommended",
@@ -57,6 +60,7 @@ export const defaultOptions: ESLint.Options = {
       worker: true,
       qunit: true,
     },
+    ignorePatterns: ["node_modules/*", "dist/*", "bin/*", "build/*", "docs/tests/*"],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {

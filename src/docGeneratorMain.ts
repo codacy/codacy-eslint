@@ -148,7 +148,7 @@ async function main() {
   console.log("Generate import description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/benmosher/eslint-plugin-import/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/import-js/eslint-plugin-import/main/docs/rules/${pattern}.md`,
     "import",
     false
   )
