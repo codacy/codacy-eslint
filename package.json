@@ -90,7 +90,7 @@
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nx/cypress": "^16.4.0",
-    "@nx/devkit": "^16.4.0",
+    "@nx/devkit": "^16.4.2",
     "@nx/eslint-plugin": "^16.4.0",
     "@nx/express": "^16.4.0",
     "@nx/jest": "^16.4.0",
