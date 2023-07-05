@@ -64,15 +64,15 @@ export const defaultOptions: ESLint.Options = {
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
-      requireConfigFile: false,
       ecmaFeatures: {
-        "jsx": true
-      }
+        "jsx": true,
+      },
+      project: true,
     },
     root: true,
     settings: {
       "node": {
-        "tryExtensions": [".js", ".json", ".node"]
+        "tryExtensions": [".js", ".json", ".node"],
       },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"],
@@ -86,18 +86,13 @@ export const defaultOptions: ESLint.Options = {
         version: 26,
       },
       react: {
-        version: "18.2.0"
+        version: "18.2.0",
       },
     },
     overrides: [
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
-        parserOptions: {
-          sourceType: "module",
-          project: ['./tsconfig.json'],
-          tsconfigRootDir: __dirname
-        },
       },
       {
         files: ["**/*.vue"],
@@ -113,7 +108,7 @@ export const defaultOptions: ESLint.Options = {
         parserOptions: {
           babelOptions: {
             presets: ["@babel/preset-react"],
-          }
+          },
         },
       },
       {
