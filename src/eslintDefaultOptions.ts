@@ -68,6 +68,7 @@ export const defaultOptions: ESLint.Options = {
         "jsx": true,
       },
       project: true,
+      tsconfigRootDir: __dirname,
     },
     root: true,
     settings: {
