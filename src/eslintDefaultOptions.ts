@@ -64,11 +64,10 @@ export const defaultOptions: ESLint.Options = {
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
+      sourceType: "module",
       ecmaFeatures: {
         "jsx": true,
       },
-      project: true,
-      tsconfigRootDir: __dirname,
     },
     root: true,
     settings: {
@@ -94,6 +93,9 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
+        parserOptions: {
+          project: ['./tsconfig.json'],
+        },
       },
       {
         files: ["**/*.vue"],
