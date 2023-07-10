@@ -5337,6 +5337,13 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-at-ember-render-modifiers",
+    "title": "Ember: No at ember render modifiers",
+    "description": "Disallow importing from @ember/render-modifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-attrs-in-components",
     "title": "Ember: No attrs in components",
     "description": "Disallow usage of `this.attrs` in components",

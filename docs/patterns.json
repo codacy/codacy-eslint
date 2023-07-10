@@ -5409,6 +5409,13 @@
       "enabled": true
     },
     {
+      "patternId": "ember_no-at-ember-render-modifiers",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-attrs-in-components",
       "level": "Info",
       "category": "CodeStyle",

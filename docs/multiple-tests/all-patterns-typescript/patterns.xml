@@ -618,6 +618,7 @@
   <module name="ember_no-array-prototype-extensions" />
   <module name="ember_no-arrow-function-computed-properties" />
   <module name="ember_no-assignment-of-untracked-properties-used-in-tracking-contexts" />
+  <module name="ember_no-at-ember-render-modifiers" />
   <module name="ember_no-attrs-in-components" />
   <module name="ember_no-attrs-snapshot" />
   <module name="ember_no-capital-letters-in-routes" />
