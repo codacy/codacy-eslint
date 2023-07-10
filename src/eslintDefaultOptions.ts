@@ -96,6 +96,7 @@ export const defaultOptions: ESLint.Options = {
         extends: typescriptConfigs,
         parserOptions: {
           project: ['./tsconfig.json'],
+          sourceType: "module",
         },
       },
       {
