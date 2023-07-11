@@ -3321,224 +3321,231 @@
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
+      "patternId": "@shopify_esnext_binary-assignment-parens",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_class-property-semi",
+      "patternId": "@shopify_esnext_class-property-semi",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
+      "patternId": "@shopify_esnext_images-no-direct-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
+      "patternId": "@shopify_esnext_jest_no-all-mocks-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
+      "patternId": "@shopify_esnext_jest_no-snapshots",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
+      "patternId": "@shopify_esnext_jsx-no-complex-expressions",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
+      "patternId": "@shopify_esnext_jsx-no-hardcoded-content",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
+      "patternId": "@shopify_esnext_jsx-prefer-fragment-wrappers",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
+      "patternId": "@shopify_esnext_no-ancestor-directory-import",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@shopify_eslint-plugin_no-namespace-imports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_prefer-class-properties",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_prefer-early-return",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_prefer-twine",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_react-initialize-state",
+      "patternId": "@shopify_esnext_no-debugger",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
+      "patternId": "@shopify_esnext_no-namespace-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_no-useless-computed-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_no-fully-static-classes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_polaris-prefer-sectioned-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
+      "patternId": "@shopify_esnext_polaris-no-bare-stack-item",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
+      "patternId": "@shopify_esnext_prefer-class-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_prefer-early-return",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_prefer-module-scope-constants",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_react-type-state",
+      "patternId": "@shopify_esnext_prefer-twine",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_react-hooks-strict-return",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@shopify_esnext_react-initialize-state",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_restrict-full-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
+      "patternId": "@shopify_esnext_react-no-multiple-render-methods",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
+      "patternId": "@shopify_esnext_react-prefer-private-members",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@shopify_esnext_react-require-autocomplete",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@shopify_esnext_react-type-state",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@shopify_esnext_restrict-full-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_sinon-no-restricted-features",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_sinon-prefer-meaningful-assertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_strict-component-boundaries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_typescript_prefer-pascal-case-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_typescript_prefer-singular-enums",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@shopify_esnext_typescript_prefer-build-client-schema",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@shopify_esnext_webpack_no-unnamed-dynamic-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13847,6 +13854,14 @@
       "enabled": false
     },
     {
+      "patternId": "scanjs-rules_call__Function",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_call__addEventListener",
       "level": "Info",
       "category": "Security",
@@ -13888,14 +13903,6 @@
     },
     {
       "patternId": "scanjs-rules_call__execScript",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__Function",
       "level": "Info",
       "category": "Security",
       "subcategory": "CommandInjection",
@@ -14454,7 +14461,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "/Users/lorenzo/codacy/github/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

@@ -94,7 +94,7 @@ const plugins = [
   ["@babel", babelRules],
   ["@salesforce/aura", auraRules],
   ["@salesforce/lightning", lightningRules],
-  ["@shopify/eslint-plugin", shopifyRules],
+  ["@shopify/esnext", shopifyRules],
   ["@tanstack/eslint-plugin-query", queryRules],
   ["@typescript-eslint", typescriptEslintRules],
   ["angular", angularRules],
