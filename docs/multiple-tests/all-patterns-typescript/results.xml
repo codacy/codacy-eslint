@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
-  <file name="empty.ts">
-    <error source="@shopify_eslint-plugin_binary-assignment-parens" line="1" message="Definition for rule '@shopify/eslint-plugin/binary-assignment-parens' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_class-property-semi" line="1" message="Definition for rule '@shopify/eslint-plugin/class-property-semi' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_images-no-direct-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/images-no-direct-imports' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_jest_no-all-mocks-methods" line="1" message="Definition for rule '@shopify/eslint-plugin/jest/no-all-mocks-methods' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_jest_no-snapshots" line="1" message="Definition for rule '@shopify/eslint-plugin/jest/no-snapshots' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_jsx-no-complex-expressions" line="1" message="Definition for rule '@shopify/eslint-plugin/jsx-no-complex-expressions' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_jsx-no-hardcoded-content" line="1" message="Definition for rule '@shopify/eslint-plugin/jsx-no-hardcoded-content' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_jsx-prefer-fragment-wrappers" line="1" message="Definition for rule '@shopify/eslint-plugin/jsx-prefer-fragment-wrappers' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_no-ancestor-directory-import" line="1" message="Definition for rule '@shopify/eslint-plugin/no-ancestor-directory-import' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_no-fully-static-classes" line="1" message="Definition for rule '@shopify/eslint-plugin/no-fully-static-classes' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_no-namespace-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/no-namespace-imports' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_no-useless-computed-properties" line="1" message="Definition for rule '@shopify/eslint-plugin/no-useless-computed-properties' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_polaris-no-bare-stack-item" line="1" message="Definition for rule '@shopify/eslint-plugin/polaris-no-bare-stack-item' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_polaris-prefer-sectioned-prop" line="1" message="Definition for rule '@shopify/eslint-plugin/polaris-prefer-sectioned-prop' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_prefer-class-properties" line="1" message="Definition for rule '@shopify/eslint-plugin/prefer-class-properties' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_prefer-early-return" line="1" message="Definition for rule '@shopify/eslint-plugin/prefer-early-return' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_prefer-module-scope-constants" line="1" message="Definition for rule '@shopify/eslint-plugin/prefer-module-scope-constants' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_prefer-twine" line="1" message="Definition for rule '@shopify/eslint-plugin/prefer-twine' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_react-hooks-strict-return" line="1" message="Definition for rule '@shopify/eslint-plugin/react-hooks-strict-return' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_react-initialize-state" line="1" message="Definition for rule '@shopify/eslint-plugin/react-initialize-state' was not found." severity="error" />
-    <error source="@shopify_eslint-plugin_react-no-multiple-render-methods" line="1" message="Definition for rule '@shopify/eslint-plugin/react-no-multiple-render-methods' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_react-prefer-private-members" line="1" message="Definition for rule '@shopify/eslint-plugin/react-prefer-private-members' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_react-require-autocomplete" line="1" message="Definition for rule '@shopify/eslint-plugin/react-require-autocomplete' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_react-type-state" line="1" message="Definition for rule '@shopify/eslint-plugin/react-type-state' was not found." severity="error" />
-    <error source="@shopify_eslint-plugin_restrict-full-import" line="1" message="Definition for rule '@shopify/eslint-plugin/restrict-full-import' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_sinon-no-restricted-features" line="1" message="Definition for rule '@shopify/eslint-plugin/sinon-no-restricted-features' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_sinon-prefer-meaningful-assertions" line="1" message="Definition for rule '@shopify/eslint-plugin/sinon-prefer-meaningful-assertions' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_strict-component-boundaries" line="1" message="Definition for rule '@shopify/eslint-plugin/strict-component-boundaries' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_typescript_prefer-build-client-schema" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-build-client-schema' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_typescript_prefer-pascal-case-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-pascal-case-enums' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_typescript_prefer-singular-enums" line="1" message="Definition for rule '@shopify/eslint-plugin/typescript/prefer-singular-enums' was not found." severity="info" />
-    <error source="@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports" line="1" message="Definition for rule '@shopify/eslint-plugin/webpack/no-unnamed-dynamic-imports' was not found." severity="info" />
-    <error source="@tanstack_eslint-plugin-query_exhaustive-deps" line="1" message="Definition for rule '@tanstack/eslint-plugin-query/exhaustive-deps' was not found." severity="info" />
-    <error source="@tanstack_eslint-plugin-query_prefer-query-object-syntax" line="1" message="Definition for rule '@tanstack/eslint-plugin-query/prefer-query-object-syntax' was not found." severity="info" />
-    <error source="cypress_no-expect-for-stub" line="1" message="Definition for rule 'cypress/no-expect-for-stub' was not found." severity="info" />
-    <error source="cypress_no-single-expect-in-then-or-should" line="1" message="Definition for rule 'cypress/no-single-expect-in-then-or-should' was not found." severity="info" />
-    <error source="cypress_no-useless-then-or-should" line="1" message="Definition for rule 'cypress/no-useless-then-or-should' was not found." severity="info" />
-    <error source="import_unambiguous" line="1" message="This module could be parsed as a valid script." severity="info" />
-    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
-    <error source="unicorn_no-empty-file" line="1" message="Empty files are not allowed." severity="info" />
-  </file>
+  <!-- Don't add issues here. -->
+  <!-- This test is specifically made to test that when you have an empty file -->
+  <!-- codacy-eslint shouldn't return any error. -->
+  <!-- Adding errors here means to test that a bug exists. -->
 </checkstyle>
