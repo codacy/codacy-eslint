@@ -3,6 +3,7 @@ const blacklistRegexes: RegExp[] = [
   /@shopify\/no-debugger/,
   /@typescript-eslint\/await-thenable/,
   /@typescript-eslint\/indent*/,
+  /@typescript-eslint\/lines-between-class-members/,
   /@typescript-eslint\/no-parameter-properties/,
   /angular\/service-name/,
   /babel\/generator-star-spacing/,

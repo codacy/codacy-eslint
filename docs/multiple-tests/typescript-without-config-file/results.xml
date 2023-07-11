@@ -106,6 +106,7 @@
         <error source="space-before-blocks" line="10" message="Missing space before opening brace." severity="info" />
         <error source="space-before-blocks" line="11" message="Missing space before opening brace." severity="info" />
         <error source="space-before-blocks" line="18" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="25" message="Missing space before opening brace." severity="info" />
         <error source="space-before-blocks" line="28" message="Missing space before opening brace." severity="info" />
         <error source="space-before-blocks" line="29" message="Missing space before opening brace." severity="info" />
         <error source="space-before-blocks" line="34" message="Missing space before opening brace." severity="info" />

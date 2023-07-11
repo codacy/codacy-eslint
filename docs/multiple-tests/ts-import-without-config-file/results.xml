@@ -4,7 +4,7 @@
         <error source="@babel_object-curly-spacing" line="1" message="There should be no space after '{'." severity="info" />
         <error source="@babel_object-curly-spacing" line="1" message="There should be no space before '}'." severity="info" />
         <error source="@typescript-eslint_object-curly-spacing" line="1" message="There should be no space after '{'." severity="info" />
-        <error source="@typescript-eslint_object-curly-spacing" line="1" message="There should be no space after '}'." severity="info" />
+        <error source="@typescript-eslint_object-curly-spacing" line="1" message="There should be no space before '}'." severity="info" />
         <error source="@typescript-eslint_quotes" line="1" message="Strings must use singlequote." severity="info" />
         <error source="fp_no-nil" line="4" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
         <error source="fp_no-unused-expression" line="5" message="Unused expression" severity="info" />
