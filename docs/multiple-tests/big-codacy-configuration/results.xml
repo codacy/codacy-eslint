@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
     <file name="testFile.js">
+        <error source="@typescript-eslint_no-unused-vars" line="6" message="'iAmTooLongButImTheException' is assigned a value but never used." severity="info" />
+        <error source="@typescript-eslint_no-unused-vars" line="2" message="'iAmTooLongNobodyWillLikeMe' is assigned a value but never used." severity="info" />
+        <error source="@typescript-eslint_no-unused-vars" line="3" message="'obj' is assigned a value but never used." severity="info" />
+        <error source="@typescript-eslint_no-unused-vars" line="1" message="'s' is assigned a value but never used." severity="info" />
         <error source="id-length" line="1" message="Identifier name 's' is too short (&lt; 3)." severity="info" />
         <error source="no-unused-vars" line="6" message="'iAmTooLongButImTheException' is assigned a value but never used." severity="info" />
         <error source="no-unused-vars" line="2" message="'iAmTooLongNobodyWillLikeMe' is assigned a value but never used." severity="info" />
