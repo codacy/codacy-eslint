@@ -402,7 +402,6 @@
   <module name="@typescript-eslint_key-spacing" />
   <module name="@typescript-eslint_keyword-spacing" />
   <module name="@typescript-eslint_lines-around-comment" />
-  <module name="@typescript-eslint_lines-between-class-members" />
   <module name="@typescript-eslint_member-delimiter-style" />
   <module name="@typescript-eslint_member-ordering" />
   <module name="@typescript-eslint_method-signature-style" />

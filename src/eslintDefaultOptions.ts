@@ -102,9 +102,6 @@ export const defaultOptions: ESLint.Options = {
         parserOptions: {
           project: ['tsconfig.json'],
           sourceType: "module",
-        },
-        rules: {
-          "@typescript-eslint/lines-between-class-members": "off",
         }
       },
       {
