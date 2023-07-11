@@ -103,6 +103,9 @@ export const defaultOptions: ESLint.Options = {
           project: ['tsconfig.json'],
           sourceType: "module",
         },
+        rules: {
+          "@typescript-eslint/lines-between-class-members": "off",
+        }
       },
       {
         files: ["**/*.vue"],
