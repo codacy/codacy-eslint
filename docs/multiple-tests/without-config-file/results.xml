@@ -14,6 +14,10 @@
         <error source="fp_no-this" line="13" message="Unallowed use of `this`" severity="info" />
         <error source="fp_no-this" line="16" message="Unallowed use of `this`" severity="info" />
         <error source="fp_no-unused-expression" line="11" message="Unused expression" severity="info" />
+        <error source="id-length" line="5" message="Identifier name 'a' is too short (&lt; 2)." severity="info" />
+        <error source="id-length" line="10" message="Identifier name 'd' is too short (&lt; 2)." severity="info" />
+        <error source="id-length" line="3" message="Identifier name 'o' is too short (&lt; 2)." severity="info" />
+        <error source="id-length" line="10" message="Identifier name 'o' is too short (&lt; 2)." severity="info" />
         <error source="no-redeclare" line="10" message="'o' is already defined." severity="info" />
         <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="10" message="Unexpected var, use let or const instead." severity="info" />

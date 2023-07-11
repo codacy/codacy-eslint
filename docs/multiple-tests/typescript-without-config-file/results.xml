@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
     <file name="test.ts">
-        <error source="@typescript-eslint_explicit-function-return-type" line="10" message="Missing return type on function." severity="info" />
-        <error source="@typescript-eslint_explicit-function-return-type" line="17" message="Missing return type on function." severity="info" />
-        <error source="@typescript-eslint_explicit-function-return-type" line="40" message="Missing return type on function." severity="info" />
+        <error source="@babel_semi" line="31" message="Missing semicolon." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="28" message="Expected space(s) after &quot;for&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="60" message="Expected space(s) after &quot;for&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="11" message="Expected space(s) after &quot;if&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="29" message="Expected space(s) after &quot;if&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="34" message="Expected space(s) after &quot;if&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="49" message="Expected space(s) after &quot;if&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="51" message="Expected space(s) after &quot;if&quot;." severity="info" />
+        <error source="@typescript-eslint_keyword-spacing" line="51" message="Expected space(s) before &quot;else&quot;." severity="info" />
+        <error source="@typescript-eslint_semi" line="31" message="Missing semicolon." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="21" message="Operator '+' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="34" message="Operator '+' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="35" message="Operator '+' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="37" message="Operator '+' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="14" message="Operator '-' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="20" message="Operator '-' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="28" message="Operator '-' must be spaced." severity="info" />
+        <error source="@typescript-eslint_space-infix-ops" line="28" message="Operator '&lt;=' must be spaced." severity="info" />
+        <error source="@typescript-eslint_type-annotation-spacing" line="26" message="Expected a space after the ':'." severity="info" />
+        <error source="@typescript-eslint_type-annotation-spacing" line="27" message="Expected a space after the ':'." severity="info" />
+        <error source="@typescript-eslint_type-annotation-spacing" line="40" message="Expected a space after the ':'." severity="info" />
+        <error source="array-bracket-spacing" line="57" message="There should be no space after '['." severity="info" />
+        <error source="array-bracket-spacing" line="57" message="There should be no space before ']'." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
+        <error source="comma-spacing" line="57" message="A space is required after ','." severity="info" />
         <error source="ember-suave_no-const-outside-module-scope" line="19" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
         <error source="ember-suave_no-const-outside-module-scope" line="26" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
         <error source="ember-suave_no-const-outside-module-scope" line="41" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
@@ -34,14 +63,13 @@
         <error source="fp_no-unused-expression" line="35" message="Unused expression" severity="info" />
         <error source="fp_no-unused-expression" line="61" message="Unused expression" severity="info" />
         <error source="fp_no-unused-expression" line="62" message="Unused expression" severity="info" />
+        <error source="no-console" line="62" message="Unexpected console statement." severity="info" />
+        <error source="no-multiple-empty-lines" line="9" message="More than 1 blank line not allowed." severity="info" />
+        <error source="no-multiple-empty-lines" line="65" message="More than 1 blank line not allowed." severity="info" />
         <error source="node_no-unsupported-features_es-syntax" line="7" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="10" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="46" message="Import and export declarations are not supported yet." severity="error" />
-        <error source="padding-line-between-statements" line="14" message="Expected blank line before this statement." severity="info" />
-        <error source="padding-line-between-statements" line="34" message="Expected blank line before this statement." severity="info" />
-        <error source="padding-line-between-statements" line="37" message="Expected blank line before this statement." severity="info" />
-        <error source="padding-line-between-statements" line="54" message="Expected blank line before this statement." severity="info" />
-        <error source="padding-line-between-statements" line="57" message="Expected blank line before this statement." severity="info" />
+        <error source="operator-assignment" line="30" message="Assignment (=) can be replaced with operator assignment (+=)." severity="info" />
         <error source="prefer-const" line="60" message="'testArray' is never reassigned. Use 'const' instead." severity="info" />
         <error source="prefer-const" line="57" message="'tests' is never reassigned. Use 'const' instead." severity="info" />
         <error source="prettier_prettier" line="55" message="Delete `&#9166;`" severity="info" />
@@ -61,8 +89,8 @@
         <error source="prettier_prettier" line="37" message="Replace `+` with `&#183;+&#183;`" severity="info" />
         <error source="prettier_prettier" line="14" message="Replace `-` with `&#183;-&#183;`" severity="info" />
         <error source="prettier_prettier" line="20" message="Replace `-` with `&#183;-&#183;`" severity="info" />
-        <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;):&#183;number&#183;`" severity="info" />
-        <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;`" severity="info" />
+        <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;):&#183;number&#183;`" severity="info" />
+        <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;`" severity="info" />
         <error source="prettier_prettier" line="51" message="Replace `else&#183;if(o1&#183;==&#183;o2)` with `&#183;else&#183;if&#183;(o1&#183;==&#183;o2)&#183;`" severity="info" />
         <error source="prettier_prettier" line="40" message="Replace `number)` with `&#183;number)&#183;`" severity="info" />
         <error source="prettier_prettier" line="46" message="Replace `{&#9166;` with `&#183;{`" severity="info" />
@@ -75,6 +103,17 @@
         <error source="security_detect-object-injection" line="43" message="Generic Object Injection Sink" severity="info" />
         <error source="security_detect-object-injection" line="26" message="Variable Assigned to Object Injection Sink" severity="info" />
         <error source="security_detect-object-injection" line="41" message="Variable Assigned to Object Injection Sink" severity="info" />
+        <error source="space-before-blocks" line="10" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="11" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="18" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="28" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="29" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="34" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="40" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="46" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="49" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="51" message="Missing space before opening brace." severity="info" />
+        <error source="space-before-blocks" line="60" message="Missing space before opening brace." severity="info" />
         <error source="spaced-comment" line="6" message="Expected space or tab after '//' in comment." severity="info" />
     </file>
 </checkstyle>

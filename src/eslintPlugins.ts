@@ -1,8 +1,7 @@
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
-import { rules as cypressRules } from "eslint-plugin-cypress"
-import { rules as auraRules } from "@salesforce/eslint-plugin-aura"
-import { rules as lightningRules } from "@salesforce/eslint-plugin-lightning"
+import { rules as salesforceAuraRules } from "@salesforce/eslint-plugin-aura"
+import { rules as salesforcelightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
 import { rules as tanstackQueryRules } from "@tanstack/eslint-plugin-query"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
@@ -13,6 +12,7 @@ import { rules as betterStyledComponentsRules } from "eslint-plugin-better-style
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
+import { rules as cypressRules } from "eslint-plugin-cypress"
 import { rules as deprecationRules } from "eslint-plugin-deprecation"
 import { rules as emberRules } from "eslint-plugin-ember"
 import { rules as emberSuaveRules } from "eslint-plugin-ember-suave"
@@ -92,8 +92,8 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["@angular-eslint", angularEslintRules],
   ["@babel", babelRules],
-  ["@salesforce/aura", auraRules],
-  ["@salesforce/lightning", lightningRules],
+  ["@salesforce/aura", salesforceAuraRules],
+  ["@salesforce/lightning", salesforcelightningRules],
   ["@shopify", shopifyRules],
   ["@tanstack/query", tanstackQueryRules],
   ["@typescript-eslint", typescriptEslintRules],

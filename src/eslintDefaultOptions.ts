@@ -4,6 +4,7 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
+  "prettier/prettier",
   "plugin:@shopify/esnext",
   //"plugin:@mysticatea/es2015",
   //"plugin:@mysticatea/+eslint-plugin",
@@ -34,7 +35,8 @@ const baseConfigs: string[] = [
   "plugin:security/recommended",
   "plugin:tailwindcss/recommended",
   "plugin:test-selectors/recommended",
-  "plugin:you-dont-need-lodash-underscore/compatible"
+  "plugin:you-dont-need-lodash-underscore/compatible",
+  'prettier'
 ]
 
 const typescriptConfigs: string[] = [
