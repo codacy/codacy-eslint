@@ -4,6 +4,7 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
+  "plugin:@typescript-eslint/recommended",
   "prettier/prettier",
   "plugin:@shopify/esnext",
   //"plugin:@mysticatea/es2015",
@@ -43,9 +44,6 @@ const typescriptConfigs: string[] = [
   "plugin:node/recommended",
   "plugin:@angular-eslint/recommended",
   "plugin:@angular-eslint/template/process-inline-templates",
-  "plugin:@typescript-eslint/eslint-recommended",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:node/recommended",
   "plugin:@shopify/typescript"
 ]
 
@@ -80,9 +78,6 @@ export const defaultOptions: ESLint.Options = {
       "node": {
         "tryExtensions": [".js", ".json", ".node"],
       },
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
-      },
       "import/resolver": {
         typescript: {
           alwaysTryTypes: true,
@@ -97,7 +92,7 @@ export const defaultOptions: ESLint.Options = {
     },
     overrides: [
       {
-        files: ["**/*.ts", "**/*.tsx"],
+        files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
         extends: typescriptConfigs,
         parserOptions: {
           project: ['tsconfig.json'],
@@ -105,7 +100,7 @@ export const defaultOptions: ESLint.Options = {
         }
       },
       {
-        files: ["**/*.vue"],
+        files: ["*.vue"],
         parser: require.resolve("vue-eslint-parser"),
         parserOptions: {
           ecmaVersion: 2020,
@@ -113,7 +108,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["**/*.jsx"],
+        files: ["*.jsx"],
         parser: "@babel/eslint-parser",
         parserOptions: {
           babelOptions: {
@@ -122,7 +117,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["**/*.html"],
+        files: ["*.html"],
         extends: [
           "plugin:@angular-eslint/template/recommended",
           "plugin:@angular-eslint/template/accessibility"
