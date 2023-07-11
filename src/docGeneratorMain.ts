@@ -43,11 +43,11 @@ async function main() {
     "@salesforce/lightning"
   )
 
-  console.log("Generate @shopify_eslint description files")
+  console.log("Generate @shopify description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
+    "@shopify",
     false
   )
 
@@ -91,7 +91,7 @@ async function main() {
   console.log("Generate cypress description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/cypress-io/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
     "cypress"
   )
 
@@ -312,16 +312,16 @@ async function main() {
 
   console.log("Generate rxjs description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
-      "rxjs"
+    (pattern) =>
+        `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
+    "rxjs"
   )
 
   console.log("Generate rxjs-angular description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
-      "rxjs-angular"
+    (pattern) =>
+        `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
+    "rxjs-angular"
   )
 
   console.log("Generate sonarjs description files")

@@ -4,6 +4,10 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
+  "plugin:@shopify/esnext",
+  //"plugin:@mysticatea/es2015",
+  //"plugin:@mysticatea/+eslint-plugin",
+  "plugin:@tanstack/eslint-plugin-query/recommended",
   "plugin:backbone/recommended",
   "plugin:canonical/recommended",
   "plugin:chai-expect/recommended",
@@ -24,8 +28,6 @@ const baseConfigs: string[] = [
   "plugin:lit/recommended",
   "plugin:lodash/recommended",
   "plugin:monorepo/recommended",
-  //"plugin:@mysticatea/es2015",
-  //"plugin:@mysticatea/+eslint-plugin",
   "plugin:perfectionist/recommended-natural",
   "plugin:prettier/recommended",
   "plugin:react/recommended",
@@ -41,7 +43,8 @@ const typescriptConfigs: string[] = [
   "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/eslint-recommended",
   "plugin:@typescript-eslint/recommended",
-  "plugin:node/recommended"
+  "plugin:node/recommended",
+  "plugin:@shopify/typescript"
 ]
 
 export const defaultOptions: ESLint.Options = {
@@ -95,7 +98,7 @@ export const defaultOptions: ESLint.Options = {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
         parserOptions: {
-          project: ['./tsconfig.json'],
+          project: ['tsconfig.json'],
           sourceType: "module",
         },
       },
