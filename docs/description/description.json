@@ -3311,239 +3311,239 @@
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_binary-assignment-parens",
-    "title": "@shopify: [Eslint plugin] Binary assignment parens",
+    "patternId": "@shopify_binary-assignment-parens",
+    "title": "@shopify: Binary assignment parens",
     "description": "Enforce (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_class-property-semi",
-    "title": "@shopify: [Eslint plugin] Class property semi",
+    "patternId": "@shopify_class-property-semi",
+    "title": "@shopify: Class property semi",
     "description": "Require (or disallow) semicolons for class properties.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_images-no-direct-imports",
-    "title": "@shopify: [Eslint plugin] Images no direct imports",
+    "patternId": "@shopify_images-no-direct-imports",
+    "title": "@shopify: Images no direct imports",
     "description": "Prefer importing image files from the index file of the directory instead of the direct path to the image file.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jest_no-all-mocks-methods",
-    "title": "@shopify: [Eslint plugin] [Jest] No all mocks methods",
+    "patternId": "@shopify_jest_no-all-mocks-methods",
+    "title": "@shopify: [Jest] No all mocks methods",
     "description": "Disallows jest allMocks methods.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jest_no-snapshots",
-    "title": "@shopify: [Eslint plugin] [Jest] No snapshots",
+    "patternId": "@shopify_jest_no-snapshots",
+    "title": "@shopify: [Jest] No snapshots",
     "description": "Disallows jest snapshots.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-no-complex-expressions",
-    "title": "@shopify: [Eslint plugin] Jsx no complex expressions",
+    "patternId": "@shopify_jsx-no-complex-expressions",
+    "title": "@shopify: Jsx no complex expressions",
     "description": "Disallow complex expressions embedded in in JSX.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-no-hardcoded-content",
-    "title": "@shopify: [Eslint plugin] Jsx no hardcoded content",
+    "patternId": "@shopify_jsx-no-hardcoded-content",
+    "title": "@shopify: Jsx no hardcoded content",
     "description": "Disallow hardcoded content in JSX.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_jsx-prefer-fragment-wrappers",
-    "title": "@shopify: [Eslint plugin] Jsx prefer fragment wrappers",
+    "patternId": "@shopify_jsx-prefer-fragment-wrappers",
+    "title": "@shopify: Jsx prefer fragment wrappers",
     "description": "Disallow useless wrapping elements in favour of fragment shorthand in JSX",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-ancestor-directory-import",
-    "title": "@shopify: [Eslint plugin] No ancestor directory import",
+    "patternId": "@shopify_no-ancestor-directory-import",
+    "title": "@shopify: No ancestor directory import",
     "description": "Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-namespace-imports",
-    "title": "@shopify: [Eslint plugin] No namespace imports",
+    "patternId": "@shopify_no-namespace-imports",
+    "title": "@shopify: No namespace imports",
     "description": "Prevent namespace import declarations.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-useless-computed-properties",
-    "title": "@shopify: [Eslint plugin] No useless computed properties",
+    "patternId": "@shopify_no-useless-computed-properties",
+    "title": "@shopify: No useless computed properties",
     "description": "Prevent the usage of unnecessary computed properties.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_no-fully-static-classes",
-    "title": "@shopify: [Eslint plugin] No fully static classes",
+    "patternId": "@shopify_no-fully-static-classes",
+    "title": "@shopify: No fully static classes",
     "description": "Prevent the declaration of classes consisting only of static members.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_polaris-prefer-sectioned-prop",
-    "title": "@shopify: [Eslint plugin] Polaris prefer sectioned prop",
+    "patternId": "@shopify_polaris-prefer-sectioned-prop",
+    "title": "@shopify: Polaris prefer sectioned prop",
     "description": "Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_polaris-no-bare-stack-item",
-    "title": "@shopify: [Eslint plugin] Polaris no bare stack item",
+    "patternId": "@shopify_polaris-no-bare-stack-item",
+    "title": "@shopify: Polaris no bare stack item",
     "description": "Disallow the use of Polaris’s `Stack.Item` and `LegacyStack.Item` without any custom props.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-class-properties",
-    "title": "@shopify: [Eslint plugin] Prefer class properties",
+    "patternId": "@shopify_prefer-class-properties",
+    "title": "@shopify: Prefer class properties",
     "description": "Prefer class properties to assignment of literals in constructors.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-early-return",
-    "title": "@shopify: [Eslint plugin] Prefer early return",
+    "patternId": "@shopify_prefer-early-return",
+    "title": "@shopify: Prefer early return",
     "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-module-scope-constants",
-    "title": "@shopify: [Eslint plugin] Prefer module scope constants",
+    "patternId": "@shopify_prefer-module-scope-constants",
+    "title": "@shopify: Prefer module scope constants",
     "description": "Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_prefer-twine",
-    "title": "@shopify: [Eslint plugin] Prefer twine",
+    "patternId": "@shopify_prefer-twine",
+    "title": "@shopify: Prefer twine",
     "description": "Prefer Twine over Bindings as the name for twine imports.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-hooks-strict-return",
-    "title": "@shopify: [Eslint plugin] React hooks strict return",
+    "patternId": "@shopify_react-hooks-strict-return",
+    "title": "@shopify: React hooks strict return",
     "description": "Restrict the number of returned items from React hooks.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-initialize-state",
-    "title": "@shopify: [Eslint plugin] React initialize state",
+    "patternId": "@shopify_react-initialize-state",
+    "title": "@shopify: React initialize state",
     "description": "Require that React component state be initialized when it has a non-empty type.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-no-multiple-render-methods",
-    "title": "@shopify: [Eslint plugin] React no multiple render methods",
+    "patternId": "@shopify_react-no-multiple-render-methods",
+    "title": "@shopify: React no multiple render methods",
     "description": "Disallow multiple render methods in React component classes",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-prefer-private-members",
-    "title": "@shopify: [Eslint plugin] React prefer private members",
+    "patternId": "@shopify_react-prefer-private-members",
+    "title": "@shopify: React prefer private members",
     "description": "Disallow public members within React component classes",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-require-autocomplete",
-    "title": "@shopify: [Eslint plugin] React require autocomplete",
+    "patternId": "@shopify_react-require-autocomplete",
+    "title": "@shopify: React require autocomplete",
     "description": "Require autocomplete attribute on certain input types.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_react-type-state",
-    "title": "@shopify: [Eslint plugin] React type state",
+    "patternId": "@shopify_react-type-state",
+    "title": "@shopify: React type state",
     "description": "Require that React component state be typed in TypeScript.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_restrict-full-import",
-    "title": "@shopify: [Eslint plugin] Restrict full import",
+    "patternId": "@shopify_restrict-full-import",
+    "title": "@shopify: Restrict full import",
     "description": "Prevent importing the entirety of a package.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_sinon-no-restricted-features",
-    "title": "@shopify: [Eslint plugin] Sinon no restricted features",
+    "patternId": "@shopify_sinon-no-restricted-features",
+    "title": "@shopify: Sinon no restricted features",
     "description": "Restrict the use of specified sinon features.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_sinon-prefer-meaningful-assertions",
-    "title": "@shopify: [Eslint plugin] Sinon prefer meaningful assertions",
+    "patternId": "@shopify_sinon-prefer-meaningful-assertions",
+    "title": "@shopify: Sinon prefer meaningful assertions",
     "description": "Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_strict-component-boundaries",
-    "title": "@shopify: [Eslint plugin] Strict component boundaries",
+    "patternId": "@shopify_strict-component-boundaries",
+    "title": "@shopify: Strict component boundaries",
     "description": "Prevent module imports between components.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-pascal-case-enums",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer pascal case enums",
+    "patternId": "@shopify_typescript_prefer-pascal-case-enums",
+    "title": "@shopify: [Typescript] Prefer pascal case enums",
     "description": "Enforce Pascal case when naming enums.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-singular-enums",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer singular enums",
+    "patternId": "@shopify_typescript_prefer-singular-enums",
+    "title": "@shopify: [Typescript] Prefer singular enums",
     "description": "Prefer singular TypeScript enums.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_typescript_prefer-build-client-schema",
-    "title": "@shopify: [Eslint plugin] [Typescript] Prefer build client schema",
+    "patternId": "@shopify_typescript_prefer-build-client-schema",
+    "title": "@shopify: [Typescript] Prefer build client schema",
     "description": "Prefer buildClientSchema for schema building",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@shopify_eslint-plugin_webpack_no-unnamed-dynamic-imports",
-    "title": "@shopify: [Eslint plugin] [Webpack] No unnamed dynamic imports",
+    "patternId": "@shopify_webpack_no-unnamed-dynamic-imports",
+    "title": "@shopify: [Webpack] No unnamed dynamic imports",
     "description": "Require that all dynamic imports contain a `webpackChunkName` comment.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@tanstack_eslint-plugin-query_exhaustive-deps",
-    "title": "@tanstack: [Eslint plugin query] Exhaustive deps",
+    "patternId": "@tanstack_query_exhaustive-deps",
+    "title": "@tanstack: [Query] Exhaustive deps",
     "description": "Exhaustive deps rule for useQuery",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@tanstack_eslint-plugin-query_prefer-query-object-syntax",
-    "title": "@tanstack: [Eslint plugin query] Prefer query object syntax",
+    "patternId": "@tanstack_query_prefer-query-object-syntax",
+    "title": "@tanstack: [Query] Prefer query object syntax",
     "description": "Prefer object syntax for useQuery",
     "timeToFix": 5
   },
@@ -5159,6 +5159,13 @@
   },
   {
     "parameters": [],
+    "patternId": "cypress_unsafe-to-chain-command",
+    "title": "Cypress: Unsafe to chain command",
+    "description": "Actions should be in the end of chains, not in the middle",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "cypress_no-unnecessary-waiting",
     "title": "Cypress: No unnecessary waiting",
     "description": "Prevent waiting for arbitrary time periods",
@@ -5176,27 +5183,6 @@
     "patternId": "cypress_assertion-before-screenshot",
     "title": "Cypress: Assertion before screenshot",
     "description": "Assert on the page state before taking a screenshot, so the screenshot is consistent",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "cypress_no-single-expect-in-then-or-should",
-    "title": "Cypress: No single expect in then or should",
-    "description": "Simplify tests by avoiding lonely expect().",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "cypress_no-useless-then-or-should",
-    "title": "Cypress: No useless then or should",
-    "description": "`.should()` and `.then()` can be removed when they only wrap commands",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "cypress_no-expect-for-stub",
-    "title": "Cypress: No expect for stub",
-    "description": "Use cy.get(\"@stub\").should(…) instead of expect(stub)…",
     "timeToFix": 5
   },
   {

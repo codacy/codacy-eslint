@@ -3,7 +3,6 @@
     <file name="accessor-pairs.js">
         <error source="accessor-pairs" line="5" message="Getter is not present for setter 'a'." severity="info" />
         <error source="canonical_sort-keys" line="15" message="Expected object keys to be in natural insensitive ascending order. 'get' should be before 'set'." severity="info" />
-        <error source="ember-suave_lines-between-object-properties" line="15" message="Expected blank line between object properties." severity="info" />
         <error source="fp_no-get-set" line="5" message="Unallowed use of `set`" severity="info" />
         <error source="fp_no-mutating-methods" line="11" message="The use of method `Object.defineProperty` is not allowed as it will mutate its arguments" severity="info" />
         <error source="fp_no-mutation" line="6" message="Unallowed reassignment" severity="info" />
@@ -17,8 +16,6 @@
         <error source="no-redeclare" line="10" message="'o' is already defined." severity="info" />
         <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="10" message="Unexpected var, use let or const instead." severity="info" />
-        <error source="object-shorthand" line="12" message="Expected method shorthand." severity="info" />
-        <error source="object-shorthand" line="15" message="Expected method shorthand." severity="info" />
         <error source="perfectionist_sort-objects" line="15" message="Expected &quot;get&quot; to come before &quot;set&quot;" severity="info" />
         <error source="prettier_prettier" line="7" message="Insert `,`" severity="info" />
         <error source="prettier_prettier" line="17" message="Insert `,`" severity="info" />

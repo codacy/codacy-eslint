@@ -1,6 +1,6 @@
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
-import { rules as cypressRules } from "@finsit/eslint-plugin-cypress"
+import { rules as cypressRules } from "eslint-plugin-cypress"
 import { rules as auraRules } from "@salesforce/eslint-plugin-aura"
 import { rules as lightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -94,8 +94,8 @@ const plugins = [
   ["@babel", babelRules],
   ["@salesforce/aura", auraRules],
   ["@salesforce/lightning", lightningRules],
-  ["@shopify/eslint-plugin", shopifyRules],
-  ["@tanstack/eslint-plugin-query", queryRules],
+  ["@shopify", shopifyRules],
+  ["@tanstack/query", queryRules],
   ["@typescript-eslint", typescriptEslintRules],
   ["angular", angularRules],
   ["backbone", backboneRules],

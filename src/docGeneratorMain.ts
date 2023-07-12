@@ -43,12 +43,11 @@ async function main() {
     "@salesforce/lightning"
   )
 
-  console.log("Generate @shopify_eslint description files")
+  console.log("Generate @shopify description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/${pattern}.md`,
-    "@shopify/eslint-plugin",
-    false
+    "@shopify"
   )
 
   console.log("Generate @typescript-eslint description files")
@@ -91,7 +90,7 @@ async function main() {
   console.log("Generate cypress description files")
   await docGenerator.downloadDocs(
     (pattern) =>
-      `${githubBaseUrl}/foretagsplatsen/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/cypress-io/eslint-plugin-cypress/master/docs/rules/${pattern}.md`,
     "cypress"
   )
 
