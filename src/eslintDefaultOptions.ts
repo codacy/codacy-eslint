@@ -4,12 +4,6 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
-  "plugin:@typescript-eslint/recommended",
-  "prettier/prettier",
-  "plugin:@shopify/esnext",
-  //"plugin:@mysticatea/es2015",
-  //"plugin:@mysticatea/+eslint-plugin",
-  "plugin:@tanstack/eslint-plugin-query/recommended",
   "plugin:backbone/recommended",
   "plugin:canonical/recommended",
   "plugin:chai-expect/recommended",
@@ -30,21 +24,24 @@ const baseConfigs: string[] = [
   "plugin:lit/recommended",
   "plugin:lodash/recommended",
   "plugin:monorepo/recommended",
+  //"plugin:@mysticatea/es2015",
+  //"plugin:@mysticatea/+eslint-plugin",
   "plugin:perfectionist/recommended-natural",
   "plugin:prettier/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
   "plugin:tailwindcss/recommended",
   "plugin:test-selectors/recommended",
-  "plugin:you-dont-need-lodash-underscore/compatible",
-  'prettier'
+  "plugin:you-dont-need-lodash-underscore/compatible"
 ]
 
 const typescriptConfigs: string[] = [
   "plugin:node/recommended",
   "plugin:@angular-eslint/recommended",
   "plugin:@angular-eslint/template/process-inline-templates",
-  "plugin:@shopify/typescript"
+  "plugin:@typescript-eslint/eslint-recommended",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:node/recommended"
 ]
 
 export const defaultOptions: ESLint.Options = {
@@ -78,6 +75,9 @@ export const defaultOptions: ESLint.Options = {
       "node": {
         "tryExtensions": [".js", ".json", ".node"],
       },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
       "import/resolver": {
         typescript: {
           alwaysTryTypes: true,
@@ -92,15 +92,15 @@ export const defaultOptions: ESLint.Options = {
     },
     overrides: [
       {
-        files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
+        files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
         parserOptions: {
-          project: ['tsconfig.json'],
+          project: ['./tsconfig.json'],
           sourceType: "module",
-        }
+        },
       },
       {
-        files: ["*.vue"],
+        files: ["**/*.vue"],
         parser: require.resolve("vue-eslint-parser"),
         parserOptions: {
           ecmaVersion: 2020,
@@ -108,7 +108,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["*.jsx"],
+        files: ["**/*.jsx"],
         parser: "@babel/eslint-parser",
         parserOptions: {
           babelOptions: {
@@ -117,7 +117,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["*.html"],
+        files: ["**/*.html"],
         extends: [
           "plugin:@angular-eslint/template/recommended",
           "plugin:@angular-eslint/template/accessibility"
