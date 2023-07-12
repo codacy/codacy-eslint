@@ -2,7 +2,6 @@
 <checkstyle version="4.3">
   <file name="empty.js">
     <error source="import_unambiguous" line="1" message="This module could be parsed as a valid script." severity="info" />
-    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
   </file>
   <!-- This test is specifically made to test that when you have an empty file -->
   <!-- codacy-eslint should only return specific errors to empty files. -->
