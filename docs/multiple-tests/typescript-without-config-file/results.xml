@@ -4,9 +4,6 @@
         <error source="@typescript-eslint_explicit-function-return-type" line="10" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="17" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="40" message="Missing return type on function." severity="info" />
-        <error source="ember-suave_no-const-outside-module-scope" line="19" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
-        <error source="ember-suave_no-const-outside-module-scope" line="26" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
-        <error source="ember-suave_no-const-outside-module-scope" line="41" message="`const` should only be used in module scope (not inside functions/blocks)." severity="info" />
         <error source="eqeqeq" line="29" message="Expected '===' and instead saw '=='." severity="info" />
         <error source="eqeqeq" line="34" message="Expected '===' and instead saw '=='." severity="info" />
         <error source="eqeqeq" line="51" message="Expected '===' and instead saw '=='." severity="info" />
