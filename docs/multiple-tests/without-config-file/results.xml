@@ -16,8 +16,6 @@
         <error source="no-redeclare" line="10" message="'o' is already defined." severity="info" />
         <error source="no-var" line="3" message="Unexpected var, use let or const instead." severity="info" />
         <error source="no-var" line="10" message="Unexpected var, use let or const instead." severity="info" />
-        <error source="object-shorthand" line="12" message="Expected method shorthand." severity="info" />
-        <error source="object-shorthand" line="15" message="Expected method shorthand." severity="info" />
         <error source="perfectionist_sort-objects" line="15" message="Expected &quot;get&quot; to come before &quot;set&quot;" severity="info" />
         <error source="prettier_prettier" line="7" message="Insert `,`" severity="info" />
         <error source="prettier_prettier" line="17" message="Insert `,`" severity="info" />
