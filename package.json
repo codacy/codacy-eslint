@@ -308,7 +308,7 @@
     "next": "^13.4.9",
     "node-fetch": "^2.6.12",
     "npm": "^9.8.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "react-hot-loader": "^4.13.1",
     "redux-saga": "^1.2.3",
