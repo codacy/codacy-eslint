@@ -11,7 +11,6 @@ const baseConfigs: string[] = [
   "plugin:compat/recommended",
   "plugin:cypress/recommended",
   "plugin:ember/recommended",
-  "plugin:ember-suave/recommended",
   "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
   "plugin:fp/recommended",
@@ -39,9 +38,7 @@ const typescriptConfigs: string[] = [
   "plugin:node/recommended",
   "plugin:@angular-eslint/recommended",
   "plugin:@angular-eslint/template/process-inline-templates",
-  "plugin:@typescript-eslint/eslint-recommended",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:node/recommended"
+  "plugin:@typescript-eslint/recommended"
 ]
 
 export const defaultOptions: ESLint.Options = {

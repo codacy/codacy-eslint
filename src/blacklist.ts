@@ -1,6 +1,6 @@
 const blacklistRegexes: RegExp[] = [
   /@nx\/enforce-module-boundaries/,
-  /@shopify\/eslint-plugin\/no-debugger/,
+  /@shopify\/no-debugger/,
   /@typescript-eslint\/await-thenable/,
   /@typescript-eslint\/indent*/,
   /angular\/service-name/,
