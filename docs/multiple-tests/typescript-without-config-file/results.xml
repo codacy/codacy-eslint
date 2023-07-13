@@ -8,29 +8,6 @@
         <error source="eqeqeq" line="34" message="Expected '===' and instead saw '=='." severity="info" />
         <error source="eqeqeq" line="51" message="Expected '===' and instead saw '=='." severity="info" />
         <error source="flowtype_no-types-missing-file-annotation" line="7" message="Type exports require valid Flow declaration." severity="info" />
-        <error source="fp_no-let" line="27" message="Unallowed use of `let`. Use `const` instead" severity="info" />
-        <error source="fp_no-let" line="28" message="Unallowed use of `let`. Use `const` instead" severity="info" />
-        <error source="fp_no-let" line="57" message="Unallowed use of `let`. Use `const` instead" severity="info" />
-        <error source="fp_no-let" line="60" message="Unallowed use of `let`. Use `const` instead" severity="info" />
-        <error source="fp_no-loops" line="28" message="Unallowed use of `for` loop" severity="info" />
-        <error source="fp_no-loops" line="60" message="Unallowed use of `for` loop" severity="info" />
-        <error source="fp_no-mutation" line="30" message="Unallowed reassignment" severity="info" />
-        <error source="fp_no-mutation" line="42" message="Unallowed reassignment" severity="info" />
-        <error source="fp_no-mutation" line="43" message="Unallowed reassignment" severity="info" />
-        <error source="fp_no-mutation" line="28" message="Unallowed use of `++` operator" severity="info" />
-        <error source="fp_no-nil" line="10" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="17" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="40" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="46" message="Function must end with a return statement, so that it doesn't return `undefined`" severity="info" />
-        <error source="fp_no-nil" line="12" message="Return statement must return an explicit value, so that it doesn't evaluate to `undefined`" severity="info" />
-        <error source="fp_no-nil" line="60" message="Variable must be initialized, so that it doesn't evaluate to `undefined`" severity="info" />
-        <error source="fp_no-unused-expression" line="14" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="20" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="21" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="31" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="35" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="61" message="Unused expression" severity="info" />
-        <error source="fp_no-unused-expression" line="62" message="Unused expression" severity="info" />
         <error source="node_no-unsupported-features_es-syntax" line="7" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="10" message="Import and export declarations are not supported yet." severity="error" />
         <error source="node_no-unsupported-features_es-syntax" line="46" message="Import and export declarations are not supported yet." severity="error" />
@@ -53,8 +30,8 @@
         <error source="prettier_prettier" line="37" message="Replace `+` with `&#183;+&#183;`" severity="info" />
         <error source="prettier_prettier" line="14" message="Replace `-` with `&#183;-&#183;`" severity="info" />
         <error source="prettier_prettier" line="20" message="Replace `-` with `&#183;-&#183;`" severity="info" />
-        <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;):&#183;number&#183;`" severity="info" />
-        <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number&#9166;`" severity="info" />
+        <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;):&#183;number&#183;`" severity="info" />
+        <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;`" severity="info" />
         <error source="prettier_prettier" line="51" message="Replace `else&#183;if(o1&#183;==&#183;o2)` with `&#183;else&#183;if&#183;(o1&#183;==&#183;o2)&#183;`" severity="info" />
         <error source="prettier_prettier" line="40" message="Replace `number)` with `&#183;number)&#183;`" severity="info" />
         <error source="prettier_prettier" line="46" message="Replace `{&#9166;` with `&#183;{`" severity="info" />

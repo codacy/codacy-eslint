@@ -269,9 +269,9 @@ async function main() {
 
   console.log("Generate perfectionist description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/${pattern}.md`,
-      "perfectionist"
+    (pattern) =>
+      `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/${pattern}.md`,
+    "perfectionist"
   )
 
   console.log("Generate promise description files")
@@ -311,16 +311,16 @@ async function main() {
 
   console.log("Generate rxjs description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
-      "rxjs"
+    (pattern) =>
+      `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/${pattern}.md`,
+    "rxjs"
   )
 
   console.log("Generate rxjs-angular description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
-      "rxjs-angular"
+    (pattern) =>
+      `${githubBaseUrl}/cartant/eslint-plugin-rxjs-angular/main/docs/rules/${pattern}.md`,
+    "rxjs-angular"
   )
 
   console.log("Generate sonarjs description files")
@@ -367,17 +367,16 @@ async function main() {
 
   console.log("Generate typescript-sort-keys description files")
   await docGenerator.downloadDocs(
-      (pattern) =>
-          `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/${pattern}.md`,
-      "typescript-sort-keys"
+    (pattern) =>
+      `${githubBaseUrl}/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/${pattern}.md`,
+    "typescript-sort-keys"
   )
 
   console.log("Generate unicorn description files")
   await docGenerator.downloadDocs(
     (pattern) =>
       `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/${pattern}.md`,
-    "unicorn",
-    false
+    "unicorn"
   )
 
   console.log("Generate unused-imports description files")

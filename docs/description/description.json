@@ -3096,6 +3096,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_prefer-standalone-component",
+    "title": "@angular eslint: Prefer standalone component",
+    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_prefer-output-readonly",
     "title": "@angular eslint: Prefer output readonly",
     "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
@@ -3812,6 +3819,10 @@
       {
         "name": "exceptAfterSingleLine",
         "description": "exceptAfterSingleLine"
+      },
+      {
+        "name": "exceptAfterOverload",
+        "description": "exceptAfterOverload"
       }
     ],
     "patternId": "@typescript-eslint_lines-between-class-members",
@@ -3890,18 +3901,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "includeExports",
-        "description": "includeExports"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-duplicate-imports",
-    "title": "@typescript eslint: No duplicate imports",
-    "description": "Disallow duplicate imports",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-duplicate-type-constituents",
     "title": "@typescript eslint: No duplicate type constituents",
@@ -3976,13 +3975,6 @@
     "patternId": "@typescript-eslint_no-for-in-array",
     "title": "@typescript eslint: No for in array",
     "description": "Disallow iterating over an array with a for-in loop",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-implicit-any-catch",
-    "title": "@typescript eslint: No implicit any catch",
-    "description": "Disallow usage of the implicit `any` type in catch clauses",
     "timeToFix": 5
   },
   {
@@ -4126,13 +4118,6 @@
     "patternId": "@typescript-eslint_no-non-null-assertion",
     "title": "@typescript eslint: No non null assertion",
     "description": "Disallow non-null assertions using the `!` postfix operator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-parameter-properties",
-    "title": "@typescript eslint: No parameter properties",
-    "description": "Disallow the use of parameter properties in class constructors",
     "timeToFix": 5
   },
   {
@@ -4422,7 +4407,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-nullish-coalescing",
     "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
+    "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining",
     "timeToFix": 5
   },
   {
@@ -4542,13 +4527,6 @@
     "patternId": "@typescript-eslint_sort-type-constituents",
     "title": "@typescript eslint: Sort type constituents",
     "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
-    "title": "@typescript eslint: Sort type union intersection members",
-    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {

@@ -5,7 +5,6 @@ const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
   "plugin:backbone/recommended",
-  "plugin:canonical/recommended",
   "plugin:chai-expect/recommended",
   "plugin:chai-friendly/recommended",
   "plugin:compat/recommended",
@@ -13,7 +12,6 @@ const baseConfigs: string[] = [
   "plugin:ember/recommended",
   "plugin:eslint-plugin/recommended",
   "plugin:flowtype/recommended",
-  "plugin:fp/recommended",
   "plugin:i18next/recommended",
   "plugin:import/recommended",
   "plugin:import/typescript",
@@ -29,7 +27,6 @@ const baseConfigs: string[] = [
   "plugin:prettier/recommended",
   "plugin:react/recommended",
   "plugin:security/recommended",
-  "plugin:tailwindcss/recommended",
   "plugin:test-selectors/recommended",
   "plugin:you-dont-need-lodash-underscore/compatible"
 ]
@@ -57,7 +54,13 @@ export const defaultOptions: ESLint.Options = {
       worker: true,
       qunit: true,
     },
-    ignorePatterns: ["node_modules/*", "dist/*", "bin/*", "build/*", "docs/tests/*"],
+    ignorePatterns: [
+      "node_modules/**/*",
+      "dist/**/*",
+      "bin/**/*",
+      "build/**/*",
+      "docs/tests/**/*"
+    ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -71,9 +74,6 @@ export const defaultOptions: ESLint.Options = {
     settings: {
       "node": {
         "tryExtensions": [".js", ".json", ".node"],
-      },
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
       "import/resolver": {
         typescript: {
@@ -112,14 +112,7 @@ export const defaultOptions: ESLint.Options = {
             presets: ["@babel/preset-react"],
           },
         },
-      },
-      {
-        files: ["**/*.html"],
-        extends: [
-          "plugin:@angular-eslint/template/recommended",
-          "plugin:@angular-eslint/template/accessibility"
-        ]
-      },   
+      },  
       {
         files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
         extends: ['plugin:testing-library/react'],
