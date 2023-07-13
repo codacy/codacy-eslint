@@ -4,46 +4,5 @@
         <error source="@typescript-eslint_explicit-function-return-type" line="10" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="17" message="Missing return type on function." severity="info" />
         <error source="@typescript-eslint_explicit-function-return-type" line="40" message="Missing return type on function." severity="info" />
-        <error source="eqeqeq" line="29" message="Expected '===' and instead saw '=='." severity="info" />
-        <error source="eqeqeq" line="34" message="Expected '===' and instead saw '=='." severity="info" />
-        <error source="eqeqeq" line="51" message="Expected '===' and instead saw '=='." severity="info" />
-        <error source="flowtype_no-types-missing-file-annotation" line="7" message="Type exports require valid Flow declaration." severity="info" />
-        <error source="node_no-unsupported-features_es-syntax" line="7" message="Import and export declarations are not supported yet." severity="error" />
-        <error source="node_no-unsupported-features_es-syntax" line="10" message="Import and export declarations are not supported yet." severity="error" />
-        <error source="node_no-unsupported-features_es-syntax" line="46" message="Import and export declarations are not supported yet." severity="error" />
-        <error source="prefer-const" line="60" message="'testArray' is never reassigned. Use 'const' instead." severity="info" />
-        <error source="prefer-const" line="57" message="'tests' is never reassigned. Use 'const' instead." severity="info" />
-        <error source="prettier_prettier" line="55" message="Delete `&#9166;`" severity="info" />
-        <error source="prettier_prettier" line="63" message="Delete `&#9166;&#9166;`" severity="info" />
-        <error source="prettier_prettier" line="31" message="Insert `;`" severity="info" />
-        <error source="prettier_prettier" line="18" message="Insert `&#183;`" severity="info" />
-        <error source="prettier_prettier" line="26" message="Insert `&#183;`" severity="info" />
-        <error source="prettier_prettier" line="27" message="Insert `&#183;`" severity="info" />
-        <error source="prettier_prettier" line="11" message="Replace `(array.length&#183;&lt;=&#183;1&#183;||&#183;array&#183;==&#183;null)` with `&#183;(array.length&#183;&lt;=&#183;1&#183;||&#183;array&#183;==&#183;null)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="34" message="Replace `(compare(array[high],&#183;array[i+1])&#183;==&#183;-1)` with `&#183;(compare(array[high],&#183;array[i&#183;+&#183;1])&#183;==&#183;-1)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="29" message="Replace `(compare(array[j],&#183;pivot)&#183;==&#183;-1)` with `&#183;(compare(array[j],&#183;pivot)&#183;==&#183;-1)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="28" message="Replace `(let&#183;j&#183;=&#183;low;&#183;j&lt;=high-1;&#183;j++)` with `&#183;(let&#183;j&#183;=&#183;low;&#183;j&#183;&lt;=&#183;high&#183;-&#183;1;&#183;j++)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="60" message="Replace `(let&#183;testArray&#183;of&#183;tests)` with `&#183;(let&#183;testArray&#183;of&#183;tests)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="49" message="Replace `(o1&#183;&lt;&#183;o2)` with `&#183;(o1&#183;&lt;&#183;o2)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="21" message="Replace `+` with `&#183;+&#183;`" severity="info" />
-        <error source="prettier_prettier" line="35" message="Replace `+` with `&#183;+&#183;`" severity="info" />
-        <error source="prettier_prettier" line="37" message="Replace `+` with `&#183;+&#183;`" severity="info" />
-        <error source="prettier_prettier" line="14" message="Replace `-` with `&#183;-&#183;`" severity="info" />
-        <error source="prettier_prettier" line="20" message="Replace `-` with `&#183;-&#183;`" severity="info" />
-        <error source="prettier_prettier" line="25" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number):&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;):&#183;number&#183;`" severity="info" />
-        <error source="prettier_prettier" line="17" message="Replace `array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;,&#183;low:&#183;number,&#183;high:&#183;number` with `&#9166;&#183;&#183;array:&#183;T[],&#9166;&#183;&#183;compare:&#183;Comparator&lt;T&gt;,&#9166;&#183;&#183;low:&#183;number,&#9166;&#183;&#183;high:&#183;number,&#9166;`" severity="info" />
-        <error source="prettier_prettier" line="51" message="Replace `else&#183;if(o1&#183;==&#183;o2)` with `&#183;else&#183;if&#183;(o1&#183;==&#183;o2)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="40" message="Replace `number)` with `&#183;number)&#183;`" severity="info" />
-        <error source="prettier_prettier" line="46" message="Replace `{&#9166;` with `&#183;{`" severity="info" />
-        <error source="prettier_prettier" line="57" message="Replace `&#183;[],&#183;[1],&#183;[2,&#183;1],&#183;[-1,&#183;2,&#183;-3],&#183;[3,&#183;16,&#183;8,&#183;-5,&#183;6,&#183;4],&#183;[1,2,3,4,5,6],&#183;[1,2,3,4,5]` with `&#9166;&#183;&#183;&#183;&#183;[],&#9166;&#183;&#183;&#183;&#183;[1],&#9166;&#183;&#183;&#183;&#183;[2,&#183;1],&#9166;&#183;&#183;&#183;&#183;[-1,&#183;2,&#183;-3],&#9166;&#183;&#183;&#183;&#183;[3,&#183;16,&#183;8,&#183;-5,&#183;6,&#183;4],&#9166;&#183;&#183;&#183;&#183;[1,&#183;2,&#183;3,&#183;4,&#183;5,&#183;6],&#9166;&#183;&#183;&#183;&#183;[1,&#183;2,&#183;3,&#183;4,&#183;5],&#9166;&#183;`" severity="info" />
-        <error source="prettier_prettier" line="9" message="Replace `&#9166;export&#183;function&#183;quickSort&lt;T&gt;(array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;)` with `export&#183;function&#183;quickSort&lt;T&gt;(array:&#183;T[],&#183;compare:&#183;Comparator&lt;T&gt;)&#183;`" severity="info" />
-        <error source="security_detect-object-injection" line="29" message="Function Call Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="34" message="Function Call Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="42" message="Generic Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="42" message="Generic Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="43" message="Generic Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="26" message="Variable Assigned to Object Injection Sink" severity="info" />
-        <error source="security_detect-object-injection" line="41" message="Variable Assigned to Object Injection Sink" severity="info" />
-        <error source="spaced-comment" line="6" message="Expected space or tab after '//' in comment." severity="info" />
     </file>
 </checkstyle>
