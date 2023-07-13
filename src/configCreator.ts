@@ -77,18 +77,18 @@ async function createOptions(
 
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
+        // remove extends and overrides from our default config.
+        result.baseConfig.extends = []
         if (!result.baseConfig.overrides) {
           result.baseConfig.overrides = []
+        } else {
+          result.baseConfig.overrides?.forEach(
+            (override: any) => (override.extends = [])
+          )
         }
 
-        // remove extends and overrides from our default config.
-        //result.baseConfig.extends = []
-        //result.baseConfig.overrides?.forEach(
-        //  (override: any) => (override.extends = [])
-        //)
-
-        // explicitly use the rules being passed by codacyrc
-        //result.baseConfig.rules = patternsToRules(otherPatterns)
+        // explicitly use only the rules being passed by codacyrc
+        result.baseConfig.rules = patternsToRules(otherPatterns)
 
         // configure overrides in case of typescript code
         if (tsConfigFile) {
@@ -111,14 +111,8 @@ async function createOptions(
             rules: patternsToRules(storybookPatterns),
           })
         }
-
-        // explicitly use the rules being passed by codacyrc
-        result.baseConfig.overrides.push({
-          files: ["**/*.*"],
-          rules: patternsToRules(otherPatterns),
-        })
-
       }
+      // TODO: review this flag
       result.useEslintrc = false
       return result
     }

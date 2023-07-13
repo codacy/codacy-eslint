@@ -3815,22 +3815,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "exceptAfterSingleLine",
-        "description": "exceptAfterSingleLine"
-      },
-      {
-        "name": "exceptAfterOverload",
-        "description": "exceptAfterOverload"
-      }
-    ],
-    "patternId": "@typescript-eslint_lines-between-class-members",
-    "title": "@typescript eslint: Lines between class members",
-    "description": "Require or disallow an empty line between class members",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_member-delimiter-style",
     "title": "@typescript eslint: Member delimiter style",
