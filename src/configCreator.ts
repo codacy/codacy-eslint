@@ -51,7 +51,7 @@ async function createOptions(
         codacyInput.files &&
         codacyInput.files.every((f) => f.endsWith(".ts") || f.endsWith(".tsx"))
 
-      debugWhen(isTypescriptAnalysis, "[DEBUG] the project appears to be typescript")
+      debugWhen(<any>isTypescriptAnalysis, "[DEBUG] the project appears to be typescript")
 
       // typescript patterns require a typescript parser which will fail for different file types
       // so we are removing typescript patterns when analysing different file types
@@ -77,6 +77,10 @@ async function createOptions(
 
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
+        if (!result.baseConfig.overrides) {
+          result.baseConfig.overrides = []
+        }
+
         // remove extends and overrides from our default config.
         //result.baseConfig.extends = []
         //result.baseConfig.overrides?.forEach(
@@ -84,27 +88,21 @@ async function createOptions(
         //)
 
         // explicitly use the rules being passed by codacyrc
-        result.baseConfig.rules = patternsToRules(otherPatterns)
+        //result.baseConfig.rules = patternsToRules(otherPatterns)
 
         // configure overrides in case of typescript code
         if (tsConfigFile) {
-          if(!result.baseConfig.overrides) {
-            result.baseConfig.overrides = []
+          if (!result.baseConfig.overrides[0].parserOptions) {
+            result.baseConfig.overrides[0].parserOptions = []
           }
-          if (result.baseConfig.overrides[0].parserOptions) {
+
+          if (!result.baseConfig.overrides[0].parserOptions.project) {
             result.baseConfig.overrides[0].parserOptions.project = tsConfigFile
-          } else {
-            result.baseConfig.overrides[0].parserOptions = {
-              project: tsConfigFile,
-            }
           }
         }
 
         // configure override in case storybook plugin rules being turned on
         if (!isEmpty(storybookPatterns)) {
-          if(!result.baseConfig.overrides) {
-            result.baseConfig.overrides = []
-          }
           result.baseConfig.overrides.push({
             files: [
               "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
@@ -113,6 +111,13 @@ async function createOptions(
             rules: patternsToRules(storybookPatterns),
           })
         }
+
+        // explicitly use the rules being passed by codacyrc
+        result.baseConfig.overrides.push({
+          files: ["**/*.*"],
+          rules: patternsToRules(otherPatterns),
+        })
+
       }
       result.useEslintrc = false
       return result

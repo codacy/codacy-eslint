@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
     "incremental": true,
-    "target": "es6",
-    "module": "commonjs",
     "lib": [
       "es2015",
       "dom"
     ],
-    "sourceMap": true,
+    "module": "commonjs",
+    "noErrorTruncation": true,
     "outDir": "dist",
     "resolveJsonModule": true,
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "sourceMap": true,
     "strict": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "target": "es6"
   },
-  "include": ["src/**/*.ts", "package.json"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
   "exclude": ["node_modules"]
 }

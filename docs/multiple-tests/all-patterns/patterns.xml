@@ -317,6 +317,7 @@
   <module name="@angular-eslint_no-queries-metadata-property" />
   <module name="@angular-eslint_pipe-prefix" />
   <module name="@angular-eslint_prefer-on-push-component-change-detection" />
+  <module name="@angular-eslint_prefer-standalone-component" />
   <module name="@angular-eslint_prefer-output-readonly" />
   <module name="@angular-eslint_relative-url-prefix" />
   <module name="@angular-eslint_sort-ngmodule-metadata-arrays" />
@@ -413,7 +414,6 @@
   <module name="@typescript-eslint_no-confusing-void-expression" />
   <module name="@typescript-eslint_no-dupe-class-members" />
   <module name="@typescript-eslint_no-duplicate-enum-values" />
-  <module name="@typescript-eslint_no-duplicate-imports" />
   <module name="@typescript-eslint_no-duplicate-type-constituents" />
   <module name="@typescript-eslint_no-dynamic-delete" />
   <module name="@typescript-eslint_no-empty-function" />
@@ -425,7 +425,6 @@
   <module name="@typescript-eslint_no-extraneous-class" />
   <module name="@typescript-eslint_no-floating-promises" />
   <module name="@typescript-eslint_no-for-in-array" />
-  <module name="@typescript-eslint_no-implicit-any-catch" />
   <module name="@typescript-eslint_no-implied-eval" />
   <module name="@typescript-eslint_no-import-type-side-effects" />
   <module name="@typescript-eslint_no-inferrable-types" />
@@ -442,7 +441,6 @@
   <module name="@typescript-eslint_no-non-null-asserted-nullish-coalescing" />
   <module name="@typescript-eslint_no-non-null-asserted-optional-chain" />
   <module name="@typescript-eslint_no-non-null-assertion" />
-  <module name="@typescript-eslint_no-parameter-properties" />
   <module name="@typescript-eslint_no-redeclare" />
   <module name="@typescript-eslint_no-redundant-type-constituents" />
   <module name="@typescript-eslint_no-require-imports" />
@@ -499,7 +497,6 @@
   <module name="@typescript-eslint_return-await" />
   <module name="@typescript-eslint_semi" />
   <module name="@typescript-eslint_sort-type-constituents" />
-  <module name="@typescript-eslint_sort-type-union-intersection-members" />
   <module name="@typescript-eslint_space-before-blocks" />
   <module name="@typescript-eslint_space-before-function-paren" />
   <module name="@typescript-eslint_space-infix-ops" />
