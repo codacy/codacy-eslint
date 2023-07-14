@@ -82,7 +82,7 @@
     "@hapi/eslint-plugin": "^6.0.0",
     "@lwc/eslint-plugin-lwc": "^1.6.3",
     "@namely/eslint-config-namely": "^7.0.0",
-    "@next/eslint-plugin-next": "^13.4.9",
+    "@next/eslint-plugin-next": "^13.4.10",
     "@ngrx/eslint-plugin": "^16.1.0",
     "@nodelib/fs.walk": "^1.2.8",
     "@nrwl/cli": "^15.9.3",
