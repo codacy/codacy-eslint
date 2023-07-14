@@ -14,4 +14,4 @@ jobs:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
           target: major
-          github-token: ${{ secrets.DEPENDABOT_AUTO_MERGE_USER_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
