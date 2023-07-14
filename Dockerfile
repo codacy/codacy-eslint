@@ -15,18 +15,17 @@ RUN npm run compile &&\
 FROM node:$NODE_IMAGE_VERSION
 
 COPY --from=builder dist dist
+COPY --from=builder docs docs
 COPY --from=builder package.json ./
 COPY --from=builder package-lock.json ./
-COPY --from=builder docs docs
+COPY --from=builder tsconfig.json ./src/
 
 RUN npm install --legacy-peer-deps --omit=dev &&\
     npm cache clean --force &&\
     rm -rf /package.json /package-lock.json &&\
-    # Removing this plugin because it gets loaded by prettier and forces a fixed order for imports
-    # rm -rf /node_modules/prettier-plugin-organize-imports &&\
     adduser -u 2004 -D docker &&\
     chown -R docker:docker /docs
 
 WORKDIR /src
 
-CMD ["node", "--max-semi-space-size=64", "--max-old-space-size=2816", "--v8-pool-size=0", "--use-largepages=silent", "/dist/src/index.js"]
+CMD ["node", "--max-semi-space-size=64", "--max-old-space-size=2304", "--v8-pool-size=0", "--use-largepages=silent", "/dist/src/index.js"]
