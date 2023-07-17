@@ -94,7 +94,7 @@
     "@nx/eslint-plugin": "^16.5.1",
     "@nx/express": "^16.5.1",
     "@nx/jest": "^16.5.1",
-    "@nx/linter": "^16.5.1",
+    "@nx/linter": "^16.5.2",
     "@nx/nest": "^16.5.1",
     "@nx/next": "^16.5.1",
     "@nx/node": "^16.5.1",
