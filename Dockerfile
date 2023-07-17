@@ -18,7 +18,7 @@ COPY --from=builder dist dist
 COPY --from=builder docs docs
 COPY --from=builder package.json ./
 COPY --from=builder package-lock.json ./
-COPY --from=builder tsconfig.json ./src/
+COPY --from=builder tsconfig.src.json ./tsconfig.json
 
 RUN npm install --legacy-peer-deps --omit=dev &&\
     npm cache clean --force &&\

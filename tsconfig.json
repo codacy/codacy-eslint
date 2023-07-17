@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "esModuleInterop": true,
     "incremental": true,
     "lib": [
@@ -11,7 +10,6 @@
     "noErrorTruncation": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "rootDir": "./",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": false,
@@ -19,10 +17,9 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "package.json"
   ],
   "exclude": [
-    "node_modules",
-    "dist"
+    "node_modules"
   ]
 }

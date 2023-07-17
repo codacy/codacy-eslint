@@ -70,7 +70,6 @@ export const defaultOptions: ESLint.Options = {
       requireConfigFile: false,
       sourceType: "module",
     },
-    root: true,
     settings: {
       "node": {
         "tryExtensions": [".js", ".json", ".node"],
@@ -92,7 +91,7 @@ export const defaultOptions: ESLint.Options = {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
         parserOptions: {
-          project: ['./tsconfig.json'],
+          project: ['/tsconfig.json'],
           sourceType: "module",
         },
       },
