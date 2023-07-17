@@ -23,7 +23,8 @@
     "sourceMap": false
   },
   "include": [
-    "**/"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "**/node_modules",
