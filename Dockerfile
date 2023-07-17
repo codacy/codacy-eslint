@@ -2,13 +2,11 @@ ARG NODE_IMAGE_VERSION=lts-alpine3.18
 
 FROM node:$NODE_IMAGE_VERSION as builder
 
-COPY package*.json ./
+COPY . ./
+
 RUN npm install --legacy-peer-deps --omit=dev &&\
-    npm cache clean --force
-
-COPY . .
-
-RUN npm run compile &&\
+    npm cache clean --force &&\
+    npm run compile &&\
     npm test &&\
     npm run generateDocs
 
