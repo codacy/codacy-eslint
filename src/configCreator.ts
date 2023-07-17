@@ -67,10 +67,10 @@ async function createOptions(
         //            "story" or "stories" in the name. If enabled for all files it
         //            reports false positives on normal files.
         //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
-        const [storybookPatterns, otherPatterns] = partition(eslintTool.patterns, (p) =>
+        const [storybookPatterns, otherPatterns] = partition(eslintTool.patterns, (p: { patternId: string }) =>
           p.patternId.startsWith("storybook")
         )
-        
+
         // configure override in case storybook plugin rules being turned on
         if (storybookPatterns.length > 0) {
           debug("[DEBUG] we have plugins to apply only to some file extensions")
