@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "files": ["**/*.js"],
+      "files": ["**/*.js", "**/*.json"],
       "rules": {
         "@typescript-eslint/await-thenable": "off",
         "@typescript-eslint/consistent-type-exports": "off",
