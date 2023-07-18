@@ -22,7 +22,8 @@
     "noErrorTruncation": true,
     "pretty": false,
     "skipLibCheck": false,
-    "sourceMap": false
+    "sourceMap": false,
+    "strictNullChecks": true
   },
   "include": [
     "**/*.js"
