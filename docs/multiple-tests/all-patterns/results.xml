@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
   <!-- This test is specifically made to test that codacy-eslint -->
-  <!-- should only return specific errors to test or empty files. -->
+  <!-- should only return specific errors to test and/or empty files. -->
   <!-- Adding any other errors here means to test that a bug exists. -->
 </checkstyle>

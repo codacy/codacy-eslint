@@ -1,5 +1,0 @@
-/**
- * Desc
- *
- * @file Test file.
- */

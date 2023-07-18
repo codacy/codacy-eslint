@@ -12,6 +12,5 @@
     <module name="@typescript-eslint_no-extra-parens" />
     <module name="@typescript-eslint_no-extra-semi" />
     <module name="@typescript-eslint_no-extraneous-class" />
-    <module name="@typescript-eslint_no-floating-promises" />
     <module name="@typescript-eslint_no-for-in-array" />
 </module>
