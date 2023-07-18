@@ -12,9 +12,9 @@
     "worker": true,
     "qunit": true
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "2017",
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
@@ -61,17 +61,5 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-namespace-keyword": "error"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "sourceType": "module",
-        "ecmaFeatures": {
-          "jsx": true
-        }
-      }
-    }
-  ]
+  }
 }

@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "exactOptionalPropertyTypes": false,
+      "allowArbitraryExtensions": true,
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "declaration": false,
+      "noEmit": true,
+      "noEmitOnError": true,
+      "strict": false,
+      "lib": [
+        "ES2015",
+        "ES2022",
+        "DOM",
+        "ESNext"
+      ],
+      "target": "ES6",
+      "disableReferencedProjectLoad": true,
+      "disableSolutionSearching": true,
+      "noErrorTruncation": true,
+      "pretty": false,
+      "skipLibCheck": false,
+      "sourceMap": false,
+      "strictNullChecks": true
+    }
+  }
