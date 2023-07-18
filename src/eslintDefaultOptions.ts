@@ -96,6 +96,13 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
+        files: ["**/*.js", "**/*.json"],
+        parserOptions: {
+          project: ["./tsconfig.json"],
+          sourceType: "module",
+        },
+      },
+      {
         files: ["**/*.vue"],
         parser: require.resolve("vue-eslint-parser"),
         parserOptions: {

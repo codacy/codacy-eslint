@@ -1,0 +1,11 @@
+{
+    "overrides": [
+        {
+          "files": ["*.js", "*.json"],
+          "parserOptions": {
+            "project": ["./tsconfig.json"],
+            "sourceType": "module"
+          }
+        }
+    ]
+}
