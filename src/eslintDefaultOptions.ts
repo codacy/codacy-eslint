@@ -143,7 +143,8 @@ export const defaultOptions: ESLint.Options = {
           "@typescript-eslint/return-await": "off",
           "@typescript-eslint/strict-boolean-expressions": "off",
           "@typescript-eslint/switch-exhaustiveness-check": "off",
-          "@typescript-eslint/unbound-method": "off"
+          "@typescript-eslint/unbound-method": "off",
+          "deprecation/deprecation": "off"
         },
       },
       {
