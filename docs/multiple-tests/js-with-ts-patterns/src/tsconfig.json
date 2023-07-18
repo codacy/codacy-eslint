@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "exactOptionalPropertyTypes": false,
+    "allowArbitraryExtensions": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "declaration": false,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "strict": false,
+    "lib": [
+      "ES2015",
+      "ES2022",
+      "DOM",
+      "ESNext"
+    ],
+    "target": "ES6",
+    "disableReferencedProjectLoad": true,
+    "disableSolutionSearching": true,
+    "noErrorTruncation": true,
+    "pretty": false,
+    "skipLibCheck": false,
+    "sourceMap": false
+  },
+  "include": [
+    "**/*.js",
+    "**/*.json"
+  ]
+}
