@@ -3,7 +3,7 @@
     "allowJs": true,
     "checkJs": false,
     "exactOptionalPropertyTypes": false,
-    "allowArbitraryExtensions": false,
+    "allowArbitraryExtensions": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": false,

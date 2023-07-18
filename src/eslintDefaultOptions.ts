@@ -55,11 +55,12 @@ export const defaultOptions: ESLint.Options = {
       qunit: true,
     },
     ignorePatterns: [
-      "node_modules/**/*",
-      "dist/**/*",
-      "bin/**/*",
-      "build/**/*",
-      "docs/tests/**/*"
+      "**/node_modules/**/*",
+      "**/dist/**/*",
+      "**/bin/**/*",
+      "**/build/**/*",
+      "**/docs/tests/**/*",
+      "tsconfig.json"
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
@@ -96,7 +97,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["**/*.js"],
+        files: ["**/*.js", "**/*.json"],
         parserOptions: {
           project: ["./tsconfig.json"],
           sourceType: "module",
