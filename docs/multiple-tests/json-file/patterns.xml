@@ -1,7 +1,6 @@
 <module name="root">
     <module name="BeforeExecutionExclusionFileFilter">
         <property name="fileNamePattern" value="\.eslintrc\.json"/>
-        <property name="fileNamePattern" value="tsconfig\.json"/>
     </module>
     <module name="json_*" />
     <module name="json_json" />
