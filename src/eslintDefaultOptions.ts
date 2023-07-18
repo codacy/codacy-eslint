@@ -98,10 +98,9 @@ export const defaultOptions: ESLint.Options = {
       },
       {
         files: ["**/*.js", "**/*.json"],
-        parserOptions: {
-          project: ["./tsconfig.json"],
-          sourceType: "module",
-        },
+        extends: [
+          "plugin:@typescript-eslint/disable-type-checked",
+        ]
       },
       {
         files: ["**/*.vue"],
