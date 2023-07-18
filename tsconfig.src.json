@@ -7,7 +7,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": false,
-    "noEmit": false,
+    "noEmit": true,
     "noEmitOnError": true,
     "strict": false,
     "lib": [
@@ -27,8 +27,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/*.js",
-    "**/*.json"
+    "**/*.js"
   ],
   "exclude": [
     "**/node_modules",
