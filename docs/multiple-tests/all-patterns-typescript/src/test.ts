@@ -1,7 +1,8 @@
- /**
- * @file test file
+/**
+ * Desc
+ *
+ * @file Test file.
  */
 
-console.log("Hello world");
-
-export { }
+const foo = "foo";
+export { foo as default };

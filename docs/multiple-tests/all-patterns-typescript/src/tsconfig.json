@@ -9,12 +9,11 @@
     "noEmitOnError": true,
     "strict": false,
     "lib": [
-      "ES2015",
       "ES2022",
       "DOM",
       "ESNext"
     ],
-    "target": "ES6",
+    "target": "ESNext",
     "disableReferencedProjectLoad": true,
     "disableSolutionSearching": true,
     "noErrorTruncation": true,
