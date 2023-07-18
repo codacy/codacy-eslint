@@ -2,6 +2,10 @@
   "overrides": [
     {
       "files": ["**/*.js"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"],
+        "sourceType": "module"
+      },
       "rules": {
         "@typescript-eslint/await-thenable": "off",
         "@typescript-eslint/consistent-type-exports": "off",
