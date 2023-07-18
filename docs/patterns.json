@@ -9306,50 +9306,6 @@
       "enabled": false
     },
     {
-      "patternId": "jsdoc_check-examples",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowInlineConfig",
-          "default": true
-        },
-        {
-          "name": "captionRequired",
-          "default": false
-        },
-        {
-          "name": "checkDefaults",
-          "default": false
-        },
-        {
-          "name": "checkEslintrc",
-          "default": false
-        },
-        {
-          "name": "checkParams",
-          "default": false
-        },
-        {
-          "name": "checkProperties",
-          "default": false
-        },
-        {
-          "name": "noDefaultExampleRules",
-          "default": false
-        },
-        {
-          "name": "paddedIndent",
-          "default": 0
-        },
-        {
-          "name": "reportUnusedDisableDirectives",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "jsdoc_check-indentation",
       "level": "Info",
       "category": "CodeStyle",

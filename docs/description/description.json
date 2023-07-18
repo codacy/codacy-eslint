@@ -9143,50 +9143,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "allowInlineConfig",
-        "description": "allowInlineConfig"
-      },
-      {
-        "name": "captionRequired",
-        "description": "captionRequired"
-      },
-      {
-        "name": "checkDefaults",
-        "description": "checkDefaults"
-      },
-      {
-        "name": "checkEslintrc",
-        "description": "checkEslintrc"
-      },
-      {
-        "name": "checkParams",
-        "description": "checkParams"
-      },
-      {
-        "name": "checkProperties",
-        "description": "checkProperties"
-      },
-      {
-        "name": "noDefaultExampleRules",
-        "description": "noDefaultExampleRules"
-      },
-      {
-        "name": "paddedIndent",
-        "description": "paddedIndent"
-      },
-      {
-        "name": "reportUnusedDisableDirectives",
-        "description": "reportUnusedDisableDirectives"
-      }
-    ],
-    "patternId": "jsdoc_check-examples",
-    "title": "Jsdoc: Check examples",
-    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "jsdoc_check-indentation",
     "title": "Jsdoc: Check indentation",
