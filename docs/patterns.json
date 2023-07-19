@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.44.0",
+  "version": "8.45.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -14943,13 +14943,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-unsafe-regex",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-unused-properties",
       "level": "Info",
       "category": "CodeStyle",
@@ -15089,6 +15082,13 @@
     },
     {
       "patternId": "unicorn_throw-new-error",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-unsafe-regex",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
