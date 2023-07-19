@@ -26,8 +26,9 @@
     "strictNullChecks": true
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "/src/**/*.ts",
+    "/src/**/*.tsx",
+    "/src/**/*.js"
   ],
   "exclude": [
     "**/node_modules",
