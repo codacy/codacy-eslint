@@ -1147,7 +1147,6 @@
   <module name="jira-ticket-todo-comment_jira-ticket-todo-comment" />
   <module name="jsdoc_check-access" />
   <module name="jsdoc_check-alignment" />
-  <module name="jsdoc_check-examples" />
   <module name="jsdoc_check-indentation" />
   <module name="jsdoc_check-line-alignment" />
   <module name="jsdoc_check-param-names" />
@@ -1847,7 +1846,6 @@
   <module name="unicorn_no-unnecessary-await" />
   <module name="unicorn_no-unreadable-array-destructuring" />
   <module name="unicorn_no-unreadable-iife" />
-  <module name="unicorn_no-unsafe-regex" />
   <module name="unicorn_no-unused-properties" />
   <module name="unicorn_no-useless-fallback-in-spread" />
   <module name="unicorn_no-useless-length-check" />
@@ -1868,6 +1866,7 @@
   <module name="unicorn_template-indent" />
   <module name="unicorn_text-encoding-identifier-case" />
   <module name="unicorn_throw-new-error" />
+  <module name="unicorn_no-unsafe-regex" />
   <module name="unused-imports_no-unused-vars" />
   <module name="unused-imports_no-unused-imports" />
   <module name="vue_array-bracket-newline" />

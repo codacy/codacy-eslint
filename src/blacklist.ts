@@ -25,6 +25,7 @@ const blacklistRegexes: RegExp[] = [
   /import\/no-unused-modules/,
   /import\/no-deprecated/,
   /jest\/unbound-method/,
+  /jsdoc\/check-examples/,
   /jsdoc\/newline-after-description/,
   /mongodb\/.+/,
   /node\/no-missing-require/,

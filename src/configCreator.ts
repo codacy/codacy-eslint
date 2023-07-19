@@ -47,34 +47,6 @@ async function createOptions(
       debug("[DEBUG] read the following " + eslintTool.patterns.length + " patterns to process from .codacyrc:")
       debugEach(eslintTool.patterns)
 
-      const isTypescriptAnalysis =
-        codacyInput.files &&
-        codacyInput.files.every((f) => f.endsWith(".ts") || f.endsWith(".tsx"))
-
-      debugWhen(<any>isTypescriptAnalysis, "[DEBUG] the project appears to be typescript")
-
-      // typescript patterns require a typescript parser which will fail for different file types
-      // so we are removing typescript patterns when analysing different file types
-      const patterns = isTypescriptAnalysis
-        ? eslintTool.patterns
-        : eslintTool.patterns.filter(
-            (p) => !p.patternId.startsWith("@typescript-eslint")
-          )
-
-      // There are some plugins that their rules should only apply for
-      // some specific file types / files names. So when those are enabled
-      // explicitly we need to apply them with a bit of customization.
-      //
-      //   example: a rule for the storybook should only apply to files with
-      //            "story" or "stories" in the name. If enabled for all files it
-      //            reports false positives on normal files.
-      //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
-      const [storybookPatterns, otherPatterns] = partition(patterns, (p) =>
-        p.patternId.startsWith("storybook")
-      )
-
-      debugWhen(storybookPatterns.length > 0, "[DEBUG] we have plugins to apply only to some file extensions")
-
       const result = cloneDeep(defaultOptions)
       if (result.baseConfig) {
         // remove extends and overrides from our default config.
@@ -87,8 +59,29 @@ async function createOptions(
           )
         }
 
-        // explicitly use only the rules being passed by codacyrc
-        result.baseConfig.rules = patternsToRules(otherPatterns)
+        // There are some plugins that their rules should only apply for
+        // some specific file types / files names. So when those are enabled
+        // explicitly we need to apply them with a bit of customization.
+        //
+        //   example: a rule for the storybook should only apply to files with
+        //            "story" or "stories" in the name. If enabled for all files it
+        //            reports false positives on normal files.
+        //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
+        const [storybookPatterns, otherPatterns] = partition(eslintTool.patterns, (p: { patternId: string }) =>
+          p.patternId.startsWith("storybook")
+        )
+
+        // configure override in case storybook plugin rules being turned on
+        if (storybookPatterns.length > 0) {
+          debug("[DEBUG] we have plugins to apply only to some file extensions")
+          result.baseConfig.overrides.push({
+            files: [
+              "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
+              "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
+            ],
+            rules: patternsToRules(storybookPatterns),
+          })
+        }
 
         // configure overrides in case of typescript code
         if (tsConfigFile) {
@@ -100,19 +93,10 @@ async function createOptions(
             result.baseConfig.overrides[0].parserOptions.project = tsConfigFile
           }
         }
-
-        // configure override in case storybook plugin rules being turned on
-        if (!isEmpty(storybookPatterns)) {
-          result.baseConfig.overrides.push({
-            files: [
-              "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-              "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
-            ],
-            rules: patternsToRules(storybookPatterns),
-          })
-        }
+ 
+        // explicitly use only the rules being passed by codacyrc
+        result.baseConfig.rules = patternsToRules(otherPatterns)
       }
-      // TODO: review this flag
       result.useEslintrc = false
       return result
     }

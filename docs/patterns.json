@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.44.0",
+  "version": "8.45.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -9306,50 +9306,6 @@
       "enabled": false
     },
     {
-      "patternId": "jsdoc_check-examples",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowInlineConfig",
-          "default": true
-        },
-        {
-          "name": "captionRequired",
-          "default": false
-        },
-        {
-          "name": "checkDefaults",
-          "default": false
-        },
-        {
-          "name": "checkEslintrc",
-          "default": false
-        },
-        {
-          "name": "checkParams",
-          "default": false
-        },
-        {
-          "name": "checkProperties",
-          "default": false
-        },
-        {
-          "name": "noDefaultExampleRules",
-          "default": false
-        },
-        {
-          "name": "paddedIndent",
-          "default": 0
-        },
-        {
-          "name": "reportUnusedDisableDirectives",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "jsdoc_check-indentation",
       "level": "Info",
       "category": "CodeStyle",
@@ -14987,13 +14943,6 @@
       "enabled": false
     },
     {
-      "patternId": "unicorn_no-unsafe-regex",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "unicorn_no-unused-properties",
       "level": "Info",
       "category": "CodeStyle",
@@ -15133,6 +15082,13 @@
     },
     {
       "patternId": "unicorn_throw-new-error",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-unsafe-regex",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

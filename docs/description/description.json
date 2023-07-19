@@ -7423,7 +7423,7 @@
     "parameters": [],
     "patternId": "eslint-plugin_prefer-message-ids",
     "title": "Eslint plugin: Prefer message ids",
-    "description": "Require using `messageId` instead of `message` to report rule violations",
+    "description": "Require using `messageId` instead of `message` or `desc` to report rule violations",
     "timeToFix": 5
   },
   {
@@ -9140,50 +9140,6 @@
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
     "description": "Reports invalid alignment of JSDoc block asterisks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowInlineConfig",
-        "description": "allowInlineConfig"
-      },
-      {
-        "name": "captionRequired",
-        "description": "captionRequired"
-      },
-      {
-        "name": "checkDefaults",
-        "description": "checkDefaults"
-      },
-      {
-        "name": "checkEslintrc",
-        "description": "checkEslintrc"
-      },
-      {
-        "name": "checkParams",
-        "description": "checkParams"
-      },
-      {
-        "name": "checkProperties",
-        "description": "checkProperties"
-      },
-      {
-        "name": "noDefaultExampleRules",
-        "description": "noDefaultExampleRules"
-      },
-      {
-        "name": "paddedIndent",
-        "description": "paddedIndent"
-      },
-      {
-        "name": "reportUnusedDisableDirectives",
-        "description": "reportUnusedDisableDirectives"
-      }
-    ],
-    "patternId": "jsdoc_check-examples",
-    "title": "Jsdoc: Check examples",
-    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
     "timeToFix": 5
   },
   {
@@ -14619,13 +14575,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-unsafe-regex",
-    "title": "Unicorn: No unsafe regex",
-    "description": "Disallow unsafe regular expressions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
@@ -14767,6 +14716,12 @@
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
     "timeToFix": 5
   },
   {

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "exactOptionalPropertyTypes": false,
     "allowArbitraryExtensions": true,
     "module": "NodeNext",
@@ -9,12 +11,11 @@
     "noEmitOnError": true,
     "strict": false,
     "lib": [
-      "ES2015",
       "ES2022",
       "DOM",
       "ESNext"
     ],
-    "target": "ES6",
+    "target": "ESNext",
     "disableReferencedProjectLoad": true,
     "disableSolutionSearching": true,
     "noErrorTruncation": true,
@@ -22,5 +23,8 @@
     "skipLibCheck": false,
     "sourceMap": false,
     "strictNullChecks": true
-  }
+  },
+  "include": [
+    "./*.js"
+  ]
 }

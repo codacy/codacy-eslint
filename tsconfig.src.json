@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
     "exactOptionalPropertyTypes": false,
-    "allowArbitraryExtensions": true,
+    "allowArbitraryExtensions": false,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": false,
@@ -9,12 +11,13 @@
     "noEmitOnError": true,
     "strict": false,
     "lib": [
-      "ES2015",
+      "ES2020",
+      "ES2021",
       "ES2022",
       "DOM",
       "ESNext"
     ],
-    "target": "ES6",
+    "target": "ESNext",
     "disableReferencedProjectLoad": true,
     "disableSolutionSearching": true,
     "noErrorTruncation": true,
@@ -22,5 +25,14 @@
     "skipLibCheck": false,
     "sourceMap": false,
     "strictNullChecks": true
-  }
+  },
+  "include": [
+    "/src/**/*.ts",
+    "/src/**/*.tsx",
+    "/src/**/*.js"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/build"
+  ]
 }
