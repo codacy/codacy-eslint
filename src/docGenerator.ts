@@ -145,20 +145,44 @@ export class DocGenerator {
     return this.getPatternIds().filter((e) => !e.includes("/"))
   }
 
+  private async inlineLinkedMarkdownFiles(text: string, baseUrl: string) {
+    let newText = text;
+
+    const elements = newText.match(/\[.*?\)/g);
+
+    if (elements) {
+      await Promise.all(elements.map(async (elem) => {
+        const urlMatch = elem.match(/\((.*?)\)/)
+        if (urlMatch && urlMatch.length === 2) {
+          const url = elem.match(/\((.*?)\)/)[1];
+          if (url.startsWith("../") && url.endsWith(".md")) {
+            const fullUrl = `${baseUrl}${url}`
+            const response = await fetch(fullUrl);
+            const content = await response.text()
+            newText = newText.replace(elem, () => `\n\n${content}`)
+          }
+        }
+      }))
+    }
+    return newText;
+  }
+
   downloadDocs(
-    urlFromPatternId: (patternId: string) => string,
+    baseUrl: string,
     prefix: string = "",
-    rejectOnError: boolean = true
+    rejectOnError: boolean = true,
+    patternIdModifier: (patternId: string) => string = s => s,
   ) {
     const patterns =
       prefix.length > 0
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
     const promises: Promise<void>[] = patterns.map(async (pattern) => {
-      const url: string = urlFromPatternId(pattern)
+      const url: string = `${baseUrl}${patternIdModifier(pattern)}.md`
       const result = await fetch(url)
       if (result.ok) {
-        const text = await result.text()
+        const textInput = await result.text()
+        const text = await this.inlineLinkedMarkdownFiles(textInput, baseUrl)
         const filename =
           "docs/description/" +
           patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
@@ -186,10 +210,10 @@ export class DocGenerator {
     <property name="fileNamePattern" value=".*\.json" />
   </module>
 ${this.rules
-  .map(
-    ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
-  )
-  .join("\n")}
+        .map(
+          ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
+        )
+        .join("\n")}
 </module>
 `
     await writeFile(patternsFilename, patternsXml)
