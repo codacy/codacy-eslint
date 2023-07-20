@@ -3106,13 +3106,6 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-standalone-component",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@angular-eslint_prefer-output-readonly",
       "level": "Info",
       "category": "CodeStyle",
@@ -3896,6 +3889,18 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-duplicate-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "includeExports",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-duplicate-type-constituents",
       "level": "Info",
       "category": "CodeStyle",
@@ -3967,6 +3972,13 @@
     },
     {
       "patternId": "@typescript-eslint_no-for-in-array",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_no-implicit-any-catch",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -4519,6 +4531,13 @@
     },
     {
       "patternId": "@typescript-eslint_sort-type-constituents",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_sort-type-union-intersection-members",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13751,6 +13770,14 @@
       "enabled": false
     },
     {
+      "patternId": "scanjs-rules_call__Function",
+      "level": "Info",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "scanjs-rules_call__addEventListener",
       "level": "Info",
       "category": "Security",
@@ -13792,14 +13819,6 @@
     },
     {
       "patternId": "scanjs-rules_call__execScript",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__Function",
       "level": "Info",
       "category": "Security",
       "subcategory": "CommandInjection",
@@ -14358,7 +14377,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "/Users/lorenzo/codacy/github/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
@@ -14943,6 +14962,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_no-unsafe-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_no-unused-properties",
       "level": "Info",
       "category": "CodeStyle",
@@ -15082,13 +15108,6 @@
     },
     {
       "patternId": "unicorn_throw-new-error",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unicorn_no-unsafe-regex",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

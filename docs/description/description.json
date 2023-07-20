@@ -3096,13 +3096,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_prefer-standalone-component",
-    "title": "@angular eslint: Prefer standalone component",
-    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@angular-eslint_prefer-output-readonly",
     "title": "@angular eslint: Prefer output readonly",
     "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
@@ -3885,6 +3878,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "includeExports",
+        "description": "includeExports"
+      }
+    ],
+    "patternId": "@typescript-eslint_no-duplicate-imports",
+    "title": "@typescript eslint: No duplicate imports",
+    "description": "Disallow duplicate imports",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-duplicate-type-constituents",
     "title": "@typescript eslint: No duplicate type constituents",
@@ -3959,6 +3964,13 @@
     "patternId": "@typescript-eslint_no-for-in-array",
     "title": "@typescript eslint: No for in array",
     "description": "Disallow iterating over an array with a for-in loop",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-implicit-any-catch",
+    "title": "@typescript eslint: No implicit any catch",
+    "description": "Disallow usage of the implicit `any` type in catch clauses",
     "timeToFix": 5
   },
   {
@@ -4391,7 +4403,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-nullish-coalescing",
     "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining",
+    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
     "timeToFix": 5
   },
   {
@@ -4511,6 +4523,13 @@
     "patternId": "@typescript-eslint_sort-type-constituents",
     "title": "@typescript eslint: Sort type constituents",
     "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
+    "title": "@typescript eslint: Sort type union intersection members",
+    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {
@@ -7423,7 +7442,7 @@
     "parameters": [],
     "patternId": "eslint-plugin_prefer-message-ids",
     "title": "Eslint plugin: Prefer message ids",
-    "description": "Require using `messageId` instead of `message` or `desc` to report rule violations",
+    "description": "Require using `messageId` instead of `message` to report rule violations",
     "timeToFix": 5
   },
   {
@@ -13444,6 +13463,12 @@
   },
   {
     "parameters": [],
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "scanjs-rules_call__addEventListener",
     "title": "Scanjs rules: Call_addEventListener",
     "timeToFix": 5
@@ -13476,12 +13501,6 @@
     "parameters": [],
     "patternId": "scanjs-rules_call__execScript",
     "title": "Scanjs rules: Call_execScript",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
     "timeToFix": 5
   },
   {
@@ -14575,6 +14594,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
+    "description": "Disallow unsafe regular expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
@@ -14716,12 +14742,6 @@
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unicorn_no-unsafe-regex",
-    "title": "Unicorn: No unsafe regex",
     "timeToFix": 5
   },
   {

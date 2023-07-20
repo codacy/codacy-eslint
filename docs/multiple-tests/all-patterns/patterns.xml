@@ -317,7 +317,6 @@
   <module name="@angular-eslint_no-queries-metadata-property" />
   <module name="@angular-eslint_pipe-prefix" />
   <module name="@angular-eslint_prefer-on-push-component-change-detection" />
-  <module name="@angular-eslint_prefer-standalone-component" />
   <module name="@angular-eslint_prefer-output-readonly" />
   <module name="@angular-eslint_relative-url-prefix" />
   <module name="@angular-eslint_sort-ngmodule-metadata-arrays" />
@@ -413,6 +412,7 @@
   <module name="@typescript-eslint_no-confusing-void-expression" />
   <module name="@typescript-eslint_no-dupe-class-members" />
   <module name="@typescript-eslint_no-duplicate-enum-values" />
+  <module name="@typescript-eslint_no-duplicate-imports" />
   <module name="@typescript-eslint_no-duplicate-type-constituents" />
   <module name="@typescript-eslint_no-dynamic-delete" />
   <module name="@typescript-eslint_no-empty-function" />
@@ -424,6 +424,7 @@
   <module name="@typescript-eslint_no-extraneous-class" />
   <module name="@typescript-eslint_no-floating-promises" />
   <module name="@typescript-eslint_no-for-in-array" />
+  <module name="@typescript-eslint_no-implicit-any-catch" />
   <module name="@typescript-eslint_no-implied-eval" />
   <module name="@typescript-eslint_no-import-type-side-effects" />
   <module name="@typescript-eslint_no-inferrable-types" />
@@ -496,6 +497,7 @@
   <module name="@typescript-eslint_return-await" />
   <module name="@typescript-eslint_semi" />
   <module name="@typescript-eslint_sort-type-constituents" />
+  <module name="@typescript-eslint_sort-type-union-intersection-members" />
   <module name="@typescript-eslint_space-before-blocks" />
   <module name="@typescript-eslint_space-before-function-paren" />
   <module name="@typescript-eslint_space-infix-ops" />
@@ -1695,13 +1697,13 @@
   <module name="scanjs-rules_assign__to__protocol" />
   <module name="scanjs-rules_assign__to__search" />
   <module name="scanjs-rules_assign__to__src" />
+  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__addEventListener" />
   <module name="scanjs-rules_call__addEventListener__deviceproximity" />
   <module name="scanjs-rules_call__addEventListener__message" />
   <module name="scanjs-rules_call__connect" />
   <module name="scanjs-rules_call__eval" />
   <module name="scanjs-rules_call__execScript" />
-  <module name="scanjs-rules_call__Function" />
   <module name="scanjs-rules_call__hide" />
   <module name="scanjs-rules_call__open__remote=true" />
   <module name="scanjs-rules_call__parseFromString" />
@@ -1846,6 +1848,7 @@
   <module name="unicorn_no-unnecessary-await" />
   <module name="unicorn_no-unreadable-array-destructuring" />
   <module name="unicorn_no-unreadable-iife" />
+  <module name="unicorn_no-unsafe-regex" />
   <module name="unicorn_no-unused-properties" />
   <module name="unicorn_no-useless-fallback-in-spread" />
   <module name="unicorn_no-useless-length-check" />
@@ -1866,7 +1869,6 @@
   <module name="unicorn_template-indent" />
   <module name="unicorn_text-encoding-identifier-case" />
   <module name="unicorn_throw-new-error" />
-  <module name="unicorn_no-unsafe-regex" />
   <module name="unused-imports_no-unused-vars" />
   <module name="unused-imports_no-unused-imports" />
   <module name="vue_array-bracket-newline" />
