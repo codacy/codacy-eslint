@@ -201,7 +201,7 @@
     "eslint-plugin-awscdk": "^0.0.65",
     "eslint-plugin-backbone": "^2.1.1",
     "eslint-plugin-better-styled-components": "^1.1.2",
-    "eslint-plugin-canonical": "^4.4.4",
+    "eslint-plugin-canonical": "^4.6.0",
     "eslint-plugin-cdk": "^1.8.0",
     "eslint-plugin-chai": "^0.0.1",
     "eslint-plugin-chai-expect": "^3.0.0",
