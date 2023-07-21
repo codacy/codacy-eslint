@@ -3096,6 +3096,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_prefer-standalone-component",
+    "title": "@angular eslint: Prefer standalone component",
+    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_prefer-output-readonly",
     "title": "@angular eslint: Prefer output readonly",
     "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
@@ -3878,18 +3885,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "includeExports",
-        "description": "includeExports"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-duplicate-imports",
-    "title": "@typescript eslint: No duplicate imports",
-    "description": "Disallow duplicate imports",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-duplicate-type-constituents",
     "title": "@typescript eslint: No duplicate type constituents",
@@ -3964,13 +3959,6 @@
     "patternId": "@typescript-eslint_no-for-in-array",
     "title": "@typescript eslint: No for in array",
     "description": "Disallow iterating over an array with a for-in loop",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-implicit-any-catch",
-    "title": "@typescript eslint: No implicit any catch",
-    "description": "Disallow usage of the implicit `any` type in catch clauses",
     "timeToFix": 5
   },
   {
@@ -4403,7 +4391,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-nullish-coalescing",
     "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
+    "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining",
     "timeToFix": 5
   },
   {
@@ -4523,13 +4511,6 @@
     "patternId": "@typescript-eslint_sort-type-constituents",
     "title": "@typescript eslint: Sort type constituents",
     "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
-    "title": "@typescript eslint: Sort type union intersection members",
-    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {
@@ -5086,6 +5067,132 @@
     "patternId": "better-styled-components_sort-declarations-alphabetically",
     "title": "Better styled components: Sort declarations alphabetically",
     "description": "Styles are sorted alphabetically.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      }
+    ],
+    "patternId": "canonical_destructuring-property-newline",
+    "title": "Canonical: Destructuring property newline",
+    "description": "Like `object-property-newline`, but for destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_export-specifier-newline",
+    "title": "Canonical: Export specifier newline",
+    "description": "Forces every export specifier to be on a new line.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-exported",
+    "title": "Canonical: Filename match exported",
+    "description": "Match the file name against the default exported value in the module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-regex",
+    "title": "Canonical: Filename match regex",
+    "description": "Enforce a certain file naming convention using a regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-no-index",
+    "title": "Canonical: Filename no index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_import-specifier-newline",
+    "title": "Canonical: Import specifier newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-barrel-import",
+    "title": "Canonical: No barrel import",
+    "description": "Require that imports are made directly from the source",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-reassign-imports",
+    "title": "Canonical: No reassign imports",
+    "description": "Restricts re-assigning imports to variables that are exported.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-restricted-strings",
+    "title": "Canonical: No restricted strings",
+    "description": "Disallowed string.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-unused-exports",
+    "title": "Canonical: No unused exports",
+    "description": "Identifies unused exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-use-extend-native",
+    "title": "Canonical: No use extend native",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-import-alias",
+    "title": "Canonical: Prefer import alias",
+    "description": "Restrict imports to path aliases or relative imports limited by depth.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-inline-type-import",
+    "title": "Canonical: Prefer inline type import",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-react-lazy",
+    "title": "Canonical: Prefer react lazy",
+    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-use-mount",
+    "title": "Canonical: Prefer use mount",
+    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_require-extension",
+    "title": "Canonical: Require extension",
+    "description": "Require file extension in import and export statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_sort-keys",
+    "title": "Canonical: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_virtual-module",
+    "title": "Canonical: Virtual module",
     "timeToFix": 5
   },
   {
@@ -7442,7 +7549,7 @@
     "parameters": [],
     "patternId": "eslint-plugin_prefer-message-ids",
     "title": "Eslint plugin: Prefer message ids",
-    "description": "Require using `messageId` instead of `message` to report rule violations",
+    "description": "Require using `messageId` instead of `message` or `desc` to report rule violations",
     "timeToFix": 5
   },
   {
@@ -11278,6 +11385,289 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "n_callback-return",
+    "title": "N: Callback return",
+    "description": "Require `return` statements after callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_exports-style",
+    "title": "N: Exports style",
+    "description": "Enforce either `module.exports` or `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_file-extension-in-import",
+    "title": "N: File extension in import",
+    "description": "Enforce the style of file extensions in `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_global-require",
+    "title": "N: Global require",
+    "description": "Require `require()` calls to be placed at top-level module scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_handle-callback-err",
+    "title": "N: Handle callback err",
+    "description": "Require error handling in callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-callback-literal",
+    "title": "N: No callback literal",
+    "description": "Enforce Node.js-style error-first callback pattern is followed",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-deprecated-api",
+    "title": "N: No deprecated api",
+    "description": "Disallow deprecated APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-exports-assign",
+    "title": "N: No exports assign",
+    "description": "Disallow the assignment to `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-extraneous-import",
+    "title": "N: No extraneous import",
+    "description": "Disallow `import` declarations which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-extraneous-require",
+    "title": "N: No extraneous require",
+    "description": "Disallow `require()` expressions which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-missing-import",
+    "title": "N: No missing import",
+    "description": "Disallow `import` declarations which import non-existence modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-missing-require",
+    "title": "N: No missing require",
+    "description": "Disallow `require()` expressions which import non-existence modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-mixed-requires",
+    "title": "N: No mixed requires",
+    "description": "Disallow `require` calls to be mixed with regular variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-new-require",
+    "title": "N: No new require",
+    "description": "Disallow `new` operators with calls to `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-path-concat",
+    "title": "N: No path concat",
+    "description": "Disallow string concatenation with `__dirname` and `__filename`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-process-env",
+    "title": "N: No process env",
+    "description": "Disallow the use of `process.env`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-process-exit",
+    "title": "N: No process exit",
+    "description": "Disallow the use of `process.exit()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-restricted-import",
+    "title": "N: No restricted import",
+    "description": "Disallow specified modules when loaded by `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-restricted-require",
+    "title": "N: No restricted require",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAtRootLevel",
+        "description": "allowAtRootLevel"
+      }
+    ],
+    "patternId": "n_no-sync",
+    "title": "N: No sync",
+    "description": "Disallow synchronous methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unpublished-bin",
+    "title": "N: No unpublished bin",
+    "description": "Disallow `bin` files that npm ignores",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreTypeImport",
+        "description": "ignoreTypeImport"
+      }
+    ],
+    "patternId": "n_no-unpublished-import",
+    "title": "N: No unpublished import",
+    "description": "Disallow `import` declarations which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unpublished-require",
+    "title": "N: No unpublished require",
+    "description": "Disallow `require()` expressions which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_es-builtins",
+    "title": "N: [No unsupported features] Es builtins",
+    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_es-syntax",
+    "title": "N: [No unsupported features] Es syntax",
+    "description": "Disallow unsupported ECMAScript syntax on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_node-builtins",
+    "title": "N: [No unsupported features] Node builtins",
+    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_buffer",
+    "title": "N: [Prefer global] Buffer",
+    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_console",
+    "title": "N: [Prefer global] Console",
+    "description": "Enforce either `console` or `require(\"console\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_process",
+    "title": "N: [Prefer global] Process",
+    "description": "Enforce either `process` or `require(\"process\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_text-decoder",
+    "title": "N: [Prefer global] Text decoder",
+    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_text-encoder",
+    "title": "N: [Prefer global] Text encoder",
+    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_url-search-params",
+    "title": "N: [Prefer global] Url search params",
+    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_url",
+    "title": "N: [Prefer global] Url",
+    "description": "Enforce either `URL` or `require(\"url\").URL`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-promises_dns",
+    "title": "N: [Prefer promises] Dns",
+    "description": "Enforce `require(\"dns\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-promises_fs",
+    "title": "N: [Prefer promises] Fs",
+    "description": "Enforce `require(\"fs\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_process-exit-as-throw",
+    "title": "N: Process exit as throw",
+    "description": "Require that `process.exit()` expressions use the same code path as `throw`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_shebang",
+    "title": "N: Shebang",
+    "description": "Require correct usage of shebang",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-hide-core-modules",
+    "title": "N: No hide core modules",
+    "description": "Disallow third-party modules which are hiding core modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features",
+    "title": "N: No unsupported features",
+    "description": "Disallow unsupported ECMAScript features on the specified version",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "block",
@@ -13463,12 +13853,6 @@
   },
   {
     "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "scanjs-rules_call__addEventListener",
     "title": "Scanjs rules: Call_addEventListener",
     "timeToFix": 5
@@ -13501,6 +13885,12 @@
     "parameters": [],
     "patternId": "scanjs-rules_call__execScript",
     "title": "Scanjs rules: Call_execScript",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "scanjs-rules_call__Function",
+    "title": "Scanjs rules: Call_Function",
     "timeToFix": 5
   },
   {
@@ -14594,13 +14984,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-unsafe-regex",
-    "title": "Unicorn: No unsafe regex",
-    "description": "Disallow unsafe regular expressions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
@@ -14742,6 +15125,12 @@
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
     "description": "Require `new` when throwing an error.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
     "timeToFix": 5
   },
   {

@@ -4,37 +4,13 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
-  "plugin:backbone/recommended",
-  "plugin:chai-expect/recommended",
-  "plugin:chai-friendly/recommended",
-  "plugin:compat/recommended",
-  "plugin:cypress/recommended",
-  "plugin:ember/recommended",
   "plugin:eslint-plugin/recommended",
-  "plugin:flowtype/recommended",
-  "plugin:i18next/recommended",
-  "plugin:import/recommended",
-  "plugin:import/typescript",
-  "plugin:jest-dom/recommended",
-  "plugin:jest-formatting/recommended",
-  "plugin:json/recommended",
-  "plugin:lit/recommended",
-  "plugin:lodash/recommended",
-  "plugin:monorepo/recommended",
-  //"plugin:@mysticatea/es2015",
-  //"plugin:@mysticatea/+eslint-plugin",
-  "plugin:perfectionist/recommended-natural",
   "plugin:prettier/recommended",
-  "plugin:react/recommended",
-  "plugin:security/recommended",
-  "plugin:test-selectors/recommended",
-  "plugin:you-dont-need-lodash-underscore/compatible"
+  "prettier",
 ]
 
 const typescriptConfigs: string[] = [
   "plugin:node/recommended",
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/recommended"
 ]
 
@@ -42,7 +18,8 @@ export const defaultOptions: ESLint.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
-      es6: true,
+      es2021: true,
+      esnext: true,
       node: true,
       browser: true,
       commonjs: true,
@@ -54,17 +31,84 @@ export const defaultOptions: ESLint.Options = {
       worker: true,
       qunit: true,
     },
+    globals: {
+      document: "readonly",
+      navigator: "readonly",
+      window: "readonly",
+
+      // ECMAScript
+      ArrayBuffer: "readonly",
+      Atomics: "readonly",
+      BigInt: "readonly",
+      BigInt64Array: "readonly",
+      BigUint64Array: "readonly",
+      DataView: "readonly",
+      Float32Array: "readonly",
+      Float64Array: "readonly",
+      Int16Array: "readonly",
+      Int32Array: "readonly",
+      Int8Array: "readonly",
+      Map: "readonly",
+      Promise: "readonly",
+      Proxy: "readonly",
+      Reflect: "readonly",
+      Set: "readonly",
+      SharedArrayBuffer: "readonly",
+      Symbol: "readonly",
+      Uint16Array: "readonly",
+      Uint32Array: "readonly",
+      Uint8Array: "readonly",
+      Uint8ClampedArray: "readonly",
+      WeakMap: "readonly",
+      WeakSet: "readonly",
+
+      // ECMAScript (experimental)
+      globalThis: "readonly",
+
+      // ECMA-402
+      Intl: "readonly",
+
+      // Web Standard
+      TextDecoder: "readonly",
+      TextEncoder: "readonly",
+      URL: "readonly",
+      URLSearchParams: "readonly",
+      WebAssembly: "readonly",
+      clearInterval: "readonly",
+      clearTimeout: "readonly",
+      console: "readonly",
+      queueMicrotask: "readonly",
+      setInterval: "readonly",
+      setTimeout: "readonly",
+
+      // Node.js
+      Buffer: "readonly",
+      GLOBAL: "readonly",
+      clearImmediate: "readonly",
+      global: "readonly",
+      process: "readonly",
+      root: "readonly",
+      setImmediate: "readonly",
+
+      // Backbone
+      Backbone: false,
+      _: false,
+
+      // Cypress
+      "cypress/globals": true,
+    },
     ignorePatterns: [
       "**/node_modules/**/*",
       "**/dist/**/*",
       "**/bin/**/*",
       "**/build/**/*",
       "**/docs/tests/**/*",
-      "tsconfig.json"
+      "tsconfig.json",
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
+      ecmaVersion: 2022,
       ecmaFeatures: {
         "jsx": true,
       },
@@ -72,13 +116,23 @@ export const defaultOptions: ESLint.Options = {
       sourceType: "module",
     },
     settings: {
-      "node": {
-        "tryExtensions": [".js", ".json", ".node"],
+      node: {
+        paths: ["src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        tryExtensions: [".js", ".json", ".node"],
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
       },
       "import/resolver": {
-        typescript: {
-          alwaysTryTypes: true,
+        node: {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
         },
+        typescript: {
+          alwaysTryTypes: true
+        },
+        webpack: true,
+        caseSensitive: false
       },
       jest: {
         version: 26,
@@ -94,6 +148,28 @@ export const defaultOptions: ESLint.Options = {
         parserOptions: {
           project: ["/tsconfig.json"],
           sourceType: "module",
+        },
+        rules: {
+          'constructor-super': 'off', // ts(2335) & ts(2377)
+          'getter-return': 'off', // ts(2378)
+          'no-const-assign': 'off', // ts(2588)
+          'no-dupe-args': 'off', // ts(2300)
+          'no-dupe-class-members': 'off', // ts(2393) & ts(2300)
+          'no-dupe-keys': 'off', // ts(1117)
+          'no-func-assign': 'off', // ts(2539)
+          'no-import-assign': 'off', // ts(2539) & ts(2540)
+          'no-new-symbol': 'off', // ts(7009)
+          'no-obj-calls': 'off', // ts(2349)
+          'no-redeclare': 'off', // ts(2451)
+          'no-setter-return': 'off', // ts(2408)
+          'no-this-before-super': 'off', // ts(2376)
+          'no-undef': 'off', // ts(2304)
+          'no-unreachable': 'off', // ts(7027)
+          'no-unsafe-negation': 'off', // ts(2365) & ts(2360) & ts(2358)
+          'no-var': 'error', // ts transpiles let/const to var, so no need for vars any more
+          'prefer-const': 'error', // ts provides better types with const
+          'prefer-rest-params': 'error', // ts provides better types with rest args over arguments
+          'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
         },
       },
       {
@@ -151,7 +227,7 @@ export const defaultOptions: ESLint.Options = {
         files: ["**/*.vue"],
         parser: require.resolve("vue-eslint-parser"),
         parserOptions: {
-          ecmaVersion: 2020,
+          ecmaVersion: 2022,
           sourceType: "module",
         },
       },
@@ -167,6 +243,10 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
         extends: ['plugin:testing-library/react'],
+      },
+      {
+        files: ['**/*.gjs', '**/*.gts'],
+        processor: 'ember/<template>',
       },
     ],
   },

@@ -8,7 +8,7 @@ import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-//import { rules as canonicalRules } from "eslint-plugin-canonical"
+import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
@@ -46,6 +46,7 @@ import { rules as meteorRules } from "eslint-plugin-meteor"
 import { rules as mochaRules } from "eslint-plugin-mocha"
 import { rules as mongodbRules } from "eslint-plugin-mongodb"
 import { rules as monorepoRules } from "eslint-plugin-monorepo"
+import { rules as nRules } from "eslint-plugin-n"
 import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
 import { rules as nodeRules } from "eslint-plugin-node"
@@ -100,7 +101,7 @@ const plugins = [
   ["angular", angularRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  //["canonical", canonicalRules],
+  ["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
@@ -138,6 +139,7 @@ const plugins = [
   ["mocha", mochaRules],
   ["mongodb", mongodbRules],
   ["monorepo", monorepoRules],
+  ["n", nRules],
   ["no-only-tests", noOnlyTestsRules],
   ["no-unsanitized", noUnsanitizedRules],
   ["node", nodeRules],
