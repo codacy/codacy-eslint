@@ -49,7 +49,6 @@ import { rules as monorepoRules } from "eslint-plugin-monorepo"
 import { rules as nRules } from "eslint-plugin-n"
 import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
 import { rules as noUnsanitizedRules } from "eslint-plugin-no-unsanitized"
-import { rules as nodeRules } from "eslint-plugin-node"
 import { rules as nuxtRules } from "eslint-plugin-nuxt"
 import { rules as perfectionistRules } from "eslint-plugin-perfectionist"
 import { rules as playwrightRules } from "eslint-plugin-playwright"
@@ -93,8 +92,8 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["@angular-eslint", angularEslintRules],
   ["@babel", babelRules],
-  ["@salesforce/aura", salesforceAuraRules],
-  ["@salesforce/lightning", salesforceLightningRules],
+  ["@salesforce/eslint-plugin-aura", salesforceAuraRules],
+  ["@salesforce/eslint-plugin-lightning", salesforceLightningRules],
   ["@shopify", shopifyRules],
   ["@tanstack/query", tanstackQueryRules],
   ["@typescript-eslint", typescriptEslintRules],
@@ -142,7 +141,6 @@ const plugins = [
   ["n", nRules],
   ["no-only-tests", noOnlyTestsRules],
   ["no-unsanitized", noUnsanitizedRules],
-  ["node", nodeRules],
   ["nuxt", nuxtRules],
   ["perfectionist", perfectionistRules],
   ["playwright", playwrightRules],

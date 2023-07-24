@@ -3234,85 +3234,85 @@
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_aura-api",
-    "title": "@salesforce: [Aura] Aura api",
+    "patternId": "@salesforce_eslint-plugin-aura_aura-api",
+    "title": "@salesforce: [Eslint plugin aura] Aura api",
     "description": "Validate Aura APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_ecma-intrinsics",
-    "title": "@salesforce: [Aura] Ecma intrinsics",
+    "patternId": "@salesforce_eslint-plugin-aura_ecma-intrinsics",
+    "title": "@salesforce: [Eslint plugin aura] Ecma intrinsics",
     "description": "Validate JavaScript intrinsic APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_getevt-markup-prefix",
-    "title": "@salesforce: [Aura] Getevt markup prefix",
+    "patternId": "@salesforce_eslint-plugin-aura_getevt-markup-prefix",
+    "title": "@salesforce: [Eslint plugin aura] Getevt markup prefix",
     "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-aura-error",
-    "title": "@salesforce: [Aura] No deprecated aura error",
+    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Eslint plugin aura] No deprecated aura error",
     "description": "Prevent usage of $A.error",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-component-creation",
-    "title": "@salesforce: [Aura] No deprecated component creation",
+    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Eslint plugin aura] No deprecated component creation",
     "description": "Prevent usage of deprecated component creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_no-deprecated-event-creation",
-    "title": "@salesforce: [Aura] No deprecated event creation",
+    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Eslint plugin aura] No deprecated event creation",
     "description": "Prevent usage of deprecated event creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_secure-document",
-    "title": "@salesforce: [Aura] Secure document",
+    "patternId": "@salesforce_eslint-plugin-aura_secure-document",
+    "title": "@salesforce: [Eslint plugin aura] Secure document",
     "description": "Validate secure document public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_aura_secure-window",
-    "title": "@salesforce: [Aura] Secure window",
+    "patternId": "@salesforce_eslint-plugin-aura_secure-window",
+    "title": "@salesforce: [Eslint plugin aura] Secure window",
     "description": "Validate secure window public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_lightning_no-aura-localization-service",
-    "title": "@salesforce: [Lightning] No aura localization service",
+    "patternId": "@salesforce_eslint-plugin-lightning_no-aura-localization-service",
+    "title": "@salesforce: [Eslint plugin lightning] No aura localization service",
     "description": "Disallow usage of \"$A.localizationService\"",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_lightning_no-moment",
-    "title": "@salesforce: [Lightning] No moment",
+    "patternId": "@salesforce_eslint-plugin-lightning_no-moment",
+    "title": "@salesforce: [Eslint plugin lightning] No moment",
     "description": "Prohibit usage of \"moment\" library",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_lightning_prefer-i18n-service",
-    "title": "@salesforce: [Lightning] Prefer i18n service",
+    "patternId": "@salesforce_eslint-plugin-lightning_prefer-i18n-service",
+    "title": "@salesforce: [Eslint plugin lightning] Prefer i18n service",
     "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
-    "title": "@salesforce: [Lightning] Valid apex method invocation",
+    "patternId": "@salesforce_eslint-plugin-lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Eslint plugin lightning] Valid apex method invocation",
     "description": "Enforce invoking Apex methods with the right arguments",
     "timeToFix": 5
   },
@@ -7207,6 +7207,13 @@
     "patternId": "es-x_no-regexp-unicode-property-escapes-2023",
     "title": "Es x: No regexp unicode property escapes 2023",
     "description": "Disallow the new values of RegExp Unicode property escape sequences in ES2023",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-regexp-v-flag",
+    "title": "Es x: No regexp v flag",
+    "description": "Disallow RegExp `v` flag.",
     "timeToFix": 5
   },
   {
@@ -11699,277 +11706,6 @@
     "patternId": "no-unsanitized_method",
     "title": "No unsanitized: Method",
     "description": "ESLint rule to disallow unsanitized method calls",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_callback-return",
-    "title": "Node: Callback return",
-    "description": "Require `return` statements after callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_exports-style",
-    "title": "Node: Exports style",
-    "description": "Enforce either `module.exports` or `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_file-extension-in-import",
-    "title": "Node: File extension in import",
-    "description": "Enforce the style of file extensions in `import` declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_global-require",
-    "title": "Node: Global require",
-    "description": "Require `require()` calls to be placed at top-level module scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_handle-callback-err",
-    "title": "Node: Handle callback err",
-    "description": "Require error handling in callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-callback-literal",
-    "title": "Node: No callback literal",
-    "description": "Ensure Node.js-style error-first callback pattern is followed",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-deprecated-api",
-    "title": "Node: No deprecated api",
-    "description": "Disallow deprecated APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-exports-assign",
-    "title": "Node: No exports assign",
-    "description": "Disallow the assignment to `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-import",
-    "title": "Node: No extraneous import",
-    "description": "Disallow `import` declarations which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-require",
-    "title": "Node: No extraneous require",
-    "description": "Disallow `require()` expressions which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-missing-import",
-    "title": "Node: No missing import",
-    "description": "Disallow `import` declarations which import non-existence modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-mixed-requires",
-    "title": "Node: No mixed requires",
-    "description": "Disallow `require` calls to be mixed with regular variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-new-require",
-    "title": "Node: No new require",
-    "description": "Disallow `new` operators with calls to `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-path-concat",
-    "title": "Node: No path concat",
-    "description": "Disallow string concatenation with `__dirname` and `__filename`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-env",
-    "title": "Node: No process env",
-    "description": "Disallow the use of `process.env`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-exit",
-    "title": "Node: No process exit",
-    "description": "Disallow the use of `process.exit()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-import",
-    "title": "Node: No restricted import",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-require",
-    "title": "Node: No restricted require",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAtRootLevel",
-        "description": "allowAtRootLevel"
-      }
-    ],
-    "patternId": "node_no-sync",
-    "title": "Node: No sync",
-    "description": "Disallow synchronous methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-bin",
-    "title": "Node: No unpublished bin",
-    "description": "Disallow `bin` files that npm ignores",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-import",
-    "title": "Node: No unpublished import",
-    "description": "Disallow `import` declarations which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-require",
-    "title": "Node: No unpublished require",
-    "description": "Disallow `require()` expressions which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-builtins",
-    "title": "Node: [No unsupported features] Es builtins",
-    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-syntax",
-    "title": "Node: [No unsupported features] Es syntax",
-    "description": "Disallow unsupported ECMAScript syntax on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_node-builtins",
-    "title": "Node: [No unsupported features] Node builtins",
-    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_buffer",
-    "title": "Node: [Prefer global] Buffer",
-    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_console",
-    "title": "Node: [Prefer global] Console",
-    "description": "Enforce either `console` or `require(\"console\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_process",
-    "title": "Node: [Prefer global] Process",
-    "description": "Enforce either `process` or `require(\"process\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-decoder",
-    "title": "Node: [Prefer global] Text decoder",
-    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-encoder",
-    "title": "Node: [Prefer global] Text encoder",
-    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url-search-params",
-    "title": "Node: [Prefer global] Url search params",
-    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url",
-    "title": "Node: [Prefer global] Url",
-    "description": "Enforce either `URL` or `require(\"url\").URL`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_dns",
-    "title": "Node: [Prefer promises] Dns",
-    "description": "Enforce `require(\"dns\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_fs",
-    "title": "Node: [Prefer promises] Fs",
-    "description": "Enforce `require(\"fs\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_process-exit-as-throw",
-    "title": "Node: Process exit as throw",
-    "description": "Make `process.exit()` expressions the same code path as `throw`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_shebang",
-    "title": "Node: Shebang",
-    "description": "Suggest correct usage of shebang",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-hide-core-modules",
-    "title": "Node: No hide core modules",
-    "description": "Disallow third-party modules which are hiding core modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features",
-    "title": "Node: No unsupported features",
-    "description": "Disallow unsupported ECMAScript features on the specified version",
     "timeToFix": 5
   },
   {

@@ -226,14 +226,6 @@ async function main() {
     "no-unsanitized"
   )
 
-  console.log("Generate node description files")
-  await docGenerator.downloadDocs(
-    `${githubBaseUrl}/mysticatea/eslint-plugin-node/master/docs/rules/`,
-    "node",
-    true,
-    pattern => pattern.split("_").join("/")
-  )
-
   console.log("Generate nuxt description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/`,
