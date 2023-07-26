@@ -285,7 +285,7 @@
     "eslint-plugin-test-selectors": "^2.0.4",
     "eslint-plugin-testing-library": "^5.11.0",
     "eslint-plugin-tsdoc": "^0.2.17",
-    "eslint-plugin-turbo": "^1.10.8",
+    "eslint-plugin-turbo": "^1.10.12",
     "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "eslint-plugin-unicorn": "^48.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
