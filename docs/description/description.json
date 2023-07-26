@@ -3234,85 +3234,85 @@
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_aura-api",
-    "title": "@salesforce: [Eslint plugin aura] Aura api",
+    "patternId": "@salesforce_aura_aura-api",
+    "title": "@salesforce: [Aura] Aura api",
     "description": "Validate Aura APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_ecma-intrinsics",
-    "title": "@salesforce: [Eslint plugin aura] Ecma intrinsics",
+    "patternId": "@salesforce_aura_ecma-intrinsics",
+    "title": "@salesforce: [Aura] Ecma intrinsics",
     "description": "Validate JavaScript intrinsic APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_getevt-markup-prefix",
-    "title": "@salesforce: [Eslint plugin aura] Getevt markup prefix",
+    "patternId": "@salesforce_aura_getevt-markup-prefix",
+    "title": "@salesforce: [Aura] Getevt markup prefix",
     "description": "Verify the presence of the 'markup://' prefix for events accessed via $A.getEvt()",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-aura-error",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated aura error",
+    "patternId": "@salesforce_aura_no-deprecated-aura-error",
+    "title": "@salesforce: [Aura] No deprecated aura error",
     "description": "Prevent usage of $A.error",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-component-creation",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated component creation",
+    "patternId": "@salesforce_aura_no-deprecated-component-creation",
+    "title": "@salesforce: [Aura] No deprecated component creation",
     "description": "Prevent usage of deprecated component creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-event-creation",
-    "title": "@salesforce: [Eslint plugin aura] No deprecated event creation",
+    "patternId": "@salesforce_aura_no-deprecated-event-creation",
+    "title": "@salesforce: [Aura] No deprecated event creation",
     "description": "Prevent usage of deprecated event creation methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_secure-document",
-    "title": "@salesforce: [Eslint plugin aura] Secure document",
+    "patternId": "@salesforce_aura_secure-document",
+    "title": "@salesforce: [Aura] Secure document",
     "description": "Validate secure document public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-aura_secure-window",
-    "title": "@salesforce: [Eslint plugin aura] Secure window",
+    "patternId": "@salesforce_aura_secure-window",
+    "title": "@salesforce: [Aura] Secure window",
     "description": "Validate secure window public APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_no-aura-localization-service",
-    "title": "@salesforce: [Eslint plugin lightning] No aura localization service",
+    "patternId": "@salesforce_lightning_no-aura-localization-service",
+    "title": "@salesforce: [Lightning] No aura localization service",
     "description": "Disallow usage of \"$A.localizationService\"",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_no-moment",
-    "title": "@salesforce: [Eslint plugin lightning] No moment",
+    "patternId": "@salesforce_lightning_no-moment",
+    "title": "@salesforce: [Lightning] No moment",
     "description": "Prohibit usage of \"moment\" library",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_prefer-i18n-service",
-    "title": "@salesforce: [Eslint plugin lightning] Prefer i18n service",
+    "patternId": "@salesforce_lightning_prefer-i18n-service",
+    "title": "@salesforce: [Lightning] Prefer i18n service",
     "description": "Suggest usage of \"@salesforce/i18n-service\" over \"Intl\" constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@salesforce_eslint-plugin-lightning_valid-apex-method-invocation",
-    "title": "@salesforce: [Eslint plugin lightning] Valid apex method invocation",
+    "patternId": "@salesforce_lightning_valid-apex-method-invocation",
+    "title": "@salesforce: [Lightning] Valid apex method invocation",
     "description": "Enforce invoking Apex methods with the right arguments",
     "timeToFix": 5
   },
@@ -5194,6 +5194,195 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      }
+    ],
+    "patternId": "canonical_destructuring-property-newline",
+    "title": "Canonical: Destructuring property newline",
+    "description": "Like `object-property-newline`, but for destructuring.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_export-specifier-newline",
+    "title": "Canonical: Export specifier newline",
+    "description": "Forces every export specifier to be on a new line.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-exported",
+    "title": "Canonical: Filename match exported",
+    "description": "Match the file name against the default exported value in the module.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-match-regex",
+    "title": "Canonical: Filename match regex",
+    "description": "Enforce a certain file naming convention using a regular expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_filename-no-index",
+    "title": "Canonical: Filename no index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_import-specifier-newline",
+    "title": "Canonical: Import specifier newline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-barrel-import",
+    "title": "Canonical: No barrel import",
+    "description": "Require that imports are made directly from the source",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-reassign-imports",
+    "title": "Canonical: No reassign imports",
+    "description": "Restricts re-assigning imports to variables that are exported.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-restricted-strings",
+    "title": "Canonical: No restricted strings",
+    "description": "Disallowed string.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-unused-exports",
+    "title": "Canonical: No unused exports",
+    "description": "Identifies unused exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_no-use-extend-native",
+    "title": "Canonical: No use extend native",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-import-alias",
+    "title": "Canonical: Prefer import alias",
+    "description": "Restrict imports to path aliases or relative imports limited by depth.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-inline-type-import",
+    "title": "Canonical: Prefer inline type import",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-react-lazy",
+    "title": "Canonical: Prefer react lazy",
+    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_prefer-use-mount",
+    "title": "Canonical: Prefer use mount",
+    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_require-extension",
+    "title": "Canonical: Require extension",
+    "description": "Require file extension in import and export statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_sort-keys",
+    "title": "Canonical: Sort keys",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "canonical_virtual-module",
+    "title": "Canonical: Virtual module",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_ban-lambda-runtimes",
+    "title": "Cdk: Ban lambda runtimes",
+    "description": "Bans specific lambda runtimes from being used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_ban-reserved-words",
+    "title": "Cdk: Ban reserved words",
+    "description": "Bans specific words from being used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_construct-ctor",
+    "title": "Cdk: Construct ctor",
+    "description": "Ensure a uniform construct constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_filename-match-regex",
+    "title": "Cdk: Filename match regex",
+    "description": "Enforces all linted files to match a certain pattern",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_no-static-import",
+    "title": "Cdk: No static import",
+    "description": "Enforce cdk guidelines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_construct-props-struct-name",
+    "title": "Cdk: Construct props struct name",
+    "description": "Ensure a uniform construct constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_public-static-property-all-caps",
+    "title": "Cdk: Public static property all caps",
+    "description": "Enforces all static properties must be named using ALL_CAPS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_stack-props-struct-name",
+    "title": "Cdk: Stack props struct name",
+    "description": "Ensure a uniform stack constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_prefer-type-only-imports",
+    "title": "Cdk: Prefer type only imports",
+    "description": "Enforce type only imports",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "chai-expect_no-inner-compare",
     "title": "Chai expect: No inner compare",
@@ -5231,9 +5420,48 @@
   },
   {
     "parameters": [],
+    "patternId": "codeceptjs_no-actor-in-scenario",
+    "title": "Codeceptjs: No actor in scenario",
+    "description": "Disallow the use of Actor directly in Scenarios in favor of page objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-exclusive-tests",
+    "title": "Codeceptjs: No exclusive tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-skipped-tests",
+    "title": "Codeceptjs: No skipped tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-pause-in-scenario",
+    "title": "Codeceptjs: No pause in scenario",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "compat_compat",
     "title": "Compat: Compat",
     "description": "Ensure cross-browser API compatibility",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "css-modules_no-unused-class",
+    "title": "Css modules: No unused class",
+    "description": "Checks that you are using all css/scss/less classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "css-modules_no-undef-class",
+    "title": "Css modules: No undef class",
+    "description": "Checks that you are using the existent css/scss/less classes",
     "timeToFix": 5
   },
   {
@@ -10318,6 +10546,30 @@
   },
   {
     "parameters": [],
+    "patternId": "jsx_uses-factory",
+    "title": "Jsx: Uses factory",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_factory-in-scope",
+    "title": "Jsx: Factory in scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_mark-used-vars",
+    "title": "Jsx: Mark used vars",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_no-undef",
+    "title": "Jsx: No undef",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "Enforce emojis are wrapped in `<span>` and provide screenreader access.",
@@ -12244,6 +12496,13 @@
   },
   {
     "parameters": [],
+    "patternId": "prefer-arrow_prefer-arrow-functions",
+    "title": "Prefer arrow: Prefer arrow functions",
+    "description": "Prefer arrow functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prefer-object-spread_prefer-object-spread",
     "title": "Prefer object spread: Prefer object spread",
     "description": "Use a spread property instead of Object.assign().",
@@ -12345,63 +12604,6 @@
     "parameters": [],
     "patternId": "promise_no-multiple-resolved",
     "title": "Promise: No multiple resolved",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-hooks_rules-of-hooks",
-    "title": "React hooks: Rules of hooks",
-    "description": "Enforces the Rules of Hooks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-hooks_exhaustive-deps",
-    "title": "React hooks: Exhaustive deps",
-    "description": "Verifies the list of dependencies for Hooks like useEffect and similar",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-unused-styles",
-    "title": "React native: No unused styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-inline-styles",
-    "title": "React native: No inline styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-color-literals",
-    "title": "React native: No color literals",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_sort-styles",
-    "title": "React native: Sort styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_split-platform-components",
-    "title": "React native: Split platform components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-raw-text",
-    "title": "React native: No raw text",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-single-element-style-arrays",
-    "title": "React native: No single element style arrays",
-    "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
     "timeToFix": 5
   },
   {
@@ -12895,6 +13097,135 @@
     "patternId": "react_void-dom-elements-no-children",
     "title": "React: Void dom elements no children",
     "description": "Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving children",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-hooks_rules-of-hooks",
+    "title": "React hooks: Rules of hooks",
+    "description": "Enforces the Rules of Hooks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-hooks_exhaustive-deps",
+    "title": "React hooks: Exhaustive deps",
+    "description": "Verifies the list of dependencies for Hooks like useEffect and similar",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-unused-styles",
+    "title": "React native: No unused styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-inline-styles",
+    "title": "React native: No inline styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-color-literals",
+    "title": "React native: No color literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_sort-styles",
+    "title": "React native: Sort styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_split-platform-components",
+    "title": "React native: Split platform components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-raw-text",
+    "title": "React native: No raw text",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-single-element-style-arrays",
+    "title": "React native: No single element style arrays",
+    "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_connect-prefer-minimum-two-arguments",
+    "title": "React redux: Connect prefer minimum two arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_connect-prefer-named-arguments",
+    "title": "React redux: Connect prefer named arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-prefer-shorthand",
+    "title": "React redux: MapDispatchToProps prefer shorthand",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-returns-object",
+    "title": "React redux: MapDispatchToProps returns object",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-prefer-parameters-names",
+    "title": "React redux: MapDispatchToProps prefer parameters names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-no-store",
+    "title": "React redux: MapStateToProps no store",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-hoisted",
+    "title": "React redux: MapStateToProps prefer hoisted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-parameters-names",
+    "title": "React redux: MapStateToProps prefer parameters names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-selectors",
+    "title": "React redux: MapStateToProps prefer selectors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_useSelector-prefer-selectors",
+    "title": "React redux: UseSelector prefer selectors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_no-unused-prop-types",
+    "title": "React redux: No unused prop types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_prefer-separate-component-file",
+    "title": "React redux: Prefer separate component file",
     "timeToFix": 5
   },
   {
@@ -13631,6 +13962,172 @@
   },
   {
     "parameters": [],
+    "patternId": "security-node_detect-absence-of-name-option-in-exrpress-session",
+    "title": "Security node: Detect absence of name option in exrpress session",
+    "description": "Detect the absence of name option in express session",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-buffer-unsafe-allocation",
+    "title": "Security node: Detect buffer unsafe allocation",
+    "description": "Buffer.allocUnsafe(size) is not safe and should not be used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-child-process",
+    "title": "Security node: Detect child process",
+    "description": "Detect exec with non Literal argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-crlf",
+    "title": "Security node: Detect crlf",
+    "description": "Detect log forging attack ",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-dangerous-redirects",
+    "title": "Security node: Detect dangerous redirects",
+    "description": "Detect dangerous redirects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-eval-with-expr",
+    "title": "Security node: Detect eval with expr",
+    "description": "Detect eval with string concatenation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-html-injection",
+    "title": "Security node: Detect html injection",
+    "description": "Detect html injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-improper-exception-handling",
+    "title": "Security node: Detect improper exception handling",
+    "description": "Rule that detects improper exception handling",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-insecure-randomness",
+    "title": "Security node: Detect insecure randomness",
+    "description": "Detect insecure randomness via Math.random()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-non-literal-require-calls",
+    "title": "Security node: Detect non literal require calls",
+    "description": "Non literal require calls may cause an attack",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-nosql-injection",
+    "title": "Security node: Detect nosql injection",
+    "description": "Detect NOsql injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-multiplestatements-in-mysql",
+    "title": "Security node: Detect option multiplestatements in mysql",
+    "description": "Detect option mulitpleStatements:true in createConnection method of mysql",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-rejectunauthorized-in-nodejs-httpsrequest",
+    "title": "Security node: Detect option rejectunauthorized in nodejs httpsrequest",
+    "description": "Detect option rejectUnauthorized:false in Nodejs https request method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-unsafe-in-serialize-javascript-npm-package",
+    "title": "Security node: Detect option unsafe in serialize javascript npm package",
+    "description": "Detect opion:unsafe in serialize method in serialize-javasript npm package",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-possible-timing-attacks",
+    "title": "Security node: Detect possible timing attacks",
+    "description": "Detect possible timing attacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-runinthiscontext-method-in-nodes-vm",
+    "title": "Security node: Detect runinthiscontext method in nodes vm",
+    "description": "Detect vm.runInThisContext() method in nodes vm with non Literal argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-security-missconfiguration-cookie",
+    "title": "Security node: Detect security missconfiguration cookie",
+    "description": "Detect security missconfiguration in express cookie",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-sql-injection",
+    "title": "Security node: Detect sql injection",
+    "description": "Detect SQL injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-unhandled-event-errors",
+    "title": "Security node: Detect unhandled event errors",
+    "description": "Require listening to errors when using EventEmitter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-unhandled-async-errors",
+    "title": "Security node: Detect unhandled async errors",
+    "description": "Handle errors in asynchronous calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_disable-ssl-across-node-server",
+    "title": "Security node: Disable ssl across node server",
+    "description": "Process.env.NODE_TLS_REJECT_UNAUTHORIZED='0' disables SSL across node server!",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_non-literal-reg-expr",
+    "title": "Security node: Non literal reg expr",
+    "description": "Non literal regural expressions may cause possible attack",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "simple-import-sort_imports",
+    "title": "Simple import sort: Imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "simple-import-sort_exports",
+    "title": "Simple import sort: Exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "sonarjs_cognitive-complexity",
     "title": "Sonarjs: Cognitive complexity",
     "description": "Cognitive Complexity of functions should not be too high",
@@ -13882,9 +14379,22 @@
   },
   {
     "parameters": [],
+    "patternId": "sort-keys-custom-order-fix_sort-keys-custom-order-fix",
+    "title": "Sort keys custom order fix: Sort keys custom order fix",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "sort-keys-fix_sort-keys-fix",
     "title": "Sort keys fix: Sort keys fix",
     "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sorting_sort-object-props",
+    "title": "Sorting: Sort object props",
     "timeToFix": 5
   },
   {
@@ -14043,6 +14553,66 @@
   },
   {
     "parameters": [],
+    "patternId": "suitescript_script-type",
+    "title": "Suitescript: Script type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_api-version",
+    "title": "Suitescript: Api version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-invalid-modules",
+    "title": "Suitescript: No invalid modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-extra-modules",
+    "title": "Suitescript: No extra modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-log-module",
+    "title": "Suitescript: No log module",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_log-args",
+    "title": "Suitescript: Log args",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_module-vars",
+    "title": "Suitescript: Module vars",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-amd-name",
+    "title": "Suitescript: No amd name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_entry-points",
+    "title": "Suitescript: Entry points",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-module-extensions",
+    "title": "Suitescript: No module extensions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "tailwindcss_classnames-order",
     "title": "Tailwindcss: Classnames order",
     "description": "Enforce a consistent and logical order of the Tailwind CSS classnames",
@@ -14144,6 +14714,25 @@
     "patternId": "test-selectors_onSubmit",
     "title": "Test selectors: OnSubmit",
     "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tsdoc_syntax",
+    "title": "Tsdoc: Syntax",
+    "description": "Validates that TypeScript documentation comments conform to the TSDoc standard",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowList",
+        "description": "allowList"
+      }
+    ],
+    "patternId": "turbo_no-undeclared-env-vars",
+    "title": "Turbo: No undeclared env vars",
+    "description": "Do not allow the use of `process.env` without including the env key in any turbo.json",
     "timeToFix": 5
   },
   {
@@ -16544,6 +17133,142 @@
     "patternId": "vue-scoped-css_v-slotted-pseudo-style",
     "title": "Vue scoped css: V slotted pseudo style",
     "description": "Enforce `:slotted()`/`::v-slotted()` style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_alt-text",
+    "title": "Vuejs accessibility: Alt text",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_anchor-has-content",
+    "title": "Vuejs accessibility: Anchor has content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_aria-props",
+    "title": "Vuejs accessibility: Aria props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": "ignoreNonDOM"
+      }
+    ],
+    "patternId": "vuejs-accessibility_aria-role",
+    "title": "Vuejs accessibility: Aria role",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_aria-unsupported-elements",
+    "title": "Vuejs accessibility: Aria unsupported elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_click-events-have-key-events",
+    "title": "Vuejs accessibility: Click events have key events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_form-control-has-label",
+    "title": "Vuejs accessibility: Form control has label",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_heading-has-content",
+    "title": "Vuejs accessibility: Heading has content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_iframe-has-title",
+    "title": "Vuejs accessibility: Iframe has title",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_interactive-supports-focus",
+    "title": "Vuejs accessibility: Interactive supports focus",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_label-has-for",
+    "title": "Vuejs accessibility: Label has for",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_media-has-caption",
+    "title": "Vuejs accessibility: Media has caption",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_mouse-events-have-key-events",
+    "title": "Vuejs accessibility: Mouse events have key events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-access-key",
+    "title": "Vuejs accessibility: No access key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": "ignoreNonDOM"
+      }
+    ],
+    "patternId": "vuejs-accessibility_no-autofocus",
+    "title": "Vuejs accessibility: No autofocus",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-distracting-elements",
+    "title": "Vuejs accessibility: No distracting elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-onchange",
+    "title": "Vuejs accessibility: No onchange",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-redundant-roles",
+    "title": "Vuejs accessibility: No redundant roles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-static-element-interactions",
+    "title": "Vuejs accessibility: No static element interactions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_role-has-required-aria-props",
+    "title": "Vuejs accessibility: Role has required aria props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_tabindex-no-positive",
+    "title": "Vuejs accessibility: Tabindex no positive",
     "timeToFix": 5
   },
   {

@@ -3244,84 +3244,84 @@
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_aura-api",
+      "patternId": "@salesforce_aura_aura-api",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_ecma-intrinsics",
+      "patternId": "@salesforce_aura_ecma-intrinsics",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_getevt-markup-prefix",
+      "patternId": "@salesforce_aura_getevt-markup-prefix",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-aura-error",
+      "patternId": "@salesforce_aura_no-deprecated-aura-error",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-component-creation",
+      "patternId": "@salesforce_aura_no-deprecated-component-creation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_no-deprecated-event-creation",
+      "patternId": "@salesforce_aura_no-deprecated-event-creation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_secure-document",
+      "patternId": "@salesforce_aura_secure-document",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-aura_secure-window",
+      "patternId": "@salesforce_aura_secure-window",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_no-aura-localization-service",
+      "patternId": "@salesforce_lightning_no-aura-localization-service",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_no-moment",
+      "patternId": "@salesforce_lightning_no-moment",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_prefer-i18n-service",
+      "patternId": "@salesforce_lightning_prefer-i18n-service",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@salesforce_eslint-plugin-lightning_valid-apex-method-invocation",
+      "patternId": "@salesforce_lightning_valid-apex-method-invocation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -5263,6 +5263,200 @@
       "enabled": false
     },
     {
+      "patternId": "canonical_destructuring-property-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAllPropertiesOnSameLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_export-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-exported",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_filename-no-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_import-specifier-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-barrel-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-reassign-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-restricted-strings",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-unused-exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_no-use-extend-native",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-import-alias",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-inline-type-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-react-lazy",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_prefer-use-mount",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_require-extension",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_sort-keys",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "canonical_virtual-module",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_ban-lambda-runtimes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_ban-reserved-words",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_construct-ctor",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_filename-match-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_no-static-import",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_construct-props-struct-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_public-static-property-all-caps",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_stack-props-struct-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "cdk_prefer-type-only-imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "chai-expect_no-inner-compare",
       "level": "Info",
       "category": "CodeStyle",
@@ -5303,7 +5497,49 @@
       "enabled": false
     },
     {
+      "patternId": "codeceptjs_no-actor-in-scenario",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "codeceptjs_no-exclusive-tests",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "codeceptjs_no-skipped-tests",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "codeceptjs_no-pause-in-scenario",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "compat_compat",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "css-modules_no-unused-class",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "css-modules_no-undef-class",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -10505,6 +10741,34 @@
       "enabled": false
     },
     {
+      "patternId": "jsx_uses-factory",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsx_factory-in-scope",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsx_mark-used-vars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsx_no-undef",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsx-a11y_accessible-emoji",
       "level": "Info",
       "category": "CodeStyle",
@@ -12511,6 +12775,13 @@
       "enabled": true
     },
     {
+      "patternId": "prefer-arrow_prefer-arrow-functions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "prefer-object-spread_prefer-object-spread",
       "level": "Info",
       "category": "CodeStyle",
@@ -12624,69 +12895,6 @@
     },
     {
       "patternId": "promise_no-multiple-resolved",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-hooks_rules-of-hooks",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "react-hooks_exhaustive-deps",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "react-native_no-unused-styles",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_no-inline-styles",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_no-color-literals",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_sort-styles",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_split-platform-components",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_no-raw-text",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "react-native_no-single-element-style-arrays",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13180,6 +13388,153 @@
     },
     {
       "patternId": "react_void-dom-elements-no-children",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-hooks_rules-of-hooks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "react-hooks_exhaustive-deps",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "react-native_no-unused-styles",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_no-inline-styles",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_no-color-literals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_sort-styles",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_split-platform-components",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_no-raw-text",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-native_no-single-element-style-arrays",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_connect-prefer-minimum-two-arguments",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_connect-prefer-named-arguments",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapDispatchToProps-prefer-shorthand",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapDispatchToProps-returns-object",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapDispatchToProps-prefer-parameters-names",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapStateToProps-no-store",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapStateToProps-prefer-hoisted",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapStateToProps-prefer-parameters-names",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_mapStateToProps-prefer-selectors",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_useSelector-prefer-selectors",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_no-unused-prop-types",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "react-redux_prefer-separate-component-file",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -13925,6 +14280,177 @@
       "enabled": true
     },
     {
+      "patternId": "security-node_detect-absence-of-name-option-in-exrpress-session",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-buffer-unsafe-allocation",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "security-node_detect-child-process",
+      "level": "Info",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-crlf",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "security-node_detect-dangerous-redirects",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-eval-with-expr",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-html-injection",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-improper-exception-handling",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-insecure-randomness",
+      "level": "Info",
+      "category": "Security",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "security-node_detect-non-literal-require-calls",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-nosql-injection",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-option-multiplestatements-in-mysql",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-option-rejectunauthorized-in-nodejs-httpsrequest",
+      "level": "Info",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-option-unsafe-in-serialize-javascript-npm-package",
+      "level": "Info",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-possible-timing-attacks",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-runinthiscontext-method-in-nodes-vm",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "security-node_detect-security-missconfiguration-cookie",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-sql-injection",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "security-node_detect-unhandled-event-errors",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_detect-unhandled-async-errors",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_disable-ssl-across-node-server",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "security-node_non-literal-reg-expr",
+      "level": "Error",
+      "category": "Security",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "simple-import-sort_imports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "simple-import-sort_exports",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "sonarjs_cognitive-complexity",
       "level": "Info",
       "category": "CodeStyle",
@@ -14181,7 +14707,21 @@
       "enabled": false
     },
     {
+      "patternId": "sort-keys-custom-order-fix_sort-keys-custom-order-fix",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "sort-keys-fix_sort-keys-fix",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "sorting_sort-object-props",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -14348,6 +14888,76 @@
       "enabled": false
     },
     {
+      "patternId": "suitescript_script-type",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_api-version",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_no-invalid-modules",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_no-extra-modules",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_no-log-module",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_log-args",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_module-vars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_no-amd-name",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_entry-points",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "suitescript_no-module-extensions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "tailwindcss_classnames-order",
       "level": "Info",
       "category": "CodeStyle",
@@ -14450,6 +15060,25 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "tsdoc_syntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "turbo_no-undeclared-env-vars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowList",
+          "default": []
+        }
+      ],
       "enabled": true
     },
     {
@@ -16848,6 +17477,163 @@
     },
     {
       "patternId": "vue-scoped-css_v-slotted-pseudo-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_alt-text",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_anchor-has-content",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_aria-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_aria-role",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreNonDOM",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_aria-unsupported-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_click-events-have-key-events",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_form-control-has-label",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_heading-has-content",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_iframe-has-title",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_interactive-supports-focus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_label-has-for",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_media-has-caption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_mouse-events-have-key-events",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-access-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-autofocus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreNonDOM",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-distracting-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-onchange",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-redundant-roles",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_no-static-element-interactions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_role-has-required-aria-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vuejs-accessibility_tabindex-no-positive",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],

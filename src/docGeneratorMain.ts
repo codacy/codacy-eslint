@@ -257,6 +257,12 @@ async function main() {
     "react-native"
   )
 
+  console.log("Generate react-redux description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/DianaSuvorova/eslint-plugin-react-redux/master/docs/rules/`,
+    "react-redux"
+  )
+
   console.log("Generate redux-saga description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/pke/eslint-plugin-redux-saga/master/docs/rules/`,
@@ -287,6 +293,12 @@ async function main() {
     "security"
   )
 
+  console.log("Generate security-node description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/gkouziik/eslint-plugin-security-node/master/docs/rules/`,
+    "security-node"
+  )
+
   console.log("Generate sonarjs description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/SonarSource/eslint-plugin-sonarjs/master/docs/rules/`,
@@ -304,6 +316,13 @@ async function main() {
     `${githubBaseUrl}/storybookjs/eslint-plugin-storybook/master/docs/rules/`,
     "storybook"
   )
+
+  console.log("Generate suitescript description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/acdvs/eslint-plugin-suitescript/master/docs/rules/`,
+    "suitescript"
+  )
+
 
   console.log("Generate tailwindcss description files")
   await docGenerator.downloadDocs(
@@ -352,6 +371,12 @@ async function main() {
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/`,
     "vue-scoped-css"
+  )
+
+  console.log("Generate vuejs-accessibility description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/vue-a11y/eslint-plugin-vuejs-accessibility/main/docs/rules/`,
+    "vuejs-accessibility"
   )
 
   console.log("Generate wdio description files")
