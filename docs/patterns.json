@@ -3636,6 +3636,18 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_class-methods-use-this",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "enforceForClassFields",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_comma-dangle",
       "level": "Info",
       "category": "CodeStyle",
@@ -5006,6 +5018,118 @@
       "enabled": false
     },
     {
+      "patternId": "awscdk_require-bucket-encryption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-bucket-private",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-public-ingress",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-iam-star-actions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-iam-admin-permissions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-policy-allow-kms-decrypt",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-bucket-ssl",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-dynamodb-ptr",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-sns-topic-encryption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-dynamodb-autoscale",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-rds-public-access",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-kms-key-delete",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-s3-public-write",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-s3-public-read",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_require-cloudfront-default-root-object",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "awscdk_no-redshift-public-access",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "backbone_collection-model",
       "level": "Info",
       "category": "CodeStyle",
@@ -5133,137 +5257,6 @@
     },
     {
       "patternId": "better-styled-components_sort-declarations-alphabetically",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_destructuring-property-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowAllPropertiesOnSameLine",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_export-specifier-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-match-exported",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-match-regex",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-no-index",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_import-specifier-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-barrel-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-reassign-imports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-restricted-strings",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-unused-exports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-use-extend-native",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-import-alias",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-inline-type-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-react-lazy",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-use-mount",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_require-extension",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_sort-keys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_virtual-module",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -12030,7 +12023,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12054,7 +12047,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "ignore-case",
@@ -12083,7 +12076,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "ignore-case",
@@ -12103,7 +12096,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12123,7 +12116,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12161,7 +12154,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12185,7 +12178,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12209,7 +12202,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12229,7 +12222,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12249,7 +12242,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12269,7 +12262,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12293,7 +12286,7 @@
         },
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -12317,7 +12310,7 @@
       "parameters": [
         {
           "name": "type",
-          "default": "natural"
+          "default": "alphabetical"
         },
         {
           "name": "order",
@@ -13830,285 +13823,6 @@
       "enabled": false
     },
     {
-      "patternId": "scanjs-rules_accidental__assignment",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__hostname",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__href",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__location",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__onmessage",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__pathname",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__protocol",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__search",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_assign__to__src",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "MaliciousCode",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__addEventListener",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__addEventListener__deviceproximity",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__addEventListener__message",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__connect",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__eval",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__execScript",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__Function",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__hide",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__open__remote=true",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__parseFromString",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__setAttribute__mozbrowser",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__setImmediate",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__setInterval",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_call__setTimeout",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_identifier__indexedDB",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_identifier__localStorage",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "InsecureStorage",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_identifier__sessionStorage",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "InsecureStorage",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_new__Function",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__addIdleObserver",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__createContextualFragment",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__crypto",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "Cryptography",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__geolocation",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__getUserMedia",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__indexedDB",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__localStorage",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "InsecureStorage",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__mgmt",
-      "level": "Info",
-      "category": "Security",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "scanjs-rules_property__sessionStorage",
-      "level": "Info",
-      "category": "Security",
-      "subcategory": "InsecureStorage",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "security_detect-unsafe-regex",
       "level": "Info",
       "category": "Security",
@@ -14508,7 +14222,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\Users\\Vítor Pires\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "C:\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
         },
         {
           "name": "skipWords",

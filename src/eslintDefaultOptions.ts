@@ -35,9 +35,9 @@ export const defaultOptions: ESLint.Options = {
       embertest: true,
     },
     globals: {
-      document: "readonly",
-      navigator: "readonly",
-      window: "readonly",
+      // document: "readonly",
+      // navigator: "readonly",
+      // window: "readonly",
 
       // // ECMAScript
       // ArrayBuffer: "readonly",
@@ -101,12 +101,13 @@ export const defaultOptions: ESLint.Options = {
       // "cypress/globals": true,
     },
     ignorePatterns: [
-      "**/node_modules/**/*",
-      "**/dist/**/*",
-      "**/bin/**/*",
-      "**/build/**/*",
-      "**/docs/tests/**/*",
-      "tsconfig.json",
+      "/src/**/node_modules/**/*",
+      "/src/**/dist/**/*",
+      "/src/**/bin/**/*",
+      "/src/**/build/**/*",
+      "/src/**/docs/tests/**/*",
+      "/src/**/vendor/**/*",
+      "/src/**/tsconfig.json",
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
@@ -120,7 +121,7 @@ export const defaultOptions: ESLint.Options = {
     },
     settings: {
       node: {
-        paths: ["src"],
+        paths: ["/src"],
         extensions: [".js", ".jsx", ".ts", ".tsx"],
         tryExtensions: [".js", ".json", ".node"],
       },
@@ -134,14 +135,14 @@ export const defaultOptions: ESLint.Options = {
         typescript: {
           alwaysTryTypes: true
         },
-        webpack: true,
+        //webpack: true,
         caseSensitive: false
       },
       jest: {
         version: 26,
       },
       react: {
-        version: "18.2.0",
+        version: "detect",
       },
     },
     overrides: [
@@ -153,27 +154,29 @@ export const defaultOptions: ESLint.Options = {
           sourceType: "module",
         },
         rules: {
-          "constructor-super": "off", // ts(2335) & ts(2377)
-          "getter-return": "off", // ts(2378)
-          "no-const-assign": "off", // ts(2588)
-          "no-dupe-args": "off", // ts(2300)
-          "no-dupe-class-members": "off", // ts(2393) & ts(2300)
-          "no-dupe-keys": "off", // ts(1117)
-          "no-func-assign": "off", // ts(2539)
-          "no-import-assign": "off", // ts(2539) & ts(2540)
-          "no-new-symbol": "off", // ts(7009)
-          "no-obj-calls": "off", // ts(2349)
-          "no-redeclare": "off", // ts(2451)
-          "no-setter-return": "off", // ts(2408)
-          "no-this-before-super": "off", // ts(2376)
-          "no-undef": "off", // ts(2304)
-          "no-unreachable": "off", // ts(7027)
-          "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
+          // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
+          "constructor-super": "off",
+          "getter-return": "off",
+          "no-const-assign": "off",
+          "no-dupe-args": "off",
+          "no-dupe-class-members": "off",
+          "no-dupe-keys": "off",
+          "no-func-assign": "off",
+          "no-import-assign": "off",
+          "no-new-symbol": "off",
+          "no-obj-calls": "off",
+          "no-redeclare": "off",
+          "no-setter-return": "off",
+          "no-this-before-super": "off",
+          "no-undef": "off",
+          "no-unreachable": "off",
+          "no-unsafe-negation": "off",
         },
       },
       {
         files: ["**/*.js", "**/*.jsx", "**/*.json"],
         rules: {
+          // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/disable-type-checked.ts
           "@typescript-eslint/await-thenable": "off",
           "@typescript-eslint/consistent-type-exports": "off",
           "@typescript-eslint/dot-notation": "off",
@@ -219,7 +222,7 @@ export const defaultOptions: ESLint.Options = {
           "@typescript-eslint/strict-boolean-expressions": "off",
           "@typescript-eslint/switch-exhaustiveness-check": "off",
           "@typescript-eslint/unbound-method": "off",
-          "deprecation/deprecation": "off"
+          "deprecation/deprecation": "off",
         },
       },
       {
@@ -227,7 +230,7 @@ export const defaultOptions: ESLint.Options = {
         parser: "vue-eslint-parser",
         parserOptions: {
           parser: "@typescript-eslint/parser",
-          ecmaVersion: 2018,
+          ecmaVersion: 2022,
           sourceType: "module",
         },
       },
@@ -243,10 +246,6 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
         extends: ["plugin:testing-library/react"],
-      },
-      {
-        files: ["**/*.gjs", "**/*.gts"],
-        processor: "ember/<template>",
       },
     ],
   },

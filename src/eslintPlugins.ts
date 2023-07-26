@@ -5,10 +5,11 @@ import { rules as salesforceLightningRules } from "@salesforce/eslint-plugin-lig
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
 import { rules as tanstackQueryRules } from "@tanstack/eslint-plugin-query"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
+import { rules as awscdkRules } from "eslint-plugin-awscdk"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-import { rules as canonicalRules } from "eslint-plugin-canonical"
+//import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
 import { rules as compatRules } from "eslint-plugin-compat"
@@ -65,7 +66,6 @@ import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as rxjsRules } from "eslint-plugin-rxjs"
 import { rules as rxjsAngularRules } from "eslint-plugin-rxjs-angular"
-import { rules as scanjsRulesRules } from "eslint-plugin-scanjs-rules"
 import { rules as securityRules } from "eslint-plugin-security"
 import { rules as sonarjsRules } from "eslint-plugin-sonarjs"
 import { rules as sortDestructureKeysRules } from "eslint-plugin-sort-destructure-keys"
@@ -98,9 +98,10 @@ const plugins = [
   ["@tanstack/query", tanstackQueryRules],
   ["@typescript-eslint", typescriptEslintRules],
   ["angular", angularRules],
+  ["awscdk", awscdkRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  ["canonical", canonicalRules],
+  //["canonical", canonicalRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
   ["compat", compatRules],
@@ -157,7 +158,6 @@ const plugins = [
   ["relay", relayRules],
   ["rxjs", rxjsRules],
   ["rxjs-angular", rxjsAngularRules],
-  ["scanjs-rules", scanjsRulesRules],
   ["security", securityRules],
   ["sonarjs", sonarjsRules],
   ["sort-destructure-keys", sortDestructureKeysRules],

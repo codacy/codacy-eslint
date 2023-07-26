@@ -3625,6 +3625,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "enforceForClassFields",
+        "description": "enforceForClassFields"
+      }
+    ],
+    "patternId": "@typescript-eslint_class-methods-use-this",
+    "title": "@typescript eslint: Class methods use this",
+    "description": "Enforce that class methods utilize `this`",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_comma-dangle",
     "title": "@typescript eslint: Comma dangle",
@@ -4938,6 +4950,118 @@
   },
   {
     "parameters": [],
+    "patternId": "awscdk_require-bucket-encryption",
+    "title": "Awscdk: Require bucket encryption",
+    "description": "Encryption should be enabled for all S3 buckets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-private",
+    "title": "Awscdk: Require bucket private",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-public-ingress",
+    "title": "Awscdk: No public ingress",
+    "description": "Security Group rules should not allow access from anywhere",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-star-actions",
+    "title": "Awscdk: No iam star actions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-admin-permissions",
+    "title": "Awscdk: No iam admin permissions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-policy-allow-kms-decrypt",
+    "title": "Awscdk: No policy allow kms decrypt",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-ssl",
+    "title": "Awscdk: Require bucket ssl",
+    "description": "This checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-ptr",
+    "title": "Awscdk: Require dynamodb ptr",
+    "description": "DynamoDB tables should have point-in-time recovery enabled.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-sns-topic-encryption",
+    "title": "Awscdk: Require sns topic encryption",
+    "description": "SNS Topics should be encrypted at rest using AWS KMS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-autoscale",
+    "title": "Awscdk: Require dynamodb autoscale",
+    "description": "This control passes if the table uses either on-demand capacity mode or provisioned mode\n      with auto scaling configured.\n\n      Scaling capacity with demand avoids throttling exceptions, which helps to maintain availability of your applications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-rds-public-access",
+    "title": "Awscdk: No rds public access",
+    "description": "AWS RDS instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-kms-key-delete",
+    "title": "Awscdk: No kms key delete",
+    "description": "KMS Keys should not be scheduled for deletion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-write",
+    "title": "Awscdk: No s3 public write",
+    "description": "Buckets should not allow public write access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-read",
+    "title": "Awscdk: No s3 public read",
+    "description": "Buckets should not allow public read access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-cloudfront-default-root-object",
+    "title": "Awscdk: Require cloudfront default root object",
+    "description": "This control checks whether an Amazon CloudFront distribution is configured to return a specific object that is the default root object.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-redshift-public-access",
+    "title": "Awscdk: No redshift public access",
+    "description": "AWS Redshift instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "backbone_collection-model",
     "title": "Backbone: Collection model",
     "description": "Require all collections to declare model",
@@ -5067,132 +5191,6 @@
     "patternId": "better-styled-components_sort-declarations-alphabetically",
     "title": "Better styled components: Sort declarations alphabetically",
     "description": "Styles are sorted alphabetically.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAllPropertiesOnSameLine",
-        "description": "allowAllPropertiesOnSameLine"
-      }
-    ],
-    "patternId": "canonical_destructuring-property-newline",
-    "title": "Canonical: Destructuring property newline",
-    "description": "Like `object-property-newline`, but for destructuring.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_export-specifier-newline",
-    "title": "Canonical: Export specifier newline",
-    "description": "Forces every export specifier to be on a new line.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_filename-match-exported",
-    "title": "Canonical: Filename match exported",
-    "description": "Match the file name against the default exported value in the module.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_filename-match-regex",
-    "title": "Canonical: Filename match regex",
-    "description": "Enforce a certain file naming convention using a regular expression.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_filename-no-index",
-    "title": "Canonical: Filename no index",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_import-specifier-newline",
-    "title": "Canonical: Import specifier newline",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_no-barrel-import",
-    "title": "Canonical: No barrel import",
-    "description": "Require that imports are made directly from the source",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_no-reassign-imports",
-    "title": "Canonical: No reassign imports",
-    "description": "Restricts re-assigning imports to variables that are exported.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_no-restricted-strings",
-    "title": "Canonical: No restricted strings",
-    "description": "Disallowed string.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_no-unused-exports",
-    "title": "Canonical: No unused exports",
-    "description": "Identifies unused exports.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_no-use-extend-native",
-    "title": "Canonical: No use extend native",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_prefer-import-alias",
-    "title": "Canonical: Prefer import alias",
-    "description": "Restrict imports to path aliases or relative imports limited by depth.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_prefer-inline-type-import",
-    "title": "Canonical: Prefer inline type import",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_prefer-react-lazy",
-    "title": "Canonical: Prefer react lazy",
-    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_prefer-use-mount",
-    "title": "Canonical: Prefer use mount",
-    "description": "Require that useMount(() => {}) is used instead of useEffect(() => {}, [])",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_require-extension",
-    "title": "Canonical: Require extension",
-    "description": "Require file extension in import and export statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_sort-keys",
-    "title": "Canonical: Sort keys",
-    "description": "Require object keys to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "canonical_virtual-module",
-    "title": "Canonical: Virtual module",
     "timeToFix": 5
   },
   {
@@ -13531,222 +13529,6 @@
     "patternId": "relay_hook-required-argument",
     "title": "Relay: Hook required argument",
     "description": "Validates that the second argument is passed to relay hooks.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_accidental__assignment",
-    "title": "Scanjs rules: Accidental_assignment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__hostname",
-    "title": "Scanjs rules: Assign_to_hostname",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__href",
-    "title": "Scanjs rules: Assign_to_href",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__location",
-    "title": "Scanjs rules: Assign_to_location",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__onmessage",
-    "title": "Scanjs rules: Assign_to_onmessage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__pathname",
-    "title": "Scanjs rules: Assign_to_pathname",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__protocol",
-    "title": "Scanjs rules: Assign_to_protocol",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__search",
-    "title": "Scanjs rules: Assign_to_search",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__src",
-    "title": "Scanjs rules: Assign_to_src",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener",
-    "title": "Scanjs rules: Call_addEventListener",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener__deviceproximity",
-    "title": "Scanjs rules: Call_addEventListener_deviceproximity",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener__message",
-    "title": "Scanjs rules: Call_addEventListener_message",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__connect",
-    "title": "Scanjs rules: Call_connect",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__eval",
-    "title": "Scanjs rules: Call_eval",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__execScript",
-    "title": "Scanjs rules: Call_execScript",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__hide",
-    "title": "Scanjs rules: Call_hide",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__open__remote=true",
-    "title": "Scanjs rules: Call_open_remote=true",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__parseFromString",
-    "title": "Scanjs rules: Call_parseFromString",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setAttribute__mozbrowser",
-    "title": "Scanjs rules: Call_setAttribute_mozbrowser",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setImmediate",
-    "title": "Scanjs rules: Call_setImmediate",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setInterval",
-    "title": "Scanjs rules: Call_setInterval",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setTimeout",
-    "title": "Scanjs rules: Call_setTimeout",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__indexedDB",
-    "title": "Scanjs rules: Identifier_indexedDB",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__localStorage",
-    "title": "Scanjs rules: Identifier_localStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__sessionStorage",
-    "title": "Scanjs rules: Identifier_sessionStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_new__Function",
-    "title": "Scanjs rules: New_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__addIdleObserver",
-    "title": "Scanjs rules: Property_addIdleObserver",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__createContextualFragment",
-    "title": "Scanjs rules: Property_createContextualFragment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__crypto",
-    "title": "Scanjs rules: Property_crypto",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__geolocation",
-    "title": "Scanjs rules: Property_geolocation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__getUserMedia",
-    "title": "Scanjs rules: Property_getUserMedia",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__indexedDB",
-    "title": "Scanjs rules: Property_indexedDB",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__localStorage",
-    "title": "Scanjs rules: Property_localStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__mgmt",
-    "title": "Scanjs rules: Property_mgmt",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__sessionStorage",
-    "title": "Scanjs rules: Property_sessionStorage",
     "timeToFix": 5
   },
   {
