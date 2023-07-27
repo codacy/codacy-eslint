@@ -8,8 +8,8 @@ export function debug(msg: String) {
 }
 
 export function debugEach<T>(arr: Array<T> | undefined) {
-    arr?.forEach( (value) => { 
-        debug(String(value))
+    arr?.forEach((value) => {
+        debug(value.toString())
     })
 }
 
@@ -18,7 +18,9 @@ export function debugJson(jsonObject: any) {
 }
 
 export function debugWhen(cond: Boolean, msg: string) {
-    if (cond) debug(msg)
+    if (cond) {
+        debug(msg)
+    }
 }
 
 export function debugRun<T>(fn: () => void) {

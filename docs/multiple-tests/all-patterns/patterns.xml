@@ -607,6 +607,7 @@
   <module name="canonical_filename-no-index" />
   <module name="canonical_import-specifier-newline" />
   <module name="canonical_no-barrel-import" />
+  <module name="canonical_no-export-all" />
   <module name="canonical_no-reassign-imports" />
   <module name="canonical_no-restricted-strings" />
   <module name="canonical_no-unused-exports" />

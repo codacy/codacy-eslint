@@ -5247,6 +5247,13 @@
   },
   {
     "parameters": [],
+    "patternId": "canonical_no-export-all",
+    "title": "Canonical: No export all",
+    "description": "Requite that re-exports are named",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "canonical_no-reassign-imports",
     "title": "Canonical: No reassign imports",
     "description": "Restricts re-assigning imports to variables that are exported.",

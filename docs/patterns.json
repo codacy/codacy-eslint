@@ -5317,6 +5317,13 @@
       "enabled": false
     },
     {
+      "patternId": "canonical_no-export-all",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "canonical_no-reassign-imports",
       "level": "Info",
       "category": "CodeStyle",
