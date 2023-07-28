@@ -1,7 +1,8 @@
 {
   "parserOptions": {
-    "project": ["./tsconfig.json"],
-    "sourceType": "module"
+    "project": [
+      "./tsconfig.json"
+    ]
   },
   "rules": {
     "@typescript-eslint/await-thenable": "off",

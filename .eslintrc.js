@@ -18,9 +18,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    sourceType: "module",
-    project: "./tsconfig.json",
-    projects: ["./tsconfig.json"],
+    project: "/tsconfig.json",
+    projects: ["/tsconfig.json"],
     
   },
   plugins: [
