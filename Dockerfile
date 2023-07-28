@@ -26,4 +26,4 @@ RUN npm install --legacy-peer-deps --omit=dev &&\
 
 WORKDIR /src
 
-CMD ["node", "--max-semi-space-size=64", "--max-old-space-size=2560", "--v8-pool-size=0", "--use-largepages=silent", "/dist/src/index.js"]
+CMD ["node", "--max-semi-space-size=64", "--max-old-space-size=2304", "--v8-pool-size=0", "--use-largepages=silent", "/dist/src/index.js"]
