@@ -29,15 +29,14 @@ export const engineImpl: Engine = async function (
   debugWhen(!(files.length > 0), "[DEBUG] decided to run tool for all files under /src")
 
   const eslint = new ESLint(options)
-  const linter = new Linter(options)
-  const eslintResults = await eslint.lintFiles(filesToAnalyze)
 
   debugRun(() => {
     files.forEach(file => {
-      debug("[DEBUG] config file: " + file)
+      debug("[DEBUG] config for file: " + file)
       debugJson(eslint.calculateConfigForFile(file))
     })
   })
 
+  const eslintResults = await eslint.lintFiles(filesToAnalyze)
   return convertResults(eslintResults).map((r) => r.relativeTo(srcDirPath))
 }

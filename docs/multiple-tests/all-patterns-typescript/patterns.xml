@@ -1948,6 +1948,7 @@
   <module name="vue_attribute-hyphenation" />
   <module name="vue_attributes-order" />
   <module name="vue_block-lang" />
+  <module name="vue_block-order" />
   <module name="vue_block-spacing" />
   <module name="vue_block-tag-newline" />
   <module name="vue_brace-style" />
@@ -2012,6 +2013,7 @@
   <module name="vue_no-deprecated-functional-template" />
   <module name="vue_no-deprecated-html-element-is" />
   <module name="vue_no-deprecated-inline-template" />
+  <module name="vue_no-deprecated-model-definition" />
   <module name="vue_no-deprecated-props-default-this" />
   <module name="vue_no-deprecated-router-link-tag-prop" />
   <module name="vue_no-deprecated-scope-attribute" />
@@ -2080,6 +2082,7 @@
   <module name="vue_no-unused-refs" />
   <module name="vue_no-unused-vars" />
   <module name="vue_no-use-computed-property-like-method" />
+  <module name="vue_no-use-v-else-with-v-for" />
   <module name="vue_no-use-v-if-with-v-for" />
   <module name="vue_no-useless-concat" />
   <module name="vue_no-useless-mustaches" />
@@ -2124,6 +2127,7 @@
   <module name="vue_require-render-return" />
   <module name="vue_require-slots-as-functions" />
   <module name="vue_require-toggle-inside-transition" />
+  <module name="vue_require-typed-object-prop" />
   <module name="vue_require-typed-ref" />
   <module name="vue_require-v-for-key" />
   <module name="vue_require-valid-default-prop" />

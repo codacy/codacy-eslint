@@ -1144,7 +1144,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowObjectPatternsAsParameters",
+        "description": "allowObjectPatternsAsParameters"
+      }
+    ],
     "patternId": "no-empty-pattern",
     "title": "No empty pattern",
     "description": "Disallow empty destructuring patterns",
@@ -2560,7 +2565,7 @@
     "parameters": [],
     "patternId": "require-unicode-regexp",
     "title": "Require unicode regexp",
-    "description": "Enforce the use of `u` flag on RegExp",
+    "description": "Enforce the use of `u` or `v` flag on RegExp",
     "timeToFix": 5
   },
   {
@@ -15321,6 +15326,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_block-order",
+    "title": "Vue: Block order",
+    "description": "Enforce order of component top-level elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_block-spacing",
     "title": "Vue: Block spacing",
     "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
@@ -15836,6 +15848,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-deprecated-model-definition",
+    "title": "Vue: No deprecated model definition",
+    "description": "Disallow deprecated `model` definition (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-deprecated-props-default-this",
     "title": "Vue: No deprecated props default this",
     "description": "Disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
@@ -15940,7 +15959,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowObjectPatternsAsParameters",
+        "description": "allowObjectPatternsAsParameters"
+      }
+    ],
     "patternId": "vue_no-empty-pattern",
     "title": "Vue: No empty pattern",
     "description": "Disallow empty destructuring patterns in `<template>`",
@@ -16337,9 +16361,16 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-use-v-else-with-v-for",
+    "title": "Vue: No use v else with v for",
+    "description": "Disallow using `v-else-if`/`v-else` on the same element as `v-for`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-use-v-if-with-v-for",
     "title": "Vue: No use v if with v for",
-    "description": "Disallow use v-if on the same element as v-for",
+    "description": "Disallow using `v-if` on the same element as `v-for`",
     "timeToFix": 5
   },
   {
@@ -16671,6 +16702,13 @@
     "patternId": "vue_require-toggle-inside-transition",
     "title": "Vue: Require toggle inside transition",
     "description": "Require control the display of the content inside `<transition>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-typed-object-prop",
+    "title": "Vue: Require typed object prop",
+    "description": "Enforce adding type declarations to object props",
     "timeToFix": 5
   },
   {

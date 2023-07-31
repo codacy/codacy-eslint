@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.45.0",
+  "version": "8.46.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -1158,7 +1158,12 @@
       "patternId": "no-empty-pattern",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "allowObjectPatternsAsParameters",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -15667,6 +15672,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_block-order",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_block-spacing",
       "level": "Info",
       "category": "CodeStyle",
@@ -16182,6 +16194,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-deprecated-model-definition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-deprecated-props-default-this",
       "level": "Info",
       "category": "CodeStyle",
@@ -16290,7 +16309,12 @@
       "patternId": "vue_no-empty-pattern",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "allowObjectPatternsAsParameters",
+          "default": false
+        }
+      ],
       "enabled": true
     },
     {
@@ -16683,6 +16707,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-use-v-else-with-v-for",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-use-v-if-with-v-for",
       "level": "Info",
       "category": "CodeStyle",
@@ -17015,6 +17046,13 @@
     },
     {
       "patternId": "vue_require-toggle-inside-transition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_require-typed-object-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
