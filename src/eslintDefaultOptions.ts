@@ -101,13 +101,13 @@ export const defaultOptions: ESLint.Options = {
       "cypress/globals": true,
     },
     ignorePatterns: [
-      "/src/**/node_modules/**/*",
-      "/src/**/dist/**/*",
-      "/src/**/bin/**/*",
-      "/src/**/build/**/*",
-      "/src/**/docs/tests/**/*",
-      "/src/**/vendor/**/*",
-      "/src/**/tsconfig.json",
+      "node_modules/**",
+      "dist/**",
+      "bin/**",
+      "build/**",
+      "docs/tests/**",
+      "vendor/**",
+      "tsconfig.json",
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
@@ -125,14 +125,14 @@ export const defaultOptions: ESLint.Options = {
         tryExtensions: [".ts", ".tsx", ".js", ".json", ".node"],
       },
       "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"]
+        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
       "import/resolver": {
         node: {
-          "extensions": [".js", ".jsx", ".ts", ".tsx", ".node"]
+          "extensions": [".js", ".jsx", ".ts", ".tsx", ".node"],
         },
         typescript: {
-          alwaysTryTypes: true
+          alwaysTryTypes: true,          
         },
         //webpack: true,
       },
@@ -247,4 +247,4 @@ export const defaultOptions: ESLint.Options = {
   },
 }
 
-export const defaultEngine = new ESLint(defaultOptions)
+//export const defaultEngine = new ESLint(defaultOptions)
