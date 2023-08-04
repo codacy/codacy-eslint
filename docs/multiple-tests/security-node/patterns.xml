@@ -1,5 +1,0 @@
-<module name="root">
-    <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value=".*\.json" />
-    </module>
-</module>
