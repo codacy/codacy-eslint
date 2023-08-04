@@ -140,7 +140,7 @@ export const defaultOptions: ESLint.Options = {
         version: 26,
       },
       react: {
-        version: "detect",
+        version: "18.2.0",
       },
     },
     overrides: [
