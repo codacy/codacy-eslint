@@ -19,10 +19,10 @@ export const engineImpl: Engine = async function (
     codacyrc
   )
   
-//  if (DEBUG) {
+  if (DEBUG) {
     debug("engine: " + files.length + " files (or patterns) to process in \"" + srcDirPath + "\" with below config")
     debugJson(options)
-//  }
+  }
 
   //TODO: create file eslintrc options if it doesn't exist in root /src
   const eslint = new ESLint(options)
@@ -33,14 +33,14 @@ export const engineImpl: Engine = async function (
   debug("engine: linting")
   const lintResults = await eslint.lintFiles(files)
   
-//  if (DEBUG) {
+  if (DEBUG) {
     let nIssues = 0
     for (let lintResult of lintResults) {
       debug("engine: below specific config for \"" + lintResult.filePath + "\"\n" + JSON.stringify(await eslint.calculateConfigForFile(lintResult.filePath)))
       nIssues += lintResult.messages.length
     }
     debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
-//  }
+  }
 
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
 }
