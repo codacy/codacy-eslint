@@ -39,13 +39,13 @@ async function optionsCreator(
 
   const eslintTool = codacyrc?.tools?.find((tool) => tool.name === toolName)
 
-  if (DEBUG) {
+  //if (true) {
     debug("options: with default settings")
     debug("options: " + eslintTool?.patterns.length + " patterns to process")
     eslintTool?.patterns.forEach((pattern: Pattern) => {
       debug("- " + pattern.patternId)
     })
-  }
+  //}
 
   let options = cloneDeep(defaultOptions)
   if (options.baseConfig) {

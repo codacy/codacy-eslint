@@ -5,9 +5,9 @@
 export const DEBUG = true
 
 export function debug(msg: String): void {
-    if (DEBUG) {
+//    if (DEBUG) {
         console.log("[DEBUG] " + msg)
-    }
+//    }
 }
 
 export function debugEach<T>(arr: Array<T> | undefined): void {
