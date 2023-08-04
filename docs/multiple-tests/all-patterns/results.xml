@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
-  <file name="test.js">
+  <file name="all-patterns.js">
     <error source="import_unambiguous" line="1" message="This module could be parsed as a valid script." severity="info" />
     <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="info" />
     <error source="unicorn_no-empty-file" line="1" message="Empty files are not allowed." severity="info" />

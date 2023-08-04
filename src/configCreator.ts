@@ -95,7 +95,25 @@ async function optionsCreator(
     }
     else {
       //TODO: get all patterns
+      let tmp = allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
+          if (!pattern.enabled) {
+            return {}
+          }
+
+          return {
+            patternId: pattern.patternId,
+            parameters: pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
+              return {
+                name: parameter.name,
+                value: parameter.default
+              }
+            },
+            Parameter)
+          }
+        },
+        Pattern)
       
+      patternsToRules(tmp)
     }
   }
   options.useEslintrc = false
