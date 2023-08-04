@@ -1,53 +1,46 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
-import { ESLint, Linter } from "eslint"
-import { pathExists } from "fs-extra"
-import { glob } from "glob"
+import { ESLint } from "eslint"
 
 import { configCreator } from "./configCreator"
 import { convertResults } from "./convertResults"
-import { debug, debugJson, debugWhen, debugEither } from "./logging"
-import { isEmpty } from "lodash"
+import { DEBUG, debug, debugJson } from "./logging"
 
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
 ): Promise<ToolResult[]> {
+  debug("engine: starting")
   const srcDirPath = "/src"
-  const tsconfigFile = "./tsconfig.json"
-  const defaultPatterns = [
-    srcDirPath + "/**/*.ts",
-    srcDirPath + "/**/*.tsx",
-    srcDirPath + "/**/*.js",
-    srcDirPath + "/**/*.jsx",
-    srcDirPath + "/**/*.json"
-  ]
+  const tsconfigFile = "tsconfig.json"
 
   const [options, files] = await configCreator(
-    codacyrc,
-    (await pathExists(tsconfigFile)) ? tsconfigFile : undefined
+    srcDirPath,
+    tsconfigFile,
+    codacyrc
   )
   
-  const filesToAnalyze = (!isEmpty(files)) ? files : defaultPatterns
-  debugWhen(isEmpty(files), "decided to run tool for all files under " + srcDirPath)
+  if (DEBUG) {
+    debug("engine: " + files.length + " files (or patterns) to process in \"" + srcDirPath + "\" with below config")
+    debugJson(options)
+  }
 
-  debug("calculated the following eslint config:")
-  debugJson(options)
-  debug(filesToAnalyze.length + " files (or patterns) to process")
-
-  options.cwd = srcDirPath
+  //TODO: create file eslintrc options if it doesn't exist in root /src
   const eslint = new ESLint(options)
-  const linter = new Linter(options)
-
-  const eslintResults = await eslint.lintFiles(filesToAnalyze)
   
-  //if (process.env.DEBUG) {
-    let nIssues = 0
-    for (let lintResult of eslintResults) {
-      nIssues += lintResult.errorCount + lintResult.warningCount
-      debug("config for \"" + lintResult.filePath + "\":\n" + JSON.stringify(await eslint.calculateConfigForFile(lintResult.filePath)))
-    }
-    debugEither((nIssues > 0), "presenting the results", "no issues found")
-  //}
+  //TODO: check why should this be instantiated
+  // const linter = new Linter(options)
 
-  return convertResults(eslintResults).map((r) => r.relativeTo(srcDirPath))
+  debug("engine: linting")
+  const lintResults = await eslint.lintFiles(files)
+  
+  if (DEBUG) {
+    let nIssues = 0
+    for (let lintResult of lintResults) {
+      debug("engine: below specific config for \"" + lintResult.filePath + "\"\n" + JSON.stringify(await eslint.calculateConfigForFile(lintResult.filePath)))
+      nIssues += lintResult.messages.length
+    }
+    debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
+  }
+
+  return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
 }

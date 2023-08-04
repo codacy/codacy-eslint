@@ -116,8 +116,8 @@ export const defaultOptions: ESLint.Options = {
       ecmaFeatures: {
         "jsx": true,
       },
-      requireConfigFile: false,
     },
+    root: true,
     settings: {
       node: {
         paths: ["/src"],
@@ -237,6 +237,7 @@ export const defaultOptions: ESLint.Options = {
           babelOptions: {
             presets: ["@babel/preset-react"],
           },
+          requireConfigFile: false,
         },
       },  
       {
