@@ -95,7 +95,8 @@ async function optionsCreator(
     }
     else {
       //TODO: get all patterns
-      let tmp = allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
+      //let tmp = 
+        allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
           if (!pattern.enabled) {
             return {}
           }
@@ -113,7 +114,7 @@ async function optionsCreator(
         },
         Pattern)
       
-      patternsToRules(tmp)
+      //patternsToRules(tmp)
     }
   }
   options.useEslintrc = false
