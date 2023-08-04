@@ -1,0 +1,15 @@
+<module name="root">
+    <module name="storybook_await-interactions" />
+    <module name="storybook_context-in-play-function" />
+    <module name="storybook_csf-component" />
+    <module name="storybook_default-exports" />
+    <module name="storybook_hierarchy-separator" />
+    <module name="storybook_meta-inline-properties" />
+    <module name="storybook_no-redundant-story-name" />
+    <module name="storybook_no-stories-of" />
+    <module name="storybook_no-title-property-in-meta" />
+    <module name="storybook_prefer-pascal-case" />
+    <module name="storybook_story-exports" />
+    <module name="storybook_use-storybook-expect" />
+    <module name="storybook_use-storybook-testing-library" />
+</module>

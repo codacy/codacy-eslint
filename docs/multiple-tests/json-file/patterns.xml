@@ -1,0 +1,25 @@
+<module name="root">
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="\.eslintrc\.json"/>
+    </module>
+    <module name="json_*" />
+    <module name="json_json" />
+    <module name="json_unknown" />
+    <module name="json_comment-not-permitted" />
+    <module name="json_undefined" />
+    <module name="json_enum-value-mismatch" />
+    <module name="json_unexpected-end-of-comment" />
+    <module name="json_unexpected-end-of-string" />
+    <module name="json_unexpected-end-of-number" />
+    <module name="json_invalid-unicode" />
+    <module name="json_invalid-escape-character" />
+    <module name="json_invalid-character" />
+    <module name="json_property-expected" />
+    <module name="json_comma-expected" />
+    <module name="json_colon-expected" />
+    <module name="json_value-expected" />
+    <module name="json_comma-or-close-backet-expected" />
+    <module name="json_comma-or-close-brace-expected" />
+    <module name="json_trailing-comma" />
+    <module name="json_duplicate-key" />
+</module>

@@ -9,11 +9,12 @@
     "noEmitOnError": true,
     "strict": false,
     "lib": [
+      "ES2015",
       "ES2022",
       "DOM",
       "ESNext"
     ],
-    "target": "ESNext",
+    "target": "ES6",
     "disableReferencedProjectLoad": true,
     "disableSolutionSearching": true,
     "noErrorTruncation": true,
@@ -21,8 +22,5 @@
     "skipLibCheck": false,
     "sourceMap": false,
     "strictNullChecks": true
-  },
-  "include": [
-    "./*.ts"
-  ]
+  }
 }
