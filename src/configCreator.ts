@@ -21,8 +21,10 @@ export async function configCreator(
     srcDirPath + "/**/*.jsx",
     srcDirPath + "/**/*.json"
   ]
-  
-  const options = (codacyrc && eslintrcExistsInSrcDir(srcDirPath)) ? {} : await optionsCreator(srcDirPath, tsconfigFile, codacyrc)
+
+  //TODO: pass this result into optionsCreator mostly because of "options.useEslintrc"
+  let eslintrcExists = eslintrcExistsInSrcDir(srcDirPath)
+  const options = (codacyrc && eslintrcExists) ? {} : await optionsCreator(srcDirPath, tsconfigFile, codacyrc)
   const files = codacyrc?.files.length > 0 ? codacyrc.files : defaultFilesToAnalyze
 
   debug("config: finished")
@@ -64,15 +66,18 @@ async function optionsCreator(
       options.baseConfig.overrides[0].parserOptions.project = srcDirPath + "/" + tsconfigFile
     }
 
-    // There are some plugins that their rules should only apply for
-    // some specific file types / files names. So when those are enabled
-    // explicitly we need to apply them with a bit of customization.
-    //
-    //   example: a rule for the storybook should only apply to files with
-    //            "story" or "stories" in the name. If enabled for all files it
-    //            reports false positives on normal files.
-    //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
     if (eslintTool?.patterns.length > 0) {
+      //TODO: move this logic to function
+
+      // There are some plugins that their rules should only apply for
+      // some specific file types / files names. So when those are enabled
+      // explicitly we need to apply them with a bit of customization.
+      //
+      //   example: a rule for the storybook should only apply to files with
+      //            "story" or "stories" in the name. If enabled for all files it
+      //            reports false positives on normal files.
+      //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
+
       const [storybookPatterns, otherPatterns] = partition(eslintTool?.patterns, (p: Pattern) =>
         p.patternId.startsWith("storybook")
       )
@@ -93,30 +98,32 @@ async function optionsCreator(
         rules: patternsToRules(otherPatterns)
       }
     }
-    else {
-      //TODO: get all patterns
-      //let tmp = 
-        allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
-          if (!pattern.enabled) {
-            return {}
-          }
+    else if (DEBUG) {
+      //TODO: move this logic to function
+      let patterns = []
+      allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
+        if (!pattern.enabled) {
+          //return {}
+        }
 
-          return {
-            patternId: pattern.patternId,
-            parameters: pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
-              return {
-                name: parameter.name,
-                value: parameter.default
-              }
-            },
-            Parameter)
-          }
-        },
-        Pattern)
-      
-      //patternsToRules(tmp)
+        patterns.push(new Pattern(
+          pattern.patternId,
+          pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
+            return new Parameter(
+              parameter.name,
+              parameter.default
+            )
+          })
+        ))
+      })
+
+      debug("options: added " + patterns.length + " rules")
+      options.overrideConfig = {
+        rules: patternsToRules(patterns)
+      }
     }
   }
+  //TODO: take into consideration if there are config files in repo
   options.useEslintrc = false
   options.errorOnUnmatchedPattern = false
   options.cwd = srcDirPath

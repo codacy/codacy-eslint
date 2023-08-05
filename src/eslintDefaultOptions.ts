@@ -107,7 +107,8 @@ export const defaultOptions: ESLint.Options = {
       "build/**",
       "docs/tests/**",
       "vendor/**",
-      "tsconfig.json",
+      "tsconfig.*",
+      "\.eslintrc.*"
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
@@ -116,6 +117,7 @@ export const defaultOptions: ESLint.Options = {
       ecmaFeatures: {
         "jsx": true,
       },
+      extraFileExtensions: [".json"],
     },
     root: true,
     settings: {

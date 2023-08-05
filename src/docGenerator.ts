@@ -217,6 +217,6 @@ ${this.rules
 </module>
 `
     await writeFile(patternsFilename, patternsXml)
-    //await writeFile(patternsTypescriptFilename, patternsXml)
+    await writeFile(patternsTypescriptFilename, patternsXml)
   }
 }

@@ -27,10 +27,15 @@ export const engineImpl: Engine = async function (
   //TODO: create file eslintrc options if it doesn't exist in root /src
   const eslint = new ESLint(options)
   
-  //TODO: check why should this be instantiated
+  //TODO: check why should this be instantiated or if it should be used instead for performance sake...
   // const linter = new Linter(options)
 
   debug("engine: linting")
+  //TODO: RFC intercept results - try-catch - and check if there is some missing module
+  // then maybe try to install it on demand...? have to think about ui implications...
+  
+  //TODO: try linting smaller batches (maybe 20?) of files here to solve heap memory errors
+    
   const lintResults = await eslint.lintFiles(files)
   
   if (DEBUG) {
