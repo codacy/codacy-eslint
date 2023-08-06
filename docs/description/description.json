@@ -14181,7 +14181,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreStrings",
+        "description": "ignoreStrings"
+      }
+    ],
     "patternId": "sonarjs_no-duplicate-string",
     "title": "Sonarjs: No duplicate string",
     "description": "String literals should not be duplicated",

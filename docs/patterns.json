@@ -14508,7 +14508,12 @@
       "patternId": "sonarjs_no-duplicate-string",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ignoreStrings",
+          "default": "application/json"
+        }
+      ],
       "enabled": false
     },
     {
@@ -14774,7 +14779,7 @@
         },
         {
           "name": "langDir",
-          "default": "C:\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
+          "default": "/Users/vrhpires/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
