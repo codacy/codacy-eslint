@@ -13,6 +13,7 @@ export const engineImpl: Engine = async function (
   const srcDirPath = "/src"
   const tsconfigFile = "tsconfig.json"
   const nFilesPerChunk = 20
+  //const nPatternsPerChunk = 100
 
   const [options, files] = await configCreator(
     srcDirPath,
@@ -21,7 +22,7 @@ export const engineImpl: Engine = async function (
   )
 
   if (DEBUG) {
-    debug("engine: " + files.length + " files (or patterns) to process in \"" + srcDirPath + "\" with below config")
+    debug("engine: " + files.length + " files (or globs) to process in \"" + srcDirPath + "\" with below config")
     debugJson(options)
   }
 

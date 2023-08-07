@@ -9,7 +9,7 @@ import { rules as awscdkRules } from "eslint-plugin-awscdk"
 import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
-import { rules as canonicalRules } from "eslint-plugin-canonical"
+//import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as cdkRules } from "eslint-plugin-cdk"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
 import { rules as chaiFriendlyRules } from "eslint-plugin-chai-friendly"
@@ -116,7 +116,7 @@ const plugins = [
   ["awscdk", awscdkRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-  ["canonical", canonicalRules],
+//  ["canonical", canonicalRules],
   ["cdk", cdkRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],

@@ -18,8 +18,7 @@ export async function configCreator(
     srcDirPath + "/**/*.ts",
     srcDirPath + "/**/*.tsx",
     srcDirPath + "/**/*.js",
-    srcDirPath + "/**/*.jsx",
-    srcDirPath + "/**/*.json"
+    srcDirPath + "/**/*.jsx"
   ]
 
   //TODO: pass this result into optionsCreator mostly because of "options.useEslintrc"
@@ -95,7 +94,7 @@ async function optionsCreator(
       }
 
       // explicitly use only the rules being passed by codacyrc overriding any others
-      options.overrideConfig = {
+      options.baseConfig = {
         rules: patternsToRules(otherPatterns.length > 1000?otherPatterns.slice(0,1000):otherPatterns)
       }
     }
@@ -118,10 +117,10 @@ async function optionsCreator(
         ))
       })
 
-      debug("options: added " + patterns.length + " rules")
-      options.overrideConfig = {
-        rules: patternsToRules(patterns)
-      }
+      //let index = 600
+      //let patternsSlice = patterns.slice(index, index + 10)
+      debug("options: adding all " + patterns.length + " patterns")
+      options.baseConfig.rules = patternsToRules(patterns)
     }
   }
   //TODO: take into consideration if there are config files in repo
