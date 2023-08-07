@@ -209,11 +209,13 @@ export class DocGenerator {
   <module name="BeforeExecutionExclusionFileFilter">
     <property name="fileNamePattern" value=".*\\.json" />
   </module>
-${this.rules
-        .map(
-          ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
-        )
-        .join("\n")}
+    ${this.rules
+      //TODO: chunk number of rules being applied to tests..
+      .slice(0, 1000)
+      .map(
+        ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
+      )
+      .join("\n")}
 </module>
 `
     await writeFile(patternsFilename, patternsXml)
