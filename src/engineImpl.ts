@@ -39,7 +39,7 @@ export const engineImpl: Engine = async function (
   //TODO: validate code to lint smaller batches of files here
   // to solve heap memory errors and increase performance
   let chunksOfFiles = chunk(files, nFilesPerChunk)
-  let lintResults: ESLint.LintResult[];
+  let lintResults: ESLint.LintResult[] = [];
   for (let chunkOfFiles of chunksOfFiles) {
     lintResults.concat(await eslint.lintFiles(chunkOfFiles))
   }
