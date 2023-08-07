@@ -93,9 +93,10 @@ async function optionsCreator(
           rules: patternsToRules(storybookPatterns),
         })
       }
+
       // explicitly use only the rules being passed by codacyrc overriding any others
       options.overrideConfig = {
-        rules: patternsToRules(otherPatterns)
+        rules: patternsToRules(otherPatterns.length > 1000?otherPatterns.slice(0,1000):otherPatterns)
       }
     }
     else if (DEBUG) {

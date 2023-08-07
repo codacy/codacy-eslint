@@ -26,6 +26,7 @@ export const engineImpl: Engine = async function (
   }
 
   //TODO: create file eslintrc options if it doesn't exist in root /src
+  //TODO: chunk number of rules
   const eslint = new ESLint(options)
 
   //TODO: check why should this be instantiated or if it should be used instead for performance sake...
