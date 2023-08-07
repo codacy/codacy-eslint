@@ -210,8 +210,6 @@ export class DocGenerator {
     <property name="fileNamePattern" value=".*\\.json" />
   </module>
     ${this.rules
-      //TODO: chunk number of rules being applied to tests..
-      .slice(0, 1000)
       .map(
         ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
       )

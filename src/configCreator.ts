@@ -95,7 +95,7 @@ async function optionsCreator(
 
       // explicitly use only the rules being passed by codacyrc overriding any others
       options.baseConfig = {
-        rules: patternsToRules(otherPatterns.length > 1000?otherPatterns.slice(0,1000):otherPatterns)
+        rules: patternsToRules(otherPatterns)
       }
     }
     else if (DEBUG) {
