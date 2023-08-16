@@ -10,10 +10,10 @@ export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
 ): Promise<ToolResult[]> {
   debug("engine: starting")
+  //TODO: check .codacy.yaml for different sub_folder config
   const srcDirPath = "/src"
   const tsconfigFile = "tsconfig.json"
   const nFilesPerChunk = 20
-  //const nPatternsPerChunk = 100
 
   const [options, files] = await configCreator(
     srcDirPath,

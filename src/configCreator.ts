@@ -119,6 +119,8 @@ async function optionsCreator(
 
       //let index = 600
       //let patternsSlice = patterns.slice(index, index + 10)
+      //debug("options: adding all " + patternsSlice.length + " patterns")
+      //options.baseConfig.rules = patternsToRules(patternsSlice)
       debug("options: adding all " + patterns.length + " patterns")
       options.baseConfig.rules = patternsToRules(patterns)
     }

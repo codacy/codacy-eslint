@@ -3,7 +3,7 @@
   <module name="BeforeExecutionExclusionFileFilter">
     <property name="fileNamePattern" value=".*\.json" />
   </module>
-  <module name="accessor-pairs" />
+      <module name="accessor-pairs" />
   <module name="array-bracket-newline" />
   <module name="array-bracket-spacing" />
   <module name="array-callback-return" />
@@ -600,25 +600,6 @@
   <module name="backbone_no-view-qualified-jquery" />
   <module name="backbone_render-return" />
   <module name="better-styled-components_sort-declarations-alphabetically" />
-  <module name="canonical_destructuring-property-newline" />
-  <module name="canonical_export-specifier-newline" />
-  <module name="canonical_filename-match-exported" />
-  <module name="canonical_filename-match-regex" />
-  <module name="canonical_filename-no-index" />
-  <module name="canonical_import-specifier-newline" />
-  <module name="canonical_no-barrel-import" />
-  <module name="canonical_no-export-all" />
-  <module name="canonical_no-reassign-imports" />
-  <module name="canonical_no-restricted-strings" />
-  <module name="canonical_no-unused-exports" />
-  <module name="canonical_no-use-extend-native" />
-  <module name="canonical_prefer-import-alias" />
-  <module name="canonical_prefer-inline-type-import" />
-  <module name="canonical_prefer-react-lazy" />
-  <module name="canonical_prefer-use-mount" />
-  <module name="canonical_require-extension" />
-  <module name="canonical_sort-keys" />
-  <module name="canonical_virtual-module" />
   <module name="cdk_ban-lambda-runtimes" />
   <module name="cdk_ban-reserved-words" />
   <module name="cdk_construct-ctor" />
@@ -1360,6 +1341,7 @@
   <module name="lit_attribute-value-entities" />
   <module name="lit_ban-attributes" />
   <module name="lit_binding-positions" />
+  <module name="lit_lifecycle-super" />
   <module name="lit_no-duplicate-template-bindings" />
   <module name="lit_no-invalid-escape-sequences" />
   <module name="lit_no-invalid-html" />
@@ -2047,6 +2029,7 @@
   <module name="vue_no-potential-component-option-typo" />
   <module name="vue_no-ref-as-operand" />
   <module name="vue_no-ref-object-destructure" />
+  <module name="vue_no-ref-object-reactivity-loss" />
   <module name="vue_no-required-prop-with-default" />
   <module name="vue_no-reserved-component-names" />
   <module name="vue_no-reserved-keys" />
@@ -2064,6 +2047,7 @@
   <module name="vue_no-restricted-v-bind" />
   <module name="vue_no-root-v-if" />
   <module name="vue_no-setup-props-destructure" />
+  <module name="vue_no-setup-props-reactivity-loss" />
   <module name="vue_no-shared-component-data" />
   <module name="vue_no-side-effects-in-computed-properties" />
   <module name="vue_no-spaces-around-equal-signs-in-attribute" />

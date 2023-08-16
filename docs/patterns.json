@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.46.0",
+  "version": "8.47.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -5268,144 +5268,6 @@
       "enabled": false
     },
     {
-      "patternId": "canonical_destructuring-property-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowAllPropertiesOnSameLine",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_export-specifier-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-match-exported",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-match-regex",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_filename-no-index",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_import-specifier-newline",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-barrel-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-export-all",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-reassign-imports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-restricted-strings",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-unused-exports",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_no-use-extend-native",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-import-alias",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-inline-type-import",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-react-lazy",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_prefer-use-mount",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_require-extension",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_sort-keys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "canonical_virtual-module",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "cdk_ban-lambda-runtimes",
       "level": "Info",
       "category": "CodeStyle",
@@ -5568,7 +5430,12 @@
       "patternId": "cypress_unsafe-to-chain-command",
       "level": "Error",
       "category": "ErrorProne",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "methods",
+          "default": []
+        }
+      ],
       "enabled": true
     },
     {
@@ -11085,6 +10952,13 @@
       "enabled": false
     },
     {
+      "patternId": "lit_lifecycle-super",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "lit_no-duplicate-template-bindings",
       "level": "Info",
       "category": "CodeStyle",
@@ -14779,7 +14653,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/vrhpires/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "C:\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
         },
         {
           "name": "skipWords",
@@ -16467,6 +16341,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-ref-object-reactivity-loss",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-required-prop-with-default",
       "level": "Info",
       "category": "CodeStyle",
@@ -16580,6 +16461,13 @@
     },
     {
       "patternId": "vue_no-setup-props-destructure",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-setup-props-reactivity-loss",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
