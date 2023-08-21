@@ -22,7 +22,7 @@ export async function configCreator(
   ]
 
   //TODO: pass this result into optionsCreator mostly because of "options.useEslintrc"
-  let eslintrcExists = eslintrcExistsInSrcDir(srcDirPath)
+  const eslintrcExists = eslintrcExistsInSrcDir(srcDirPath)
   const options = (codacyrc && eslintrcExists) ? {} : await optionsCreator(srcDirPath, tsconfigFile, codacyrc)
   const files = codacyrc?.files.length > 0 ? codacyrc.files : defaultFilesToAnalyze
 
@@ -43,7 +43,7 @@ async function optionsCreator(
   if (DEBUG) {
     debug("options: with default settings")
     debug("options: " + eslintTool?.patterns.length + " patterns to process")
-    for (let pattern of eslintTool?.patterns) {
+    for (const pattern of eslintTool?.patterns) {
       debug("- " + pattern.patternId)
     }
   }
@@ -68,7 +68,7 @@ async function optionsCreator(
     }
 
     if (eslintTool?.patterns.length > 0) {
-      //TODO: move this logic to function
+      //TODO: move this logic to a generic (or specific) plugin function
 
       // There are some plugins that their rules should only apply for
       // some specific file types / files names. So when those are enabled
@@ -163,7 +163,7 @@ function eslintrcExistsInSrcDir(
   ]
 
   //TODO: verify content of package.json for eslint config
-  for (let filename of confFilenames) {
+  for (const filename of confFilenames) {
     if (existsSync(srcDirPath + "/" + filename)) {
       debug("check-eslintrc: found - \"" + srcDirPath + "/" + filename + "\"")
       return true
