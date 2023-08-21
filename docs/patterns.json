@@ -3111,14 +3111,14 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-standalone-component",
+      "patternId": "@angular-eslint_prefer-output-readonly",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-output-readonly",
+      "patternId": "@angular-eslint_prefer-standalone-component",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3129,6 +3129,22 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@angular-eslint_require-localize-metadata",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "requireDescription",
+          "default": false
+        },
+        {
+          "name": "requireMeaning",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {

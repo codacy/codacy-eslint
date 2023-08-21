@@ -3101,13 +3101,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_prefer-standalone-component",
-    "title": "@angular eslint: Prefer standalone component",
-    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@angular-eslint_prefer-output-readonly",
     "title": "@angular eslint: Prefer output readonly",
     "description": "Prefer to declare `@Output` as `readonly` since they are not supposed to be reassigned",
@@ -3115,9 +3108,32 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_prefer-standalone-component",
+    "title": "@angular eslint: Prefer standalone component",
+    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_relative-url-prefix",
     "title": "@angular eslint: Relative url prefix",
     "description": "The ./ and ../ prefix is standard syntax for relative URLs; don't depend on Angular's current ability to do without that prefix. See more at https://angular.io/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requireDescription",
+        "description": "requireDescription"
+      },
+      {
+        "name": "requireMeaning",
+        "description": "requireMeaning"
+      }
+    ],
+    "patternId": "@angular-eslint_require-localize-metadata",
+    "title": "@angular eslint: Require localize metadata",
+    "description": "Ensures that $localize tagged messages contain helpful metadata to aid with translations.",
     "timeToFix": 5
   },
   {

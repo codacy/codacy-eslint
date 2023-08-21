@@ -3,7 +3,7 @@ import { ESLint, Linter } from "eslint"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 import { defaultOptions } from "./eslintDefaultOptions"
 import { debug, DEBUG } from "./logging"
-import { patternIdToEslint } from "./model/patterns"
+import { patternIdToCodacy, patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
 import { existsSync } from "fs-extra"
 import {default as allPatterns} from "../docs/patterns.json"
@@ -43,13 +43,15 @@ async function optionsCreator(
   if (DEBUG) {
     debug("options: with default settings")
     debug("options: " + eslintTool?.patterns.length + " patterns to process")
-    eslintTool?.patterns.forEach((pattern: Pattern) => {
+    for (let pattern of eslintTool?.patterns) {
       debug("- " + pattern.patternId)
-    })
+    }
   }
 
   let options = cloneDeep(defaultOptions)
   if (options.baseConfig) {
+    debug("using default options")
+
     // remove extends and overrides from our default config.
     options.baseConfig.extends = []
     if (!options.baseConfig.overrides) {
@@ -83,7 +85,7 @@ async function optionsCreator(
 
       // configure override in case storybook plugin rules being turned on
       if (storybookPatterns.length > 0) {
-        debug("options: plugin storybook with specific config")
+        debug("options: adding " + storybookPatterns.length + " storybook rules")
         options.baseConfig.overrides.push({
           files: [
             "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
@@ -94,8 +96,9 @@ async function optionsCreator(
       }
 
       // explicitly use only the rules being passed by codacyrc overriding any others
-      options.baseConfig = {
-        rules: patternsToRules(otherPatterns)
+      if (otherPatterns.length > 0) {
+        debug("options: adding " + otherPatterns.length + " rules")
+        options.baseConfig.rules = patternsToRules(otherPatterns)
       }
     }
     else if (DEBUG) {
@@ -104,6 +107,10 @@ async function optionsCreator(
       allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
         if (!pattern.enabled) {
           //return {}
+        }
+
+        if (pattern.patternId == "spellcheck_spell-checker") {
+          return null
         }
 
         patterns.push(new Pattern(
@@ -188,6 +195,9 @@ function eslintrcExistsInSrcDir(
       return true
     }
   }
+
+  //TODO: check remaining file structure for some config file
+
   debug("check-eslintrc: not found")
   return false
 }

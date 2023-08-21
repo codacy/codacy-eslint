@@ -11,10 +11,12 @@ export const engineImpl: Engine = async function (
 ): Promise<ToolResult[]> {
   debug("engine: starting")
   //TODO: check .codacy.yaml for different sub_folder config
+  // dealt with codacy-analysis maybe?
   const srcDirPath = "/src"
   const tsconfigFile = "tsconfig.json"
-  const nFilesPerChunk = 20
+  const nFilesPerChunk = 10
 
+  //TODO: create file eslintrc options if it doesn't exist in root /src
   const [options, files] = await configCreator(
     srcDirPath,
     tsconfigFile,
@@ -22,46 +24,54 @@ export const engineImpl: Engine = async function (
   )
 
   if (DEBUG) {
-    debug("engine: " + files.length + " files (or globs) to process in \"" + srcDirPath + "\" with below config")
+    debug("engine: list of " + files.length + " files (or globs) to process in \"" + srcDirPath + "\" and options used")
+    debug(files.toString())
     debugJson(options)
+    
   }
 
-  //TODO: create file eslintrc options if it doesn't exist in root /src
   //TODO: chunk number of rules
+  // have to check if this is actually throwing an error or not
   const eslint = new ESLint(options)
 
   //TODO: check why should this be instantiated or if it should be used instead for performance sake...
   // const linter = new Linter(options)
-
-  debug("engine: linting")
+ 
   //TODO: RFC intercept results - try-catch - and check if there is some missing module
   // then maybe try to install it on demand...? have to think about ui implications...
+  // Kendrick replied it opens a Pandora box for users to insert malicious code
+  const lintResults = await lintChunksOfFiles(
+      eslint,
+      chunk(files, nFilesPerChunk)
+    )
 
-  //TODO: validate code to lint smaller batches of files here
-  // to solve heap memory errors and increase performance
-  let chunksOfFiles = chunk(files, nFilesPerChunk)
-  let lintResults: ESLint.LintResult[] = [];
-  for (let chunkOfFiles of chunksOfFiles) {
-    lintResults.concat(await eslint.lintFiles(chunkOfFiles))
-  }
-
-  if (DEBUG) {
-    let nIssues = 0
-    for (let lintResult of lintResults) {
-      debug(
-        "engine: below specific config for \"" +
-        lintResult.filePath +
-        "\"\n" +
-        JSON.stringify(
-          await eslint.calculateConfigForFile(lintResult.filePath)
-        )
-      )
-      nIssues += lintResult.messages.length
-    }
-    debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
-  }
+  await debugLintResults(eslint, lintResults)
 
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
+}
+
+async function lintChunksOfFiles(eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
+  debug("engine: linting chunks started")
+  const results = [];
+  for (const chunkOfFiles of chunksOfFiles) {
+    results.push(...(await eslint.lintFiles(chunkOfFiles)))
+  }
+  debug("engine: linting chunks finished")
+  return results;
+}
+
+async function debugLintResults(eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
+  if (!DEBUG) {
+    return
+  }
+
+  let nIssues = 0
+  for await (const lintResult of lintResults) {
+    debug("engine: specific config for \"" + lintResult.filePath + "\"")
+    debugJson(await eslint.calculateConfigForFile(lintResult.filePath))
+    nIssues += lintResult.messages.length
+  }
+  debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
 }
 
 const chunk = (arr: any[], size: number) =>
