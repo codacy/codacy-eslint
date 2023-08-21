@@ -105,10 +105,11 @@ async function optionsCreator(
       options.baseConfig.rules = patternsToRules(getAllPatterns())
     }
   }
+  options.cwd = srcDirPath
+  options.errorOnUnmatchedPattern = false
+  options.resolvePluginsRelativeTo = "/"
   //TODO: take into consideration if there are config files in repo
   options.useEslintrc = false
-  options.errorOnUnmatchedPattern = false
-  options.cwd = srcDirPath
 
   debug("options: finished")
 

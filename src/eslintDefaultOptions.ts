@@ -134,9 +134,9 @@ export const defaultOptions: ESLint.Options = {
           "extensions": [".js", ".jsx", ".ts", ".tsx", ".node"],
         },
         typescript: {
-          alwaysTryTypes: true,          
+          alwaysTryTypes: true,
         },
-        //webpack: true,
+        webpack: true,
       },
       jest: {
         version: 26,
