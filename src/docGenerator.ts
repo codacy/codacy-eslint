@@ -146,25 +146,25 @@ export class DocGenerator {
   }
 
   private async inlineLinkedMarkdownFiles(text: string, baseUrl: string) {
-    let newText = text;
+    let newText = text
 
-    const elements = newText.match(/\[.*?\)/g);
+    const elements = newText.match(/\[.*?\)/g)
 
     if (elements) {
       await Promise.all(elements.map(async (elem) => {
         const urlMatch = elem.match(/\((.*?)\)/)
         if (urlMatch && urlMatch.length === 2) {
-          const url = elem.match(/\((.*?)\)/)[1];
+          const url = elem.match(/\((.*?)\)/)[1]
           if (url.startsWith("../") && url.endsWith(".md")) {
             const fullUrl = `${baseUrl}${url}`
-            const response = await fetch(fullUrl);
+            const response = await fetch(fullUrl)
             const content = await response.text()
             newText = newText.replace(elem, () => `\n\n${content}`)
           }
         }
       }))
     }
-    return newText;
+    return newText
   }
 
   downloadDocs(

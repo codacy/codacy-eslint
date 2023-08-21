@@ -27,37 +27,33 @@ export const engineImpl: Engine = async function (
     debug("engine: list of " + files.length + " files (or globs) to process in \"" + srcDirPath + "\" and options used")
     debug(files.toString())
     debugJson(options)
-    
   }
 
-  //TODO: chunk number of rules
+  //TODO: chunk number of rules if the huge number returns errors
   // have to check if this is actually throwing an error or not
   const eslint = new ESLint(options)
-
-  //TODO: check why should this be instantiated or if it should be used instead for performance sake...
-  // const linter = new Linter(options)
  
   //TODO: RFC intercept results - try-catch - and check if there is some missing module
   // then maybe try to install it on demand...? have to think about ui implications...
-  // Kendrick replied it opens a Pandora box for users to insert malicious code
+  // - It opens a Pandora box for users to insert malicious code
+  const chunksOfFiles = chunk(files, nFilesPerChunk)
   const lintResults = await lintChunksOfFiles(
       eslint,
-      chunk(files, nFilesPerChunk)
+      chunksOfFiles
     )
-
-  await debugLintResults(eslint, lintResults)
 
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
 }
 
 async function lintChunksOfFiles(eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
   debug("engine: linting chunks started")
-  const results = [];
+  const lintResults = []
   for (const chunkOfFiles of chunksOfFiles) {
-    results.push(...(await eslint.lintFiles(chunkOfFiles)))
+    lintResults.push(...(await eslint.lintFiles(chunkOfFiles)))
   }
+  await debugLintResults(eslint, lintResults)
   debug("engine: linting chunks finished")
-  return results;
+  return lintResults
 }
 
 async function debugLintResults(eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
@@ -77,4 +73,4 @@ async function debugLintResults(eslint: ESLint, lintResults: ESLint.LintResult[]
 const chunk = (arr: any[], size: number) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (_: any, i: number) =>
     arr.slice(i * size, i * size + size)
-  );
+  )

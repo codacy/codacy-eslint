@@ -3,7 +3,7 @@ import { ESLint, Linter } from "eslint"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 import { defaultOptions } from "./eslintDefaultOptions"
 import { debug, DEBUG } from "./logging"
-import { patternIdToCodacy, patternIdToEslint } from "./model/patterns"
+import { patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
 import { existsSync } from "fs-extra"
 import {default as allPatterns} from "../docs/patterns.json"
@@ -102,34 +102,7 @@ async function optionsCreator(
       }
     }
     else if (DEBUG) {
-      //TODO: move this logic to function
-      let patterns = []
-      allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
-        if (!pattern.enabled) {
-          //return {}
-        }
-
-        if (pattern.patternId == "spellcheck_spell-checker") {
-          return null
-        }
-
-        patterns.push(new Pattern(
-          pattern.patternId,
-          pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
-            return new Parameter(
-              parameter.name,
-              parameter.default
-            )
-          })
-        ))
-      })
-
-      //let index = 600
-      //let patternsSlice = patterns.slice(index, index + 10)
-      //debug("options: adding all " + patternsSlice.length + " patterns")
-      //options.baseConfig.rules = patternsToRules(patternsSlice)
-      debug("options: adding all " + patterns.length + " patterns")
-      options.baseConfig.rules = patternsToRules(patterns)
+      options.baseConfig.rules = patternsToRules(getAllPatterns())
     }
   }
   //TODO: take into consideration if there are config files in repo
@@ -200,4 +173,29 @@ function eslintrcExistsInSrcDir(
 
   debug("check-eslintrc: not found")
   return false
+}
+
+function getAllPatterns(): Pattern[] {
+  debug("options: getting all patterns")
+
+  const patterns = []
+  allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
+    // skip this pattern for internal debugging
+    if (pattern.patternId == "spellcheck_spell-checker") {
+      return null
+    }
+
+    patterns.push(new Pattern(
+      pattern.patternId,
+      pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
+        return new Parameter(
+          parameter.name,
+          parameter.default
+        )
+      })
+    ))
+  })
+
+  debug("options: returning " + patterns.length + " patterns")
+  return patterns
 }
