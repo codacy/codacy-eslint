@@ -2,7 +2,6 @@
 // help print messages when environment variable DEBUG is passed to the docker.
 
 export const DEBUG = process.env.DEBUG
-//export const DEBUG = true
 
 export function debug(msg: String): void {
     if (DEBUG) {

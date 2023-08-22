@@ -1,10 +1,10 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
 import { ESLint } from "eslint"
+import fs from "fs"
 
 import { configCreator } from "./configCreator"
 import { convertResults } from "./convertResults"
 import { DEBUG, debug, debugJson } from "./logging"
-
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
@@ -15,6 +15,7 @@ export const engineImpl: Engine = async function (
   const srcDirPath = "/src"
   const tsconfigFile = "tsconfig.json"
   const nFilesPerChunk = 10
+  const maxTotalSizeOfFilesPerChunk = 1048576 // size in bytes
 
   //TODO: create file eslintrc options if it doesn't exist in root /src
   const [options, files] = await configCreator(
@@ -32,11 +33,13 @@ export const engineImpl: Engine = async function (
   //TODO: chunk number of rules if the huge number returns errors
   // have to check if this is actually throwing an error or not
   const eslint = new ESLint(options)
- 
+
+  //const chunksOfFiles = chunk(files, nFilesPerChunk)
+  const chunksOfFiles = chunkFilesBySize(files, maxTotalSizeOfFilesPerChunk)
+
   //TODO: RFC intercept results - try-catch - and check if there is some missing module
   // then maybe try to install it on demand...? have to think about ui implications...
   // - It opens a Pandora box for users to insert malicious code
-  const chunksOfFiles = chunk(files, nFilesPerChunk)
   const lintResults = await lintChunksOfFiles(
       eslint,
       chunksOfFiles
@@ -74,3 +77,29 @@ const chunk = (arr: any[], size: number) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (_: any, i: number) =>
     arr.slice(i * size, i * size + size)
   )
+
+
+
+function chunkFilesBySize(files: string[], maxChunkSize: number): string[][] {
+  const chunks: string[][] = [];
+  let currentChunk: string[] = [];
+  let currentChunkSize = 0;
+
+  for (const file of files) {
+    const size = fs.statSync(file).size
+    if (currentChunk.length === 0 || currentChunkSize + size <= maxChunkSize) {
+      currentChunk.push(file);
+      currentChunkSize += size;
+    } else {
+      chunks.push(currentChunk);
+      currentChunk = [file];
+      currentChunkSize = size;
+    }
+  }
+
+  if (currentChunk.length > 0) {
+    chunks.push(currentChunk);
+  }
+
+  return chunks;
+}
