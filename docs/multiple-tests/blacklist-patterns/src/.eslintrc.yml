@@ -1,5 +1,6 @@
-parser: "@typescript-eslint/parser"
-useEslintrc: false
+parser: "@babel/eslint-parser"
+parserOptions:
+  requireConfigFile: false
 plugins:
   - import
 rules:
