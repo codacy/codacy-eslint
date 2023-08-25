@@ -17878,5 +17878,41 @@
     "patternId": "you-dont-need-lodash-underscore_is-function",
     "title": "You dont need lodash underscore: Is function",
     "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_union-by",
+    "title": "You dont need lodash underscore: Union by",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_capitalize",
+    "title": "You dont need lodash underscore: Capitalize",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-date",
+    "title": "You dont need lodash underscore: Is date",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_defaults",
+    "title": "You dont need lodash underscore: Defaults",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-array-buffer",
+    "title": "You dont need lodash underscore: Is array buffer",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_head",
+    "title": "You dont need lodash underscore: Head",
+    "timeToFix": 5
   }
 ]

@@ -2294,4 +2294,10 @@
   <module name="you-dont-need-lodash-underscore_is-string" />
   <module name="you-dont-need-lodash-underscore_cast-array" />
   <module name="you-dont-need-lodash-underscore_is-function" />
+  <module name="you-dont-need-lodash-underscore_union-by" />
+  <module name="you-dont-need-lodash-underscore_capitalize" />
+  <module name="you-dont-need-lodash-underscore_is-date" />
+  <module name="you-dont-need-lodash-underscore_defaults" />
+  <module name="you-dont-need-lodash-underscore_is-array-buffer" />
+  <module name="you-dont-need-lodash-underscore_head" />
 </module>
