@@ -1,5 +1,8 @@
 # Codacy ESLint
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/88324e5ee7464c62abe07115b884c6a9)](https://app.codacy.com/gh/codacy/codacy-eslint/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![CircleCI](https://circleci.com/gh/codacy/codacy-eslint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-eslint)
+
 ## Adding new plugins / configs
 
 1.  Install the package using npm:

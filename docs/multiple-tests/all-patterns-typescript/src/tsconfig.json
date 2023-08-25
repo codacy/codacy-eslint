@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
-    "exactOptionalPropertyTypes": false,
-    "allowArbitraryExtensions": true,
+    "allowJs": false,
+    "checkJs": false,
+    "exactOptionalPropertyTypes": true,
+    "allowArbitraryExtensions": false,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": false,
@@ -21,5 +23,8 @@
     "skipLibCheck": false,
     "sourceMap": false,
     "strictNullChecks": true
-  }
+  },
+  "include": [
+    "./*.ts"
+  ]
 }

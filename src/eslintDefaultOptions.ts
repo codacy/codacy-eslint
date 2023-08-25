@@ -4,37 +4,13 @@ import { pluginsNames } from "./eslintPlugins"
 const baseConfigs: string[] = [
   "standard",
   "eslint:recommended",
-  "plugin:backbone/recommended",
-  "plugin:chai-expect/recommended",
-  "plugin:chai-friendly/recommended",
-  "plugin:compat/recommended",
-  "plugin:cypress/recommended",
-  "plugin:ember/recommended",
   "plugin:eslint-plugin/recommended",
-  "plugin:flowtype/recommended",
-  "plugin:i18next/recommended",
-  "plugin:import/recommended",
-  "plugin:import/typescript",
-  "plugin:jest-dom/recommended",
-  "plugin:jest-formatting/recommended",
-  "plugin:json/recommended",
-  "plugin:lit/recommended",
-  "plugin:lodash/recommended",
-  "plugin:monorepo/recommended",
-  //"plugin:@mysticatea/es2015",
-  //"plugin:@mysticatea/+eslint-plugin",
-  "plugin:perfectionist/recommended-natural",
   "plugin:prettier/recommended",
-  "plugin:react/recommended",
-  "plugin:security/recommended",
-  "plugin:test-selectors/recommended",
-  "plugin:you-dont-need-lodash-underscore/compatible"
+  "prettier",
 ]
 
 const typescriptConfigs: string[] = [
   "plugin:node/recommended",
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
   "plugin:@typescript-eslint/recommended"
 ]
 
@@ -42,43 +18,125 @@ export const defaultOptions: ESLint.Options = {
   baseConfig: {
     extends: baseConfigs,
     env: {
-      es6: true,
-      node: true,
       browser: true,
+      node: true,
       commonjs: true,
-      jquery: true,
-      phantomjs: true,
-      jasmine: true,
-      mocha: true,
-      amd: true,
+      es6: true,
+      es2022: true,
       worker: true,
+      amd: true,
+      mocha: true,
+      jasmine: true,
+      jest: true,
+      phantomjs: true,
       qunit: true,
+      jquery: true,
+      prototypejs: true,
+      embertest: true,
+    },
+    globals: {
+      document: "readonly",
+      navigator: "readonly",
+      window: "readonly",
+
+      // ECMAScript
+      ArrayBuffer: "readonly",
+      Atomics: "readonly",
+      BigInt: "readonly",
+      BigInt64Array: "readonly",
+      BigUint64Array: "readonly",
+      DataView: "readonly",
+      Float32Array: "readonly",
+      Float64Array: "readonly",
+      Int16Array: "readonly",
+      Int32Array: "readonly",
+      Int8Array: "readonly",
+      Map: "readonly",
+      Promise: "readonly",
+      Proxy: "readonly",
+      Reflect: "readonly",
+      Set: "readonly",
+      SharedArrayBuffer: "readonly",
+      Symbol: "readonly",
+      Uint16Array: "readonly",
+      Uint32Array: "readonly",
+      Uint8Array: "readonly",
+      Uint8ClampedArray: "readonly",
+      WeakMap: "readonly",
+      WeakSet: "readonly",
+
+      // ECMAScript (experimental)
+      globalThis: "readonly",
+
+      // ECMA-402
+      Intl: "readonly",
+
+      // Web Standard
+      TextDecoder: "readonly",
+      TextEncoder: "readonly",
+      URL: "readonly",
+      URLSearchParams: "readonly",
+      WebAssembly: "readonly",
+      clearInterval: "readonly",
+      clearTimeout: "readonly",
+      console: "readonly",
+      queueMicrotask: "readonly",
+      setInterval: "readonly",
+      setTimeout: "readonly",
+
+      // Node.js
+      Buffer: "readonly",
+      GLOBAL: "readonly",
+      clearImmediate: "readonly",
+      global: "readonly",
+      process: "readonly",
+      root: "readonly",
+      setImmediate: "readonly",
+
+      // Backbone
+      Backbone: false,
+      _: false,
+
+      // Cypress
+      "cypress/globals": true,
     },
     ignorePatterns: [
-      "**/node_modules/**/*",
-      "**/dist/**/*",
-      "**/bin/**/*",
-      "**/build/**/*",
-      "**/docs/tests/**/*",
-      "tsconfig.json"
+      "node_modules/**",
+      "dist/**",
+      "bin/**",
+      "build/**",
+      "docs/tests/**",
+      "vendor/**",
+      "tsconfig.*",
+      "\.eslintrc.*"
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
+      ecmaVersion: 2022,
       ecmaFeatures: {
         "jsx": true,
       },
-      requireConfigFile: false,
-      sourceType: "module",
+      extraFileExtensions: [".json"],
     },
+    root: true,
     settings: {
-      "node": {
-        "tryExtensions": [".js", ".json", ".node"],
+      node: {
+        paths: ["/src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        tryExtensions: [".ts", ".tsx", ".js", ".json", ".node"],
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
       "import/resolver": {
+        node: {
+          "extensions": [".js", ".jsx", ".ts", ".tsx", ".node"],
+        },
         typescript: {
           alwaysTryTypes: true,
         },
+        webpack: true,
       },
       jest: {
         version: 26,
@@ -93,12 +151,31 @@ export const defaultOptions: ESLint.Options = {
         extends: typescriptConfigs,
         parserOptions: {
           project: ["/tsconfig.json"],
-          sourceType: "module",
+        },
+        rules: {
+          // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
+          "constructor-super": "off",
+          "getter-return": "off",
+          "no-const-assign": "off",
+          "no-dupe-args": "off",
+          "no-dupe-class-members": "off",
+          "no-dupe-keys": "off",
+          "no-func-assign": "off",
+          "no-import-assign": "off",
+          "no-new-symbol": "off",
+          "no-obj-calls": "off",
+          "no-redeclare": "off",
+          "no-setter-return": "off",
+          "no-this-before-super": "off",
+          "no-undef": "off",
+          "no-unreachable": "off",
+          "no-unsafe-negation": "off",
         },
       },
       {
-        files: ["**/*.js", "**/*.json"],
+        files: ["**/*.js", "**/*.jsx", "**/*.json"],
         rules: {
+          // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/disable-type-checked.ts
           "@typescript-eslint/await-thenable": "off",
           "@typescript-eslint/consistent-type-exports": "off",
           "@typescript-eslint/dot-notation": "off",
@@ -144,15 +221,15 @@ export const defaultOptions: ESLint.Options = {
           "@typescript-eslint/strict-boolean-expressions": "off",
           "@typescript-eslint/switch-exhaustiveness-check": "off",
           "@typescript-eslint/unbound-method": "off",
-          "deprecation/deprecation": "off"
+          "deprecation/deprecation": "off",
         },
       },
       {
         files: ["**/*.vue"],
-        parser: require.resolve("vue-eslint-parser"),
+        parser: "vue-eslint-parser",
         parserOptions: {
-          ecmaVersion: 2020,
-          sourceType: "module",
+          parser: "@typescript-eslint/parser",
+          ecmaVersion: 2022,
         },
       },
       {
@@ -162,14 +239,15 @@ export const defaultOptions: ESLint.Options = {
           babelOptions: {
             presets: ["@babel/preset-react"],
           },
+          requireConfigFile: false,
         },
       },  
       {
-        files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-        extends: ['plugin:testing-library/react'],
+        files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+        extends: ["plugin:testing-library/react"],
       },
     ],
   },
 }
 
-export const defaultEngine = new ESLint(defaultOptions)
+//export const defaultEngine = new ESLint(defaultOptions)

@@ -1144,7 +1144,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowObjectPatternsAsParameters",
+        "description": "allowObjectPatternsAsParameters"
+      }
+    ],
     "patternId": "no-empty-pattern",
     "title": "No empty pattern",
     "description": "Disallow empty destructuring patterns",
@@ -2560,7 +2565,7 @@
     "parameters": [],
     "patternId": "require-unicode-regexp",
     "title": "Require unicode regexp",
-    "description": "Enforce the use of `u` flag on RegExp",
+    "description": "Enforce the use of `u` or `v` flag on RegExp",
     "timeToFix": 5
   },
   {
@@ -3103,9 +3108,32 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_prefer-standalone-component",
+    "title": "@angular eslint: Prefer standalone component",
+    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_relative-url-prefix",
     "title": "@angular eslint: Relative url prefix",
     "description": "The ./ and ../ prefix is standard syntax for relative URLs; don't depend on Angular's current ability to do without that prefix. See more at https://angular.io/styleguide#style-05-04",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requireDescription",
+        "description": "requireDescription"
+      },
+      {
+        "name": "requireMeaning",
+        "description": "requireMeaning"
+      }
+    ],
+    "patternId": "@angular-eslint_require-localize-metadata",
+    "title": "@angular eslint: Require localize metadata",
+    "description": "Ensures that $localize tagged messages contain helpful metadata to aid with translations.",
     "timeToFix": 5
   },
   {
@@ -3618,6 +3646,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "enforceForClassFields",
+        "description": "enforceForClassFields"
+      }
+    ],
+    "patternId": "@typescript-eslint_class-methods-use-this",
+    "title": "@typescript eslint: Class methods use this",
+    "description": "Enforce that class methods utilize `this`",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_comma-dangle",
     "title": "@typescript eslint: Comma dangle",
@@ -3878,18 +3918,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "includeExports",
-        "description": "includeExports"
-      }
-    ],
-    "patternId": "@typescript-eslint_no-duplicate-imports",
-    "title": "@typescript eslint: No duplicate imports",
-    "description": "Disallow duplicate imports",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_no-duplicate-type-constituents",
     "title": "@typescript eslint: No duplicate type constituents",
@@ -3964,13 +3992,6 @@
     "patternId": "@typescript-eslint_no-for-in-array",
     "title": "@typescript eslint: No for in array",
     "description": "Disallow iterating over an array with a for-in loop",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-implicit-any-catch",
-    "title": "@typescript eslint: No implicit any catch",
-    "description": "Disallow usage of the implicit `any` type in catch clauses",
     "timeToFix": 5
   },
   {
@@ -4403,7 +4424,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_prefer-nullish-coalescing",
     "title": "@typescript eslint: Prefer nullish coalescing",
-    "description": "Enforce using the nullish coalescing operator instead of logical chaining",
+    "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining",
     "timeToFix": 5
   },
   {
@@ -4523,13 +4544,6 @@
     "patternId": "@typescript-eslint_sort-type-constituents",
     "title": "@typescript eslint: Sort type constituents",
     "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-union-intersection-members",
-    "title": "@typescript eslint: Sort type union intersection members",
-    "description": "Enforce members of a type union/intersection to be sorted alphabetically",
     "timeToFix": 5
   },
   {
@@ -4957,6 +4971,118 @@
   },
   {
     "parameters": [],
+    "patternId": "awscdk_require-bucket-encryption",
+    "title": "Awscdk: Require bucket encryption",
+    "description": "Encryption should be enabled for all S3 buckets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-private",
+    "title": "Awscdk: Require bucket private",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-public-ingress",
+    "title": "Awscdk: No public ingress",
+    "description": "Security Group rules should not allow access from anywhere",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-star-actions",
+    "title": "Awscdk: No iam star actions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-iam-admin-permissions",
+    "title": "Awscdk: No iam admin permissions",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-policy-allow-kms-decrypt",
+    "title": "Awscdk: No policy allow kms decrypt",
+    "description": "Buckets should not be public",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-bucket-ssl",
+    "title": "Awscdk: Require bucket ssl",
+    "description": "This checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-ptr",
+    "title": "Awscdk: Require dynamodb ptr",
+    "description": "DynamoDB tables should have point-in-time recovery enabled.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-sns-topic-encryption",
+    "title": "Awscdk: Require sns topic encryption",
+    "description": "SNS Topics should be encrypted at rest using AWS KMS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-dynamodb-autoscale",
+    "title": "Awscdk: Require dynamodb autoscale",
+    "description": "This control passes if the table uses either on-demand capacity mode or provisioned mode\n      with auto scaling configured.\n\n      Scaling capacity with demand avoids throttling exceptions, which helps to maintain availability of your applications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-rds-public-access",
+    "title": "Awscdk: No rds public access",
+    "description": "AWS RDS instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-kms-key-delete",
+    "title": "Awscdk: No kms key delete",
+    "description": "KMS Keys should not be scheduled for deletion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-write",
+    "title": "Awscdk: No s3 public write",
+    "description": "Buckets should not allow public write access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-s3-public-read",
+    "title": "Awscdk: No s3 public read",
+    "description": "Buckets should not allow public read access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_require-cloudfront-default-root-object",
+    "title": "Awscdk: Require cloudfront default root object",
+    "description": "This control checks whether an Amazon CloudFront distribution is configured to return a specific object that is the default root object.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "awscdk_no-redshift-public-access",
+    "title": "Awscdk: No redshift public access",
+    "description": "AWS Redshift instances should not be publicly available",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "backbone_collection-model",
     "title": "Backbone: Collection model",
     "description": "Require all collections to declare model",
@@ -5090,6 +5216,69 @@
   },
   {
     "parameters": [],
+    "patternId": "cdk_ban-lambda-runtimes",
+    "title": "Cdk: Ban lambda runtimes",
+    "description": "Bans specific lambda runtimes from being used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_ban-reserved-words",
+    "title": "Cdk: Ban reserved words",
+    "description": "Bans specific words from being used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_construct-ctor",
+    "title": "Cdk: Construct ctor",
+    "description": "Ensure a uniform construct constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_filename-match-regex",
+    "title": "Cdk: Filename match regex",
+    "description": "Enforces all linted files to match a certain pattern",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_no-static-import",
+    "title": "Cdk: No static import",
+    "description": "Enforce cdk guidelines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_construct-props-struct-name",
+    "title": "Cdk: Construct props struct name",
+    "description": "Ensure a uniform construct constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_public-static-property-all-caps",
+    "title": "Cdk: Public static property all caps",
+    "description": "Enforces all static properties must be named using ALL_CAPS",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_stack-props-struct-name",
+    "title": "Cdk: Stack props struct name",
+    "description": "Ensure a uniform stack constructors signature",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cdk_prefer-type-only-imports",
+    "title": "Cdk: Prefer type only imports",
+    "description": "Enforce type only imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "chai-expect_no-inner-compare",
     "title": "Chai expect: No inner compare",
     "timeToFix": 5
@@ -5126,9 +5315,48 @@
   },
   {
     "parameters": [],
+    "patternId": "codeceptjs_no-actor-in-scenario",
+    "title": "Codeceptjs: No actor in scenario",
+    "description": "Disallow the use of Actor directly in Scenarios in favor of page objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-exclusive-tests",
+    "title": "Codeceptjs: No exclusive tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-skipped-tests",
+    "title": "Codeceptjs: No skipped tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "codeceptjs_no-pause-in-scenario",
+    "title": "Codeceptjs: No pause in scenario",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "compat_compat",
     "title": "Compat: Compat",
     "description": "Ensure cross-browser API compatibility",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "css-modules_no-unused-class",
+    "title": "Css modules: No unused class",
+    "description": "Checks that you are using all css/scss/less classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "css-modules_no-undef-class",
+    "title": "Css modules: No undef class",
+    "description": "Checks that you are using the existent css/scss/less classes",
     "timeToFix": 5
   },
   {
@@ -5139,7 +5367,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "methods",
+        "description": "methods"
+      }
+    ],
     "patternId": "cypress_unsafe-to-chain-command",
     "title": "Cypress: Unsafe to chain command",
     "description": "Actions should be in the end of chains, not in the middle",
@@ -7104,6 +7337,13 @@
   },
   {
     "parameters": [],
+    "patternId": "es-x_no-regexp-v-flag",
+    "title": "Es x: No regexp v flag",
+    "description": "Disallow RegExp `v` flag.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "es-x_no-regexp-y-flag",
     "title": "Es x: No regexp y flag",
     "description": "Disallow RegExp `y` flag.",
@@ -7442,7 +7682,7 @@
     "parameters": [],
     "patternId": "eslint-plugin_prefer-message-ids",
     "title": "Eslint plugin: Prefer message ids",
-    "description": "Require using `messageId` instead of `message` to report rule violations",
+    "description": "Require using `messageId` instead of `message` or `desc` to report rule violations",
     "timeToFix": 5
   },
   {
@@ -10206,6 +10446,30 @@
   },
   {
     "parameters": [],
+    "patternId": "jsx_uses-factory",
+    "title": "Jsx: Uses factory",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_factory-in-scope",
+    "title": "Jsx: Factory in scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_mark-used-vars",
+    "title": "Jsx: Mark used vars",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsx_no-undef",
+    "title": "Jsx: No undef",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsx-a11y_accessible-emoji",
     "title": "Jsx a11y: Accessible emoji",
     "description": "Enforce emojis are wrapped in `<span>` and provide screenreader access.",
@@ -10506,6 +10770,13 @@
     "patternId": "lit_binding-positions",
     "title": "Lit: Binding positions",
     "description": "Disallows invalid binding positions in templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_lifecycle-super",
+    "title": "Lit: Lifecycle super",
+    "description": "Enforces calling `super` in lifecycle methods",
     "timeToFix": 5
   },
   {
@@ -11278,6 +11549,289 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "n_callback-return",
+    "title": "N: Callback return",
+    "description": "Require `return` statements after callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_exports-style",
+    "title": "N: Exports style",
+    "description": "Enforce either `module.exports` or `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_file-extension-in-import",
+    "title": "N: File extension in import",
+    "description": "Enforce the style of file extensions in `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_global-require",
+    "title": "N: Global require",
+    "description": "Require `require()` calls to be placed at top-level module scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_handle-callback-err",
+    "title": "N: Handle callback err",
+    "description": "Require error handling in callbacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-callback-literal",
+    "title": "N: No callback literal",
+    "description": "Enforce Node.js-style error-first callback pattern is followed",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-deprecated-api",
+    "title": "N: No deprecated api",
+    "description": "Disallow deprecated APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-exports-assign",
+    "title": "N: No exports assign",
+    "description": "Disallow the assignment to `exports`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-extraneous-import",
+    "title": "N: No extraneous import",
+    "description": "Disallow `import` declarations which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-extraneous-require",
+    "title": "N: No extraneous require",
+    "description": "Disallow `require()` expressions which import extraneous modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-missing-import",
+    "title": "N: No missing import",
+    "description": "Disallow `import` declarations which import non-existence modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-missing-require",
+    "title": "N: No missing require",
+    "description": "Disallow `require()` expressions which import non-existence modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-mixed-requires",
+    "title": "N: No mixed requires",
+    "description": "Disallow `require` calls to be mixed with regular variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-new-require",
+    "title": "N: No new require",
+    "description": "Disallow `new` operators with calls to `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-path-concat",
+    "title": "N: No path concat",
+    "description": "Disallow string concatenation with `__dirname` and `__filename`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-process-env",
+    "title": "N: No process env",
+    "description": "Disallow the use of `process.env`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-process-exit",
+    "title": "N: No process exit",
+    "description": "Disallow the use of `process.exit()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-restricted-import",
+    "title": "N: No restricted import",
+    "description": "Disallow specified modules when loaded by `import` declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-restricted-require",
+    "title": "N: No restricted require",
+    "description": "Disallow specified modules when loaded by `require`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAtRootLevel",
+        "description": "allowAtRootLevel"
+      }
+    ],
+    "patternId": "n_no-sync",
+    "title": "N: No sync",
+    "description": "Disallow synchronous methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unpublished-bin",
+    "title": "N: No unpublished bin",
+    "description": "Disallow `bin` files that npm ignores",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreTypeImport",
+        "description": "ignoreTypeImport"
+      }
+    ],
+    "patternId": "n_no-unpublished-import",
+    "title": "N: No unpublished import",
+    "description": "Disallow `import` declarations which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unpublished-require",
+    "title": "N: No unpublished require",
+    "description": "Disallow `require()` expressions which import private modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_es-builtins",
+    "title": "N: [No unsupported features] Es builtins",
+    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_es-syntax",
+    "title": "N: [No unsupported features] Es syntax",
+    "description": "Disallow unsupported ECMAScript syntax on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features_node-builtins",
+    "title": "N: [No unsupported features] Node builtins",
+    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_buffer",
+    "title": "N: [Prefer global] Buffer",
+    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_console",
+    "title": "N: [Prefer global] Console",
+    "description": "Enforce either `console` or `require(\"console\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_process",
+    "title": "N: [Prefer global] Process",
+    "description": "Enforce either `process` or `require(\"process\")`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_text-decoder",
+    "title": "N: [Prefer global] Text decoder",
+    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_text-encoder",
+    "title": "N: [Prefer global] Text encoder",
+    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_url-search-params",
+    "title": "N: [Prefer global] Url search params",
+    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-global_url",
+    "title": "N: [Prefer global] Url",
+    "description": "Enforce either `URL` or `require(\"url\").URL`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-promises_dns",
+    "title": "N: [Prefer promises] Dns",
+    "description": "Enforce `require(\"dns\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_prefer-promises_fs",
+    "title": "N: [Prefer promises] Fs",
+    "description": "Enforce `require(\"fs\").promises`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_process-exit-as-throw",
+    "title": "N: Process exit as throw",
+    "description": "Require that `process.exit()` expressions use the same code path as `throw`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_shebang",
+    "title": "N: Shebang",
+    "description": "Require correct usage of shebang",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-hide-core-modules",
+    "title": "N: No hide core modules",
+    "description": "Disallow third-party modules which are hiding core modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "n_no-unsupported-features",
+    "title": "N: No unsupported features",
+    "description": "Disallow unsupported ECMAScript features on the specified version",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "block",
@@ -11309,277 +11863,6 @@
     "patternId": "no-unsanitized_method",
     "title": "No unsanitized: Method",
     "description": "ESLint rule to disallow unsanitized method calls",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_callback-return",
-    "title": "Node: Callback return",
-    "description": "Require `return` statements after callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_exports-style",
-    "title": "Node: Exports style",
-    "description": "Enforce either `module.exports` or `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_file-extension-in-import",
-    "title": "Node: File extension in import",
-    "description": "Enforce the style of file extensions in `import` declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_global-require",
-    "title": "Node: Global require",
-    "description": "Require `require()` calls to be placed at top-level module scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_handle-callback-err",
-    "title": "Node: Handle callback err",
-    "description": "Require error handling in callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-callback-literal",
-    "title": "Node: No callback literal",
-    "description": "Ensure Node.js-style error-first callback pattern is followed",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-deprecated-api",
-    "title": "Node: No deprecated api",
-    "description": "Disallow deprecated APIs",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-exports-assign",
-    "title": "Node: No exports assign",
-    "description": "Disallow the assignment to `exports`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-import",
-    "title": "Node: No extraneous import",
-    "description": "Disallow `import` declarations which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-extraneous-require",
-    "title": "Node: No extraneous require",
-    "description": "Disallow `require()` expressions which import extraneous modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-missing-import",
-    "title": "Node: No missing import",
-    "description": "Disallow `import` declarations which import non-existence modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-mixed-requires",
-    "title": "Node: No mixed requires",
-    "description": "Disallow `require` calls to be mixed with regular variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-new-require",
-    "title": "Node: No new require",
-    "description": "Disallow `new` operators with calls to `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-path-concat",
-    "title": "Node: No path concat",
-    "description": "Disallow string concatenation with `__dirname` and `__filename`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-env",
-    "title": "Node: No process env",
-    "description": "Disallow the use of `process.env`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-process-exit",
-    "title": "Node: No process exit",
-    "description": "Disallow the use of `process.exit()`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-import",
-    "title": "Node: No restricted import",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-restricted-require",
-    "title": "Node: No restricted require",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAtRootLevel",
-        "description": "allowAtRootLevel"
-      }
-    ],
-    "patternId": "node_no-sync",
-    "title": "Node: No sync",
-    "description": "Disallow synchronous methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-bin",
-    "title": "Node: No unpublished bin",
-    "description": "Disallow `bin` files that npm ignores",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-import",
-    "title": "Node: No unpublished import",
-    "description": "Disallow `import` declarations which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unpublished-require",
-    "title": "Node: No unpublished require",
-    "description": "Disallow `require()` expressions which import private modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-builtins",
-    "title": "Node: [No unsupported features] Es builtins",
-    "description": "Disallow unsupported ECMAScript built-ins on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_es-syntax",
-    "title": "Node: [No unsupported features] Es syntax",
-    "description": "Disallow unsupported ECMAScript syntax on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features_node-builtins",
-    "title": "Node: [No unsupported features] Node builtins",
-    "description": "Disallow unsupported Node.js built-in APIs on the specified version",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_buffer",
-    "title": "Node: [Prefer global] Buffer",
-    "description": "Enforce either `Buffer` or `require(\"buffer\").Buffer`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_console",
-    "title": "Node: [Prefer global] Console",
-    "description": "Enforce either `console` or `require(\"console\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_process",
-    "title": "Node: [Prefer global] Process",
-    "description": "Enforce either `process` or `require(\"process\")`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-decoder",
-    "title": "Node: [Prefer global] Text decoder",
-    "description": "Enforce either `TextDecoder` or `require(\"util\").TextDecoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_text-encoder",
-    "title": "Node: [Prefer global] Text encoder",
-    "description": "Enforce either `TextEncoder` or `require(\"util\").TextEncoder`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url-search-params",
-    "title": "Node: [Prefer global] Url search params",
-    "description": "Enforce either `URLSearchParams` or `require(\"url\").URLSearchParams`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-global_url",
-    "title": "Node: [Prefer global] Url",
-    "description": "Enforce either `URL` or `require(\"url\").URL`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_dns",
-    "title": "Node: [Prefer promises] Dns",
-    "description": "Enforce `require(\"dns\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_prefer-promises_fs",
-    "title": "Node: [Prefer promises] Fs",
-    "description": "Enforce `require(\"fs\").promises`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_process-exit-as-throw",
-    "title": "Node: Process exit as throw",
-    "description": "Make `process.exit()` expressions the same code path as `throw`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_shebang",
-    "title": "Node: Shebang",
-    "description": "Suggest correct usage of shebang",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-hide-core-modules",
-    "title": "Node: No hide core modules",
-    "description": "Disallow third-party modules which are hiding core modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "node_no-unsupported-features",
-    "title": "Node: No unsupported features",
-    "description": "Disallow unsupported ECMAScript features on the specified version",
     "timeToFix": 5
   },
   {
@@ -12120,6 +12403,13 @@
   },
   {
     "parameters": [],
+    "patternId": "prefer-arrow_prefer-arrow-functions",
+    "title": "Prefer arrow: Prefer arrow functions",
+    "description": "Prefer arrow functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "prefer-object-spread_prefer-object-spread",
     "title": "Prefer object spread: Prefer object spread",
     "description": "Use a spread property instead of Object.assign().",
@@ -12221,63 +12511,6 @@
     "parameters": [],
     "patternId": "promise_no-multiple-resolved",
     "title": "Promise: No multiple resolved",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-hooks_rules-of-hooks",
-    "title": "React hooks: Rules of hooks",
-    "description": "Enforces the Rules of Hooks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-hooks_exhaustive-deps",
-    "title": "React hooks: Exhaustive deps",
-    "description": "Verifies the list of dependencies for Hooks like useEffect and similar",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-unused-styles",
-    "title": "React native: No unused styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-inline-styles",
-    "title": "React native: No inline styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-color-literals",
-    "title": "React native: No color literals",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_sort-styles",
-    "title": "React native: Sort styles",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_split-platform-components",
-    "title": "React native: Split platform components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-raw-text",
-    "title": "React native: No raw text",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "react-native_no-single-element-style-arrays",
-    "title": "React native: No single element style arrays",
-    "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
     "timeToFix": 5
   },
   {
@@ -12771,6 +13004,135 @@
     "patternId": "react_void-dom-elements-no-children",
     "title": "React: Void dom elements no children",
     "description": "Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving children",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-hooks_rules-of-hooks",
+    "title": "React hooks: Rules of hooks",
+    "description": "Enforces the Rules of Hooks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-hooks_exhaustive-deps",
+    "title": "React hooks: Exhaustive deps",
+    "description": "Verifies the list of dependencies for Hooks like useEffect and similar",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-unused-styles",
+    "title": "React native: No unused styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-inline-styles",
+    "title": "React native: No inline styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-color-literals",
+    "title": "React native: No color literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_sort-styles",
+    "title": "React native: Sort styles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_split-platform-components",
+    "title": "React native: Split platform components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-raw-text",
+    "title": "React native: No raw text",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native_no-single-element-style-arrays",
+    "title": "React native: No single element style arrays",
+    "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_connect-prefer-minimum-two-arguments",
+    "title": "React redux: Connect prefer minimum two arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_connect-prefer-named-arguments",
+    "title": "React redux: Connect prefer named arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-prefer-shorthand",
+    "title": "React redux: MapDispatchToProps prefer shorthand",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-returns-object",
+    "title": "React redux: MapDispatchToProps returns object",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapDispatchToProps-prefer-parameters-names",
+    "title": "React redux: MapDispatchToProps prefer parameters names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-no-store",
+    "title": "React redux: MapStateToProps no store",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-hoisted",
+    "title": "React redux: MapStateToProps prefer hoisted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-parameters-names",
+    "title": "React redux: MapStateToProps prefer parameters names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_mapStateToProps-prefer-selectors",
+    "title": "React redux: MapStateToProps prefer selectors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_useSelector-prefer-selectors",
+    "title": "React redux: UseSelector prefer selectors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_no-unused-prop-types",
+    "title": "React redux: No unused prop types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-redux_prefer-separate-component-file",
+    "title": "React redux: Prefer separate component file",
     "timeToFix": 5
   },
   {
@@ -13409,222 +13771,6 @@
   },
   {
     "parameters": [],
-    "patternId": "scanjs-rules_accidental__assignment",
-    "title": "Scanjs rules: Accidental_assignment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__hostname",
-    "title": "Scanjs rules: Assign_to_hostname",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__href",
-    "title": "Scanjs rules: Assign_to_href",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__location",
-    "title": "Scanjs rules: Assign_to_location",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__onmessage",
-    "title": "Scanjs rules: Assign_to_onmessage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__pathname",
-    "title": "Scanjs rules: Assign_to_pathname",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__protocol",
-    "title": "Scanjs rules: Assign_to_protocol",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__search",
-    "title": "Scanjs rules: Assign_to_search",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_assign__to__src",
-    "title": "Scanjs rules: Assign_to_src",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__Function",
-    "title": "Scanjs rules: Call_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener",
-    "title": "Scanjs rules: Call_addEventListener",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener__deviceproximity",
-    "title": "Scanjs rules: Call_addEventListener_deviceproximity",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__addEventListener__message",
-    "title": "Scanjs rules: Call_addEventListener_message",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__connect",
-    "title": "Scanjs rules: Call_connect",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__eval",
-    "title": "Scanjs rules: Call_eval",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__execScript",
-    "title": "Scanjs rules: Call_execScript",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__hide",
-    "title": "Scanjs rules: Call_hide",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__open__remote=true",
-    "title": "Scanjs rules: Call_open_remote=true",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__parseFromString",
-    "title": "Scanjs rules: Call_parseFromString",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setAttribute__mozbrowser",
-    "title": "Scanjs rules: Call_setAttribute_mozbrowser",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setImmediate",
-    "title": "Scanjs rules: Call_setImmediate",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setInterval",
-    "title": "Scanjs rules: Call_setInterval",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_call__setTimeout",
-    "title": "Scanjs rules: Call_setTimeout",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__indexedDB",
-    "title": "Scanjs rules: Identifier_indexedDB",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__localStorage",
-    "title": "Scanjs rules: Identifier_localStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_identifier__sessionStorage",
-    "title": "Scanjs rules: Identifier_sessionStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_new__Function",
-    "title": "Scanjs rules: New_Function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__addIdleObserver",
-    "title": "Scanjs rules: Property_addIdleObserver",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__createContextualFragment",
-    "title": "Scanjs rules: Property_createContextualFragment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__crypto",
-    "title": "Scanjs rules: Property_crypto",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__geolocation",
-    "title": "Scanjs rules: Property_geolocation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__getUserMedia",
-    "title": "Scanjs rules: Property_getUserMedia",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__indexedDB",
-    "title": "Scanjs rules: Property_indexedDB",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__localStorage",
-    "title": "Scanjs rules: Property_localStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__mgmt",
-    "title": "Scanjs rules: Property_mgmt",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "scanjs-rules_property__sessionStorage",
-    "title": "Scanjs rules: Property_sessionStorage",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
     "description": "Detects potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.",
@@ -13723,6 +13869,172 @@
   },
   {
     "parameters": [],
+    "patternId": "security-node_detect-absence-of-name-option-in-exrpress-session",
+    "title": "Security node: Detect absence of name option in exrpress session",
+    "description": "Detect the absence of name option in express session",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-buffer-unsafe-allocation",
+    "title": "Security node: Detect buffer unsafe allocation",
+    "description": "Buffer.allocUnsafe(size) is not safe and should not be used",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-child-process",
+    "title": "Security node: Detect child process",
+    "description": "Detect exec with non Literal argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-crlf",
+    "title": "Security node: Detect crlf",
+    "description": "Detect log forging attack ",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-dangerous-redirects",
+    "title": "Security node: Detect dangerous redirects",
+    "description": "Detect dangerous redirects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-eval-with-expr",
+    "title": "Security node: Detect eval with expr",
+    "description": "Detect eval with string concatenation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-html-injection",
+    "title": "Security node: Detect html injection",
+    "description": "Detect html injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-improper-exception-handling",
+    "title": "Security node: Detect improper exception handling",
+    "description": "Rule that detects improper exception handling",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-insecure-randomness",
+    "title": "Security node: Detect insecure randomness",
+    "description": "Detect insecure randomness via Math.random()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-non-literal-require-calls",
+    "title": "Security node: Detect non literal require calls",
+    "description": "Non literal require calls may cause an attack",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-nosql-injection",
+    "title": "Security node: Detect nosql injection",
+    "description": "Detect NOsql injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-multiplestatements-in-mysql",
+    "title": "Security node: Detect option multiplestatements in mysql",
+    "description": "Detect option mulitpleStatements:true in createConnection method of mysql",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-rejectunauthorized-in-nodejs-httpsrequest",
+    "title": "Security node: Detect option rejectunauthorized in nodejs httpsrequest",
+    "description": "Detect option rejectUnauthorized:false in Nodejs https request method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-option-unsafe-in-serialize-javascript-npm-package",
+    "title": "Security node: Detect option unsafe in serialize javascript npm package",
+    "description": "Detect opion:unsafe in serialize method in serialize-javasript npm package",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-possible-timing-attacks",
+    "title": "Security node: Detect possible timing attacks",
+    "description": "Detect possible timing attacks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-runinthiscontext-method-in-nodes-vm",
+    "title": "Security node: Detect runinthiscontext method in nodes vm",
+    "description": "Detect vm.runInThisContext() method in nodes vm with non Literal argument",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-security-missconfiguration-cookie",
+    "title": "Security node: Detect security missconfiguration cookie",
+    "description": "Detect security missconfiguration in express cookie",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-sql-injection",
+    "title": "Security node: Detect sql injection",
+    "description": "Detect SQL injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-unhandled-event-errors",
+    "title": "Security node: Detect unhandled event errors",
+    "description": "Require listening to errors when using EventEmitter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_detect-unhandled-async-errors",
+    "title": "Security node: Detect unhandled async errors",
+    "description": "Handle errors in asynchronous calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_disable-ssl-across-node-server",
+    "title": "Security node: Disable ssl across node server",
+    "description": "Process.env.NODE_TLS_REJECT_UNAUTHORIZED='0' disables SSL across node server!",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "security-node_non-literal-reg-expr",
+    "title": "Security node: Non literal reg expr",
+    "description": "Non literal regural expressions may cause possible attack",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "simple-import-sort_imports",
+    "title": "Simple import sort: Imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "simple-import-sort_exports",
+    "title": "Simple import sort: Exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "sonarjs_cognitive-complexity",
     "title": "Sonarjs: Cognitive complexity",
     "description": "Cognitive Complexity of functions should not be too high",
@@ -13764,7 +14076,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignoreStrings",
+        "description": "ignoreStrings"
+      }
+    ],
     "patternId": "sonarjs_no-duplicate-string",
     "title": "Sonarjs: No duplicate string",
     "description": "String literals should not be duplicated",
@@ -13974,9 +14291,22 @@
   },
   {
     "parameters": [],
+    "patternId": "sort-keys-custom-order-fix_sort-keys-custom-order-fix",
+    "title": "Sort keys custom order fix: Sort keys custom order fix",
+    "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "sort-keys-fix_sort-keys-fix",
     "title": "Sort keys fix: Sort keys fix",
     "description": "Require object keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "sorting_sort-object-props",
+    "title": "Sorting: Sort object props",
     "timeToFix": 5
   },
   {
@@ -14135,6 +14465,66 @@
   },
   {
     "parameters": [],
+    "patternId": "suitescript_script-type",
+    "title": "Suitescript: Script type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_api-version",
+    "title": "Suitescript: Api version",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-invalid-modules",
+    "title": "Suitescript: No invalid modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-extra-modules",
+    "title": "Suitescript: No extra modules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-log-module",
+    "title": "Suitescript: No log module",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_log-args",
+    "title": "Suitescript: Log args",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_module-vars",
+    "title": "Suitescript: Module vars",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-amd-name",
+    "title": "Suitescript: No amd name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_entry-points",
+    "title": "Suitescript: Entry points",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "suitescript_no-module-extensions",
+    "title": "Suitescript: No module extensions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "tailwindcss_classnames-order",
     "title": "Tailwindcss: Classnames order",
     "description": "Enforce a consistent and logical order of the Tailwind CSS classnames",
@@ -14236,6 +14626,25 @@
     "patternId": "test-selectors_onSubmit",
     "title": "Test selectors: OnSubmit",
     "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "tsdoc_syntax",
+    "title": "Tsdoc: Syntax",
+    "description": "Validates that TypeScript documentation comments conform to the TSDoc standard",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowList",
+        "description": "allowList"
+      }
+    ],
+    "patternId": "turbo_no-undeclared-env-vars",
+    "title": "Turbo: No undeclared env vars",
+    "description": "Do not allow the use of `process.env` without including the env key in any turbo.json",
     "timeToFix": 5
   },
   {
@@ -14594,13 +15003,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-unsafe-regex",
-    "title": "Unicorn: No unsafe regex",
-    "description": "Disallow unsafe regular expressions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unicorn_no-unused-properties",
     "title": "Unicorn: No unused properties",
     "description": "Disallow unused object properties.",
@@ -14746,6 +15148,12 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-unsafe-regex",
+    "title": "Unicorn: No unsafe regex",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unused-imports_no-unused-vars",
     "title": "Unused imports: No unused vars",
     "description": "Disallow unused variables",
@@ -14814,6 +15222,13 @@
     "patternId": "vue_block-lang",
     "title": "Vue: Block lang",
     "description": "Disallow use other than available `lang`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_block-order",
+    "title": "Vue: Block order",
+    "description": "Enforce order of component top-level elements",
     "timeToFix": 5
   },
   {
@@ -15333,6 +15748,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-deprecated-model-definition",
+    "title": "Vue: No deprecated model definition",
+    "description": "Disallow deprecated `model` definition (in Vue.js 3.0.0+)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-deprecated-props-default-this",
     "title": "Vue: No deprecated props default this",
     "description": "Disallow deprecated `this` access in props default function (in Vue.js 3.0.0+)",
@@ -15437,7 +15859,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowObjectPatternsAsParameters",
+        "description": "allowObjectPatternsAsParameters"
+      }
+    ],
     "patternId": "vue_no-empty-pattern",
     "title": "Vue: No empty pattern",
     "description": "Disallow empty destructuring patterns in `<template>`",
@@ -15584,7 +16011,14 @@
     "parameters": [],
     "patternId": "vue_no-ref-object-destructure",
     "title": "Vue: No ref object destructure",
-    "description": "Disallow destructuring of ref objects that can lead to loss of reactivity",
+    "description": "Disallow usages of ref objects that can lead to loss of reactivity",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-ref-object-reactivity-loss",
+    "title": "Vue: No ref object reactivity loss",
+    "description": "Disallow usages of ref objects that can lead to loss of reactivity",
     "timeToFix": 5
   },
   {
@@ -15703,7 +16137,14 @@
     "parameters": [],
     "patternId": "vue_no-setup-props-destructure",
     "title": "Vue: No setup props destructure",
-    "description": "Disallow destructuring of `props` passed to `setup`",
+    "description": "Disallow usages that lose the reactivity of `props` passed to `setup`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-setup-props-reactivity-loss",
+    "title": "Vue: No setup props reactivity loss",
+    "description": "Disallow usages that lose the reactivity of `props` passed to `setup`",
     "timeToFix": 5
   },
   {
@@ -15834,9 +16275,16 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-use-v-else-with-v-for",
+    "title": "Vue: No use v else with v for",
+    "description": "Disallow using `v-else-if`/`v-else` on the same element as `v-for`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-use-v-if-with-v-for",
     "title": "Vue: No use v if with v for",
-    "description": "Disallow use v-if on the same element as v-for",
+    "description": "Disallow using `v-if` on the same element as `v-for`",
     "timeToFix": 5
   },
   {
@@ -16168,6 +16616,13 @@
     "patternId": "vue_require-toggle-inside-transition",
     "title": "Vue: Require toggle inside transition",
     "description": "Require control the display of the content inside `<transition>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-typed-object-prop",
+    "title": "Vue: Require typed object prop",
+    "description": "Enforce adding type declarations to object props",
     "timeToFix": 5
   },
   {
@@ -16637,6 +17092,142 @@
     "patternId": "vue-scoped-css_v-slotted-pseudo-style",
     "title": "Vue scoped css: V slotted pseudo style",
     "description": "Enforce `:slotted()`/`::v-slotted()` style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_alt-text",
+    "title": "Vuejs accessibility: Alt text",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_anchor-has-content",
+    "title": "Vuejs accessibility: Anchor has content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_aria-props",
+    "title": "Vuejs accessibility: Aria props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": "ignoreNonDOM"
+      }
+    ],
+    "patternId": "vuejs-accessibility_aria-role",
+    "title": "Vuejs accessibility: Aria role",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_aria-unsupported-elements",
+    "title": "Vuejs accessibility: Aria unsupported elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_click-events-have-key-events",
+    "title": "Vuejs accessibility: Click events have key events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_form-control-has-label",
+    "title": "Vuejs accessibility: Form control has label",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_heading-has-content",
+    "title": "Vuejs accessibility: Heading has content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_iframe-has-title",
+    "title": "Vuejs accessibility: Iframe has title",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_interactive-supports-focus",
+    "title": "Vuejs accessibility: Interactive supports focus",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_label-has-for",
+    "title": "Vuejs accessibility: Label has for",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_media-has-caption",
+    "title": "Vuejs accessibility: Media has caption",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_mouse-events-have-key-events",
+    "title": "Vuejs accessibility: Mouse events have key events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-access-key",
+    "title": "Vuejs accessibility: No access key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreNonDOM",
+        "description": "ignoreNonDOM"
+      }
+    ],
+    "patternId": "vuejs-accessibility_no-autofocus",
+    "title": "Vuejs accessibility: No autofocus",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-distracting-elements",
+    "title": "Vuejs accessibility: No distracting elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-onchange",
+    "title": "Vuejs accessibility: No onchange",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-redundant-roles",
+    "title": "Vuejs accessibility: No redundant roles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-static-element-interactions",
+    "title": "Vuejs accessibility: No static element interactions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_role-has-required-aria-props",
+    "title": "Vuejs accessibility: Role has required aria props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_tabindex-no-positive",
+    "title": "Vuejs accessibility: Tabindex no positive",
     "timeToFix": 5
   },
   {
@@ -17286,6 +17877,42 @@
     "parameters": [],
     "patternId": "you-dont-need-lodash-underscore_is-function",
     "title": "You dont need lodash underscore: Is function",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_union-by",
+    "title": "You dont need lodash underscore: Union by",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_capitalize",
+    "title": "You dont need lodash underscore: Capitalize",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-date",
+    "title": "You dont need lodash underscore: Is date",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_defaults",
+    "title": "You dont need lodash underscore: Defaults",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_is-array-buffer",
+    "title": "You dont need lodash underscore: Is array buffer",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_head",
+    "title": "You dont need lodash underscore: Head",
     "timeToFix": 5
   }
 ]

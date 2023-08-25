@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<checkstyle version="4.3">
-<file name="example.js">
-    <error source="import_no-unresolved" line="1" message="Unable to resolve path to module 'react-native'." severity="info" />
-  </file>
-</checkstyle>
+<checkstyle version="4.3"></checkstyle>

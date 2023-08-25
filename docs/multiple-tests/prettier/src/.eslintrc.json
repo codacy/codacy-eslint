@@ -1,5 +1,5 @@
 {
-  "extends": ["@vue/prettier"],
+  "extends": ["@vue/eslint-config-prettier"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
