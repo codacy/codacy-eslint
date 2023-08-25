@@ -10,15 +10,13 @@ export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
 ): Promise<ToolResult[]> {
   debug("engine: starting")
-  //TODO: check .codacy.yaml for different sub_folder config
-  // dealt with codacy-analysis maybe?
+
   const srcDirPath = "/src"
   const tsconfigFile = "tsconfig.json"
-  const nFilesPerChunk = 10
+  //const nFilesPerChunk = 10
   const maxTotalSizeOfFilesPerChunk = 1048576 // size in bytes
 
-  //TODO: create file eslintrc options if it doesn't exist in root /src
-  const [options, files] = await configCreator(
+  const [options, files] = configCreator(
     srcDirPath,
     tsconfigFile,
     codacyrc
@@ -30,20 +28,17 @@ export const engineImpl: Engine = async function (
     debugJson(options)
   }
 
-  //TODO: chunk number of rules if the huge number returns errors
-  // have to check if this is actually throwing an error or not
   const eslint = new ESLint(options)
 
   //const chunksOfFiles = chunk(files, nFilesPerChunk)
   const chunksOfFiles = chunkFilesBySize(files, maxTotalSizeOfFilesPerChunk)
 
-  //TODO: RFC intercept results - try-catch - and check if there is some missing module
-  // then maybe try to install it on demand...? have to think about ui implications...
-  // - It opens a Pandora box for users to insert malicious code
   const lintResults = await lintChunksOfFiles(
       eslint,
       chunksOfFiles
     )
+
+  await debugLintResults(eslint, lintResults)
 
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
 }
@@ -54,7 +49,6 @@ async function lintChunksOfFiles(eslint: ESLint, chunksOfFiles: string[][]): Pro
   for (const chunkOfFiles of chunksOfFiles) {
     lintResults.push(...(await eslint.lintFiles(chunkOfFiles)))
   }
-  await debugLintResults(eslint, lintResults)
   debug("engine: linting chunks finished")
   return lintResults
 }

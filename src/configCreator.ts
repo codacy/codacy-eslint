@@ -8,12 +8,13 @@ import { toolName } from "./toolMetadata"
 import { existsSync } from "fs-extra"
 import {default as allPatterns} from "../docs/patterns.json"
 
-export async function configCreator(
+export function configCreator(
   srcDirPath: string,
   tsconfigFile: string,
   codacyrc?: Codacyrc
-): Promise<[ESLint.Options, string[]]> {
+): [ESLint.Options, string[]] {
   debug("config: creating")
+
   const defaultFilesToAnalyze = [
     srcDirPath + "/**/*.ts",
     srcDirPath + "/**/*.tsx",
@@ -21,95 +22,81 @@ export async function configCreator(
     srcDirPath + "/**/*.jsx"
   ]
 
-  //TODO: pass this result into optionsCreator mostly because of "options.useEslintrc"
-  const eslintrcExists = eslintrcExistsInSrcDir(srcDirPath)
-  const options = (codacyrc && eslintrcExists) ? {} : await optionsCreator(srcDirPath, tsconfigFile, codacyrc)
-  const files = codacyrc?.files.length > 0 ? codacyrc.files : defaultFilesToAnalyze
+  const options = (!eslintrcExistsInSrcDir(srcDirPath)) ? optionsCreator(srcDirPath, tsconfigFile, codacyrc) : {}
+  const files = codacyrc?.files?.length > 0 ? codacyrc.files : defaultFilesToAnalyze
 
   debug("config: finished")
 
   return [options, files]
 }
 
-async function optionsCreator(
+function optionsCreator(
   srcDirPath: string,
   tsconfigFile: string,
   codacyrc?: Codacyrc,
-): Promise<ESLint.Options> {
+): ESLint.Options {
   debug("options: creating")
 
   const eslintTool = codacyrc?.tools?.find((tool) => tool.name === toolName)
 
-  if (DEBUG) {
-    debug("options: with default settings")
-    debug("options: " + eslintTool?.patterns.length + " patterns to process")
-    for (const pattern of eslintTool?.patterns) {
+  if (DEBUG && eslintTool?.patterns) {
+    debug("options: " + eslintTool.patterns.length + " patterns to process")
+    for (const pattern of eslintTool.patterns) {
       debug("- " + pattern.patternId)
     }
   }
 
-  let options = cloneDeep(defaultOptions)
-  if (options.baseConfig) {
-    debug("using default options")
+  debug("cloning and reseting default options")
+  let options = removeExtendsOfBaseConfig(cloneDeep(defaultOptions))
 
-    // remove extends and overrides from our default config.
-    options.baseConfig.extends = []
-    if (!options.baseConfig.overrides) {
-      options.baseConfig.overrides = []
-    } else {
-      options.baseConfig.overrides?.forEach(
-        (override: any) => (override.extends = [])
-      )
+  if (existsSync(srcDirPath + "/" + tsconfigFile)) {
+    debug("options: change project tsconfig")
+    options.baseConfig.overrides[0].parserOptions.project = srcDirPath + "/" + tsconfigFile
+  }
+
+  if (eslintTool?.patterns?.length > 0) {
+    //TODO: move this logic to a generic (or specific) plugin function
+
+    // There are some plugins that their rules should only apply for
+    // some specific file types / files names. So when those are enabled
+    // explicitly we need to apply them with a bit of customization.
+    //
+    //   example: a rule for the storybook should only apply to files with
+    //            "story" or "stories" in the name. If enabled for all files it
+    //            reports false positives on normal files.
+    //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
+
+    const [storybookPatterns, otherPatterns] = partition(eslintTool?.patterns, (p: Pattern) =>
+      p.patternId.startsWith("storybook")
+    )
+
+    // configure override in case storybook plugin rules being turned on
+    if (storybookPatterns.length > 0) {
+      debug("options: setting " + storybookPatterns.length + " storybook patterns")
+      options.baseConfig.overrides.push({
+        files: [
+          "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
+          "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
+        ],
+        rules: patternsToRules(storybookPatterns),
+      })
     }
 
-    if (existsSync(srcDirPath + "/" + tsconfigFile)) {
-      debug("options: change project tsconfig")
-      options.baseConfig.overrides[0].parserOptions.project = srcDirPath + "/" + tsconfigFile
+    // explicitly use only the rules being passed by codacyrc overriding any others
+    if (otherPatterns.length > 0) {
+      debug("options: setting " + otherPatterns.length + " patterns")
+      options.baseConfig.rules = patternsToRules(otherPatterns)
     }
-
-    if (eslintTool?.patterns.length > 0) {
-      //TODO: move this logic to a generic (or specific) plugin function
-
-      // There are some plugins that their rules should only apply for
-      // some specific file types / files names. So when those are enabled
-      // explicitly we need to apply them with a bit of customization.
-      //
-      //   example: a rule for the storybook should only apply to files with
-      //            "story" or "stories" in the name. If enabled for all files it
-      //            reports false positives on normal files.
-      //            check: conf file @ eslint-plugin-storybook/configs/recommended.js
-
-      const [storybookPatterns, otherPatterns] = partition(eslintTool?.patterns, (p: Pattern) =>
-        p.patternId.startsWith("storybook")
-      )
-
-      // configure override in case storybook plugin rules being turned on
-      if (storybookPatterns.length > 0) {
-        debug("options: adding " + storybookPatterns.length + " storybook rules")
-        options.baseConfig.overrides.push({
-          files: [
-            "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-            "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
-          ],
-          rules: patternsToRules(storybookPatterns),
-        })
-      }
-
-      // explicitly use only the rules being passed by codacyrc overriding any others
-      if (otherPatterns.length > 0) {
-        debug("options: adding " + otherPatterns.length + " rules")
-        options.baseConfig.rules = patternsToRules(otherPatterns)
-      }
-    }
-    else if (DEBUG) {
-      options.baseConfig.rules = patternsToRules(getAllPatterns())
-    }
+  }
+  else if (DEBUG) {
+    const allPatterns = getAllPatterns()
+    debug("options: setting all " + allPatterns.length + " patterns")
+    options.baseConfig.rules = patternsToRules(allPatterns)
   }
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
   options.resolvePluginsRelativeTo = "/"
-  //TODO: take into consideration if there are config files in repo
-  options.useEslintrc = false
+  options.useEslintrc = (eslintTool?.patterns?.length === 0)
 
   debug("options: finished")
 
@@ -143,10 +130,9 @@ function patternsToRules(patterns: Pattern[]): {
   return fromPairs(pairs)
 }
 
-function eslintrcExistsInSrcDir(
-  srcDirPath: string
-): boolean {
+function eslintrcExistsInSrcDir(srcDirPath: string): boolean {
   debug("check-eslintrc: starting")
+
   const confFilenames = [
     ".eslintrc.js",
     ".eslintrc.cjs",
@@ -162,15 +148,12 @@ function eslintrcExistsInSrcDir(
     ".prettierrc.js"
   ]
 
-  //TODO: verify content of package.json for eslint config
   for (const filename of confFilenames) {
     if (existsSync(srcDirPath + "/" + filename)) {
       debug("check-eslintrc: found - \"" + srcDirPath + "/" + filename + "\"")
       return true
     }
   }
-
-  //TODO: check remaining file structure for some config file
 
   debug("check-eslintrc: not found")
   return false
@@ -199,4 +182,17 @@ function getAllPatterns(): Pattern[] {
 
   debug("options: returning " + patterns.length + " patterns")
   return patterns
+}
+
+function removeExtendsOfBaseConfig(options: ESLint.Options): ESLint.Options {
+  options.baseConfig.extends = []
+  if (!options.baseConfig.overrides) {
+    options.baseConfig.overrides = []
+  } else {
+    options.baseConfig.overrides?.forEach(
+      (override: any) => (override.extends = [])
+    )
+  }
+
+  return options
 }
