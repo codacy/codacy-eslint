@@ -1691,7 +1691,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowVoid",
+        "description": "allowVoid"
+      }
+    ],
     "patternId": "no-promise-executor-return",
     "title": "No promise executor return",
     "description": "Disallow returning values from Promise executor functions",

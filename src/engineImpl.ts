@@ -72,8 +72,6 @@ const chunk = (arr: any[], size: number) =>
     arr.slice(i * size, i * size + size)
   )
 
-
-
 function chunkFilesBySize(files: string[], maxChunkSize: number): string[][] {
   const chunks: string[][] = [];
   let currentChunk: string[] = [];

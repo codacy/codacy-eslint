@@ -1705,7 +1705,12 @@
       "patternId": "no-promise-executor-return",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "allowVoid",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
