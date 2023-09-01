@@ -12579,6 +12579,13 @@
       "enabled": true
     },
     {
+      "patternId": "playwright_no-raw-locators",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "playwright_no-restricted-matchers",
       "level": "Info",
       "category": "CodeStyle",

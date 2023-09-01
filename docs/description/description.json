@@ -12305,6 +12305,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-raw-locators",
+    "title": "Playwright: No raw locators",
+    "description": "Disallows the usage of raw locators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_no-restricted-matchers",
     "title": "Playwright: No restricted matchers",
     "description": "Disallow specific matchers & modifiers",
