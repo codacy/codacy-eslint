@@ -1691,7 +1691,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowVoid",
+        "description": "allowVoid"
+      }
+    ],
     "patternId": "no-promise-executor-return",
     "title": "No promise executor return",
     "description": "Disallow returning values from Promise executor functions",
@@ -12296,6 +12301,13 @@
     "patternId": "playwright_no-page-pause",
     "title": "Playwright: No page pause",
     "description": "Prevent usage of page.pause()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-raw-locators",
+    "title": "Playwright: No raw locators",
+    "description": "Disallows the usage of raw locators",
     "timeToFix": 5
   },
   {

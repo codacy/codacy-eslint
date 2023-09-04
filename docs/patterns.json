@@ -1705,7 +1705,12 @@
       "patternId": "no-promise-executor-return",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "allowVoid",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -12572,6 +12577,13 @@
       "category": "ErrorProne",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "playwright_no-raw-locators",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "playwright_no-restricted-matchers",

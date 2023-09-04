@@ -1534,6 +1534,7 @@
   <module name="playwright_no-networkidle" />
   <module name="playwright_no-nth-methods" />
   <module name="playwright_no-page-pause" />
+  <module name="playwright_no-raw-locators" />
   <module name="playwright_no-restricted-matchers" />
   <module name="playwright_no-skipped-test" />
   <module name="playwright_no-useless-await" />
