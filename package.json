@@ -310,7 +310,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
     "next": "^13.4.19",
-    "node-fetch": "^2.7.0",
+    "node-fetch": "^3.3.2",
     "npm": "^10.0.0",
     "nx": "^16.7.4",
     "nx-cloud": "^16.3.0",
