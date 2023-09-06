@@ -10,7 +10,6 @@ import {default as allPatterns} from "../docs/patterns.json"
 
 export function configCreator(
   srcDirPath: string,
-  tsconfigFile: string,
   codacyrc?: Codacyrc
 ): [ESLint.Options, string[]] {
   debug("config: creating")
@@ -22,22 +21,25 @@ export function configCreator(
     srcDirPath + "/**/*.jsx"
   ]
 
-  const options = (!eslintrcExistsInSrcDir(srcDirPath)) ? optionsCreator(srcDirPath, tsconfigFile, codacyrc) : {}
+  const options = (!eslintrcExistsInSrcDir(srcDirPath)) ? optionsCreator(srcDirPath, codacyrc) : {}
   const files = codacyrc?.files?.length > 0 ? codacyrc.files : defaultFilesToAnalyze
 
   debug("config: finished")
-
   return [options, files]
 }
 
 function optionsCreator(
   srcDirPath: string,
-  tsconfigFile: string,
   codacyrc?: Codacyrc,
 ): ESLint.Options {
   debug("options: creating")
-
+  
+  const tsconfigFile = "tsconfig.json"
   const eslintTool = codacyrc?.tools?.find((tool) => tool.name === toolName)
+
+  if (!DEBUG && !eslintTool) {
+    return {}
+  }
 
   if (DEBUG && eslintTool?.patterns) {
     debug("options: " + eslintTool.patterns.length + " patterns to process")
@@ -46,12 +48,14 @@ function optionsCreator(
     }
   }
 
-  debug("cloning and reseting default options")
   let options = removeExtendsOfBaseConfig(cloneDeep(defaultOptions))
 
   if (existsSync(srcDirPath + "/" + tsconfigFile)) {
-    debug("options: change project tsconfig")
-    options.baseConfig.overrides[0].parserOptions.project = srcDirPath + "/" + tsconfigFile
+    debug("options: use tsconfig from repo")
+    options.baseConfig.parserOptions.project = srcDirPath + "/" + tsconfigFile
+  } else {
+    debug("options: use tsconfig from tool")
+    options.baseConfig.parserOptions.project = "/" + tsconfigFile
   }
 
   if (eslintTool?.patterns?.length > 0) {
@@ -82,16 +86,14 @@ function optionsCreator(
       })
     }
 
-    // explicitly use only the rules being passed by codacyrc overriding any others
+    // explicitly use only the rules being passed by codacyrc
     if (otherPatterns.length > 0) {
       debug("options: setting " + otherPatterns.length + " patterns")
       options.baseConfig.rules = patternsToRules(otherPatterns)
     }
   }
   else if (DEBUG) {
-    const allPatterns = getAllPatterns()
-    debug("options: setting all " + allPatterns.length + " patterns")
-    options.baseConfig.rules = patternsToRules(allPatterns)
+    options.baseConfig.rules = patternsToRules(getAllPatterns())
   }
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
@@ -99,7 +101,6 @@ function optionsCreator(
   options.useEslintrc = (eslintTool?.patterns?.length === 0)
 
   debug("options: finished")
-
   return options
 }
 
@@ -131,31 +132,24 @@ function patternsToRules(patterns: Pattern[]): {
 }
 
 function eslintrcExistsInSrcDir(srcDirPath: string): boolean {
-  debug("check-eslintrc: starting")
+  debug("options: check if configuration file exists in " + srcDirPath)
 
   const confFilenames = [
     ".eslintrc.js",
     ".eslintrc.cjs",
     ".eslintrc.yaml",
     ".eslintrc.yml",
-    ".eslintrc.json",
-    ".eslintrc",
-    ".prettierrc",
-    ".prettierrc.yaml",
-    ".prettierrc.yml",
-    ".prettierrc.json",
-    "prettier.config.js",
-    ".prettierrc.js"
+    ".eslintrc.json"
   ]
 
   for (const filename of confFilenames) {
     if (existsSync(srcDirPath + "/" + filename)) {
-      debug("check-eslintrc: found - \"" + srcDirPath + "/" + filename + "\"")
+      debug("options: found - \"" + filename + "\"")
       return true
     }
   }
 
-  debug("check-eslintrc: not found")
+  debug("options: not found")
   return false
 }
 
@@ -166,7 +160,7 @@ function getAllPatterns(): Pattern[] {
   allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
     // skip this pattern for internal debugging
     if (pattern.patternId == "spellcheck_spell-checker") {
-      return null
+      //return null
     }
 
     patterns.push(new Pattern(
@@ -185,6 +179,7 @@ function getAllPatterns(): Pattern[] {
 }
 
 function removeExtendsOfBaseConfig(options: ESLint.Options): ESLint.Options {
+  debug("options: reseting default options")
   options.baseConfig.extends = []
   if (!options.baseConfig.overrides) {
     options.baseConfig.overrides = []

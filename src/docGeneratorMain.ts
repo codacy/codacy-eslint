@@ -236,7 +236,8 @@ async function main() {
   console.log("Generate perfectionist description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/`,
-    "perfectionist"
+    "perfectionist",
+    false
   )
 
   console.log("Generate promise description files")

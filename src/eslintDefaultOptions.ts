@@ -101,14 +101,14 @@ export const defaultOptions: ESLint.Options = {
       "cypress/globals": true,
     },
     ignorePatterns: [
-      "node_modules/**",
-      "dist/**",
-      "bin/**",
-      "build/**",
-      "docs/tests/**",
-      "vendor/**",
-      "tsconfig.*",
-      "\.eslintrc.*"
+      "node_modules/",
+      "dist/",
+      "bin/",
+      "build/",
+      "docs/tests/",
+      "vendor/",
+      "tsconfig.json",
+      ".eslintrc*"
     ],
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
@@ -118,6 +118,7 @@ export const defaultOptions: ESLint.Options = {
         "jsx": true,
       },
       extraFileExtensions: [".json"],
+      project: ["./tsconfig.json"],
     },
     root: true,
     settings: {
@@ -149,9 +150,6 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
-        parserOptions: {
-          project: ["/tsconfig.json"],
-        },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",

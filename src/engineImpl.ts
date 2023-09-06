@@ -12,13 +12,8 @@ export const engineImpl: Engine = async function (
   debug("engine: starting")
 
   const srcDirPath = "/src"
-  const tsconfigFile = "tsconfig.json"
-  //const nFilesPerChunk = 10
-  const maxTotalSizeOfFilesPerChunk = 1048576 // size in bytes
-
   const [options, files] = configCreator(
     srcDirPath,
-    tsconfigFile,
     codacyrc
   )
 
@@ -29,18 +24,23 @@ export const engineImpl: Engine = async function (
   }
 
   const eslint = new ESLint(options)
+  const lintResults = await lintFiles(eslint, files)
 
-  //const chunksOfFiles = chunk(files, nFilesPerChunk)
-  const chunksOfFiles = chunkFilesBySize(files, maxTotalSizeOfFilesPerChunk)
-
-  const lintResults = await lintChunksOfFiles(
-      eslint,
-      chunksOfFiles
-    )
-
-  await debugLintResults(eslint, lintResults)
-
+  debug("engine: finished")
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
+}
+
+async function lintFiles(eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
+  //-- without chunks
+  //return await eslint.lintFiles(files)
+
+  //const nFilesPerChunk = 10
+  //const chunksOfFiles = chunkFilesByQuantity(files, nFilesPerChunk)
+
+  const maxSumSizeFilesPerChunk = 65536 // size in bytes (64KB)
+  const chunksOfFiles = chunkFilesBySize(files, maxSumSizeFilesPerChunk)
+
+  return lintChunksOfFiles(eslint, chunksOfFiles)
 }
 
 async function lintChunksOfFiles(eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
@@ -50,6 +50,8 @@ async function lintChunksOfFiles(eslint: ESLint, chunksOfFiles: string[][]): Pro
     lintResults.push(...(await eslint.lintFiles(chunkOfFiles)))
   }
   debug("engine: linting chunks finished")
+  await debugLintResults(eslint, lintResults)
+
   return lintResults
 }
 
@@ -67,9 +69,9 @@ async function debugLintResults(eslint: ESLint, lintResults: ESLint.LintResult[]
   debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
 }
 
-const chunk = (arr: any[], size: number) =>
-  Array.from({ length: Math.ceil(arr.length / size) }, (_: any, i: number) =>
-    arr.slice(i * size, i * size + size)
+const chunkFilesByQuantity = (files: string[], size: number) =>
+  Array.from({ length: Math.ceil(files.length / size) }, (_: any, i: number) =>
+  files.slice(i * size, i * size + size)
   )
 
 function chunkFilesBySize(files: string[], maxChunkSize: number): string[][] {

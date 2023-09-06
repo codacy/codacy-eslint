@@ -29,10 +29,12 @@
   "include": [
     "/src/**/*.ts",
     "/src/**/*.tsx",
-    "/src/**/*.js"
+    "/src/**/*.js",
+    "/src/**/*.jsx",
+    "/src/**/*.json"
   ],
   "exclude": [
-    "**/node_modules",
-    "**/build"
+    "**/node_modules/**/*",
+    "**/build/**/*"
   ]
 }
