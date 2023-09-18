@@ -89,7 +89,7 @@
     "@formatjs/icu-messageformat-parser": "^2.6.0",
     "@hapi/eslint-plugin": "^6.0.0",
     "@lwc/eslint-plugin-lwc": "^1.6.3",
-    "@mui/material": "^5.14.7",
+    "@mui/material": "^5.14.10",
     "@namely/eslint-config-namely": "^7.0.0",
     "@next/eslint-plugin-next": "^13.4.19",
     "@ngrx/eslint-plugin": "^16.2.0",
