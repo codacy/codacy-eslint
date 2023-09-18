@@ -66,7 +66,7 @@
     "@1stg/eslint-config": "^7.0.0",
     "@adeira/eslint-config": "^8.3.0",
     "@angular-eslint/builder": "^16.1.1",
-    "@angular-eslint/eslint-plugin": "^16.1.1",
+    "@angular-eslint/eslint-plugin": "^16.2.0",
     "@angular-eslint/eslint-plugin-template": "^16.1.1",
     "@angular-eslint/schematics": "^16.1.1",
     "@angular-eslint/template-parser": "^16.1.1",
