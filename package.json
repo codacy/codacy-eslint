@@ -69,7 +69,7 @@
     "@angular-eslint/eslint-plugin": "^16.1.1",
     "@angular-eslint/eslint-plugin-template": "^16.1.1",
     "@angular-eslint/schematics": "^16.1.1",
-    "@angular-eslint/template-parser": "^16.1.1",
+    "@angular-eslint/template-parser": "^16.2.0",
     "@angular/compiler": "^16.2.3",
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.15",
