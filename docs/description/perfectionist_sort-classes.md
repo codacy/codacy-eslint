@@ -114,11 +114,15 @@ This rule accepts an options object with the following properties:
 
 ```ts
 type Group =
+  | 'static-private-method'
   | 'private-property'
   | 'static-property'
+  | 'index-signature'
   | 'private-method'
   | 'static-method'
   | 'constructor'
+  | 'get-method'
+  | 'set-method'
   | 'property'
   | 'unknown'
   | 'method'
@@ -160,17 +164,20 @@ You can set up a list of class members groups for sorting. Groups can be combine
 
 If you use [one of the configs](/configs/) exported by this plugin, you get the following import grouping settings:
 
-```js
+```json
 {
-  groups: [
-    'static-property',
-    'private-property',
-    'property',
-    'constructor',
-    'static-method',
-    'private-method',
-    'method',
-    'unknown',
+  "groups": [
+    "index-signature",
+    "static-property",
+    "private-property",
+    "property",
+    "constructor",
+    "static-method",
+    "private-method",
+    "static-private-method",
+    "method",
+    ["get-method", "set-method"],
+    "unknown"
   ]
 }
 ```
@@ -190,6 +197,7 @@ If you use [one of the configs](/configs/) exported by this plugin, you get the 
         "type": "natural",
         "order": "asc",
         "groups": [
+          "index-signature",
           "static-property",
           "private-property",
           "property",
@@ -220,6 +228,7 @@ export default [
           type: 'natural',
           order: 'asc',
           groups: [
+            'index-signature',
             'static-property',
             'private-property',
             'property',

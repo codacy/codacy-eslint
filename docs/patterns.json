@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.47.0",
+  "version": "8.51.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -52,6 +52,10 @@
         },
         {
           "name": "checkForEach",
+          "default": false
+        },
+        {
+          "name": "allowVoid",
           "default": false
         }
       ],
@@ -1648,6 +1652,13 @@
       "enabled": true
     },
     {
+      "patternId": "no-object-constructor",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "no-octal",
       "level": "Info",
       "category": "CodeStyle",
@@ -3116,14 +3127,14 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-output-readonly",
+      "patternId": "@angular-eslint_prefer-standalone-component",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-standalone-component",
+      "patternId": "@angular-eslint_prefer-output-readonly",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3150,6 +3161,13 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "@angular-eslint_sort-lifecycle-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -3586,6 +3604,13 @@
     },
     {
       "patternId": "@tanstack_query_prefer-query-object-syntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@tanstack_query_stable-query-client",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -9068,6 +9093,13 @@
       "enabled": false
     },
     {
+      "patternId": "jest_no-confusing-set-timeout",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jest_no-deprecated-functions",
       "level": "Info",
       "category": "CodeStyle",
@@ -9376,6 +9408,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "ignoreSpaces",
+          "default": false
+        },
         {
           "name": "ignoreTypeOfDescribeName",
           "default": false
@@ -12212,6 +12248,26 @@
       "enabled": false
     },
     {
+      "patternId": "perfectionist_sort-astro-attributes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "alphabetical"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "perfectionist_sort-classes",
       "level": "Info",
       "category": "CodeStyle",
@@ -12230,12 +12286,7 @@
         },
         {
           "name": "groups",
-          "default": [
-            "property",
-            "constructor",
-            "method",
-            "unknown"
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -12302,18 +12353,8 @@
           "default": []
         },
         {
-          "name": "internal-pattern",
-          "default": [
-            "~/**"
-          ]
-        },
-        {
           "name": "newlines-between",
           "default": "always"
-        },
-        {
-          "name": "read-tsconfig",
-          "default": false
         }
       ],
       "enabled": false
@@ -12336,7 +12377,7 @@
           "default": false
         },
         {
-          "name": "ignore-pattern",
+          "name": "groups",
           "default": []
         }
       ],
@@ -12356,10 +12397,6 @@
           "default": "asc"
         },
         {
-          "name": "always-on-top",
-          "default": []
-        },
-        {
           "name": "ignore-case",
           "default": false
         }
@@ -12367,7 +12404,7 @@
       "enabled": false
     },
     {
-      "patternId": "perfectionist_sort-map-elements",
+      "patternId": "perfectionist_sort-maps",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -12422,6 +12459,10 @@
         {
           "name": "ignore-case",
           "default": false
+        },
+        {
+          "name": "ignore-alias",
+          "default": false
         }
       ],
       "enabled": false
@@ -12442,6 +12483,10 @@
         {
           "name": "ignore-case",
           "default": false
+        },
+        {
+          "name": "groups",
+          "default": []
         }
       ],
       "enabled": false
@@ -12456,6 +12501,10 @@
           "default": false
         },
         {
+          "name": "styled-components",
+          "default": true
+        },
+        {
           "name": "type",
           "default": "alphabetical"
         },
@@ -12466,10 +12515,26 @@
         {
           "name": "ignore-case",
           "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-svelte-attributes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "alphabetical"
         },
         {
-          "name": "always-on-top",
-          "default": []
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
         }
       ],
       "enabled": false
@@ -12490,6 +12555,34 @@
         {
           "name": "ignore-case",
           "default": false
+        },
+        {
+          "name": "nullable-last",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-vue-attributes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "alphabetical"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        },
+        {
+          "name": "groups",
+          "default": []
         }
       ],
       "enabled": false
@@ -15427,6 +15520,357 @@
           "default": false
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-add-event-listener",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-array-find",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkFromLast",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-array-flat-map",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-array-flat",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-array-index-of",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-array-some",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-at",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkAllIndexAccess",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-blob-reading-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-code-point",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-date-now",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-default-parameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-dom-node-append",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-dom-node-dataset",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-dom-node-remove",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-dom-node-text-content",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-event-target",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-export-from",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreUsedVariables",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-includes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-json-parse-buffer",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-keyboard-event-key",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-logical-operator-over-ternary",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-math-trunc",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-modern-dom-apis",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-modern-math-apis",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-module",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-native-coercion-functions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-negative-index",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-node-protocol",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-number-properties",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "checkInfinity",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-object-from-entries",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-optional-catch-binding",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-prototype-methods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-query-selector",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-reflect-apply",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-regexp-test",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-set-has",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-set-size",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-spread",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-string-replace-all",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-string-slice",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-string-starts-ends-with",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-string-trim-start-end",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-switch",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "minimumCases",
+          "default": 3
+        },
+        {
+          "name": "emptyDefaultCase",
+          "default": "no-default-comment"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-ternary",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-top-level-await",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-type-error",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
       "enabled": false
     },
     {
