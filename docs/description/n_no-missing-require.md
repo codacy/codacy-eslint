@@ -1,6 +1,6 @@
 # Disallow `require()` expressions which import non-existence modules (`n/no-missing-require`)
 
-💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/eslint-community/eslint-plugin-n#-configs).
+💼 This rule is enabled in the following [configs](https://github.com/eslint-community/eslint-plugin-n#-configs): ☑️ `flat/recommended`, 🟢 `flat/recommended-module`, ✅ `flat/recommended-script`, ☑️ `recommended`, 🟢 `recommended-module`, ✅ `recommended-script`.
 
 <!-- end auto-generated rule header -->
 
@@ -52,60 +52,28 @@ var foo = require(FOO_NAME);
 
 #### allowModules
 
-Some platforms have additional embedded modules.
-For example, Electron has `electron` module.
-
-We can specify additional embedded modules with this option.
-This option is an array of strings as module names.
-
-```json
-{
-    "rules": {
-        "n/no-missing-require": ["error", {
-            "allowModules": ["electron"]
-        }]
-    }
-}
-```
+This can be configured in the rule options or as a shared setting [`settings.allowModules`](../shared-settings.md#allowmodules).
+Please see the shared settings documentation for more information.
 
 #### resolvePaths
 
-Adds additional paths to try for when resolving a require.
-If a path is relative, it will be resolved from CWD.
-
-Default is `[]`
+This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](../shared-settings.md#resolvepaths).
+Please see the shared settings documentation for more information.
 
 #### tryExtensions
 
-When an import path does not exist, this rule checks whether or not any of `path.js`, `path.json`, and `path.node` exists.
-`tryExtensions` option is the extension list this rule uses at the time.
+This can be configured in the rule options or as a shared setting [`settings.tryExtensions`](../shared-settings.md#tryextensions).
+Please see the shared settings documentation for more information.
 
-Default is `[".js", ".json", ".node"]`.
+#### tsconfigPath
 
-### Shared Settings
+This can be configured in the rule options or as a shared setting [`settings.tsconfigPath`](../shared-settings.md#tsconfigpath).
+Please see the shared settings documentation for more information.
 
-The following options can be set by [shared settings](http://eslint.org/docs/user-guide/configuring.html#adding-shared-settings).
-Several rules have the same option, but we can set this option at once.
+#### typescriptExtensionMap
 
-- `allowModules`
-- `resolvePaths`
-- `tryExtensions`
-
-```js
-// .eslintrc.js
-module.exports = {
-    "settings": {
-        "node": {
-            "allowModules": ["electron"],
-            "resolvePaths": [__dirname],
-            "tryExtensions": [".js", ".json", ".node"]
-        }
-    },
-    "rules": {
-        "n/no-missing-require": "error"
-    }
-}
-```
+This can be configured in the rule options or as a shared setting [`settings.typescriptExtensionMap`](../shared-settings.md#typescriptextensionmap).
+Please see the shared settings documentation for more information.
 
 ## 🔎 Implementation
 

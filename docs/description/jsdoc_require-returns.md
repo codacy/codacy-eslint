@@ -50,6 +50,9 @@ Will also report if multiple `@returns` tags are present.
     `forceReturnsWithAsync` option is set with a present `@async` tag
     (since we are not checking against the actual `return` values in these
     cases).
+- `enableFixer` - Whether to enable the fixer to add a blank `@returns`.
+    Defaults to `false`.
+- `publicOnly` - See docs for `require-jsdoc`.
 
 <a name="user-content-require-returns-context-and-settings"></a>
 <a name="require-returns-context-and-settings"></a>
@@ -61,7 +64,7 @@ Will also report if multiple `@returns` tags are present.
 | Tags     | `returns` |
 | Aliases  | `return` |
 |Recommended|true|
-| Options  |`checkConstructors`, `checkGetters`, `contexts`, `exemptedBy`, `forceRequireReturn`, `forceReturnsWithAsync`|
+| Options  |`checkConstructors`, `checkGetters`, `contexts`, `enableFixer`, `exemptedBy`, `forceRequireReturn`, `forceReturnsWithAsync`, `publicOnly`|
 | Settings | `ignoreReplacesDocs`, `overrideReplacesDocs`, `augmentsExtendsReplacesDocs`, `implementsReplacesDocs` |
 
 <a name="user-content-require-returns-failing-examples"></a>
@@ -78,6 +81,16 @@ function quux (foo) {
 
   return foo;
 }
+// Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+function quux (foo) {
+
+  return foo;
+}
+// "jsdoc/require-returns": ["error"|"warn", {"enableFixer":true}]
 // Message: Missing JSDoc @returns declaration.
 
 /**
@@ -648,6 +661,58 @@ class Test {
 }
 // "jsdoc/require-returns": ["error"|"warn", {"contexts":["FunctionDeclaration",{"context":"TSEmptyBodyFunctionExpression","forceRequireReturn":true}]}]
 // Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+module.exports = function quux (foo) {
+
+  return foo;
+}
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":true}]
+// Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+const a = function quux (foo) {
+
+  return foo;
+};
+
+export default a;
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":true}]
+// Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+export default function quux (foo) {
+
+  return foo;
+};
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":{"ancestorsOnly":true,"esm":true}}]
+// Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+exports.quux = function quux (foo) {
+
+  return foo;
+};
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":{"cjs":true}}]
+// Message: Missing JSDoc @returns declaration.
+
+/**
+ *
+ */
+window.quux = function quux (foo) {
+
+  return foo;
+};
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":{"window":true}}]
+// Message: Missing JSDoc @returns declaration.
 ````
 
 
@@ -1187,5 +1252,14 @@ class Test {
   abstract Test(): string;
 }
 // "jsdoc/require-returns": ["error"|"warn", {"contexts":["FunctionDeclaration",{"context":"TSEmptyBodyFunctionExpression","forceRequireReturn":true}]}]
+
+/**
+ *
+ */
+function quux (foo) {
+
+  return foo;
+}
+// "jsdoc/require-returns": ["error"|"warn", {"publicOnly":true}]
 ````
 

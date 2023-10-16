@@ -90,6 +90,18 @@ import styles from "./styles.css"
 import logo from "./logo.png"
 ```
 
+### Shared Settings
+
+#### tsconfigPath
+
+This can be configured in the shared settings [`settings.tsconfigPath`](../shared-settings.md#tsconfigpath).
+Please see the shared settings documentation for more information.
+
+#### typescriptExtensionMap
+
+This can be configured in the shared settings [`settings.typescriptExtensionMap`](../shared-settings.md#typescriptextensionmap).
+Please see the shared settings documentation for more information.
+
 ## 🔎 Implementation
 
 - [Rule source](../../lib/rules/file-extension-in-import.js)
