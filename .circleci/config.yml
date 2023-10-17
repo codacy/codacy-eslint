@@ -5,7 +5,6 @@ orbs:
   codacy_plugins_test: codacy/plugins-test@1.1.1
 
 workflows:
-  version: 2
   compile_test_deploy:
     jobs:
       - codacy/checkout_and_version
