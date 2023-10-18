@@ -318,7 +318,7 @@ export default [
             'internal',
             ['parent-type', 'sibling-type', 'index-type'],
             ['parent', 'sibling', 'index'],
-            'side-effect'
+            'side-effect',
             'style',
             'object',
             'unknown',
@@ -329,8 +329,8 @@ export default [
               nanostores: '@nanostores/**',
             },
             type: {
-              react: 'react'
-            }
+              react: 'react',
+            },
           },
           'newlines-between': 'always',
           'internal-pattern': [
