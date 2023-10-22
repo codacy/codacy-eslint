@@ -28,6 +28,12 @@ async function main() {
     "@angular-eslint"
   )
 
+  console.log("Generate @lwc description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/salesforce/eslint-plugin-lwc/master/docs/rules/`,
+    "@lwc/lwc"
+  )
+
   console.log("Generate @salesforce/aura description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/forcedotcom/eslint-plugin-aura/master/docs/rules/`,
@@ -200,12 +206,6 @@ async function main() {
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/jfmengels/eslint-plugin-lodash-fp/master/docs/rules/`,
     "lodash-fp"
-  )
-
-  console.log("Generate lwc description files")
-  await docGenerator.downloadDocs(
-    `${githubBaseUrl}/salesforce/eslint-plugin-lwc/master/docs/rules/`,
-    "@lwc"
   )
 
   console.log("Generate meteor description files")

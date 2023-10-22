@@ -1,5 +1,6 @@
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
+import { rules as lwcRules } from "@lwc/eslint-plugin-lwc"
 import { rules as salesforceAuraRules } from "@salesforce/eslint-plugin-aura"
 import { rules as salesforceLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -47,7 +48,6 @@ import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
 import { rules as litRules } from "eslint-plugin-lit"
 import { rules as lodashRules } from "eslint-plugin-lodash"
 import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
-import { rules as lwcRules } from "@lwc/eslint-plugin-lwc"
 import { rules as meteorRules } from "eslint-plugin-meteor"
 import { rules as markdownRules } from "eslint-plugin-markdown"
 import { rules as mochaRules } from "eslint-plugin-mocha"
@@ -108,6 +108,7 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["@angular-eslint", angularEslintRules],
   ["@babel", babelRules],
+  ["@lwc/lwc", lwcRules],
   ["@salesforce/aura", salesforceAuraRules],
   ["@salesforce/lightning", salesforceLightningRules],
   ["@shopify", shopifyRules],
@@ -155,7 +156,6 @@ const plugins = [
   ["lit", litRules],
   ["lodash", lodashRules],
   ["lodash-fp", lodashFpRules],
-  ["eslint-plugin-lwc", lwcRules],
   ["markdown", markdownRules],
   ["meteor", meteorRules],
   ["mocha", mochaRules],
