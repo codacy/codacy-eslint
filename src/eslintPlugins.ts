@@ -155,7 +155,7 @@ const plugins = [
   ["lit", litRules],
   ["lodash", lodashRules],
   ["lodash-fp", lodashFpRules],
-  ["lwc", lwcRules],
+  ["eslint-plugin-lwc", lwcRules],
   ["markdown", markdownRules],
   ["meteor", meteorRules],
   ["mocha", mochaRules],

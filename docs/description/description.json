@@ -11354,85 +11354,85 @@
   },
   {
     "parameters": [],
-    "patternId": "lwc_consistent-component-name",
-    "title": "Lwc: Consistent component name",
+    "patternId": "eslint-plugin-lwc_consistent-component-name",
+    "title": "Eslint plugin lwc: Consistent component name",
     "description": "Ensure component class name matches file name",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-api-reassignments",
-    "title": "Lwc: No api reassignments",
+    "patternId": "eslint-plugin-lwc_no-api-reassignments",
+    "title": "Eslint plugin lwc: No api reassignments",
     "description": "Prevent public property reassignments",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-async-await",
-    "title": "Lwc: No async await",
+    "patternId": "eslint-plugin-lwc_no-async-await",
+    "title": "Eslint plugin lwc: No async await",
     "description": "Disallow usage of the async-await syntax",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-async-operation",
-    "title": "Lwc: No async operation",
+    "patternId": "eslint-plugin-lwc_no-async-operation",
+    "title": "Eslint plugin lwc: No async operation",
     "description": "Restrict usage of async operations",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-attributes-during-construction",
-    "title": "Lwc: No attributes during construction",
+    "patternId": "eslint-plugin-lwc_no-attributes-during-construction",
+    "title": "Eslint plugin lwc: No attributes during construction",
     "description": "No attributes during construction",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-deprecated",
-    "title": "Lwc: No deprecated",
+    "patternId": "eslint-plugin-lwc_no-deprecated",
+    "title": "Eslint plugin lwc: No deprecated",
     "description": "Disallow usage of deprecated LWC APIs",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-document-query",
-    "title": "Lwc: No document query",
+    "patternId": "eslint-plugin-lwc_no-document-query",
+    "title": "Eslint plugin lwc: No document query",
     "description": "Disallow DOM query at the document level.",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-dupe-class-members",
-    "title": "Lwc: No dupe class members",
+    "patternId": "eslint-plugin-lwc_no-dupe-class-members",
+    "title": "Eslint plugin lwc: No dupe class members",
     "description": "Disallow duplicate class members",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-for-of",
-    "title": "Lwc: No for of",
+    "patternId": "eslint-plugin-lwc_no-for-of",
+    "title": "Eslint plugin lwc: No for of",
     "description": "Disallow usage of the for-of syntax",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-inner-html",
-    "title": "Lwc: No inner html",
+    "patternId": "eslint-plugin-lwc_no-inner-html",
+    "title": "Eslint plugin lwc: No inner html",
     "description": "Disallow usage of \"innerHtml\"",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-leading-uppercase-api-name",
-    "title": "Lwc: No leading uppercase api name",
+    "patternId": "eslint-plugin-lwc_no-leading-uppercase-api-name",
+    "title": "Eslint plugin lwc: No leading uppercase api name",
     "description": "Disallow public property to start with an upper case character",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-leaky-event-listeners",
-    "title": "Lwc: No leaky event listeners",
+    "patternId": "eslint-plugin-lwc_no-leaky-event-listeners",
+    "title": "Eslint plugin lwc: No leaky event listeners",
     "description": "Prevent event listeners from leaking memory",
     "timeToFix": 5
   },
@@ -11447,85 +11447,85 @@
         "description": "allowExports"
       }
     ],
-    "patternId": "lwc_no-disallowed-lwc-imports",
-    "title": "Lwc: No disallowed lwc imports",
+    "patternId": "eslint-plugin-lwc_no-disallowed-lwc-imports",
+    "title": "Eslint plugin lwc: No disallowed lwc imports",
     "description": "Restrict unexpected imports from the lwc package",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-template-children",
-    "title": "Lwc: No template children",
+    "patternId": "eslint-plugin-lwc_no-template-children",
+    "title": "Eslint plugin lwc: No template children",
     "description": "Prevent accessing the immediate children of this.template",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-unexpected-wire-adapter-usages",
-    "title": "Lwc: No unexpected wire adapter usages",
+    "patternId": "eslint-plugin-lwc_no-unexpected-wire-adapter-usages",
+    "title": "Eslint plugin lwc: No unexpected wire adapter usages",
     "description": "Restrict unexpected wire adapter usages",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-rest-parameter",
-    "title": "Lwc: No rest parameter",
+    "patternId": "eslint-plugin-lwc_no-rest-parameter",
+    "title": "Eslint plugin lwc: No rest parameter",
     "description": "Disallow usage of the rest parameter syntax",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-unknown-wire-adapters",
-    "title": "Lwc: No unknown wire adapters",
+    "patternId": "eslint-plugin-lwc_no-unknown-wire-adapters",
+    "title": "Eslint plugin lwc: No unknown wire adapters",
     "description": "Restrict usage of unknown wire adapters",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_prefer-custom-event",
-    "title": "Lwc: Prefer custom event",
+    "patternId": "eslint-plugin-lwc_prefer-custom-event",
+    "title": "Eslint plugin lwc: Prefer custom event",
     "description": "Suggest usage of \"CustomEvent\" over \"Event\" constructor",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_valid-api",
-    "title": "Lwc: Valid api",
+    "patternId": "eslint-plugin-lwc_valid-api",
+    "title": "Eslint plugin lwc: Valid api",
     "description": "Validate api decorator usage",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_valid-track",
-    "title": "Lwc: Valid track",
+    "patternId": "eslint-plugin-lwc_valid-track",
+    "title": "Eslint plugin lwc: Valid track",
     "description": "Validate track decorator usage",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_valid-wire",
-    "title": "Lwc: Valid wire",
+    "patternId": "eslint-plugin-lwc_valid-wire",
+    "title": "Eslint plugin lwc: Valid wire",
     "description": "Validate wire decorator usage",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-restricted-browser-globals-during-ssr",
-    "title": "Lwc: No restricted browser globals during ssr",
+    "patternId": "eslint-plugin-lwc_no-restricted-browser-globals-during-ssr",
+    "title": "Eslint plugin lwc: No restricted browser globals during ssr",
     "description": "Disallow access to global browser APIs during SSR",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-unsupported-ssr-properties",
-    "title": "Lwc: No unsupported ssr properties",
+    "patternId": "eslint-plugin-lwc_no-unsupported-ssr-properties",
+    "title": "Eslint plugin lwc: No unsupported ssr properties",
     "description": "Disallow access of unsupported properties in SSR",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "lwc_no-node-env-in-ssr",
-    "title": "Lwc: No node env in ssr",
+    "patternId": "eslint-plugin-lwc_no-node-env-in-ssr",
+    "title": "Eslint plugin lwc: No node env in ssr",
     "description": "Disallow access of process.env.NODE_ENV in SSR",
     "timeToFix": 5
   },

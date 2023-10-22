@@ -11590,91 +11590,91 @@
       "enabled": false
     },
     {
-      "patternId": "lwc_consistent-component-name",
+      "patternId": "eslint-plugin-lwc_consistent-component-name",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-api-reassignments",
+      "patternId": "eslint-plugin-lwc_no-api-reassignments",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-async-await",
+      "patternId": "eslint-plugin-lwc_no-async-await",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-async-operation",
+      "patternId": "eslint-plugin-lwc_no-async-operation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-attributes-during-construction",
+      "patternId": "eslint-plugin-lwc_no-attributes-during-construction",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-deprecated",
+      "patternId": "eslint-plugin-lwc_no-deprecated",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-document-query",
+      "patternId": "eslint-plugin-lwc_no-document-query",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-dupe-class-members",
+      "patternId": "eslint-plugin-lwc_no-dupe-class-members",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-for-of",
+      "patternId": "eslint-plugin-lwc_no-for-of",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-inner-html",
+      "patternId": "eslint-plugin-lwc_no-inner-html",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-leading-uppercase-api-name",
+      "patternId": "eslint-plugin-lwc_no-leading-uppercase-api-name",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-leaky-event-listeners",
+      "patternId": "eslint-plugin-lwc_no-leaky-event-listeners",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-disallowed-lwc-imports",
+      "patternId": "eslint-plugin-lwc_no-disallowed-lwc-imports",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -11690,77 +11690,77 @@
       "enabled": false
     },
     {
-      "patternId": "lwc_no-template-children",
+      "patternId": "eslint-plugin-lwc_no-template-children",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-unexpected-wire-adapter-usages",
+      "patternId": "eslint-plugin-lwc_no-unexpected-wire-adapter-usages",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-rest-parameter",
+      "patternId": "eslint-plugin-lwc_no-rest-parameter",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-unknown-wire-adapters",
+      "patternId": "eslint-plugin-lwc_no-unknown-wire-adapters",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_prefer-custom-event",
+      "patternId": "eslint-plugin-lwc_prefer-custom-event",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_valid-api",
+      "patternId": "eslint-plugin-lwc_valid-api",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_valid-track",
+      "patternId": "eslint-plugin-lwc_valid-track",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_valid-wire",
+      "patternId": "eslint-plugin-lwc_valid-wire",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": true
     },
     {
-      "patternId": "lwc_no-restricted-browser-globals-during-ssr",
+      "patternId": "eslint-plugin-lwc_no-restricted-browser-globals-during-ssr",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-unsupported-ssr-properties",
+      "patternId": "eslint-plugin-lwc_no-unsupported-ssr-properties",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "lwc_no-node-env-in-ssr",
+      "patternId": "eslint-plugin-lwc_no-node-env-in-ssr",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
