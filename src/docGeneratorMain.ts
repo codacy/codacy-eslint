@@ -205,7 +205,7 @@ async function main() {
   console.log("Generate lwc description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/salesforce/eslint-plugin-lwc/master/docs/rules/`,
-    "lwc"
+    "@lwc"
   )
 
   console.log("Generate meteor description files")
