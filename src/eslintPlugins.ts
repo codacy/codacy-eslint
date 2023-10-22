@@ -47,6 +47,7 @@ import { rules as jsxA11yRules } from "eslint-plugin-jsx-a11y"
 import { rules as litRules } from "eslint-plugin-lit"
 import { rules as lodashRules } from "eslint-plugin-lodash"
 import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
+import { rules as lwcRules } from "@lwc/eslint-plugin-lwc"
 import { rules as meteorRules } from "eslint-plugin-meteor"
 import { rules as markdownRules } from "eslint-plugin-markdown"
 import { rules as mochaRules } from "eslint-plugin-mocha"
@@ -154,6 +155,7 @@ const plugins = [
   ["lit", litRules],
   ["lodash", lodashRules],
   ["lodash-fp", lodashFpRules],
+  ["lwc", lwcRules],
   ["markdown", markdownRules],
   ["meteor", meteorRules],
   ["mocha", mochaRules],

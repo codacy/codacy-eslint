@@ -202,6 +202,12 @@ async function main() {
     "lodash-fp"
   )
 
+  console.log("Generate lwc description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/salesforce/eslint-plugin-lwc/master/docs/rules/`,
+    "lwc"
+  )
+
   console.log("Generate meteor description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/dferber90/eslint-plugin-meteor/master/docs/rules/`,
