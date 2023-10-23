@@ -3402,13 +3402,6 @@
       "enabled": false
     },
     {
-      "patternId": "@lwc_lwc_no-unknown-wire-adapters",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@lwc_lwc_prefer-custom-event",
       "level": "Info",
       "category": "CodeStyle",

@@ -1,5 +1,6 @@
 const blacklistRegexes: RegExp[] = [
   /@lwc\/lwc\/no-unexpected-wire-adapter-usages/,
+  /@lwc\/lwc\/no-unknown-wire-adapters/,
   /@nx\/enforce-module-boundaries/,
   /@shopify\/no-debugger/,
   /@typescript-eslint\/await-thenable/,

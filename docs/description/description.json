@@ -3392,13 +3392,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@lwc_lwc_no-unknown-wire-adapters",
-    "title": "@lwc: [Lwc] No unknown wire adapters",
-    "description": "Restrict usage of unknown wire adapters",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@lwc_lwc_prefer-custom-event",
     "title": "@lwc: [Lwc] Prefer custom event",
     "description": "Suggest usage of \"CustomEvent\" over \"Event\" constructor",
