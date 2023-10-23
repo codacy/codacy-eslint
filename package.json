@@ -309,7 +309,7 @@
     "gts": "^5.2.0",
     "husky": "^8.0.3",
     "lint-config-qiwi": "^0.0.1-security",
-    "lint-staged": "^15.0.1",
+    "lint-staged": "^15.0.2",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
