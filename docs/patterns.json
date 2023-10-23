@@ -3395,13 +3395,6 @@
       "enabled": true
     },
     {
-      "patternId": "@lwc_lwc_no-unexpected-wire-adapter-usages",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@lwc_lwc_no-rest-parameter",
       "level": "Info",
       "category": "CodeStyle",
@@ -14958,7 +14951,7 @@
         },
         {
           "name": "langDir",
-          "default": "/home/hjrocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "C:\\repos\\codacy\\codacy-eslint\\node_modules\\eslint-plugin-spellcheck\\rules/utils/dicts"
         },
         {
           "name": "skipWords",

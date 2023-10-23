@@ -348,7 +348,6 @@
   <module name="@lwc_lwc_no-leaky-event-listeners" />
   <module name="@lwc_lwc_no-disallowed-lwc-imports" />
   <module name="@lwc_lwc_no-template-children" />
-  <module name="@lwc_lwc_no-unexpected-wire-adapter-usages" />
   <module name="@lwc_lwc_no-rest-parameter" />
   <module name="@lwc_lwc_no-unknown-wire-adapters" />
   <module name="@lwc_lwc_prefer-custom-event" />

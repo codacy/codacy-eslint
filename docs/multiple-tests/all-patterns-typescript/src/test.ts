@@ -1,1 +1,0 @@
-/*eslint lwc/no-unexpected-wire-adapter-usages: ["error", {"adapters": [{"module": "myAdapters", "identifier": "fooAdapter"}]}]*/

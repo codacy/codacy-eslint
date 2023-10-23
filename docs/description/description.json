@@ -3385,13 +3385,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@lwc_lwc_no-unexpected-wire-adapter-usages",
-    "title": "@lwc: [Lwc] No unexpected wire adapter usages",
-    "description": "Restrict unexpected wire adapter usages",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@lwc_lwc_no-rest-parameter",
     "title": "@lwc: [Lwc] No rest parameter",
     "description": "Disallow usage of the rest parameter syntax",
