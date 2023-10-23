@@ -3278,6 +3278,169 @@
   },
   {
     "parameters": [],
+    "patternId": "@lwc_lwc_consistent-component-name",
+    "title": "@lwc: [Lwc] Consistent component name",
+    "description": "Ensure component class name matches file name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-api-reassignments",
+    "title": "@lwc: [Lwc] No api reassignments",
+    "description": "Prevent public property reassignments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-async-await",
+    "title": "@lwc: [Lwc] No async await",
+    "description": "Disallow usage of the async-await syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-async-operation",
+    "title": "@lwc: [Lwc] No async operation",
+    "description": "Restrict usage of async operations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-attributes-during-construction",
+    "title": "@lwc: [Lwc] No attributes during construction",
+    "description": "No attributes during construction",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-deprecated",
+    "title": "@lwc: [Lwc] No deprecated",
+    "description": "Disallow usage of deprecated LWC APIs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-document-query",
+    "title": "@lwc: [Lwc] No document query",
+    "description": "Disallow DOM query at the document level.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-dupe-class-members",
+    "title": "@lwc: [Lwc] No dupe class members",
+    "description": "Disallow duplicate class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-for-of",
+    "title": "@lwc: [Lwc] No for of",
+    "description": "Disallow usage of the for-of syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-inner-html",
+    "title": "@lwc: [Lwc] No inner html",
+    "description": "Disallow usage of \"innerHtml\"",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-leading-uppercase-api-name",
+    "title": "@lwc: [Lwc] No leading uppercase api name",
+    "description": "Disallow public property to start with an upper case character",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-leaky-event-listeners",
+    "title": "@lwc: [Lwc] No leaky event listeners",
+    "description": "Prevent event listeners from leaking memory",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowBareImports",
+        "description": "allowBareImports"
+      },
+      {
+        "name": "allowExports",
+        "description": "allowExports"
+      }
+    ],
+    "patternId": "@lwc_lwc_no-disallowed-lwc-imports",
+    "title": "@lwc: [Lwc] No disallowed lwc imports",
+    "description": "Restrict unexpected imports from the lwc package",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-template-children",
+    "title": "@lwc: [Lwc] No template children",
+    "description": "Prevent accessing the immediate children of this.template",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-rest-parameter",
+    "title": "@lwc: [Lwc] No rest parameter",
+    "description": "Disallow usage of the rest parameter syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_prefer-custom-event",
+    "title": "@lwc: [Lwc] Prefer custom event",
+    "description": "Suggest usage of \"CustomEvent\" over \"Event\" constructor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_valid-api",
+    "title": "@lwc: [Lwc] Valid api",
+    "description": "Validate api decorator usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_valid-track",
+    "title": "@lwc: [Lwc] Valid track",
+    "description": "Validate track decorator usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_valid-wire",
+    "title": "@lwc: [Lwc] Valid wire",
+    "description": "Validate wire decorator usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-restricted-browser-globals-during-ssr",
+    "title": "@lwc: [Lwc] No restricted browser globals during ssr",
+    "description": "Disallow access to global browser APIs during SSR",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-unsupported-ssr-properties",
+    "title": "@lwc: [Lwc] No unsupported ssr properties",
+    "description": "Disallow access of unsupported properties in SSR",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-node-env-in-ssr",
+    "title": "@lwc: [Lwc] No node env in ssr",
+    "description": "Disallow access of process.env.NODE_ENV in SSR",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@salesforce_aura_aura-api",
     "title": "@salesforce: [Aura] Aura api",
     "description": "Validate Aura APIs",
@@ -4406,6 +4569,13 @@
     "patternId": "@typescript-eslint_prefer-as-const",
     "title": "@typescript eslint: Prefer as const",
     "description": "Enforce the use of `as const` over literal type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-destructuring",
+    "title": "@typescript eslint: Prefer destructuring",
+    "description": "Require destructuring from arrays and/or objects",
     "timeToFix": 5
   },
   {

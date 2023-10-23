@@ -1,5 +1,6 @@
 import { rules as angularEslintRules } from "@angular-eslint/eslint-plugin"
 import { rules as babelRules } from "@babel/eslint-plugin"
+import { rules as lwcRules } from "@lwc/eslint-plugin-lwc"
 import { rules as salesforceAuraRules } from "@salesforce/eslint-plugin-aura"
 import { rules as salesforceLightningRules } from "@salesforce/eslint-plugin-lightning"
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
@@ -107,6 +108,7 @@ import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
 const plugins = [
   ["@angular-eslint", angularEslintRules],
   ["@babel", babelRules],
+  ["@lwc/lwc", lwcRules],
   ["@salesforce/aura", salesforceAuraRules],
   ["@salesforce/lightning", salesforceLightningRules],
   ["@shopify", shopifyRules],

@@ -87,7 +87,7 @@
     "@emotion/eslint-plugin": "^11.10.0",
     "@formatjs/icu-messageformat-parser": "^2.7.0",
     "@hapi/eslint-plugin": "^6.0.0",
-    "@lwc/eslint-plugin-lwc": "^1.6.3",
+    "@lwc/eslint-plugin-lwc": "^1.6.4",
     "@mui/material": "^5.14.14",
     "@namely/eslint-config-namely": "^7.0.0",
     "@next/eslint-plugin-next": "^13.5.4",
