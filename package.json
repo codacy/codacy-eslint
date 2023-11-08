@@ -128,7 +128,7 @@
     "@teambit/eslint-config-bit-react": "^0.0.367",
     "@teambit/react.eslint-config-bit-react": "^0.0.823",
     "@types/eslint": "^8.44.5",
-    "@types/fs-extra": "^11.0.2",
+    "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.6",
     "@types/lodash": "^4.14.200",
     "@types/mocha": "^10.0.3",
