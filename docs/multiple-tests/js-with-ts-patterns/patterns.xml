@@ -1,6 +1,6 @@
 <module name="root">
     <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value="tsconfig\.json"/>
+        <property name="fileNamePattern" value="js-with-ts-patterns\.json"/>
     </module>
     <module name="@typescript-eslint_explicit-function-return-type" />
     <module name="@typescript-eslint_no-dupe-class-members" />

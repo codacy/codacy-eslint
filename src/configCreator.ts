@@ -18,7 +18,8 @@ export function configCreator(
     srcDirPath + "/**/*.ts",
     srcDirPath + "/**/*.tsx",
     srcDirPath + "/**/*.js",
-    srcDirPath + "/**/*.jsx"
+    srcDirPath + "/**/*.jsx",
+    srcDirPath + "/**/*.json"
   ]
 
   const options = (!eslintrcExistsInSrcDir(srcDirPath)) ? optionsCreator(srcDirPath, codacyrc) : {}
