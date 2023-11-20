@@ -113,13 +113,14 @@ export const defaultOptions: ESLint.Options = {
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
-      ecmaVersion: 2022,
+      allowAutomaticSingleRunInference: true,
+      ecmaVersion: "latest",
       ecmaFeatures: {
         "jsx": true,
       },
-      extraFileExtensions: [".json"],
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
-      allowAutomaticSingleRunInference: true,
+      extraFileExtensions: [".json"],
+      project: ["./tsconfig.json"],
     },
     root: true,
     settings: {
@@ -151,9 +152,6 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: typescriptConfigs,
-        parserOptions: {
-          project: ["./tsconfig.json"],
-        },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",
@@ -175,7 +173,7 @@ export const defaultOptions: ESLint.Options = {
         },
       },
       {
-        files: ["**/*.js", "**/*.json"],
+        files: ["**/*.js", "**/*.jsx", "**/*.json"],
         extends: ['plugin:@typescript-eslint/disable-type-checked'],
         rules: {
           // turn off other type-aware rules
