@@ -1,7 +1,4 @@
 <module name="root">
-    <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value=".*\.yaml" />
-    </module>
     <module name="accessor-pairs" />
     <module name="brace-style">
         <property name="allowSingleLine" value="true" />

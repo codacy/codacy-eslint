@@ -26,8 +26,11 @@
     "sourceMap": false,
     "strictNullChecks": true
   },
+  "include": [
+    "/src/**/*"
+  ],
   "exclude": [
-    "**/node_modules/**/*",
-    "**/build/**/*"
+    "/src/**/node_modules/**/*",
+    "/src/**/build/**/*"
   ]
 }
