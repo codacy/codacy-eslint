@@ -2,7 +2,7 @@
 pageClass: "rule-details"
 sidebarDepth: 0
 title: "regexp/no-useless-non-capturing-group"
-description: "disallow unnecessary Non-capturing group"
+description: "disallow unnecessary non-capturing group"
 since: "v0.4.0"
 ---
 # regexp/no-useless-non-capturing-group
@@ -13,11 +13,11 @@ since: "v0.4.0"
 
 <!-- end auto-generated rule header -->
 
-> disallow unnecessary Non-capturing group
+> disallow unnecessary non-capturing group
 
 ## :book: Rule Details
 
-This rule reports unnecessary non-capturing group
+This rule reports unnecessary non-capturing groups. Unnecessary groups are just clutter that make regexes harder to read, so they should be removed.
 
 <eslint-code-block fix>
 
@@ -34,6 +34,7 @@ var foo = /(?:abcd)/.test(str)
 var foo = /(?:[a-d])/.test(str)
 var foo = /(?:[a-d])|e/.test(str)
 var foo = /(?:a|(?:b|c)|d)/.test(str)
+var foo = /a(?:b)+/.test(str)
 ```
 
 </eslint-code-block>
@@ -49,7 +50,7 @@ var foo = /(?:a|(?:b|c)|d)/.test(str)
 ```
 
 - `"allowTop"`:
-  Whether a top-level non-capturing group is allowed. Defaults to `"partial"`.
+  Whether a top-level non-capturing group is allowed (e.g. `/(?:foo|bar)/`). Defaults to `"partial"`.
 
   Sometimes it's useful to wrap a whole pattern into a non-capturing group (e.g. when the pattern is used as a building block to construct more complex patterns). Use this option to allow top-level non-capturing groups.
   - `"partial"`:

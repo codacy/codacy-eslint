@@ -401,8 +401,8 @@
   <module name="@shopify_typescript_prefer-build-client-schema" />
   <module name="@shopify_webpack_no-unnamed-dynamic-imports" />
   <module name="@tanstack_query_exhaustive-deps" />
-  <module name="@tanstack_query_prefer-query-object-syntax" />
   <module name="@tanstack_query_stable-query-client" />
+  <module name="@tanstack_query_no-rest-destructuring" />
   <module name="@typescript-eslint_adjacent-overload-signatures" />
   <module name="@typescript-eslint_array-type" />
   <module name="@typescript-eslint_ban-ts-comment" />
@@ -430,6 +430,7 @@
   <module name="@typescript-eslint_key-spacing" />
   <module name="@typescript-eslint_keyword-spacing" />
   <module name="@typescript-eslint_lines-around-comment" />
+  <module name="@typescript-eslint_max-params" />
   <module name="@typescript-eslint_member-delimiter-style" />
   <module name="@typescript-eslint_member-ordering" />
   <module name="@typescript-eslint_method-signature-style" />
@@ -488,6 +489,7 @@
   <module name="@typescript-eslint_no-unsafe-enum-comparison" />
   <module name="@typescript-eslint_no-unsafe-member-access" />
   <module name="@typescript-eslint_no-unsafe-return" />
+  <module name="@typescript-eslint_no-unsafe-unary-minus" />
   <module name="@typescript-eslint_no-unused-expressions" />
   <module name="@typescript-eslint_no-unused-vars" />
   <module name="@typescript-eslint_no-use-before-define" />
@@ -914,6 +916,7 @@
   <module name="es-x_no-regexp-unicode-property-escapes-2023" />
   <module name="es-x_no-regexp-v-flag" />
   <module name="es-x_no-regexp-y-flag" />
+  <module name="es-x_no-resizable-and-growable-arraybuffers" />
   <module name="es-x_no-rest-parameters" />
   <module name="es-x_no-rest-spread-properties" />
   <module name="es-x_no-set" />
@@ -1370,6 +1373,7 @@
   <module name="lit_ban-attributes" />
   <module name="lit_binding-positions" />
   <module name="lit_lifecycle-super" />
+  <module name="lit_no-classfield-shadowing" />
   <module name="lit_no-duplicate-template-bindings" />
   <module name="lit_no-invalid-escape-sequences" />
   <module name="lit_no-invalid-html" />
@@ -1574,6 +1578,7 @@
   <module name="playwright_prefer-strict-equal" />
   <module name="playwright_prefer-to-be" />
   <module name="playwright_prefer-to-contain" />
+  <module name="playwright_prefer-to-have-count" />
   <module name="playwright_prefer-to-have-length" />
   <module name="playwright_prefer-web-first-assertions" />
   <module name="playwright_require-soft-assertions" />
@@ -1684,11 +1689,11 @@
   <module name="redux-saga_no-unhandled-errors" />
   <module name="regexp_confusing-quantifier" />
   <module name="regexp_control-character-escape" />
+  <module name="regexp_grapheme-string-literal" />
   <module name="regexp_hexadecimal-escape" />
   <module name="regexp_letter-case" />
   <module name="regexp_match-any" />
   <module name="regexp_negation" />
-  <module name="regexp_no-assertion-capturing-group" />
   <module name="regexp_no-contradiction-with-assertion" />
   <module name="regexp_no-control-character" />
   <module name="regexp_no-dupe-characters-character-class" />
@@ -1698,6 +1703,7 @@
   <module name="regexp_no-empty-character-class" />
   <module name="regexp_no-empty-group" />
   <module name="regexp_no-empty-lookarounds-assertion" />
+  <module name="regexp_no-empty-string-literal" />
   <module name="regexp_no-escape-backspace" />
   <module name="regexp_no-extra-lookaround-assertions" />
   <module name="regexp_no-invalid-regexp" />
@@ -1723,18 +1729,17 @@
   <module name="regexp_no-useless-character-class" />
   <module name="regexp_no-useless-dollar-replacements" />
   <module name="regexp_no-useless-escape" />
-  <module name="regexp_no-useless-exactly-quantifier" />
   <module name="regexp_no-useless-flag" />
   <module name="regexp_no-useless-lazy" />
   <module name="regexp_no-useless-non-capturing-group" />
-  <module name="regexp_no-useless-non-greedy" />
   <module name="regexp_no-useless-quantifier" />
   <module name="regexp_no-useless-range" />
+  <module name="regexp_no-useless-set-operand" />
+  <module name="regexp_no-useless-string-literal" />
   <module name="regexp_no-useless-two-nums-quantifier" />
   <module name="regexp_no-zero-quantifier" />
   <module name="regexp_optimal-lookaround-quantifier" />
   <module name="regexp_optimal-quantifier-concatenation" />
-  <module name="regexp_order-in-character-class" />
   <module name="regexp_prefer-character-class" />
   <module name="regexp_prefer-d" />
   <module name="regexp_prefer-escape-replacement-dollar-char" />
@@ -1750,11 +1755,13 @@
   <module name="regexp_prefer-regexp-exec" />
   <module name="regexp_prefer-regexp-test" />
   <module name="regexp_prefer-result-array-groups" />
+  <module name="regexp_prefer-set-operation" />
   <module name="regexp_prefer-star-quantifier" />
-  <module name="regexp_prefer-t" />
   <module name="regexp_prefer-unicode-codepoint-escapes" />
   <module name="regexp_prefer-w" />
   <module name="regexp_require-unicode-regexp" />
+  <module name="regexp_require-unicode-sets-regexp" />
+  <module name="regexp_simplify-set-operations" />
   <module name="regexp_sort-alternatives" />
   <module name="regexp_sort-character-class-elements" />
   <module name="regexp_sort-flags" />

@@ -2,7 +2,7 @@
 pageClass: "rule-details"
 sidebarDepth: 0
 title: "regexp/no-useless-range"
-description: "disallow unnecessary range of characters by using a hyphen"
+description: "disallow unnecessary character ranges"
 since: "v0.3.0"
 ---
 # regexp/no-useless-range
@@ -13,11 +13,11 @@ since: "v0.3.0"
 
 <!-- end auto-generated rule header -->
 
-> disallow unnecessary range of characters by using a hyphen
+> disallow unnecessary character ranges
 
 ## :book: Rule Details
 
-This rule reports unnecessary range of characters by using a hyphen. e.g. `[a-a]`
+This rule reports unnecessary character ranges. E.g. `[a-a]`
 
 <eslint-code-block fix>
 
