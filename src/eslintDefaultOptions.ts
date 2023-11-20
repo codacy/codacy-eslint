@@ -114,13 +114,12 @@ export const defaultOptions: ESLint.Options = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
       allowAutomaticSingleRunInference: true,
-      ecmaVersion: "latest",
       ecmaFeatures: {
         "jsx": true,
       },
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"],
-      project: ["/tsconfig.json"],
+      project: ["./tsconfig.json"],
     },
     root: true,
     settings: {
@@ -149,9 +148,10 @@ export const defaultOptions: ESLint.Options = {
       },
     },
     overrides: [
+      // TypeScript-specific rules
       {
         files: ["**/*.ts", "**/*.tsx"],
-        extends: typescriptConfigs,
+        extends: [...typescriptConfigs],
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",
@@ -172,6 +172,7 @@ export const defaultOptions: ESLint.Options = {
           "no-unsafe-negation": "off",
         },
       },
+      // JavaScript-specific rules
       {
         files: ["**/*.js", "**/*.jsx", "**/*.json"],
         extends: ['plugin:@typescript-eslint/disable-type-checked'],
@@ -183,6 +184,7 @@ export const defaultOptions: ESLint.Options = {
           '@typescript-eslint/explicit-function-return-type': 'off',
         },
       },
+      // JSX with Babel
       {
         files: ["**/*.jsx"],
         parser: "@babel/eslint-parser",
@@ -192,7 +194,8 @@ export const defaultOptions: ESLint.Options = {
           },
           requireConfigFile: false,
         },
-      },  
+      },
+      // Testing files
       {
         files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
         extends: ["plugin:testing-library/react"],
