@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "resolveJsonModule": true,
     "checkJs": false,
     "exactOptionalPropertyTypes": false,
     "allowArbitraryExtensions": false,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declaration": false,
     "noEmit": true,
     "noEmitOnError": true,
