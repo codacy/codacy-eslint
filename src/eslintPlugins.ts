@@ -68,6 +68,7 @@ import { rules as ramdaRules } from "eslint-plugin-ramda"
 import { rules as reactRules } from "eslint-plugin-react"
 import { rules as reactHooksRules } from "eslint-plugin-react-hooks"
 import { rules as reactNativeRules } from "eslint-plugin-react-native"
+import { rules as reactPerfRules } from "eslint-plugin-react-perf"
 import { rules as reactReduxRules } from "eslint-plugin-react-redux"
 import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
 import { rules as regexpRules } from "eslint-plugin-regexp"
@@ -176,6 +177,7 @@ const plugins = [
   ["react", reactRules],
   ["react-hooks", reactHooksRules],
   ["react-native", reactNativeRules],
+  ["react-perf", reactPerfRules],
   ["react-redux", reactReduxRules],
   ["redux-saga", reduxSagaRules],
   ["regexp", regexpRules],

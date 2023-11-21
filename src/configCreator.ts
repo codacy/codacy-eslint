@@ -8,7 +8,7 @@ import { toolName } from "./toolMetadata"
 import { existsSync } from "fs-extra"
 import {default as allPatterns} from "../docs/patterns.json"
 
-export function configCreator(
+export function createEslintConfig(
   srcDirPath: string,
   codacyrc?: Codacyrc
 ): [ESLint.Options, string[]] {
@@ -18,17 +18,18 @@ export function configCreator(
     srcDirPath + "/**/*.ts",
     srcDirPath + "/**/*.tsx",
     srcDirPath + "/**/*.js",
-    srcDirPath + "/**/*.jsx"
+    srcDirPath + "/**/*.jsx",
+    srcDirPath + "/**/*.json"
   ]
 
-  const options = (!eslintrcExistsInSrcDir(srcDirPath)) ? optionsCreator(srcDirPath, codacyrc) : {}
+  const options = (!isEslintrcConfigPresent(srcDirPath)) ? generateEslintOptions(srcDirPath, codacyrc) : {}
   const files = codacyrc?.files?.length > 0 ? codacyrc.files : defaultFilesToAnalyze
 
   debug("config: finished")
   return [options, files]
 }
 
-function optionsCreator(
+function generateEslintOptions(
   srcDirPath: string,
   codacyrc?: Codacyrc,
 ): ESLint.Options {
@@ -48,7 +49,7 @@ function optionsCreator(
     }
   }
 
-  let options = removeExtendsOfBaseConfig(cloneDeep(defaultOptions))
+  let options = resetEslintBaseConfig(cloneDeep(defaultOptions))
 
   if (existsSync(srcDirPath + "/" + tsconfigFile)) {
     debug("options: use tsconfig from repo")
@@ -82,18 +83,18 @@ function optionsCreator(
           "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
           "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
         ],
-        rules: patternsToRules(storybookPatterns),
+        rules: convertPatternsToEslintRules(storybookPatterns),
       })
     }
 
     // explicitly use only the rules being passed by codacyrc
     if (otherPatterns.length > 0) {
       debug("options: setting " + otherPatterns.length + " patterns")
-      options.baseConfig.rules = patternsToRules(otherPatterns)
+      options.baseConfig.rules = convertPatternsToEslintRules(otherPatterns)
     }
   }
   else if (DEBUG) {
-    options.baseConfig.rules = patternsToRules(getAllPatterns())
+    options.baseConfig.rules = convertPatternsToEslintRules(retrieveAllCodacyPatterns())
   }
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
@@ -104,7 +105,7 @@ function optionsCreator(
   return options
 }
 
-function patternsToRules(patterns: Pattern[]): {
+function convertPatternsToEslintRules(patterns: Pattern[]): {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
 } {
   const pairs = patterns.map((pattern: Pattern) => {
@@ -131,7 +132,7 @@ function patternsToRules(patterns: Pattern[]): {
   return fromPairs(pairs)
 }
 
-function eslintrcExistsInSrcDir(srcDirPath: string): boolean {
+function isEslintrcConfigPresent(srcDirPath: string): boolean {
   debug("options: check if configuration file exists in " + srcDirPath)
 
   const confFilenames = [
@@ -153,7 +154,7 @@ function eslintrcExistsInSrcDir(srcDirPath: string): boolean {
   return false
 }
 
-function getAllPatterns(): Pattern[] {
+function retrieveAllCodacyPatterns(): Pattern[] {
   debug("options: getting all patterns")
 
   const patterns = []
@@ -178,7 +179,7 @@ function getAllPatterns(): Pattern[] {
   return patterns
 }
 
-function removeExtendsOfBaseConfig(options: ESLint.Options): ESLint.Options {
+function resetEslintBaseConfig(options: ESLint.Options): ESLint.Options {
   debug("options: reseting default options")
   options.baseConfig.extends = []
   if (!options.baseConfig.overrides) {

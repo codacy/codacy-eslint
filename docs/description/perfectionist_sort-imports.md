@@ -99,6 +99,7 @@ type Group =
   | 'parent'
   | 'sibling'
   | 'side-effect'
+  | 'side-effect-style'
   | 'index'
   | 'object'
   | 'style'
@@ -127,6 +128,7 @@ interface Options {
   }
   'internal-pattern'?: string[]
   'newlines-between'?: 'always' | 'ignore' | 'never'
+  'max-line-length'?: number
 ```
 
 ### type
@@ -169,6 +171,8 @@ import formatNumber from '../utils/format-number'
 import config from './config'
 // 'side-effect' - Side effect imports
 import './set-production-env.js'
+// side-effect-style - Side effect style imports
+import './styles.scss'
 // 'index' - Main file from the current directory
 import main from '.'
 // 'object' - TypeScript object-imports
@@ -243,6 +247,14 @@ The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern
 - `ignore` - do not report errors related to new lines between import groups.
 - `always` - one new line between each group will be enforced, and new lines inside a group will be forbidden.
 - `never` - no new lines are allowed in the entire import section.
+
+### max-line-length\*
+
+<sub>(default: `undefined`)</sub>
+
+You can use this to sort by the import name only, excluding the elements, when the line length is greater than this number.
+
+**\*Note:** Only available for `line-length` type.
 
 ## ⚙️ Usage
 

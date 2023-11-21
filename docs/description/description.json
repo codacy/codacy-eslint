@@ -3756,16 +3756,16 @@
   },
   {
     "parameters": [],
-    "patternId": "@tanstack_query_prefer-query-object-syntax",
-    "title": "@tanstack: [Query] Prefer query object syntax",
-    "description": "Prefer object syntax for useQuery",
+    "patternId": "@tanstack_query_stable-query-client",
+    "title": "@tanstack: [Query] Stable query client",
+    "description": "Makes sure that QueryClient is stable",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@tanstack_query_stable-query-client",
-    "title": "@tanstack: [Query] Stable query client",
-    "description": "Makes sure that QueryClient is stable",
+    "patternId": "@tanstack_query_no-rest-destructuring",
+    "title": "@tanstack: [Query] No rest destructuring",
+    "description": "Disallows rest destructuring in queries",
     "timeToFix": 5
   },
   {
@@ -4038,6 +4038,13 @@
     "patternId": "@typescript-eslint_lines-around-comment",
     "title": "@typescript eslint: Lines around comment",
     "description": "Require empty lines around comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_max-params",
+    "title": "@typescript eslint: Max params",
+    "description": "Enforce a maximum number of parameters in function definitions",
     "timeToFix": 5
   },
   {
@@ -4478,6 +4485,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-unary-minus",
+    "title": "@typescript eslint: No unsafe unary minus",
+    "description": "Require unary negation to take a number",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "allowShortCircuit",
@@ -4783,7 +4797,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_switch-exhaustiveness-check",
     "title": "@typescript eslint: Switch exhaustiveness check",
-    "description": "Require switch-case statements to be exhaustive with union type",
+    "description": "Require switch-case statements to be exhaustive",
     "timeToFix": 5
   },
   {
@@ -7551,6 +7565,13 @@
   },
   {
     "parameters": [],
+    "patternId": "es-x_no-resizable-and-growable-arraybuffers",
+    "title": "Es x: No resizable and growable arraybuffers",
+    "description": "Disallow resizable and growable ArrayBuffers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "es-x_no-rest-parameters",
     "title": "Es x: No rest parameters",
     "description": "Disallow rest parameters.",
@@ -9424,6 +9445,10 @@
       {
         "name": "ignoreTypeOfDescribeName",
         "description": "ignoreTypeOfDescribeName"
+      },
+      {
+        "name": "ignoreTypeOfTestName",
+        "description": "ignoreTypeOfTestName"
       }
     ],
     "patternId": "jest_valid-title",
@@ -10992,6 +11017,13 @@
   },
   {
     "parameters": [],
+    "patternId": "lit_no-classfield-shadowing",
+    "title": "Lit: No classfield shadowing",
+    "description": "Disallows properties shadowed as class fields",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "lit_no-duplicate-template-bindings",
     "title": "Lit: No duplicate template bindings",
     "description": "Disallows duplicate names in template bindings",
@@ -12278,6 +12310,10 @@
       {
         "name": "groups",
         "description": "groups"
+      },
+      {
+        "name": "partition-by-new-line",
+        "description": "partition-by-new-line"
       }
     ],
     "patternId": "perfectionist_sort-interfaces",
@@ -12386,6 +12422,10 @@
       {
         "name": "groups",
         "description": "groups"
+      },
+      {
+        "name": "partition-by-new-line",
+        "description": "partition-by-new-line"
       }
     ],
     "patternId": "perfectionist_sort-object-types",
@@ -12398,6 +12438,10 @@
       {
         "name": "partition-by-comment",
         "description": "partition-by-comment"
+      },
+      {
+        "name": "partition-by-new-line",
+        "description": "partition-by-new-line"
       },
       {
         "name": "styled-components",
@@ -12588,7 +12632,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "allowConditional",
+        "description": "allowConditional"
+      }
+    ],
     "patternId": "playwright_no-skipped-test",
     "title": "Playwright: No skipped test",
     "description": "Prevent usage of the `.skip()` skip test annotation.",
@@ -12646,6 +12695,13 @@
     "patternId": "playwright_prefer-to-contain",
     "title": "Playwright: Prefer to contain",
     "description": "Suggest using toContain()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-to-have-count",
+    "title": "Playwright: Prefer to have count",
+    "description": "Suggest using `toHaveCount()`",
     "timeToFix": 5
   },
   {
@@ -13347,6 +13403,34 @@
   },
   {
     "parameters": [],
+    "patternId": "react-perf_jsx-no-new-object-as-prop",
+    "title": "React perf: Jsx no new object as prop",
+    "description": "Prevent {...} as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-new-array-as-prop",
+    "title": "React perf: Jsx no new array as prop",
+    "description": "Prevent [...] as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-new-function-as-prop",
+    "title": "React perf: Jsx no new function as prop",
+    "description": "Prevent `function` as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-jsx-as-prop",
+    "title": "React perf: Jsx no jsx as prop",
+    "description": "Prevent JSX as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react-redux_connect-prefer-minimum-two-arguments",
     "title": "React redux: Connect prefer minimum two arguments",
     "timeToFix": 5
@@ -13454,6 +13538,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_grapheme-string-literal",
+    "title": "Regexp: Grapheme string literal",
+    "description": "Enforce single grapheme in string literal",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_hexadecimal-escape",
     "title": "Regexp: Hexadecimal escape",
     "description": "Enforce consistent usage of hexadecimal escape",
@@ -13478,13 +13569,6 @@
     "patternId": "regexp_negation",
     "title": "Regexp: Negation",
     "description": "Enforce use of escapes on negation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "regexp_no-assertion-capturing-group",
-    "title": "Regexp: No assertion capturing group",
-    "description": "Disallow capturing group that captures empty.",
     "timeToFix": 5
   },
   {
@@ -13548,6 +13632,13 @@
     "patternId": "regexp_no-empty-lookarounds-assertion",
     "title": "Regexp: No empty lookarounds assertion",
     "description": "Disallow empty lookahead assertion or empty lookbehind assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-string-literal",
+    "title": "Regexp: No empty string literal",
+    "description": "Disallow empty string literals in character classes",
     "timeToFix": 5
   },
   {
@@ -13727,13 +13818,6 @@
   },
   {
     "parameters": [],
-    "patternId": "regexp_no-useless-exactly-quantifier",
-    "title": "Regexp: No useless exactly quantifier",
-    "description": "Disallow unnecessary exactly quantifier",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "regexp_no-useless-flag",
     "title": "Regexp: No useless flag",
     "description": "Disallow unnecessary regex flags",
@@ -13750,14 +13834,7 @@
     "parameters": [],
     "patternId": "regexp_no-useless-non-capturing-group",
     "title": "Regexp: No useless non capturing group",
-    "description": "Disallow unnecessary Non-capturing group",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "regexp_no-useless-non-greedy",
-    "title": "Regexp: No useless non greedy",
-    "description": "Disallow unnecessarily non-greedy quantifiers",
+    "description": "Disallow unnecessary non-capturing group",
     "timeToFix": 5
   },
   {
@@ -13771,7 +13848,21 @@
     "parameters": [],
     "patternId": "regexp_no-useless-range",
     "title": "Regexp: No useless range",
-    "description": "Disallow unnecessary range of characters by using a hyphen",
+    "description": "Disallow unnecessary character ranges",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-set-operand",
+    "title": "Regexp: No useless set operand",
+    "description": "Disallow unnecessary elements in expression character classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-string-literal",
+    "title": "Regexp: No useless string literal",
+    "description": "Disallow string disjunction of single characters in `\\q{...}`",
     "timeToFix": 5
   },
   {
@@ -13800,13 +13891,6 @@
     "patternId": "regexp_optimal-quantifier-concatenation",
     "title": "Regexp: Optimal quantifier concatenation",
     "description": "Require optimal quantifiers for concatenated quantifiers",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "regexp_order-in-character-class",
-    "title": "Regexp: Order in character class",
-    "description": "Enforces elements order in character class",
     "timeToFix": 5
   },
   {
@@ -13916,16 +14000,16 @@
   },
   {
     "parameters": [],
-    "patternId": "regexp_prefer-star-quantifier",
-    "title": "Regexp: Prefer star quantifier",
-    "description": "Enforce using `*` quantifier",
+    "patternId": "regexp_prefer-set-operation",
+    "title": "Regexp: Prefer set operation",
+    "description": "Prefer character class set operations instead of lookarounds",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "regexp_prefer-t",
-    "title": "Regexp: Prefer t",
-    "description": "Enforce using `\\t`",
+    "patternId": "regexp_prefer-star-quantifier",
+    "title": "Regexp: Prefer star quantifier",
+    "description": "Enforce using `*` quantifier",
     "timeToFix": 5
   },
   {
@@ -13947,6 +14031,20 @@
     "patternId": "regexp_require-unicode-regexp",
     "title": "Regexp: Require unicode regexp",
     "description": "Enforce the use of the `u` flag",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_require-unicode-sets-regexp",
+    "title": "Regexp: Require unicode sets regexp",
+    "description": "Enforce the use of the `v` flag",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_simplify-set-operations",
+    "title": "Regexp: Simplify set operations",
+    "description": "Require simplify set operations",
     "timeToFix": 5
   },
   {

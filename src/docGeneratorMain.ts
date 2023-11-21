@@ -264,6 +264,12 @@ async function main() {
     "react-native"
   )
 
+  console.log("Generate react-perf description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/cvazac/eslint-plugin-react-perf/master/docs/rules/`,
+    "react-perf"
+  )
+
   console.log("Generate react-redux description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/DianaSuvorova/eslint-plugin-react-redux/master/docs/rules/`,
@@ -278,7 +284,7 @@ async function main() {
 
   console.log("Generate regexp description files")
   await docGenerator.downloadDocs(
-    `${githubBaseUrl}/ota-meshi/eslint-plugin-regexp/v1.15.0/docs/rules/`,
+    `${githubBaseUrl}/ota-meshi/eslint-plugin-regexp/master/docs/rules/`,
     "regexp"
   )
 
@@ -357,8 +363,9 @@ async function main() {
 
   console.log("Generate unicorn description files")
   await docGenerator.downloadDocs(
-    `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/v48.0.1/docs/rules/`,
-    "unicorn"
+    `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/`,
+    "unicorn",
+    false
   )
 
   console.log("Generate unused-imports description files")

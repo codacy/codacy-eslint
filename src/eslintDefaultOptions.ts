@@ -113,10 +113,11 @@ export const defaultOptions: ESLint.Options = {
     plugins: pluginsNames,
     parser: "@typescript-eslint/parser",
     parserOptions: {
-      ecmaVersion: 2022,
+      allowAutomaticSingleRunInference: true,
       ecmaFeatures: {
         "jsx": true,
       },
+      errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"],
       project: ["./tsconfig.json"],
     },
@@ -147,9 +148,10 @@ export const defaultOptions: ESLint.Options = {
       },
     },
     overrides: [
+      // TypeScript-specific rules
       {
         files: ["**/*.ts", "**/*.tsx"],
-        extends: typescriptConfigs,
+        extends: [...typescriptConfigs],
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",
@@ -170,66 +172,19 @@ export const defaultOptions: ESLint.Options = {
           "no-unsafe-negation": "off",
         },
       },
+      // JavaScript-specific rules
       {
         files: ["**/*.js", "**/*.jsx", "**/*.json"],
+        extends: ['plugin:@typescript-eslint/disable-type-checked'],
         rules: {
-          // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/disable-type-checked.ts
-          "@typescript-eslint/await-thenable": "off",
-          "@typescript-eslint/consistent-type-exports": "off",
-          "@typescript-eslint/dot-notation": "off",
-          "@typescript-eslint/naming-convention": "off",
-          "@typescript-eslint/no-base-to-string": "off",
-          "@typescript-eslint/no-confusing-void-expression": "off",
-          "@typescript-eslint/no-duplicate-type-constituents": "off",
-          "@typescript-eslint/no-floating-promises": "off",
-          "@typescript-eslint/no-for-in-array": "off",
-          "@typescript-eslint/no-implied-eval": "off",
-          "@typescript-eslint/no-meaningless-void-operator": "off",
-          "@typescript-eslint/no-misused-promises": "off",
-          "@typescript-eslint/no-mixed-enums": "off",
-          "@typescript-eslint/no-redundant-type-constituents": "off",
-          "@typescript-eslint/no-throw-literal": "off",
-          "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-          "@typescript-eslint/no-unnecessary-condition": "off",
-          "@typescript-eslint/no-unnecessary-qualifier": "off",
-          "@typescript-eslint/no-unnecessary-type-arguments": "off",
-          "@typescript-eslint/no-unnecessary-type-assertion": "off",
-          "@typescript-eslint/no-unsafe-argument": "off",
-          "@typescript-eslint/no-unsafe-assignment": "off",
-          "@typescript-eslint/no-unsafe-call": "off",
-          "@typescript-eslint/no-unsafe-enum-comparison": "off",
-          "@typescript-eslint/no-unsafe-member-access": "off",
-          "@typescript-eslint/no-unsafe-return": "off",
-          "@typescript-eslint/non-nullable-type-assertion-style": "off",
-          "@typescript-eslint/prefer-includes": "off",
-          "@typescript-eslint/prefer-nullish-coalescing": "off",
-          "@typescript-eslint/prefer-optional-chain": "off",
-          "@typescript-eslint/prefer-readonly": "off",
-          "@typescript-eslint/prefer-readonly-parameter-types": "off",
-          "@typescript-eslint/prefer-reduce-type-parameter": "off",
-          "@typescript-eslint/prefer-regexp-exec": "off",
-          "@typescript-eslint/prefer-return-this-type": "off",
-          "@typescript-eslint/prefer-string-starts-ends-with": "off",
-          "@typescript-eslint/promise-function-async": "off",
-          "@typescript-eslint/require-array-sort-compare": "off",
-          "@typescript-eslint/require-await": "off",
-          "@typescript-eslint/restrict-plus-operands": "off",
-          "@typescript-eslint/restrict-template-expressions": "off",
-          "@typescript-eslint/return-await": "off",
-          "@typescript-eslint/strict-boolean-expressions": "off",
-          "@typescript-eslint/switch-exhaustiveness-check": "off",
-          "@typescript-eslint/unbound-method": "off",
-          "deprecation/deprecation": "off",
+          // turn off other type-aware rules
+          'deprecation/deprecation': 'off',
+          '@typescript-eslint/internal/no-poorly-typed-ts-props': 'off',
+          // turn off rules that don't apply to JS code
+          '@typescript-eslint/explicit-function-return-type': 'off',
         },
       },
-      {
-        files: ["**/*.vue"],
-        parser: "vue-eslint-parser",
-        parserOptions: {
-          parser: "@typescript-eslint/parser",
-          ecmaVersion: 2022,
-        },
-      },
+      // JSX with Babel
       {
         files: ["**/*.jsx"],
         parser: "@babel/eslint-parser",
@@ -239,7 +194,8 @@ export const defaultOptions: ESLint.Options = {
           },
           requireConfigFile: false,
         },
-      },  
+      },
+      // Testing files
       {
         files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
         extends: ["plugin:testing-library/react"],
