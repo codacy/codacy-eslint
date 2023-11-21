@@ -4797,7 +4797,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_switch-exhaustiveness-check",
     "title": "@typescript eslint: Switch exhaustiveness check",
-    "description": "Require switch-case statements to be exhaustive with union type",
+    "description": "Require switch-case statements to be exhaustive",
     "timeToFix": 5
   },
   {
@@ -13399,6 +13399,34 @@
     "patternId": "react-native_no-single-element-style-arrays",
     "title": "React native: No single element style arrays",
     "description": "Disallow single element style arrays. These cause unnecessary re-renders as the identity of the array always changes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-new-object-as-prop",
+    "title": "React perf: Jsx no new object as prop",
+    "description": "Prevent {...} as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-new-array-as-prop",
+    "title": "React perf: Jsx no new array as prop",
+    "description": "Prevent [...] as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-new-function-as-prop",
+    "title": "React perf: Jsx no new function as prop",
+    "description": "Prevent `function` as JSX prop value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-perf_jsx-no-jsx-as-prop",
+    "title": "React perf: Jsx no jsx as prop",
+    "description": "Prevent JSX as JSX prop value",
     "timeToFix": 5
   },
   {

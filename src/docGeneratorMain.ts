@@ -264,6 +264,12 @@ async function main() {
     "react-native"
   )
 
+  console.log("Generate react-perf description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/cvazac/eslint-plugin-react-perf/master/docs/rules/`,
+    "react-perf"
+  )
+
   console.log("Generate react-redux description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/DianaSuvorova/eslint-plugin-react-redux/master/docs/rules/`,

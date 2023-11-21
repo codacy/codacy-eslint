@@ -1672,6 +1672,10 @@
   <module name="react-native_split-platform-components" />
   <module name="react-native_no-raw-text" />
   <module name="react-native_no-single-element-style-arrays" />
+  <module name="react-perf_jsx-no-new-object-as-prop" />
+  <module name="react-perf_jsx-no-new-array-as-prop" />
+  <module name="react-perf_jsx-no-new-function-as-prop" />
+  <module name="react-perf_jsx-no-jsx-as-prop" />
   <module name="react-redux_connect-prefer-minimum-two-arguments" />
   <module name="react-redux_connect-prefer-named-arguments" />
   <module name="react-redux_mapDispatchToProps-prefer-shorthand" />

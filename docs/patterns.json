@@ -13690,6 +13690,34 @@
       "enabled": false
     },
     {
+      "patternId": "react-perf_jsx-no-new-object-as-prop",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "react-perf_jsx-no-new-array-as-prop",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "react-perf_jsx-no-new-function-as-prop",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "react-perf_jsx-no-jsx-as-prop",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "react-redux_connect-prefer-minimum-two-arguments",
       "level": "Info",
       "category": "CodeStyle",
