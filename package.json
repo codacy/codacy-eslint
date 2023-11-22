@@ -346,7 +346,7 @@
     "vue-i18n": "^9.7.0",
     "vue-loader": "^17.3.1",
     "vue-router": "^4.2.5",
-    "vuetify": "^3.4.2",
+    "vuetify": "^3.4.3",
     "vuex": "^4.1.0",
     "webpack": "^5.89.0",
     "webpack-manifest-plugin": "^5.0.0",
