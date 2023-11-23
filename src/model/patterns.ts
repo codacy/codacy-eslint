@@ -20,44 +20,15 @@ export function fromEslintPatternIdAndCategoryToCategory(
     case "problem":
       return ["ErrorProne"]
     case "suggestion":
-      return ["CodeStyle"]
+      return ["BestPractice"]
     case "layout":
+    default:
       return ["CodeStyle"]
-    default:
-      return [fromEslintPatternIdAndCategoryToCategoryLegacy(category)]
-  }
-}
-
-function fromEslintPatternIdAndCategoryToCategoryLegacy(
-  category?: string
-): Category {
-  switch (category) {
-    case "Possible Errors":
-      return "ErrorProne"
-    case "Best Practices":
-      return "CodeStyle"
-    case "Strict Mode":
-      return "CodeStyle"
-    case "Variables":
-      return "CodeStyle"
-    case "Node.js and CommonJS":
-      return "CodeStyle"
-    case "Stylistic Issues":
-      return "CodeStyle"
-    case "ECMAScript 6":
-      return "CodeStyle"
-    case "Deprecated":
-      return "Compatibility"
-    case "Removed":
-      return "Compatibility"
-    default:
-      return "CodeStyle"
   }
 }
 
 export function fromEslintTypeAndCategoryToLevel(
-  type?: string,
-  category?: string
+  type?: string
 ): Level {
   switch (type) {
     case "problem":
@@ -65,32 +36,6 @@ export function fromEslintTypeAndCategoryToLevel(
     case "suggestion":
       return "Warning"
     case "layout":
-      return "Info"
-    default:
-      return fromEslintCategoryToLevelLegacy(category)
-  }
-}
-
-function fromEslintCategoryToLevelLegacy(category?: string): Level {
-  switch (category) {
-    case "Possible Errors":
-      return "Error"
-    case "Best Practices":
-      return "Info"
-    case "Strict Mode":
-      return "Error"
-    case "Variables":
-      return "Info"
-    case "Node.js and CommonJS":
-      return "Warning"
-    case "Stylistic Issues":
-      return "Info"
-    case "ECMAScript 6":
-      return "Warning"
-    case "Deprecated":
-      return "Info"
-    case "Removed":
-      return "Info"
     default:
       return "Info"
   }

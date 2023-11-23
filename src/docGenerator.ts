@@ -20,6 +20,8 @@ import {
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
+import { debug } from "./logging"
+
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
@@ -43,30 +45,31 @@ export class DocGenerator {
     const unnamedParameter = unnamedParameterValue
       ? new ParameterSpec("unnamedParam", unnamedParameterValue)
       : undefined
-    function getParameters(): ParameterSpec[] | undefined {
+
+      function getParameters(): ParameterSpec[] | undefined {
       if (namedParameters && unnamedParameter)
         return [unnamedParameter, ...namedParameters]
-      else if (namedParameters) return namedParameters
-      else if (unnamedParameter) return [unnamedParameter]
-      else return undefined
+      if (namedParameters)
+        return namedParameters
+      if (unnamedParameter)
+        return [unnamedParameter]
+      
+      return undefined
     }
-    const result = getParameters()
-    return result && result.length > 0 ? result : undefined
+
+    return getParameters()
   }
 
   generatePatterns(): Specification {
     const patterns = flatMap(this.rules, ([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
-      const eslintCategory = meta?.docs?.category
-      // Hack since eslint typescript definitions don't expose `type` yet
-      const eslintType = meta?.docs ? (meta?.docs as any).type : undefined
+      const eslintType = meta?.type
       const level: Level = fromEslintTypeAndCategoryToLevel(
-        eslintType,
-        eslintCategory
+        eslintType
       )
       const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
         patternId,
-        eslintCategory
+        eslintType
       )
       const parameters = this.generateParameters(patternId, meta?.schema)
       const enabled = meta?.docs?.recommended === true
@@ -85,10 +88,9 @@ export class DocGenerator {
 
   generateDescriptionEntries(): DescriptionEntry[] {
     const descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
-      const meta = ruleModule && ruleModule.meta
-      const eslintDescription = meta?.docs?.description
-      const description = eslintDescription
-        ? capitalize(eslintDescription)
+      const meta = ruleModule?.meta
+      const description = meta?.docs?.description
+        ? capitalize(meta?.docs?.description)
         : undefined
       const title = patternTitle(patternId)
       const timeToFix = 5
@@ -190,11 +192,11 @@ export class DocGenerator {
         return writeFile(filename, text)
       } else {
         const message = `Failed to retrieve docs for ${pattern} from ${url}`
-        if (rejectOnError) return Promise.reject(message)
-        else {
-          console.log(`${message}. Skipping`)
-          Promise.resolve()
+        if (rejectOnError) {
+          return Promise.reject(message)
         }
+        debug(`${message}. Skipping`)
+        Promise.resolve()
       }
     })
     return Promise.all(promises)
