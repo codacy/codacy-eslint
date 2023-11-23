@@ -149,17 +149,17 @@ export class DocGenerator {
 
   private async inlineLinkedMarkdownFiles(text: string, baseUrl: string) {
     let newText = text
-
-    const elements = newText.match(/\[.*?\)/g)
+    const elements = text.match(/\[.*?\)/g)
 
     if (elements) {
       await Promise.all(elements.map(async (elem) => {
-        const urlMatch = elem.match(/\((.*?)\)/)
-        if (urlMatch && urlMatch.length === 2) {
-          const url = elem.match(/\((.*?)\)/)[1]
-          if (url.startsWith("../") && url.endsWith(".md")) {
-            const fullUrl = `${baseUrl}${url}`
-            const response = await fetch(fullUrl)
+        const urlMatch = elem.match(/\((\.\.\/.*?\.md)\)/)
+
+        if (urlMatch) {
+          const url = urlMatch[1]
+          const fullUrl = `${baseUrl}${url}`
+          const response = await fetch(fullUrl)
+          if (response.ok) {
             const content = await response.text()
             newText = newText.replace(elem, () => `\n\n${content}`)
           }
@@ -181,10 +181,10 @@ export class DocGenerator {
         : this.eslintPatternIds()
     const promises: Promise<void>[] = patterns.map(async (pattern) => {
       const url: string = `${baseUrl}${patternIdModifier(pattern)}.md`
-      const result = await fetch(url)
-      if (result.ok) {
-        const textInput = await result.text()
-        const text = await this.inlineLinkedMarkdownFiles(textInput, baseUrl)
+      const response = await fetch(url)
+      if (response.ok) {
+        const content = await response.text()
+        const text = await this.inlineLinkedMarkdownFiles(content, baseUrl)
         const filename =
           "docs/description/" +
           patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
