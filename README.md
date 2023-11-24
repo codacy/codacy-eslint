@@ -3,51 +3,48 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/88324e5ee7464c62abe07115b884c6a9)](https://app.codacy.com/gh/codacy/codacy-eslint/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CircleCI](https://circleci.com/gh/codacy/codacy-eslint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-eslint)
 
-## Adding new plugins / configs
+## Adding new packages / plugins / configs
 
-1.  Install the package using npm:
+1.  Install the package / plugin using npm:
 
     ```bash
-    npm install <package-name>
+    npm install --legacy-peer-deps --omit=dev <package-name>
     ```
 
-2.  \[Plugins only\] Add the plugin to the plugins section in the file `src/eslintDefaultOptions.ts`
-only if it's stated in the plugin's documentation
+### Configuring new plugins
 ---
   **NOTE**
-  Before adding a plugin to the Codacy UI, make sure it has widespread use and is actively maintained. Otherwise, installing it as described in point `1` can be enough for users using configuration files.
+  Before adding a plugin to the Codacy UI, make sure it has widespread use and is actively maintained.
 
 ---
-3.  \[Plugins only\] If the plugin has descriptions for rules on GitHub, reference them
+1.  If the plugin has descriptions for rules on GitHub, reference them
 at `src/docGeneratorMain.ts` to include them on the generated documentation. To do this, add a section similar to the following example:
 
     ```typescript
     console.log("Generate xss description files")
     await docGenerator.downloadDocs(
-      (pattern) =>
-        `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/${pattern}.md`,
+      `${githubBaseUrl}/Rantanen/eslint-plugin-xss/master/docs/rules/`,
       "xss", // this is the pattern's prefix, like: xss/some-pattern-id
       false // Add false for plugins not having .md files for all the patterns
     )
     ```
     As well, in `src/eslintPlugins.ts` add two new entries
     ```typescript
-    import { rules as xssRules } from "eslint-plugin-xss" // make sure this one matcher the correct name of the plugin
+    import { rules as xssRules } from "eslint-plugin-xss" // make sure this one matches the correct name of the package
     ```
     and in the const plugins list
     ```typescript
-      ["xss", xssRules] // the first value has to match the patterns's prefix
+      ["xss", xssRules] // the first value has to match the plugin name
     ```
-4.  Generate documentation so it adds the new plugin documentation
-5.  Add a new test in `/docs/multiple-tests` that uses the newly added plugin or config.
+3.  Generate documentation so it adds the new plugin documentation.
+4.  Add a new test in `/docs/multiple-tests` that uses the newly added plugin.
     You can use the Getting Started section of the package documentation to find a small usage example. 
 
 ## Generating documentation
 
-```bash
-npm install
-npm run generateDocs
-```
+    ```bash
+    npm run docs:generate
+    ```
 
 ## Test changes to codacy-seed locally
 You may need to test changes that comes from our [codacy-engine-typescript-seed](https://github.com/codacy/codacy-engine-typescript-seed).

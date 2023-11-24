@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
     <file name="big-codacy-configuration.js">
-        <error source="id-length" line="1" message="Identifier name 's' is too short (&lt; 3)." severity="info" />
+        <error source="id-length" line="1" message="Identifier name 's' is too short (&lt; 3)." severity="warning" />
     </file>
 </checkstyle>

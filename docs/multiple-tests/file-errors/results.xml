@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="4.3">
     <file name="file-errors-correct.js">
-        <error source="no-unused-vars" line="1" message="'s' is assigned a value but never used." severity="info" />
+        <error source="no-unused-vars" line="1" message="'s' is assigned a value but never used." severity="error" />
     </file>
     <file name="file-errors-broken.js">
         <error message="Parsing error: Unexpected token a" />
