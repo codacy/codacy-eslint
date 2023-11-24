@@ -9,13 +9,12 @@ export function fromEslintPatternIdAndCategoryToCategory(
   if (patternId.includes("injection")) return ["Security", "CommandInjection"]
   if (patternId.includes("crypto")) return ["Security", "Cryptography"]
   if (patternId.includes("Storage")) return ["Security", "InsecureStorage"]
-  if (patternId.startsWith("scanjs-rules/call_"))
-    return ["Security", "CommandInjection"]
-  if (patternId.startsWith("scanjs-rules/assign_to_"))
-    return ["Security", "MaliciousCode"]
+  if (patternId.startsWith("no-unsanitized")) return ["Security", "XSS"]
+  if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"]
+  if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"]
   if (patternId.startsWith("scanjs-rules") || patternId.includes("security"))
     return ["Security", patternId.includes("regex") ? "Regex" : undefined]
-  if (patternId.startsWith("no-unsanitized")) return ["Security", "XSS"]
+
   switch (category) {
     case "problem":
       return ["ErrorProne"]
@@ -27,7 +26,7 @@ export function fromEslintPatternIdAndCategoryToCategory(
   }
 }
 
-export function fromEslintTypeAndCategoryToLevel(
+export function fromEslintTypeToLevel(
   type?: string
 ): Level {
   switch (type) {

@@ -1,7 +1,6 @@
 import {
   DescriptionEntry,
   DescriptionParameter,
-  Level,
   ParameterSpec,
   PatternSpec,
   Specification,
@@ -9,12 +8,12 @@ import {
 } from "codacy-seed"
 import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
-import { flatMap, flatMapDeep } from "lodash"
+import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import {
   fromEslintPatternIdAndCategoryToCategory,
-  fromEslintTypeAndCategoryToLevel,
+  fromEslintTypeToLevel,
   patternIdToCodacy
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
@@ -37,49 +36,41 @@ export class DocGenerator {
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[] | undefined
   ): ParameterSpec[] | undefined {
-    const namedParameters = schema
-      ? this.fromEslintSchemaToParameters(patternId, schema)
-      : undefined
-    const unnamedParameterValue =
-      rulesToUnnamedParametersDefaults.get(patternId)
+    const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(patternId)
     const unnamedParameter = unnamedParameterValue
       ? new ParameterSpec("unnamedParam", unnamedParameterValue)
       : undefined
 
-      function getParameters(): ParameterSpec[] | undefined {
-      if (namedParameters && unnamedParameter)
-        return [unnamedParameter, ...namedParameters]
-      if (namedParameters)
-        return namedParameters
-      if (unnamedParameter)
-        return [unnamedParameter]
-      
-      return undefined
-    }
+    const namedParameters = schema
+      ? this.fromEslintSchemaToParameters(patternId, schema)
+      : undefined
 
-    return getParameters()
+    if (namedParameters && unnamedParameter)
+      return [unnamedParameter, ...namedParameters]
+    if (namedParameters)
+      return namedParameters
+    if (unnamedParameter)
+      return [unnamedParameter]
+    
+    return undefined
   }
 
   generatePatterns(): Specification {
-    const patterns = flatMap(this.rules, ([patternId, ruleModule]) => {
+    const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const eslintType = meta?.type
-      const level: Level = fromEslintTypeAndCategoryToLevel(
-        eslintType
-      )
       const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
         patternId,
         eslintType
       )
-      const parameters = this.generateParameters(patternId, meta?.schema)
-      const enabled = meta?.docs?.recommended === true
+
       return new PatternSpec(
         patternIdToCodacy(patternId),
-        level,
+        fromEslintTypeToLevel(eslintType),
         category,
         subcategory,
-        parameters,
-        enabled
+        this.generateParameters(patternId, meta?.schema),
+        meta?.docs?.recommended === true
       )
     })
 
@@ -87,12 +78,11 @@ export class DocGenerator {
   }
 
   generateDescriptionEntries(): DescriptionEntry[] {
-    const descriptions = flatMap(this.rules, ([patternId, ruleModule]) => {
+    const descriptions = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const description = meta?.docs?.description
-        ? capitalize(meta?.docs?.description)
+        ? capitalize(meta.docs.description)
         : undefined
-      const title = patternTitle(patternId)
       const timeToFix = 5
       const patternsParameters = this.generateParameters(
         patternId,
@@ -101,9 +91,10 @@ export class DocGenerator {
       const descriptionParameters = patternsParameters?.map(
         (p) => new DescriptionParameter(p.name, p.name)
       )
+      
       return new DescriptionEntry(
         patternIdToCodacy(patternId),
-        title,
+        patternTitle(patternId),
         description,
         timeToFix,
         descriptionParameters
@@ -117,28 +108,20 @@ export class DocGenerator {
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[]
   ): ParameterSpec[] {
-    const anyOfToArray = (schema: JSONSchema4) =>
-      schema.anyOf ? schema.anyOf : [schema]
-
-    const flattenSchema = <JSONSchema4[]>(
-      (<unknown>flatMapDeep(schema, anyOfToArray))
-    )
-
-    if (Array.isArray(flattenSchema)) {
-      const objects = flattenSchema.filter((value) => value && value.properties)
-      return fromSchemaArray(patternId, objects)
-    } else return []
+    const anyOfToArray = (schema: JSONSchema4) => (schema.anyOf ? schema.anyOf : [schema])
+    const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[];
+    const objects = flattenSchema.filter((value) => value && value.properties);
+  
+    return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : [];
   }
 
   private patternIdsWithoutPrefix(prefix: string): Array<string> {
     const longPrefix = prefix + "/"
     const patternIds = this.getPatternIds()
-    const filteredPatternIds = patternIds.filter((patternId) =>
-      patternId.startsWith(longPrefix)
-    )
-    return filteredPatternIds.map((patternId) =>
-      patternId.substring(longPrefix.length)
-    )
+
+    return patternIds
+      .filter((patternId) => patternId.startsWith(longPrefix))
+      .map((patternId) => patternId.substring(longPrefix.length))
   }
 
   private eslintPatternIds(): Array<string> {
@@ -147,25 +130,38 @@ export class DocGenerator {
     return this.getPatternIds().filter((e) => !e.includes("/"))
   }
 
-  private async inlineLinkedMarkdownFiles(text: string, baseUrl: string) {
+  private async inlineLinkedMarkdownFiles(text: string, baseUrl: string): Promise<string> {
     let newText = text
     const elements = text.match(/\[.*?\)/g)
-
-    if (elements) {
-      await Promise.all(elements.map(async (elem) => {
-        const urlMatch = elem.match(/\((\.\.\/.*?\.md)\)/)
-
-        if (urlMatch) {
-          const url = urlMatch[1]
-          const fullUrl = `${baseUrl}${url}`
-          const response = await fetch(fullUrl)
-          if (response.ok) {
-            const content = await response.text()
-            newText = newText.replace(elem, () => `\n\n${content}`)
-          }
-        }
-      }))
+  
+    if (!elements) {
+      return newText
     }
+  
+    await Promise.all(elements.map(async (elem) => {
+      const urlMatch = elem.match(/\((\.\.\/.*?\.md)\)/)
+  
+      if (!urlMatch) {
+        return
+      }
+  
+      const fullUrl = `${baseUrl}${urlMatch[1]}`
+  
+      try {
+        const response = await fetch(fullUrl)
+  
+        if (!response.ok) {
+          console.error(`Failed to fetch ${fullUrl}. Status: ${response.status}`)
+          return;
+        }
+  
+        const content = await response.text()
+        newText = newText.replace(elem, `\n\n${content}`)
+      } catch (error) {
+        console.error(`Error fetching ${fullUrl}: ${error.message}`)
+      }
+    }))
+  
     return newText
   }
 
@@ -173,32 +169,44 @@ export class DocGenerator {
     baseUrl: string,
     prefix: string = "",
     rejectOnError: boolean = true,
-    patternIdModifier: (patternId: string) => string = s => s,
-  ) {
+    patternIdModifier: (patternId: string) => string = s => s
+  ): Promise<void[]> {
     const patterns =
       prefix.length > 0
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
+  
     const promises: Promise<void>[] = patterns.map(async (pattern) => {
       const url: string = `${baseUrl}${patternIdModifier(pattern)}.md`
-      const response = await fetch(url)
-      if (response.ok) {
+
+      try {
+        const message = `Failed to retrieve docs for ${pattern} from ${url}`
+        const response = await fetch(url)
+  
+        if (!response.ok) {
+          if (rejectOnError) {
+            throw new Error(message)
+          }
+          debug(`${message}. Skipping`)
+          return
+        }
+  
         const content = await response.text()
         const text = await this.inlineLinkedMarkdownFiles(content, baseUrl)
         const filename =
           "docs/description/" +
           patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
           ".md"
-        return writeFile(filename, text)
-      } else {
-        const message = `Failed to retrieve docs for ${pattern} from ${url}`
+  
+        await writeFile(filename, text)
+      } catch (error) {
         if (rejectOnError) {
-          return Promise.reject(message)
+          return Promise.reject(`${error.message}`)
         }
-        debug(`${message}. Skipping`)
-        Promise.resolve()
+        console.error(`${error.message}`)
       }
     })
+  
     return Promise.all(promises)
   }
 
@@ -218,7 +226,9 @@ export class DocGenerator {
       .join("\n")}
 </module>
 `
-    await writeFile(patternsFilename, patternsXml)
-    await writeFile(patternsTypescriptFilename, patternsXml)
+    await Promise.all([
+      writeFile(patternsFilename, patternsXml),
+      writeFile(patternsTypescriptFilename, patternsXml)
+    ]);
   }
 }
