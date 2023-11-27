@@ -8,7 +8,7 @@ RUN npm install --legacy-peer-deps --omit=dev &&\
     npm cache clean --force &&\
     npm run compile &&\
     npm test &&\
-    npm run generateDocs
+    npm run docs:generate
 
 FROM node:$NODE_IMAGE_VERSION
 

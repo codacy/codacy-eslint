@@ -37,7 +37,7 @@ async function lintFilesInChunks(eslint: ESLint, files: string[]): Promise<ESLin
   //const nFilesPerChunk = 10
   //const chunksOfFiles = chunkFilesByCount(files, nFilesPerChunk)
 
-  const maxTotalSizePerChunk = 16384 // size in bytes (16KB)
+  const maxTotalSizePerChunk = 8167 // size in bytes (8KB)
   const chunksOfFiles = chunkFilesByTotalSize(files, maxTotalSizePerChunk)
 
   return lintFilesChunkByChunk(eslint, chunksOfFiles)
