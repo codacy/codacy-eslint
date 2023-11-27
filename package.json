@@ -268,7 +268,7 @@
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-perfectionist": "^2.4.0",
+    "eslint-plugin-perfectionist": "^2.4.2",
     "eslint-plugin-playwright": "^0.18.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
