@@ -13,7 +13,8 @@ export function translateCategory(
     case "problem":
       return ["ErrorProne"]
     case "suggestion":
-      return ["BestPractice"]
+      //BestPractice has been deprecated
+      //return ["BestPractice"]
     case "layout":
       return ["CodeStyle"]
     default:
