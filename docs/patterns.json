@@ -5343,13 +5343,6 @@
       "enabled": false
     },
     {
-      "patternId": "ember_no-restricted-property-modifications",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "ember_no-restricted-resolver-tests",
       "level": "Error",
       "category": "ErrorProne",
@@ -15437,6 +15430,10 @@
         },
         {
           "name": "customMessage",
+          "default": ""
+        },
+        {
+          "name": "testIdPattern",
           "default": ""
         }
       ],

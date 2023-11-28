@@ -5268,13 +5268,6 @@
   },
   {
     "parameters": [],
-    "patternId": "ember_no-restricted-property-modifications",
-    "title": "Ember: No restricted property modifications",
-    "description": "Disallow modifying the specified properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "ember_no-restricted-resolver-tests",
     "title": "Ember: No restricted resolver tests",
     "description": "Disallow the use of patterns that use the restricted resolver in tests",
@@ -15099,6 +15092,10 @@
       {
         "name": "customMessage",
         "description": "customMessage"
+      },
+      {
+        "name": "testIdPattern",
+        "description": "testIdPattern"
       }
     ],
     "patternId": "testing-library_consistent-data-testid",

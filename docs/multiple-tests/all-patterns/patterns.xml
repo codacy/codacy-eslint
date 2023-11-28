@@ -647,7 +647,6 @@
   <module name="ember_no-private-routing-service" />
   <module name="ember_no-proxies" />
   <module name="ember_no-replace-test-comments" />
-  <module name="ember_no-restricted-property-modifications" />
   <module name="ember_no-restricted-resolver-tests" />
   <module name="ember_no-restricted-service-injections" />
   <module name="ember_no-runloop" />

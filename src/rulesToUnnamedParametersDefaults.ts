@@ -82,6 +82,7 @@ export class rulesNamedParametersAndDefaults {
       "memberSyntaxSortOrder",
       ["none", "all", "multiple", "single"],
     ],
+    ["testing-library/consistent-data-testid", "testIdPattern", ""],
     ["testing-library/consistent-data-testid", "customMessage", ""]
   ]
 
