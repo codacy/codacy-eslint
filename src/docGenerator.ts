@@ -20,7 +20,8 @@ export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
   constructor(rules: [string, Rule.RuleModule][]) {
-    this.rules = rules
+    // initialize rules without deprecated
+    this.rules = rules.filter(([_, rule]) => !rule?.meta?.deprecated || rule.meta.deprecated !== true)
     
     /* console.log(this.rules.forEach(([name, rule]) => {
       if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
@@ -32,9 +33,7 @@ export class DocGenerator {
   }
 
   private getPatternIds() {
-    return this.rules.flatMap(([patternId, rule]) =>
-      !rule?.meta?.deprecated || rule.meta.deprecated !== true ? [patternId] : []
-    )
+    return this.rules.map(([patternId, _]) => patternId)
   }
 
   private generateParameters(
@@ -63,11 +62,6 @@ export class DocGenerator {
   generatePatterns(): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
-
-      if (meta?.deprecated && meta.deprecated === true) {
-        return []
-      }
-
       const type = meta?.type ? meta.type : meta?.docs?.category
       const [category, subcategory] = translateCategory(
         patternId,
