@@ -12,8 +12,8 @@ import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import {
-  fromEslintPatternIdAndCategoryToCategory,
-  fromEslintTypeToLevel,
+  translateCategory,
+  translateLevel,
   patternIdToCodacy
 } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
@@ -26,10 +26,23 @@ export class DocGenerator {
 
   constructor(rules: [string, Rule.RuleModule][]) {
     this.rules = rules
+
+    /*
+    console.log(this.rules.forEach(([name, rule]) => {
+      //if () console.log(rule.meta)
+      if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
+        console.log(name)
+        console.log(rule)
+      }
+
+    }))*/
+
   }
 
   private getPatternIds() {
-    return this.rules.map(([patternId, _]) => patternId)
+    return this.rules.flatMap(([patternId, rule]) =>
+      !rule?.meta?.deprecated || rule.meta.deprecated !== true ? [patternId] : []
+    );
   }
 
   private generateParameters(
@@ -58,15 +71,15 @@ export class DocGenerator {
   generatePatterns(): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
-      const eslintType = meta?.type
-      const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
+      const type = meta?.type ? meta.type : meta?.docs?.category
+      const [category, subcategory] = translateCategory(
         patternId,
-        eslintType
+        type
       )
 
       return new PatternSpec(
         patternIdToCodacy(patternId),
-        fromEslintTypeToLevel(eslintType),
+        translateLevel(type),
         category,
         subcategory,
         this.generateParameters(patternId, meta?.schema),
@@ -187,7 +200,7 @@ export class DocGenerator {
           if (rejectOnError) {
             throw new Error(message)
           }
-          debug(`${message}. Skipping`)
+          console.log(`${message}. Skipping`)
           return
         }
   

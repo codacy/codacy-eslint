@@ -119,7 +119,7 @@ export const defaultOptions: ESLint.Options = {
       },
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"],
-      project: ["./tsconfig.json"],
+      project: true,
     },
     root: true,
     settings: {

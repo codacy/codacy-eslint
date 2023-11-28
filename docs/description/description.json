@@ -3385,9 +3385,23 @@
   },
   {
     "parameters": [],
+    "patternId": "@lwc_lwc_no-unexpected-wire-adapter-usages",
+    "title": "@lwc: [Lwc] No unexpected wire adapter usages",
+    "description": "Restrict unexpected wire adapter usages",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@lwc_lwc_no-rest-parameter",
     "title": "@lwc: [Lwc] No rest parameter",
     "description": "Disallow usage of the rest parameter syntax",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_no-unknown-wire-adapters",
+    "title": "@lwc: [Lwc] No unknown wire adapters",
+    "description": "Restrict usage of unknown wire adapters",
     "timeToFix": 5
   },
   {
@@ -3588,6 +3602,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@shopify_no-debugger",
+    "title": "@shopify: No debugger",
+    "description": "Disallow the use of `debugger`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@shopify_no-namespace-imports",
     "title": "@shopify: No namespace imports",
     "description": "Prevent namespace import declarations.",
@@ -3780,6 +3801,13 @@
     "patternId": "@typescript-eslint_array-type",
     "title": "@typescript eslint: Array type",
     "description": "Require consistently using either `T[]` or `Array<T>` for arrays",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_await-thenable",
+    "title": "@typescript eslint: Await thenable",
+    "description": "Disallow awaiting a value that is not a Thenable",
     "timeToFix": 5
   },
   {
@@ -3979,6 +4007,34 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@typescript-eslint_indent",
+    "title": "@typescript eslint: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
@@ -4038,6 +4094,22 @@
     "patternId": "@typescript-eslint_lines-around-comment",
     "title": "@typescript eslint: Lines around comment",
     "description": "Require empty lines around comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "exceptAfterSingleLine",
+        "description": "exceptAfterSingleLine"
+      },
+      {
+        "name": "exceptAfterOverload",
+        "description": "exceptAfterOverload"
+      }
+    ],
+    "patternId": "@typescript-eslint_lines-between-class-members",
+    "title": "@typescript eslint: Lines between class members",
+    "description": "Require or disallow an empty line between class members",
     "timeToFix": 5
   },
   {
@@ -5125,6 +5197,12 @@
   },
   {
     "parameters": [],
+    "patternId": "angular_service-name",
+    "title": "Angular: Service name",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "angular_timeout-service",
     "title": "Angular: Timeout service",
     "timeToFix": 5
@@ -6094,6 +6172,13 @@
     "patternId": "ember_no-replace-test-comments",
     "title": "Ember: No replace test comments",
     "description": "Disallow 'Replace this with your real tests' comments in test files",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_no-restricted-property-modifications",
+    "title": "Ember: No restricted property modifications",
+    "description": "Disallow modifying the specified properties",
     "timeToFix": 5
   },
   {
@@ -8595,6 +8680,12 @@
   },
   {
     "parameters": [],
+    "patternId": "header_header",
+    "title": "Header: Header",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "i18n-json_valid-json",
     "title": "I18n json: Valid json",
     "description": "Validates the JSON translation file",
@@ -8649,6 +8740,32 @@
     "patternId": "import_no-unresolved",
     "title": "Import: No unresolved",
     "description": "Ensure imports point to a file/module that can be resolved.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_named",
+    "title": "Import: Named",
+    "description": "Ensure named imports correspond to a named export in the remote file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_default",
+    "title": "Import: Default",
+    "description": "Ensure a default export is present, given a default import.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowComputed",
+        "description": "allowComputed"
+      }
+    ],
+    "patternId": "import_namespace",
+    "title": "Import: Namespace",
+    "description": "Ensure imported namespaces contain dereferenced properties as they are dereferenced.",
     "timeToFix": 5
   },
   {
@@ -8729,6 +8846,22 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "ignoreExternal",
+        "description": "ignoreExternal"
+      },
+      {
+        "name": "allowUnsafeDynamicCyclicDependency",
+        "description": "allowUnsafeDynamicCyclicDependency"
+      }
+    ],
+    "patternId": "import_no-cycle",
+    "title": "Import: No cycle",
+    "description": "Forbid a module from importing a module with a dependency path back to itself.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "import_no-named-default",
     "title": "Import: No named default",
@@ -8737,9 +8870,30 @@
   },
   {
     "parameters": [],
+    "patternId": "import_no-named-as-default",
+    "title": "Import: No named as default",
+    "description": "Forbid use of exported name as identifier of default export.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-named-as-default-member",
+    "title": "Import: No named as default member",
+    "description": "Forbid use of exported name as property of default export.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "import_no-anonymous-default-export",
     "title": "Import: No anonymous default export",
     "description": "Forbid anonymous values as default exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-unused-modules",
+    "title": "Import: No unused modules",
+    "description": "Forbid modules without exports, or exports without matching import in another module.",
     "timeToFix": 5
   },
   {
@@ -8908,6 +9062,13 @@
     "patternId": "import_exports-last",
     "title": "Import: Exports last",
     "description": "Ensure all exports appear after other statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-deprecated",
+    "title": "Import: No deprecated",
+    "description": "Forbid imported names marked with `@deprecated` documentation tag.",
     "timeToFix": 5
   },
   {
@@ -9412,6 +9573,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_unbound-method",
+    "title": "Jest: Unbound method",
+    "description": "Enforce unbound methods are called with their expected scope",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_valid-describe-callback",
     "title": "Jest: Valid describe callback",
     "description": "Enforce valid `describe()` callback",
@@ -9635,6 +9803,50 @@
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
     "description": "Reports invalid alignment of JSDoc block asterisks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInlineConfig",
+        "description": "allowInlineConfig"
+      },
+      {
+        "name": "captionRequired",
+        "description": "captionRequired"
+      },
+      {
+        "name": "checkDefaults",
+        "description": "checkDefaults"
+      },
+      {
+        "name": "checkEslintrc",
+        "description": "checkEslintrc"
+      },
+      {
+        "name": "checkParams",
+        "description": "checkParams"
+      },
+      {
+        "name": "checkProperties",
+        "description": "checkProperties"
+      },
+      {
+        "name": "noDefaultExampleRules",
+        "description": "noDefaultExampleRules"
+      },
+      {
+        "name": "paddedIndent",
+        "description": "paddedIndent"
+      },
+      {
+        "name": "reportUnusedDisableDirectives",
+        "description": "reportUnusedDisableDirectives"
+      }
+    ],
+    "patternId": "jsdoc_check-examples",
+    "title": "Jsdoc: Check examples",
+    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
     "timeToFix": 5
   },
   {
@@ -11781,6 +11993,108 @@
   },
   {
     "parameters": [],
+    "patternId": "mongodb_check-insert-calls",
+    "title": "Mongodb: Check insert calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-update-calls",
+    "title": "Mongodb: Check update calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-query-calls",
+    "title": "Mongodb: Check query calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-remove-calls",
+    "title": "Mongodb: Check remove calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-deprecated-calls",
+    "title": "Mongodb: Check deprecated calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_no-replace",
+    "title": "Mongodb: No replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-numeric-updates",
+    "title": "Mongodb: Check numeric updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-rename-updates",
+    "title": "Mongodb: Check rename updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-unset-updates",
+    "title": "Mongodb: Check unset updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-current-date-updates",
+    "title": "Mongodb: Check current date updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-minmax-updates",
+    "title": "Mongodb: Check minmax updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-set-updates",
+    "title": "Mongodb: Check set updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-push-updates",
+    "title": "Mongodb: Check push updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-pull-updates",
+    "title": "Mongodb: Check pull updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-pop-updates",
+    "title": "Mongodb: Check pop updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-addtoset-updates",
+    "title": "Mongodb: Check addtoset updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "mongodb_check-deprecated-updates",
+    "title": "Mongodb: Check deprecated updates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "monorepo_no-internal-import",
     "title": "Monorepo: No internal import",
     "timeToFix": 5
@@ -12804,6 +13118,12 @@
   },
   {
     "parameters": [],
+    "patternId": "promise_no-native",
+    "title": "Promise: No native",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "promise_no-callback-in-promise",
     "title": "Promise: No callback in promise",
     "timeToFix": 5
@@ -12849,6 +13169,188 @@
     "parameters": [],
     "patternId": "promise_no-multiple-resolved",
     "title": "Promise: No multiple resolved",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_always-simplification",
+    "title": "Ramda: Always simplification",
+    "description": "Detects cases where `always` is redundant",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_any-pass-simplification",
+    "title": "Ramda: Any pass simplification",
+    "description": "Detects when `anyPass` with complements can be replaced by complement of `allPass`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_both-simplification",
+    "title": "Ramda: Both simplification",
+    "description": "`both` simplifications, like replacing negation by `either`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_complement-simplification",
+    "title": "Ramda: Complement simplification",
+    "description": "`complement` simplifications, like when the negation should be replaced by an assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-pipe-style",
+    "title": "Ramda: Compose pipe style",
+    "description": "Enforces `compose` for single line expression and `pipe` for multiline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-simplification",
+    "title": "Ramda: Compose simplification",
+    "description": "Detects when there are better functions that behave the same as `compose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_cond-simplification",
+    "title": "Ramda: Cond simplification",
+    "description": "`cond` simplification, like suggesting ifElse when too few parameters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_either-simplification",
+    "title": "Ramda: Either simplification",
+    "description": "`either` simplifications, like replacing negation by `both`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_eq-by-simplification",
+    "title": "Ramda: Eq by simplification",
+    "description": "Detects when `eqBy(prop(_))` can be replaced by `eqProps(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_filter-simplification",
+    "title": "Ramda: Filter simplification",
+    "description": "`filter` simplifications, like `filter(complement(_))` to `reject(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_if-else-simplification",
+    "title": "Ramda: If else simplification",
+    "description": "`ifElse` simplifications, like replacing by `when` or `unless`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_map-simplification",
+    "title": "Ramda: Map simplification",
+    "description": "`map` simplifications, like `map(prop(_))` to `pluck(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_merge-simplification",
+    "title": "Ramda: Merge simplification",
+    "description": "`merge` simplifications, like suggesting assoc for one element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-and",
+    "title": "Ramda: No redundant and",
+    "description": "Forbid using `and` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-not",
+    "title": "Ramda: No redundant not",
+    "description": "Forbid using `not` in call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-or",
+    "title": "Ramda: No redundant or",
+    "description": "Forbid using `or` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_pipe-simplification",
+    "title": "Ramda: Pipe simplification",
+    "description": "Detects when there are better functions that behave the same as `pipe`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-both-either",
+    "title": "Ramda: Prefer both either",
+    "description": "Enforces using `both`/`either` instead of `allPass`/`anyPass` with a list of only two predicates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-complement",
+    "title": "Ramda: Prefer complement",
+    "description": "Enforces using `complement` instead of compositions using `not`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-ramda-boolean",
+    "title": "Ramda: Prefer ramda boolean",
+    "description": "Suggests using Ramda T and F functions instead of explicit versions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prop-satisfies-simplification",
+    "title": "Ramda: Prop satisfies simplification",
+    "description": "`propSatisfies` simplifications, like `propSatisfies(equals(_))` to `propEq(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reduce-simplification",
+    "title": "Ramda: Reduce simplification",
+    "description": "`reduce` simplifications, like `reduce(add)` to `sum`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reject-simplification",
+    "title": "Ramda: Reject simplification",
+    "description": "`reject` simplifications, like `reject(complement(_))` to `filter(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_set-simplification",
+    "title": "Ramda: Set simplification",
+    "description": "`set` simplifications, like `set(lensProp(_))` to `assoc(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_unless-simplification",
+    "title": "Ramda: Unless simplification",
+    "description": "`unless` simplifications, like `unless(complement(_))` to `when(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_when-simplification",
+    "title": "Ramda: When simplification",
+    "description": "`when` simplifications, like `when(complement(_))` to `unless(_)`",
     "timeToFix": 5
   },
   {
@@ -12977,6 +13479,345 @@
     "patternId": "react_iframe-missing-sandbox",
     "title": "React: Iframe missing sandbox",
     "description": "Enforce sandbox attribute on iframe elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-boolean-value",
+    "title": "React: Jsx boolean value",
+    "description": "Enforce boolean attributes notation in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-child-element-spacing",
+    "title": "React: Jsx child element spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-closing-bracket-location",
+    "title": "React: Jsx closing bracket location",
+    "description": "Enforce closing bracket location in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-closing-tag-location",
+    "title": "React: Jsx closing tag location",
+    "description": "Enforce closing tag location for multiline JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-spacing",
+    "title": "React: Jsx curly spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-newline",
+    "title": "React: Jsx curly newline",
+    "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-equals-spacing",
+    "title": "React: Jsx equals spacing",
+    "description": "Enforce or disallow spaces around equal signs in JSX attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-filename-extension",
+    "title": "React: Jsx filename extension",
+    "description": "Disallow file extensions that may contain JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-first-prop-new-line",
+    "title": "React: Jsx first prop new line",
+    "description": "Enforce proper position of the first property in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-handler-names",
+    "title": "React: Jsx handler names",
+    "description": "Enforce event handler naming conventions in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-indent",
+    "title": "React: Jsx indent",
+    "description": "Enforce JSX indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-indent-props",
+    "title": "React: Jsx indent props",
+    "description": "Enforce props indentation in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkFragmentShorthand",
+        "description": "checkFragmentShorthand"
+      },
+      {
+        "name": "checkKeyMustBeforeSpread",
+        "description": "checkKeyMustBeforeSpread"
+      },
+      {
+        "name": "warnOnDuplicates",
+        "description": "warnOnDuplicates"
+      }
+    ],
+    "patternId": "react_jsx-key",
+    "title": "React: Jsx key",
+    "description": "Disallow missing `key` props in iterators/collection literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-max-depth",
+    "title": "React: Jsx max depth",
+    "description": "Enforce JSX maximum depth",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-max-props-per-line",
+    "title": "React: Jsx max props per line",
+    "description": "Enforce maximum of props on a single line in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "prevent",
+        "description": "prevent"
+      },
+      {
+        "name": "allowMultilines",
+        "description": "allowMultilines"
+      }
+    ],
+    "patternId": "react_jsx-newline",
+    "title": "React: Jsx newline",
+    "description": "Require or prevent a new line after jsx elements and expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowArrowFunctions",
+        "description": "allowArrowFunctions"
+      },
+      {
+        "name": "allowBind",
+        "description": "allowBind"
+      },
+      {
+        "name": "allowFunctions",
+        "description": "allowFunctions"
+      },
+      {
+        "name": "ignoreRefs",
+        "description": "ignoreRefs"
+      },
+      {
+        "name": "ignoreDOMComponents",
+        "description": "ignoreDOMComponents"
+      }
+    ],
+    "patternId": "react_jsx-no-bind",
+    "title": "React: Jsx no bind",
+    "description": "Disallow `.bind()` or arrow functions in JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-comment-textnodes",
+    "title": "React: Jsx no comment textnodes",
+    "description": "Disallow comments from being inserted as text nodes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-constructed-context-values",
+    "title": "React: Jsx no constructed context values",
+    "description": "Disallows JSX context provider values from taking values that will cause needless rerenders",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-duplicate-props",
+    "title": "React: Jsx no duplicate props",
+    "description": "Disallow duplicate properties in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "validStrategies",
+        "description": "validStrategies"
+      }
+    ],
+    "patternId": "react_jsx-no-leaked-render",
+    "title": "React: Jsx no leaked render",
+    "description": "Disallow problematic leaked values from being rendered",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-literals",
+    "title": "React: Jsx no literals",
+    "description": "Disallow usage of string literals in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-script-url",
+    "title": "React: Jsx no script url",
+    "description": "Disallow usage of `javascript:` URLs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "links",
+        "description": "links"
+      },
+      {
+        "name": "forms",
+        "description": "forms"
+      }
+    ],
+    "patternId": "react_jsx-no-target-blank",
+    "title": "React: Jsx no target blank",
+    "description": "Disallow `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-useless-fragment",
+    "title": "React: Jsx no useless fragment",
+    "description": "Disallow unnecessary fragments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-one-expression-per-line",
+    "title": "React: Jsx one expression per line",
+    "description": "Require one JSX element per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-undef",
+    "title": "React: Jsx no undef",
+    "description": "Disallow undeclared variables in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-brace-presence",
+    "title": "React: Jsx curly brace presence",
+    "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-pascal-case",
+    "title": "React: Jsx pascal case",
+    "description": "Enforce PascalCase for user-defined JSX components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-fragments",
+    "title": "React: Jsx fragments",
+    "description": "Enforce shorthand or standard form for React fragments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-props-no-multi-spaces",
+    "title": "React: Jsx props no multi spaces",
+    "description": "Disallow multiple spaces between inline JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-props-no-spreading",
+    "title": "React: Jsx props no spreading",
+    "description": "Disallow JSX prop spreading",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-sort-default-props",
+    "title": "React: Jsx sort default props",
+    "description": "Enforce defaultProps declarations alphabetical sorting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "multiline",
+        "description": "multiline"
+      },
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
+    "patternId": "react_jsx-sort-props",
+    "title": "React: Jsx sort props",
+    "description": "Enforce props alphabetical sorting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-space-before-closing",
+    "title": "React: Jsx space before closing",
+    "description": "Enforce spacing before closing bracket in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-tag-spacing",
+    "title": "React: Jsx tag spacing",
+    "description": "Enforce whitespace in and around the JSX opening and closing brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-uses-react",
+    "title": "React: Jsx uses react",
+    "description": "Disallow React to be incorrectly marked as unused",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-uses-vars",
+    "title": "React: Jsx uses vars",
+    "description": "Disallow variables used in JSX to be incorrectly marked as unused",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-wrap-multilines",
+    "title": "React: Jsx wrap multilines",
+    "description": "Disallow missing parentheses around multiline JSX",
     "timeToFix": 5
   },
   {
@@ -14151,6 +14992,314 @@
   },
   {
     "parameters": [],
+    "patternId": "rxjs_ban-observables",
+    "title": "Rxjs: Ban observables",
+    "description": "Forbids the use of banned observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_ban-operators",
+    "title": "Rxjs: Ban operators",
+    "description": "Forbids the use of banned operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_finnish",
+    "title": "Rxjs: Finnish",
+    "description": "Enforces the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_just",
+    "title": "Rxjs: Just",
+    "description": "Enforces the use of a `just` alias for `of`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_macro",
+    "title": "Rxjs: Macro",
+    "description": "Enforces the use of the RxJS Tools Babel macro.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-async-subscribe",
+    "title": "Rxjs: No async subscribe",
+    "description": "Forbids passing `async` functions to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-compat",
+    "title": "Rxjs: No compat",
+    "description": "Forbids importation from locations that depend upon `rxjs-compat`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-connectable",
+    "title": "Rxjs: No connectable",
+    "description": "Forbids operators that return connectable observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-create",
+    "title": "Rxjs: No create",
+    "description": "Forbids the calling of `Observable.create`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-cyclic-action",
+    "title": "Rxjs: No cyclic action",
+    "description": "Forbids effects and epics that re-emit filtered actions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-explicit-generics",
+    "title": "Rxjs: No explicit generics",
+    "description": "Forbids explicit generic type arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-exposed-subjects",
+    "title": "Rxjs: No exposed subjects",
+    "description": "Forbids exposed (i.e. non-private) subjects.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-finnish",
+    "title": "Rxjs: No finnish",
+    "description": "Forbids the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-error",
+    "title": "Rxjs: No ignored error",
+    "description": "Forbids the calling of `subscribe` without specifying an error handler.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-notifier",
+    "title": "Rxjs: No ignored notifier",
+    "description": "Forbids observables not composed from the `repeatWhen` or `retryWhen` notifier.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-observable",
+    "title": "Rxjs: No ignored observable",
+    "description": "Forbids the ignoring of observables returned by functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-replay-buffer",
+    "title": "Rxjs: No ignored replay buffer",
+    "description": "Forbids using `ReplaySubject`, `publishReplay` or `shareReplay` without specifying the buffer size.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscribe",
+    "title": "Rxjs: No ignored subscribe",
+    "description": "Forbids the calling of `subscribe` without specifying arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscription",
+    "title": "Rxjs: No ignored subscription",
+    "description": "Forbids ignoring the subscription returned by `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-takewhile-value",
+    "title": "Rxjs: No ignored takewhile value",
+    "description": "Forbids ignoring the value within `takeWhile`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-implicit-any-catch",
+    "title": "Rxjs: No implicit any catch",
+    "description": "Forbids implicit `any` error parameters in `catchError` operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-index",
+    "title": "Rxjs: No index",
+    "description": "Forbids the importation from index modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-internal",
+    "title": "Rxjs: No internal",
+    "description": "Forbids the importation of internals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-nested-subscribe",
+    "title": "Rxjs: No nested subscribe",
+    "description": "Forbids the calling of `subscribe` within a `subscribe` callback.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-redundant-notify",
+    "title": "Rxjs: No redundant notify",
+    "description": "Forbids redundant notifications from completed or errored observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-sharereplay",
+    "title": "Rxjs: No sharereplay",
+    "description": "Forbids using the `shareReplay` operator.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subclass",
+    "title": "Rxjs: No subclass",
+    "description": "Forbids subclassing RxJS classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-unsubscribe",
+    "title": "Rxjs: No subject unsubscribe",
+    "description": "Forbids calling the `unsubscribe` method of a subject instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-value",
+    "title": "Rxjs: No subject value",
+    "description": "Forbids accessing the `value` property of a `BehaviorSubject` instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subscribe-handlers",
+    "title": "Rxjs: No subscribe handlers",
+    "description": "Forbids the passing of handlers to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-tap",
+    "title": "Rxjs: No tap",
+    "description": "Forbids the use of the `tap` operator.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-topromise",
+    "title": "Rxjs: No topromise",
+    "description": "Forbids the use of the `toPromise` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unbound-methods",
+    "title": "Rxjs: No unbound methods",
+    "description": "Forbids the passing of unbound methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-catch",
+    "title": "Rxjs: No unsafe catch",
+    "description": "Forbids unsafe `catchError` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-first",
+    "title": "Rxjs: No unsafe first",
+    "description": "Forbids unsafe `first`/`take` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-subject-next",
+    "title": "Rxjs: No unsafe subject next",
+    "description": "Forbids unsafe optional `next` calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-switchmap",
+    "title": "Rxjs: No unsafe switchmap",
+    "description": "Forbids unsafe `switchMap` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-takeuntil",
+    "title": "Rxjs: No unsafe takeuntil",
+    "description": "Forbids the application of operators after `takeUntil`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_prefer-observer",
+    "title": "Rxjs: Prefer observer",
+    "description": "Forbids the passing separate handlers to `subscribe` and `tap`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_suffix-subjects",
+    "title": "Rxjs: Suffix subjects",
+    "description": "Enforces the use of a suffix in subject identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_throw-error",
+    "title": "Rxjs: Throw error",
+    "description": "Enforces the passing of `Error` values to error notifications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-async-pipe",
+    "title": "Rxjs angular: Prefer async pipe",
+    "description": "Forbids the calling of `subscribe` within Angular components.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-composition",
+    "title": "Rxjs angular: Prefer composition",
+    "description": "Forbids `subscribe` calls that are not composed within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-takeuntil",
+    "title": "Rxjs angular: Prefer takeuntil",
+    "description": "Forbids `subscribe` calls without an accompanying `takeUntil` within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
     "description": "Detects potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.",
@@ -15006,6 +16155,214 @@
     "patternId": "test-selectors_onSubmit",
     "title": "Test selectors: OnSubmit",
     "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "eventModule",
+        "description": "eventModule"
+      }
+    ],
+    "patternId": "testing-library_await-async-events",
+    "title": "Testing library: Await async events",
+    "description": "Enforce promises from async event methods are handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-queries",
+    "title": "Testing library: Await async queries",
+    "description": "Enforce promises from async queries to be handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-utils",
+    "title": "Testing library: Await async utils",
+    "description": "Enforce promises from async utils to be awaited properly",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "testIdAttribute",
+        "description": "testIdAttribute"
+      },
+      {
+        "name": "customMessage",
+        "description": "customMessage"
+      }
+    ],
+    "patternId": "testing-library_consistent-data-testid",
+    "title": "Testing library: Consistent data testid",
+    "description": "Ensures consistent usage of `data-testid`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "eventModules",
+        "description": "eventModules"
+      }
+    ],
+    "patternId": "testing-library_no-await-sync-events",
+    "title": "Testing library: No await sync events",
+    "description": "Disallow unnecessary `await` for sync events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-await-sync-queries",
+    "title": "Testing library: No await sync queries",
+    "description": "Disallow unnecessary `await` for sync queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-container",
+    "title": "Testing library: No container",
+    "description": "Disallow the use of `container` methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-debugging-utils",
+    "title": "Testing library: No debugging utils",
+    "description": "Disallow the use of debugging utilities like `debug`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-dom-import",
+    "title": "Testing library: No dom import",
+    "description": "Disallow importing from DOM Testing Library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-global-regexp-flag-in-query",
+    "title": "Testing library: No global regexp flag in query",
+    "description": "Disallow the use of the global RegExp flag (/g) in queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-manual-cleanup",
+    "title": "Testing library: No manual cleanup",
+    "description": "Disallow the use of `cleanup`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-node-access",
+    "title": "Testing library: No node access",
+    "description": "Disallow direct Node access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-promise-in-fire-event",
+    "title": "Testing library: No promise in fire event",
+    "description": "Disallow the use of promises passed to a `fireEvent` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-render-in-lifecycle",
+    "title": "Testing library: No render in lifecycle",
+    "description": "Disallow the use of `render` in testing frameworks setup functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-unnecessary-act",
+    "title": "Testing library: No unnecessary act",
+    "description": "Disallow wrapping Testing Library utils or empty callbacks in `act`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-multiple-assertions",
+    "title": "Testing library: No wait for multiple assertions",
+    "description": "Disallow the use of multiple `expect` calls inside `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-side-effects",
+    "title": "Testing library: No wait for side effects",
+    "description": "Disallow the use of side effects in `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-snapshot",
+    "title": "Testing library: No wait for snapshot",
+    "description": "Ensures no snapshot is generated inside of a `waitFor` call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-explicit-assert",
+    "title": "Testing library: Prefer explicit assert",
+    "description": "Suggest using explicit assertions rather than standalone queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-find-by",
+    "title": "Testing library: Prefer find by",
+    "description": "Suggest using `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-implicit-assert",
+    "title": "Testing library: Prefer implicit assert",
+    "description": "Suggest using implicit assertions for getBy* & findBy* queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-presence-queries",
+    "title": "Testing library: Prefer presence queries",
+    "description": "Ensure appropriate `get*`/`query*` queries are used with their respective matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-by-disappearance",
+    "title": "Testing library: Prefer query by disappearance",
+    "description": "Suggest using `queryBy*` queries when waiting for disappearance",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-matchers",
+    "title": "Testing library: Prefer query matchers",
+    "description": "Ensure the configured `get*`/`query*` query is used with the corresponding matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-screen-queries",
+    "title": "Testing library: Prefer screen queries",
+    "description": "Suggest using `screen` while querying",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-user-event",
+    "title": "Testing library: Prefer user event",
+    "description": "Suggest using `userEvent` over `fireEvent` for simulating user interactions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_render-result-naming-convention",
+    "title": "Testing library: Render result naming convention",
+    "description": "Enforce a valid naming for return value from `render`",
     "timeToFix": 5
   },
   {
@@ -15879,8 +17236,104 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_import-index",
+    "title": "Unicorn: Import index",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-array-instanceof",
+    "title": "Unicorn: No array instanceof",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-fn-reference-in-iterator",
+    "title": "Unicorn: No fn reference in iterator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-reduce",
+    "title": "Unicorn: No reduce",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-unsafe-regex",
     "title": "Unicorn: No unsafe regex",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-dataset",
+    "title": "Unicorn: Prefer dataset",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-event-key",
+    "title": "Unicorn: Prefer event key",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-exponentiation-operator",
+    "title": "Unicorn: Prefer exponentiation operator",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-flat-map",
+    "title": "Unicorn: Prefer flat map",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-append",
+    "title": "Unicorn: Prefer node append",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-node-remove",
+    "title": "Unicorn: Prefer node remove",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-object-has-own",
+    "title": "Unicorn: Prefer object has own",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-replace-all",
+    "title": "Unicorn: Prefer replace all",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-starts-ends-with",
+    "title": "Unicorn: Prefer starts ends with",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-text-content",
+    "title": "Unicorn: Prefer text content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-trim-start-end",
+    "title": "Unicorn: Prefer trim start end",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_regex-shorthand",
+    "title": "Unicorn: Regex shorthand",
     "timeToFix": 5
   },
   {
@@ -15894,6 +17347,20 @@
     "parameters": [],
     "patternId": "unused-imports_no-unused-imports",
     "title": "Unused imports: No unused imports",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-vars-ts",
+    "title": "Unused imports: No unused vars ts",
+    "description": "Disallow unused variables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unused-imports_no-unused-imports-ts",
+    "title": "Unused imports: No unused imports ts",
     "description": "Disallow unused variables",
     "timeToFix": 5
   },
@@ -18198,6 +19665,13 @@
     "patternId": "yml_sort-keys",
     "title": "Yml: Sort keys",
     "description": "Require mapping keys to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "yml_sort-sequence-values",
+    "title": "Yml: Sort sequence values",
+    "description": "Require sequence values to be sorted",
     "timeToFix": 5
   },
   {
