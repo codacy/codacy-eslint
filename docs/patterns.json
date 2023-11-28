@@ -3612,13 +3612,6 @@
       "enabled": false
     },
     {
-      "patternId": "@shopify_no-debugger",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
       "patternId": "@shopify_no-namespace-imports",
       "level": "Info",
       "category": "CodeStyle",
@@ -17720,20 +17713,6 @@
     },
     {
       "patternId": "unused-imports_no-unused-imports",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unused-imports_no-unused-vars-ts",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "unused-imports_no-unused-imports-ts",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],

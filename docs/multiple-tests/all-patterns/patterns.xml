@@ -379,7 +379,6 @@
   <module name="@shopify_jsx-no-hardcoded-content" />
   <module name="@shopify_jsx-prefer-fragment-wrappers" />
   <module name="@shopify_no-ancestor-directory-import" />
-  <module name="@shopify_no-debugger" />
   <module name="@shopify_no-namespace-imports" />
   <module name="@shopify_no-useless-computed-properties" />
   <module name="@shopify_no-fully-static-classes" />
@@ -2201,8 +2200,6 @@
   <module name="unicorn_regex-shorthand" />
   <module name="unused-imports_no-unused-vars" />
   <module name="unused-imports_no-unused-imports" />
-  <module name="unused-imports_no-unused-vars-ts" />
-  <module name="unused-imports_no-unused-imports-ts" />
   <module name="vue_array-bracket-newline" />
   <module name="vue_array-bracket-spacing" />
   <module name="vue_array-element-newline" />

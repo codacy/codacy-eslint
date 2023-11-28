@@ -1,6 +1,9 @@
 const blacklistRegexes: RegExp[] = []
 
-const documentationBlacklistRegexes: RegExp[] = []
+const documentationBlacklistRegexes: RegExp[] = [
+  /unused-imports\/.*-ts/,
+  /@shopify\/no-debugger/
+]
 
 function testRegex(regexes: RegExp[], value: string): boolean {
   return regexes.some((regex) => regex.test(value))

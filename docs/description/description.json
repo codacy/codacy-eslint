@@ -3602,13 +3602,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@shopify_no-debugger",
-    "title": "@shopify: No debugger",
-    "description": "Disallow the use of `debugger`.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@shopify_no-namespace-imports",
     "title": "@shopify: No namespace imports",
     "description": "Prevent namespace import declarations.",
@@ -17347,20 +17340,6 @@
     "parameters": [],
     "patternId": "unused-imports_no-unused-imports",
     "title": "Unused imports: No unused imports",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unused-imports_no-unused-vars-ts",
-    "title": "Unused imports: No unused vars ts",
-    "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "unused-imports_no-unused-imports-ts",
-    "title": "Unused imports: No unused imports ts",
     "description": "Disallow unused variables",
     "timeToFix": 5
   },
