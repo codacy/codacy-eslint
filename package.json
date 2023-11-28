@@ -261,7 +261,6 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-meteor": "^7.3.0",
     "eslint-plugin-mocha": "^10.2.0",
-    "eslint-plugin-mongodb": "^1.0.0",
     "eslint-plugin-monorepo": "^0.3.2",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-no-only-tests": "^3.1.0",
