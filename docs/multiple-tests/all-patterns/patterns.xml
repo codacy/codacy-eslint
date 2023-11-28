@@ -429,6 +429,7 @@
   <module name="@typescript-eslint_explicit-member-accessibility" />
   <module name="@typescript-eslint_explicit-module-boundary-types" />
   <module name="@typescript-eslint_func-call-spacing" />
+  <module name="@typescript-eslint_indent" />
   <module name="@typescript-eslint_init-declarations" />
   <module name="@typescript-eslint_key-spacing" />
   <module name="@typescript-eslint_keyword-spacing" />
@@ -2051,6 +2052,7 @@
   <module name="testing-library_await-async-events" />
   <module name="testing-library_await-async-queries" />
   <module name="testing-library_await-async-utils" />
+  <module name="testing-library_consistent-data-testid" />
   <module name="testing-library_no-await-sync-events" />
   <module name="testing-library_no-await-sync-queries" />
   <module name="testing-library_no-container" />

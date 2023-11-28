@@ -11,30 +11,22 @@ import { JSONSchema4 } from "json-schema"
 import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import {
-  translateCategory,
-  translateLevel,
-  patternIdToCodacy
-} from "./model/patterns"
+import { translateCategory, translateLevel, patternIdToCodacy } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
-import { debug } from "./logging"
 
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
   constructor(rules: [string, Rule.RuleModule][]) {
     this.rules = rules
-
-    /*
-    console.log(this.rules.forEach(([name, rule]) => {
-      //if () console.log(rule.meta)
+    
+    /* console.log(this.rules.forEach(([name, rule]) => {
       if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
         console.log(name)
         console.log(rule)
       }
-
     }))*/
 
   }
@@ -42,7 +34,7 @@ export class DocGenerator {
   private getPatternIds() {
     return this.rules.flatMap(([patternId, rule]) =>
       !rule?.meta?.deprecated || rule.meta.deprecated !== true ? [patternId] : []
-    );
+    )
   }
 
   private generateParameters(
@@ -71,6 +63,11 @@ export class DocGenerator {
   generatePatterns(): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
+
+      if (meta?.deprecated && meta.deprecated === true) {
+        return []
+      }
+
       const type = meta?.type ? meta.type : meta?.docs?.category
       const [category, subcategory] = translateCategory(
         patternId,

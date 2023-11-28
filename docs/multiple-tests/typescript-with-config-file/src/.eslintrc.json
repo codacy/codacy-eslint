@@ -31,7 +31,6 @@
     "lodash-fp",
     "meteor",
     "mocha",
-    "mongodb",
     "node",
     "promise",
     "react",

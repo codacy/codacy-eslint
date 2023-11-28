@@ -1,6 +1,4 @@
 const blacklistRegexes: RegExp[] = [
-  /testing-library\/consistent-data-testid/,
-  /@typescript-eslint\/indent/
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [

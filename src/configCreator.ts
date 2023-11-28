@@ -51,13 +51,10 @@ function generateEslintOptions(
 
   let options = resetEslintBaseConfig(cloneDeep(defaultOptions))
 
-  /*if (existsSync(srcDirPath + "/" + tsconfigFile)) {
-    debug("options: use tsconfig from repo")
-    options.baseConfig.parserOptions.project = srcDirPath + "/" + tsconfigFile
-  } else {
+  if (!existsSync(srcDirPath + "/" + tsconfigFile)) {
     debug("options: use tsconfig from tool")
     options.baseConfig.parserOptions.project = "/" + tsconfigFile
-  }*/
+  }
 
   if (eslintTool?.patterns?.length > 0) {
     //TODO: move this logic to a generic (or specific) plugin function
