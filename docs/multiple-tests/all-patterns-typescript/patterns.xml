@@ -542,7 +542,6 @@
   <module name="canonical_filename-match-exported" />
   <module name="canonical_filename-match-regex" />
   <module name="canonical_filename-no-index" />
-  <module name="canonical_id-match" />
   <module name="canonical_import-specifier-newline" />
   <module name="canonical_no-barrel-import" />
   <module name="canonical_no-export-all" />

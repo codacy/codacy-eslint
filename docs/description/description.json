@@ -4470,34 +4470,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "classFields",
-        "description": "classFields"
-      },
-      {
-        "name": "ignoreDestructuring",
-        "description": "ignoreDestructuring"
-      },
-      {
-        "name": "ignoreNamedImports",
-        "description": "ignoreNamedImports"
-      },
-      {
-        "name": "onlyDeclarations",
-        "description": "onlyDeclarations"
-      },
-      {
-        "name": "properties",
-        "description": "properties"
-      }
-    ],
-    "patternId": "canonical_id-match",
-    "title": "Canonical: Id match",
-    "description": "Require identifiers to match a specified regular expression",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "canonical_import-specifier-newline",
     "title": "Canonical: Import specifier newline",

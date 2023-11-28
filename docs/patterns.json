@@ -4533,34 +4533,6 @@
       "enabled": false
     },
     {
-      "patternId": "canonical_id-match",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "classFields",
-          "default": false
-        },
-        {
-          "name": "ignoreDestructuring",
-          "default": false
-        },
-        {
-          "name": "ignoreNamedImports",
-          "default": false
-        },
-        {
-          "name": "onlyDeclarations",
-          "default": false
-        },
-        {
-          "name": "properties",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "canonical_import-specifier-newline",
       "level": "Info",
       "category": "CodeStyle",

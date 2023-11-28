@@ -1,9 +1,10 @@
 const blacklistRegexes: RegExp[] = [
-  /@typescript-eslint\/lines-between-class-members/
+  /@typescript-eslint\/lines-between-class-members/,
+  /canonical\/id-match/,
+  /unused-imports\/.*-ts/,
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [
-  /unused-imports\/.*-ts/,
   /@shopify\/no-debugger/
 ]
 
