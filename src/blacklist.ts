@@ -1,4 +1,5 @@
 const blacklistRegexes: RegExp[] = [
+  /@typescript-eslint\/lines-between-class-members/
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [

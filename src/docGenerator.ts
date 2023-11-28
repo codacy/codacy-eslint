@@ -113,10 +113,10 @@ export class DocGenerator {
     schema: JSONSchema4 | JSONSchema4[]
   ): ParameterSpec[] {
     const anyOfToArray = (schema: JSONSchema4) => (schema.anyOf ? schema.anyOf : [schema])
-    const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[];
-    const objects = flattenSchema.filter((value) => value && value.properties);
+    const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[]
+    const objects = flattenSchema.filter((value) => value && value.properties)
   
-    return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : [];
+    return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
   private patternIdsWithoutPrefix(prefix: string): Array<string> {
@@ -156,7 +156,7 @@ export class DocGenerator {
   
         if (!response.ok) {
           console.error(`Failed to fetch ${fullUrl}. Status: ${response.status}`)
-          return;
+          return
         }
   
         const content = await response.text()
@@ -233,6 +233,6 @@ export class DocGenerator {
     await Promise.all([
       writeFile(patternsFilename, patternsXml),
       writeFile(patternsTypescriptFilename, patternsXml)
-    ]);
+    ])
   }
 }

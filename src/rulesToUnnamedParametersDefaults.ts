@@ -21,7 +21,6 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["jsonc/indent", 4],
   ["jsx-quotes", "prefer-double"],
   ["init-declarations", "always"],
-  ["lines-between-class-members", "always"],
   ["max-nested-callbacks", 5],
   ["newline-after-var", "always"],
   ["no-cond-assign", "except-parens"],

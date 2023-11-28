@@ -3054,22 +3054,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_lines-between-class-members",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "exceptAfterSingleLine",
-          "default": false
-        },
-        {
-          "name": "exceptAfterOverload",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_max-params",
       "level": "Warning",
       "category": "BestPractice",
