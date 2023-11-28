@@ -2,6 +2,7 @@ const blacklistRegexes: RegExp[] = [
   /@lwc\/lwc\/no-unexpected-wire-adapter-usages/,
   /@lwc\/lwc\/no-unknown-wire-adapters/,
   /@typescript-eslint\/lines-between-class-members/,
+  /angular\/service-name/,
   // /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
   /header\/header/,
@@ -13,7 +14,7 @@ const blacklistRegexes: RegExp[] = [
   // /@typescript-eslint\/await-thenable/,
   // /@typescript-eslint\/indent*/,
   // /@typescript-eslint\/no-parameter-properties/,
-  // /angular\/service-name/,
+  // 
   // /babel\/generator-star-spacing/,
   // /babel\/array-bracket-spacing/,
   // /babel\/arrow-parens/,
