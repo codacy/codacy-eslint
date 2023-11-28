@@ -4,6 +4,7 @@ const blacklistRegexes: RegExp[] = [
   /@typescript-eslint\/lines-between-class-members/,
   // /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
+  /header\/header/,
   /unused-imports\/.*-ts/,
   /yml\/sort-sequence-values/,
 
@@ -20,7 +21,6 @@ const blacklistRegexes: RegExp[] = [
   // /babel\/func-params-comma-dangle/,
   // /babel\/flow-object-type/,
   // /eslint\/indent/,
-  // /header\/header/,
   // /import\/named/,
   // /import\/namespace/,
   // /import\/default/,
