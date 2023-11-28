@@ -143,7 +143,7 @@
     "@types/node-fetch": "^2.6.9",
     "@types/simple-mock": "^0.8.6",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^6.12.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^6.13.1",
     "@typescript-eslint/parser": "^6.12.0",
     "@typescript-eslint/utils": "^6.12.0",
     "@vitejs/plugin-vue": "^4.5.0",
