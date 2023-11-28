@@ -1,6 +1,7 @@
 const blacklistRegexes: RegExp[] = [
   /@typescript-eslint\/lines-between-class-members/,
   /canonical\/id-match/,
+  /ember\/no-restricted-property-modifications/,
   /unused-imports\/.*-ts/,
 ]
 
