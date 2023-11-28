@@ -354,7 +354,7 @@
     "vite": "^5.0.2",
     "vue": "^3.3.9",
     "vue-eslint-parser": "^9.3.2",
-    "vue-i18n": "^9.7.1",
+    "vue-i18n": "^9.8.0",
     "vue-loader": "^17.3.1",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.3",
