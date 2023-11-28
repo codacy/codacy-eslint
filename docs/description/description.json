@@ -18175,13 +18175,6 @@
   },
   {
     "parameters": [],
-    "patternId": "yml_sort-sequence-values",
-    "title": "Yml: Sort sequence values",
-    "description": "Require sequence values to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "yml_spaced-comment",
     "title": "Yml: Spaced comment",
     "description": "Enforce consistent spacing after the `#` in a comment",

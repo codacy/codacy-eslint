@@ -18535,13 +18535,6 @@
       "enabled": false
     },
     {
-      "patternId": "yml_sort-sequence-values",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "yml_spaced-comment",
       "level": "Warning",
       "category": "BestPractice",

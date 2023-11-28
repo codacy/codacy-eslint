@@ -2349,7 +2349,6 @@
   <module name="yml_quotes" />
   <module name="yml_require-string-key" />
   <module name="yml_sort-keys" />
-  <module name="yml_sort-sequence-values" />
   <module name="yml_spaced-comment" />
   <module name="yml_vue-custom-block_no-parsing-error" />
   <module name="you-dont-need-lodash-underscore_concat" />
