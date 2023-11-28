@@ -4000,34 +4000,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
@@ -16268,22 +16240,6 @@
     "patternId": "testing-library_await-async-utils",
     "title": "Testing library: Await async utils",
     "description": "Enforce promises from async utils to be awaited properly",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "testIdAttribute",
-        "description": "testIdAttribute"
-      },
-      {
-        "name": "customMessage",
-        "description": "customMessage"
-      }
-    ],
-    "patternId": "testing-library_consistent-data-testid",
-    "title": "Testing library: Consistent data testid",
-    "description": "Ensures consistent usage of `data-testid`",
     "timeToFix": 5
   },
   {

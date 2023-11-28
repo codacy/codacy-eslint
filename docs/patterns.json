@@ -4011,34 +4011,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_indent",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "unnamedParam",
-          "default": 2
-        },
-        {
-          "name": "SwitchCase",
-          "default": 0
-        },
-        {
-          "name": "flatTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "offsetTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "ignoreComments",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_init-declarations",
       "level": "Warning",
       "category": "BestPractice",
@@ -16613,21 +16585,6 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "testing-library_consistent-data-testid",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "testIdAttribute",
-          "default": "data-testid"
-        },
-        {
-          "name": "customMessage"
-        }
-      ],
       "enabled": false
     },
     {
