@@ -1,4 +1,5 @@
 const blacklistRegexes: RegExp[] = [
+  /@lwc\/lwc\/no-unexpected-wire-adapter-usages/,
   /@typescript-eslint\/lines-between-class-members/,
   /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
