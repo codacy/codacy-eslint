@@ -42,22 +42,15 @@ function translateCategoryLegacy(
   switch (category) {
     case "Possible Errors":
       return "ErrorProne"
-    case "Best Practices":
-      return "CodeStyle"
-    case "Strict Mode":
-      return "CodeStyle"
-    case "Variables":
-      return "CodeStyle"
-    case "Node.js and CommonJS":
-      return "CodeStyle"
-    case "Stylistic Issues":
-      return "CodeStyle"
-    case "ECMAScript 6":
-      return "CodeStyle"
     case "Deprecated":
-      return "Compatibility"
     case "Removed":
       return "Compatibility"
+    case "Best Practices":
+    case "ECMAScript 6":
+    case "Node.js and CommonJS":
+    case "Strict Mode":
+    case "Stylistic Issues":
+    case "Variables":
     default:
       return "CodeStyle"
   }
@@ -81,23 +74,16 @@ export function translateLevel(
 function translateLevelLegacy(category?: string): Level {
   switch (category) {
     case "Possible Errors":
-      return "Error"
-    case "Best Practices":
-      return "Info"
     case "Strict Mode":
       return "Error"
-    case "Variables":
-      return "Info"
     case "Node.js and CommonJS":
-      return "Warning"
-    case "Stylistic Issues":
-      return "Info"
     case "ECMAScript 6":
       return "Warning"
+    case "Best Practices":
     case "Deprecated":
-      return "Info"
     case "Removed":
-      return "Info"
+    case "Stylistic Issues":
+    case "Variables":
     default:
       return "Info"
   }

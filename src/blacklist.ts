@@ -3,6 +3,7 @@ const blacklistRegexes: RegExp[] = [
   /canonical\/id-match/,
   /ember\/no-restricted-property-modifications/,
   /unused-imports\/.*-ts/,
+  /yml\/sort-sequence-values/,
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [
