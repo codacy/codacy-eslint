@@ -49,7 +49,8 @@ async function main() {
   console.log("Generate @shopify description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/`,
-    "@shopify"
+    "@shopify",
+    false
   )
 
   console.log("Generate @typescript-eslint description files")

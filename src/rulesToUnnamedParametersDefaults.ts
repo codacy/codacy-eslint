@@ -1,5 +1,3 @@
-import { ParameterSpec } from "codacy-seed"
-
 export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["array-bracket-spacing", "never"],
   ["arrow-parens", "always"],
@@ -23,7 +21,6 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["jsonc/indent", 4],
   ["jsx-quotes", "prefer-double"],
   ["init-declarations", "always"],
-  ["lines-between-class-members", "always"],
   ["max-nested-callbacks", 5],
   ["newline-after-var", "always"],
   ["no-cond-assign", "except-parens"],
@@ -85,6 +82,8 @@ export class rulesNamedParametersAndDefaults {
       "memberSyntaxSortOrder",
       ["none", "all", "multiple", "single"],
     ],
+    ["testing-library/consistent-data-testid", "testIdPattern", ""],
+    ["testing-library/consistent-data-testid", "customMessage", ""]
   ]
 
   static has(patternId: string, parameter: string): boolean {

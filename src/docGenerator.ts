@@ -11,21 +11,25 @@ import { JSONSchema4 } from "json-schema"
 import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import {
-  fromEslintPatternIdAndCategoryToCategory,
-  fromEslintTypeToLevel,
-  patternIdToCodacy
-} from "./model/patterns"
+import { translateCategory, translateLevel, patternIdToCodacy } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
-import { debug } from "./logging"
 
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
   constructor(rules: [string, Rule.RuleModule][]) {
-    this.rules = rules
+    // initialize rules without deprecated
+    this.rules = rules.filter(([_, rule]) => !rule?.meta?.deprecated || rule.meta.deprecated !== true)
+    
+    /* console.log(this.rules.forEach(([name, rule]) => {
+      if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
+        console.log(name)
+        console.log(rule)
+      }
+    }))*/
+
   }
 
   private getPatternIds() {
@@ -58,15 +62,15 @@ export class DocGenerator {
   generatePatterns(): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
-      const eslintType = meta?.type
-      const [category, subcategory] = fromEslintPatternIdAndCategoryToCategory(
+      const type = meta?.type ? meta.type : meta?.docs?.category
+      const [category, subcategory] = translateCategory(
         patternId,
-        eslintType
+        type
       )
 
       return new PatternSpec(
         patternIdToCodacy(patternId),
-        fromEslintTypeToLevel(eslintType),
+        translateLevel(type),
         category,
         subcategory,
         this.generateParameters(patternId, meta?.schema),
@@ -109,10 +113,10 @@ export class DocGenerator {
     schema: JSONSchema4 | JSONSchema4[]
   ): ParameterSpec[] {
     const anyOfToArray = (schema: JSONSchema4) => (schema.anyOf ? schema.anyOf : [schema])
-    const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[];
-    const objects = flattenSchema.filter((value) => value && value.properties);
+    const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[]
+    const objects = flattenSchema.filter((value) => value && value.properties)
   
-    return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : [];
+    return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
   private patternIdsWithoutPrefix(prefix: string): Array<string> {
@@ -152,7 +156,7 @@ export class DocGenerator {
   
         if (!response.ok) {
           console.error(`Failed to fetch ${fullUrl}. Status: ${response.status}`)
-          return;
+          return
         }
   
         const content = await response.text()
@@ -187,7 +191,7 @@ export class DocGenerator {
           if (rejectOnError) {
             throw new Error(message)
           }
-          debug(`${message}. Skipping`)
+          console.log(`${message}. Skipping`)
           return
         }
   
@@ -229,6 +233,6 @@ export class DocGenerator {
     await Promise.all([
       writeFile(patternsFilename, patternsXml),
       writeFile(patternsTypescriptFilename, patternsXml)
-    ]);
+    ])
   }
 }

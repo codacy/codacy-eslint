@@ -20,25 +20,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "array-bracket-newline",
-    "title": "Array bracket newline",
-    "description": "Enforce linebreaks after opening and before closing array brackets",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "array-bracket-spacing",
-    "title": "Array bracket spacing",
-    "description": "Enforce consistent spacing inside array brackets",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "allowImplicit",
@@ -60,48 +41,9 @@
   },
   {
     "parameters": [],
-    "patternId": "array-element-newline",
-    "title": "Array element newline",
-    "description": "Enforce line breaks after each array element",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "arrow-body-style",
     "title": "Arrow body style",
     "description": "Require braces around arrow function bodies",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "requireForBlockBody",
-        "description": "requireForBlockBody"
-      }
-    ],
-    "patternId": "arrow-parens",
-    "title": "Arrow parens",
-    "description": "Require parentheses around arrow function arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "arrow-spacing",
-    "title": "Arrow spacing",
-    "description": "Enforce consistent spacing before and after the arrow in arrow functions",
     "timeToFix": 5
   },
   {
@@ -109,41 +51,6 @@
     "patternId": "block-scoped-var",
     "title": "Block scoped var",
     "description": "Enforce the use of variables within the scope they are defined",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "block-spacing",
-    "title": "Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "brace-style",
-    "title": "Brace style",
-    "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "callback-return",
-    "title": "Callback return",
-    "description": "Require `return` statements after callbacks",
     "timeToFix": 5
   },
   {
@@ -192,65 +99,9 @@
         "description": "unnamedParam"
       }
     ],
-    "patternId": "comma-dangle",
-    "title": "Comma dangle",
-    "description": "Require or disallow trailing commas",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "comma-spacing",
-    "title": "Comma spacing",
-    "description": "Enforce consistent spacing before and after commas",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "comma-style",
-    "title": "Comma style",
-    "description": "Enforce consistent comma style",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
     "patternId": "complexity",
     "title": "Complexity",
     "description": "Enforce a maximum cyclomatic complexity allowed in a program",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "enforceForClassMembers",
-        "description": "enforceForClassMembers"
-      }
-    ],
-    "patternId": "computed-property-spacing",
-    "title": "Computed property spacing",
-    "description": "Enforce consistent spacing inside computed property brackets",
     "timeToFix": 5
   },
   {
@@ -320,18 +171,6 @@
   {
     "parameters": [
       {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "dot-location",
-    "title": "Dot location",
-    "description": "Enforce consistent newlines before and after dots",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
         "name": "allowKeywords",
         "description": "allowKeywords"
       },
@@ -343,13 +182,6 @@
     "patternId": "dot-notation",
     "title": "Dot notation",
     "description": "Enforce dot notation whenever possible",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "eol-last",
-    "title": "Eol last",
-    "description": "Require or disallow newline at the end of files",
     "timeToFix": 5
   },
   {
@@ -369,13 +201,6 @@
     "patternId": "for-direction",
     "title": "For direction",
     "description": "Enforce \"for\" loop update clause moving the counter in the right direction",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "func-call-spacing",
-    "title": "Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations",
     "timeToFix": 5
   },
   {
@@ -409,27 +234,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "function-call-argument-newline",
-    "title": "Function call argument newline",
-    "description": "Enforce line breaks between arguments of a function call",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "function-paren-newline",
-    "title": "Function paren newline",
-    "description": "Enforce consistent line breaks inside function parentheses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "generator-star-spacing",
-    "title": "Generator star spacing",
-    "description": "Enforce consistent spacing around `*` operators in generator functions",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "allowImplicit",
@@ -439,13 +243,6 @@
     "patternId": "getter-return",
     "title": "Getter return",
     "description": "Enforce `return` statements in getters",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "global-require",
-    "title": "Global require",
-    "description": "Require `require()` calls to be placed at top-level module scope",
     "timeToFix": 5
   },
   {
@@ -460,20 +257,6 @@
     "patternId": "guard-for-in",
     "title": "Guard for in",
     "description": "Require `for-in` loops to include an `if` statement",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "handle-callback-err",
-    "title": "Handle callback err",
-    "description": "Require error handling in callbacks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "id-blacklist",
-    "title": "Id blacklist",
-    "description": "Disallow specified identifiers",
     "timeToFix": 5
   },
   {
@@ -524,88 +307,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "implicit-arrow-linebreak",
-    "title": "Implicit arrow linebreak",
-    "description": "Enforce the location of arrow function bodies",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      },
-      {
-        "name": "VariableDeclarator",
-        "description": "VariableDeclarator"
-      },
-      {
-        "name": "outerIIFEBody",
-        "description": "outerIIFEBody"
-      },
-      {
-        "name": "MemberExpression",
-        "description": "MemberExpression"
-      },
-      {
-        "name": "FunctionDeclaration",
-        "description": "FunctionDeclaration"
-      },
-      {
-        "name": "FunctionExpression",
-        "description": "FunctionExpression"
-      },
-      {
-        "name": "CallExpression",
-        "description": "CallExpression"
-      },
-      {
-        "name": "ArrayExpression",
-        "description": "ArrayExpression"
-      },
-      {
-        "name": "ObjectExpression",
-        "description": "ObjectExpression"
-      },
-      {
-        "name": "ImportDeclaration",
-        "description": "ImportDeclaration"
-      },
-      {
-        "name": "ignoredNodes",
-        "description": "ignoredNodes"
-      }
-    ],
-    "patternId": "indent",
-    "title": "Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "indent-legacy",
-    "title": "Indent legacy",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "unnamedParam",
@@ -618,111 +319,10 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "jsx-quotes",
-    "title": "Jsx quotes",
-    "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "key-spacing",
-    "title": "Key spacing",
-    "description": "Enforce consistent spacing between keys and values in object literal properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "keyword-spacing",
-    "title": "Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "line-comment-position",
     "title": "Line comment position",
     "description": "Enforce position of line comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "linebreak-style",
-    "title": "Linebreak style",
-    "description": "Enforce consistent linebreak style",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "beforeBlockComment",
-        "description": "beforeBlockComment"
-      },
-      {
-        "name": "afterBlockComment",
-        "description": "afterBlockComment"
-      },
-      {
-        "name": "beforeLineComment",
-        "description": "beforeLineComment"
-      },
-      {
-        "name": "afterLineComment",
-        "description": "afterLineComment"
-      },
-      {
-        "name": "allowBlockStart",
-        "description": "allowBlockStart"
-      },
-      {
-        "name": "allowBlockEnd",
-        "description": "allowBlockEnd"
-      },
-      {
-        "name": "afterHashbangComment",
-        "description": "afterHashbangComment"
-      }
-    ],
-    "patternId": "lines-around-comment",
-    "title": "Lines around comment",
-    "description": "Require empty lines around comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "lines-around-directive",
-    "title": "Lines around directive",
-    "description": "Require or disallow newlines around directives",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "exceptAfterSingleLine",
-        "description": "exceptAfterSingleLine"
-      }
-    ],
-    "patternId": "lines-between-class-members",
-    "title": "Lines between class members",
-    "description": "Require or disallow an empty line between class members",
     "timeToFix": 5
   },
   {
@@ -744,13 +344,6 @@
     "patternId": "max-depth",
     "title": "Max depth",
     "description": "Enforce a maximum depth that blocks can be nested",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "max-len",
-    "title": "Max len",
-    "description": "Enforce a maximum line length",
     "timeToFix": 5
   },
   {
@@ -794,29 +387,10 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "max",
-        "description": "max"
-      }
-    ],
-    "patternId": "max-statements-per-line",
-    "title": "Max statements per line",
-    "description": "Enforce a maximum number of statements allowed per line",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "multiline-comment-style",
     "title": "Multiline comment style",
     "description": "Enforce a particular style for multiline comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "multiline-ternary",
-    "title": "Multiline ternary",
-    "description": "Enforce newlines between operands of ternary expressions",
     "timeToFix": 5
   },
   {
@@ -837,44 +411,6 @@
     "patternId": "new-cap",
     "title": "New cap",
     "description": "Require constructor names to begin with a capital letter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "new-parens",
-    "title": "New parens",
-    "description": "Enforce or disallow parentheses when invoking a constructor with no arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "newline-after-var",
-    "title": "Newline after var",
-    "description": "Require or disallow an empty line after variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "newline-before-return",
-    "title": "Newline before return",
-    "description": "Require an empty line before `return` statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreChainWithDepth",
-        "description": "ignoreChainWithDepth"
-      }
-    ],
-    "patternId": "newline-per-chained-call",
-    "title": "Newline per chained call",
-    "description": "Require a newline after each call in a method chain",
     "timeToFix": 5
   },
   {
@@ -919,13 +455,6 @@
   },
   {
     "parameters": [],
-    "patternId": "no-buffer-constructor",
-    "title": "No buffer constructor",
-    "description": "Disallow use of the `Buffer()` constructor",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "no-caller",
     "title": "No caller",
     "description": "Disallow the use of `arguments.caller` or `arguments.callee`",
@@ -936,13 +465,6 @@
     "patternId": "no-case-declarations",
     "title": "No case declarations",
     "description": "Disallow lexical declarations in case clauses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-catch-shadow",
-    "title": "No catch shadow",
-    "description": "Disallow `catch` clause parameters from shadowing variables in the outer scope",
     "timeToFix": 5
   },
   {
@@ -969,22 +491,6 @@
     "patternId": "no-cond-assign",
     "title": "No cond assign",
     "description": "Disallow assignment operators in conditional expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowParens",
-        "description": "allowParens"
-      },
-      {
-        "name": "onlyOneSimpleParam",
-        "description": "onlyOneSimpleParam"
-      }
-    ],
-    "patternId": "no-confusing-arrow",
-    "title": "No confusing arrow",
-    "description": "Disallow arrow functions where they could be confused with comparisons",
     "timeToFix": 5
   },
   {
@@ -1226,20 +732,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "no-extra-parens",
-    "title": "No extra parens",
-    "description": "Disallow unnecessary parentheses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-extra-semi",
-    "title": "No extra semi",
-    "description": "Disallow unnecessary semicolons",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "commentPattern",
@@ -1253,13 +745,6 @@
     "patternId": "no-fallthrough",
     "title": "No fallthrough",
     "description": "Disallow fallthrough of `case` statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-floating-decimal",
-    "title": "No floating decimal",
-    "description": "Disallow leading or trailing decimal points in numeric literals",
     "timeToFix": 5
   },
   {
@@ -1488,32 +973,6 @@
   {
     "parameters": [
       {
-        "name": "allowSamePrecedence",
-        "description": "allowSamePrecedence"
-      }
-    ],
-    "patternId": "no-mixed-operators",
-    "title": "No mixed operators",
-    "description": "Disallow mixed binary operators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-mixed-requires",
-    "title": "No mixed requires",
-    "description": "Disallow `require` calls to be mixed with regular variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-mixed-spaces-and-tabs",
-    "title": "No mixed spaces and tabs",
-    "description": "Disallow mixed spaces and tabs for indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
         "name": "ignoreNonDeclaration",
         "description": "ignoreNonDeclaration"
       }
@@ -1521,18 +980,6 @@
     "patternId": "no-multi-assign",
     "title": "No multi assign",
     "description": "Disallow use of chained assignment expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreEOLComments",
-        "description": "ignoreEOLComments"
-      }
-    ],
-    "patternId": "no-multi-spaces",
-    "title": "No multi spaces",
-    "description": "Disallow multiple spaces",
     "timeToFix": 5
   },
   {
@@ -1544,30 +991,9 @@
   },
   {
     "parameters": [],
-    "patternId": "no-multiple-empty-lines",
-    "title": "No multiple empty lines",
-    "description": "Disallow multiple empty lines",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-native-reassign",
-    "title": "No native reassign",
-    "description": "Disallow assignments to native objects or read-only global variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "no-negated-condition",
     "title": "No negated condition",
     "description": "Disallow negated conditions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-negated-in-lhs",
-    "title": "No negated in lhs",
-    "description": "Disallow negating the left operand in `in` expressions",
     "timeToFix": 5
   },
   {
@@ -1596,20 +1022,6 @@
     "patternId": "no-new-native-nonconstructor",
     "title": "No new native nonconstructor",
     "description": "Disallow `new` operators with global non-constructor functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-new-object",
-    "title": "No new object",
-    "description": "Disallow `Object` constructors",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-new-require",
-    "title": "No new require",
-    "description": "Disallow `new` operators with calls to `require`",
     "timeToFix": 5
   },
   {
@@ -1669,13 +1081,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "no-path-concat",
-    "title": "No path concat",
-    "description": "Disallow string concatenation with `__dirname` and `__filename`",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "allowForLoopAfterthoughts",
@@ -1685,20 +1090,6 @@
     "patternId": "no-plusplus",
     "title": "No plusplus",
     "description": "Disallow the unary operators `++` and `--`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-process-env",
-    "title": "No process env",
-    "description": "Disallow the use of `process.env`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-process-exit",
-    "title": "No process exit",
-    "description": "Disallow the use of `process.exit()`",
     "timeToFix": 5
   },
   {
@@ -1768,18 +1159,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "no-restricted-modules",
-    "title": "No restricted modules",
-    "description": "Disallow specified modules when loaded by `require`",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "no-restricted-properties",
     "title": "No restricted properties",
@@ -1803,13 +1182,6 @@
     "patternId": "no-return-assign",
     "title": "No return assign",
     "description": "Disallow assignment operators in `return` statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "no-return-await",
-    "title": "No return await",
-    "description": "Disallow unnecessary `return await`",
     "timeToFix": 5
   },
   {
@@ -1886,40 +1258,9 @@
   },
   {
     "parameters": [],
-    "patternId": "no-spaced-func",
-    "title": "No spaced func",
-    "description": "Disallow spacing between function identifiers and their applications (deprecated)",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "no-sparse-arrays",
     "title": "No sparse arrays",
     "description": "Disallow sparse arrays",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAtRootLevel",
-        "description": "allowAtRootLevel"
-      }
-    ],
-    "patternId": "no-sync",
-    "title": "No sync",
-    "description": "Disallow synchronous methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowIndentationTabs",
-        "description": "allowIndentationTabs"
-      }
-    ],
-    "patternId": "no-tabs",
-    "title": "No tabs",
-    "description": "Disallow all tabs",
     "timeToFix": 5
   },
   {
@@ -1948,22 +1289,6 @@
     "patternId": "no-throw-literal",
     "title": "No throw literal",
     "description": "Disallow throwing literals as exceptions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "skipBlankLines",
-        "description": "skipBlankLines"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "no-trailing-spaces",
-    "title": "No trailing spaces",
-    "description": "Disallow trailing whitespace at the end of lines",
     "timeToFix": 5
   },
   {
@@ -2264,58 +1589,9 @@
   },
   {
     "parameters": [],
-    "patternId": "no-whitespace-before-property",
-    "title": "No whitespace before property",
-    "description": "Disallow whitespace before properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "no-with",
     "title": "No with",
     "description": "Disallow `with` statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "nonblock-statement-body-position",
-    "title": "Nonblock statement body position",
-    "description": "Enforce the location of single-line statements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "object-curly-newline",
-    "title": "Object curly newline",
-    "description": "Enforce consistent line breaks after opening and before closing braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "object-curly-spacing",
-    "title": "Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAllPropertiesOnSameLine",
-        "description": "allowAllPropertiesOnSameLine"
-      },
-      {
-        "name": "allowMultiplePropertiesPerLine",
-        "description": "allowMultiplePropertiesPerLine"
-      }
-    ],
-    "patternId": "object-property-newline",
-    "title": "Object property newline",
-    "description": "Enforce placing object properties on separate lines",
     "timeToFix": 5
   },
   {
@@ -2339,51 +1615,9 @@
   },
   {
     "parameters": [],
-    "patternId": "one-var-declaration-per-line",
-    "title": "One var declaration per line",
-    "description": "Require or disallow newlines around variable declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "operator-assignment",
     "title": "Operator assignment",
     "description": "Require or disallow assignment operator shorthand where possible",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "operator-linebreak",
-    "title": "Operator linebreak",
-    "description": "Enforce consistent linebreak style for operators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "allowSingleLineBlocks",
-        "description": "allowSingleLineBlocks"
-      }
-    ],
-    "patternId": "padded-blocks",
-    "title": "Padded blocks",
-    "description": "Require or disallow padding within blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "padding-line-between-statements",
-    "title": "Padding line between statements",
-    "description": "Require or disallow padding lines between statements",
     "timeToFix": 5
   },
   {
@@ -2473,13 +1707,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "prefer-reflect",
-    "title": "Prefer reflect",
-    "description": "Require `Reflect` methods where applicable",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "disallowRedundantWrapping",
@@ -2514,33 +1741,6 @@
   },
   {
     "parameters": [],
-    "patternId": "quote-props",
-    "title": "Quote props",
-    "description": "Require quotes around object literal property names",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "avoidEscape",
-        "description": "avoidEscape"
-      },
-      {
-        "name": "allowTemplateLiterals",
-        "description": "allowTemplateLiterals"
-      }
-    ],
-    "patternId": "quotes",
-    "title": "Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "radix",
     "title": "Radix",
     "description": "Enforce the consistent use of the radix argument when using `parseInt()`",
@@ -2566,18 +1766,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "require",
-        "description": "require"
-      }
-    ],
-    "patternId": "require-jsdoc",
-    "title": "Require jsdoc",
-    "description": "Require JSDoc comments",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "require-unicode-regexp",
     "title": "Require unicode regexp",
@@ -2589,48 +1777,6 @@
     "patternId": "require-yield",
     "title": "Require yield",
     "description": "Require generator functions to contain `yield`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "rest-spread-spacing",
-    "title": "Rest spread spacing",
-    "description": "Enforce spacing between rest and spread operators and their expressions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "semi",
-    "title": "Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "semi-spacing",
-    "title": "Semi spacing",
-    "description": "Enforce consistent spacing before and after semicolons",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "semi-style",
-    "title": "Semi style",
-    "description": "Enforce location of semicolons",
     "timeToFix": 5
   },
   {
@@ -2704,101 +1850,9 @@
         "description": "unnamedParam"
       }
     ],
-    "patternId": "space-before-blocks",
-    "title": "Space before blocks",
-    "description": "Enforce consistent spacing before blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "space-before-function-paren",
-    "title": "Space before function paren",
-    "description": "Enforce consistent spacing before `function` definition opening parenthesis",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "space-in-parens",
-    "title": "Space in parens",
-    "description": "Enforce consistent spacing inside parentheses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "int32Hint",
-        "description": "int32Hint"
-      }
-    ],
-    "patternId": "space-infix-ops",
-    "title": "Space infix ops",
-    "description": "Require spacing around infix operators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "words",
-        "description": "words"
-      },
-      {
-        "name": "nonwords",
-        "description": "nonwords"
-      }
-    ],
-    "patternId": "space-unary-ops",
-    "title": "Space unary ops",
-    "description": "Enforce consistent spacing before or after unary operators",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
-    "patternId": "spaced-comment",
-    "title": "Spaced comment",
-    "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      }
-    ],
     "patternId": "strict",
     "title": "Strict",
     "description": "Require or disallow strict mode directives",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "switch-colon-spacing",
-    "title": "Switch colon spacing",
-    "description": "Enforce spacing around colons of switch statements",
     "timeToFix": 5
   },
   {
@@ -2806,20 +1860,6 @@
     "patternId": "symbol-description",
     "title": "Symbol description",
     "description": "Require symbol descriptions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "template-curly-spacing",
-    "title": "Template curly spacing",
-    "description": "Require or disallow spacing around embedded expressions of template strings",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "template-tag-spacing",
-    "title": "Template tag spacing",
-    "description": "Require or disallow spacing between template tags and their literals",
     "timeToFix": 5
   },
   {
@@ -2848,34 +1888,6 @@
   {
     "parameters": [
       {
-        "name": "requireReturn",
-        "description": "requireReturn"
-      },
-      {
-        "name": "requireParamDescription",
-        "description": "requireParamDescription"
-      },
-      {
-        "name": "requireReturnDescription",
-        "description": "requireReturnDescription"
-      },
-      {
-        "name": "requireReturnType",
-        "description": "requireReturnType"
-      },
-      {
-        "name": "requireParamType",
-        "description": "requireParamType"
-      }
-    ],
-    "patternId": "valid-jsdoc",
-    "title": "Valid jsdoc",
-    "description": "Enforce valid JSDoc comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
         "name": "requireStringLiterals",
         "description": "requireStringLiterals"
       }
@@ -2890,36 +1902,6 @@
     "patternId": "vars-on-top",
     "title": "Vars on top",
     "description": "Require `var` declarations be placed at the top of their containing scope",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "functionPrototypeMethods",
-        "description": "functionPrototypeMethods"
-      }
-    ],
-    "patternId": "wrap-iife",
-    "title": "Wrap iife",
-    "description": "Require parentheses around immediate `function` invocations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "wrap-regex",
-    "title": "Wrap regex",
-    "description": "Require parenthesis around regex literals",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "yield-star-spacing",
-    "title": "Yield star spacing",
-    "description": "Require or disallow spacing around the `*` in `yield*` expressions",
     "timeToFix": 5
   },
   {
@@ -3264,20 +2246,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@babel_object-curly-spacing",
-    "title": "@babel: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@babel_semi",
-    "title": "@babel: Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@lwc_lwc_consistent-component-name",
     "title": "@lwc: [Lwc] Consistent component name",
     "description": "Ensure component class name matches file name",
@@ -3323,13 +2291,6 @@
     "patternId": "@lwc_lwc_no-document-query",
     "title": "@lwc: [Lwc] No document query",
     "description": "Disallow DOM query at the document level.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@lwc_lwc_no-dupe-class-members",
-    "title": "@lwc: [Lwc] No dupe class members",
-    "description": "Disallow duplicate class members",
     "timeToFix": 5
   },
   {
@@ -3783,6 +2744,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "@typescript-eslint_await-thenable",
+    "title": "@typescript eslint: Await thenable",
+    "description": "Disallow awaiting a value that is not a Thenable",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "minimumDescriptionLength",
@@ -3976,6 +2944,34 @@
     "patternId": "@typescript-eslint_func-call-spacing",
     "title": "@typescript eslint: Func call spacing",
     "description": "Require or disallow spacing between function identifiers and their invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@typescript-eslint_indent",
+    "title": "@typescript eslint: Indent",
+    "description": "Enforce consistent indentation",
     "timeToFix": 5
   },
   {
@@ -4388,13 +3384,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-type-alias",
-    "title": "@typescript eslint: No type alias",
-    "description": "Disallow type aliases",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
     "title": "@typescript eslint: No unnecessary boolean literal compare",
     "description": "Disallow unnecessary equality comparisons against boolean literals",
@@ -4555,13 +3544,6 @@
     "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
     "title": "@typescript eslint: Non nullable type assertion style",
     "description": "Enforce non-null assertions over explicit type casts",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_object-curly-spacing",
-    "title": "@typescript eslint: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces",
     "timeToFix": 5
   },
   {
@@ -8332,12 +7314,6 @@
   },
   {
     "parameters": [],
-    "patternId": "flowtype_valid-syntax",
-    "title": "Flowtype: Valid syntax",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "fp_no-arguments",
     "title": "Fp: No arguments",
     "description": "Forbid the use of `arguments`.",
@@ -8567,13 +7543,6 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_prefer-readonly-type",
-    "title": "Functional: Prefer readonly type",
-    "description": "Prefer readonly types over mutable types.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "functional_prefer-tacit",
     "title": "Functional: Prefer tacit",
     "description": "Replaces `x => f(x)` with just `f`.",
@@ -8649,6 +7618,32 @@
     "patternId": "import_no-unresolved",
     "title": "Import: No unresolved",
     "description": "Ensure imports point to a file/module that can be resolved.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_named",
+    "title": "Import: Named",
+    "description": "Ensure named imports correspond to a named export in the remote file.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_default",
+    "title": "Import: Default",
+    "description": "Ensure a default export is present, given a default import.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowComputed",
+        "description": "allowComputed"
+      }
+    ],
+    "patternId": "import_namespace",
+    "title": "Import: Namespace",
+    "description": "Ensure imported namespaces contain dereferenced properties as they are dereferenced.",
     "timeToFix": 5
   },
   {
@@ -8729,6 +7724,22 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "ignoreExternal",
+        "description": "ignoreExternal"
+      },
+      {
+        "name": "allowUnsafeDynamicCyclicDependency",
+        "description": "allowUnsafeDynamicCyclicDependency"
+      }
+    ],
+    "patternId": "import_no-cycle",
+    "title": "Import: No cycle",
+    "description": "Forbid a module from importing a module with a dependency path back to itself.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "import_no-named-default",
     "title": "Import: No named default",
@@ -8737,9 +7748,30 @@
   },
   {
     "parameters": [],
+    "patternId": "import_no-named-as-default",
+    "title": "Import: No named as default",
+    "description": "Forbid use of exported name as identifier of default export.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-named-as-default-member",
+    "title": "Import: No named as default member",
+    "description": "Forbid use of exported name as property of default export.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "import_no-anonymous-default-export",
     "title": "Import: No anonymous default export",
     "description": "Forbid anonymous values as default exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "import_no-unused-modules",
+    "title": "Import: No unused modules",
+    "description": "Forbid modules without exports, or exports without matching import in another module.",
     "timeToFix": 5
   },
   {
@@ -8912,9 +7944,9 @@
   },
   {
     "parameters": [],
-    "patternId": "import_imports-first",
-    "title": "Import: Imports first",
-    "description": "Replaced by `import/first`.",
+    "patternId": "import_no-deprecated",
+    "title": "Import: No deprecated",
+    "description": "Forbid imported names marked with `@deprecated` documentation tag.",
     "timeToFix": 5
   },
   {
@@ -9190,13 +8222,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jest_no-if",
-    "title": "Jest: No if",
-    "description": "Disallow conditional logic",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jest_no-interpolation-in-snapshots",
     "title": "Jest: No interpolation in snapshots",
     "description": "Disallow string interpolation inside snapshots",
@@ -9408,6 +8433,13 @@
     "patternId": "jest_require-top-level-describe",
     "title": "Jest: Require top level describe",
     "description": "Require test cases and hooks to be inside a `describe` block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_unbound-method",
+    "title": "Jest: Unbound method",
+    "description": "Enforce unbound methods are called with their expected scope",
     "timeToFix": 5
   },
   {
@@ -9635,6 +8667,50 @@
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
     "description": "Reports invalid alignment of JSDoc block asterisks.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInlineConfig",
+        "description": "allowInlineConfig"
+      },
+      {
+        "name": "captionRequired",
+        "description": "captionRequired"
+      },
+      {
+        "name": "checkDefaults",
+        "description": "checkDefaults"
+      },
+      {
+        "name": "checkEslintrc",
+        "description": "checkEslintrc"
+      },
+      {
+        "name": "checkParams",
+        "description": "checkParams"
+      },
+      {
+        "name": "checkProperties",
+        "description": "checkProperties"
+      },
+      {
+        "name": "noDefaultExampleRules",
+        "description": "noDefaultExampleRules"
+      },
+      {
+        "name": "paddedIndent",
+        "description": "paddedIndent"
+      },
+      {
+        "name": "reportUnusedDisableDirectives",
+        "description": "reportUnusedDisableDirectives"
+      }
+    ],
+    "patternId": "jsdoc_check-examples",
+    "title": "Jsdoc: Check examples",
+    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
     "timeToFix": 5
   },
   {
@@ -10706,13 +9782,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jsx-a11y_accessible-emoji",
-    "title": "Jsx a11y: Accessible emoji",
-    "description": "Enforce emojis are wrapped in `<span>` and provide screenreader access.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jsx-a11y_alt-text",
     "title": "Jsx a11y: Alt text",
     "description": "Enforce all elements that require alternative text have meaningful information to relay back to end user.",
@@ -10844,13 +9913,6 @@
   },
   {
     "parameters": [],
-    "patternId": "jsx-a11y_label-has-for",
-    "title": "Jsx a11y: Label has for",
-    "description": "Enforce that `<label>` elements have the `htmlFor` prop.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "jsx-a11y_lang",
     "title": "Jsx a11y: Lang",
     "description": "Enforce lang attribute has a valid value.",
@@ -10929,13 +9991,6 @@
     "patternId": "jsx-a11y_no-noninteractive-tabindex",
     "title": "Jsx a11y: No noninteractive tabindex",
     "description": "`tabIndex` should only be declared on interactive elements.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "jsx-a11y_no-onchange",
-    "title": "Jsx a11y: No onchange",
-    "description": "Enforce usage of `onBlur` over `onChange` on select menus for accessibility.",
     "timeToFix": 5
   },
   {
@@ -12061,20 +11116,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "n_no-hide-core-modules",
-    "title": "N: No hide core modules",
-    "description": "Disallow third-party modules which are hiding core modules",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "n_no-unsupported-features",
-    "title": "N: No unsupported features",
-    "description": "Disallow unsupported ECMAScript features on the specified version",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "block",
@@ -12804,6 +11845,12 @@
   },
   {
     "parameters": [],
+    "patternId": "promise_no-native",
+    "title": "Promise: No native",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "promise_no-callback-in-promise",
     "title": "Promise: No callback in promise",
     "timeToFix": 5
@@ -12849,6 +11896,188 @@
     "parameters": [],
     "patternId": "promise_no-multiple-resolved",
     "title": "Promise: No multiple resolved",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_always-simplification",
+    "title": "Ramda: Always simplification",
+    "description": "Detects cases where `always` is redundant",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_any-pass-simplification",
+    "title": "Ramda: Any pass simplification",
+    "description": "Detects when `anyPass` with complements can be replaced by complement of `allPass`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_both-simplification",
+    "title": "Ramda: Both simplification",
+    "description": "`both` simplifications, like replacing negation by `either`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_complement-simplification",
+    "title": "Ramda: Complement simplification",
+    "description": "`complement` simplifications, like when the negation should be replaced by an assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-pipe-style",
+    "title": "Ramda: Compose pipe style",
+    "description": "Enforces `compose` for single line expression and `pipe` for multiline",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_compose-simplification",
+    "title": "Ramda: Compose simplification",
+    "description": "Detects when there are better functions that behave the same as `compose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_cond-simplification",
+    "title": "Ramda: Cond simplification",
+    "description": "`cond` simplification, like suggesting ifElse when too few parameters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_either-simplification",
+    "title": "Ramda: Either simplification",
+    "description": "`either` simplifications, like replacing negation by `both`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_eq-by-simplification",
+    "title": "Ramda: Eq by simplification",
+    "description": "Detects when `eqBy(prop(_))` can be replaced by `eqProps(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_filter-simplification",
+    "title": "Ramda: Filter simplification",
+    "description": "`filter` simplifications, like `filter(complement(_))` to `reject(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_if-else-simplification",
+    "title": "Ramda: If else simplification",
+    "description": "`ifElse` simplifications, like replacing by `when` or `unless`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_map-simplification",
+    "title": "Ramda: Map simplification",
+    "description": "`map` simplifications, like `map(prop(_))` to `pluck(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_merge-simplification",
+    "title": "Ramda: Merge simplification",
+    "description": "`merge` simplifications, like suggesting assoc for one element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-and",
+    "title": "Ramda: No redundant and",
+    "description": "Forbid using `and` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-not",
+    "title": "Ramda: No redundant not",
+    "description": "Forbid using `not` in call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_no-redundant-or",
+    "title": "Ramda: No redundant or",
+    "description": "Forbid using `or` in full call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_pipe-simplification",
+    "title": "Ramda: Pipe simplification",
+    "description": "Detects when there are better functions that behave the same as `pipe`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-both-either",
+    "title": "Ramda: Prefer both either",
+    "description": "Enforces using `both`/`either` instead of `allPass`/`anyPass` with a list of only two predicates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-complement",
+    "title": "Ramda: Prefer complement",
+    "description": "Enforces using `complement` instead of compositions using `not`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prefer-ramda-boolean",
+    "title": "Ramda: Prefer ramda boolean",
+    "description": "Suggests using Ramda T and F functions instead of explicit versions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_prop-satisfies-simplification",
+    "title": "Ramda: Prop satisfies simplification",
+    "description": "`propSatisfies` simplifications, like `propSatisfies(equals(_))` to `propEq(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reduce-simplification",
+    "title": "Ramda: Reduce simplification",
+    "description": "`reduce` simplifications, like `reduce(add)` to `sum`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_reject-simplification",
+    "title": "Ramda: Reject simplification",
+    "description": "`reject` simplifications, like `reject(complement(_))` to `filter(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_set-simplification",
+    "title": "Ramda: Set simplification",
+    "description": "`set` simplifications, like `set(lensProp(_))` to `assoc(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_unless-simplification",
+    "title": "Ramda: Unless simplification",
+    "description": "`unless` simplifications, like `unless(complement(_))` to `when(_)`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ramda_when-simplification",
+    "title": "Ramda: When simplification",
+    "description": "`when` simplifications, like `when(complement(_))` to `unless(_)`",
     "timeToFix": 5
   },
   {
@@ -12977,6 +12206,331 @@
     "patternId": "react_iframe-missing-sandbox",
     "title": "React: Iframe missing sandbox",
     "description": "Enforce sandbox attribute on iframe elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-boolean-value",
+    "title": "React: Jsx boolean value",
+    "description": "Enforce boolean attributes notation in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-child-element-spacing",
+    "title": "React: Jsx child element spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-closing-bracket-location",
+    "title": "React: Jsx closing bracket location",
+    "description": "Enforce closing bracket location in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-closing-tag-location",
+    "title": "React: Jsx closing tag location",
+    "description": "Enforce closing tag location for multiline JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-spacing",
+    "title": "React: Jsx curly spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-newline",
+    "title": "React: Jsx curly newline",
+    "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-equals-spacing",
+    "title": "React: Jsx equals spacing",
+    "description": "Enforce or disallow spaces around equal signs in JSX attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-filename-extension",
+    "title": "React: Jsx filename extension",
+    "description": "Disallow file extensions that may contain JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-first-prop-new-line",
+    "title": "React: Jsx first prop new line",
+    "description": "Enforce proper position of the first property in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-handler-names",
+    "title": "React: Jsx handler names",
+    "description": "Enforce event handler naming conventions in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-indent",
+    "title": "React: Jsx indent",
+    "description": "Enforce JSX indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-indent-props",
+    "title": "React: Jsx indent props",
+    "description": "Enforce props indentation in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "checkFragmentShorthand",
+        "description": "checkFragmentShorthand"
+      },
+      {
+        "name": "checkKeyMustBeforeSpread",
+        "description": "checkKeyMustBeforeSpread"
+      },
+      {
+        "name": "warnOnDuplicates",
+        "description": "warnOnDuplicates"
+      }
+    ],
+    "patternId": "react_jsx-key",
+    "title": "React: Jsx key",
+    "description": "Disallow missing `key` props in iterators/collection literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-max-depth",
+    "title": "React: Jsx max depth",
+    "description": "Enforce JSX maximum depth",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-max-props-per-line",
+    "title": "React: Jsx max props per line",
+    "description": "Enforce maximum of props on a single line in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "prevent",
+        "description": "prevent"
+      },
+      {
+        "name": "allowMultilines",
+        "description": "allowMultilines"
+      }
+    ],
+    "patternId": "react_jsx-newline",
+    "title": "React: Jsx newline",
+    "description": "Require or prevent a new line after jsx elements and expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowArrowFunctions",
+        "description": "allowArrowFunctions"
+      },
+      {
+        "name": "allowBind",
+        "description": "allowBind"
+      },
+      {
+        "name": "allowFunctions",
+        "description": "allowFunctions"
+      },
+      {
+        "name": "ignoreRefs",
+        "description": "ignoreRefs"
+      },
+      {
+        "name": "ignoreDOMComponents",
+        "description": "ignoreDOMComponents"
+      }
+    ],
+    "patternId": "react_jsx-no-bind",
+    "title": "React: Jsx no bind",
+    "description": "Disallow `.bind()` or arrow functions in JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-comment-textnodes",
+    "title": "React: Jsx no comment textnodes",
+    "description": "Disallow comments from being inserted as text nodes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-constructed-context-values",
+    "title": "React: Jsx no constructed context values",
+    "description": "Disallows JSX context provider values from taking values that will cause needless rerenders",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-duplicate-props",
+    "title": "React: Jsx no duplicate props",
+    "description": "Disallow duplicate properties in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "validStrategies",
+        "description": "validStrategies"
+      }
+    ],
+    "patternId": "react_jsx-no-leaked-render",
+    "title": "React: Jsx no leaked render",
+    "description": "Disallow problematic leaked values from being rendered",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-literals",
+    "title": "React: Jsx no literals",
+    "description": "Disallow usage of string literals in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-script-url",
+    "title": "React: Jsx no script url",
+    "description": "Disallow usage of `javascript:` URLs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "links",
+        "description": "links"
+      },
+      {
+        "name": "forms",
+        "description": "forms"
+      }
+    ],
+    "patternId": "react_jsx-no-target-blank",
+    "title": "React: Jsx no target blank",
+    "description": "Disallow `target=\"_blank\"` attribute without `rel=\"noreferrer\"`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-useless-fragment",
+    "title": "React: Jsx no useless fragment",
+    "description": "Disallow unnecessary fragments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-one-expression-per-line",
+    "title": "React: Jsx one expression per line",
+    "description": "Require one JSX element per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-no-undef",
+    "title": "React: Jsx no undef",
+    "description": "Disallow undeclared variables in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-curly-brace-presence",
+    "title": "React: Jsx curly brace presence",
+    "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-pascal-case",
+    "title": "React: Jsx pascal case",
+    "description": "Enforce PascalCase for user-defined JSX components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-fragments",
+    "title": "React: Jsx fragments",
+    "description": "Enforce shorthand or standard form for React fragments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-props-no-multi-spaces",
+    "title": "React: Jsx props no multi spaces",
+    "description": "Disallow multiple spaces between inline JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-props-no-spreading",
+    "title": "React: Jsx props no spreading",
+    "description": "Disallow JSX prop spreading",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "multiline",
+        "description": "multiline"
+      },
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
+    "patternId": "react_jsx-sort-props",
+    "title": "React: Jsx sort props",
+    "description": "Enforce props alphabetical sorting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-tag-spacing",
+    "title": "React: Jsx tag spacing",
+    "description": "Enforce whitespace in and around the JSX opening and closing brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-uses-react",
+    "title": "React: Jsx uses react",
+    "description": "Disallow React to be incorrectly marked as unused",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-uses-vars",
+    "title": "React: Jsx uses vars",
+    "description": "Disallow variables used in JSX to be incorrectly marked as unused",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-wrap-multilines",
+    "title": "React: Jsx wrap multilines",
+    "description": "Disallow missing parentheses around multiline JSX",
     "timeToFix": 5
   },
   {
@@ -14151,6 +13705,307 @@
   },
   {
     "parameters": [],
+    "patternId": "rxjs_ban-observables",
+    "title": "Rxjs: Ban observables",
+    "description": "Forbids the use of banned observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_ban-operators",
+    "title": "Rxjs: Ban operators",
+    "description": "Forbids the use of banned operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_finnish",
+    "title": "Rxjs: Finnish",
+    "description": "Enforces the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_just",
+    "title": "Rxjs: Just",
+    "description": "Enforces the use of a `just` alias for `of`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_macro",
+    "title": "Rxjs: Macro",
+    "description": "Enforces the use of the RxJS Tools Babel macro.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-async-subscribe",
+    "title": "Rxjs: No async subscribe",
+    "description": "Forbids passing `async` functions to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-compat",
+    "title": "Rxjs: No compat",
+    "description": "Forbids importation from locations that depend upon `rxjs-compat`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-connectable",
+    "title": "Rxjs: No connectable",
+    "description": "Forbids operators that return connectable observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-create",
+    "title": "Rxjs: No create",
+    "description": "Forbids the calling of `Observable.create`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-cyclic-action",
+    "title": "Rxjs: No cyclic action",
+    "description": "Forbids effects and epics that re-emit filtered actions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-explicit-generics",
+    "title": "Rxjs: No explicit generics",
+    "description": "Forbids explicit generic type arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-exposed-subjects",
+    "title": "Rxjs: No exposed subjects",
+    "description": "Forbids exposed (i.e. non-private) subjects.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-finnish",
+    "title": "Rxjs: No finnish",
+    "description": "Forbids the use of Finnish notation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-error",
+    "title": "Rxjs: No ignored error",
+    "description": "Forbids the calling of `subscribe` without specifying an error handler.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-notifier",
+    "title": "Rxjs: No ignored notifier",
+    "description": "Forbids observables not composed from the `repeatWhen` or `retryWhen` notifier.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-observable",
+    "title": "Rxjs: No ignored observable",
+    "description": "Forbids the ignoring of observables returned by functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-replay-buffer",
+    "title": "Rxjs: No ignored replay buffer",
+    "description": "Forbids using `ReplaySubject`, `publishReplay` or `shareReplay` without specifying the buffer size.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscribe",
+    "title": "Rxjs: No ignored subscribe",
+    "description": "Forbids the calling of `subscribe` without specifying arguments.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-subscription",
+    "title": "Rxjs: No ignored subscription",
+    "description": "Forbids ignoring the subscription returned by `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-ignored-takewhile-value",
+    "title": "Rxjs: No ignored takewhile value",
+    "description": "Forbids ignoring the value within `takeWhile`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-implicit-any-catch",
+    "title": "Rxjs: No implicit any catch",
+    "description": "Forbids implicit `any` error parameters in `catchError` operators.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-index",
+    "title": "Rxjs: No index",
+    "description": "Forbids the importation from index modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-internal",
+    "title": "Rxjs: No internal",
+    "description": "Forbids the importation of internals.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-nested-subscribe",
+    "title": "Rxjs: No nested subscribe",
+    "description": "Forbids the calling of `subscribe` within a `subscribe` callback.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-redundant-notify",
+    "title": "Rxjs: No redundant notify",
+    "description": "Forbids redundant notifications from completed or errored observables.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-sharereplay",
+    "title": "Rxjs: No sharereplay",
+    "description": "Forbids using the `shareReplay` operator.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subclass",
+    "title": "Rxjs: No subclass",
+    "description": "Forbids subclassing RxJS classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-unsubscribe",
+    "title": "Rxjs: No subject unsubscribe",
+    "description": "Forbids calling the `unsubscribe` method of a subject instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subject-value",
+    "title": "Rxjs: No subject value",
+    "description": "Forbids accessing the `value` property of a `BehaviorSubject` instance.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-subscribe-handlers",
+    "title": "Rxjs: No subscribe handlers",
+    "description": "Forbids the passing of handlers to `subscribe`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-topromise",
+    "title": "Rxjs: No topromise",
+    "description": "Forbids the use of the `toPromise` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unbound-methods",
+    "title": "Rxjs: No unbound methods",
+    "description": "Forbids the passing of unbound methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-catch",
+    "title": "Rxjs: No unsafe catch",
+    "description": "Forbids unsafe `catchError` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-first",
+    "title": "Rxjs: No unsafe first",
+    "description": "Forbids unsafe `first`/`take` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-subject-next",
+    "title": "Rxjs: No unsafe subject next",
+    "description": "Forbids unsafe optional `next` calls.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-switchmap",
+    "title": "Rxjs: No unsafe switchmap",
+    "description": "Forbids unsafe `switchMap` usage in effects and epics.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_no-unsafe-takeuntil",
+    "title": "Rxjs: No unsafe takeuntil",
+    "description": "Forbids the application of operators after `takeUntil`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_prefer-observer",
+    "title": "Rxjs: Prefer observer",
+    "description": "Forbids the passing separate handlers to `subscribe` and `tap`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_suffix-subjects",
+    "title": "Rxjs: Suffix subjects",
+    "description": "Enforces the use of a suffix in subject identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs_throw-error",
+    "title": "Rxjs: Throw error",
+    "description": "Enforces the passing of `Error` values to error notifications.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-async-pipe",
+    "title": "Rxjs angular: Prefer async pipe",
+    "description": "Forbids the calling of `subscribe` within Angular components.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-composition",
+    "title": "Rxjs angular: Prefer composition",
+    "description": "Forbids `subscribe` calls that are not composed within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "rxjs-angular_prefer-takeuntil",
+    "title": "Rxjs angular: Prefer takeuntil",
+    "description": "Forbids `subscribe` calls without an accompanying `takeUntil` within Angular components (and, optionally, within services, directives, and pipes).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "security_detect-unsafe-regex",
     "title": "Security: Detect unsafe regex",
     "description": "Detects potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.",
@@ -15006,6 +14861,218 @@
     "patternId": "test-selectors_onSubmit",
     "title": "Test selectors: OnSubmit",
     "description": "Requires test attribute data-test-id on elements with the onSubmit property.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "eventModule",
+        "description": "eventModule"
+      }
+    ],
+    "patternId": "testing-library_await-async-events",
+    "title": "Testing library: Await async events",
+    "description": "Enforce promises from async event methods are handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-queries",
+    "title": "Testing library: Await async queries",
+    "description": "Enforce promises from async queries to be handled",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_await-async-utils",
+    "title": "Testing library: Await async utils",
+    "description": "Enforce promises from async utils to be awaited properly",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "testIdAttribute",
+        "description": "testIdAttribute"
+      },
+      {
+        "name": "customMessage",
+        "description": "customMessage"
+      },
+      {
+        "name": "testIdPattern",
+        "description": "testIdPattern"
+      }
+    ],
+    "patternId": "testing-library_consistent-data-testid",
+    "title": "Testing library: Consistent data testid",
+    "description": "Ensures consistent usage of `data-testid`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "eventModules",
+        "description": "eventModules"
+      }
+    ],
+    "patternId": "testing-library_no-await-sync-events",
+    "title": "Testing library: No await sync events",
+    "description": "Disallow unnecessary `await` for sync events",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-await-sync-queries",
+    "title": "Testing library: No await sync queries",
+    "description": "Disallow unnecessary `await` for sync queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-container",
+    "title": "Testing library: No container",
+    "description": "Disallow the use of `container` methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-debugging-utils",
+    "title": "Testing library: No debugging utils",
+    "description": "Disallow the use of debugging utilities like `debug`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-dom-import",
+    "title": "Testing library: No dom import",
+    "description": "Disallow importing from DOM Testing Library",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-global-regexp-flag-in-query",
+    "title": "Testing library: No global regexp flag in query",
+    "description": "Disallow the use of the global RegExp flag (/g) in queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-manual-cleanup",
+    "title": "Testing library: No manual cleanup",
+    "description": "Disallow the use of `cleanup`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-node-access",
+    "title": "Testing library: No node access",
+    "description": "Disallow direct Node access",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-promise-in-fire-event",
+    "title": "Testing library: No promise in fire event",
+    "description": "Disallow the use of promises passed to a `fireEvent` method",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-render-in-lifecycle",
+    "title": "Testing library: No render in lifecycle",
+    "description": "Disallow the use of `render` in testing frameworks setup functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-unnecessary-act",
+    "title": "Testing library: No unnecessary act",
+    "description": "Disallow wrapping Testing Library utils or empty callbacks in `act`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-multiple-assertions",
+    "title": "Testing library: No wait for multiple assertions",
+    "description": "Disallow the use of multiple `expect` calls inside `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-side-effects",
+    "title": "Testing library: No wait for side effects",
+    "description": "Disallow the use of side effects in `waitFor`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_no-wait-for-snapshot",
+    "title": "Testing library: No wait for snapshot",
+    "description": "Ensures no snapshot is generated inside of a `waitFor` call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-explicit-assert",
+    "title": "Testing library: Prefer explicit assert",
+    "description": "Suggest using explicit assertions rather than standalone queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-find-by",
+    "title": "Testing library: Prefer find by",
+    "description": "Suggest using `find(All)By*` query instead of `waitFor` + `get(All)By*` to wait for elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-implicit-assert",
+    "title": "Testing library: Prefer implicit assert",
+    "description": "Suggest using implicit assertions for getBy* & findBy* queries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-presence-queries",
+    "title": "Testing library: Prefer presence queries",
+    "description": "Ensure appropriate `get*`/`query*` queries are used with their respective matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-by-disappearance",
+    "title": "Testing library: Prefer query by disappearance",
+    "description": "Suggest using `queryBy*` queries when waiting for disappearance",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-query-matchers",
+    "title": "Testing library: Prefer query matchers",
+    "description": "Ensure the configured `get*`/`query*` query is used with the corresponding matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-screen-queries",
+    "title": "Testing library: Prefer screen queries",
+    "description": "Suggest using `screen` while querying",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_prefer-user-event",
+    "title": "Testing library: Prefer user event",
+    "description": "Suggest using `userEvent` over `fireEvent` for simulating user interactions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "testing-library_render-result-naming-convention",
+    "title": "Testing library: Render result naming convention",
+    "description": "Enforce a valid naming for return value from `render`",
     "timeToFix": 5
   },
   {
@@ -15879,12 +15946,6 @@
   },
   {
     "parameters": [],
-    "patternId": "unicorn_no-unsafe-regex",
-    "title": "Unicorn: No unsafe regex",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "unused-imports_no-unused-vars",
     "title": "Unused imports: No unused vars",
     "description": "Disallow unused variables",
@@ -15895,43 +15956,6 @@
     "patternId": "unused-imports_no-unused-imports",
     "title": "Unused imports: No unused imports",
     "description": "Disallow unused variables",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_array-bracket-newline",
-    "title": "Vue: Array bracket newline",
-    "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_array-bracket-spacing",
-    "title": "Vue: Array bracket spacing",
-    "description": "Enforce consistent spacing inside array brackets in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_array-element-newline",
-    "title": "Vue: Array element newline",
-    "description": "Enforce line breaks after each array element in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "vue_arrow-spacing",
-    "title": "Vue: Arrow spacing",
-    "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -15964,32 +15988,9 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_block-spacing",
-    "title": "Vue: Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_block-tag-newline",
     "title": "Vue: Block tag newline",
     "description": "Enforce line breaks after opening and before closing block-level tags",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "vue_brace-style",
-    "title": "Vue: Brace style",
-    "description": "Enforce consistent brace style for blocks in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16010,36 +16011,6 @@
     "patternId": "vue_camelcase",
     "title": "Vue: Camelcase",
     "description": "Enforce camelcase naming convention in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_comma-dangle",
-    "title": "Vue: Comma dangle",
-    "description": "Require or disallow trailing commas in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "vue_comma-spacing",
-    "title": "Vue: Comma spacing",
-    "description": "Enforce consistent spacing before and after commas in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_comma-style",
-    "title": "Vue: Comma style",
-    "description": "Enforce consistent comma style in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16079,13 +16050,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_component-tags-order",
-    "title": "Vue: Component tags order",
-    "description": "Enforce order of component top-level elements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_custom-event-name-casing",
     "title": "Vue: Custom event name casing",
     "description": "Enforce specific casing for custom event name",
@@ -16110,13 +16074,6 @@
     "patternId": "vue_define-props-declaration",
     "title": "Vue: Define props declaration",
     "description": "Enforce declaration style of `defineProps`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_dot-location",
-    "title": "Vue: Dot location",
-    "description": "Enforce consistent newlines before and after dots in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16147,13 +16104,6 @@
     "patternId": "vue_first-attribute-linebreak",
     "title": "Vue: First attribute linebreak",
     "description": "Enforce the location of first attribute",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_func-call-spacing",
-    "title": "Vue: Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16248,29 +16198,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_key-spacing",
-    "title": "Vue: Key spacing",
-    "description": "Enforce consistent spacing between keys and values in object literal properties in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "vue_keyword-spacing",
-    "title": "Vue: Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_match-component-file-name",
     "title": "Vue: Match component file name",
     "description": "Require component name property to match its file name",
@@ -16316,13 +16243,6 @@
     "patternId": "vue_multiline-html-element-content-newline",
     "title": "Vue: Multiline html element content newline",
     "description": "Require a line break before and after the contents of a multiline element",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_multiline-ternary",
-    "title": "Vue: Multiline ternary",
-    "description": "Enforce newlines between operands of ternary expressions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16616,20 +16536,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "vue_no-extra-parens",
-    "title": "Vue: No extra parens",
-    "description": "Disallow unnecessary parentheses in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_no-invalid-model-keys",
-    "title": "Vue: No invalid model keys",
-    "description": "Require valid keys in model option",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "skipComments",
@@ -16736,13 +16642,6 @@
     "patternId": "vue_no-ref-as-operand",
     "title": "Vue: No ref as operand",
     "description": "Disallow use of value wrapped by `ref()` (Composition API) as an operand",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_no-ref-object-destructure",
-    "title": "Vue: No ref object destructure",
-    "description": "Disallow usages of ref objects that can lead to loss of reactivity",
     "timeToFix": 5
   },
   {
@@ -16862,13 +16761,6 @@
     "patternId": "vue_no-root-v-if",
     "title": "Vue: No root v if",
     "description": "Disallow `v-if` directives on root element",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_no-setup-props-destructure",
-    "title": "Vue: No setup props destructure",
-    "description": "Disallow usages that lose the reactivity of `props` passed to `setup`",
     "timeToFix": 5
   },
   {
@@ -17097,36 +16989,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_object-curly-newline",
-    "title": "Vue: Object curly newline",
-    "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_object-curly-spacing",
-    "title": "Vue: Object curly spacing",
-    "description": "Enforce consistent spacing inside braces in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowAllPropertiesOnSameLine",
-        "description": "allowAllPropertiesOnSameLine"
-      },
-      {
-        "name": "allowMultiplePropertiesPerLine",
-        "description": "allowMultiplePropertiesPerLine"
-      }
-    ],
-    "patternId": "vue_object-property-newline",
-    "title": "Vue: Object property newline",
-    "description": "Enforce placing object properties on separate lines in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_object-shorthand",
     "title": "Vue: Object shorthand",
     "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
@@ -17137,13 +16999,6 @@
     "patternId": "vue_one-component-per-file",
     "title": "Vue: One component per file",
     "description": "Enforce that each component should be in its own file",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_operator-linebreak",
-    "title": "Vue: Operator linebreak",
-    "description": "Enforce consistent linebreak style for operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17221,13 +17076,6 @@
     "patternId": "vue_prop-name-casing",
     "title": "Vue: Prop name casing",
     "description": "Enforce specific casing for the Prop name in Vue components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_quote-props",
-    "title": "Vue: Quote props",
-    "description": "Require quotes around object literal property names in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17400,13 +17248,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_script-setup-uses-vars",
-    "title": "Vue: Script setup uses vars",
-    "description": "Prevent `<script setup>` variables used in `<template>` to be marked as unused",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_singleline-html-element-content-newline",
     "title": "Vue: Singleline html element content newline",
     "description": "Require a line break before and after the contents of a singleline element",
@@ -17442,51 +17283,9 @@
   },
   {
     "parameters": [],
-    "patternId": "vue_space-in-parens",
-    "title": "Vue: Space in parens",
-    "description": "Enforce consistent spacing inside parentheses in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "int32Hint",
-        "description": "int32Hint"
-      }
-    ],
-    "patternId": "vue_space-infix-ops",
-    "title": "Vue: Space infix ops",
-    "description": "Require spacing around infix operators in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "words",
-        "description": "words"
-      },
-      {
-        "name": "nonwords",
-        "description": "nonwords"
-      }
-    ],
-    "patternId": "vue_space-unary-ops",
-    "title": "Vue: Space unary ops",
-    "description": "Enforce consistent spacing before or after unary operators in `<template>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue_static-class-names-order",
     "title": "Vue: Static class names order",
     "description": "Enforce static class names order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_template-curly-spacing",
-    "title": "Vue: Template curly spacing",
-    "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17522,13 +17321,6 @@
     "patternId": "vue_v-on-event-hyphenation",
     "title": "Vue: V on event hyphenation",
     "description": "Enforce v-on event naming style on custom components in template",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vue_v-on-function-call",
-    "title": "Vue: V on function call",
-    "description": "Enforce or forbid parentheses after method calls without arguments in `v-on` directives",
     "timeToFix": 5
   },
   {
@@ -17771,13 +17563,6 @@
   },
   {
     "parameters": [],
-    "patternId": "vue-scoped-css_require-scoped",
-    "title": "Vue scoped css: Require scoped",
-    "description": "Enforce the `<style>` tags to has the `scoped` attribute",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "vue-scoped-css_require-selector-used-inside",
     "title": "Vue scoped css: Require selector used inside",
     "description": "Disallow selectors defined that is not used inside `<template>`",
@@ -17929,12 +17714,6 @@
     "parameters": [],
     "patternId": "vuejs-accessibility_no-distracting-elements",
     "title": "Vuejs accessibility: No distracting elements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "vuejs-accessibility_no-onchange",
-    "title": "Vuejs accessibility: No onchange",
     "timeToFix": 5
   },
   {

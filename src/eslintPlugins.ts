@@ -51,7 +51,6 @@ import { rules as lodashFpRules } from "eslint-plugin-lodash-fp"
 import { rules as meteorRules } from "eslint-plugin-meteor"
 import { rules as markdownRules } from "eslint-plugin-markdown"
 import { rules as mochaRules } from "eslint-plugin-mocha"
-import { rules as mongodbRules } from "eslint-plugin-mongodb"
 import { rules as monorepoRules } from "eslint-plugin-monorepo"
 import { rules as nRules } from "eslint-plugin-n"
 import { rules as noOnlyTestsRules } from "eslint-plugin-no-only-tests"
@@ -119,7 +118,7 @@ const plugins = [
   ["awscdk", awscdkRules],
   ["backbone", backboneRules],
   ["better-styled-components", betterStyledComponentsRules],
-//  ["canonical", canonicalRules],
+  //["canonical", canonicalRules],
   ["cdk", cdkRules],
   ["chai-expect", chaiExpertRules],
   ["chai-friendly", chaiFriendlyRules],
@@ -160,7 +159,6 @@ const plugins = [
   ["markdown", markdownRules],
   ["meteor", meteorRules],
   ["mocha", mochaRules],
-  ["mongodb", mongodbRules],
   ["monorepo", monorepoRules],
   ["n", nRules],
   ["no-only-tests", noOnlyTestsRules],
