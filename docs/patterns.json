@@ -4157,13 +4157,6 @@
       "enabled": false
     },
     {
-      "patternId": "angular_service-name",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "angular_timeout-service",
       "level": "Info",
       "category": "CodeStyle",
@@ -7691,13 +7684,6 @@
     {
       "patternId": "functional_type-declaration-immutability",
       "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "header_header",
-      "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false

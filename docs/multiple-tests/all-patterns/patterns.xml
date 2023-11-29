@@ -489,7 +489,6 @@
   <module name="angular_prefer-component" />
   <module name="angular_provider-name" />
   <module name="angular_rest-service" />
-  <module name="angular_service-name" />
   <module name="angular_timeout-service" />
   <module name="angular_typecheck-array" />
   <module name="angular_typecheck-date" />
@@ -968,7 +967,6 @@
   <module name="functional_prefer-tacit" />
   <module name="functional_readonly-type" />
   <module name="functional_type-declaration-immutability" />
-  <module name="header_header" />
   <module name="i18n-json_valid-json" />
   <module name="i18n-json_valid-message-syntax" />
   <module name="i18n-json_identical-keys" />

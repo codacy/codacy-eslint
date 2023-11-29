@@ -4107,12 +4107,6 @@
   },
   {
     "parameters": [],
-    "patternId": "angular_service-name",
-    "title": "Angular: Service name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "angular_timeout-service",
     "title": "Angular: Timeout service",
     "timeToFix": 5
@@ -7566,12 +7560,6 @@
     "patternId": "functional_type-declaration-immutability",
     "title": "Functional: Type declaration immutability",
     "description": "Enforce the immutability of types based on patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "header_header",
-    "title": "Header: Header",
     "timeToFix": 5
   },
   {
