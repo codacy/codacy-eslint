@@ -81,7 +81,7 @@
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@babel/register": "^7.22.15",
-    "@babel/runtime": "^7.23.4",
+    "@babel/runtime": "^7.23.5",
     "@cloudbeds/eslint-config": "^2.4.0",
     "@emotion/eslint-plugin": "^11.11.0",
     "@formatjs/icu-messageformat-parser": "^2.7.3",
