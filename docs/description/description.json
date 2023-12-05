@@ -2223,6 +2223,18 @@
   {
     "parameters": [
       {
+        "name": "typeof",
+        "description": "typeof"
+      }
+    ],
+    "patternId": "@babel_no-undef",
+    "title": "@babel: No undef",
+    "description": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
         "name": "allowShortCircuit",
         "description": "allowShortCircuit"
       },
@@ -3819,354 +3831,6 @@
   },
   {
     "parameters": [],
-    "patternId": "angular_angularelement",
-    "title": "Angular: Angularelement",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_avoid-scope-typos",
-    "title": "Angular: Avoid scope typos",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_component-limit",
-    "title": "Angular: Component limit",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_component-name",
-    "title": "Angular: Component name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_constant-name",
-    "title": "Angular: Constant name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_controller-as-route",
-    "title": "Angular: Controller as route",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_controller-as-vm",
-    "title": "Angular: Controller as vm",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_controller-as",
-    "title": "Angular: Controller as",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_controller-name",
-    "title": "Angular: Controller name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_deferred",
-    "title": "Angular: Deferred",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_definedundefined",
-    "title": "Angular: Definedundefined",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_di-order",
-    "title": "Angular: Di order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_di-unused",
-    "title": "Angular: Di unused",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_di",
-    "title": "Angular: Di",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_directive-name",
-    "title": "Angular: Directive name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_directive-restrict",
-    "title": "Angular: Directive restrict",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_document-service",
-    "title": "Angular: Document service",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_dumb-inject",
-    "title": "Angular: Dumb inject",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_empty-controller",
-    "title": "Angular: Empty controller",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_factory-name",
-    "title": "Angular: Factory name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_file-name",
-    "title": "Angular: File name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_filter-name",
-    "title": "Angular: Filter name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_foreach",
-    "title": "Angular: Foreach",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_function-type",
-    "title": "Angular: Function type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_interval-service",
-    "title": "Angular: Interval service",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_json-functions",
-    "title": "Angular: Json functions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_log",
-    "title": "Angular: Log",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_module-dependency-order",
-    "title": "Angular: Module dependency order",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_module-getter",
-    "title": "Angular: Module getter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_module-name",
-    "title": "Angular: Module name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_module-setter",
-    "title": "Angular: Module setter",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-angular-mock",
-    "title": "Angular: No angular mock",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-controller",
-    "title": "Angular: No controller",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-cookiestore",
-    "title": "Angular: No cookiestore",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-directive-replace",
-    "title": "Angular: No directive replace",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-http-callback",
-    "title": "Angular: No http callback",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-inline-template",
-    "title": "Angular: No inline template",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-jquery-angularelement",
-    "title": "Angular: No jquery angularelement",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-private-call",
-    "title": "Angular: No private call",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-run-logic",
-    "title": "Angular: No run logic",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-service-method",
-    "title": "Angular: No service method",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_no-services",
-    "title": "Angular: No services",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_on-destroy",
-    "title": "Angular: On destroy",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_on-watch",
-    "title": "Angular: On watch",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_one-dependency-per-line",
-    "title": "Angular: One dependency per line",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_prefer-component",
-    "title": "Angular: Prefer component",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_provider-name",
-    "title": "Angular: Provider name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_rest-service",
-    "title": "Angular: Rest service",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_timeout-service",
-    "title": "Angular: Timeout service",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-array",
-    "title": "Angular: Typecheck array",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-date",
-    "title": "Angular: Typecheck date",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-function",
-    "title": "Angular: Typecheck function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-number",
-    "title": "Angular: Typecheck number",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-object",
-    "title": "Angular: Typecheck object",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_typecheck-string",
-    "title": "Angular: Typecheck string",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_value-name",
-    "title": "Angular: Value name",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_watchers-execution",
-    "title": "Angular: Watchers execution",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "angular_window-service",
-    "title": "Angular: Window service",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "awscdk_require-bucket-encryption",
     "title": "Awscdk: Require bucket encryption",
     "description": "Encryption should be enabled for all S3 buckets",
@@ -4401,13 +4065,6 @@
     "patternId": "backbone_render-return",
     "title": "Backbone: Render return",
     "description": "Enforces render function to always return this",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "better-styled-components_sort-declarations-alphabetically",
-    "title": "Better styled components: Sort declarations alphabetically",
-    "description": "Styles are sorted alphabetically.",
     "timeToFix": 5
   },
   {
@@ -6330,6 +5987,13 @@
   },
   {
     "parameters": [],
+    "patternId": "es-x_no-object-map-groupby",
+    "title": "Es x: No object map groupby",
+    "description": "Disallow the `{Object,Map}.groupBy()` function (array grouping).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "es-x_no-object-preventextensions",
     "title": "Es x: No object preventextensions",
     "description": "Disallow the `Object.preventExtensions` method.",
@@ -6417,6 +6081,13 @@
     "patternId": "es-x_no-promise-prototype-finally",
     "title": "Es x: No promise prototype finally",
     "description": "Disallow the `Promise.prototype.finally` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-promise-withresolvers",
+    "title": "Es x: No promise withresolvers",
+    "description": "Disallow the `Promise.withResolvers()` method.",
     "timeToFix": 5
   },
   {
@@ -11781,6 +11452,26 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "ignoreSpaces",
+        "description": "ignoreSpaces"
+      },
+      {
+        "name": "ignoreTypeOfDescribeName",
+        "description": "ignoreTypeOfDescribeName"
+      },
+      {
+        "name": "ignoreTypeOfTestName",
+        "description": "ignoreTypeOfTestName"
+      }
+    ],
+    "patternId": "playwright_valid-title",
+    "title": "Playwright: Valid title",
+    "description": "Enforce valid titles",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "prefer-arrow_prefer-arrow-functions",
     "title": "Prefer arrow: Prefer arrow functions",
@@ -15960,6 +15651,43 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_array-bracket-newline",
+    "title": "Vue: Array bracket newline",
+    "description": "Enforce linebreaks after opening and before closing array brackets in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_array-bracket-spacing",
+    "title": "Vue: Array bracket spacing",
+    "description": "Enforce consistent spacing inside array brackets in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_array-element-newline",
+    "title": "Vue: Array element newline",
+    "description": "Enforce line breaks after each array element in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "vue_arrow-spacing",
+    "title": "Vue: Arrow spacing",
+    "description": "Enforce consistent spacing before and after the arrow in arrow functions in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_attribute-hyphenation",
     "title": "Vue: Attribute hyphenation",
     "description": "Enforce attribute naming style on custom components in template",
@@ -15988,9 +15716,32 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_block-spacing",
+    "title": "Vue: Block spacing",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_block-tag-newline",
     "title": "Vue: Block tag newline",
     "description": "Enforce line breaks after opening and before closing block-level tags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "allowSingleLine",
+        "description": "allowSingleLine"
+      }
+    ],
+    "patternId": "vue_brace-style",
+    "title": "Vue: Brace style",
+    "description": "Enforce consistent brace style for blocks in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16011,6 +15762,36 @@
     "patternId": "vue_camelcase",
     "title": "Vue: Camelcase",
     "description": "Enforce camelcase naming convention in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_comma-dangle",
+    "title": "Vue: Comma dangle",
+    "description": "Require or disallow trailing commas in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "vue_comma-spacing",
+    "title": "Vue: Comma spacing",
+    "description": "Enforce consistent spacing before and after commas in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_comma-style",
+    "title": "Vue: Comma style",
+    "description": "Enforce consistent comma style in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16077,6 +15858,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "vue_dot-location",
+    "title": "Vue: Dot location",
+    "description": "Enforce consistent newlines before and after dots in `<template>`",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "allowKeywords",
@@ -16104,6 +15892,13 @@
     "patternId": "vue_first-attribute-linebreak",
     "title": "Vue: First attribute linebreak",
     "description": "Enforce the location of first attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_func-call-spacing",
+    "title": "Vue: Func call spacing",
+    "description": "Require or disallow spacing between function identifiers and their invocations in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16198,6 +15993,29 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_key-spacing",
+    "title": "Vue: Key spacing",
+    "description": "Enforce consistent spacing between keys and values in object literal properties in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "vue_keyword-spacing",
+    "title": "Vue: Keyword spacing",
+    "description": "Enforce consistent spacing before and after keywords in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_match-component-file-name",
     "title": "Vue: Match component file name",
     "description": "Require component name property to match its file name",
@@ -16243,6 +16061,13 @@
     "patternId": "vue_multiline-html-element-content-newline",
     "title": "Vue: Multiline html element content newline",
     "description": "Require a line break before and after the contents of a multiline element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_multiline-ternary",
+    "title": "Vue: Multiline ternary",
+    "description": "Enforce newlines between operands of ternary expressions in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16533,6 +16358,13 @@
     "patternId": "vue_no-expose-after-await",
     "title": "Vue: No expose after await",
     "description": "Disallow asynchronously registered `expose`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_no-extra-parens",
+    "title": "Vue: No extra parens",
+    "description": "Disallow unnecessary parentheses in `<template>`",
     "timeToFix": 5
   },
   {
@@ -16870,6 +16702,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-unused-emit-declarations",
+    "title": "Vue: No unused emit declarations",
+    "description": "Disallow unused emit declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-unused-properties",
     "title": "Vue: No unused properties",
     "description": "Disallow unused properties",
@@ -16989,6 +16828,36 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_object-curly-newline",
+    "title": "Vue: Object curly newline",
+    "description": "Enforce consistent line breaks after opening and before closing braces in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_object-curly-spacing",
+    "title": "Vue: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "vue_object-property-newline",
+    "title": "Vue: Object property newline",
+    "description": "Enforce placing object properties on separate lines in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_object-shorthand",
     "title": "Vue: Object shorthand",
     "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
@@ -16999,6 +16868,13 @@
     "patternId": "vue_one-component-per-file",
     "title": "Vue: One component per file",
     "description": "Enforce that each component should be in its own file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_operator-linebreak",
+    "title": "Vue: Operator linebreak",
+    "description": "Enforce consistent linebreak style for operators in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17076,6 +16952,13 @@
     "patternId": "vue_prop-name-casing",
     "title": "Vue: Prop name casing",
     "description": "Enforce specific casing for the Prop name in Vue components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_quote-props",
+    "title": "Vue: Quote props",
+    "description": "Require quotes around object literal property names in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17283,9 +17166,51 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_space-in-parens",
+    "title": "Vue: Space in parens",
+    "description": "Enforce consistent spacing inside parentheses in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": "int32Hint"
+      }
+    ],
+    "patternId": "vue_space-infix-ops",
+    "title": "Vue: Space infix ops",
+    "description": "Require spacing around infix operators in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "words",
+        "description": "words"
+      },
+      {
+        "name": "nonwords",
+        "description": "nonwords"
+      }
+    ],
+    "patternId": "vue_space-unary-ops",
+    "title": "Vue: Space unary ops",
+    "description": "Enforce consistent spacing before or after unary operators in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_static-class-names-order",
     "title": "Vue: Static class names order",
     "description": "Enforce static class names order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_template-curly-spacing",
+    "title": "Vue: Template curly spacing",
+    "description": "Require or disallow spacing around embedded expressions of template strings in `<template>`",
     "timeToFix": 5
   },
   {
@@ -17314,6 +17239,13 @@
     "patternId": "vue_v-for-delimiter-style",
     "title": "Vue: V for delimiter style",
     "description": "Enforce `v-for` directive's delimiter style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_v-if-else-key",
+    "title": "Vue: V if else key",
+    "description": "Require key attribute for conditionally rendered repeated components",
     "timeToFix": 5
   },
   {
