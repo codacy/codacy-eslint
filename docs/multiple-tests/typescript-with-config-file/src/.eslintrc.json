@@ -21,7 +21,6 @@
   },
   "plugins": [
     "@babel",
-    "angular",
     "backbone",
     "flowtype",
     "html",
