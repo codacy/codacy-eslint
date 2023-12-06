@@ -114,12 +114,9 @@ export const defaultOptions: ESLint.Options = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
       allowAutomaticSingleRunInference: true,
-      ecmaFeatures: {
-        "jsx": true,
-      },
+      ecmaVersion: 10,
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
-      extraFileExtensions: [".json"],
-      project: true,
+      extraFileExtensions: [".json"]
     },
     root: true,
     settings: {
@@ -141,7 +138,7 @@ export const defaultOptions: ESLint.Options = {
         webpack: true,
       },
       jest: {
-        version: 26,
+        version: 29,
       },
       react: {
         version: "18.2.0",
@@ -152,6 +149,9 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["**/*.ts", "**/*.tsx"],
         extends: [...typescriptConfigs],
+        parserOptions: {
+          project: true,
+        },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",

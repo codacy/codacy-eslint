@@ -10,6 +10,7 @@ import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
 import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
+import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import { translateCategory, translateLevel, patternIdToCodacy } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
@@ -20,9 +21,13 @@ export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
 
   constructor(rules: [string, Rule.RuleModule][]) {
-    // initialize rules without deprecated
-    this.rules = rules.filter(([_, rule]) => !rule?.meta?.deprecated || rule.meta.deprecated !== true)
-    
+    // initialize rules without blacklisted and deprecated
+    this.rules = rules.filter(
+      ([patternId, rule]) =>
+        !isBlacklistedOnlyFromDocumentation(patternId)
+        && (!rule?.meta?.deprecated || rule.meta.deprecated !== true)
+    )
+
     /* console.log(this.rules.forEach(([name, rule]) => {
       if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
         console.log(name)

@@ -1,6 +1,6 @@
-ARG NODE_IMAGE_VERSION=lts-alpine3.18
+ARG NODE_IMAGE_VERSION=node:lts-alpine3.18
 
-FROM node:$NODE_IMAGE_VERSION as builder
+FROM $NODE_IMAGE_VERSION as builder
 
 COPY . ./
 
@@ -10,7 +10,7 @@ RUN npm install --legacy-peer-deps --omit=dev &&\
     npm test &&\
     npm run docs:generate
 
-FROM node:$NODE_IMAGE_VERSION
+FROM $NODE_IMAGE_VERSION
 
 COPY --from=builder dist dist
 COPY --from=builder docs docs

@@ -60,25 +60,10 @@ async function main() {
     false
   )
 
-  console.log("Generate angular description files")
-  await docGenerator.downloadDocs(
-    `${githubBaseUrl}/EmmanuelDemey/eslint-plugin-angular/master/docs/rules/`,
-    "angular"
-  )
-
   console.log("Generate backbone description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/ilyavolodin/eslint-plugin-backbone/master/docs/rules/`,
     "backbone"
-  )
-
-  console.log("Generate better-styled-components description files")
-  await docGenerator.downloadDocs(
-    `${githubBaseUrl}/tinloof/eslint-plugin-better-styled-components/master/docs/rules/`,
-    "better-styled-components",
-    true,
-    // not the best way on how to deal with wrong name of rule ¯\_(ツ)_/¯
-    pattern => "sort-rules-alphabetically"
   )
 
   console.log("Generate compat description files")

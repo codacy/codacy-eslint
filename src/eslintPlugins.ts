@@ -7,9 +7,7 @@ import { rules as shopifyRules } from "@shopify/eslint-plugin"
 import { rules as tanstackQueryRules } from "@tanstack/eslint-plugin-query"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
 import { rules as awscdkRules } from "eslint-plugin-awscdk"
-import { rules as angularRules } from "eslint-plugin-angular"
 import { rules as backboneRules } from "eslint-plugin-backbone"
-import { rules as betterStyledComponentsRules } from "eslint-plugin-better-styled-components"
 //import { rules as canonicalRules } from "eslint-plugin-canonical"
 import { rules as cdkRules } from "eslint-plugin-cdk"
 import { rules as chaiExpertRules } from "eslint-plugin-chai-expect"
@@ -103,7 +101,7 @@ import { rules as ymlRules } from "eslint-plugin-yml"
 import { rules as youDontNeedLodashUnderscoreRules } from "eslint-plugin-you-dont-need-lodash-underscore"
 
 import { Linter, Rule } from "eslint"
-import { isBlacklisted, isBlacklistedOnlyFromDocumentation } from "./blacklist"
+import { isBlacklisted } from "./blacklist"
 
 const plugins = [
   ["@angular-eslint", angularEslintRules],
@@ -114,10 +112,8 @@ const plugins = [
   ["@shopify", shopifyRules],
   ["@tanstack/query", tanstackQueryRules],
   ["@typescript-eslint", typescriptEslintRules],
-  ["angular", angularRules],
   ["awscdk", awscdkRules],
   ["backbone", backboneRules],
-  ["better-styled-components", betterStyledComponentsRules],
   //["canonical", canonicalRules],
   ["cdk", cdkRules],
   ["chai-expect", chaiExpertRules],
@@ -229,6 +225,5 @@ export const allRules = baseRules
   .filter(
     ([patternId, _]) =>
       patternId &&
-      !isBlacklisted(patternId) &&
-      !isBlacklistedOnlyFromDocumentation(patternId)
+      !isBlacklisted(patternId)
   )

@@ -53,7 +53,7 @@ function generateEslintOptions(
 
   if (!existsSync(srcDirPath + "/" + tsconfigFile)) {
     debug("options: use tsconfig from tool")
-    options.baseConfig.parserOptions.project = "/" + tsconfigFile
+    options.baseConfig.overrides[0].parserOptions.project = "/" + tsconfigFile
   }
 
   if (eslintTool?.patterns?.length > 0) {
