@@ -346,7 +346,7 @@
     "tailwindcss": "^3.3.6",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.3.2",
+    "typescript": "^5.3.3",
     "typescript-eslint": "^0.0.1-alpha.0",
     "vee-validate": "^4.12.2",
     "vite": "^5.0.5",
