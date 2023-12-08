@@ -1,4 +1,4 @@
-ARG NODE_IMAGE_VERSION=node:lts-alpine3.18
+ARG NODE_IMAGE_VERSION=node:lts-alpine3.17
 
 FROM $NODE_IMAGE_VERSION as builder
 
