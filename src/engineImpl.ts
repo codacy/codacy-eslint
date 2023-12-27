@@ -24,7 +24,11 @@ export const engineImpl: Engine = async function (
   }
 
   const eslint = new ESLint(options)
-  const lintResults = await lintFilesInChunks(eslint, files)
+
+  // Check if there are any glob patterns in the files array
+  const lintResults = files.some(file => /\*|\?|\[/.test(file))
+    ? await eslint.lintFiles(files)
+    : await lintFilesInChunks(eslint, files)
 
   debug("engine: finished")
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
@@ -75,25 +79,29 @@ const chunkFilesByCount = (files: string[], size: number) =>
   )
 
 function chunkFilesByTotalSize(files: string[], maxChunkSize: number): string[][] {
-  const chunks: string[][] = [];
-  let currentChunk: string[] = [];
-  let currentChunkSize = 0;
+  const chunks: string[][] = []
+  let currentChunk: string[] = []
+  let currentChunkSize = 0
 
   for (const file of files) {
-    const size = fs.statSync(file).size
-    if (currentChunk.length === 0 || currentChunkSize + size <= maxChunkSize) {
-      currentChunk.push(file);
-      currentChunkSize += size;
-    } else {
-      chunks.push(currentChunk);
-      currentChunk = [file];
-      currentChunkSize = size;
+    try {
+      const size = fs.statSync(file).size
+      if (currentChunk.length === 0 || currentChunkSize + size <= maxChunkSize) {
+        currentChunk.push(file)
+        currentChunkSize += size
+      } else {
+        chunks.push(currentChunk)
+        currentChunk = [file]
+        currentChunkSize = size
+      }
+    } catch (error) {
+      console.error("engine: error while getting file size for " + file + ": " + error.message)
     }
   }
 
   if (currentChunk.length > 0) {
-    chunks.push(currentChunk);
+    chunks.push(currentChunk)
   }
 
-  return chunks;
+  return chunks
 }

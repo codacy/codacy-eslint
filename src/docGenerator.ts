@@ -177,7 +177,7 @@ export class DocGenerator {
   downloadDocs(
     baseUrl: string,
     prefix: string = "",
-    rejectOnError: boolean = true,
+    rejectOnError: boolean = false,
     patternIdModifier: (patternId: string) => string = s => s
   ): Promise<void[]> {
     const patterns =
