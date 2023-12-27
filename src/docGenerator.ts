@@ -83,6 +83,13 @@ export class DocGenerator {
       )
     })
 
+    patterns.push(new PatternSpec(
+      "codacy_test",
+      "Info",
+      // @ts-ignore
+      "Duplication"
+    ))
+
     return new Specification(toolName, toolVersion, patterns)
   }
 

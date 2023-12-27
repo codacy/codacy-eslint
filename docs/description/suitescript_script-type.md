@@ -27,6 +27,7 @@ Valid tag values are found below.
  * @NScriptType
  */
 ```
+
 ```js
 /* eslint suitescript/script-type: "error" */
 
@@ -34,6 +35,7 @@ Valid tag values are found below.
  * @NScriptTypeSuitelet
  */
 ```
+
 ```js
 /* eslint suitescript/script-type: "error" */
 
@@ -55,6 +57,11 @@ Valid tag values are found below.
 - Suitelet
 - UserEventScript
 - WorkflowActionScript
+- bankConnectivityPlugin
+- datasetbuilderplugin
+- fiConnectivityPlugin
+- fiParserPlugin
+- workbookbuilderplugin
 
 ## Version
 
