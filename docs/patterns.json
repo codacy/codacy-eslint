@@ -6412,18 +6412,6 @@
       "enabled": false
     },
     {
-      "patternId": "eslint-plugin_require-meta-docs-description",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "pattern",
-          "default": "^(enforce|require|disallow)"
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "eslint-plugin_require-meta-docs-url",
       "level": "Warning",
       "category": "BestPractice",

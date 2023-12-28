@@ -801,7 +801,6 @@
   <module name="eslint-plugin_prefer-placeholders" />
   <module name="eslint-plugin_prefer-replace-text" />
   <module name="eslint-plugin_report-message-format" />
-  <module name="eslint-plugin_require-meta-docs-description" />
   <module name="eslint-plugin_require-meta-docs-url" />
   <module name="eslint-plugin_require-meta-fixable" />
   <module name="eslint-plugin_require-meta-has-suggestions" />

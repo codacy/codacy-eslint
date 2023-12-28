@@ -4,6 +4,7 @@ const blacklistRegexes: RegExp[] = [
   /@typescript-eslint\/lines-between-class-members/,
   /angular\/service-name/,
   /ember\/no-restricted-property-modifications/,
+  /eslint-plugin\/require-meta-docs-description/,
   /functional\/functional-parameters/,
   /functional\/immutable-data/,
   /functional\/no-conditional-statements/,

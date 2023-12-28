@@ -6391,18 +6391,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "pattern",
-        "description": "pattern"
-      }
-    ],
-    "patternId": "eslint-plugin_require-meta-docs-description",
-    "title": "Eslint plugin: Require meta docs description",
-    "description": "Require rules to implement a `meta.docs.description` property with the correct format",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "eslint-plugin_require-meta-docs-url",
     "title": "Eslint plugin: Require meta docs url",
