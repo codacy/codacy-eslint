@@ -1,6 +1,5 @@
 import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
-import { off } from "process"
 
 export const defaultOptions: ESLint.Options = {
   baseConfig: {
