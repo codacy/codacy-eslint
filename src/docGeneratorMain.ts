@@ -261,6 +261,12 @@ async function main() {
     "redux-saga"
   )
 
+  console.log("Generate regexp description files")
+  await docGenerator.downloadDocs(
+    `${githubBaseUrl}/ota-meshi/eslint-plugin-regexp/master/docs/rules/`,
+    "regexp"
+  )
+
   console.log("Generate rxjs description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/cartant/eslint-plugin-rxjs/main/docs/rules/`,

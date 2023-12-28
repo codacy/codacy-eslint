@@ -68,6 +68,7 @@ import { rules as reactNativeRules } from "eslint-plugin-react-native"
 import { rules as reactPerfRules } from "eslint-plugin-react-perf"
 import { rules as reactReduxRules } from "eslint-plugin-react-redux"
 import { rules as reduxSagaRules } from "eslint-plugin-redux-saga"
+import { rules as regexpRules } from "eslint-plugin-regexp"
 import { rules as relayRules } from "eslint-plugin-relay"
 import { rules as rxjsRules } from "eslint-plugin-rxjs"
 import { rules as rxjsAngularRules } from "eslint-plugin-rxjs-angular"
@@ -173,6 +174,7 @@ const plugins = [
   ["react-perf", reactPerfRules],
   ["react-redux", reactReduxRules],
   ["redux-saga", reduxSagaRules],
+  ["regexp", regexpRules],
   ["relay", relayRules],
   ["rxjs", rxjsRules],
   ["rxjs-angular", rxjsAngularRules],

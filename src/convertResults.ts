@@ -18,11 +18,11 @@ export function convertResults(eslintResults: ESLint.LintResult[]): ToolResult[]
     const issues = messages
       .filter((r) => r.ruleId && !isBlacklisted(r.ruleId))
       .map((m) => {
-        const { ruleId, line, message, fix, suggestions } = m
+        const { ruleId, line, endLine, message, fix, suggestions } = m
         const patternId = patternIdToCodacy(ruleId)
         const suggestion =
           process.env.SUGGESTIONS === "true" && result.source
-            ? computeSuggestion(result.source, line, m.endLine, fix, suggestions)
+            ? computeSuggestion(result.source, line, endLine, fix, suggestions)
             : undefined
 
         return new Issue(filename, message, patternId, line, suggestion)

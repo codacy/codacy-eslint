@@ -12500,6 +12500,573 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_confusing-quantifier",
+    "title": "Regexp: Confusing quantifier",
+    "description": "Disallow confusing quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_control-character-escape",
+    "title": "Regexp: Control character escape",
+    "description": "Enforce consistent escaping of control characters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_grapheme-string-literal",
+    "title": "Regexp: Grapheme string literal",
+    "description": "Enforce single grapheme in string literal",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_hexadecimal-escape",
+    "title": "Regexp: Hexadecimal escape",
+    "description": "Enforce consistent usage of hexadecimal escape",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_letter-case",
+    "title": "Regexp: Letter case",
+    "description": "Enforce into your favorite case",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_match-any",
+    "title": "Regexp: Match any",
+    "description": "Enforce match any character style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_negation",
+    "title": "Regexp: Negation",
+    "description": "Enforce use of escapes on negation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-contradiction-with-assertion",
+    "title": "Regexp: No contradiction with assertion",
+    "description": "Disallow elements that contradict assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-control-character",
+    "title": "Regexp: No control character",
+    "description": "Disallow control characters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-dupe-characters-character-class",
+    "title": "Regexp: No dupe characters character class",
+    "description": "Disallow duplicate characters in the RegExp character class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-dupe-disjunctions",
+    "title": "Regexp: No dupe disjunctions",
+    "description": "Disallow duplicate disjunctions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-alternative",
+    "title": "Regexp: No empty alternative",
+    "description": "Disallow alternatives without elements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-capturing-group",
+    "title": "Regexp: No empty capturing group",
+    "description": "Disallow capturing group that captures empty.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-character-class",
+    "title": "Regexp: No empty character class",
+    "description": "Disallow character classes that match no characters",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-group",
+    "title": "Regexp: No empty group",
+    "description": "Disallow empty group",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-lookarounds-assertion",
+    "title": "Regexp: No empty lookarounds assertion",
+    "description": "Disallow empty lookahead assertion or empty lookbehind assertion",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-empty-string-literal",
+    "title": "Regexp: No empty string literal",
+    "description": "Disallow empty string literals in character classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-escape-backspace",
+    "title": "Regexp: No escape backspace",
+    "description": "Disallow escape backspace (`[\\b]`)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-extra-lookaround-assertions",
+    "title": "Regexp: No extra lookaround assertions",
+    "description": "Disallow unnecessary nested lookaround assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-invalid-regexp",
+    "title": "Regexp: No invalid regexp",
+    "description": "Disallow invalid regular expression strings in `RegExp` constructors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-invisible-character",
+    "title": "Regexp: No invisible character",
+    "description": "Disallow invisible raw character",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-lazy-ends",
+    "title": "Regexp: No lazy ends",
+    "description": "Disallow lazy quantifiers at the end of an expression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-legacy-features",
+    "title": "Regexp: No legacy features",
+    "description": "Disallow legacy RegExp features",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-misleading-capturing-group",
+    "title": "Regexp: No misleading capturing group",
+    "description": "Disallow capturing groups that do not behave as one would expect",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-misleading-unicode-character",
+    "title": "Regexp: No misleading unicode character",
+    "description": "Disallow multi-code-point characters in character classes and quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-missing-g-flag",
+    "title": "Regexp: No missing g flag",
+    "description": "Disallow missing `g` flag in patterns used in `String#matchAll` and `String#replaceAll`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-non-standard-flag",
+    "title": "Regexp: No non standard flag",
+    "description": "Disallow non-standard flags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-obscure-range",
+    "title": "Regexp: No obscure range",
+    "description": "Disallow obscure character ranges",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-octal",
+    "title": "Regexp: No octal",
+    "description": "Disallow octal escape sequence",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-optional-assertion",
+    "title": "Regexp: No optional assertion",
+    "description": "Disallow optional assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-potentially-useless-backreference",
+    "title": "Regexp: No potentially useless backreference",
+    "description": "Disallow backreferences that reference a group that might not be matched",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-standalone-backslash",
+    "title": "Regexp: No standalone backslash",
+    "description": "Disallow standalone backslashes (`\\`)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-super-linear-backtracking",
+    "title": "Regexp: No super linear backtracking",
+    "description": "Disallow exponential and polynomial backtracking",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-super-linear-move",
+    "title": "Regexp: No super linear move",
+    "description": "Disallow quantifiers that cause quadratic moves",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-trivially-nested-assertion",
+    "title": "Regexp: No trivially nested assertion",
+    "description": "Disallow trivially nested assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-trivially-nested-quantifier",
+    "title": "Regexp: No trivially nested quantifier",
+    "description": "Disallow nested quantifiers that can be rewritten as one quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-unused-capturing-group",
+    "title": "Regexp: No unused capturing group",
+    "description": "Disallow unused capturing group",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-assertions",
+    "title": "Regexp: No useless assertions",
+    "description": "Disallow assertions that are known to always accept (or reject)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-backreference",
+    "title": "Regexp: No useless backreference",
+    "description": "Disallow useless backreferences in regular expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-character-class",
+    "title": "Regexp: No useless character class",
+    "description": "Disallow character class with one character",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-dollar-replacements",
+    "title": "Regexp: No useless dollar replacements",
+    "description": "Disallow useless `$` replacements in replacement string",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-escape",
+    "title": "Regexp: No useless escape",
+    "description": "Disallow unnecessary escape characters in RegExp",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-flag",
+    "title": "Regexp: No useless flag",
+    "description": "Disallow unnecessary regex flags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-lazy",
+    "title": "Regexp: No useless lazy",
+    "description": "Disallow unnecessarily non-greedy quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-non-capturing-group",
+    "title": "Regexp: No useless non capturing group",
+    "description": "Disallow unnecessary non-capturing group",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-quantifier",
+    "title": "Regexp: No useless quantifier",
+    "description": "Disallow quantifiers that can be removed",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-range",
+    "title": "Regexp: No useless range",
+    "description": "Disallow unnecessary character ranges",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-set-operand",
+    "title": "Regexp: No useless set operand",
+    "description": "Disallow unnecessary elements in expression character classes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-string-literal",
+    "title": "Regexp: No useless string literal",
+    "description": "Disallow string disjunction of single characters in `\\q{...}`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-useless-two-nums-quantifier",
+    "title": "Regexp: No useless two nums quantifier",
+    "description": "Disallow unnecessary `{n,m}` quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_no-zero-quantifier",
+    "title": "Regexp: No zero quantifier",
+    "description": "Disallow quantifiers with a maximum of zero",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_optimal-lookaround-quantifier",
+    "title": "Regexp: Optimal lookaround quantifier",
+    "description": "Disallow the alternatives of lookarounds that end with a non-constant quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_optimal-quantifier-concatenation",
+    "title": "Regexp: Optimal quantifier concatenation",
+    "description": "Require optimal quantifiers for concatenated quantifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-character-class",
+    "title": "Regexp: Prefer character class",
+    "description": "Enforce using character class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-d",
+    "title": "Regexp: Prefer d",
+    "description": "Enforce using `\\d`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-escape-replacement-dollar-char",
+    "title": "Regexp: Prefer escape replacement dollar char",
+    "description": "Enforces escape of replacement `$` character (`$$`).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-lookaround",
+    "title": "Regexp: Prefer lookaround",
+    "description": "Prefer lookarounds over capturing group that do not replace",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-backreference",
+    "title": "Regexp: Prefer named backreference",
+    "description": "Enforce using named backreferences",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-capture-group",
+    "title": "Regexp: Prefer named capture group",
+    "description": "Enforce using named capture groups",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-named-replacement",
+    "title": "Regexp: Prefer named replacement",
+    "description": "Enforce using named replacement",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-plus-quantifier",
+    "title": "Regexp: Prefer plus quantifier",
+    "description": "Enforce using `+` quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-predefined-assertion",
+    "title": "Regexp: Prefer predefined assertion",
+    "description": "Prefer predefined assertion over equivalent lookarounds",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-quantifier",
+    "title": "Regexp: Prefer quantifier",
+    "description": "Enforce using quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-question-quantifier",
+    "title": "Regexp: Prefer question quantifier",
+    "description": "Enforce using `?` quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-range",
+    "title": "Regexp: Prefer range",
+    "description": "Enforce using character class range",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-regexp-exec",
+    "title": "Regexp: Prefer regexp exec",
+    "description": "Enforce that `RegExp#exec` is used instead of `String#match` if no global flag is provided",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-regexp-test",
+    "title": "Regexp: Prefer regexp test",
+    "description": "Enforce that `RegExp#test` is used instead of `String#match` and `RegExp#exec`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-result-array-groups",
+    "title": "Regexp: Prefer result array groups",
+    "description": "Enforce using result array `groups`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-set-operation",
+    "title": "Regexp: Prefer set operation",
+    "description": "Prefer character class set operations instead of lookarounds",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-star-quantifier",
+    "title": "Regexp: Prefer star quantifier",
+    "description": "Enforce using `*` quantifier",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-unicode-codepoint-escapes",
+    "title": "Regexp: Prefer unicode codepoint escapes",
+    "description": "Enforce use of unicode codepoint escapes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_prefer-w",
+    "title": "Regexp: Prefer w",
+    "description": "Enforce using `\\w`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_require-unicode-regexp",
+    "title": "Regexp: Require unicode regexp",
+    "description": "Enforce the use of the `u` flag",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_require-unicode-sets-regexp",
+    "title": "Regexp: Require unicode sets regexp",
+    "description": "Enforce the use of the `v` flag",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_simplify-set-operations",
+    "title": "Regexp: Simplify set operations",
+    "description": "Require simplify set operations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_sort-alternatives",
+    "title": "Regexp: Sort alternatives",
+    "description": "Sort alternatives if order doesn't matter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_sort-character-class-elements",
+    "title": "Regexp: Sort character class elements",
+    "description": "Enforces elements order in character class",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_sort-flags",
+    "title": "Regexp: Sort flags",
+    "description": "Require regex flags to be sorted",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_strict",
+    "title": "Regexp: Strict",
+    "description": "Disallow not strictly valid regular expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_unicode-escape",
+    "title": "Regexp: Unicode escape",
+    "description": "Enforce consistent usage of unicode escape or unicode codepoint escape",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "regexp_use-ignore-case",
+    "title": "Regexp: Use ignore case",
+    "description": "Use the `i` flag if it simplifies the pattern",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "relay_graphql-syntax",
     "title": "Relay: Graphql syntax",
     "description": "Validates the syntax of graphql`...` templates.",

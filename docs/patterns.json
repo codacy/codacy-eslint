@@ -12736,6 +12736,573 @@
       "enabled": true
     },
     {
+      "patternId": "regexp_confusing-quantifier",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_control-character-escape",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_grapheme-string-literal",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_hexadecimal-escape",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_letter-case",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_match-any",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_negation",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-contradiction-with-assertion",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-control-character",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_no-dupe-characters-character-class",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-dupe-disjunctions",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-alternative",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-capturing-group",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-character-class",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-group",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-lookarounds-assertion",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-empty-string-literal",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-escape-backspace",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-extra-lookaround-assertions",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-invalid-regexp",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-invisible-character",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-lazy-ends",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-legacy-features",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-misleading-capturing-group",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-misleading-unicode-character",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-missing-g-flag",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-non-standard-flag",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-obscure-range",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-octal",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_no-optional-assertion",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-potentially-useless-backreference",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-standalone-backslash",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_no-super-linear-backtracking",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-super-linear-move",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_no-trivially-nested-assertion",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-trivially-nested-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-unused-capturing-group",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-assertions",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-backreference",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-character-class",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-dollar-replacements",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-escape",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-flag",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-lazy",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-non-capturing-group",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-range",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-set-operand",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-string-literal",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-useless-two-nums-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_no-zero-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_optimal-lookaround-quantifier",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_optimal-quantifier-concatenation",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-character-class",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-d",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-escape-replacement-dollar-char",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-lookaround",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-named-backreference",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-named-capture-group",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-named-replacement",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-plus-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-predefined-assertion",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-question-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-range",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-regexp-exec",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-regexp-test",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-result-array-groups",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_prefer-set-operation",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-star-quantifier",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-unicode-codepoint-escapes",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_prefer-w",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_require-unicode-regexp",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_require-unicode-sets-regexp",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_simplify-set-operations",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_sort-alternatives",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_sort-character-class-elements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_sort-flags",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_strict",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "regexp_unicode-escape",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "regexp_use-ignore-case",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
       "patternId": "relay_graphql-syntax",
       "level": "Info",
       "category": "CodeStyle",
