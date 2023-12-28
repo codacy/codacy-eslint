@@ -1,6 +1,7 @@
 import { Codacyrc, Parameter, ParameterValue, Pattern } from "codacy-seed"
 import { ESLint, Linter } from "eslint"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
+import { isBlacklisted } from "./blacklist"
 import { defaultOptions } from "./eslintDefaultOptions"
 import { debug, DEBUG } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
@@ -49,7 +50,7 @@ function generateEslintOptions(
     }
   }
 
-  let options = resetEslintBaseConfig(cloneDeep(defaultOptions))
+  let options = cloneDeep(defaultOptions)
 
   if (!existsSync(srcDirPath + "/" + tsconfigFile)) {
     debug("options: use tsconfig from tool")
@@ -155,22 +156,22 @@ function retrieveAllCodacyPatterns(): Pattern[] {
   debug("options: getting all patterns")
 
   const patterns = []
-  allPatterns.patterns.map((pattern: { patternId: string; parameters: any; enabled: boolean }) => {
-    // skip this pattern for internal debugging
-    if (pattern.patternId == "spellcheck_spell-checker") {
-      //return null
-    }
-
-    patterns.push(new Pattern(
-      pattern.patternId,
-      pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
-        return new Parameter(
-          parameter.name,
-          parameter.default
-        )
-      })
-    ))
-  })
+  allPatterns.patterns
+    .filter((pattern) =>
+      !isBlacklisted(pattern.patternId)
+      && (!DEBUG || pattern.patternId != "spellcheck_spell-checker")
+    )
+    .map((pattern: { patternId: string; parameters: any }) => {
+      patterns.push(new Pattern(
+        pattern.patternId,
+        pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
+          return new Parameter(
+            parameter.name,
+            parameter.default
+          )
+        })
+      ))
+    })
 
   debug("options: returning " + patterns.length + " patterns")
   return patterns

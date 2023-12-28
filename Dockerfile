@@ -1,4 +1,4 @@
-ARG NODE_IMAGE_VERSION=node:lts-alpine3.18
+ARG NODE_IMAGE_VERSION=node:lts-alpine3.19
 
 FROM $NODE_IMAGE_VERSION as builder
 
@@ -8,7 +8,7 @@ RUN npm install --legacy-peer-deps --omit=dev &&\
     npm cache clean --force &&\
     npm run compile &&\
     npm test &&\
-    npm run docs:generate
+    npm run build:docs
 
 FROM $NODE_IMAGE_VERSION
 

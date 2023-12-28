@@ -2790,29 +2790,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_block-spacing",
-    "title": "@typescript eslint: Block spacing",
-    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "@typescript-eslint_brace-style",
-    "title": "@typescript eslint: Brace style",
-    "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_class-literal-property-style",
     "title": "@typescript eslint: Class literal property style",
     "description": "Enforce that literals on classes are exposed in a consistent style",
@@ -2828,29 +2805,6 @@
     "patternId": "@typescript-eslint_class-methods-use-this",
     "title": "@typescript eslint: Class methods use this",
     "description": "Enforce that class methods utilize `this`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_comma-dangle",
-    "title": "@typescript eslint: Comma dangle",
-    "description": "Require or disallow trailing commas",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "@typescript-eslint_comma-spacing",
-    "title": "@typescript eslint: Comma spacing",
-    "description": "Enforce consistent spacing before and after commas",
     "timeToFix": 5
   },
   {
@@ -2953,41 +2907,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_func-call-spacing",
-    "title": "@typescript eslint: Func call spacing",
-    "description": "Require or disallow spacing between function identifiers and their invocations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "unnamedParam",
-        "description": "unnamedParam"
-      },
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
     "description": "Require or disallow initialization in variable declarations",
@@ -2995,71 +2914,9 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_key-spacing",
-    "title": "@typescript eslint: Key spacing",
-    "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "before",
-        "description": "before"
-      },
-      {
-        "name": "after",
-        "description": "after"
-      }
-    ],
-    "patternId": "@typescript-eslint_keyword-spacing",
-    "title": "@typescript eslint: Keyword spacing",
-    "description": "Enforce consistent spacing before and after keywords",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "beforeBlockComment",
-        "description": "beforeBlockComment"
-      },
-      {
-        "name": "afterBlockComment",
-        "description": "afterBlockComment"
-      },
-      {
-        "name": "beforeLineComment",
-        "description": "beforeLineComment"
-      },
-      {
-        "name": "afterLineComment",
-        "description": "afterLineComment"
-      },
-      {
-        "name": "allowBlockStart",
-        "description": "allowBlockStart"
-      },
-      {
-        "name": "allowBlockEnd",
-        "description": "allowBlockEnd"
-      }
-    ],
-    "patternId": "@typescript-eslint_lines-around-comment",
-    "title": "@typescript eslint: Lines around comment",
-    "description": "Require empty lines around comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_max-params",
     "title": "@typescript eslint: Max params",
     "description": "Enforce a maximum number of parameters in function definitions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_member-delimiter-style",
-    "title": "@typescript eslint: Member delimiter style",
-    "description": "Require a specific member delimiter style for interfaces and type literals",
     "timeToFix": 5
   },
   {
@@ -3165,20 +3022,6 @@
     "patternId": "@typescript-eslint_no-extra-non-null-assertion",
     "title": "@typescript eslint: No extra non null assertion",
     "description": "Disallow extra non-null assertions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extra-parens",
-    "title": "@typescript eslint: No extra parens",
-    "description": "Disallow unnecessary parentheses",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-extra-semi",
-    "title": "@typescript eslint: No extra semi",
-    "description": "Disallow unnecessary semicolons",
     "timeToFix": 5
   },
   {
@@ -3546,6 +3389,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-useless-template-literals",
+    "title": "@typescript eslint: No useless template literals",
+    "description": "Disallow unnecessary template literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-var-requires",
     "title": "@typescript eslint: No var requires",
     "description": "Disallow `require` statements except in import statements",
@@ -3556,13 +3406,6 @@
     "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
     "title": "@typescript eslint: Non nullable type assertion style",
     "description": "Enforce non-null assertions over explicit type casts",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_padding-line-between-statements",
-    "title": "@typescript eslint: Padding line between statements",
-    "description": "Require or disallow padding lines between statements",
     "timeToFix": 5
   },
   {
@@ -3700,16 +3543,9 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_quotes",
-    "title": "@typescript eslint: Quotes",
-    "description": "Enforce the consistent use of either backticks, double, or single quotes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_require-array-sort-compare",
     "title": "@typescript eslint: Require array sort compare",
-    "description": "Require `Array#sort` calls to always provide a `compareFunction`",
+    "description": "Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`",
     "timeToFix": 5
   },
   {
@@ -3742,42 +3578,9 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_semi",
-    "title": "@typescript eslint: Semi",
-    "description": "Require or disallow semicolons instead of ASI",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_sort-type-constituents",
     "title": "@typescript eslint: Sort type constituents",
     "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_space-before-blocks",
-    "title": "@typescript eslint: Space before blocks",
-    "description": "Enforce consistent spacing before blocks",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_space-before-function-paren",
-    "title": "@typescript eslint: Space before function paren",
-    "description": "Enforce consistent spacing before function parenthesis",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "int32Hint",
-        "description": "int32Hint"
-      }
-    ],
-    "patternId": "@typescript-eslint_space-infix-ops",
-    "title": "@typescript eslint: Space infix ops",
-    "description": "Require spacing around infix operators",
     "timeToFix": 5
   },
   {
@@ -3799,13 +3602,6 @@
     "patternId": "@typescript-eslint_triple-slash-reference",
     "title": "@typescript eslint: Triple slash reference",
     "description": "Disallow certain triple slash directives in favor of ES6-style import declarations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_type-annotation-spacing",
-    "title": "@typescript eslint: Type annotation spacing",
-    "description": "Require consistent spacing around type annotations",
     "timeToFix": 5
   },
   {
@@ -6595,7 +6391,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "pattern",
+        "description": "pattern"
+      }
+    ],
     "patternId": "eslint-plugin_require-meta-docs-description",
     "title": "Eslint plugin: Require meta docs description",
     "description": "Require rules to implement a `meta.docs.description` property with the correct format",
@@ -7104,44 +6905,9 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_functional-parameters",
-    "title": "Functional: Functional parameters",
-    "description": "Enforce functional parameters.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_immutable-data",
-    "title": "Functional: Immutable data",
-    "description": "Enforce treating data as immutable.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "functional_no-classes",
     "title": "Functional: No classes",
     "description": "Disallow classes.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_no-conditional-statements",
-    "title": "Functional: No conditional statements",
-    "description": "Disallow conditional statements.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_no-expression-statements",
-    "title": "Functional: No expression statements",
-    "description": "Disallow expression statements.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_no-let",
-    "title": "Functional: No let",
-    "description": "Disallow mutable variables.",
     "timeToFix": 5
   },
   {
@@ -7153,13 +6919,6 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_no-mixed-types",
-    "title": "Functional: No mixed types",
-    "description": "Restrict types so that only members of the same kind are allowed in them.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "functional_no-promise-reject",
     "title": "Functional: No promise reject",
     "description": "Disallow try-catch[-finally] and try-finally patterns.",
@@ -7167,37 +6926,9 @@
   },
   {
     "parameters": [],
-    "patternId": "functional_no-return-void",
-    "title": "Functional: No return void",
-    "description": "Disallow functions that don't return anything.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "functional_no-this-expressions",
     "title": "Functional: No this expressions",
     "description": "Disallow this access.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_no-throw-statements",
-    "title": "Functional: No throw statements",
-    "description": "Disallow throwing exceptions.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_no-try-statements",
-    "title": "Functional: No try statements",
-    "description": "Disallow try-catch[-finally] and try-finally patterns.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_prefer-immutable-types",
-    "title": "Functional: Prefer immutable types",
-    "description": "Require function parameters to be typed as certain immutability",
     "timeToFix": 5
   },
   {
@@ -7224,13 +6955,6 @@
     "patternId": "functional_readonly-type",
     "title": "Functional: Readonly type",
     "description": "Require consistently using either `readonly` keywords or `Readonly<T>`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "functional_type-declaration-immutability",
-    "title": "Functional: Type declaration immutability",
-    "description": "Enforce the immutability of types based on patterns.",
     "timeToFix": 5
   },
   {
@@ -9711,6 +9435,13 @@
     "patternId": "jsx-a11y_tabindex-no-positive",
     "title": "Jsx a11y: Tabindex no positive",
     "description": "Enforce `tabIndex` value is not greater than zero.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "lit_attribute-names",
+    "title": "Lit: Attribute names",
+    "description": "Enforces attribute naming conventions",
     "timeToFix": 5
   },
   {
@@ -15123,6 +14854,13 @@
     "patternId": "unicorn_no-unnecessary-await",
     "title": "Unicorn: No unnecessary await",
     "description": "Disallow awaiting non-promise values.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-unnecessary-polyfills",
+    "title": "Unicorn: No unnecessary polyfills",
+    "description": "Enforce the use of built-in methods instead of unnecessary polyfills.",
     "timeToFix": 5
   },
   {

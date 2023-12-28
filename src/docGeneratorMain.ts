@@ -49,15 +49,13 @@ async function main() {
   console.log("Generate @shopify description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/`,
-    "@shopify",
-    false
+    "@shopify"
   )
 
   console.log("Generate @typescript-eslint description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/typescript-eslint/typescript-eslint/main/packages/eslint-plugin/docs/rules/`,
-    "@typescript-eslint",
-    false
+    "@typescript-eslint"
   )
 
   console.log("Generate backbone description files")
@@ -110,22 +108,19 @@ async function main() {
   console.log("Generate functional description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/jonaskello/eslint-plugin-functional/master/docs/rules/`,
-    "functional",
-    false
+    "functional"
   )
 
   console.log("Generate i18next description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/edvardchen/eslint-plugin-i18next/next/docs/rules/`,
-    "i18next",
-    false
+    "i18next"
   )
 
   console.log("Generate import description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/un-es/eslint-plugin-i/fork-release/docs/rules/`,
-    "import",
-    false
+    "import"
   )
 
   console.log("Generate jasmine description files")
@@ -221,15 +216,13 @@ async function main() {
   console.log("Generate nuxt description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/nuxt/eslint-plugin-nuxt/master/docs/rules/`,
-    "nuxt",
-    false
+    "nuxt"
   )
 
   console.log("Generate perfectionist description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/azat-io/eslint-plugin-perfectionist/main/docs/rules/`,
-    "perfectionist",
-    false
+    "perfectionist"
   )
 
   console.log("Generate promise description files")
@@ -350,15 +343,13 @@ async function main() {
   console.log("Generate unicorn description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/sindresorhus/eslint-plugin-unicorn/main/docs/rules/`,
-    "unicorn",
-    false
+    "unicorn"
   )
 
   console.log("Generate unused-imports description files")
   await docGenerator.downloadDocs(
     `${githubBaseUrl}/sweepline/eslint-plugin-unused-imports/master/docs/rules/`,
-    "unused-imports",
-    false
+    "unused-imports"
   )
 
   console.log("Generate vue description files")

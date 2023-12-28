@@ -13,12 +13,13 @@ Enforces the inclusion of at least one entry point based on the value provided i
  * @NScriptType UserEventScript
  */
 
-define([], function() {
+define([], function () {
   return {
-    beforeLoad: function() {}
-  }
+    beforeLoad: function () {},
+  };
 });
 ```
+
 ```js
 /* eslint suitescript/entry-points: "error" */
 
@@ -26,22 +27,23 @@ define([], function() {
  * @NScriptType ClientScript
  */
 
-define([], function() {
+define([], function () {
   return {
-    pageInit: function() {},
-    somethingElse: function() {}
-  }
+    pageInit: function () {},
+    somethingElse: function () {},
+  };
 });
 ```
+
 ```js
 /* eslint suitescript/entry-points: "error" */
 
 // No @NScriptType tag
 
-define([], function() {
+define([], function () {
   return {
-    somethingElse: function() {}
-  }
+    somethingElse: function () {},
+  };
 });
 ```
 
@@ -54,8 +56,9 @@ define([], function() {
  * @NScriptType UserEventScript
  */
 
-define([], function() {});
+define([], function () {});
 ```
+
 ```js
 /* eslint suitescript/entry-points: "error" */
 
@@ -63,10 +66,10 @@ define([], function() {});
  * @NScriptType ClientScript
  */
 
-define([], function() {
+define([], function () {
   return {
-    somethingElse: function() {}
-  }
+    somethingElse: function () {},
+  };
 });
 ```
 
@@ -79,32 +82,32 @@ define([], function() {
   - beforeUninstall
   - beforeUpdate
 - ClientScript
-	- fieldChanged
-	- lineInit
-	- pageInit
-	- postSourcing
-	- saveRecord
-	- sublistChanged
-	- validateDelete
-	- validateField
-	- validateInsert
-	- validateLine
-	- localizationContextEnter
-	- localizationContextExit
+  - fieldChanged
+  - lineInit
+  - pageInit
+  - postSourcing
+  - saveRecord
+  - sublistChanged
+  - validateDelete
+  - validateField
+  - validateInsert
+  - validateLine
+  - localizationContextEnter
+  - localizationContextExit
 - MapReduceScript
-	- getInputData
-	- map
-	- reduce
-	- summarize
+  - getInputData
+  - map
+  - reduce
+  - summarize
 - MassUpdateScript
   - each
 - Portlet
   - render
 - Restlet
-	- delete
-	- get
-	- post
-	- put
+  - delete
+  - get
+  - post
+  - put
 - ScheduledScript
   - execute
 - SDFInstallationScript
@@ -112,11 +115,27 @@ define([], function() {
 - Suitelet
   - onRequest
 - UserEventScript
-	- afterSubmit
-	- beforeLoad
-	- beforeSubmit
+  - afterSubmit
+  - beforeLoad
+  - beforeSubmit
 - WorkflowActionScript
   - onAction
+- bankConnectivityPlugin
+  - getRequiredConfigurationFields
+  - downloadPreviousDayBankStatementFile
+- datasetbuilderplugin
+  - createDataset
+- fiConnectivityPlugin
+  - getConfigurationIFrameUrl
+  - getAccounts
+  - getTransactionData
+- fiParserPlugin
+  - parseData
+  - getStandardTransactionCodes
+  - getExpenseCodes
+  - getConfigurationPageUrl
+- workbookbuilderplugin
+  - createWorkbook
 
 ## Version
 

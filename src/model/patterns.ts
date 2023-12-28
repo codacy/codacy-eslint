@@ -13,8 +13,7 @@ export function translateCategory(
     case "problem":
       return ["ErrorProne"]
     case "suggestion":
-      //BestPractice has been deprecated
-      //return ["BestPractice"]
+      return ["BestPractice"]
     case "layout":
       return ["CodeStyle"]
     default:
@@ -47,6 +46,7 @@ function translateCategoryLegacy(
     case "Removed":
       return "Compatibility"
     case "Best Practices":
+      return "BestPractice"
     case "ECMAScript 6":
     case "Node.js and CommonJS":
     case "Strict Mode":

@@ -1,22 +1,9 @@
 import { ESLint } from "eslint"
 import { pluginsNames } from "./eslintPlugins"
 
-const baseConfigs: string[] = [
-  "standard",
-  "eslint:recommended",
-  "plugin:eslint-plugin/recommended",
-  "plugin:prettier/recommended",
-  "prettier",
-]
-
-const typescriptConfigs: string[] = [
-  "plugin:node/recommended",
-  "plugin:@typescript-eslint/recommended"
-]
-
 export const defaultOptions: ESLint.Options = {
   baseConfig: {
-    extends: baseConfigs,
+    extends: [],
     env: {
       browser: true,
       node: true,
@@ -105,7 +92,7 @@ export const defaultOptions: ESLint.Options = {
       "dist/",
       "bin/",
       "build/",
-      "docs/tests/",
+      "tests/",
       "vendor/",
       "tsconfig.json",
       ".eslintrc*"
@@ -114,7 +101,7 @@ export const defaultOptions: ESLint.Options = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
       allowAutomaticSingleRunInference: true,
-      ecmaVersion: 10,
+      ecmaVersion: 12,
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"]
     },
@@ -122,15 +109,15 @@ export const defaultOptions: ESLint.Options = {
     settings: {
       node: {
         paths: ["/src"],
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-        tryExtensions: [".ts", ".tsx", ".js", ".json", ".node"],
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
+        tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
       },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"],
       },
       "import/resolver": {
         node: {
-          "extensions": [".js", ".jsx", ".ts", ".tsx", ".node"],
+          extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts", ".node"],
         },
         typescript: {
           alwaysTryTypes: true,
@@ -147,10 +134,11 @@ export const defaultOptions: ESLint.Options = {
     overrides: [
       // TypeScript-specific rules
       {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: [...typescriptConfigs],
+        files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
+        extends: [],
         parserOptions: {
           project: true,
+          sourceType: "module", 
         },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
@@ -174,14 +162,53 @@ export const defaultOptions: ESLint.Options = {
       },
       // JavaScript-specific rules
       {
-        files: ["**/*.js", "**/*.jsx", "**/*.json"],
-        extends: ['plugin:@typescript-eslint/disable-type-checked'],
+        files: ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.json"],
+        extends: ["plugin:@typescript-eslint/disable-type-checked"],
         rules: {
           // turn off other type-aware rules
-          'deprecation/deprecation': 'off',
-          '@typescript-eslint/internal/no-poorly-typed-ts-props': 'off',
+          "@typescript-eslint/internal/no-poorly-typed-ts-props": "off",
+          "deprecation/deprecation": "off",
+          "jest/unbound-method": "off",
+          "rxjs/finnish": "off",
+          "rxjs/no-async-subscribe": "off",
+          "rxjs/no-connectable": "off",
+          "rxjs/no-create": "off",
+          "rxjs/no-cyclic-action": "off",
+          "rxjs/no-exposed-subjects": "off",
+          "rxjs/no-finnish": "off",
+          "rxjs/no-ignored-error": "off",
+          "rxjs/no-ignored-notifier": "off",
+          "rxjs/no-ignored-takewhile-value": "off",
+          "rxjs/no-ignored-observable": "off",
+          "rxjs/no-ignored-replay-buffer": "off",
+          "rxjs/no-ignored-subscribe": "off",
+          "rxjs/no-ignored-subscription": "off",
+          "rxjs/no-implicit-any-catch": "off",
+          "rxjs/no-index": "off",
+          "rxjs/no-internal": "off",
+          "rxjs/no-nested-subscribe": "off",
+          "rxjs/no-redundant-notify": "off",
+          "rxjs/no-sharereplay": "off",
+          "rxjs/no-subclass": "off",
+          "rxjs/no-subject-unsubscribe": "off",
+          "rxjs/no-subject-value": "off",
+          "rxjs/no-subscribe-handlers": "off",
+          "rxjs/no-topromise": "off",
+          "rxjs/no-unbound-methods": "off",
+          "rxjs/no-unsafe-catch": "off",
+          "rxjs/no-unsafe-first": "off",
+          "rxjs/no-unsafe-subject-next": "off",
+          "rxjs/no-unsafe-switchmap": "off",
+          "rxjs/no-unsafe-takeuntil": "off",
+          "rxjs/prefer-observer": "off",
+          "rxjs/suffix-subjects": "off",
+          "rxjs/throw-error": "off",
+          "rxjs-angular/prefer-async-pipe": "off",
+          "rxjs-angular/prefer-composition": "off",
+          "rxjs-angular/prefer-takeuntil": "off",
           // turn off rules that don't apply to JS code
-          '@typescript-eslint/explicit-function-return-type': 'off',
+          "@typescript-eslint/explicit-function-return-type": "off",
+          
         },
       },
       // JSX with Babel
@@ -203,5 +230,3 @@ export const defaultOptions: ESLint.Options = {
     ],
   },
 }
-
-//export const defaultEngine = new ESLint(defaultOptions)

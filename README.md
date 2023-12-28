@@ -43,7 +43,7 @@ at `src/docGeneratorMain.ts` to include them on the generated documentation. To 
 ## Generating documentation
 
     ```bash
-    npm run docs:generate
+    npm run build:docs
     ```
 
 ## Test changes to codacy-seed locally
