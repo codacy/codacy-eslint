@@ -2792,29 +2792,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_block-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_brace-style",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "unnamedParam",
-          "default": "1tbs"
-        },
-        {
-          "name": "allowSingleLine",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_class-literal-property-style",
       "level": "Error",
       "category": "ErrorProne",
@@ -2828,29 +2805,6 @@
       "parameters": [
         {
           "name": "enforceForClassFields",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_comma-dangle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_comma-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "before",
-          "default": false
-        },
-        {
-          "name": "after",
           "default": true
         }
       ],
@@ -2955,41 +2909,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_func-call-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_indent",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "unnamedParam",
-          "default": 2
-        },
-        {
-          "name": "SwitchCase",
-          "default": 0
-        },
-        {
-          "name": "flatTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "offsetTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "ignoreComments",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_init-declarations",
       "level": "Warning",
       "category": "BestPractice",
@@ -2997,71 +2916,9 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_key-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_keyword-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "before",
-          "default": true
-        },
-        {
-          "name": "after",
-          "default": true
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_lines-around-comment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "beforeBlockComment",
-          "default": true
-        },
-        {
-          "name": "afterBlockComment",
-          "default": false
-        },
-        {
-          "name": "beforeLineComment",
-          "default": false
-        },
-        {
-          "name": "afterLineComment",
-          "default": false
-        },
-        {
-          "name": "allowBlockStart",
-          "default": false
-        },
-        {
-          "name": "allowBlockEnd",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_max-params",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_member-delimiter-style",
-      "level": "Info",
-      "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
@@ -3167,20 +3024,6 @@
       "patternId": "@typescript-eslint_no-extra-non-null-assertion",
       "level": "Error",
       "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-extra-parens",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-extra-semi",
-      "level": "Warning",
-      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -3569,13 +3412,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_padding-line-between-statements",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_parameter-properties",
       "level": "Error",
       "category": "ErrorProne",
@@ -3709,13 +3545,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_quotes",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_require-array-sort-compare",
       "level": "Error",
       "category": "ErrorProne",
@@ -3751,43 +3580,10 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_semi",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_sort-type-constituents",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_space-before-blocks",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_space-before-function-paren",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_space-infix-ops",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "int32Hint",
-          "default": false
-        }
-      ],
       "enabled": false
     },
     {
@@ -3808,13 +3604,6 @@
       "patternId": "@typescript-eslint_triple-slash-reference",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_type-annotation-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
       "parameters": [],
       "enabled": false
     },
@@ -18104,13 +17893,6 @@
       "patternId": "you-dont-need-lodash-underscore_head",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "codacy_test",
-      "level": "Info",
-      "category": "Duplication",
       "parameters": [],
       "enabled": false
     }

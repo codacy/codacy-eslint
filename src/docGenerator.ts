@@ -27,14 +27,6 @@ export class DocGenerator {
         !isBlacklistedOnlyFromDocumentation(patternId)
         && (!rule?.meta?.deprecated || rule.meta.deprecated !== true)
     )
-
-    /* console.log(this.rules.forEach(([name, rule]) => {
-      if ((!rule.meta?.deprecated || rule.meta.deprecated !== true) && rule.meta?.type === undefined && rule.meta?.docs?.category !== undefined) {
-        console.log(name)
-        console.log(rule)
-      }
-    }))*/
-
   }
 
   private getPatternIds() {
@@ -82,13 +74,6 @@ export class DocGenerator {
         meta?.docs?.recommended === true
       )
     })
-
-    patterns.push(new PatternSpec(
-      "codacy_test",
-      "Info",
-      // @ts-ignore
-      "Duplication"
-    ))
 
     return new Specification(toolName, toolVersion, patterns)
   }
