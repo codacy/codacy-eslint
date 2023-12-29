@@ -352,7 +352,7 @@
     "typescript-eslint": "^0.0.1-alpha.0",
     "vee-validate": "^4.12.4",
     "vite": "^5.0.10",
-    "vue": "^3.3.13",
+    "vue": "^3.4.0",
     "vue-eslint-parser": "^9.3.2",
     "vue-i18n": "^9.8.0",
     "vue-loader": "^17.4.0",
