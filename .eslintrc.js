@@ -34,4 +34,12 @@ module.exports = {
     "simple-import-sort/imports": "error",
     '@typescript-eslint/unbound-method': 'off'
   },
+  overrides: [
+    {
+      files: ["*.spec.js", "*.spec.ts"],
+      env: {
+        mocha: true
+      }
+    }
+  ]
 }

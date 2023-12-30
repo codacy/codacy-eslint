@@ -6,6 +6,7 @@ import { rules as salesforceLightningRules } from "@salesforce/eslint-plugin-lig
 import { rules as shopifyRules } from "@shopify/eslint-plugin"
 import { rules as tanstackQueryRules } from "@tanstack/eslint-plugin-query"
 import { rules as typescriptEslintRules } from "@typescript-eslint/eslint-plugin"
+import { Linter, Rule } from "eslint"
 import { rules as awscdkRules } from "eslint-plugin-awscdk"
 import { rules as backboneRules } from "eslint-plugin-backbone"
 //import { rules as canonicalRules } from "eslint-plugin-canonical"
@@ -100,7 +101,6 @@ import { rules as xssRules } from "eslint-plugin-xss"
 import { rules as ymlRules } from "eslint-plugin-yml"
 import { rules as youDontNeedLodashUnderscoreRules } from "eslint-plugin-you-dont-need-lodash-underscore"
 
-import { Linter, Rule } from "eslint"
 import { isBlacklisted } from "./blacklist"
 
 const plugins = [

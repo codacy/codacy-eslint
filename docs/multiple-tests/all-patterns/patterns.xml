@@ -3,7 +3,7 @@
   <module name="BeforeExecutionExclusionFileFilter">
     <property name="fileNamePattern" value=".*\.json" />
   </module>
-      <module name="accessor-pairs" />
+  <module name="accessor-pairs" />
   <module name="array-callback-return" />
   <module name="arrow-body-style" />
   <module name="block-scoped-var" />

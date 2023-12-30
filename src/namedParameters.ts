@@ -10,9 +10,7 @@ export function fromSchemaArray(
 ): ParameterSpec[] {
   return flatMap(objects, (o) => {
     const pairs = toPairs(o.properties)
-    const haveDefault = pairs.filter(
-      ([k, v]) => v && v.hasOwnProperty("default")
-    )
+    const haveDefault = pairs.filter(([_, v]) => v && v.default !== undefined)
     const manual = pairs.filter(
       ([k, v]) => v && rulesNamedParametersAndDefaults.has(patternId, k)
     )
@@ -21,7 +19,7 @@ export function fromSchemaArray(
       v.default,
     ])
     const manualParameters: [string, any][] = manual
-      .map(([k, v]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
+      .map(([k, _]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
       .filter((e) => e) as [string, any][]
     const allParametersMap = new Map([
       ...automaticParameters,
