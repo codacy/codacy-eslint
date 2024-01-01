@@ -73,7 +73,7 @@
     "@angular-eslint/template-parser": "^17.1.1",
     "@angular/compiler": "^17.0.8",
     "@babel/cli": "^7.23.4",
-    "@babel/core": "^7.23.6",
+    "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.23.3",
     "@babel/eslint-plugin": "^7.23.5",
     "@babel/plugin-proposal-throw-expressions": "^7.23.3",
