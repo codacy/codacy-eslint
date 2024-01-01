@@ -64,7 +64,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@1stg/eslint-config": "^7.0.1",
+    "@1stg/eslint-config": "^8.0.0",
     "@adeira/eslint-config": "^8.4.0",
     "@angular-eslint/builder": "^17.1.1",
     "@angular-eslint/eslint-plugin": "^17.1.1",
