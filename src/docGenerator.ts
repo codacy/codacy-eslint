@@ -172,7 +172,7 @@ export class DocGenerator {
     baseUrl: string,
     prefix: string,
     rejectOnError: boolean = false,
-    patternIdModifier: (s: string) => string = s => s
+    patternIdModifier: (s: string) => string = _ => _
   ): Promise<void[]> {
     console.log("Generate " + (prefix.length > 0? prefix : "eslint") + " description files")
     
