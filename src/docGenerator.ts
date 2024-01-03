@@ -171,8 +171,7 @@ export class DocGenerator {
   downloadDocs(
     baseUrl: string,
     prefix: string,
-    rejectOnError: boolean = false,
-    patternIdModifier: (s: string) => string = _ => _
+    rejectOnError: boolean = false
   ): Promise<void[]> {
     console.log("Generate " + (prefix.length > 0? prefix : "eslint") + " description files")
     
@@ -184,9 +183,9 @@ export class DocGenerator {
         : this.eslintPatternIds()
 
     
-    const promises: Promise<void>[] = patterns.map(async (pattern) => {
+    const promises: Promise<void>[] = patterns.map(async (pattern: string) => {
       try {
-        const url = baseUrl + patternIdModifier(pattern) + ".md"
+        const url = baseUrl + pattern + ".md"
         const response = await fetch(url)
   
         if (!response.ok) {
