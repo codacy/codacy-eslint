@@ -1,3 +1,8 @@
+import { Rule } from "eslint"
+import { JSONSchema4 } from "json-schema"
+import { flatMapDeep } from "lodash"
+import fetch from "node-fetch"
+
 import {
   DescriptionEntry,
   DescriptionParameter,
@@ -6,10 +11,6 @@ import {
   Specification,
   writeFile
 } from "codacy-seed"
-import { Rule } from "eslint"
-import { JSONSchema4 } from "json-schema"
-import { flatMapDeep } from "lodash"
-import fetch from "node-fetch"
 
 import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
