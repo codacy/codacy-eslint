@@ -1,3 +1,5 @@
+/*global describe, it*/
+
 import { equal } from "assert"
 
 import { patternIdToCodacy, patternIdToEslint } from "../../model/patterns"

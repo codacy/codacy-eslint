@@ -73,7 +73,7 @@ async function debugAndCountLintIssues(eslint: ESLint, lintResults: ESLint.LintR
 }
 /*
 const chunkFilesByCount = (files: string[], size: number) =>
-  Array.from({ length: Math.ceil(files.length / size) }, (_: any, i: number) =>
+  Array.from({ length: Math.ceil(files.length / size) }, (, i: number) =>
   files.slice(i * size, i * size + size)
   )
 */

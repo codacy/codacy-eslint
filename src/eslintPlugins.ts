@@ -207,10 +207,10 @@ const plugins = [
   ["you-dont-need-lodash-underscore", youDontNeedLodashUnderscoreRules]
 ]
 
-export const pluginsNames = plugins.map(([name, _]) => name)
+export const pluginsNames = plugins.map(([name,]) => name)
 
 const pluginsRules = plugins
-  .filter(([_, rules]) => rules !== undefined) // plugins may not have rules
+  .filter(([, rules]) => typeof rules !== "undefined") // plugins may not have rules
   .flatMap(([name, rules]) =>
     Object.entries(rules).map(([ruleName, rule]) => [
       `${name}/${ruleName}`,
@@ -223,7 +223,7 @@ const baseRules = Array.from(new Linter().getRules().entries())
 export const allRules = baseRules
   .concat(pluginsRules)
   .filter(
-    ([patternId, _]) =>
+    ([patternId, ]) =>
       patternId &&
       !isBlacklisted(patternId)
   )

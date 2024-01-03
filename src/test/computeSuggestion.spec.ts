@@ -1,3 +1,5 @@
+/*global describe, it*/
+
 import { deepStrictEqual } from "assert"
 import { Linter, Rule } from "eslint"
 

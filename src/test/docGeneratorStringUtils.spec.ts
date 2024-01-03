@@ -1,3 +1,5 @@
+/*global describe, it*/
+
 import { equal } from "assert"
 
 import { capitalize, patternTitle } from "../docGeneratorStringUtils"

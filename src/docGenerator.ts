@@ -32,7 +32,7 @@ export class DocGenerator {
   }
 
   private getPatternIds(): string[] {
-    return this.rules.map(([patternId, _]) => patternId) // eslint-disable-line no-unused-vars
+    return this.rules.map(([patternId, ]) => patternId)
   }
 
   private generateParameters(
