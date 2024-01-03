@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    mocha: true
   },
   extends: [
     "eslint:recommended",
@@ -11,6 +12,8 @@ module.exports = {
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
+    describe: true,
+    it: true
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
