@@ -1,5 +1,3 @@
-/*global describe, it*/
-
 import { deepEqual } from "assert"
 import { ParameterSpec } from "codacy-seed"
 import { JSONSchema4 } from "json-schema"
