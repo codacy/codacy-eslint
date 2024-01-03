@@ -15,6 +15,13 @@ module.exports = {
     describe: true,
     it: true
   },
+  ignorePatterns: [
+    "node_modules/",
+    "dist/",
+    "tests/",
+    "tsconfig.json",
+    ".eslintrc*"
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
