@@ -6,7 +6,6 @@
 ## Adding new packages / plugins / configs
 
 Install the package / plugin using npm:
-
 ```shell
 npm install --legacy-peer-deps --omit=dev package-name
 ```
@@ -17,33 +16,35 @@ npm install --legacy-peer-deps --omit=dev package-name
 
 1.  If the plugin has descriptions for rules on GitHub, reference them
     at `src/docGeneratorMain.ts` to include them on the generated documentation.
-  - Add a section similar to the following example:
 
-    ```typescript
-    await docGenerator.downloadDocs(
-      // path to .md pattern files within github
-      `/Rantanen/eslint-plugin-xss/master/docs/rules/`,
-      // this is the pattern's prefix (e.g., xss/some-pattern-id)
-      "xss",
-      // (default) change to true if it should fail in case of missing .md files for any pattern
-      false
-    )
-    ```
-  - In `src/eslintPlugins.ts` add two new entries similar to the following examples:
+    -   Add a section similar to the following example:
+        ```typescript
+        await docGenerator.downloadDocs(
+          // path to .md pattern files within github
+          `/Rantanen/eslint-plugin-xss/master/docs/rules/`,
+          // this is the pattern's prefix (e.g., xss/some-pattern-id)
+          "xss",
+          // (default) change to true if it should fail in case of missing .md files for any pattern
+          false
+        )
+        ```
 
-    ```typescript
-    // make sure this one matches the correct name of the package
-    import { rules as xssRules } from "eslint-plugin-xss"
-    ```
-    ```typescript
-    // the first value has to match the plugin name
-    ["xss", xssRules]
-    ```
+    -   In `src/eslintPlugins.ts` add two new entries similar to the following examples:
+        ```typescript
+        // make sure this one matches the correct name of the package
+        import { rules as xssRules } from "eslint-plugin-xss"
+        ```
+        ```typescript
+        // the first value has to match the plugin name  
+        ["xss", xssRules]  
+        ```
+
 2.  Generate documentation so it adds the new plugin documentation.
--
-  ```shell
-  npm run build:docs
-  ```
+
+    ```shell
+    npm run build:docs
+    ```
+
 3.  Add a new test in `/docs/multiple-tests` that uses the newly added plugin.
     You can use the Getting Started section of the package documentation to find a small usage example. 
 
@@ -58,9 +59,9 @@ npm run build:docs
 You may need to test changes that comes from our [codacy-engine-typescript-seed](https://github.com/codacy/codacy-engine-typescript-seed).
 
 1.  Create a package with your changes on the seed:
-  * Don't forget to update the dependencies: `npm install`
-  * Compile the library: `npm run compile`
-  * Package the library: `npm pack`
+    *   Don't forget to update the dependencies: `npm install`
+    *   Compile the library: `npm run compile`
+    *   Package the library: `npm pack`
     > This should generate a codacy-seed-0.0.1.tgz on your codacy-seed repository
 
 2.  Copy the `codacy-seed-0.0.1.tgz` into the root of this repository
@@ -68,10 +69,10 @@ You may need to test changes that comes from our [codacy-engine-typescript-seed]
 3.  Install the package: `npm install codacy-seed-0.0.1.tgz`
 
 4.  Update Dockerfile and `.dockerignore` so you copy the `codacy-seed-0.0.1.tgz` inside the docker you will be building
-  *  Add `!codacy-seed-0.0.1.tgz` to your `.dockerignore`
-  *  Add the package to the docker before `RUN npm install`: `COPY codacy-seed-0.0.1.tgz ./`
-  *  Remove multi-stage docker steps
-    -  Lines from the beginning of the file until `RUN rm -rf /package.json /package-lock.json`
+    *   Add `!codacy-seed-0.0.1.tgz` to your `.dockerignore`
+    *   Add the package to the docker before `RUN npm install`: `COPY codacy-seed-0.0.1.tgz ./`
+    *   Remove multi-stage docker steps
+        -   Lines from the beginning of the file until `RUN rm -rf /package.json /package-lock.json`
         > This way you skip copying the files to the other docker, and another `npm install`
 
 5.  Publish your docker locally as normal: `docker build -t codacy-eslint:local .`
@@ -80,11 +81,9 @@ You may need to test changes that comes from our [codacy-engine-typescript-seed]
 
 ### Incompatible rules
 
-There are some ESLint rules that will be ignored when running this Docker container. For more details on the ignored
-rules, check `blacklistRegexes` defined at [blacklist.ts](src/blacklist.ts).
+There are some ESLint rules that will be ignored when running this Docker container. For more details on the ignored rules, check `blacklistRegexes` defined at [blacklist.ts](src/blacklist.ts).
 
-Usually, these rules need an Internet connection and/or to check `node_modules`, and would not run successfully
-on our Docker container environment.
+Usually, these rules need an Internet connection and/or to check `node_modules`, and would not run successfully on our Docker container environment.
 
 ## What is Codacy
 
@@ -92,11 +91,11 @@ on our Docker container environment.
 
 ### Among Codacy’s features
 
-- Identify new Static Analysis issues
-- Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
-- Auto-comments on Commits and Pull Requests
-- Integrations with Slack, HipChat, Jira, YouTrack
-- Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
+-   Identify new Static Analysis issues
+-   Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
+-   Auto-comments on Commits and Pull Requests
+-   Integrations with Slack, HipChat, Jira, YouTrack
+-   Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
 
 Codacy also helps keep track of Code Coverage, Code Duplication, and Code Complexity.
 
