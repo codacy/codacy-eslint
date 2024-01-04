@@ -14592,11 +14592,11 @@
           "default": "data-testid"
         },
         {
-          "name": "customMessage",
+          "name": "testIdPattern",
           "default": ""
         },
         {
-          "name": "testIdPattern",
+          "name": "customMessage",
           "default": ""
         }
       ],

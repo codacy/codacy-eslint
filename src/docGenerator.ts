@@ -10,6 +10,7 @@ import { Rule } from "eslint"
 import { JSONSchema4 } from "json-schema"
 import { flatMapDeep } from "lodash"
 import fetch from "node-fetch"
+
 import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
 import { translateCategory, translateLevel, patternIdToCodacy } from "./model/patterns"
@@ -19,18 +20,19 @@ import { toolName, toolVersion } from "./toolMetadata"
 
 export class DocGenerator {
   private readonly rules: [string, Rule.RuleModule][]
+  private githubBaseUrl = "https://raw.githubusercontent.com"
 
   constructor(rules: [string, Rule.RuleModule][]) {
     // initialize rules without blacklisted and deprecated
     this.rules = rules.filter(
       ([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
-        && (!rule?.meta?.deprecated || rule.meta.deprecated !== true)
+        && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
     )
   }
 
-  private getPatternIds() {
-    return this.rules.map(([patternId, _]) => patternId)
+  private getPatternIds(): string[] {
+    return this.rules.map(([patternId, ]) => patternId)
   }
 
   private generateParameters(
@@ -116,16 +118,16 @@ export class DocGenerator {
     return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
-  private patternIdsWithoutPrefix(prefix: string): Array<string> {
+  private patternIdsWithoutPrefix(prefix: string): string[] {
     const longPrefix = prefix + "/"
-    const patternIds = this.getPatternIds()
 
-    return patternIds
+    return this
+      .getPatternIds()
       .filter((patternId) => patternId.startsWith(longPrefix))
       .map((patternId) => patternId.substring(longPrefix.length))
   }
 
-  private eslintPatternIds(): Array<string> {
+  private eslintPatternIds(): string[] {
     // We take all the patterns except those that have slashes because
     // they come from third party plugins
     return this.getPatternIds().filter((e) => !e.includes("/"))
@@ -168,23 +170,27 @@ export class DocGenerator {
 
   downloadDocs(
     baseUrl: string,
-    prefix: string = "",
-    rejectOnError: boolean = false,
-    patternIdModifier: (patternId: string) => string = s => s
+    prefix: string,
+    rejectOnError: boolean = false
   ): Promise<void[]> {
+    console.log("Generate " + (prefix.length > 0? prefix : "eslint") + " description files")
+    
+    baseUrl = (!baseUrl.startsWith("https://") ? this.githubBaseUrl : "") + baseUrl
+
     const patterns =
       prefix.length > 0
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
-  
-    const promises: Promise<void>[] = patterns.map(async (pattern) => {
-      const url: string = `${baseUrl}${patternIdModifier(pattern)}.md`
 
+    
+    const promises: Promise<void>[] = patterns.map(async (pattern: string) => {
       try {
-        const message = `Failed to retrieve docs for ${pattern} from ${url}`
+        const url = baseUrl + pattern + ".md"
         const response = await fetch(url)
   
         if (!response.ok) {
+          const message = `Failed to retrieve docs for ${pattern} from ${url}`
+
           if (rejectOnError) {
             throw new Error(message)
           }
@@ -212,6 +218,13 @@ export class DocGenerator {
   }
 
   async generateAllPatternsMultipleTest() {
+    console.log("Generate all-patterns multiple-test patterns.xml")
+
+    const modules = this
+      .getPatternIds()
+      .map(patternId => `  <module name="${patternIdToCodacy(patternId)}" />`)
+      .join("\n")
+
     const patternsFilename = "docs/multiple-tests/all-patterns/patterns.xml"
     const patternsTypescriptFilename =
       "docs/multiple-tests/all-patterns-typescript/patterns.xml"
@@ -220,11 +233,7 @@ export class DocGenerator {
   <module name="BeforeExecutionExclusionFileFilter">
     <property name="fileNamePattern" value=".*\\.json" />
   </module>
-    ${this.rules
-      .map(
-        ([patternId, _]) => `  <module name="${patternIdToCodacy(patternId)}" />`
-      )
-      .join("\n")}
+${modules}
 </module>
 `
     await Promise.all([

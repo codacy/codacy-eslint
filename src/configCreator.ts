@@ -1,12 +1,13 @@
 import { Codacyrc, Parameter, ParameterValue, Pattern } from "codacy-seed"
 import { ESLint, Linter } from "eslint"
+import { existsSync } from "fs-extra"
 import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
+
 import { isBlacklisted } from "./blacklist"
 import { defaultOptions } from "./eslintDefaultOptions"
 import { debug, DEBUG } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
-import { existsSync } from "fs-extra"
 import {default as allPatterns} from "../docs/patterns.json"
 
 export function createEslintConfig(
@@ -175,18 +176,4 @@ function retrieveAllCodacyPatterns(): Pattern[] {
 
   debug("options: returning " + patterns.length + " patterns")
   return patterns
-}
-
-function resetEslintBaseConfig(options: ESLint.Options): ESLint.Options {
-  debug("options: reseting default options")
-  options.baseConfig.extends = []
-  if (!options.baseConfig.overrides) {
-    options.baseConfig.overrides = []
-  } else {
-    options.baseConfig.overrides?.forEach(
-      (override: any) => (override.extends = [])
-    )
-  }
-
-  return options
 }

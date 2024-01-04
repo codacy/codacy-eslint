@@ -1,5 +1,6 @@
 import { deepStrictEqual } from "assert"
 import { Linter, Rule } from "eslint"
+
 import { computeSuggestion } from "../computeSuggestion"
 
 describe("computeSuggestion", () => {

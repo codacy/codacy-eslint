@@ -1,6 +1,7 @@
 import { deepEqual } from "assert"
 import { Issue, ToolResult } from "codacy-seed"
 import { ESLint } from "eslint"
+
 import { convertResults } from "../convertResults"
 
 describe("convertResults", () => {

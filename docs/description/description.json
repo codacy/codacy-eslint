@@ -14318,12 +14318,12 @@
         "description": "testIdAttribute"
       },
       {
-        "name": "customMessage",
-        "description": "customMessage"
-      },
-      {
         "name": "testIdPattern",
         "description": "testIdPattern"
+      },
+      {
+        "name": "customMessage",
+        "description": "customMessage"
       }
     ],
     "patternId": "testing-library_consistent-data-testid",
