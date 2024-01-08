@@ -148,7 +148,7 @@
     "@types/simple-mock": "^0.8.6",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/eslint-plugin-tslint": "^6.16.0",
-    "@typescript-eslint/parser": "^6.16.0",
+    "@typescript-eslint/parser": "^6.18.0",
     "@typescript-eslint/utils": "^6.16.0",
     "@vitejs/plugin-vue": "^5.0.1",
     "@vitejs/plugin-vue2": "^2.3.1",
