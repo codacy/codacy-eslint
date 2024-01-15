@@ -209,6 +209,7 @@
   <module name="@angular-eslint_contextual-lifecycle" />
   <module name="@angular-eslint_directive-class-suffix" />
   <module name="@angular-eslint_directive-selector" />
+  <module name="@angular-eslint_no-async-lifecycle-method" />
   <module name="@angular-eslint_no-attribute-decorator" />
   <module name="@angular-eslint_no-conflicting-lifecycle" />
   <module name="@angular-eslint_no-empty-lifecycle-method" />
@@ -334,6 +335,7 @@
   <module name="@typescript-eslint_method-signature-style" />
   <module name="@typescript-eslint_naming-convention" />
   <module name="@typescript-eslint_no-array-constructor" />
+  <module name="@typescript-eslint_no-array-delete" />
   <module name="@typescript-eslint_no-base-to-string" />
   <module name="@typescript-eslint_no-confusing-non-null-assertion" />
   <module name="@typescript-eslint_no-confusing-void-expression" />
@@ -404,6 +406,7 @@
   <module name="@typescript-eslint_prefer-namespace-keyword" />
   <module name="@typescript-eslint_prefer-nullish-coalescing" />
   <module name="@typescript-eslint_prefer-optional-chain" />
+  <module name="@typescript-eslint_prefer-promise-reject-errors" />
   <module name="@typescript-eslint_prefer-readonly" />
   <module name="@typescript-eslint_prefer-readonly-parameter-types" />
   <module name="@typescript-eslint_prefer-reduce-type-parameter" />
@@ -577,6 +580,8 @@
   <module name="ember_require-valid-css-selector-in-test-helpers" />
   <module name="ember_route-path-style" />
   <module name="ember_routes-segments-snake-case" />
+  <module name="ember_template-indent" />
+  <module name="ember_template-no-let-reference" />
   <module name="ember_use-brace-expansion" />
   <module name="ember_use-ember-data-rfc-395-imports" />
   <module name="ember_use-ember-get-and-set" />
@@ -1995,6 +2000,7 @@
   <module name="vue_define-props-declaration" />
   <module name="vue_dot-location" />
   <module name="vue_dot-notation" />
+  <module name="vue_enforce-style-attribute" />
   <module name="vue_eqeqeq" />
   <module name="vue_first-attribute-linebreak" />
   <module name="vue_func-call-spacing" />

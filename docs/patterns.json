@@ -1977,6 +1977,13 @@
       "enabled": false
     },
     {
+      "patternId": "@angular-eslint_no-async-lifecycle-method",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@angular-eslint_no-attribute-decorator",
       "level": "Error",
       "category": "ErrorProne",
@@ -2951,6 +2958,13 @@
       "enabled": false
     },
     {
+      "patternId": "@typescript-eslint_no-array-delete",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@typescript-eslint_no-base-to-string",
       "level": "Warning",
       "category": "BestPractice",
@@ -3392,8 +3406,8 @@
     },
     {
       "patternId": "@typescript-eslint_no-useless-template-literals",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -3483,6 +3497,13 @@
     },
     {
       "patternId": "@typescript-eslint_prefer-optional-chain",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@typescript-eslint_prefer-promise-reject-errors",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -4199,7 +4220,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-attrs-in-components",
@@ -4293,7 +4314,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-duplicate-dependent-keys",
@@ -4380,7 +4401,7 @@
         },
         {
           "name": "useAt",
-          "default": false
+          "default": true
         }
       ],
       "enabled": true
@@ -4405,7 +4426,7 @@
       "category": "Security",
       "subcategory": "CommandInjection",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-implicit-service-injection-argument",
@@ -4580,7 +4601,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-settled-after-test-helper",
@@ -4659,7 +4680,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "ember_no-try-invoke",
@@ -4824,6 +4845,25 @@
       "category": "BestPractice",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "ember_template-indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreComments",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "ember_template-no-let-reference",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
     },
     {
       "patternId": "ember_use-brace-expansion",
@@ -15889,6 +15929,13 @@
           "default": ""
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_enforce-style-attribute",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
