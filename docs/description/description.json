@@ -1975,6 +1975,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_no-async-lifecycle-method",
+    "title": "@angular eslint: No async lifecycle method",
+    "description": "Angular Lifecycle methods should not be async. Angular does not wait for async lifecycle but the code incorrectly suggests it does.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_no-attribute-decorator",
     "title": "@angular eslint: No attribute decorator",
     "description": "The @Attribute decorator is used to obtain a single value for an attribute. This is a much less common use-case than getting a stream of values (using @Input), so often the @Attribute decorator is mistakenly used when @Input was what was intended. This rule disallows usage of @Attribute decorator altogether in order to prevent these mistakes.",
@@ -2949,6 +2956,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-array-delete",
+    "title": "@typescript eslint: No array delete",
+    "description": "Disallow using the `delete` operator on array values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-base-to-string",
     "title": "@typescript eslint: No base to string",
     "description": "Require `.toString()` to only be called on objects which provide useful information when stringified",
@@ -3483,6 +3497,13 @@
     "patternId": "@typescript-eslint_prefer-optional-chain",
     "title": "@typescript eslint: Prefer optional chain",
     "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-promise-reject-errors",
+    "title": "@typescript eslint: Prefer promise reject errors",
+    "description": "Require using Error objects as Promise rejection reasons",
     "timeToFix": 5
   },
   {
@@ -4805,6 +4826,25 @@
     "patternId": "ember_routes-segments-snake-case",
     "title": "Ember: Routes segments snake case",
     "description": "Enforce usage of snake_cased dynamic segments in routes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "ember_template-indent",
+    "title": "Ember: Template indent",
+    "description": "Enforce consistent indentation for gts/gjs templates",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_template-no-let-reference",
+    "title": "Ember: Template no let reference",
+    "description": "Disallow referencing let variables in \\<template\\>",
     "timeToFix": 5
   },
   {
@@ -15616,6 +15656,13 @@
     "patternId": "vue_dot-notation",
     "title": "Vue: Dot notation",
     "description": "Enforce dot notation whenever possible in `<template>`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_enforce-style-attribute",
+    "title": "Vue: Enforce style attribute",
+    "description": "Enforce or forbid the use of the `scoped` and `module` attributes in SFC top level style tags",
     "timeToFix": 5
   },
   {
