@@ -87,7 +87,7 @@
     "@cloudbeds/eslint-config": "^2.6.1",
     "@emotion/eslint-plugin": "^11.11.0",
     "@eslint/js": "^8.56.0",
-    "@formatjs/icu-messageformat-parser": "^2.7.3",
+    "@formatjs/icu-messageformat-parser": "^2.7.4",
     "@hapi/eslint-plugin": "^6.0.0",
     "@lwc/eslint-plugin-lwc": "^1.7.2",
     "@mui/material": "^5.15.4",
