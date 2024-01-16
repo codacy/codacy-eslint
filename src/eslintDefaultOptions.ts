@@ -143,7 +143,6 @@ export const defaultOptions: ESLint.Options = {
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",
-          "ember/template-indent": "off",
           "getter-return": "off",
           "no-const-assign": "off",
           "no-dupe-args": "off",
