@@ -312,7 +312,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.2.0",
     "eslint-plugin-wdio": "^8.24.12",
     "eslint-plugin-xss": "^0.1.12",
-    "eslint-plugin-yml": "^1.12.0",
+    "eslint-plugin-yml": "^1.12.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.13.0",
     "extract-css-chunks-webpack-plugin": "^4.10.0",
     "glob": "^10.3.10",
