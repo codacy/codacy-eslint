@@ -29,14 +29,14 @@ npm install --legacy-peer-deps --omit=dev package-name
         )
         ```
 
-    -   In `src/eslintPlugins.ts` add two new entries similar to the following examples:
+    -   In `src/eslintPlugins.ts` add a new value to the array with the name of the package/plugin:
         ```typescript
         // make sure this one matches the correct name of the package
-        import { rules as xssRules } from "eslint-plugin-xss"
-        ```
-        ```typescript
-        // the first value has to match the plugin name  
-        ["xss", xssRules]  
+        const packageNames = [
+            "@angular-eslint/eslint-plugin",
+            "eslint-plugin-xss",
+            //(...)
+        }
         ```
 
 2.  Generate documentation so it adds the new plugin documentation.
