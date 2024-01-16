@@ -36,7 +36,7 @@ npm install --legacy-peer-deps --omit=dev package-name
             "@angular-eslint/eslint-plugin",
             "eslint-plugin-xss",
             //(...)
-        }
+        ]
         ```
 
 2.  Generate documentation so it adds the new plugin documentation.
