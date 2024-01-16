@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
     "checkJs": false,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
     "allowArbitraryExtensions": false,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declaration": false,
     "noEmit": true,
     "noEmitOnError": true,
     "strict": false,
     "lib": [
+      "ES2020",
+      "ES2021",
       "ES2022",
       "DOM",
       "ESNext"
@@ -25,6 +28,7 @@
     "strictNullChecks": true
   },
   "include": [
-    "./*.ts"
+    "**/*",
+    "**/*.json"
   ]
 }
