@@ -14,7 +14,7 @@ description: "disallow selectors defined that is not used inside `<template>`"
 
 This rule reports the defined selectors is not used inside `<template>`.
 
-Similar to the [vue-scoped-css/no-unused-selector](./no-unused-selector.md) rule, with differences.
+Similar to the [vue-scoped-css/no-unused-selector](https://github.com/future-architect/eslint-plugin-vue-scoped-css/tree/master/docs/rules/no-unused-selector.md) rule, with differences.
 This rule requires elements that matches the first selector be included in `<template>`.
 
 <eslint-code-block :rules="{'vue-scoped-css/require-selector-used-inside': ['error']}">

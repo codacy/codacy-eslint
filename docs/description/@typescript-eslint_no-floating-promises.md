@@ -26,7 +26,7 @@ This rule also reports when an Array containing Promises is created and not prop
 
 :::tip
 `no-floating-promises` only detects unhandled Promise _statements_.
-See [`no-misused-promises`](./no-misused-promises.md) for detecting code that provides Promises to _logical_ locations such as if statements.
+See [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.md) for detecting code that provides Promises to _logical_ locations such as if statements.
 :::
 
 ## Examples
@@ -117,7 +117,7 @@ You might consider using `void`s and/or [ESLint disable comments](https://eslint
 
 ## Related To
 
-- [`no-misused-promises`](./no-misused-promises.md)
+- [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.md)
 
 ## Further Reading
 

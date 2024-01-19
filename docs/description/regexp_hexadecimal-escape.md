@@ -67,7 +67,7 @@ var foo = /\x0a/;
 
 ## :couple: Related rules
 
-- [regexp/unicode-escape](./unicode-escape.md)
+- [regexp/unicode-escape](https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/unicode-escape.md)
 
 ## :rocket: Version
 

@@ -16,7 +16,7 @@ This rule intentionally does not allow objects with a custom `toString()` method
 
 For example, arrays have a custom [`toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) method, which only calls `join()` internally, which joins the array elements with commas. This means that (1) array elements are not necessarily stringified to useful results (2) the commas don't have spaces after them, making the result not user-friendly. The best way to format arrays is to use [`Intl.ListFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat), which even supports adding the "and" conjunction where necessary.
 You must explicitly call `object.toString()` if you want to use this object in a template literal.
-The [`no-base-to-string`](./no-base-to-string.md) rule can be used to guard this case against producing `"[object Object]"` by accident.
+The [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md) rule can be used to guard this case against producing `"[object Object]"` by accident.
 
 :::
 
@@ -117,5 +117,5 @@ If you're not worried about incorrectly stringifying non-string values in templa
 
 ## Related To
 
-- [`no-base-to-string`](./no-base-to-string.md)
-- [`restrict-plus-operands`](./restrict-plus-operands.md)
+- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md)
+- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)

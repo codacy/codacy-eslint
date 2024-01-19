@@ -192,7 +192,7 @@ If you don't care about stray `defaultsProps` in your components, you can disabl
 
 ## Related rules
 
-- [require-default-props](./require-default-props.md)
+- [require-default-props](https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/require-default-props.md)
 
 ## Resources
 

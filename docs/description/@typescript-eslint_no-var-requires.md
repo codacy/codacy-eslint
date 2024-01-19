@@ -57,4 +57,4 @@ If only a subset of your project uses `require`s then you might consider using [
 
 ## Related To
 
-- [`no-require-imports`](./no-require-imports.md)
+- [`no-require-imports`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-require-imports.md)

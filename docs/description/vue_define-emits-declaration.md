@@ -113,8 +113,8 @@ const emit = defineEmits<{
 
 ## :couple: Related Rules
 
-- [vue/define-props-declaration](./define-props-declaration.md)
-- [vue/valid-define-emits](./valid-define-emits.md)
+- [vue/define-props-declaration](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/define-props-declaration.md)
+- [vue/valid-define-emits](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/valid-define-emits.md)
 
 ## :books: Further Reading
 

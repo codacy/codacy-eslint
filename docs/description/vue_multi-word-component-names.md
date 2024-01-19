@@ -171,7 +171,7 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/no-reserved-component-names](./no-reserved-component-names.md)
+- [vue/no-reserved-component-names](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/no-reserved-component-names.md)
 
 ## :books: Further Reading
 

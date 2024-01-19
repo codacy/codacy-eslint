@@ -80,8 +80,8 @@ If you don't mind a risk of `"[object Object]"` or incorrect type coercions in y
 
 ## Related To
 
-- [`restrict-plus-operands`](./restrict-plus-operands.md)
-- [`restrict-template-expressions`](./restrict-template-expressions.md)
+- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
 
 ## Further Reading
 

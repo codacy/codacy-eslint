@@ -169,7 +169,7 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/no-undef-properties](./no-undef-properties.md)
+- [vue/no-undef-properties](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/no-undef-properties.md)
 
 ## :rocket: Version
 

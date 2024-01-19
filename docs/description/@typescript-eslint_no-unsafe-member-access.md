@@ -67,8 +67,8 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`no-explicit-any`](./no-explicit-any.md)
-- [`no-unsafe-argument`](./no-unsafe-argument.md)
-- [`no-unsafe-assignment`](./no-unsafe-assignment.md)
-- [`no-unsafe-call`](./no-unsafe-call.md)
-- [`no-unsafe-return`](./no-unsafe-return.md)
+- [`no-explicit-any`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-explicit-any.md)
+- [`no-unsafe-argument`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-argument.md)
+- [`no-unsafe-assignment`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md)
+- [`no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-call.md)
+- [`no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-return.md)

@@ -103,6 +103,6 @@ We recommend picking a single option for this rule that works best for your proj
 
 ## Related To
 
-- [`no-import-type-side-effects`](./no-import-type-side-effects.md)
+- [`no-import-type-side-effects`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-import-type-side-effects.md)
 - [`import/consistent-type-specifier-style`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md)
 - [`import/no-duplicates` with `{"prefer-inline": true}`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md#inline-type-imports)

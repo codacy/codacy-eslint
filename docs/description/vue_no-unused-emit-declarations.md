@@ -50,7 +50,7 @@ Nothing.
 
 ## :couple: Related Rules
 
-- [vue/require-explicit-emits](./require-explicit-emits.md)
+- [vue/require-explicit-emits](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/require-explicit-emits.md)
 
 ## :rocket: Version
 

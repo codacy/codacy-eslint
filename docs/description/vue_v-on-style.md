@@ -61,7 +61,7 @@ Default is set to `shorthand`.
 
 ## :couple: Related Rules
 
-- [vue/v-on-handler-style](./v-on-handler-style.md)
+- [vue/v-on-handler-style](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/v-on-handler-style.md)
 
 ## :books: Further Reading
 

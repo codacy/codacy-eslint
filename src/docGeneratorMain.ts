@@ -47,6 +47,11 @@ async function main() {
   )
 
   await docGenerator.downloadDocs(
+    "/eslint-stylistic/eslint-stylistic/main/",
+    "@stylistic"
+  )
+
+  await docGenerator.downloadDocs(
     "/typescript-eslint/typescript-eslint/main/packages/eslint-plugin/docs/rules/",
     "@typescript-eslint"
   )

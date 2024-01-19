@@ -200,8 +200,8 @@ If you don't mind a risk of `"[object Object]"` or incorrect type coercions in y
 
 ## Related To
 
-- [`no-base-to-string`](./no-base-to-string.md)
-- [`restrict-template-expressions`](./restrict-template-expressions.md)
+- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
 
 ## Further Reading
 

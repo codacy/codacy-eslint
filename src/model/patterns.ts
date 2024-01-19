@@ -1,39 +1,53 @@
 import { Category, Level, SecuritySubcategory } from "codacy-seed"
 
-export function translateCategory(
+const securityPlugins = [
+  "scanjs-rules",
+  "security",
+  "security-node",
+  "no-unsanitized",
+  "xss"
+]
+
+export function translateLevelAndCategory(
   patternId: string,
   type?: string
-): [Category, SecuritySubcategory?] {
-  const securitySubcategory = getSecuritySubcategory(patternId)
-  if (securitySubcategory) {
-    return securitySubcategory
+): [Level, Category, SecuritySubcategory?] {
+  if (securityPlugins.some(plugin => patternId.startsWith(plugin + "/"))) {
+    return ["Warning", "Security", getSecuritySubcategory(patternId)]
   }
 
+  return [translateLevel(type), translateCategory(type), undefined]
+}
+
+function translateCategory(
+  type?: string
+): Category {
   switch (type) {
     case "problem":
-      return ["ErrorProne"]
+      return "ErrorProne"
     case "suggestion":
-      return ["BestPractice"]
+      return "BestPractice"
     case "layout":
-      return ["CodeStyle"]
+      return "CodeStyle"
     default:
-      return [translateCategoryLegacy(type)]
+      return translateCategoryLegacy(type)
   }
 }
 
-function getSecuritySubcategory(patternId: string): [Category, SecuritySubcategory?] | undefined {
-  if (patternId.includes("csrf")) return ["Security", "CSRF"];
-  if (patternId.includes("xss")) return ["Security", "XSS"];
-  if (patternId.includes("injection")) return ["Security", "CommandInjection"];
-  if (patternId.includes("crypto")) return ["Security", "Cryptography"];
-  if (patternId.includes("Storage")) return ["Security", "InsecureStorage"];
-  if (patternId.startsWith("no-unsanitized")) return ["Security", "XSS"];
-  if (patternId.startsWith("scanjs-rules/call_")) return ["Security", "CommandInjection"];
-  if (patternId.startsWith("scanjs-rules/assign_to_")) return ["Security", "MaliciousCode"];
-  if (patternId.startsWith("scanjs-rules") || patternId.includes("security"))
-    return ["Security", patternId.includes("regex") ? "Regex" : undefined];
+function getSecuritySubcategory(patternId: string): SecuritySubcategory | undefined {
+  if (patternId.includes("csrf")) return "CSRF"
+  if (patternId.includes("injection")) return "CommandInjection"
+  if (patternId.includes("crypto")) return "Cryptography"
+  if (patternId.includes("call_")) return "CommandInjection"
+  if (patternId.includes("assign_to_")) return "MaliciousCode"
+  if (patternId.includes("storage") || patternId.includes("-fs-") || patternId.includes("filename"))
+    return "InsecureStorage"
+  if (patternId.startsWith("no-unsanitized") || patternId.includes("xss"))
+    return "XSS"
+  if (patternId.includes("regex") && (patternId.startsWith("scanjs-rules") || patternId.startsWith("security")))
+    return "Regex"
 
-  return undefined;
+  return undefined
 }
 
 function translateCategoryLegacy(
@@ -57,7 +71,7 @@ function translateCategoryLegacy(
   }
 }
 
-export function translateLevel(
+function translateLevel(
   type?: string
 ): Level {
   switch (type) {

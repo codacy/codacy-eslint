@@ -84,7 +84,7 @@ Every option can be set to one of the following values:
 
 If `selfClosingTag` is not specified, the `singleline` and `multiline` options are inherited for self-closing tags.
 
-Plus, you can use [`vue/html-indent`](./html-indent.md) rule to enforce indent-level of the closing brackets.
+Plus, you can use [`vue/html-indent`](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/html-indent.md) rule to enforce indent-level of the closing brackets.
 
 ### `"multiline": "never"`
 

@@ -87,7 +87,7 @@ const characters = [...string];
 
 ## With the `unicorn/no-useless-spread` rule
 
-Some cases are fixed using extra spread syntax. Therefore we recommend enabling the [`unicorn/no-useless-spread`](./no-useless-spread.md) rule to fix it.
+Some cases are fixed using extra spread syntax. Therefore we recommend enabling the [`unicorn/no-useless-spread`](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/no-useless-spread.md) rule to fix it.
 
 For example:
 

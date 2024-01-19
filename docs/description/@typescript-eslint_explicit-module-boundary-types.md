@@ -246,4 +246,4 @@ If your project is not used by downstream consumers that are sensitive to API ty
 
 ## Related To
 
-- [explicit-function-return-type](./explicit-function-return-type.md)
+- [explicit-function-return-type](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)

@@ -54,4 +54,4 @@ When you want to allow string expressions inside template literals.
 
 ## Related To
 
-- [`restrict-template-expressions`](./restrict-template-expressions.md)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)

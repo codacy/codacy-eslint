@@ -45,7 +45,7 @@ Nothing.
 
 ## :couple: Related rules
 
-- [regexp/no-useless-escape](./no-useless-escape.md)
+- [regexp/no-useless-escape](https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/no-useless-escape.md)
 
 ## :books: Further reading
 

@@ -74,4 +74,4 @@ You can turn it off if you don't want to consistently keep them next to each oth
 
 ## Related To
 
-- [`adjacent-overload-signatures`](./adjacent-overload-signatures.md)
+- [`adjacent-overload-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)

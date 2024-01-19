@@ -67,4 +67,4 @@ Array.prototype.slice.apply(foo, [-2, -1]);
 
 ## Related rules
 
-- [unicorn/prefer-at](./prefer-at.md)
+- [unicorn/prefer-at](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/prefer-at.md)

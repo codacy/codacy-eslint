@@ -46,8 +46,8 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/prefer-true-attribute-shorthand](./prefer-true-attribute-shorthand.md)
-- [vue/require-default-prop](./require-default-prop.md)
+- [vue/prefer-true-attribute-shorthand](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/prefer-true-attribute-shorthand.md)
+- [vue/require-default-prop](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/require-default-prop.md)
 
 ## :rocket: Version
 

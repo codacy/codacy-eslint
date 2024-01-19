@@ -104,4 +104,4 @@ const foo = utils.flat(bar); // Fails
 
 ## Related rules
 
-- [unicorn/prefer-array-flat-map](./prefer-array-flat-map.md)
+- [unicorn/prefer-array-flat-map](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/prefer-array-flat-map.md)

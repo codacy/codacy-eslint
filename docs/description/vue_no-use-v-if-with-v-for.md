@@ -90,7 +90,7 @@ There are two common cases where this can be tempting:
 
 ## :couple: Related Rules
 
-- [vue/no-use-v-else-with-v-for](./no-use-v-else-with-v-for.md)
+- [vue/no-use-v-else-with-v-for](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/no-use-v-else-with-v-for.md)
 
 ## :books: Further Reading
 

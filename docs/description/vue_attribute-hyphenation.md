@@ -110,8 +110,8 @@ Don't use hyphenated name but allow custom attributes
 
 ## :couple: Related Rules
 
-- [vue/v-on-event-hyphenation](./v-on-event-hyphenation.md)
-- [vue/prop-name-casing](./prop-name-casing.md)
+- [vue/v-on-event-hyphenation](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/v-on-event-hyphenation.md)
+- [vue/prop-name-casing](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/prop-name-casing.md)
 
 ## :rocket: Version
 

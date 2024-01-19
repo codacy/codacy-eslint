@@ -52,7 +52,7 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/prefer-true-attribute-shorthand](./prefer-true-attribute-shorthand.md)
+- [vue/prefer-true-attribute-shorthand](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/prefer-true-attribute-shorthand.md)
 
 ## :rocket: Version
 

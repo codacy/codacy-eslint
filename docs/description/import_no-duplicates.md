@@ -103,7 +103,7 @@ import { CValue, type CType } from './papa-mia'
 
 ## When Not To Use It
 
-If the core ESLint version is good enough (i.e. you're _not_ using Flow and you _are_ using [`import/extensions`](./extensions.md)), keep it and don't use this.
+If the core ESLint version is good enough (i.e. you're _not_ using Flow and you _are_ using [`import/extensions`](https://github.com/un-es/eslint-plugin-i/tree/fork-release/docs/rules/extensions.md)), keep it and don't use this.
 
 If you like to split up imports across lines or may need to import a default and a namespace,
 you may not want to enable this rule.

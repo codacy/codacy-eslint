@@ -220,8 +220,8 @@ This rule will enforce consistency of line break after the `<!--` and before the
 
 ## :couple: Related Rules
 
-- [vue/html-comment-indent](./html-comment-indent.md)
-- [vue/html-comment-content-spacing](./html-comment-content-spacing.md)
+- [vue/html-comment-indent](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/html-comment-indent.md)
+- [vue/html-comment-content-spacing](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/html-comment-content-spacing.md)
 - [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
 
 ## :rocket: Version

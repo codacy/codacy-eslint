@@ -8,7 +8,6 @@ import { defaultOptions } from "./eslintDefaultOptions"
 import { debug, DEBUG } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
 import { toolName } from "./toolMetadata"
-import {default as allPatterns} from "../docs/patterns.json"
 
 export function createEslintConfig(
   srcDirPath: string,
@@ -17,15 +16,18 @@ export function createEslintConfig(
   debug("config: creating")
 
   const defaultFilesToAnalyze = [
-    srcDirPath + "/**/*.ts",
-    srcDirPath + "/**/*.tsx",
-    srcDirPath + "/**/*.js",
-    srcDirPath + "/**/*.jsx",
-    srcDirPath + "/**/*.json"
+    `${srcDirPath}/**/*.ts`,
+    `${srcDirPath}/**/*.tsx`,
+    `${srcDirPath}/**/*.js`,
+    `${srcDirPath}/**/*.jsx`,
+    `${srcDirPath}/**/*.json`
   ]
 
-  const options = (!isEslintrcConfigPresent(srcDirPath)) ? generateEslintOptions(srcDirPath, codacyrc) : {}
-  const files = codacyrc?.files?.length > 0 ? codacyrc.files : defaultFilesToAnalyze
+  const useGenerateEslintOptions = !isEslintrcConfigPresent(srcDirPath) && (codacyrc?.tools?.[0]?.patterns?.length !== 0 || DEBUG)
+  const useDefaultFilesToAnalyze = !(codacyrc?.files?.length !== 0)
+
+  const options = useGenerateEslintOptions ? generateEslintOptions(srcDirPath, codacyrc) : {}
+  const files = useDefaultFilesToAnalyze ? defaultFilesToAnalyze : codacyrc.files
 
   debug("config: finished")
   return [options, files]
@@ -33,16 +35,12 @@ export function createEslintConfig(
 
 function generateEslintOptions(
   srcDirPath: string,
-  codacyrc?: Codacyrc,
+  codacyrc: Codacyrc,
 ): ESLint.Options {
   debug("options: creating")
   
   const tsconfigFile = "tsconfig.json"
-  const eslintTool = codacyrc?.tools?.find((tool) => tool.name === toolName)
-
-  if (!DEBUG && !eslintTool) {
-    return {}
-  }
+  const eslintTool = codacyrc?.tools?.[0]
 
   if (DEBUG && eslintTool?.patterns) {
     debug("options: " + eslintTool.patterns.length + " patterns to process")
@@ -58,7 +56,7 @@ function generateEslintOptions(
     options.baseConfig.overrides[0].parserOptions.project = "/" + tsconfigFile
   }
 
-  if (eslintTool?.patterns?.length > 0) {
+  if (eslintTool?.patterns?.length) {
     //TODO: move this logic to a generic (or specific) plugin function
 
     // There are some plugins that their rules should only apply for
@@ -75,7 +73,7 @@ function generateEslintOptions(
     )
 
     // configure override in case storybook plugin rules being turned on
-    if (storybookPatterns.length > 0) {
+    if (storybookPatterns.length) {
       debug("options: setting " + storybookPatterns.length + " storybook patterns")
       options.baseConfig.overrides.push({
         files: [
@@ -87,7 +85,7 @@ function generateEslintOptions(
     }
 
     // explicitly use only the rules being passed by codacyrc
-    if (otherPatterns.length > 0) {
+    if (otherPatterns.length) {
       debug("options: setting " + otherPatterns.length + " patterns")
       options.baseConfig.rules = convertPatternsToEslintRules(otherPatterns)
     }
@@ -135,6 +133,7 @@ function isEslintrcConfigPresent(srcDirPath: string): boolean {
   debug("options: check if configuration file exists in " + srcDirPath)
 
   const confFilenames = [
+    ".eslintrc",
     ".eslintrc.js",
     ".eslintrc.cjs",
     ".eslintrc.yaml",
@@ -157,6 +156,11 @@ function retrieveAllCodacyPatterns(): Pattern[] {
   debug("options: getting all patterns")
 
   const patterns = []
+
+  const allPatterns = require("../docs/patterns.json")
+
+  if (!allPatterns.patterns) return patterns
+  
   allPatterns.patterns
     .filter((pattern) =>
       !isBlacklisted(pattern.patternId)

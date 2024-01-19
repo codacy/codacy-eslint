@@ -124,4 +124,4 @@ const foo = utils.lastElement(bar); // Fails
 
 ## Related rules
 
-- [unicorn/prefer-negative-index](./prefer-negative-index.md)
+- [unicorn/prefer-negative-index](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/prefer-negative-index.md)
