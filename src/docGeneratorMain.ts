@@ -46,10 +46,10 @@ async function main() {
     "@shopify"
   )
 
-  // await docGenerator.downloadDocs(
-  //   "/eslint-stylistic/eslint-stylistic/main/",
-  //   "@stylistic"
-  // )
+  await docGenerator.downloadDocs(
+    "/eslint-stylistic/eslint-stylistic/main/",
+    "@stylistic"
+  )
 
   await docGenerator.downloadDocs(
     "/typescript-eslint/typescript-eslint/main/packages/eslint-plugin/docs/rules/",

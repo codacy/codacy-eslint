@@ -107,7 +107,7 @@ export class DocGenerator {
       const descriptionParameters = patternsParameters?.map(
         (p) => new DescriptionParameter(p.name, p.name)
       )
-      
+
       return new DescriptionEntry(
         patternIdToCodacy(patternId),
         patternTitle(patternId),

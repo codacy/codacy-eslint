@@ -9,7 +9,7 @@ const packageNames = [
   "@salesforce/eslint-plugin-aura",
   "@salesforce/eslint-plugin-lightning",
   "@shopify/eslint-plugin",
-  //"@stylistic/eslint-plugin",
+  "@stylistic/eslint-plugin",
   "@tanstack/eslint-plugin-query",
   "@typescript-eslint/eslint-plugin",
   "eslint-plugin-awscdk",
