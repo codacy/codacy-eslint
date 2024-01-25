@@ -124,12 +124,6 @@ export class DocGenerator {
     })
 
     console.log("Descriptions: ", descriptions.length)
-    descriptions
-      .filter((description) => description.patternId.startsWith("@stylistic"))
-      .slice(0, 10)
-      .forEach((description) => {
-        console.log(description)
-      })
     return descriptions
   }
 
