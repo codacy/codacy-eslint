@@ -204,36 +204,33 @@ export class DocGenerator {
         : this.eslintPatternIds()
 
 
-    if (prefix === "@stylistic") {
-      const promises: Promise<void>[] = require("@eslint-stylistic/metadata").rules
-        .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
-        .map(async (rule: RuleInfo) => {
-          const url = new URL(relativeUrl + rule.docsEntry)
+    const promises: Promise<void>[] = (prefix === "@stylistic")
+      ? require("@eslint-stylistic/metadata").rules
+          .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
+          .map(async (rule: RuleInfo) => {
+            const url = new URL(relativeUrl + rule.docsEntry)
+            try {
+              return this.createDescriptionFile(url, relativeUrl, prefix, rule.name)
+            } catch (error) {
+              const message = `Failed to retrieve docs for ${rule.ruleId} from ${relativeUrl}${rule.docsEntry}`
+              if (rejectOnError) {
+                return Promise.reject(message)
+              }
+              console.error(message)
+            }
+          })
+      : patterns.map(async (pattern: string) => {
+          const url = new URL(relativeUrl + pattern + ".md")
           try {
-            this.createDescriptionFile(url, relativeUrl, prefix, rule.name)
+            return this.createDescriptionFile(url, relativeUrl, prefix, pattern)
           } catch (error) {
-            const message = `Failed to retrieve docs for ${rule.ruleId} from ${relativeUrl}${rule.docsEntry}`
+            const message = `Failed to retrieve docs for ${pattern} from ${relativeUrl}${pattern}.md`
             if (rejectOnError) {
               return Promise.reject(message)
             }
             console.error(message)
           }
         })
-      return Promise.all(promises)
-    }
-
-    const promises: Promise<void>[] = patterns.map(async (pattern: string) => {
-      const url = new URL(relativeUrl + pattern + ".md")
-      try {
-        this.createDescriptionFile(url, relativeUrl, prefix, pattern)
-      } catch (error) {
-        const message = `Failed to retrieve docs for ${pattern} from ${relativeUrl}${pattern}.md`
-        if (rejectOnError) {
-          return Promise.reject(message)
-        }
-        console.error(message)
-      }
-    })
     return Promise.all(promises)
   }
 
