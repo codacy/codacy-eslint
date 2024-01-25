@@ -2741,7 +2741,12 @@
       "patternId": "@stylistic_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2756,6 +2761,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
         {
           "name": "requireForBlockBody",
           "default": false
@@ -2783,7 +2792,12 @@
       "patternId": "@stylistic_block-spacing",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2791,6 +2805,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "1tbs"
+        },
         {
           "name": "allowSingleLine",
           "default": false
@@ -2802,7 +2820,12 @@
       "patternId": "@stylistic_comma-dangle",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2825,7 +2848,12 @@
       "patternId": "@stylistic_comma-style",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "last"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2833,6 +2861,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        },
         {
           "name": "enforceForClassMembers",
           "default": true
@@ -2844,7 +2876,12 @@
       "patternId": "@stylistic_dot-location",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "property"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2902,6 +2939,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": 2
+        },
+        {
           "name": "SwitchCase",
           "default": 0
         },
@@ -2924,7 +2965,12 @@
       "patternId": "@stylistic_jsx-quotes",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "prefer-double"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3182,7 +3228,12 @@
       "patternId": "@stylistic_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3212,14 +3263,24 @@
       "patternId": "@stylistic_operator-linebreak",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "after"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "@stylistic_padded-blocks",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3240,7 +3301,12 @@
       "patternId": "@stylistic_quotes",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "double"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3254,7 +3320,12 @@
       "patternId": "@stylistic_semi",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3284,21 +3355,36 @@
       "patternId": "@stylistic_space-before-blocks",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "@stylistic_space-before-function-paren",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "@stylistic_space-in-parens",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3333,7 +3419,12 @@
       "patternId": "@stylistic_spaced-comment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3371,6 +3462,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "outside"
+        },
         {
           "name": "functionPrototypeMethods",
           "default": false
@@ -9798,7 +9893,7 @@
       "parameters": [
         {
           "name": "unnamedParam",
-          "default": 4
+          "default": 2
         },
         {
           "name": "SwitchCase",

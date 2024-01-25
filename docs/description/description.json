@@ -2735,7 +2735,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_array-bracket-spacing",
     "title": "@stylistic: Array bracket spacing",
     "description": "Enforce consistent spacing inside array brackets",
@@ -2750,6 +2755,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "requireForBlockBody",
         "description": "requireForBlockBody"
@@ -2777,7 +2786,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_block-spacing",
     "title": "@stylistic: Block spacing",
     "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
@@ -2785,6 +2799,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "allowSingleLine",
         "description": "allowSingleLine"
@@ -2796,7 +2814,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_comma-dangle",
     "title": "@stylistic: Comma dangle",
     "description": "Require or disallow trailing commas",
@@ -2819,7 +2842,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_comma-style",
     "title": "@stylistic: Comma style",
     "description": "Enforce consistent comma style",
@@ -2827,6 +2855,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "enforceForClassMembers",
         "description": "enforceForClassMembers"
@@ -2838,7 +2870,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_dot-location",
     "title": "@stylistic: Dot location",
     "description": "Enforce consistent newlines before and after dots",
@@ -2896,6 +2933,10 @@
   {
     "parameters": [
       {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
         "name": "SwitchCase",
         "description": "SwitchCase"
       },
@@ -2918,7 +2959,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_jsx-quotes",
     "title": "@stylistic: Jsx quotes",
     "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
@@ -3176,7 +3222,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_object-curly-spacing",
     "title": "@stylistic: Object curly spacing",
     "description": "Enforce consistent spacing inside braces",
@@ -3206,14 +3257,24 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_operator-linebreak",
     "title": "@stylistic: Operator linebreak",
     "description": "Enforce consistent linebreak style for operators",
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_padded-blocks",
     "title": "@stylistic: Padded blocks",
     "description": "Require or disallow padding within blocks",
@@ -3234,7 +3295,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_quotes",
     "title": "@stylistic: Quotes",
     "description": "Enforce the consistent use of either backticks, double, or single quotes",
@@ -3248,7 +3314,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_semi",
     "title": "@stylistic: Semi",
     "description": "Require or disallow semicolons instead of ASI",
@@ -3278,21 +3349,36 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_space-before-blocks",
     "title": "@stylistic: Space before blocks",
     "description": "Enforce consistent spacing before blocks",
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_space-before-function-paren",
     "title": "@stylistic: Space before function paren",
     "description": "Enforce consistent spacing before function parenthesis",
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_space-in-parens",
     "title": "@stylistic: Space in parens",
     "description": "Enforce consistent spacing inside parentheses",
@@ -3327,7 +3413,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "@stylistic_spaced-comment",
     "title": "@stylistic: Spaced comment",
     "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
@@ -3365,6 +3456,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "functionPrototypeMethods",
         "description": "functionPrototypeMethods"

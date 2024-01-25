@@ -61,7 +61,7 @@ export class DocGenerator {
 
     const namedParameters = schema
       ? DocGenerator.fromEslintSchemaToParameters(patternId, schema)
-      : []
+      : undefined
 
     if (namedParameters && unnamedParameter)
       return [unnamedParameter, ...namedParameters]
@@ -182,6 +182,7 @@ export class DocGenerator {
   }
 
   async generateDescriptionFile (): Promise<void> {
+    console.log("Generate description.json")
     const descriptions = this.generateDescriptionEntries()
 
     if (!descriptions.length) return
@@ -194,6 +195,7 @@ export class DocGenerator {
   }
 
   async generatePatternsFile (): Promise<void> {
+    console.log("Generate patterns.json")
     await this.writeFileInJson(
       this.docsDirectory + "patterns.json",
       this.generatePatterns()
@@ -269,12 +271,10 @@ ${modules}
   }
 
   private async emptyDocsDescriptionFolder (): Promise<void> {
-    console.log(`Empty ${this.docsDescriptionDirectory} folder`)
     await fs.emptyDir(this.docsDescriptionDirectory)
   }
 
   private async writeFileInJson (file: string, json: Specification | DescriptionEntry[]): Promise<void> {
-    console.log("Generate " + file.split("/").pop())
     await writeFile(file, JSON.stringify(json, null, 2) + EOL)
   }
 }
