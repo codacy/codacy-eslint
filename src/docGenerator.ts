@@ -36,6 +36,7 @@ export class DocGenerator {
         !isBlacklistedOnlyFromDocumentation(patternId)
         && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
     )
+    console.log("Rules: ", this.rules.length)
     this.emptyDocsDescriptionFolder()
   }
  
@@ -98,7 +99,8 @@ export class DocGenerator {
   }
 
   generateDescriptionEntries (): DescriptionEntry[] {
-    const descriptions = this.rules.flatMap(([patternId, ruleModule]) => {
+    const descriptions: DescriptionEntry[] = []
+    this.rules.forEach(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const description = meta?.docs?.description
         ? capitalize(meta.docs.description)
@@ -112,15 +114,22 @@ export class DocGenerator {
         (p) => new DescriptionParameter(p.name, p.name)
       )
 
-      return new DescriptionEntry(
+      descriptions.push(new DescriptionEntry(
         patternIdToCodacy(patternId),
         patternTitle(patternId),
         description,
         timeToFix,
         descriptionParameters
-      )
+      ))
     })
 
+    console.log("Descriptions: ", descriptions.length)
+    descriptions
+      .filter((description) => description.patternId.startsWith("@stylistic"))
+      .slice(0, 10)
+      .forEach((description) => {
+        console.log(description)
+      })
     return descriptions
   }
 
@@ -203,34 +212,34 @@ export class DocGenerator {
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
 
-
-    const promises: Promise<void>[] = (prefix === "@stylistic")
+    const promises: Promise<void>[] = prefix === "@stylistic"
       ? require("@eslint-stylistic/metadata").rules
-          .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
-          .map(async (rule: RuleInfo) => {
-            const url = new URL(relativeUrl + rule.docsEntry)
-            try {
-              return this.createDescriptionFile(url, relativeUrl, prefix, rule.name)
-            } catch (error) {
-              const message = `Failed to retrieve docs for ${rule.ruleId} from ${relativeUrl}${rule.docsEntry}`
-              if (rejectOnError) {
-                return Promise.reject(message)
-              }
-              console.error(message)
-            }
-          })
-      : patterns.map(async (pattern: string) => {
-          const url = new URL(relativeUrl + pattern + ".md")
+        .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
+        .map((rule: RuleInfo) => {
+          const pattern = rule.name
+          const url = new URL(relativeUrl + rule.docsEntry)
           try {
             return this.createDescriptionFile(url, relativeUrl, prefix, pattern)
           } catch (error) {
-            const message = `Failed to retrieve docs for ${pattern} from ${relativeUrl}${pattern}.md`
+            const message = `Failed to retrieve docs for ${pattern} from ${url.pathname}`
             if (rejectOnError) {
               return Promise.reject(message)
             }
             console.error(message)
           }
         })
+      : patterns.map((pattern: string) => {
+        const url = new URL(relativeUrl + pattern + ".md")
+        try {
+          return this.createDescriptionFile(url, relativeUrl, prefix, pattern)
+        } catch (error) {
+          const message = `Failed to retrieve docs for ${pattern} from ${url.pathname}`
+          if (rejectOnError) {
+            return Promise.reject(message)
+          }
+          console.error(message)
+        }
+      })
     return Promise.all(promises)
   }
 

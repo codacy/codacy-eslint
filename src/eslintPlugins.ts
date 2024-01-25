@@ -108,7 +108,7 @@ const packageNames = [
   "eslint-plugin-you-dont-need-lodash-underscore"
 ]
 
-const plugins = packageNames.map(packageName => {
+const plugins = packageNames.map((packageName) => {
   const rules: Rule.RuleModule = require(packageName).rules
   const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, "")
 
@@ -119,9 +119,9 @@ export const pluginsNames = plugins.map(plugin => plugin.name)
 
 const baseRules = Array.from(new Linter().getRules().entries())
 const pluginsRules = plugins
-  .filter(plugin => plugin.rules)
-  .flatMap(plugin =>
-    Object.entries(plugin.rules).map(([patternId, rule]) => [
+  .filter((plugin) => plugin.rules)
+  .flatMap((plugin) => Object.entries(plugin.rules)
+    .map(([patternId, rule]) => [
       `${plugin.name}/${patternId}`,
       rule
     ])
