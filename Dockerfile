@@ -1,10 +1,10 @@
 FROM node:lts-alpine3.19 as builder
 
-COPY src src
-COPY docs docs
-COPY package.json ./
-COPY package-lock.json ./
-COPY tsconfig.json ./
+COPY src ./src
+COPY docs ./docs
+COPY package.json .
+COPY package-lock.json .
+COPY tsconfig.json .
 
 RUN npm install --legacy-peer-deps --omit=dev &&\
     npm cache clean --force &&\
@@ -13,10 +13,10 @@ RUN npm install --legacy-peer-deps --omit=dev &&\
 
 FROM node:lts-alpine3.19
 
-COPY --from=builder dist dist
-COPY --from=builder docs docs
-COPY --from=builder node_modules node_modules
-COPY tsconfig.src.json ./tsconfig.json
+COPY --from=builder dist ./dist
+COPY --from=builder docs ./docs 
+COPY --from=builder node_modules ./node_modules
+COPY tsconfig.src.json /tsconfig.json
 
 RUN adduser -u 2004 -D docker &&\
     chown -R docker:docker /dist /docs /tsconfig.json &&\
