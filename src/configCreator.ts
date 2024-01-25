@@ -1,15 +1,15 @@
-import { Codacyrc, Parameter, ParameterValue, Pattern } from "codacy-seed"
-import { ESLint, Linter } from "eslint"
-import { existsSync } from "fs-extra"
-import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
+import {Codacyrc, Parameter, ParameterSpec, Pattern} from "codacy-seed"
+import {ESLint, Linter} from "eslint"
+import {existsSync} from "fs-extra"
+import {cloneDeep, fromPairs, isEmpty, partition} from "lodash"
 
-import { isBlacklisted } from "./blacklist"
-import { defaultOptions } from "./eslintDefaultOptions"
-import { debug, DEBUG } from "./logging"
-import { patternIdToEslint } from "./model/patterns"
-import { toolName } from "./toolMetadata"
+import {isBlacklisted} from "./blacklist"
+import {DocGenerator} from "./docGenerator"
+import {defaultOptions} from "./eslintDefaultOptions"
+import {DEBUG, debug} from "./logging"
+import {patternIdToEslint} from "./model/patterns"
 
-export function createEslintConfig(
+export function createEslintConfig (
   srcDirPath: string,
   codacyrc?: Codacyrc
 ): [ESLint.Options, string[]] {
@@ -33,9 +33,9 @@ export function createEslintConfig(
   return [options, files]
 }
 
-function generateEslintOptions(
+function generateEslintOptions (
   srcDirPath: string,
-  codacyrc: Codacyrc,
+  codacyrc: Codacyrc
 ): ESLint.Options {
   debug("options: creating")
   
@@ -49,7 +49,7 @@ function generateEslintOptions(
     }
   }
 
-  let options = cloneDeep(defaultOptions)
+  const options = cloneDeep(defaultOptions)
 
   if (!existsSync(srcDirPath + "/" + tsconfigFile)) {
     debug("options: use tsconfig from tool")
@@ -78,9 +78,9 @@ function generateEslintOptions(
       options.baseConfig.overrides.push({
         files: [
           "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-          "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
+          "*.story.@(ts|tsx|js|jsx|mjs|cjs)"
         ],
-        rules: convertPatternsToEslintRules(storybookPatterns),
+        rules: convertPatternsToEslintRules(storybookPatterns)
       })
     }
 
@@ -89,21 +89,20 @@ function generateEslintOptions(
       debug("options: setting " + otherPatterns.length + " patterns")
       options.baseConfig.rules = convertPatternsToEslintRules(otherPatterns)
     }
-  }
-  else if (DEBUG) {
+  } else if (DEBUG) {
     options.baseConfig.rules = convertPatternsToEslintRules(retrieveAllCodacyPatterns())
   }
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
   options.resolvePluginsRelativeTo = "/"
-  options.useEslintrc = (eslintTool?.patterns?.length === 0)
+  options.useEslintrc = eslintTool?.patterns?.length === 0
 
   debug("options: finished")
   return options
 }
 
-function convertPatternsToEslintRules(patterns: Pattern[]): {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+function convertPatternsToEslintRules (patterns: Pattern[]): {
+  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 } {
   const pairs = patterns.map((pattern: Pattern) => {
     const patternId = patternIdToEslint(pattern.patternId)
@@ -129,7 +128,7 @@ function convertPatternsToEslintRules(patterns: Pattern[]): {
   return fromPairs(pairs)
 }
 
-function isEslintrcConfigPresent(srcDirPath: string): boolean {
+function isEslintrcConfigPresent (srcDirPath: string): boolean {
   debug("options: check if configuration file exists in " + srcDirPath)
 
   const confFilenames = [
@@ -152,29 +151,28 @@ function isEslintrcConfigPresent(srcDirPath: string): boolean {
   return false
 }
 
-function retrieveAllCodacyPatterns(): Pattern[] {
+function retrieveAllCodacyPatterns (): Pattern[] {
   debug("options: getting all patterns")
 
   const patterns = []
-
-  const allPatterns = require("../docs/patterns.json")
-
-  if (!allPatterns.patterns) return patterns
-  
-  allPatterns.patterns
-    .filter((pattern) =>
-      !isBlacklisted(pattern.patternId)
-      && (!DEBUG || pattern.patternId != "spellcheck_spell-checker")
+  const plugins = require("./eslintPlugins")
+  plugins
+    .allRules
+    .filter(([patternId]) =>
+      !isBlacklisted(patternId)
+      // problems with the path generated (win vs nix) for this specific pattern
+      && (!DEBUG || patternId != "spellcheck_spell-checker")
     )
-    .map((pattern: { patternId: string; parameters: any }) => {
+    .map(([patternId, rule]) => {
       patterns.push(new Pattern(
-        pattern.patternId,
-        pattern.parameters.map((parameter: { name: string; default: ParameterValue }) => {
-          return new Parameter(
-            parameter.name,
-            parameter.default
-          )
-        })
+        patternId,
+        DocGenerator.generateParameters(patternId, rule.schema)
+          .map((parameterSpec: ParameterSpec): Parameter => {
+            return new Parameter(
+              parameterSpec.name,
+              parameterSpec.default
+            )
+          })
       ))
     })
 

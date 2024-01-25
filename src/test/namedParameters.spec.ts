@@ -1,8 +1,8 @@
-import { deepEqual } from "assert"
-import { ParameterSpec } from "codacy-seed"
-import { JSONSchema4 } from "json-schema"
+import {deepEqual} from "assert"
+import {ParameterSpec} from "codacy-seed"
+import {JSONSchema4} from "json-schema"
 
-import { fromSchemaArray } from "../namedParameters"
+import {fromSchemaArray} from "../namedParameters"
 
 describe("namedParameters", () => {
   describe("fromSchemaArray", () => {

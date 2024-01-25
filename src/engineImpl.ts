@@ -1,10 +1,10 @@
-import { Codacyrc, Engine, ToolResult } from "codacy-seed"
-import { ESLint } from "eslint"
+import {Codacyrc, Engine, ToolResult} from "codacy-seed"
+import {ESLint} from "eslint"
 import fs from "fs"
 
-import { createEslintConfig } from "./configCreator"
-import { convertResults } from "./convertResults"
-import { DEBUG, debug } from "./logging"
+import {createEslintConfig} from "./configCreator"
+import {convertResults} from "./convertResults"
+import {DEBUG, debug} from "./logging"
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
@@ -36,7 +36,7 @@ export const engineImpl: Engine = async function (
   return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
 }
 
-async function lintFilesInChunks(eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
+async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
   //-- without chunks
   //return await eslint.lintFiles(files)
 
@@ -49,18 +49,18 @@ async function lintFilesInChunks(eslint: ESLint, files: string[]): Promise<ESLin
   return lintFilesChunkByChunk(eslint, chunksOfFiles)
 }
 
-async function lintFilesChunkByChunk(eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
+async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
   debug("engine: linting chunks started")
   const lintResults = []
   for (const chunkOfFiles of chunksOfFiles) {
-    lintResults.push(...(await eslint.lintFiles(chunkOfFiles)))
+    lintResults.push(...await eslint.lintFiles(chunkOfFiles))
   }
   debug("engine: linting chunks finished")
 
   return lintResults
 }
 
-async function debugAndCountLintIssues(eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
+async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
   if (!DEBUG) return
 
   let nIssues = 0
@@ -71,6 +71,7 @@ async function debugAndCountLintIssues(eslint: ESLint, lintResults: ESLint.LintR
   }
   debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
 }
+
 /*
 const chunkFilesByCount = (files: string[], size: number) =>
   Array.from({ length: Math.ceil(files.length / size) }, (, i: number) =>
@@ -78,7 +79,7 @@ const chunkFilesByCount = (files: string[], size: number) =>
   )
 */
 
-function chunkFilesByTotalSize(files: string[], maxChunkSize: number): string[][] {
+function chunkFilesByTotalSize (files: string[], maxChunkSize: number): string[][] {
   const chunks: string[][] = []
   let currentChunk: string[] = []
   let currentChunkSize = 0

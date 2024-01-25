@@ -7,3 +7,4 @@ tsconfig.tsbuildinfo
 .vscode
 .codarcyrc
 /tests
+.eslintcache

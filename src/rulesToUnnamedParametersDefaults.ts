@@ -1,4 +1,6 @@
-export const rulesToUnnamedParametersDefaults = new Map<string, any>([
+import {JSONSchema4Type} from "json-schema"
+
+export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>([
   ["array-bracket-spacing", "never"],
   ["arrow-parens", "always"],
   ["block-spacing", "always"],
@@ -44,22 +46,22 @@ export const rulesToUnnamedParametersDefaults = new Map<string, any>([
   ["vue/brace-style", "1tbs"],
   ["vue/sort-keys", "asc"],
   ["wrap-iife", "outside"],
-  ["yoda", "never"],
+  ["yoda", "never"]
 ])
 
 export class rulesNamedParametersAndDefaults {
-  private static readonly array: [string, string, any][] = [
+  private static readonly array: [string, string, JSONSchema4Type][] = [
     ["ember/no-restricted-service-injections", "paths", [""]],
     ["ember/no-restricted-service-injections", "services", [""]],
     [
       "ember/no-restricted-service-injections",
       "message",
-      "Injecting this service is not allowed from this file.",
+      "Injecting this service is not allowed from this file."
     ],
     ["indent", "ArrayExpression", 1],
-    ["indent", "CallExpression", { arguments: 1 }],
-    ["indent", "FunctionDeclaration", { parameters: 1, body: 1 }],
-    ["indent", "FunctionExpression", { parameters: 1, body: 1 }],
+    ["indent", "CallExpression", {arguments: 1}],
+    ["indent", "FunctionDeclaration", {parameters: 1, body: 1}],
+    ["indent", "FunctionExpression", {parameters: 1, body: 1}],
     ["indent", "ignoredNodes", []],
     ["indent", "ImportDeclaration", 1],
     ["indent", "MemberExpression", 1],
@@ -80,24 +82,24 @@ export class rulesNamedParametersAndDefaults {
     [
       "sort-imports-es6-autofix/sort-imports-es6",
       "memberSyntaxSortOrder",
-      ["none", "all", "multiple", "single"],
+      ["none", "all", "multiple", "single"]
     ],
     ["testing-library/consistent-data-testid", "testIdPattern", ""],
     ["testing-library/consistent-data-testid", "customMessage", ""]
   ]
 
-  static has(patternId: string, parameter: string): boolean {
+  static has (patternId: string, parameter: string): boolean {
     return this.array.some(
-      ([pId, param, ]) => pId === patternId && param === parameter
+      ([pId, param ]) => pId === patternId && param === parameter
     )
   }
 
-  static parameter(
+  static parameter (
     patternId: string,
     parameter: string
-  ): [string, any] | undefined {
+  ): [string, JSONSchema4Type] | undefined {
     const e = this.array.find(
-      ([pId, param, ]) => pId === patternId && param === parameter
+      ([pId, param ]) => pId === patternId && param === parameter
     )
     return e ? [parameter, e[2]] : undefined
   }

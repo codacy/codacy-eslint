@@ -1,7 +1,7 @@
-import { deepStrictEqual } from "assert"
-import { Linter, Rule } from "eslint"
+import {deepStrictEqual} from "assert"
+import {Linter, Rule} from "eslint"
 
-import { computeSuggestion } from "../computeSuggestion"
+import {computeSuggestion} from "../computeSuggestion"
 
 describe("computeSuggestion", () => {
   const source =
@@ -10,11 +10,11 @@ describe("computeSuggestion", () => {
   it("should generate a suggestion using fix", () => {
     const fix: Rule.Fix = {
       range: [21, 23],
-      text: " ",
+      text: " "
     }
 
     const result = computeSuggestion(source, line, undefined, fix, undefined)
-    const expectedResult = 'if(foo === "bar") {'
+    const expectedResult = "if(foo === \"bar\") {"
 
     deepStrictEqual(result, expectedResult)
   })
@@ -24,16 +24,16 @@ describe("computeSuggestion", () => {
         desc: "First suggestion",
         fix: {
           range: [21, 23],
-          text: " ",
-        },
+          text: " "
+        }
       },
       {
         desc: "Second suggestion",
         fix: {
           range: [10, 12],
-          text: "hello",
-        },
-      },
+          text: "hello"
+        }
+      }
     ]
 
     const result = computeSuggestion(
@@ -43,27 +43,27 @@ describe("computeSuggestion", () => {
       undefined,
       suggestions
     )
-    const expectedResult = 'if(foo === "bar") {'
+    const expectedResult = "if(foo === \"bar\") {"
 
     deepStrictEqual(result, expectedResult)
   })
   it("should use fix when both fix and suggestions are defined", () => {
     const fix: Rule.Fix = {
       range: [21, 23],
-      text: " ",
+      text: " "
     }
     const suggestions: Linter.LintSuggestion[] = [
       {
         desc: "A suggestion",
         fix: {
           range: [10, 12],
-          text: "hello",
-        },
-      },
+          text: "hello"
+        }
+      }
     ]
 
     const result = computeSuggestion(source, line, undefined, fix, suggestions)
-    const expectedResult = 'if(foo === "bar") {'
+    const expectedResult = "if(foo === \"bar\") {"
 
     deepStrictEqual(result, expectedResult)
   })
@@ -86,7 +86,7 @@ describe("computeSuggestion", () => {
   it("should return undefined when the suggestion is multiline", () => {
     const fix: Rule.Fix = {
       range: [21, 23],
-      text: " ",
+      text: " "
     }
     const result = computeSuggestion(source, line, 4, fix, [])
 
@@ -95,7 +95,7 @@ describe("computeSuggestion", () => {
   it("should return undefined when the suggestion has wrong range", () => {
     const fix: Rule.Fix = {
       range: [30, 21],
-      text: " ",
+      text: " "
     }
     const result = computeSuggestion(source, line, undefined, fix, [])
 
@@ -105,7 +105,7 @@ describe("computeSuggestion", () => {
     {
       const fix: Rule.Fix = {
         range: [-1, 23],
-        text: " ",
+        text: " "
       }
       const result = computeSuggestion(source, line, undefined, fix, undefined)
 
@@ -114,7 +114,7 @@ describe("computeSuggestion", () => {
     {
       const fix: Rule.Fix = {
         range: [21, source.length],
-        text: " ",
+        text: " "
       }
       const result = computeSuggestion(source, line, undefined, fix, undefined)
       deepStrictEqual(result, undefined)

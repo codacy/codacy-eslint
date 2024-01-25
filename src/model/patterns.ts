@@ -1,4 +1,4 @@
-import { Category, Level, SecuritySubcategory } from "codacy-seed"
+import {Category, Level, SecuritySubcategory} from "codacy-seed"
 
 const securityPlugins = [
   "scanjs-rules",
@@ -8,7 +8,7 @@ const securityPlugins = [
   "xss"
 ]
 
-export function translateLevelAndCategory(
+export function translateLevelAndCategory (
   patternId: string,
   type?: string
 ): [Level, Category, SecuritySubcategory?] {
@@ -19,7 +19,7 @@ export function translateLevelAndCategory(
   return [translateLevel(type), translateCategory(type), undefined]
 }
 
-function translateCategory(
+function translateCategory (
   type?: string
 ): Category {
   switch (type) {
@@ -34,7 +34,7 @@ function translateCategory(
   }
 }
 
-function getSecuritySubcategory(patternId: string): SecuritySubcategory | undefined {
+function getSecuritySubcategory (patternId: string): SecuritySubcategory | undefined {
   if (patternId.includes("csrf")) return "CSRF"
   if (patternId.includes("injection")) return "CommandInjection"
   if (patternId.includes("crypto")) return "Cryptography"
@@ -50,7 +50,7 @@ function getSecuritySubcategory(patternId: string): SecuritySubcategory | undefi
   return undefined
 }
 
-function translateCategoryLegacy(
+function translateCategoryLegacy (
   category?: string
 ): Category {
   switch (category) {
@@ -71,7 +71,7 @@ function translateCategoryLegacy(
   }
 }
 
-function translateLevel(
+function translateLevel (
   type?: string
 ): Level {
   switch (type) {
@@ -86,7 +86,7 @@ function translateLevel(
   }
 }
 
-function translateLevelLegacy(category?: string): Level {
+function translateLevelLegacy (category?: string): Level {
   switch (category) {
     case "Possible Errors":
     case "Strict Mode":
@@ -104,10 +104,10 @@ function translateLevelLegacy(category?: string): Level {
   }
 }
 
-export function patternIdToCodacy(patternId: string): string {
+export function patternIdToCodacy (patternId: string): string {
   return patternId.replace(/_/g, "__").replace(/\//g, "_")
 }
 
-export function patternIdToEslint(patternId: string): string {
+export function patternIdToEslint (patternId: string): string {
   return patternId.replace(/([^_])_([^_])/g, "$1/$2").replace(/__/g, "_")
 }

@@ -1,10 +1,10 @@
-import { ParameterSpec } from "codacy-seed"
-import { JSONSchema4 } from "json-schema"
-import { flatMap, toPairs } from "lodash"
+import {ParameterSpec} from "codacy-seed"
+import {JSONSchema4, JSONSchema4Type} from "json-schema"
+import {flatMap, toPairs} from "lodash"
 
-import { rulesNamedParametersAndDefaults } from "./rulesToUnnamedParametersDefaults"
+import {rulesNamedParametersAndDefaults} from "./rulesToUnnamedParametersDefaults"
 
-export function fromSchemaArray(
+export function fromSchemaArray (
   patternId: string,
   objects: JSONSchema4[]
 ): ParameterSpec[] {
@@ -14,16 +14,16 @@ export function fromSchemaArray(
     const manual = pairs.filter(
       ([k, v]) => v && rulesNamedParametersAndDefaults.has(patternId, k)
     )
-    const automaticParameters: [string, any][] = haveDefault.map(([k, v]) => [
+    const automaticParameters: [string, JSONSchema4Type][] = haveDefault.map(([k, v]) => [
       k,
-      v.default,
+      v.default
     ])
-    const manualParameters: [string, any][] = manual
-      .map(([k, ]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
-      .filter((e) => e) as [string, any][]
+    const manualParameters: [string, JSONSchema4Type][] = manual
+      .map(([k ]) => rulesNamedParametersAndDefaults.parameter(patternId, k))
+      .filter((e) => e) as [string, JSONSchema4Type][]
     const allParametersMap = new Map([
       ...automaticParameters,
-      ...manualParameters,
+      ...manualParameters
     ])
     return Array.from(allParametersMap.entries()).map(
       ([k, v]) => new ParameterSpec(k, v)

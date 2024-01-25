@@ -1,20 +1,20 @@
-import { EOL } from "node:os"
+import {EOL} from "node:os"
 
-import { writeFile } from "codacy-seed"
+import {DescriptionEntry, Specification, writeFile} from "codacy-seed"
 
-import { DocGenerator } from "./docGenerator"
-import { allRules } from "./eslintPlugins"
+import {DocGenerator} from "./docGenerator"
+import {allRules} from "./eslintPlugins"
 
 main()
 
-async function main() {
+async function main () {
   const docGenerator = new DocGenerator(allRules)
 
-  await writeJsonFile(
+  await writeFileInJson(
     "docs/patterns.json",
     docGenerator.generatePatterns()
   )
-  await writeJsonFile(
+  await writeFileInJson(
     "docs/description/description.json",
     docGenerator.generateDescriptionEntries()
   )
@@ -334,7 +334,7 @@ async function main() {
 
 }
 
-function writeJsonFile(file: string, json: any): Promise<void> {
-  console.log("Generate " + file.split('/').pop())
+function writeFileInJson (file: string, json: Specification | DescriptionEntry[]): Promise<void> {
+  console.log("Generate " + file.split("/").pop())
   return writeFile(file, JSON.stringify(json, null, 2) + EOL)
 }

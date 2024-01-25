@@ -3,11 +3,11 @@
 
 # Allow files and directories
 !/src
+!/docs
 !/package.json
 !/package-lock.json
 !/tsconfig.json
 !/tsconfig.src.json
-!/docs
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories

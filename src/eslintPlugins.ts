@@ -1,6 +1,6 @@
-import { Linter, Rule } from "eslint"
+import {Linter, Rule} from "eslint"
 
-import { isBlacklisted } from "./blacklist"
+import {isBlacklisted} from "./blacklist"
 
 const packageNames = [
   "@angular-eslint/eslint-plugin",
@@ -110,9 +110,9 @@ const packageNames = [
 
 const plugins = packageNames.map(packageName => {
   const rules: Rule.RuleModule = require(packageName).rules
-  const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, '')
+  const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, "")
 
-  return { name, rules }
+  return {name, rules}
 })
 
 export const pluginsNames = plugins.map(plugin => plugin.name)
@@ -123,13 +123,13 @@ const pluginsRules = plugins
   .flatMap(plugin =>
     Object.entries(plugin.rules).map(([patternId, rule]) => [
       `${plugin.name}/${patternId}`,
-      rule,
+      rule
     ])
   ) as [string, Rule.RuleModule][]
 
 export const allRules = baseRules
   .concat(pluginsRules)
-  .filter(([patternId, ]) =>
+  .filter(([patternId ]) =>
     patternId &&
     !isBlacklisted(patternId)
   )

@@ -1,5 +1,6 @@
-import { ESLint } from "eslint"
-import { pluginsNames } from "./eslintPlugins"
+import {ESLint} from "eslint"
+
+import {pluginsNames} from "./eslintPlugins"
 
 export const defaultOptions: ESLint.Options = {
   baseConfig: {
@@ -19,7 +20,7 @@ export const defaultOptions: ESLint.Options = {
       qunit: true,
       jquery: true,
       prototypejs: true,
-      embertest: true,
+      embertest: true
     },
     globals: {
       document: "readonly",
@@ -85,7 +86,7 @@ export const defaultOptions: ESLint.Options = {
       _: false,
 
       // Cypress
-      "cypress/globals": true,
+      "cypress/globals": true
     },
     ignorePatterns: [
       "node_modules/",
@@ -110,26 +111,26 @@ export const defaultOptions: ESLint.Options = {
       node: {
         paths: ["/src"],
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
-        tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
+        tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"]
       },
       "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
+        "@typescript-eslint/parser": [".ts", ".tsx"]
       },
       "import/resolver": {
         node: {
-          extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts", ".node"],
+          extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts", ".node"]
         },
         typescript: {
-          alwaysTryTypes: true,
+          alwaysTryTypes: true
         },
-        webpack: true,
+        webpack: true
       },
       jest: {
-        version: 29,
+        version: 29
       },
       react: {
-        version: "18.2.0",
-      },
+        version: "18.2.0"
+      }
     },
     overrides: [
       // TypeScript-specific rules
@@ -138,7 +139,7 @@ export const defaultOptions: ESLint.Options = {
         extends: [],
         parserOptions: {
           project: true,
-          sourceType: "module", 
+          sourceType: "module" 
         },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
@@ -157,8 +158,8 @@ export const defaultOptions: ESLint.Options = {
           "no-this-before-super": "off",
           "no-undef": "off",
           "no-unreachable": "off",
-          "no-unsafe-negation": "off",
-        },
+          "no-unsafe-negation": "off"
+        }
       },
       // JavaScript-specific rules
       {
@@ -207,9 +208,9 @@ export const defaultOptions: ESLint.Options = {
           "rxjs-angular/prefer-composition": "off",
           "rxjs-angular/prefer-takeuntil": "off",
           // turn off rules that don't apply to JS code
-          "@typescript-eslint/explicit-function-return-type": "off",
+          "@typescript-eslint/explicit-function-return-type": "off"
           
-        },
+        }
       },
       // JSX with Babel
       {
@@ -217,16 +218,16 @@ export const defaultOptions: ESLint.Options = {
         parser: "@babel/eslint-parser",
         parserOptions: {
           babelOptions: {
-            presets: ["@babel/preset-react"],
+            presets: ["@babel/preset-react"]
           },
-          requireConfigFile: false,
-        },
+          requireConfigFile: false
+        }
       },
       // Testing files
       {
         files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-        extends: ["plugin:testing-library/react"],
-      },
-    ],
-  },
+        extends: ["plugin:testing-library/react"]
+      }
+    ]
+  }
 }
