@@ -35,7 +35,7 @@ export class DocGenerator {
   }
  
   private emptyDocsDescriptionFolder (): void {
-    console.log("Empty docs/description folder")
+    console.log(`Empty ${this.docsDescriptionDirectory} folder`)
     fs.emptyDirSync(this.docsDescriptionDirectory)
   }
 

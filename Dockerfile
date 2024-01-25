@@ -19,8 +19,7 @@ COPY --from=builder node_modules ./node_modules
 COPY tsconfig.src.json /tsconfig.json
 
 RUN adduser -u 2004 -D docker &&\
-    chown -R docker:docker /dist /docs /tsconfig.json &&\
-    chmod -R 555 /dist /docs /tsconfig.json
+    chown -R docker:docker /dist /docs /tsconfig.json
 
 WORKDIR /src
 
