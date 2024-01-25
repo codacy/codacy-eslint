@@ -334,7 +334,7 @@ async function main () {
 
 }
 
-function writeFileInJson (file: string, json: Specification | DescriptionEntry[]): Promise<void> {
+async function writeFileInJson (file: string, json: Specification | DescriptionEntry[]): Promise<void> {
   console.log("Generate " + file.split("/").pop())
-  return writeFile(file, JSON.stringify(json, null, 2) + EOL)
+  return await writeFile(file, JSON.stringify(json, null, 2) + EOL)
 }

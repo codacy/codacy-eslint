@@ -1,4 +1,5 @@
 import * as fs from "node:fs"
+
 import {equal} from "assert"
 
 describe("DocGenerator", () => {
