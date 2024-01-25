@@ -11,12 +11,12 @@ async function main () {
   const docGenerator = new DocGenerator(allRules)
 
   await writeFileInJson(
-    "docs/patterns.json",
-    docGenerator.generatePatterns()
-  )
-  await writeFileInJson(
     "docs/description/description.json",
     docGenerator.generateDescriptionEntries()
+  )
+  await writeFileInJson(
+    "docs/patterns.json",
+    docGenerator.generatePatterns()
   )
 
   await docGenerator.generateAllPatternsMultipleTest()

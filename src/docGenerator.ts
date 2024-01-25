@@ -21,7 +21,7 @@ import {rulesToUnnamedParametersDefaults} from "./rulesToUnnamedParametersDefaul
 import {toolName, toolVersion} from "./toolMetadata"
 
 export class DocGenerator {
-  private readonly rules: [string, Rule.RuleModule][]
+  private rules: [string, Rule.RuleModule][]
 
   private githubBaseUrl = "https://raw.githubusercontent.com"
 
@@ -30,23 +30,23 @@ export class DocGenerator {
   private docsDescriptionDirectory = this.docsDirectory + "description/"
 
   constructor (rules: [string, Rule.RuleModule][]) {
+    this.emptyDocsDescriptionFolder()
+    this.initializeRules(rules)
+  }
+ 
+  private emptyDocsDescriptionFolder (): void {
+    console.log("Empty docs/description folder")
+    fs.emptyDirSync(this.docsDescriptionDirectory)
+  }
+
+  private initializeRules (rules: [string, Rule.RuleModule][]): void {
     // initialize rules without blacklisted and deprecated
     this.rules = rules.filter(
       ([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
         && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
     )
-    console.log("Rules: ", this.rules.length)
-    this.emptyDocsDescriptionFolder()
-  }
- 
-  private async emptyDocsDescriptionFolder (): Promise<void> {
-    console.log("Empty docs folder")
-    try {
-      await fs.emptyDir(this.docsDescriptionDirectory)
-    } catch (err) {
-      console.error(err)
-    } 
+    console.log("Number of rules: ", this.rules.length)
   }
 
   private getPatternIds (): string[] {
@@ -123,7 +123,7 @@ export class DocGenerator {
       ))
     })
 
-    console.log("Descriptions: ", descriptions.length)
+    console.log("Number of descriptions: ", descriptions.length)
     return descriptions
   }
 
