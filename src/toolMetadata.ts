@@ -1,7 +1,4 @@
-
-import {readFileSync} from "node:fs"
+import {ESLint} from "eslint"
 
 export const toolName = "eslint-8"
-
-const packageJson = JSON.parse(readFileSync("package.json", "utf8"))
-export const toolVersion = packageJson.dependencies.eslint.replace("^", "")
+export const toolVersion = ESLint.version
