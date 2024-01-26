@@ -57,4 +57,4 @@ If only a subset of your project uses `require`s then you might consider using [
 
 ## Related To
 
-- [`no-var-requires`](./no-var-requires.md)
+- [`no-var-requires`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-var-requires.md)

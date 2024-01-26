@@ -58,4 +58,4 @@ custom message, and a DOM nodes disallowed list (e.g. `<div />`):
 
 ### Related rules
 
-- [forbid-component-props](./forbid-component-props.md)
+- [forbid-component-props](https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forbid-component-props.md)

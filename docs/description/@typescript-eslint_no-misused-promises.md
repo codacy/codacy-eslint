@@ -12,7 +12,7 @@ functions are handled/awaited.
 
 :::tip
 `no-misused-promises` only detects code that provides Promises to incorrect _logical_ locations.
-See [`no-floating-promises`](./no-floating-promises.md) for detecting unhandled Promise _statements_.
+See [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.md) for detecting unhandled Promise _statements_.
 :::
 
 ## Options
@@ -243,4 +243,4 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`no-floating-promises`](./no-floating-promises.md)
+- [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.md)

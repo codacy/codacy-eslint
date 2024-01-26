@@ -110,7 +110,7 @@ There is a configurable number of attributes that are acceptable in one-line cas
 
 ## :couple: Related Rules
 
-- [vue/first-attribute-linebreak](./first-attribute-linebreak.md)
+- [vue/first-attribute-linebreak](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/first-attribute-linebreak.md)
 
 ## :books: Further Reading
 

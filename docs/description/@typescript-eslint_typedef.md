@@ -25,7 +25,7 @@ class ContainsText {
 }
 ```
 
-> To enforce type definitions existing on call signatures, use [`explicit-function-return-type`](./explicit-function-return-type.md), or [`explicit-module-boundary-types`](./explicit-module-boundary-types.md).
+> To enforce type definitions existing on call signatures, use [`explicit-function-return-type`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md), or [`explicit-module-boundary-types`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md).
 
 :::caution
 

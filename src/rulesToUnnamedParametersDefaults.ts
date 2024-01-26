@@ -1,65 +1,66 @@
-export const rulesToUnnamedParametersDefaults = new Map<string, any>([
-  ["array-bracket-spacing", "never"],
-  ["arrow-parens", "always"],
-  ["block-spacing", "always"],
-  ["brace-style", "1tbs"],
-  ["comma-dangle", "never"],
-  ["comma-style", "last"],
+import {JSONSchema4Type} from "json-schema"
+
+export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>([
+  ["@stylistic/array-bracket-spacing", "never"],
+  ["@stylistic/arrow-parens", "always"],
+  ["@stylistic/block-spacing", "always"],
+  ["@stylistic/brace-style", "1tbs"],
+  ["vue/brace-style", "1tbs"],
+  ["jsdoc/check-line-alignment", "never"],
+  ["@stylistic/comma-dangle", "never"],
+  ["@stylistic/comma-style", "last"],
   ["complexity", 4],
-  ["computed-property-spacing", "never"],
+  ["@stylistic/computed-property-spacing", "never"],
   ["consistent-this", "self"],
   ["curly", "all"],
-  ["dot-location", "property"],
+  ["@stylistic/dot-location", "property"],
   ["ember-suave/lines-between-object-properties", "never"],
   ["eqeqeq", "smart"],
   ["filenames/match-exported", "camel"],
   ["filenames/match-regex", "^([a-z0-9]+)([A-Z][a-z0-9]+)*$"],
   ["func-style", "expression"],
   ["id-match", "^[a-z]+([A-Z][a-z]+)*$"],
-  ["indent", 2],
-  ["jsdoc/check-line-alignment", "never"],
-  ["jsonc/indent", 4],
-  ["jsx-quotes", "prefer-double"],
+  ["@stylistic/indent", 2],
+  ["jsonc/indent", 2],
   ["init-declarations", "always"],
+  ["@stylistic/jsx-quotes", "prefer-double"],
+  ["@stylistic/lines-between-class-members", "always"],
   ["max-nested-callbacks", 5],
   ["newline-after-var", "always"],
   ["no-cond-assign", "except-parens"],
   ["no-inner-declarations", "functions"],
   ["no-restricted-modules", "always"],
   ["no-return-assign", "always"],
-  ["object-curly-spacing", "never"],
+  ["@stylistic/object-curly-spacing", "never"],
   ["one-var", "always"],
-  ["operator-linebreak", "after"],
-  ["quotes", "double"],
-  ["padded-blocks", "always"],
-  ["semi", "always"],
+  ["@stylistic/operator-linebreak", "after"],
+  ["@stylistic/padded-blocks", "always"],
+  ["@stylistic/quotes", "double"],
+  ["@stylistic/semi", "always"],
   ["sort-keys", "asc"],
-  ["space-before-blocks", "always"],
-  ["space-before-function-paren", "always"],
-  ["space-in-parens", "never"],
-  ["spaced-comment", "always"],
-  ["strict", "function"],
-  ["@typescript-eslint/brace-style", "1tbs"],
-  ["@typescript-eslint/indent", 2],
-  ["vue/brace-style", "1tbs"],
   ["vue/sort-keys", "asc"],
-  ["wrap-iife", "outside"],
-  ["yoda", "never"],
+  ["@stylistic/space-before-blocks", "always"],
+  ["@stylistic/space-before-function-paren", "always"],
+  ["@stylistic/space-in-parens", "never"],
+  ["@stylistic/spaced-comment", "always"],
+  ["strict", "function"],
+  ["@stylistic/wrap-iife", "outside"],
+  ["yoda", "never"]
 ])
 
 export class rulesNamedParametersAndDefaults {
-  private static readonly array: [string, string, any][] = [
+  private static readonly array: [string, string, JSONSchema4Type][] = [
     ["ember/no-restricted-service-injections", "paths", [""]],
     ["ember/no-restricted-service-injections", "services", [""]],
     [
       "ember/no-restricted-service-injections",
       "message",
-      "Injecting this service is not allowed from this file.",
+      "Injecting this service is not allowed from this file."
     ],
     ["indent", "ArrayExpression", 1],
-    ["indent", "CallExpression", { arguments: 1 }],
-    ["indent", "FunctionDeclaration", { parameters: 1, body: 1 }],
-    ["indent", "FunctionExpression", { parameters: 1, body: 1 }],
+    ["indent", "CallExpression", {arguments: 1}],
+    ["indent", "FunctionDeclaration", {parameters: 1, body: 1}],
+    ["indent", "FunctionExpression", {parameters: 1, body: 1}],
     ["indent", "ignoredNodes", []],
     ["indent", "ImportDeclaration", 1],
     ["indent", "MemberExpression", 1],
@@ -80,24 +81,24 @@ export class rulesNamedParametersAndDefaults {
     [
       "sort-imports-es6-autofix/sort-imports-es6",
       "memberSyntaxSortOrder",
-      ["none", "all", "multiple", "single"],
+      ["none", "all", "multiple", "single"]
     ],
     ["testing-library/consistent-data-testid", "testIdPattern", ""],
     ["testing-library/consistent-data-testid", "customMessage", ""]
   ]
 
-  static has(patternId: string, parameter: string): boolean {
+  static has (patternId: string, parameter: string): boolean {
     return this.array.some(
-      ([pId, param, ]) => pId === patternId && param === parameter
+      ([pId, param ]) => pId === patternId && param === parameter
     )
   }
 
-  static parameter(
+  static parameter (
     patternId: string,
     parameter: string
-  ): [string, any] | undefined {
+  ): [string, JSONSchema4Type] | undefined {
     const e = this.array.find(
-      ([pId, param, ]) => pId === patternId && param === parameter
+      ([pId, param ]) => pId === patternId && param === parameter
     )
     return e ? [parameter, e[2]] : undefined
   }

@@ -108,7 +108,7 @@ Whitespace after the `<!--` and before the `-->` makes it easier to read text in
 ## :couple: Related Rules
 
 - [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
-- [vue/html-comment-content-newline](./html-comment-content-newline.md)
+- [vue/html-comment-content-newline](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/html-comment-content-newline.md)
 
 ## :rocket: Version
 

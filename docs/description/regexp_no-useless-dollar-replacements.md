@@ -53,7 +53,7 @@ Nothing.
 
 ## :couple: Related rules
 
-- [regexp/prefer-escape-replacement-dollar-char](./prefer-escape-replacement-dollar-char.md)
+- [regexp/prefer-escape-replacement-dollar-char](https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/prefer-escape-replacement-dollar-char.md)
 
 ## :books: Further reading
 

@@ -16,7 +16,7 @@ exports = {
 
 ## 📖 Rule Details
 
-This rule is aimed at disallowing `exports = {}`, but allows `module.exports = exports = {}` to avoid conflict with [n/exports-style](./exports-style.md) rule's `allowBatchAssign` option.
+This rule is aimed at disallowing `exports = {}`, but allows `module.exports = exports = {}` to avoid conflict with [n/exports-style](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/rules/exports-style.md) rule's `allowBatchAssign` option.
 
 👍 Examples of **correct** code for this rule:
 

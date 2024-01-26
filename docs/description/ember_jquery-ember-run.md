@@ -34,5 +34,5 @@ $('#something-rendered-by-jquery-plugin').on(
 
 ## Related
 
-- [no-global-jquery](./no-global-jquery.md)
-- [no-jquery](./no-jquery.md)
+- [no-global-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/no-global-jquery.md)
+- [no-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/no-jquery.md)

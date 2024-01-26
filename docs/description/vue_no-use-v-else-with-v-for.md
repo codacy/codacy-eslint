@@ -45,7 +45,7 @@ If you don't find using `v-else-if`/`v-else` together with `v-for` confusing to 
 
 ## :couple: Related Rules
 
-- [vue/no-use-v-if-with-v-for](./no-use-v-if-with-v-for.md)
+- [vue/no-use-v-if-with-v-for](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/no-use-v-if-with-v-for.md)
 
 ## :rocket: Version
 

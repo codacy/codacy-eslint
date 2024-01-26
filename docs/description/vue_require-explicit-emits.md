@@ -111,7 +111,8 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/no-unused-emit-declarations](./no-unused-emit-declarations.md)
+- [vue/no-unused-emit-declarations](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/no-unused-emit-declarations.md)
+- [vue/require-explicit-slots](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/require-explicit-slots.md)
 
 ## :books: Further Reading
 

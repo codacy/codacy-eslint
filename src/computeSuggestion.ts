@@ -1,13 +1,13 @@
-import { Linter, Rule } from "eslint"
+import {Linter, Rule} from "eslint"
 
-export function computeSuggestion(
+export function computeSuggestion (
   sourceCodeText: string,
   line: number,
   endLine: number | undefined,
   fix?: Rule.Fix,
   suggestions?: Linter.LintSuggestion[]
 ): string | undefined {
-  function impl(edit: Rule.Fix) {
+  function impl (edit: Rule.Fix) {
     const range = edit.range
     if (
       range[0] > range[1] ||

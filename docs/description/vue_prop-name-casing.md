@@ -68,8 +68,8 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/attribute-hyphenation](./attribute-hyphenation.md)
-- [vue/custom-event-name-casing](./custom-event-name-casing.md)
+- [vue/attribute-hyphenation](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/attribute-hyphenation.md)
+- [vue/custom-event-name-casing](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/custom-event-name-casing.md)
 
 ## :books: Further Reading
 

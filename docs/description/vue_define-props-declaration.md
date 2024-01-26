@@ -68,8 +68,8 @@ const props = defineProps<{
 
 ## :couple: Related Rules
 
-- [vue/define-emits-declaration](./define-emits-declaration.md)
-- [vue/valid-define-props](./valid-define-props.md)
+- [vue/define-emits-declaration](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/define-emits-declaration.md)
+- [vue/valid-define-props](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/valid-define-props.md)
 
 ## :books: Further Reading
 

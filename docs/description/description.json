@@ -2729,6 +2729,951 @@
   },
   {
     "parameters": [],
+    "patternId": "@stylistic_array-bracket-newline",
+    "title": "@stylistic: Array bracket newline",
+    "description": "Enforce linebreaks after opening and before closing array brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_array-bracket-spacing",
+    "title": "@stylistic: Array bracket spacing",
+    "description": "Enforce consistent spacing inside array brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_array-element-newline",
+    "title": "@stylistic: Array element newline",
+    "description": "Enforce line breaks after each array element",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "requireForBlockBody",
+        "description": "requireForBlockBody"
+      }
+    ],
+    "patternId": "@stylistic_arrow-parens",
+    "title": "@stylistic: Arrow parens",
+    "description": "Require parentheses around arrow function arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@stylistic_arrow-spacing",
+    "title": "@stylistic: Arrow spacing",
+    "description": "Enforce consistent spacing before and after the arrow in arrow functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_block-spacing",
+    "title": "@stylistic: Block spacing",
+    "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "allowSingleLine",
+        "description": "allowSingleLine"
+      }
+    ],
+    "patternId": "@stylistic_brace-style",
+    "title": "@stylistic: Brace style",
+    "description": "Enforce consistent brace style for blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_comma-dangle",
+    "title": "@stylistic: Comma dangle",
+    "description": "Require or disallow trailing commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@stylistic_comma-spacing",
+    "title": "@stylistic: Comma spacing",
+    "description": "Enforce consistent spacing before and after commas",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_comma-style",
+    "title": "@stylistic: Comma style",
+    "description": "Enforce consistent comma style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "enforceForClassMembers",
+        "description": "enforceForClassMembers"
+      }
+    ],
+    "patternId": "@stylistic_computed-property-spacing",
+    "title": "@stylistic: Computed property spacing",
+    "description": "Enforce consistent spacing inside computed property brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_dot-location",
+    "title": "@stylistic: Dot location",
+    "description": "Enforce consistent newlines before and after dots",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_eol-last",
+    "title": "@stylistic: Eol last",
+    "description": "Require or disallow newline at the end of files",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_func-call-spacing",
+    "title": "@stylistic: Func call spacing",
+    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_function-call-argument-newline",
+    "title": "@stylistic: Function call argument newline",
+    "description": "Enforce line breaks between arguments of a function call",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_function-call-spacing",
+    "title": "@stylistic: Function call spacing",
+    "description": "Require or disallow spacing between function identifiers and their invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_function-paren-newline",
+    "title": "@stylistic: Function paren newline",
+    "description": "Enforce consistent line breaks inside function parentheses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_generator-star-spacing",
+    "title": "@stylistic: Generator star spacing",
+    "description": "Enforce consistent spacing around `*` operators in generator functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_implicit-arrow-linebreak",
+    "title": "@stylistic: Implicit arrow linebreak",
+    "description": "Enforce the location of arrow function bodies",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "SwitchCase",
+        "description": "SwitchCase"
+      },
+      {
+        "name": "flatTernaryExpressions",
+        "description": "flatTernaryExpressions"
+      },
+      {
+        "name": "offsetTernaryExpressions",
+        "description": "offsetTernaryExpressions"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@stylistic_indent",
+    "title": "@stylistic: Indent",
+    "description": "Enforce consistent indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_jsx-quotes",
+    "title": "@stylistic: Jsx quotes",
+    "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_key-spacing",
+    "title": "@stylistic: Key spacing",
+    "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@stylistic_keyword-spacing",
+    "title": "@stylistic: Keyword spacing",
+    "description": "Enforce consistent spacing before and after keywords",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_linebreak-style",
+    "title": "@stylistic: Linebreak style",
+    "description": "Enforce consistent linebreak style",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "beforeBlockComment",
+        "description": "beforeBlockComment"
+      },
+      {
+        "name": "afterBlockComment",
+        "description": "afterBlockComment"
+      },
+      {
+        "name": "beforeLineComment",
+        "description": "beforeLineComment"
+      },
+      {
+        "name": "afterLineComment",
+        "description": "afterLineComment"
+      },
+      {
+        "name": "allowBlockStart",
+        "description": "allowBlockStart"
+      },
+      {
+        "name": "allowBlockEnd",
+        "description": "allowBlockEnd"
+      }
+    ],
+    "patternId": "@stylistic_lines-around-comment",
+    "title": "@stylistic: Lines around comment",
+    "description": "Require empty lines around comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "exceptAfterSingleLine",
+        "description": "exceptAfterSingleLine"
+      },
+      {
+        "name": "exceptAfterOverload",
+        "description": "exceptAfterOverload"
+      }
+    ],
+    "patternId": "@stylistic_lines-between-class-members",
+    "title": "@stylistic: Lines between class members",
+    "description": "Require or disallow an empty line between class members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_max-len",
+    "title": "@stylistic: Max len",
+    "description": "Enforce a maximum line length",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "max",
+        "description": "max"
+      }
+    ],
+    "patternId": "@stylistic_max-statements-per-line",
+    "title": "@stylistic: Max statements per line",
+    "description": "Enforce a maximum number of statements allowed per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_multiline-ternary",
+    "title": "@stylistic: Multiline ternary",
+    "description": "Enforce newlines between operands of ternary expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_new-parens",
+    "title": "@stylistic: New parens",
+    "description": "Enforce or disallow parentheses when invoking a constructor with no arguments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreChainWithDepth",
+        "description": "ignoreChainWithDepth"
+      }
+    ],
+    "patternId": "@stylistic_newline-per-chained-call",
+    "title": "@stylistic: Newline per chained call",
+    "description": "Require a newline after each call in a method chain",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowParens",
+        "description": "allowParens"
+      },
+      {
+        "name": "onlyOneSimpleParam",
+        "description": "onlyOneSimpleParam"
+      }
+    ],
+    "patternId": "@stylistic_no-confusing-arrow",
+    "title": "@stylistic: No confusing arrow",
+    "description": "Disallow arrow functions where they could be confused with comparisons",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-extra-parens",
+    "title": "@stylistic: No extra parens",
+    "description": "Disallow unnecessary parentheses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-extra-semi",
+    "title": "@stylistic: No extra semi",
+    "description": "Disallow unnecessary semicolons",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-floating-decimal",
+    "title": "@stylistic: No floating decimal",
+    "description": "Disallow leading or trailing decimal points in numeric literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowSamePrecedence",
+        "description": "allowSamePrecedence"
+      }
+    ],
+    "patternId": "@stylistic_no-mixed-operators",
+    "title": "@stylistic: No mixed operators",
+    "description": "Disallow mixed binary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-mixed-spaces-and-tabs",
+    "title": "@stylistic: No mixed spaces and tabs",
+    "description": "Disallow mixed spaces and tabs for indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreEOLComments",
+        "description": "ignoreEOLComments"
+      },
+      {
+        "name": "includeTabs",
+        "description": "includeTabs"
+      }
+    ],
+    "patternId": "@stylistic_no-multi-spaces",
+    "title": "@stylistic: No multi spaces",
+    "description": "Disallow multiple spaces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-multiple-empty-lines",
+    "title": "@stylistic: No multiple empty lines",
+    "description": "Disallow multiple empty lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowIndentationTabs",
+        "description": "allowIndentationTabs"
+      }
+    ],
+    "patternId": "@stylistic_no-tabs",
+    "title": "@stylistic: No tabs",
+    "description": "Disallow all tabs",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "skipBlankLines",
+        "description": "skipBlankLines"
+      },
+      {
+        "name": "ignoreComments",
+        "description": "ignoreComments"
+      }
+    ],
+    "patternId": "@stylistic_no-trailing-spaces",
+    "title": "@stylistic: No trailing spaces",
+    "description": "Disallow trailing whitespace at the end of lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_no-whitespace-before-property",
+    "title": "@stylistic: No whitespace before property",
+    "description": "Disallow whitespace before properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_nonblock-statement-body-position",
+    "title": "@stylistic: Nonblock statement body position",
+    "description": "Enforce the location of single-line statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_object-curly-newline",
+    "title": "@stylistic: Object curly newline",
+    "description": "Enforce consistent line breaks after opening and before closing braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_object-curly-spacing",
+    "title": "@stylistic: Object curly spacing",
+    "description": "Enforce consistent spacing inside braces",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowAllPropertiesOnSameLine",
+        "description": "allowAllPropertiesOnSameLine"
+      },
+      {
+        "name": "allowMultiplePropertiesPerLine",
+        "description": "allowMultiplePropertiesPerLine"
+      }
+    ],
+    "patternId": "@stylistic_object-property-newline",
+    "title": "@stylistic: Object property newline",
+    "description": "Enforce placing object properties on separate lines",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_one-var-declaration-per-line",
+    "title": "@stylistic: One var declaration per line",
+    "description": "Require or disallow newlines around variable declarations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_operator-linebreak",
+    "title": "@stylistic: Operator linebreak",
+    "description": "Enforce consistent linebreak style for operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_padded-blocks",
+    "title": "@stylistic: Padded blocks",
+    "description": "Require or disallow padding within blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_padding-line-between-statements",
+    "title": "@stylistic: Padding line between statements",
+    "description": "Require or disallow padding lines between statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_quote-props",
+    "title": "@stylistic: Quote props",
+    "description": "Require quotes around object literal property names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_quotes",
+    "title": "@stylistic: Quotes",
+    "description": "Enforce the consistent use of either backticks, double, or single quotes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_rest-spread-spacing",
+    "title": "@stylistic: Rest spread spacing",
+    "description": "Enforce spacing between rest and spread operators and their expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_semi",
+    "title": "@stylistic: Semi",
+    "description": "Require or disallow semicolons instead of ASI",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@stylistic_semi-spacing",
+    "title": "@stylistic: Semi spacing",
+    "description": "Enforce consistent spacing before and after semicolons",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_semi-style",
+    "title": "@stylistic: Semi style",
+    "description": "Enforce location of semicolons",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_space-before-blocks",
+    "title": "@stylistic: Space before blocks",
+    "description": "Enforce consistent spacing before blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_space-before-function-paren",
+    "title": "@stylistic: Space before function paren",
+    "description": "Enforce consistent spacing before function parenthesis",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_space-in-parens",
+    "title": "@stylistic: Space in parens",
+    "description": "Enforce consistent spacing inside parentheses",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "int32Hint",
+        "description": "int32Hint"
+      }
+    ],
+    "patternId": "@stylistic_space-infix-ops",
+    "title": "@stylistic: Space infix ops",
+    "description": "Require spacing around infix operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "words",
+        "description": "words"
+      },
+      {
+        "name": "nonwords",
+        "description": "nonwords"
+      }
+    ],
+    "patternId": "@stylistic_space-unary-ops",
+    "title": "@stylistic: Space unary ops",
+    "description": "Enforce consistent spacing before or after unary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
+    "patternId": "@stylistic_spaced-comment",
+    "title": "@stylistic: Spaced comment",
+    "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "before",
+        "description": "before"
+      },
+      {
+        "name": "after",
+        "description": "after"
+      }
+    ],
+    "patternId": "@stylistic_switch-colon-spacing",
+    "title": "@stylistic: Switch colon spacing",
+    "description": "Enforce spacing around colons of switch statements",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_template-curly-spacing",
+    "title": "@stylistic: Template curly spacing",
+    "description": "Require or disallow spacing around embedded expressions of template strings",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_template-tag-spacing",
+    "title": "@stylistic: Template tag spacing",
+    "description": "Require or disallow spacing between template tags and their literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "functionPrototypeMethods",
+        "description": "functionPrototypeMethods"
+      }
+    ],
+    "patternId": "@stylistic_wrap-iife",
+    "title": "@stylistic: Wrap iife",
+    "description": "Require parentheses around immediate `function` invocations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_wrap-regex",
+    "title": "@stylistic: Wrap regex",
+    "description": "Require parenthesis around regex literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_yield-star-spacing",
+    "title": "@stylistic: Yield star spacing",
+    "description": "Require or disallow spacing around the `*` in `yield*` expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-child-element-spacing",
+    "title": "@stylistic: Jsx child element spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-closing-bracket-location",
+    "title": "@stylistic: Jsx closing bracket location",
+    "description": "Enforce closing bracket location in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-closing-tag-location",
+    "title": "@stylistic: Jsx closing tag location",
+    "description": "Enforce closing tag location for multiline JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-curly-brace-presence",
+    "title": "@stylistic: Jsx curly brace presence",
+    "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-curly-newline",
+    "title": "@stylistic: Jsx curly newline",
+    "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-curly-spacing",
+    "title": "@stylistic: Jsx curly spacing",
+    "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-equals-spacing",
+    "title": "@stylistic: Jsx equals spacing",
+    "description": "Enforce or disallow spaces around equal signs in JSX attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-first-prop-new-line",
+    "title": "@stylistic: Jsx first prop new line",
+    "description": "Enforce proper position of the first property in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-indent",
+    "title": "@stylistic: Jsx indent",
+    "description": "Enforce JSX indentation",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-indent-props",
+    "title": "@stylistic: Jsx indent props",
+    "description": "Enforce props indentation in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-max-props-per-line",
+    "title": "@stylistic: Jsx max props per line",
+    "description": "Enforce maximum of props on a single line in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "prevent",
+        "description": "prevent"
+      },
+      {
+        "name": "allowMultilines",
+        "description": "allowMultilines"
+      }
+    ],
+    "patternId": "@stylistic_jsx-newline",
+    "title": "@stylistic: Jsx newline",
+    "description": "Require or prevent a new line after jsx elements and expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-one-expression-per-line",
+    "title": "@stylistic: Jsx one expression per line",
+    "description": "Require one JSX element per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-props-no-multi-spaces",
+    "title": "@stylistic: Jsx props no multi spaces",
+    "description": "Disallow multiple spaces between inline JSX props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "component",
+        "description": "component"
+      },
+      {
+        "name": "html",
+        "description": "html"
+      }
+    ],
+    "patternId": "@stylistic_jsx-self-closing-comp",
+    "title": "@stylistic: Jsx self closing comp",
+    "description": "Disallow extra closing tags for components without children",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "multiline",
+        "description": "multiline"
+      },
+      {
+        "name": "locale",
+        "description": "locale"
+      }
+    ],
+    "patternId": "@stylistic_jsx-sort-props",
+    "title": "@stylistic: Jsx sort props",
+    "description": "Enforce props alphabetical sorting",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-tag-spacing",
+    "title": "@stylistic: Jsx tag spacing",
+    "description": "Enforce whitespace in and around the JSX opening and closing brackets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-wrap-multilines",
+    "title": "@stylistic: Jsx wrap multilines",
+    "description": "Disallow missing parentheses around multiline JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_member-delimiter-style",
+    "title": "@stylistic: Member delimiter style",
+    "description": "Require a specific member delimiter style for interfaces and type literals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_type-annotation-spacing",
+    "title": "@stylistic: Type annotation spacing",
+    "description": "Require consistent spacing around type annotations",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_indent-binary-ops",
+    "title": "@stylistic: Indent binary ops",
+    "description": "Indentation for binary operators",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_type-generic-spacing",
+    "title": "@stylistic: Type generic spacing",
+    "description": "Enforces consistent spacing inside TypeScript type generics",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_type-named-tuple-spacing",
+    "title": "@stylistic: Type named tuple spacing",
+    "description": "Expect space before the type declaration in the named tuple",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@tanstack_query_exhaustive-deps",
     "title": "@tanstack: [Query] Exhaustive deps",
     "description": "Exhaustive deps rule for useQuery",
@@ -4826,18 +5771,6 @@
     "patternId": "ember_routes-segments-snake-case",
     "title": "Ember: Routes segments snake case",
     "description": "Enforce usage of snake_cased dynamic segments in routes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "ember_template-indent",
-    "title": "Ember: Template indent",
-    "description": "Enforce consistent indentation for gts/gjs templates",
     "timeToFix": 5
   },
   {
@@ -11142,6 +12075,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-wait-for-selector",
+    "title": "Playwright: No wait for selector",
+    "description": "Prevent usage of page.waitForSelector()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_no-wait-for-timeout",
     "title": "Playwright: No wait for timeout",
     "description": "Prevent usage of page.waitForTimeout()",
@@ -12515,6 +13455,12 @@
     "parameters": [],
     "patternId": "react-redux_prefer-separate-component-file",
     "title": "React redux: Prefer separate component file",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-refresh_only-export-components",
+    "title": "React refresh: Only export components",
     "timeToFix": 5
   },
   {

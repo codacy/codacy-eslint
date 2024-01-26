@@ -39,4 +39,4 @@ const foo = bar.flat().map(element => unicorn(element));
 
 ## Related rules
 
-- [unicorn/prefer-array-flat](./prefer-array-flat.md)
+- [unicorn/prefer-array-flat](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/prefer-array-flat.md)

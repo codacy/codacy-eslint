@@ -202,8 +202,8 @@ This rule aims to enforce a consistent style in `v-on` event handlers:
 
 ## :couple: Related Rules
 
-- [vue/v-on-style](./v-on-style.md)
-- [vue/v-on-event-hyphenation](./v-on-event-hyphenation.md)
+- [vue/v-on-style](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/v-on-style.md)
+- [vue/v-on-event-hyphenation](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/v-on-event-hyphenation.md)
 
 ## :books: Further Reading
 

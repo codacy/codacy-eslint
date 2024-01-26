@@ -67,4 +67,4 @@ Use `disallowedFor` as an exclusion list to warn on props for specific component
 
 ### Related rules
 
-- [forbid-dom-props](./forbid-dom-props.md)
+- [forbid-dom-props](https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forbid-dom-props.md)

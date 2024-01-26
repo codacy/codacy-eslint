@@ -59,5 +59,5 @@ module.exports = {
 ## Further Reading
 
 * [messageIds API](https://eslint.org/docs/developer-guide/working-with-rules#messageids)
-* [no-invalid-message-ids](./no-invalid-message-ids.md) rule
-* [no-missing-message-ids](./no-missing-message-ids.md) rule
+* [no-invalid-message-ids](https://github.com/eslint-community/eslint-plugin-eslint-plugin/tree/main/docs/rules/no-invalid-message-ids.md) rule
+* [no-missing-message-ids](https://github.com/eslint-community/eslint-plugin-eslint-plugin/tree/main/docs/rules/no-missing-message-ids.md) rule

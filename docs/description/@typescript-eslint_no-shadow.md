@@ -46,7 +46,7 @@ function f() {
 
 :::note
 
-_Shadowing_ specifically refers to two identical identifiers that are in different, nested scopes. This is different from _redeclaration_, which is when two identical identifiers are in the same scope. Redeclaration is covered by the [`no-redeclare`](./no-redeclare.md) rule instead.
+_Shadowing_ specifically refers to two identical identifiers that are in different, nested scopes. This is different from _redeclaration_, which is when two identical identifiers are in the same scope. Redeclaration is covered by the [`no-redeclare`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-redeclare.md) rule instead.
 
 :::
 

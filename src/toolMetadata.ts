@@ -1,5 +1,4 @@
-import packageJson from "../package.json"
+import {ESLint} from "eslint"
 
 export const toolName = "eslint-8"
-
-export const toolVersion = packageJson.dependencies.eslint.replace("^", "")
+export const toolVersion = ESLint.version

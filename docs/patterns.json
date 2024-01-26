@@ -2731,6 +2731,951 @@
       "enabled": true
     },
     {
+      "patternId": "@stylistic_array-bracket-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_array-bracket-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_array-element-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_arrow-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
+        {
+          "name": "requireForBlockBody",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_arrow-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": true
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_block-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_brace-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "1tbs"
+        },
+        {
+          "name": "allowSingleLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_comma-dangle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_comma-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": false
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_comma-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "last"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_computed-property-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        },
+        {
+          "name": "enforceForClassMembers",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_dot-location",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "property"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_eol-last",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_func-call-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_function-call-argument-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_function-call-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_function-paren-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_generator-star-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_implicit-arrow-linebreak",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": 2
+        },
+        {
+          "name": "SwitchCase",
+          "default": 0
+        },
+        {
+          "name": "flatTernaryExpressions",
+          "default": false
+        },
+        {
+          "name": "offsetTernaryExpressions",
+          "default": false
+        },
+        {
+          "name": "ignoreComments",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-quotes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "prefer-double"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_key-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_keyword-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": true
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_linebreak-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_lines-around-comment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "beforeBlockComment",
+          "default": true
+        },
+        {
+          "name": "afterBlockComment",
+          "default": false
+        },
+        {
+          "name": "beforeLineComment",
+          "default": false
+        },
+        {
+          "name": "afterLineComment",
+          "default": false
+        },
+        {
+          "name": "allowBlockStart",
+          "default": false
+        },
+        {
+          "name": "allowBlockEnd",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_lines-between-class-members",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "exceptAfterSingleLine",
+          "default": false
+        },
+        {
+          "name": "exceptAfterOverload",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_max-len",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_max-statements-per-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "max",
+          "default": 1
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_multiline-ternary",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_new-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_newline-per-chained-call",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreChainWithDepth",
+          "default": 2
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-confusing-arrow",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowParens",
+          "default": true
+        },
+        {
+          "name": "onlyOneSimpleParam",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-extra-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-extra-semi",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-floating-decimal",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-mixed-operators",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowSamePrecedence",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-mixed-spaces-and-tabs",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-multi-spaces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ignoreEOLComments",
+          "default": false
+        },
+        {
+          "name": "includeTabs",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-multiple-empty-lines",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-tabs",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowIndentationTabs",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-trailing-spaces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "skipBlankLines",
+          "default": false
+        },
+        {
+          "name": "ignoreComments",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_no-whitespace-before-property",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_nonblock-statement-body-position",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_object-curly-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_object-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_object-property-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "allowAllPropertiesOnSameLine",
+          "default": false
+        },
+        {
+          "name": "allowMultiplePropertiesPerLine",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_one-var-declaration-per-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_operator-linebreak",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "after"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_padded-blocks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_padding-line-between-statements",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_quote-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_quotes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "double"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_rest-spread-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_semi",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_semi-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": false
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_semi-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_space-before-blocks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_space-before-function-paren",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_space-in-parens",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "never"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_space-infix-ops",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "int32Hint",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_space-unary-ops",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "words",
+          "default": true
+        },
+        {
+          "name": "nonwords",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_spaced-comment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_switch-colon-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "before",
+          "default": false
+        },
+        {
+          "name": "after",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_template-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_template-tag-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_wrap-iife",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "outside"
+        },
+        {
+          "name": "functionPrototypeMethods",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_wrap-regex",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_yield-star-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-child-element-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-closing-bracket-location",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-closing-tag-location",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-curly-brace-presence",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-curly-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-curly-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-equals-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-first-prop-new-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-indent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-indent-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-max-props-per-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "prevent",
+          "default": false
+        },
+        {
+          "name": "allowMultilines",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-one-expression-per-line",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-props-no-multi-spaces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-self-closing-comp",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "component",
+          "default": true
+        },
+        {
+          "name": "html",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-sort-props",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "multiline",
+          "default": "ignore"
+        },
+        {
+          "name": "locale",
+          "default": "auto"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-tag-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-wrap-multilines",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_member-delimiter-style",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_type-annotation-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_indent-binary-ops",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_type-generic-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_type-named-tuple-spacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@tanstack_query_exhaustive-deps",
       "level": "Error",
       "category": "ErrorProne",
@@ -4423,16 +5368,14 @@
     {
       "patternId": "ember_no-implicit-injections",
       "level": "Warning",
-      "category": "Security",
-      "subcategory": "CommandInjection",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "ember_no-implicit-service-injection-argument",
       "level": "Warning",
-      "category": "Security",
-      "subcategory": "CommandInjection",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -4574,8 +5517,7 @@
     {
       "patternId": "ember_no-restricted-service-injections",
       "level": "Warning",
-      "category": "Security",
-      "subcategory": "CommandInjection",
+      "category": "BestPractice",
       "parameters": [
         {
           "name": "paths",
@@ -4706,8 +5648,7 @@
     {
       "patternId": "ember_no-unnecessary-service-injection-argument",
       "level": "Warning",
-      "category": "Security",
-      "subcategory": "CommandInjection",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -4845,18 +5786,6 @@
       "category": "BestPractice",
       "parameters": [],
       "enabled": true
-    },
-    {
-      "patternId": "ember_template-indent",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ignoreComments",
-          "default": false
-        }
-      ],
-      "enabled": false
     },
     {
       "patternId": "ember_template-no-let-reference",
@@ -8964,7 +9893,7 @@
       "parameters": [
         {
           "name": "unnamedParam",
-          "default": 4
+          "default": 2
         },
         {
           "name": "SwitchCase",
@@ -10778,7 +11707,7 @@
     },
     {
       "patternId": "no-unsanitized_property",
-      "level": "Error",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
@@ -10786,7 +11715,7 @@
     },
     {
       "patternId": "no-unsanitized_method",
-      "level": "Error",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
@@ -11338,6 +12267,13 @@
       "patternId": "playwright_no-useless-not",
       "level": "Error",
       "category": "ErrorProne",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "playwright_no-wait-for-selector",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": true
     },
@@ -12755,6 +13691,13 @@
       "enabled": false
     },
     {
+      "patternId": "react-refresh_only-export-components",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "redux-saga_no-yield-in-race",
       "level": "Error",
       "category": "ErrorProne",
@@ -13708,7 +14651,7 @@
     },
     {
       "patternId": "security_detect-unsafe-regex",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "Regex",
       "parameters": [],
@@ -13716,7 +14659,7 @@
     },
     {
       "patternId": "security_detect-non-literal-regexp",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "Regex",
       "parameters": [],
@@ -13724,42 +14667,43 @@
     },
     {
       "patternId": "security_detect-non-literal-require",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-non-literal-fs-filename",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
+      "subcategory": "InsecureStorage",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-eval-with-expression",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-pseudoRandomBytes",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-possible-timing-attacks",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-no-csrf-before-method-override",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "CSRF",
       "parameters": [],
@@ -13767,28 +14711,28 @@
     },
     {
       "patternId": "security_detect-buffer-noassert",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-child-process",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-disable-mustache-escape",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-object-injection",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "CommandInjection",
       "parameters": [],
@@ -13796,14 +14740,14 @@
     },
     {
       "patternId": "security_detect-new-buffer",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
     },
     {
       "patternId": "security_detect-bidi-characters",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "parameters": [],
       "enabled": true
@@ -17773,7 +18717,7 @@
     },
     {
       "patternId": "xss_no-location-href-assign",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
@@ -17781,7 +18725,7 @@
     },
     {
       "patternId": "xss_no-mixed-html",
-      "level": "Info",
+      "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],

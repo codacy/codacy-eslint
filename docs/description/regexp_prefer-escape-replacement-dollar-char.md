@@ -36,7 +36,7 @@ Nothing.
 
 ## :couple: Related rules
 
-- [regexp/no-useless-dollar-replacements](./no-useless-dollar-replacements.md)
+- [regexp/no-useless-dollar-replacements](https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/no-useless-dollar-replacements.md)
 
 ## :books: Further reading
 

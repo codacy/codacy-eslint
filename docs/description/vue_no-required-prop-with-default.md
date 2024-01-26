@@ -88,7 +88,7 @@ This rule enforces all props with default values to be optional.
 
 ## :couple: Related Rules
 
-- [vue/require-default-prop](./require-default-prop.md)
+- [vue/require-default-prop](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/require-default-prop.md)
 
 ## :rocket: Version
 

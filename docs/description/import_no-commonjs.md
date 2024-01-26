@@ -92,5 +92,5 @@ Special thanks to @xjamundx for donating the module.exports and exports.* bits.
 
 ## Further Reading
 
- - [`no-amd`](./no-amd.md): report on AMD `require`, `define`
+ - [`no-amd`](https://github.com/un-es/eslint-plugin-i/tree/fork-release/docs/rules/no-amd.md): report on AMD `require`, `define`
  - Source: <https://github.com/xjamundx/eslint-plugin-modules>

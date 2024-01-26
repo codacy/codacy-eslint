@@ -1,8 +1,8 @@
-import { deepEqual } from "assert"
-import { Issue, ToolResult } from "codacy-seed"
-import { ESLint } from "eslint"
+import {deepEqual} from "assert"
+import {Issue, ToolResult} from "codacy-seed"
+import {ESLint} from "eslint"
 
-import { convertResults } from "../convertResults"
+import {convertResults} from "../convertResults"
 
 describe("convertResults", () => {
   it("should convert a Eslint report into Codacy results", () => {
@@ -17,7 +17,7 @@ describe("convertResults", () => {
             message: "Message 1",
             nodeType: "type",
             severity: 0,
-            source: null,
+            source: null
           },
           {
             column: 0,
@@ -26,8 +26,8 @@ describe("convertResults", () => {
             message: "Message 2",
             nodeType: "type",
             severity: 0,
-            source: null,
-          },
+            source: null
+          }
         ],
         fatalErrorCount: 0,
         errorCount: 2,
@@ -36,13 +36,13 @@ describe("convertResults", () => {
         fixableWarningCount: 0,
         usedDeprecatedRules: [],
         suppressedMessages: []
-      },
+      }
     ]
 
     const results = convertResults(eslintResults)
     const expected: ToolResult[] = [
       new Issue("file.js", "Message 1", "rule1", 1),
-      new Issue("file.js", "Message 2", "rule2", 2),
+      new Issue("file.js", "Message 2", "rule2", 2)
     ]
 
     deepEqual(results, expected)

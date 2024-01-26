@@ -82,4 +82,4 @@ Math.sqrt(x ** 2)
 
 ## Separate rule for `Math.trunc()`
 
-See [`unicorn/prefer-math-trunc`](./prefer-math-trunc.md) rule.
+See [`unicorn/prefer-math-trunc`](https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules/prefer-math-trunc.md) rule.

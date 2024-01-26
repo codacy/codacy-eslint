@@ -1,23 +1,13 @@
-import { EOL } from "node:os"
-
-import { writeFile } from "codacy-seed"
-
-import { DocGenerator } from "./docGenerator"
-import { allRules } from "./eslintPlugins"
+import {DocGenerator} from "./docGenerator"
 
 main()
 
-async function main() {
-  const docGenerator = new DocGenerator(allRules)
+async function main () {
+  const docGenerator = new DocGenerator()
 
-  await writeJsonFile(
-    "docs/patterns.json",
-    docGenerator.generatePatterns()
-  )
-  await writeJsonFile(
-    "docs/description/description.json",
-    docGenerator.generateDescriptionEntries()
-  )
+  await docGenerator.generateDescriptionFile()
+
+  await docGenerator.generatePatternsFile()
 
   await docGenerator.generateAllPatternsMultipleTest()
 
@@ -44,6 +34,11 @@ async function main() {
   await docGenerator.downloadDocs(
     "/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/",
     "@shopify"
+  )
+
+  await docGenerator.downloadDocs(
+    "/eslint-stylistic/eslint-stylistic/main/",
+    "@stylistic"
   )
 
   await docGenerator.downloadDocs(
@@ -329,7 +324,3 @@ async function main() {
 
 }
 
-function writeJsonFile(file: string, json: any): Promise<void> {
-  console.log("Generate " + file.split('/').pop())
-  return writeFile(file, JSON.stringify(json, null, 2) + EOL)
-}

@@ -1,3 +1,7 @@
+import {EOL} from "node:os"
+
+import {RuleInfo} from "@eslint-stylistic/metadata"
+import axios from "axios"
 import {
   DescriptionEntry,
   DescriptionParameter,
@@ -6,46 +10,57 @@ import {
   Specification,
   writeFile
 } from "codacy-seed"
-import { Rule } from "eslint"
-import { JSONSchema4 } from "json-schema"
-import { flatMapDeep } from "lodash"
-import fetch from "node-fetch"
+import {Rule} from "eslint"
+import fs from "fs-extra"
+import {JSONSchema4} from "json-schema"
+import {flatMapDeep} from "lodash"
 
-import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
-import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { translateCategory, translateLevel, patternIdToCodacy } from "./model/patterns"
-import { fromSchemaArray } from "./namedParameters"
-import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
-import { toolName, toolVersion } from "./toolMetadata"
+import {isBlacklistedOnlyFromDocumentation} from "./blacklist"
+import {capitalize, patternTitle} from "./docGeneratorStringUtils"
+import {allRules} from "./eslintPlugins"
+import {patternIdToCodacy, translateLevelAndCategory} from "./model/patterns"
+import {fromSchemaArray} from "./namedParameters"
+import {rulesToUnnamedParametersDefaults} from "./rulesToUnnamedParametersDefaults"
+import {toolName, toolVersion} from "./toolMetadata"
 
 export class DocGenerator {
-  private readonly rules: [string, Rule.RuleModule][]
+  private rules: [string, Rule.RuleModule][]
+
   private githubBaseUrl = "https://raw.githubusercontent.com"
 
-  constructor(rules: [string, Rule.RuleModule][]) {
+  private docsDirectory = "docs/"
+
+  private docsDescriptionDirectory = this.docsDirectory + "description/"
+
+  constructor () {
+    this.initializeRules()
+  }
+ 
+  private initializeRules (): void {
     // initialize rules without blacklisted and deprecated
-    this.rules = rules.filter(
+    this.rules = allRules.filter(
       ([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
         && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
     )
+    console.log("Number of rules: ", this.rules.length)
   }
 
-  private getPatternIds(): string[] {
-    return this.rules.map(([patternId, ]) => patternId)
+  private getPatternIds (): string[] {
+    return this.rules.map(([patternId ]) => patternId)
   }
 
-  private generateParameters(
+  static generateParameters (
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[] | undefined
-  ): ParameterSpec[] | undefined {
+  ): ParameterSpec[] {
     const unnamedParameterValue = rulesToUnnamedParametersDefaults.get(patternId)
     const unnamedParameter = unnamedParameterValue
       ? new ParameterSpec("unnamedParam", unnamedParameterValue)
       : undefined
 
     const namedParameters = schema
-      ? this.fromEslintSchemaToParameters(patternId, schema)
+      ? DocGenerator.fromEslintSchemaToParameters(patternId, schema)
       : undefined
 
     if (namedParameters && unnamedParameter)
@@ -55,24 +70,24 @@ export class DocGenerator {
     if (unnamedParameter)
       return [unnamedParameter]
     
-    return undefined
+    return []
   }
 
-  generatePatterns(): Specification {
+  generatePatterns (): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const type = meta?.type ? meta.type : meta?.docs?.category
-      const [category, subcategory] = translateCategory(
+      const [level, category, subcategory] = translateLevelAndCategory(
         patternId,
         type
       )
 
       return new PatternSpec(
         patternIdToCodacy(patternId),
-        translateLevel(type),
+        level,
         category,
         subcategory,
-        this.generateParameters(patternId, meta?.schema),
+        DocGenerator.generateParameters(patternId, meta?.schema),
         meta?.docs?.recommended === true
       )
     })
@@ -80,144 +95,114 @@ export class DocGenerator {
     return new Specification(toolName, toolVersion, patterns)
   }
 
-  generateDescriptionEntries(): DescriptionEntry[] {
-    const descriptions = this.rules.flatMap(([patternId, ruleModule]) => {
+  generateDescriptionEntries (): DescriptionEntry[] {
+    const descriptions: DescriptionEntry[] = []
+    this.rules.forEach(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const description = meta?.docs?.description
         ? capitalize(meta.docs.description)
         : undefined
       const timeToFix = 5
-      const patternsParameters = this.generateParameters(
-        patternId,
-        meta?.schema
-      )
-      const descriptionParameters = patternsParameters?.map(
-        (p) => new DescriptionParameter(p.name, p.name)
-      )
-      
-      return new DescriptionEntry(
+      const descriptionParameters = DocGenerator
+        .generateParameters(
+          patternId,
+          meta?.schema
+        )
+        .map((p) => new DescriptionParameter(p.name, p.name))
+
+      descriptions.push(new DescriptionEntry(
         patternIdToCodacy(patternId),
         patternTitle(patternId),
         description,
         timeToFix,
         descriptionParameters
-      )
+      ))
     })
 
+    console.log("Number of descriptions: ", descriptions.length)
     return descriptions
   }
 
-  private fromEslintSchemaToParameters(
+  static fromEslintSchemaToParameters (
     patternId: string,
     schema: JSONSchema4 | JSONSchema4[]
   ): ParameterSpec[] {
-    const anyOfToArray = (schema: JSONSchema4) => (schema.anyOf ? schema.anyOf : [schema])
+    const anyOfToArray = (schema: JSONSchema4) => schema.anyOf ? schema.anyOf : [schema]
     const flattenSchema = flatMapDeep(schema, anyOfToArray) as JSONSchema4[]
     const objects = flattenSchema.filter((value) => value && value.properties)
   
     return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
-  private patternIdsWithoutPrefix(prefix: string): string[] {
-    const longPrefix = prefix + "/"
+  async createDescriptionFile (url: URL, relativeUrl: string, prefix: string, pattern: string, rejectOnError: boolean = false) {
+    try {
+      const response = await axios.get(url.href)
+      const text = this.inlineLinkedMarkdownFiles(response.data, relativeUrl)
+      const filename =
+        this.docsDescriptionDirectory +
+        patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
+        ".md"
 
-    return this
-      .getPatternIds()
-      .filter((patternId) => patternId.startsWith(longPrefix))
-      .map((patternId) => patternId.substring(longPrefix.length))
-  }
-
-  private eslintPatternIds(): string[] {
-    // We take all the patterns except those that have slashes because
-    // they come from third party plugins
-    return this.getPatternIds().filter((e) => !e.includes("/"))
-  }
-
-  private async inlineLinkedMarkdownFiles(text: string, baseUrl: string): Promise<string> {
-    let newText = text
-    const elements = text.match(/\[.*?\)/g)
-  
-    if (!elements) {
-      return newText
+      await writeFile(filename, text)
+    } catch (error) {
+      const message = `Failed to retrieve docs for ${pattern} from ${url.pathname}`
+      if (rejectOnError) {
+        return Promise.reject(message)
+      }
+      console.error(message)
     }
-  
-    await Promise.all(elements.map(async (elem) => {
-      const urlMatch = elem.match(/\((\.\.\/.*?\.md)\)/)
-  
-      if (!urlMatch) {
-        return
-      }
-  
-      const fullUrl = `${baseUrl}${urlMatch[1]}`
-  
-      try {
-        const response = await fetch(fullUrl)
-  
-        if (!response.ok) {
-          console.error(`Failed to fetch ${fullUrl}. Status: ${response.status}`)
-          return
-        }
-  
-        const content = await response.text()
-        newText = newText.replace(elem, `\n\n${content}`)
-      } catch (error) {
-        console.error(`Error fetching ${fullUrl}: ${error.message}`)
-      }
-    }))
-  
-    return newText
   }
 
-  downloadDocs(
-    baseUrl: string,
+  async downloadDocs (
+    relativeUrl: string,
     prefix: string,
     rejectOnError: boolean = false
   ): Promise<void[]> {
-    console.log("Generate " + (prefix.length > 0? prefix : "eslint") + " description files")
+    console.log("Generate " + (prefix.length > 0 ? prefix : "eslint") + " description files")
     
-    baseUrl = (!baseUrl.startsWith("https://") ? this.githubBaseUrl : "") + baseUrl
+    relativeUrl = (!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl
 
     const patterns =
       prefix.length > 0
         ? this.patternIdsWithoutPrefix(prefix)
         : this.eslintPatternIds()
 
-    
-    const promises: Promise<void>[] = patterns.map(async (pattern: string) => {
-      try {
-        const url = baseUrl + pattern + ".md"
-        const response = await fetch(url)
-  
-        if (!response.ok) {
-          const message = `Failed to retrieve docs for ${pattern} from ${url}`
-
-          if (rejectOnError) {
-            throw new Error(message)
-          }
-          console.log(`${message}. Skipping`)
-          return
-        }
-  
-        const content = await response.text()
-        const text = await this.inlineLinkedMarkdownFiles(content, baseUrl)
-        const filename =
-          "docs/description/" +
-          patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
-          ".md"
-  
-        await writeFile(filename, text)
-      } catch (error) {
-        if (rejectOnError) {
-          return Promise.reject(`${error.message}`)
-        }
-        console.error(`${error.message}`)
-      }
-    })
-  
+    const promises: Promise<void>[] = prefix === "@stylistic"
+      ? require("@eslint-stylistic/metadata").rules
+        .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
+        .map((rule: RuleInfo) => {
+          const url = new URL(relativeUrl + rule.docsEntry)
+          return this.createDescriptionFile(url, relativeUrl, prefix, rule.name, rejectOnError)
+        })
+      : patterns.map((pattern: string) => {
+        const url = new URL(relativeUrl + pattern + ".md")
+        return this.createDescriptionFile(url, relativeUrl, prefix, pattern, rejectOnError)
+      })
     return Promise.all(promises)
   }
 
-  async generateAllPatternsMultipleTest() {
+  async generateDescriptionFile (): Promise<void> {
+    console.log("Generate description.json")
+    const descriptions = this.generateDescriptionEntries()
+
+    if (!descriptions.length) return
+    
+    await this.emptyDocsDescriptionFolder()
+    await this.writeFileInJson(
+      this.docsDescriptionDirectory + "description.json",
+      descriptions
+    )
+  }
+
+  async generatePatternsFile (): Promise<void> {
+    console.log("Generate patterns.json")
+    await this.writeFileInJson(
+      this.docsDirectory + "patterns.json",
+      this.generatePatterns()
+    )
+  }
+
+  async generateAllPatternsMultipleTest (): Promise<void> {
     console.log("Generate all-patterns multiple-test patterns.xml")
 
     const modules = this
@@ -240,5 +225,56 @@ ${modules}
       writeFile(patternsFilename, patternsXml),
       writeFile(patternsTypescriptFilename, patternsXml)
     ])
+  }
+
+  private patternIdsWithoutPrefix (prefix: string): string[] {
+    const longPrefix = prefix + "/"
+
+    return this
+      .getPatternIds()
+      .filter((patternId) => patternId.startsWith(longPrefix))
+      .map((patternId) => patternId.substring(longPrefix.length))
+  }
+
+  private eslintPatternIds (): string[] {
+    // We take all the patterns except those that have slashes because
+    // they come from third party plugins
+    return this.getPatternIds().filter((e) => !e.includes("/"))
+  }
+
+  private convertFromGithubRawLink (url: string): string {
+    const parsedUrl = new URL(url)
+    parsedUrl.host = "github.com"
+
+    const parts = parsedUrl.pathname.split("/")
+    parts.splice(3, 0, "tree")
+    parsedUrl.pathname = parts.join("/")
+    
+    return parsedUrl.toString()
+  }
+
+  private inlineLinkedMarkdownFiles (text: string, relativeUrl: string): string {
+    const elements = text.match(/\[.+?\]\(\.{1,2}[^)]+?\.md\)/g)
+    if (!elements) return text
+  
+    let newText = text
+
+    elements.map(async (elem) => {
+      const urlMatch = elem.match(/\((.+?\.md)\)/)
+      if (!urlMatch) return
+  
+      const fullUrl = this.convertFromGithubRawLink(relativeUrl + urlMatch[1])
+      newText = newText.replace(urlMatch[1], fullUrl)
+    })
+
+    return newText
+  }
+
+  private async emptyDocsDescriptionFolder (): Promise<void> {
+    await fs.emptyDir(this.docsDescriptionDirectory)
+  }
+
+  private async writeFileInJson (file: string, json: Specification | DescriptionEntry[]): Promise<void> {
+    await writeFile(file, JSON.stringify(json, null, 2) + EOL)
   }
 }

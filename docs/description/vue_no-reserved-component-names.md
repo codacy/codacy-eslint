@@ -74,7 +74,7 @@ export default {
 
 ## :couple: Related Rules
 
-- [vue/multi-word-component-names](./multi-word-component-names.md)
+- [vue/multi-word-component-names](https://github.com/vuejs/eslint-plugin-vue/tree/master/docs/rules/multi-word-component-names.md)
 
 ## :books: Further Reading
 

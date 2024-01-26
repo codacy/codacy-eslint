@@ -48,11 +48,11 @@ yml/block-mapping-colon-indicator-newline:
 
 ## :couple: Related rules
 
-- [yml/flow-sequence-bracket-newline](./flow-sequence-bracket-newline.md)
-- [yml/flow-mapping-curly-newline](./flow-mapping-curly-newline.md)
-- [yml/key-spacing](./key-spacing.md)
-- [yml/block-mapping-question-indicator-newline](./block-mapping-question-indicator-newline.md)
-- [yml/block-sequence-hyphen-indicator-newline](./block-sequence-hyphen-indicator-newline.md)
+- [yml/flow-sequence-bracket-newline](https://github.com/ota-meshi/eslint-plugin-yml/tree/master/docs/rules/flow-sequence-bracket-newline.md)
+- [yml/flow-mapping-curly-newline](https://github.com/ota-meshi/eslint-plugin-yml/tree/master/docs/rules/flow-mapping-curly-newline.md)
+- [yml/key-spacing](https://github.com/ota-meshi/eslint-plugin-yml/tree/master/docs/rules/key-spacing.md)
+- [yml/block-mapping-question-indicator-newline](https://github.com/ota-meshi/eslint-plugin-yml/tree/master/docs/rules/block-mapping-question-indicator-newline.md)
+- [yml/block-sequence-hyphen-indicator-newline](https://github.com/ota-meshi/eslint-plugin-yml/tree/master/docs/rules/block-sequence-hyphen-indicator-newline.md)
 
 ## :rocket: Version
 

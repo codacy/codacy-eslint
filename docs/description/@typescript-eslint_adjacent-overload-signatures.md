@@ -96,4 +96,4 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`unified-signatures`](./unified-signatures.md)
+- [`unified-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/unified-signatures.md)
