@@ -1,14 +1,16 @@
 FROM node:lts-alpine3.19 as builder
 
-COPY src ./src
-COPY docs ./docs
 COPY package.json .
 COPY package-lock.json .
-COPY tsconfig.json .
 
 RUN npm install --legacy-peer-deps --omit=dev &&\
-    npm cache clean --force &&\
-    npm run build:docs &&\
+    npm cache clean --force
+
+COPY src ./src
+COPY docs ./docs
+COPY tsconfig.json .
+
+RUN npm run build:docs &&\
     npm run test
 
 FROM node:lts-alpine3.19

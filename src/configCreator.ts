@@ -35,7 +35,7 @@ export function createEslintConfig (
 
 function generateEslintOptions (
   srcDirPath: string,
-  codacyrc: Codacyrc
+  codacyrc?: Codacyrc
 ): ESLint.Options {
   debug("options: creating")
   
