@@ -110,7 +110,7 @@
     "@nx/node": "^17.2.8",
     "@nx/react": "^17.2.8",
     "@nx/storybook": "^17.2.8",
-    "@nx/web": "^17.2.8",
+    "@nx/web": "^17.3.0",
     "@nx/workspace": "^17.2.8",
     "@prodigy/eslint-config-prodigy": "^0.0.7",
     "@react-native-community/eslint-config": "^3.2.0",
