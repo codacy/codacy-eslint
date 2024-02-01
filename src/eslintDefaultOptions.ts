@@ -136,7 +136,6 @@ export const defaultOptions: ESLint.Options = {
       // TypeScript-specific rules
       {
         files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
-        extends: [],
         parserOptions: {
           project: true,
           sourceType: "module" 

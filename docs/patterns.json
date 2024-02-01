@@ -2957,6 +2957,54 @@
         {
           "name": "ignoreComments",
           "default": false
+        },
+        {
+          "name": "VariableDeclarator",
+          "default": 1
+        },
+        {
+          "name": "outerIIFEBody",
+          "default": 1
+        },
+        {
+          "name": "MemberExpression",
+          "default": 1
+        },
+        {
+          "name": "FunctionDeclaration",
+          "default": {
+            "parameters": 1,
+            "body": 1
+          }
+        },
+        {
+          "name": "FunctionExpression",
+          "default": {
+            "parameters": 1,
+            "body": 1
+          }
+        },
+        {
+          "name": "CallExpression",
+          "default": {
+            "arguments": 1
+          }
+        },
+        {
+          "name": "ArrayExpression",
+          "default": 1
+        },
+        {
+          "name": "ObjectExpression",
+          "default": 1
+        },
+        {
+          "name": "ImportDeclaration",
+          "default": 1
+        },
+        {
+          "name": "ignoredNodes",
+          "default": []
         }
       ],
       "enabled": false
@@ -3040,6 +3088,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
         {
           "name": "exceptAfterSingleLine",
           "default": false
@@ -3279,6 +3331,10 @@
         {
           "name": "unnamedParam",
           "default": "always"
+        },
+        {
+          "name": "allowSingleLineBlocks",
+          "default": true
         }
       ],
       "enabled": false
@@ -3305,6 +3361,14 @@
         {
           "name": "unnamedParam",
           "default": "double"
+        },
+        {
+          "name": "avoidEscape",
+          "default": false
+        },
+        {
+          "name": "allowTemplateLiterals",
+          "default": false
         }
       ],
       "enabled": false
@@ -3792,13 +3856,6 @@
     },
     {
       "patternId": "@typescript-eslint_consistent-type-exports",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_consistent-type-imports",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -7500,7 +7557,12 @@
       "patternId": "flowtype_arrow-parens",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        }
+      ],
       "enabled": false
     },
     {
@@ -17591,6 +17653,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_no-restricted-v-on",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_no-root-v-if",
       "level": "Warning",
       "category": "BestPractice",
@@ -17995,6 +18064,13 @@
       "patternId": "vue_require-explicit-emits",
       "level": "Warning",
       "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_require-explicit-slots",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },

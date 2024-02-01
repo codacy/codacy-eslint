@@ -69,7 +69,7 @@ export class DocGenerator {
       return namedParameters
     if (unnamedParameter)
       return [unnamedParameter]
-    
+
     return []
   }
 

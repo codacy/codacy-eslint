@@ -2951,6 +2951,46 @@
       {
         "name": "ignoreComments",
         "description": "ignoreComments"
+      },
+      {
+        "name": "VariableDeclarator",
+        "description": "VariableDeclarator"
+      },
+      {
+        "name": "outerIIFEBody",
+        "description": "outerIIFEBody"
+      },
+      {
+        "name": "MemberExpression",
+        "description": "MemberExpression"
+      },
+      {
+        "name": "FunctionDeclaration",
+        "description": "FunctionDeclaration"
+      },
+      {
+        "name": "FunctionExpression",
+        "description": "FunctionExpression"
+      },
+      {
+        "name": "CallExpression",
+        "description": "CallExpression"
+      },
+      {
+        "name": "ArrayExpression",
+        "description": "ArrayExpression"
+      },
+      {
+        "name": "ObjectExpression",
+        "description": "ObjectExpression"
+      },
+      {
+        "name": "ImportDeclaration",
+        "description": "ImportDeclaration"
+      },
+      {
+        "name": "ignoredNodes",
+        "description": "ignoredNodes"
       }
     ],
     "patternId": "@stylistic_indent",
@@ -3034,6 +3074,10 @@
   },
   {
     "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
       {
         "name": "exceptAfterSingleLine",
         "description": "exceptAfterSingleLine"
@@ -3273,6 +3317,10 @@
       {
         "name": "unnamedParam",
         "description": "unnamedParam"
+      },
+      {
+        "name": "allowSingleLineBlocks",
+        "description": "allowSingleLineBlocks"
       }
     ],
     "patternId": "@stylistic_padded-blocks",
@@ -3299,6 +3347,14 @@
       {
         "name": "unnamedParam",
         "description": "unnamedParam"
+      },
+      {
+        "name": "avoidEscape",
+        "description": "avoidEscape"
+      },
+      {
+        "name": "allowTemplateLiterals",
+        "description": "allowTemplateLiterals"
       }
     ],
     "patternId": "@stylistic_quotes",
@@ -3792,13 +3848,6 @@
     "patternId": "@typescript-eslint_consistent-type-exports",
     "title": "@typescript eslint: Consistent type exports",
     "description": "Enforce consistent usage of type exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_consistent-type-imports",
-    "title": "@typescript eslint: Consistent type imports",
-    "description": "Enforce consistent usage of type imports",
     "timeToFix": 5
   },
   {
@@ -7475,7 +7524,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      }
+    ],
     "patternId": "flowtype_arrow-parens",
     "title": "Flowtype: Arrow parens",
     "description": "Require parentheses around arrow function arguments",
@@ -17321,6 +17375,13 @@
   },
   {
     "parameters": [],
+    "patternId": "vue_no-restricted-v-on",
+    "title": "Vue: No restricted v on",
+    "description": "Disallow specific argument in `v-on`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "vue_no-root-v-if",
     "title": "Vue: No root v if",
     "description": "Disallow `v-if` directives on root element",
@@ -17725,6 +17786,13 @@
     "patternId": "vue_require-explicit-emits",
     "title": "Vue: Require explicit emits",
     "description": "Require `emits` option with name triggered by `$emit()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vue_require-explicit-slots",
+    "title": "Vue: Require explicit slots",
+    "description": "Require slots to be explicitly defined",
     "timeToFix": 5
   },
   {

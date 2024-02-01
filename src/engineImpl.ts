@@ -17,11 +17,9 @@ export const engineImpl: Engine = async function (
     codacyrc
   )
 
-  if (DEBUG) {
-    debug("engine: list of " + files.length + " files (or globs) to process in \"" + srcDirPath + "\" and options used")
-    debug(files)
-    debug(options)
-  }
+  debug(`engine: list of ${files.length} files (or globs) to process in "${srcDirPath}" and options used`)
+  debug(files)
+  debug(options)
 
   const eslint = new ESLint(options)
 
@@ -65,11 +63,11 @@ async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.Lint
 
   let nIssues = 0
   for await (const lintResult of lintResults) {
-    debug("engine: specific config for \"" + lintResult.filePath + "\"")
-    debug(await eslint.calculateConfigForFile(lintResult.filePath))
+    //debug(`engine: specific config for "${lintResult.filePath}"`)
+    //debug(await eslint.calculateConfigForFile(lintResult.filePath))
     nIssues += lintResult.messages.length
   }
-  debug("engine: " + lintResults.length + " files linted and " + nIssues + " issues found")
+  debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
 }
 
 /*
@@ -96,7 +94,7 @@ function chunkFilesByTotalSize (files: string[], maxChunkSize: number): string[]
         currentChunkSize = size
       }
     } catch (error) {
-      console.error("engine: error while getting file size for " + file + ": " + error.message)
+      console.error(`engine: error while getting file size for "${file}": ${error.message}`)
     }
   }
 
