@@ -1,4 +1,4 @@
-// https://raw.githubusercontent.com/nodejs/node/main/.eslintrc.js
+// Adapted from https://raw.githubusercontent.com/nodejs/node/main/.eslintrc.js
 
 module.exports = {
   root: true,
@@ -6,95 +6,12 @@ module.exports = {
     es2022: true,
   },
   extends: ['eslint:recommended', 'plugin:jsdoc/recommended'],
-  plugins: ['jsdoc', 'markdown', 'node-core'],
-  parser: '@babel/eslint-parser',
+  plugins: ['jsdoc', 'markdown'],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    babelOptions: {
-      plugins: [
-        Module._findPath('@babel/plugin-syntax-import-attributes'),
-      ],
-    },
-    requireConfigFile: false,
-    sourceType: 'script',
+    ecmaVersion: 2022,
+    sourceType: 'script'
   },
-  overrides: [
-    {
-      files: [
-        '*.mjs',
-        'test/es-module/test-esm-example-loader.js',
-        'test/es-module/test-esm-type-flag.js',
-        'test/es-module/test-esm-type-flag-alias.js',
-      ],
-      parserOptions: { sourceType: 'module' },
-    },
-    {
-      files: ['**/*.md'],
-      processor: 'markdown/markdown',
-    },
-    {
-      files: ['**/*.md/*.cjs', '**/*.md/*.js'],
-      parserOptions: {
-        sourceType: 'script',
-        ecmaFeatures: { impliedStrict: true },
-      },
-      rules: { strict: 'off' },
-    },
-    {
-      files: [
-        '**/*.md/*.mjs',
-        'doc/api/esm.md/*.js',
-        'doc/api/packages.md/*.js',
-      ],
-      parserOptions: { sourceType: 'module' },
-      rules: { 'no-restricted-globals': [
-        'error',
-        {
-          name: '__filename',
-          message: 'Use import.meta.url instead',
-        },
-        {
-          name: '__dirname',
-          message: 'Not available in ESM',
-        },
-        {
-          name: 'exports',
-          message: 'Not available in ESM',
-        },
-        {
-          name: 'module',
-          message: 'Not available in ESM',
-        },
-        {
-          name: 'require',
-          message: 'Use import instead',
-        },
-        {
-          name: 'Buffer',
-          message: 'Import Buffer instead of using the global',
-        },
-        {
-          name: 'process',
-          message: 'Import process instead of using the global',
-        },
-      ] },
-    },
-    {
-      files: [
-        'lib/internal/modules/**/*.js',
-      ],
-      rules: {
-        'curly': 'error',
-      },
-    },
-    {
-      files: [
-        'lib/internal/test_runner/**/*.js',
-      ],
-      rules: {
-        'node-core/set-proto-to-null-in-object': 'error',
-      },
-    },
-  ],
   rules: {
     // ESLint built-in rules
     // https://eslint.org/docs/rules/
@@ -293,11 +210,6 @@ module.exports = {
     'jsdoc/require-param': 'off',
     'jsdoc/check-tag-names': 'off',
     'jsdoc/require-returns': 'off',
-
-    // Custom rules from eslint-plugin-node-core
-    'node-core/no-unescaped-regexp-dot': 'error',
-    'node-core/no-duplicate-requires': 'error',
-    'node-core/prefer-proto': 'error',
   },
   globals: {
     ByteLengthQueuingStrategy: 'readable',
