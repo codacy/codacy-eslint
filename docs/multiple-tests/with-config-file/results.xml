@@ -1,93 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
   <file name="with-config-file.js">
-    <error message="You have a misspelled word: accessor on Comment" source="spellcheck_spell-checker" line="1" severity="info" />
     <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="1" severity="info" />
-    <error message="Expected space or tab after '//' in comment." source="@stylistic_spaced-comment" line="1" severity="info" />
     <error message="Use the global form of 'use strict'." source="strict" line="3" severity="info" />
-    <error message="Filename with-config-file.js does not match the file name pattern ^([a-z][a-z0-9]*)(-[a-z0-9]+)*(.spec|.test)?.ts$" source="cdk_filename-match-regex" line="3" severity="info" />
-    <error message="Filename 'with-config-file.js' does not match the naming convention." source="filenames_match-regex" line="3" severity="info" />
-    <error message="This should be done within a hook" source="jest_require-hook" line="3" severity="info" />
     <error message="Unexpected var, use let or const instead." source="no-var" line="3" severity="info" />
-    <error message="The file should have a default export." source="storybook_default-exports" line="3" severity="info" />
-    <error message="Missing \"o\" variable type annotation." source="flowtype_require-variable-type" line="3" severity="info" />
-    <error message="Identifier name 'o' is too short (< 2)." source="id-length" line="3" severity="info" />
-    <error message="You have a misspelled word: accessor on Comment" source="spellcheck_spell-checker" line="4" severity="info" />
     <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="4" severity="info" />
-    <error message="Expected space or tab after '//' in comment." source="@stylistic_spaced-comment" line="4" severity="info" />
     <error message="Getter is not present for setter 'a'." source="accessor-pairs" line="5" severity="info" />
-    <error message="Unquoted property 'a' found." source="@stylistic_quote-props" line="5" severity="info" />
-    <error message="Unallowed use of `set`" source="fp_no-get-set" line="5" severity="info" />
-    <error message="ES5 accessor properties are forbidden." source="es-x_no-accessor-properties" line="5" severity="info" />
-    <error message="Identifier name 'a' is too short (< 2)." source="id-length" line="5" severity="info" />
-    <error message="Missing space before function parentheses." source="@stylistic_space-before-function-paren" line="5" severity="info" />
-    <error message="Function must end with a return statement, so that it doesn't return `undefined`" source="fp_no-nil" line="5" severity="info" />
-    <error message="Missing \"value\" parameter type annotation." source="flowtype_require-parameter-type" line="5" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="5" severity="info" />
-    <error message="Unallowed reassignment" source="fp_no-mutation" line="6" severity="info" />
-    <error message="Unallowed use of `this`" source="fp_no-this" line="6" severity="info" />
-    <error message="Unexpected this, use functions not classes." source="functional_no-this-expressions" line="6" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="6" severity="info" />
-    <error message="Insert `,`" source="prettier_prettier" line="7" severity="info" />
-    <error message="Insert `,`" source="prettier-vue_prettier" line="7" severity="info" />
     <error message="Missing trailing comma." source="comma-dangle" line="7" severity="info" />
-    <error message="This should be done within a hook" source="jest_require-hook" line="10" severity="info" />
     <error message="Unexpected var, use let or const instead." source="no-var" line="10" severity="info" />
     <error message="'o' is already defined." source="no-redeclare" line="10" severity="info" />
-    <error message="'o' is already defined." source="@typescript-eslint_no-redeclare" line="10" severity="info" />
-    <error message="Missing \"o\" variable type annotation." source="flowtype_require-variable-type" line="10" severity="info" />
-    <error message="Identifier name 'o' is too short (< 2)." source="id-length" line="10" severity="info" />
     <error message="A space is required after '{'." source="object-curly-spacing" line="10" severity="info" />
-    <error message="Replace `d:·1` with `·d:·1·`" source="prettier_prettier" line="10" severity="info" />
-    <error message="Replace `d:·1` with `·d:·1·`" source="prettier-vue_prettier" line="10" severity="info" />
-    <error message="Unquoted property 'd' found." source="@stylistic_quote-props" line="10" severity="info" />
-    <error message="Identifier name 'd' is too short (< 2)." source="id-length" line="10" severity="info" />
-    <error message="A space is required before '&quot;'." source="object-curly-spacing" line="10" severity="info" />
-    <error message="This should be done within a hook" source="jest_require-hook" line="11" severity="info" />
-    <error message="Unused expression" source="fp_no-unused-expression" line="11" severity="info" />
-    <error message="The use of method `Object.defineProperty` is not allowed as it will mutate its arguments" source="fp_no-mutating-methods" line="11" severity="info" />
-    <error message="ES5 'Object.defineProperty' method is forbidden." source="es-x_no-object-defineproperty" line="11" severity="info" />
-    <error message="There should be a line break after this argument." source="@stylistic_function-call-argument-newline" line="11" severity="info" />
-    <error message="Replace `'c'` with `\"c\"`" source="prettier_prettier" line="11" severity="info" />
-    <error message="Replace `'c'` with `\"c\"`" source="prettier-vue_prettier" line="11" severity="info" />
-    <error message="Strings must use doublequote." source="@stylistic_quotes" line="11" severity="info" />
-    <error message="There should be a line break after this argument." source="@stylistic_function-call-argument-newline" line="11" severity="info" />
-    <error message="Unquoted property 'set' found." source="@stylistic_quote-props" line="12" severity="info" />
-    <error message="Unexpected unnamed method 'set'." source="func-names" line="12" severity="info" />
-    <error message="Expected method shorthand." source="object-shorthand" line="12" severity="info" />
-    <error message="Function must end with a return statement, so that it doesn't return `undefined`" source="fp_no-nil" line="12" severity="info" />
-    <error message="Insert `·`" source="prettier_prettier" line="12" severity="info" />
-    <error message="Insert `·`" source="prettier-vue_prettier" line="12" severity="info" />
-    <error message="Missing space before function parentheses." source="@stylistic_space-before-function-paren" line="12" severity="info" />
-    <error message="Missing \"value\" parameter type annotation." source="flowtype_require-parameter-type" line="12" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="12" severity="info" />
-    <error message="Unallowed reassignment" source="fp_no-mutation" line="13" severity="info" />
-    <error message="Unallowed use of `this`" source="fp_no-this" line="13" severity="info" />
-    <error message="Unexpected this, use functions not classes." source="functional_no-this-expressions" line="13" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="13" severity="info" />
-    <error message="Expected \"get\" to come before \"set\"" source="perfectionist_sort-objects" line="15" severity="info" />
-    <error message="Property names in an object literal should be sorted alphabetically" source="sorting_sort-object-props" line="15" severity="info" />
-    <error message="Expected object keys to be in ascending order. 'get' should be before 'set'." source="sort-keys" line="15" severity="info" />
-    <error message="Unquoted property 'get' found." source="@stylistic_quote-props" line="15" severity="info" />
-    <error message="Expected object keys to be in ascending order. 'get' should be before 'set'." source="sort-keys-custom-order-fix_sort-keys-custom-order-fix" line="15" severity="info" />
-    <error message="Expected object keys to be in ascending order. 'get' should be before 'set'." source="sort-keys-fix_sort-keys-fix" line="15" severity="info" />
-    <error message="Expected object keys to be in ascending order. 'get' should be before 'set'." source="vue_sort-keys" line="15" severity="info" />
-    <error message="Unexpected unnamed method 'get'." source="func-names" line="15" severity="info" />
-    <error message="Expected method shorthand." source="object-shorthand" line="15" severity="info" />
-    <error message="Missing return type annotation." source="flowtype_require-return-type" line="15" severity="info" />
-    <error message="Insert `·`" source="prettier_prettier" line="15" severity="info" />
-    <error message="Insert `·`" source="prettier-vue_prettier" line="15" severity="info" />
-    <error message="Missing space before function parentheses." source="@stylistic_space-before-function-paren" line="15" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="15" severity="info" />
-    <error message="Unallowed use of `this`" source="fp_no-this" line="16" severity="info" />
-    <error message="Unexpected this, use functions not classes." source="functional_no-this-expressions" line="16" severity="info" />
-    <error message="Block must be padded by blank lines." source="@stylistic_padded-blocks" line="16" severity="info" />
-    <error message="Insert `,`" source="prettier_prettier" line="17" severity="info" />
-    <error message="Insert `,`" source="prettier-vue_prettier" line="17" severity="info" />
+    <error message="A space is required before '}'." source="object-curly-spacing" line="10" severity="info" />
     <error message="Missing trailing comma." source="comma-dangle" line="17" severity="info" />
     <error message="Newline required at end of file but not found." source="eol-last" line="18" severity="info" />
-    <error message="Newline required at end of file but not found." source="@stylistic_eol-last" line="18" severity="info" />
-    <error message="Insert `⏎`" source="prettier_prettier" line="18" severity="info" />
-    <error message="Insert `⏎`" source="prettier-vue_prettier" line="18" severity="info" />
   </file>
 </checkstyle>
