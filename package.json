@@ -324,7 +324,7 @@
     "glob": "^10.3.10",
     "graphql-ws": "^5.14.3",
     "gts": "^5.2.0",
-    "husky": "^9.0.5",
+    "husky": "^9.0.10",
     "i18next": "^23.7.19",
     "lint-config-qiwi": "^0.0.1-security",
     "lint-staged": "^15.2.0",
