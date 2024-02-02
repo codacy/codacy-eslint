@@ -2240,7 +2240,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@babel_no-unused-expressions",
@@ -2278,7 +2278,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-async-await",
@@ -2292,21 +2292,21 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-attributes-during-construction",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-deprecated",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-document-query",
@@ -2327,21 +2327,21 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-leading-uppercase-api-name",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-leaky-event-listeners",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-disallowed-lwc-imports",
@@ -2364,7 +2364,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-rest-parameter",
@@ -2378,28 +2378,28 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_valid-api",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_valid-track",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_valid-wire",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@lwc_lwc_no-restricted-browser-globals-during-ssr",
@@ -2546,7 +2546,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_jsx-no-hardcoded-content",
@@ -2595,14 +2595,14 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_polaris-no-bare-stack-item",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_prefer-class-properties",
@@ -2623,7 +2623,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_prefer-twine",
@@ -2637,42 +2637,42 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_react-initialize-state",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_react-no-multiple-render-methods",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_react-prefer-private-members",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_react-require-autocomplete",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_react-type-state",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_restrict-full-import",
@@ -2721,14 +2721,14 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@shopify_webpack_no-unnamed-dynamic-imports",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@stylistic_array-bracket-newline",
@@ -3765,21 +3765,21 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_array-type",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_await-thenable",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_ban-ts-comment",
@@ -3791,28 +3791,28 @@
           "default": 3
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_ban-tslint-comment",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_ban-types",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_class-literal-property-style",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_class-methods-use-this",
@@ -3831,28 +3831,28 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_consistent-indexed-object-style",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_consistent-type-assertions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_consistent-type-definitions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_consistent-type-exports",
@@ -3894,7 +3894,7 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_explicit-function-return-type",
@@ -3957,35 +3957,35 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-array-delete",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-base-to-string",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-confusing-non-null-assertion",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-confusing-void-expression",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-dupe-class-members",
@@ -3999,77 +3999,77 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-duplicate-type-constituents",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-dynamic-delete",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-empty-function",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-empty-interface",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-explicit-any",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-extra-non-null-assertion",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-extraneous-class",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-floating-promises",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-for-in-array",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-implied-eval",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-import-type-side-effects",
@@ -4083,7 +4083,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-invalid-this",
@@ -4102,7 +4102,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-loop-func",
@@ -4116,7 +4116,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-magic-numbers",
@@ -4156,56 +4156,56 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-misused-new",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-misused-promises",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-mixed-enums",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-namespace",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-non-null-asserted-nullish-coalescing",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-non-null-asserted-optional-chain",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-non-null-assertion",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-redeclare",
@@ -4219,7 +4219,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-require-imports",
@@ -4247,28 +4247,28 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-throw-literal",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-condition",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-qualifier",
@@ -4282,70 +4282,70 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-type-assertion",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-argument",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-assignment",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-call",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-member-access",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-return",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-unary-minus",
@@ -4383,7 +4383,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-use-before-define",
@@ -4397,7 +4397,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-useless-empty-export",
@@ -4411,21 +4411,21 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_no-var-requires",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_parameter-properties",
@@ -4439,7 +4439,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-destructuring",
@@ -4460,56 +4460,56 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-function-type",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-includes",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-literal-enum-member",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-namespace-keyword",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-nullish-coalescing",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-optional-chain",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-promise-reject-errors",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-readonly",
@@ -4530,7 +4530,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-regexp-exec",
@@ -4544,21 +4544,21 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-string-starts-ends-with",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_prefer-ts-expect-error",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_promise-function-async",
@@ -4579,21 +4579,21 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_restrict-plus-operands",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_restrict-template-expressions",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_return-await",
@@ -4628,7 +4628,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_typedef",
@@ -4642,14 +4642,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "@typescript-eslint_unified-signatures",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "awscdk_require-bucket-encryption",
@@ -4768,7 +4768,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_defaults-on-top",
@@ -4803,21 +4803,21 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-changed-set",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-collection-models",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-constructor",
@@ -4831,14 +4831,14 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-model-attributes",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-native-jquery",
@@ -4859,21 +4859,21 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-view-model-attributes",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-view-onoff-binding",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "backbone_no-view-qualified-jquery",
@@ -4887,7 +4887,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cdk_ban-lambda-runtimes",
@@ -4997,56 +4997,56 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "codeceptjs_no-exclusive-tests",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "codeceptjs_no-skipped-tests",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "codeceptjs_no-pause-in-scenario",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "compat_compat",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "css-modules_no-unused-class",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "css-modules_no-undef-class",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cypress_no-assigning-return-values",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cypress_unsafe-to-chain-command",
@@ -5058,21 +5058,21 @@
           "default": []
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cypress_no-unnecessary-waiting",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cypress_no-async-tests",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "cypress_assertion-before-screenshot",
@@ -5121,35 +5121,35 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_avoid-using-needs-in-controllers",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_classic-decorator-hooks",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_classic-decorator-no-classic-methods",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_closure-actions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_computed-property-getters",
@@ -5163,7 +5163,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_named-functions-in-promises",
@@ -5182,14 +5182,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-actions-hash",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-array-prototype-extensions",
@@ -5208,63 +5208,63 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-assignment-of-untracked-properties-used-in-tracking-contexts",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-at-ember-render-modifiers",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-attrs-in-components",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-attrs-snapshot",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-capital-letters-in-routes",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-classic-classes",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-classic-components",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-component-lifecycle-hooks",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-computed-properties-in-native-classes",
@@ -5276,7 +5276,7 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-controller-access-in-routes",
@@ -5288,7 +5288,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-controllers",
@@ -5309,35 +5309,35 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-deprecated-router-transition-methods",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-duplicate-dependent-keys",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-ember-super-in-es-classes",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-ember-testing-in-module-scope",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-empty-attrs",
@@ -5351,14 +5351,14 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-function-prototype-extensions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-get-with-default",
@@ -5374,7 +5374,7 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-get",
@@ -5406,14 +5406,14 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-global-jquery",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-html-safe",
@@ -5427,7 +5427,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-implicit-service-injection-argument",
@@ -5441,98 +5441,98 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-incorrect-computed-macros",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-invalid-debug-function-arguments",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-invalid-dependent-keys",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-invalid-test-waiters",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-jquery",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-legacy-test-waiters",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-mixins",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-new-mixins",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-noop-setup-on-error-in-before",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-observers",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-old-shims",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-on-calls-in-components",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-pause-test",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-private-routing-service",
@@ -5548,7 +5548,7 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-proxies",
@@ -5569,7 +5569,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-restricted-service-injections",
@@ -5600,21 +5600,21 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-settled-after-test-helper",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-shadow-route-definition",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-side-effects",
@@ -5630,63 +5630,63 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-string-prototype-extensions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-and-then",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-import-export",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-module-for",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-support-import",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-test-this-render",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-tracked-properties-from-args",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-try-invoke",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-unnecessary-index-route",
@@ -5700,7 +5700,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_no-unnecessary-service-injection-argument",
@@ -5721,7 +5721,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_order-in-components",
@@ -5756,7 +5756,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-computed-macros",
@@ -5768,7 +5768,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-computed-property-dependencies",
@@ -5784,7 +5784,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-fetch-import",
@@ -5798,7 +5798,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-super-in-lifecycle-hooks",
@@ -5814,21 +5814,21 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-tagless-components",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_require-valid-css-selector-in-test-helpers",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_route-path-style",
@@ -5842,7 +5842,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_template-no-let-reference",
@@ -5856,14 +5856,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_use-ember-data-rfc-395-imports",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember_use-ember-get-and-set",
@@ -5895,7 +5895,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "ember-suave_no-const-outside-module-scope",
@@ -8061,14 +8061,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "i18n-json_valid-message-syntax",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "i18n-json_identical-keys",
@@ -8082,7 +8082,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "i18n-json_identical-placeholders",
@@ -8096,7 +8096,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "import_no-unresolved",
@@ -8215,7 +8215,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "import_no-cycle",
@@ -8420,7 +8420,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "import_no-empty-named-blocks",
@@ -8448,7 +8448,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "import-newlines_enforce",
@@ -9010,77 +9010,77 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-empty",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-enabled-disabled",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-focus",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-in-document",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-required",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-to-have-attribute",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-to-have-class",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-to-have-style",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-to-have-text-content",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-dom_prefer-to-have-value",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jest-extended_prefer-to-be-array",
@@ -9178,7 +9178,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jsdoc_check-access",
@@ -9534,7 +9534,7 @@
           "default": {}
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "jsdoc_require-param",
@@ -9911,28 +9911,28 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_array-element-newline",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_auto",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_comma-dangle",
@@ -9946,7 +9946,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_indent",
@@ -9974,7 +9974,7 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_key-name-casing",
@@ -10002,14 +10002,14 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_key-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_no-bigint-literals",
@@ -10100,7 +10100,7 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_no-multi-str",
@@ -10135,7 +10135,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_no-octal-numeric-literals",
@@ -10212,14 +10212,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_object-property-newline",
@@ -10235,7 +10235,7 @@
           "default": false
         }
       ],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_quote-props",
@@ -10267,14 +10267,14 @@
           }
         }
       ],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_sort-keys",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": false
+      "enabled": null
     },
     {
       "patternId": "jsonc_space-unary-ops",
@@ -10601,7 +10601,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "lit_attribute-value-entities",
@@ -10636,7 +10636,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "lit_no-duplicate-template-bindings",
@@ -11509,42 +11509,42 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-exports-assign",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-extraneous-import",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-extraneous-require",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-missing-import",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-missing-require",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-mixed-requires",
@@ -11612,7 +11612,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-unpublished-import",
@@ -11624,35 +11624,35 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-unpublished-require",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-unsupported-features_es-builtins",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-unsupported-features_es-syntax",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_no-unsupported-features_node-builtins",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_prefer-global_buffer",
@@ -11722,14 +11722,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "n_shebang",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-only-tests_no-only-tests",
@@ -11765,7 +11765,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "no-unsanitized_property",
@@ -12213,84 +12213,84 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_max-nested-describe",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_missing-playwright-await",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-conditional-in-test",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-element-handle",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-eval",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-focused-test",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-force-option",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-nested-step",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-networkidle",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-nth-methods",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-page-pause",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-raw-locators",
@@ -12316,35 +12316,35 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-useless-await",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-useless-not",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-wait-for-selector",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_no-wait-for-timeout",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_prefer-lowercase-title",
@@ -12398,7 +12398,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_require-soft-assertions",
@@ -12419,7 +12419,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "playwright_valid-title",
@@ -12439,7 +12439,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "prefer-arrow_prefer-arrow-functions",
@@ -12467,7 +12467,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "promise_param-names",
@@ -12821,7 +12821,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_forbid-component-props",
@@ -12986,7 +12986,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-max-depth",
@@ -13051,7 +13051,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-no-constructed-context-values",
@@ -13065,7 +13065,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-no-leaked-render",
@@ -13110,7 +13110,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-no-useless-fragment",
@@ -13131,7 +13131,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-curly-brace-presence",
@@ -13196,14 +13196,14 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-uses-vars",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_jsx-wrap-multilines",
@@ -13257,7 +13257,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-danger",
@@ -13271,14 +13271,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-deprecated",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-did-mount-set-state",
@@ -13299,21 +13299,21 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-find-dom-node",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-is-mounted",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-multi-comp",
@@ -13346,7 +13346,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-redundant-should-component-update",
@@ -13360,7 +13360,7 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-this-in-sfc",
@@ -13381,14 +13381,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-unknown-property",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_no-unsafe",
@@ -13482,14 +13482,14 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_react-in-jsx-scope",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_require-default-props",
@@ -13510,7 +13510,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react_self-closing-comp",
@@ -13582,14 +13582,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-hooks_exhaustive-deps",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-native_no-unused-styles",
@@ -13645,28 +13645,28 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-perf_jsx-no-new-array-as-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-perf_jsx-no-new-function-as-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-perf_jsx-no-jsx-as-prop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "react-redux_connect-prefer-minimum-two-arguments",
@@ -13764,35 +13764,35 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "redux-saga_yield-effects",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "redux-saga_no-unhandled-errors",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_confusing-quantifier",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_control-character-escape",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_grapheme-string-literal",
@@ -13820,21 +13820,21 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_negation",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-contradiction-with-assertion",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-control-character",
@@ -13848,133 +13848,133 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-dupe-disjunctions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-alternative",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-capturing-group",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-character-class",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-group",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-lookarounds-assertion",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-empty-string-literal",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-escape-backspace",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-extra-lookaround-assertions",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-invalid-regexp",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-invisible-character",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-lazy-ends",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-legacy-features",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-misleading-capturing-group",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-misleading-unicode-character",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-missing-g-flag",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-non-standard-flag",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-obscure-range",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-octal",
@@ -13988,14 +13988,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-potentially-useless-backreference",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-standalone-backslash",
@@ -14009,7 +14009,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-super-linear-move",
@@ -14023,147 +14023,147 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-trivially-nested-quantifier",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-unused-capturing-group",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-assertions",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-backreference",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-character-class",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-dollar-replacements",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-escape",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-flag",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-lazy",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-non-capturing-group",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-quantifier",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-range",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-set-operand",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-string-literal",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-useless-two-nums-quantifier",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_no-zero-quantifier",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_optimal-lookaround-quantifier",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_optimal-quantifier-concatenation",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-character-class",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-d",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-escape-replacement-dollar-char",
@@ -14205,14 +14205,14 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-predefined-assertion",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-quantifier",
@@ -14226,14 +14226,14 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-range",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-regexp-exec",
@@ -14261,28 +14261,28 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-star-quantifier",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-unicode-codepoint-escapes",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_prefer-w",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_require-unicode-regexp",
@@ -14303,7 +14303,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_sort-alternatives",
@@ -14324,14 +14324,14 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_strict",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "regexp_unicode-escape",
@@ -14345,7 +14345,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "relay_graphql-syntax",
@@ -15509,21 +15509,21 @@
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "tailwindcss_enforces-shorthand",
       "level": "Info",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "tailwindcss_migration-from-tailwind-2",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "tailwindcss_no-arbitrary-value",
@@ -15551,56 +15551,56 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_button",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_input",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_onChange",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_onClick",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_onKeyDown",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_onKeyUp",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "test-selectors_onSubmit",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "testing-library_await-async-events",
@@ -15833,7 +15833,7 @@
           "default": []
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "typescript-sort-keys_interface",
@@ -17214,7 +17214,7 @@
           "default": true
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "vue_no-custom-modifiers-on-v-model",
@@ -17408,7 +17408,7 @@
           "default": false
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "vue_no-export-in-script-setup",
@@ -17482,7 +17482,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "vue_no-multi-spaces",
@@ -17699,7 +17699,7 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "vue_no-static-inline-styles",

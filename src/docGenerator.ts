@@ -88,11 +88,24 @@ export class DocGenerator {
         category,
         subcategory,
         DocGenerator.generateParameters(patternId, meta?.schema),
-        meta?.docs?.recommended === true
+        this.enablePattern(patternId, meta)
       )
     })
 
     return new Specification(toolName, toolVersion, patterns)
+  }
+
+  private enablePattern (patternId: string, meta: Rule.RuleMetaData): boolean {
+    const listPrefix = [
+      "@typescript-eslint",
+      "eslint-plugin",
+      "security",
+      "security-node"
+    ]
+    const prefix: string = patternId.split("/")[0]
+    const enablePattern: boolean = meta?.docs?.recommended && (prefix === patternId || listPrefix.includes(prefix))
+
+    return enablePattern
   }
 
   generateDescriptionEntries (): DescriptionEntry[] {

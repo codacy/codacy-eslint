@@ -1,40 +1,5 @@
 // https://raw.githubusercontent.com/nodejs/node/main/.eslintrc.js
 
-'use strict';
-
-/* eslint-env node */
-
-const Module = require('module');
-const path = require('path');
-
-const NodePlugin = require('./tools/node_modules/eslint-plugin-node-core');
-NodePlugin.RULES_DIR = path.resolve(__dirname, 'tools', 'eslint-rules');
-
-// The Module._findPath() monkeypatching is to make it so that ESLint will work
-// if invoked by a globally-installed ESLint or ESLint installed elsewhere
-// rather than the one we ship. This makes it possible for IDEs to lint files
-// with our rules while people edit them.
-const ModuleFindPath = Module._findPath;
-const hacks = [
-  'eslint-plugin-node-core',
-  'eslint-plugin-jsdoc',
-  'eslint-plugin-markdown',
-  '@babel/eslint-parser',
-  '@babel/plugin-syntax-import-attributes',
-];
-Module._findPath = (request, paths, isMain) => {
-  const r = ModuleFindPath(request, paths, isMain);
-  if (!r && hacks.includes(request)) {
-    try {
-      return require.resolve(`./tools/node_modules/${request}`);
-    } catch {
-      return require.resolve(
-        `./tools/node_modules/eslint/node_modules/${request}`);
-    }
-  }
-  return r;
-};
-
 module.exports = {
   root: true,
   env: {
