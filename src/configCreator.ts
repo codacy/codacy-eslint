@@ -2,6 +2,7 @@ import {Codacyrc, Parameter, ParameterSpec, Pattern} from "codacy-seed"
 import {ESLint, Linter} from "eslint"
 import {existsSync} from "fs-extra"
 import {cloneDeep, fromPairs, isEmpty, partition} from "lodash"
+import path from "path"
 
 import {isBlacklisted} from "./blacklist"
 import {DocGenerator} from "./docGenerator"
@@ -55,7 +56,7 @@ function generateEslintOptions (
     : []
   const useGeneratedOptions = patterns.length || !existsEslintConfigInRepo(srcDirPath)
 
-  debug("options: " + patterns.length + " total patterns in codacyrc")
+  debug(`options: ${patterns.length} total patterns in codacyrc`)
 
   const options = cloneDeep(defaultOptions)
   options.cwd = srcDirPath
@@ -86,7 +87,7 @@ function generateEslintOptions (
 
     // configure override in case storybook plugin rules being turned on
     if (storybookPatterns.length) {
-      debug("options: setting " + storybookPatterns.length + " storybook patterns")
+      debug(`options: setting ${storybookPatterns.length} storybook patterns`)
       options.baseConfig.overrides.push({
         files: [
           "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
@@ -98,13 +99,13 @@ function generateEslintOptions (
 
     // explicitly use only the rules being passed by codacyrc
     if (otherPatterns.length) {
-      debug("options: setting " + otherPatterns.length + " patterns")
+      debug(`options: setting ${otherPatterns.length} patterns`)
       options.baseConfig.rules = convertPatternsToEslintRules(otherPatterns)
     }
   } else if (DEBUG) {
     const allPatterns = retrieveAllCodacyPatterns()
 
-    debug("options: setting all " + allPatterns.length + " patterns")
+    debug(`options: setting all ${allPatterns.length} patterns`)
     options.baseConfig.rules = convertPatternsToEslintRules(allPatterns)
   }
 
@@ -150,8 +151,8 @@ function existsEslintConfigInRepo (srcDirPath: string): boolean {
   ]
 
   for (const filename of confFilenames) {
-    if (existsSync(srcDirPath + "/" + filename)) {
-      debug("options: found - \"" + filename + "\"")
+    if (existsSync(path.join(srcDirPath, filename))) {
+      debug(`options: found - "${filename}"`)
       return true
     }
   }
