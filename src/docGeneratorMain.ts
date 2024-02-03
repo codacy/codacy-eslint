@@ -9,7 +9,7 @@ async function main () {
 
   await docGenerator.createPatternsFile()
 
-  await docGenerator.createAllPatternsMultipleTest()
+  await docGenerator.createAllPatternsMultipleTestFiles()
 
   await docGenerator.downloadDocs(
     "/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/",

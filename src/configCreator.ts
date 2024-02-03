@@ -7,6 +7,7 @@ import path from "path"
 import {isBlacklisted} from "./blacklist"
 import {DocGenerator} from "./docGenerator"
 import {defaultOptions} from "./eslintDefaultOptions"
+import {allRules} from "./eslintPlugins"
 import {DEBUG, debug} from "./logging"
 import {patternIdToEslint} from "./model/patterns"
 
@@ -35,10 +36,9 @@ function generateFilesToAnalyze (
     "**/*.jsx",
     "**/*.json"
   ]
-
-  const files = !codacyrc?.files || !codacyrc.files.length 
-    ? defaultFilesToAnalyze
-    : codacyrc.files
+  const files = codacyrc?.files && codacyrc.files.length 
+    ? codacyrc.files
+    : defaultFilesToAnalyze
 
   debug("files: finished")
   return files
@@ -64,7 +64,7 @@ function generateEslintOptions (
   options.resolvePluginsRelativeTo = "/"
   options.useEslintrc = !useGeneratedOptions
 
-  if (!existsSync(`${srcDirPath}/tsconfig.json`)) {
+  if (!existsSync(path.resolve(srcDirPath, "tsconfig.json"))) {
     debug("options: use tsconfig from tool")
     options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
   }
@@ -141,7 +141,7 @@ function convertPatternsToEslintRules (patterns: Pattern[]): {
 }
 
 function existsEslintConfigInRepo (srcDirPath: string): boolean {
-  const confFilenames = [
+  const filenames = [
     ".eslintrc",
     ".eslintrc.js",
     ".eslintrc.cjs",
@@ -149,29 +149,22 @@ function existsEslintConfigInRepo (srcDirPath: string): boolean {
     ".eslintrc.yml",
     ".eslintrc.json"
   ]
+  const found = filenames.some(filename => existsSync(path.resolve(srcDirPath, filename)))
+  debug(`options: eslintrc config file ${found ? "" : "not "}found`)
 
-  for (const filename of confFilenames) {
-    if (existsSync(path.join(srcDirPath, filename))) {
-      debug(`options: found - "${filename}"`)
-      return true
-    }
-  }
-
-  debug(`options: no eslintrc found in ${srcDirPath}`)
-  return false
+  return found
 }
 
 function retrieveAllCodacyPatterns (): Pattern[] {
   const patterns = []
-  require("./eslintPlugins")
-    .allRules
+  allRules
     .filter(([patternId, rule]) =>
       !isBlacklisted(patternId)
       && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       // problems with the path generated (win vs nix) for this specific pattern
       && (!DEBUG || patternId != "spellcheck_spell-checker")
     )
-    .map(([patternId, rule]) => {
+    .forEach(([patternId, rule]) => {
       const pattern = new Pattern(
         patternId,
         DocGenerator.generateParameters(patternId, rule.meta?.schema)
