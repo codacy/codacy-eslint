@@ -25,6 +25,7 @@ export function fromSchemaArray (
       ...automaticParameters,
       ...manualParameters
     ])
+
     return Array.from(allParametersMap.entries()).map(
       ([k, v]) => new ParameterSpec(k, v)
     )

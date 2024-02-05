@@ -1,7 +1,7 @@
 const blacklistRegexes: RegExp[] = [
   /@lwc\/lwc\/no-unexpected-wire-adapter-usages/,
   /@lwc\/lwc\/no-unknown-wire-adapters/,
-  /@typescript-eslint\/lines-between-class-members/,
+  /@typescript-eslint\/consistent-type-imports/,
   /angular\/service-name/,
   /ember\/no-restricted-property-modifications/,
   /ember\/template-indent/,

@@ -3,4 +3,10 @@
   <!-- This test is specifically made to test that codacy-eslint -->
   <!-- should only return specific errors to test and/or empty files. -->
   <!-- Adding any other errors here means to test that a bug exists. -->
+  <file name="all-patterns.js">
+    <error source="cdk_filename-match-regex" line="1" message="Filename all-patterns.js does not match the file name pattern ^([a-z][a-z0-9]*)(-[a-z0-9]+)*(.spec|.test)?.ts$" severity="error" />
+    <error source="filenames_match-regex" line="1" message="Filename 'all-patterns.js' does not match the naming convention." severity="info" />
+    <error source="jsdoc_require-file-overview" line="1" message="Missing @file" severity="warning" />
+    <error source="unicorn_no-empty-file" line="1" message="Empty files are not allowed." severity="warning" />
+  </file>
 </checkstyle>

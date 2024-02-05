@@ -414,7 +414,6 @@
   <module name="@typescript-eslint_consistent-type-assertions" />
   <module name="@typescript-eslint_consistent-type-definitions" />
   <module name="@typescript-eslint_consistent-type-exports" />
-  <module name="@typescript-eslint_consistent-type-imports" />
   <module name="@typescript-eslint_default-param-last" />
   <module name="@typescript-eslint_dot-notation" />
   <module name="@typescript-eslint_explicit-function-return-type" />
@@ -2186,6 +2185,7 @@
   <module name="vue_no-restricted-static-attribute" />
   <module name="vue_no-restricted-syntax" />
   <module name="vue_no-restricted-v-bind" />
+  <module name="vue_no-restricted-v-on" />
   <module name="vue_no-root-v-if" />
   <module name="vue_no-setup-props-reactivity-loss" />
   <module name="vue_no-shared-component-data" />
@@ -2243,6 +2243,7 @@
   <module name="vue_require-direct-export" />
   <module name="vue_require-emit-validator" />
   <module name="vue_require-explicit-emits" />
+  <module name="vue_require-explicit-slots" />
   <module name="vue_require-expose" />
   <module name="vue_require-macro-variable-name" />
   <module name="vue_require-name-property" />

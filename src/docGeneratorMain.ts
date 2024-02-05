@@ -5,11 +5,11 @@ main()
 async function main () {
   const docGenerator = new DocGenerator()
 
-  await docGenerator.generateDescriptionFile()
+  await docGenerator.createDescriptionFile()
 
-  await docGenerator.generatePatternsFile()
+  await docGenerator.createPatternsFile()
 
-  await docGenerator.generateAllPatternsMultipleTest()
+  await docGenerator.createAllPatternsMultipleTestFiles()
 
   await docGenerator.downloadDocs(
     "/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/",

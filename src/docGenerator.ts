@@ -1,6 +1,6 @@
 import {EOL} from "node:os"
 
-import {RuleInfo} from "@eslint-stylistic/metadata"
+import {RuleInfo, rules as rulesStylistic} from "@eslint-stylistic/metadata"
 import axios from "axios"
 import {
   DescriptionEntry,
@@ -14,6 +14,7 @@ import {Rule} from "eslint"
 import fs from "fs-extra"
 import {JSONSchema4} from "json-schema"
 import {flatMapDeep} from "lodash"
+import path from "path"
 
 import {isBlacklistedOnlyFromDocumentation} from "./blacklist"
 import {capitalize, patternTitle} from "./docGeneratorStringUtils"
@@ -28,9 +29,9 @@ export class DocGenerator {
 
   private githubBaseUrl = "https://raw.githubusercontent.com"
 
-  private docsDirectory = "docs/"
+  private docsDirectory = "docs"
 
-  private docsDescriptionDirectory = this.docsDirectory + "description/"
+  private docsDescriptionDirectory = path.join(this.docsDirectory, "description")
 
   constructor () {
     this.initializeRules()
@@ -38,11 +39,11 @@ export class DocGenerator {
  
   private initializeRules (): void {
     // initialize rules without blacklisted and deprecated
-    this.rules = allRules.filter(
-      ([patternId, rule]) =>
+    this.rules = allRules
+      .filter(([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
         && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
-    )
+      )
     console.log("Number of rules: ", this.rules.length)
   }
 
@@ -69,11 +70,11 @@ export class DocGenerator {
       return namedParameters
     if (unnamedParameter)
       return [unnamedParameter]
-    
+
     return []
   }
 
-  generatePatterns (): Specification {
+  private generatePatterns (): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const type = meta?.type ? meta.type : meta?.docs?.category
@@ -88,14 +89,27 @@ export class DocGenerator {
         category,
         subcategory,
         DocGenerator.generateParameters(patternId, meta?.schema),
-        meta?.docs?.recommended === true
+        this.isDefaultPattern(patternId, meta)
       )
     })
 
     return new Specification(toolName, toolVersion, patterns)
   }
 
-  generateDescriptionEntries (): DescriptionEntry[] {
+  private isDefaultPattern (patternId: string, meta: Rule.RuleMetaData): boolean {
+    const defaultPrefixes = [
+      "@typescript-eslint",
+      "eslint-plugin",
+      "security",
+      "security-node"
+    ]
+    const prefix = patternId.split("/")[0]
+
+    // ESLint core rules are also default but don't have a prefix
+    return meta?.docs?.recommended && (prefix === patternId || defaultPrefixes.includes(prefix))
+  }
+
+  private generateDescriptionEntries (): DescriptionEntry[] {
     const descriptions: DescriptionEntry[] = []
     this.rules.forEach(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
@@ -134,14 +148,11 @@ export class DocGenerator {
     return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
-  async createDescriptionFile (url: URL, relativeUrl: string, prefix: string, pattern: string, rejectOnError: boolean = false) {
+  async createPatternDescriptionFile (url: URL, relativeUrl: string, prefix: string, pattern: string, rejectOnError: boolean = false) {
     try {
       const response = await axios.get(url.href)
       const text = this.inlineLinkedMarkdownFiles(response.data, relativeUrl)
-      const filename =
-        this.docsDescriptionDirectory +
-        patternIdToCodacy((prefix.length > 0 ? prefix + "/" : "") + pattern) +
-        ".md"
+      const filename = `${this.docsDescriptionDirectory}${path.sep}${patternIdToCodacy((prefix.length ? prefix + "/" : "") + pattern)}.md`
 
       await writeFile(filename, text)
     } catch (error) {
@@ -157,31 +168,30 @@ export class DocGenerator {
     relativeUrl: string,
     prefix: string,
     rejectOnError: boolean = false
-  ): Promise<void[]> {
-    console.log("Generate " + (prefix.length > 0 ? prefix : "eslint") + " description files")
+  ): Promise<void> {
+    console.log(`Generate ${prefix.length ? prefix : "eslint"} description files`)
     
     relativeUrl = (!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl
 
-    const patterns =
-      prefix.length > 0
-        ? this.patternIdsWithoutPrefix(prefix)
-        : this.eslintPatternIds()
+    const patterns = prefix.length
+      ? this.patternIdsWithoutPrefix(prefix)
+      : this.eslintPatternIds()
 
-    const promises: Promise<void>[] = prefix === "@stylistic"
-      ? require("@eslint-stylistic/metadata").rules
+    const promises = prefix === "@stylistic"
+      ? rulesStylistic
         .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
         .map((rule: RuleInfo) => {
           const url = new URL(relativeUrl + rule.docsEntry)
-          return this.createDescriptionFile(url, relativeUrl, prefix, rule.name, rejectOnError)
+          return this.createPatternDescriptionFile(url, relativeUrl, prefix, rule.name, rejectOnError)
         })
       : patterns.map((pattern: string) => {
         const url = new URL(relativeUrl + pattern + ".md")
-        return this.createDescriptionFile(url, relativeUrl, prefix, pattern, rejectOnError)
+        return this.createPatternDescriptionFile(url, relativeUrl, prefix, pattern, rejectOnError)
       })
-    return Promise.all(promises)
+    await Promise.all(promises)
   }
 
-  async generateDescriptionFile (): Promise<void> {
+  async createDescriptionFile (): Promise<void> {
     console.log("Generate description.json")
     const descriptions = this.generateDescriptionEntries()
 
@@ -189,30 +199,32 @@ export class DocGenerator {
     
     await this.emptyDocsDescriptionFolder()
     await this.writeFileInJson(
-      this.docsDescriptionDirectory + "description.json",
+      path.resolve(this.docsDescriptionDirectory, "description.json"),
       descriptions
     )
   }
 
-  async generatePatternsFile (): Promise<void> {
+  async createPatternsFile (): Promise<void> {
     console.log("Generate patterns.json")
+    const patterns = this.generatePatterns()
+
+    if (!patterns.patterns.length) return
+
     await this.writeFileInJson(
-      this.docsDirectory + "patterns.json",
-      this.generatePatterns()
+      path.resolve(this.docsDirectory, "patterns.json"),
+      patterns
     )
   }
 
-  async generateAllPatternsMultipleTest (): Promise<void> {
-    console.log("Generate all-patterns multiple-test patterns.xml")
+  async createAllPatternsMultipleTestFiles (): Promise<void> {
+    console.log("Generate patterns.xml")
 
-    const modules = this
-      .getPatternIds()
+    const modules = this.getPatternIds()
       .map(patternId => `  <module name="${patternIdToCodacy(patternId)}" />`)
       .join("\n")
 
-    const patternsFilename = "docs/multiple-tests/all-patterns/patterns.xml"
-    const patternsTypescriptFilename =
-      "docs/multiple-tests/all-patterns-typescript/patterns.xml"
+    const patternsJSFilename = path.resolve(this.docsDirectory, "multiple-tests", "all-patterns", "patterns.xml")
+    const patternsTSFilename = path.resolve(this.docsDirectory, "multiple-tests", "all-patterns-typescript", "patterns.xml")
     const patternsXml = `<!-- This file is generated by generateDocs. Do not edit. -->
 <module name="root">
   <module name="BeforeExecutionExclusionFileFilter">
@@ -222,8 +234,8 @@ ${modules}
 </module>
 `
     await Promise.all([
-      writeFile(patternsFilename, patternsXml),
-      writeFile(patternsTypescriptFilename, patternsXml)
+      writeFile(patternsJSFilename, patternsXml),
+      writeFile(patternsTSFilename, patternsXml)
     ])
   }
 
