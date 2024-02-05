@@ -11,7 +11,7 @@ export const engineImpl: Engine = async function (
 ): Promise<ToolResult[]> {
   debug("engine: starting")
 
-  const srcDirPath = "src"
+  const srcDirPath = "/src"
   const [options, files] = createEslintConfig(
     srcDirPath,
     codacyrc
