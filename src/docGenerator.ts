@@ -89,23 +89,24 @@ export class DocGenerator {
         category,
         subcategory,
         DocGenerator.generateParameters(patternId, meta?.schema),
-        this.enablePattern(patternId, meta)
+        this.isDefaultPattern(patternId, meta)
       )
     })
 
     return new Specification(toolName, toolVersion, patterns)
   }
 
-  private enablePattern (patternId: string, meta: Rule.RuleMetaData): boolean {
-    const listPrefix = [
+  private isDefaultPattern (patternId: string, meta: Rule.RuleMetaData): boolean {
+    const defaultPrefixes = [
       "@typescript-eslint",
       "eslint-plugin",
       "security",
       "security-node"
     ]
     const prefix = patternId.split("/")[0]
-    
-    return meta?.docs?.recommended && (prefix === patternId || listPrefix.includes(prefix))
+
+    // ESLint core rules are also default but don't have a prefix
+    return meta?.docs?.recommended && (prefix === patternId || defaultPrefixes.includes(prefix))
   }
 
   private generateDescriptionEntries (): DescriptionEntry[] {
@@ -151,10 +152,7 @@ export class DocGenerator {
     try {
       const response = await axios.get(url.href)
       const text = this.inlineLinkedMarkdownFiles(response.data, relativeUrl)
-      const filename = path.resolve(
-        this.docsDescriptionDirectory,
-        `${patternIdToCodacy((prefix.length ? prefix + "/" : "") + pattern)}.md`
-      )
+      const filename = `${this.docsDescriptionDirectory}${path.sep}${patternIdToCodacy((prefix.length ? prefix + "/" : "") + pattern)}.md`
 
       await writeFile(filename, text)
     } catch (error) {

@@ -64,7 +64,7 @@ function generateEslintOptions (
   options.resolvePluginsRelativeTo = "/"
   options.useEslintrc = !useGeneratedOptions
 
-  if (!existsSync(path.resolve(srcDirPath, "tsconfig.json"))) {
+  if (!existsSync(`${srcDirPath}${path.sep}tsconfig.json`)) {
     debug("options: use tsconfig from tool")
     options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
   }
@@ -149,7 +149,7 @@ function existsEslintConfigInRepo (srcDirPath: string): boolean {
     ".eslintrc.yml",
     ".eslintrc.json"
   ]
-  const found = filenames.some(filename => existsSync(path.resolve(srcDirPath, filename)))
+  const found = filenames.some(filename => existsSync(srcDirPath + path.sep + filename))
   debug(`options: eslintrc config file ${found ? "" : "not "}found`)
 
   return found
