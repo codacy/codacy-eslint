@@ -99,7 +99,7 @@
     "@nodelib/fs.walk": "^2.0.0",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nx/cypress": "^18.0.1",
+    "@nx/cypress": "^18.0.2",
     "@nx/devkit": "^18.0.1",
     "@nx/eslint-plugin": "^18.0.1",
     "@nx/express": "^18.0.1",
