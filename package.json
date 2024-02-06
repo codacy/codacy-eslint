@@ -153,7 +153,7 @@
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/eslint-plugin-tslint": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
-    "@typescript-eslint/utils": "^6.20.0",
+    "@typescript-eslint/utils": "^6.21.0",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vitejs/plugin-vue2": "^2.3.1",
     "@vue/eslint-config-airbnb": "^8.0.0",
