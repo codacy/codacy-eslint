@@ -109,7 +109,7 @@
     "@nx/next": "^18.0.1",
     "@nx/node": "^18.0.1",
     "@nx/react": "^18.0.1",
-    "@nx/storybook": "^18.0.1",
+    "@nx/storybook": "^18.0.3",
     "@nx/web": "^18.0.1",
     "@nx/workspace": "^18.0.1",
     "@prodigy/eslint-config-prodigy": "^0.0.7",
