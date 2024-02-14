@@ -16,7 +16,6 @@ const blacklistRegexes: RegExp[] = [
   /functional\/no-try-statements/,
   /functional\/prefer-immutable-types/,
   /functional\/type-declaration-immutability/,
-  /header\/header/,
   /unused-imports\/.*-ts/,
   /yml\/sort-sequence-values/
 ]

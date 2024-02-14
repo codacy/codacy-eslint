@@ -7,13 +7,13 @@ import path from "path"
 import {isBlacklisted} from "./blacklist"
 import {DocGenerator} from "./docGenerator"
 import {defaultOptions} from "./eslintDefaultOptions"
-import {allRules} from "./eslintPlugins"
+import {allRules, pluginsNames} from "./eslintPlugins"
 import {DEBUG, debug} from "./logging"
 import {patternIdToEslint} from "./model/patterns"
 
 export function createEslintConfig (
   srcDirPath: string,
-  codacyrc?: Codacyrc
+  codacyrc: Codacyrc
 ): [ESLint.Options, string[]] {
   debug("config: creating")
 
@@ -25,7 +25,7 @@ export function createEslintConfig (
 }
 
 function generateFilesToAnalyze (
-  codacyrc?: Codacyrc
+  codacyrc: Codacyrc
 ): string[] {
   debug("files: creating")
   
@@ -46,30 +46,32 @@ function generateFilesToAnalyze (
 
 function generateEslintOptions (
   srcDirPath: string,
-  codacyrc?: Codacyrc
+  codacyrc: Codacyrc
 ): ESLint.Options {
   debug("options: creating")
 
-  const codacyrcEslintTool = codacyrc?.tools?.[0]
-  const patterns = codacyrcEslintTool?.patterns && codacyrcEslintTool.patterns.length
-    ? codacyrcEslintTool.patterns
-    : []
+  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveAllCodacyPatterns() || []
   const useGeneratedOptions = patterns.length || !existsEslintConfigInRepo(srcDirPath)
 
-  debug(`options: ${patterns.length} total patterns in codacyrc`)
+  debug(`options: ${patterns.length} patterns in codacyrc`)
 
   const options = cloneDeep(defaultOptions)
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
-  options.resolvePluginsRelativeTo = "/"
-  options.useEslintrc = !useGeneratedOptions
+  options.useEslintrc = !patterns.length
 
   if (!existsSync(`${srcDirPath}${path.sep}tsconfig.json`)) {
     debug("options: use tsconfig from tool")
     options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
   }
-
-  if (useGeneratedOptions && patterns.length) {
+  
+  if (DEBUG && !useGeneratedOptions) {
+    debug(`options: setting all ${patterns.length} patterns`)
+    options.baseConfig.rules =  convertPatternsToEslintRules(patterns)
+  } else if (!patterns.length) {
+    debug("options: using eslintrc from repo")
+    options.baseConfig.plugins = []
+  } else if (useGeneratedOptions) {
     //TODO: move this logic to a generic (or specific) plugin function
 
     // There are some plugins that their rules should only apply for
@@ -102,15 +104,25 @@ function generateEslintOptions (
       debug(`options: setting ${otherPatterns.length} patterns`)
       options.baseConfig.rules = convertPatternsToEslintRules(otherPatterns)
     }
-  } else if (DEBUG) {
-    const allPatterns = retrieveAllCodacyPatterns()
-
-    debug(`options: setting all ${allPatterns.length} patterns`)
-    options.baseConfig.rules = convertPatternsToEslintRules(allPatterns)
   }
+
+  options.baseConfig.plugins = pluginsNames
+
+  /*const prefixes = getPattternsUniquePrefixes(patterns)
+  debug(prefixes)
+  prefixes.forEach((prefix) => {
+    (pluginsNames.includes(prefix))
+      ? options.baseConfig.plugins.push(prefix)
+      : debug(`options: plugin ${prefix} not found`)
+  })*/
 
   debug("options: finished")
   return options
+}
+
+function getPattternsUniquePrefixes (patterns: Pattern[]) {
+  const prefixes = patterns.map(item => item.patternId.substring(0, item.patternId.lastIndexOf("/")))
+  return [...new Set(prefixes)]
 }
 
 function convertPatternsToEslintRules (patterns: Pattern[]): {
@@ -181,3 +193,4 @@ function retrieveAllCodacyPatterns (): Pattern[] {
   debug(`options: returning all (${patterns.length}) patterns`)
   return patterns
 }
+ 

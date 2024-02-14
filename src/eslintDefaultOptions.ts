@@ -1,10 +1,8 @@
 import {ESLint} from "eslint"
 
-import {pluginsNames} from "./eslintPlugins"
 
 export const defaultOptions: ESLint.Options = {
   baseConfig: {
-    extends: [],
     env: {
       browser: true,
       node: true,
@@ -98,11 +96,11 @@ export const defaultOptions: ESLint.Options = {
       "tsconfig.json",
       ".eslintrc*"
     ],
-    plugins: pluginsNames,
+    plugins: [],
     parser: "@typescript-eslint/parser",
     parserOptions: {
       allowAutomaticSingleRunInference: true,
-      ecmaVersion: 12,
+      ecmaVersion: 2023,
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"]
     },
@@ -168,6 +166,7 @@ export const defaultOptions: ESLint.Options = {
           // turn off other type-aware rules
           "@typescript-eslint/internal/no-poorly-typed-ts-props": "off",
           "deprecation/deprecation": "off",
+          "functional/prefer-tacit": "off",
           "jest/unbound-method": "off",
           "rxjs/finnish": "off",
           "rxjs/no-async-subscribe": "off",
@@ -208,7 +207,6 @@ export const defaultOptions: ESLint.Options = {
           "rxjs-angular/prefer-takeuntil": "off",
           // turn off rules that don't apply to JS code
           "@typescript-eslint/explicit-function-return-type": "off"
-          
         }
       },
       // JSX with Babel

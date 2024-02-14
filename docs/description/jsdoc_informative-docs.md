@@ -10,7 +10,7 @@
 * [Passing examples](#user-content-informative-docs-passing-examples)
 
 
-Reports on JSDoc texts that serve only to restart their attached name.
+Reports on JSDoc texts that serve only to restate their attached name.
 
 Devs sometimes write JSDoc descriptions that add no additional information just to fill out the doc:
 
@@ -253,6 +253,24 @@ function takesOne(param) {}
 /** A smiley/winkey. */
 let emoji;
 // "jsdoc/informative-docs": ["error"|"warn", {"aliases":{"emoji":["smiley","winkey"]}}]
+// Message: This description only repeats the name it describes.
+
+/**
+ * package name from path
+ */
+export function packageNameFromPath(path) {
+  const base = basename(path);
+  return /^vd+(.d+)?$/.exec(base) || /^tsd.d/.exec(base) ? basename(dirname(path)) : base;
+}
+// Message: This description only repeats the name it describes.
+
+/**
+ * package name from path
+ */
+export default function packageNameFromPath(path) {
+  const base = basename(path);
+  return /^vd+(.d+)?$/.exec(base) || /^tsd.d/.exec(base) ? basename(dirname(path)) : base;
+}
 // Message: This description only repeats the name it describes.
 ````
 
