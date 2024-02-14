@@ -19,7 +19,7 @@ export function createEslintConfig (
 
   const options = generateEslintOptions(srcDirPath, codacyrc)
   const files = generateFilesToAnalyze(codacyrc)
-  
+
   debug("config: finished")
   return [options, files]
 }
@@ -28,7 +28,7 @@ function generateFilesToAnalyze (
   codacyrc: Codacyrc
 ): string[] {
   debug("files: creating")
-  
+
   const defaultFilesToAnalyze = [
     "**/*.ts",
     "**/*.tsx",
@@ -36,7 +36,7 @@ function generateFilesToAnalyze (
     "**/*.jsx",
     "**/*.json"
   ]
-  const files = codacyrc?.files && codacyrc.files.length 
+  const files = codacyrc?.files && codacyrc.files.length
     ? codacyrc.files
     : defaultFilesToAnalyze
 
@@ -64,10 +64,10 @@ function generateEslintOptions (
     debug("options: use tsconfig from tool")
     options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
   }
-  
+
   if (DEBUG && !useGeneratedOptions) {
     debug(`options: setting all ${patterns.length} patterns`)
-    options.baseConfig.rules =  convertPatternsToEslintRules(patterns)
+    options.baseConfig.rules = convertPatternsToEslintRules(patterns)
   } else if (!patterns.length) {
     debug("options: using eslintrc from repo")
     options.baseConfig.plugins = []
@@ -106,22 +106,23 @@ function generateEslintOptions (
     }
   }
 
-  options.baseConfig.plugins = pluginsNames
-
-  /*const prefixes = getPattternsUniquePrefixes(patterns)
-  debug(prefixes)
+  const prefixes = getPatternsUniquePrefixes(patterns)
   prefixes.forEach((prefix) => {
-    (pluginsNames.includes(prefix))
+    pluginsNames.includes(prefix)
       ? options.baseConfig.plugins.push(prefix)
       : debug(`options: plugin ${prefix} not found`)
-  })*/
+  })
 
   debug("options: finished")
+
   return options
 }
 
-function getPattternsUniquePrefixes (patterns: Pattern[]) {
-  const prefixes = patterns.map(item => item.patternId.substring(0, item.patternId.lastIndexOf("/")))
+function getPatternsUniquePrefixes (patterns: Pattern[]) {
+  const prefixes = patterns.map(item => {
+    const patternId = patternIdToEslint(item.patternId)
+    return patternId.substring(0, patternId.lastIndexOf("/"))
+  })
   return [...new Set(prefixes)]
 }
 
@@ -193,4 +194,3 @@ function retrieveAllCodacyPatterns (): Pattern[] {
   debug(`options: returning all (${patterns.length}) patterns`)
   return patterns
 }
- 
