@@ -2,7 +2,7 @@ import {Linter, Rule} from "eslint"
 
 import {isBlacklisted} from "./blacklist"
 
-const packageNames = [
+const packageNames: string[] = [
   "@angular-eslint/eslint-plugin",
   "@babel/eslint-plugin",
   "@lwc/eslint-plugin-lwc",
@@ -31,8 +31,10 @@ const packageNames = [
   "eslint-plugin-flowtype",
   "eslint-plugin-fp",
   "eslint-plugin-functional",
-  "eslint-plugin-header",
-  "eslint-plugin-html",
+  // do not add: no supported rules
+  //"eslint-plugin-header",
+  // do not add: no rules
+  //"eslint-plugin-html", 
   "eslint-plugin-i18n-json",
   "eslint-plugin-i18next",
   "eslint-plugin-import",
@@ -53,7 +55,8 @@ const packageNames = [
   "eslint-plugin-lodash",
   "eslint-plugin-lodash-fp",
   "eslint-plugin-meteor",
-  "eslint-plugin-markdown",
+  // do not add: no rules
+  //"eslint-plugin-markdown",
   "eslint-plugin-mocha",
   "eslint-plugin-monorepo",
   "eslint-plugin-n",

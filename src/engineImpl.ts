@@ -5,11 +5,16 @@ import fs from "fs"
 import {createEslintConfig} from "./configCreator"
 import {convertResults} from "./convertResults"
 import {DEBUG, debug} from "./logging"
+import {toolName} from "./toolMetadata"
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
 ): Promise<ToolResult[]> {
   debug("engine: starting")
+
+  if (!codacyrc || codacyrc.tools?.[0]?.name !== toolName) {
+    throw new Error("codacyrc is not defined")
+  }
 
   const srcDirPath = "/src"
   const [options, files] = createEslintConfig(
@@ -63,8 +68,8 @@ async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.Lint
 
   let nIssues = 0
   for await (const lintResult of lintResults) {
-    //debug(`engine: specific config for "${lintResult.filePath}"`)
-    //debug(await eslint.calculateConfigForFile(lintResult.filePath))
+    // debug(`engine: specific config for "${lintResult.filePath}"`)
+    // debug(await eslint.calculateConfigForFile(lintResult.filePath))
     nIssues += lintResult.messages.length
   }
   debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
