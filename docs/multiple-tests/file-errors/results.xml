@@ -4,6 +4,6 @@
         <error source="no-unused-vars" line="1" message="'s' is assigned a value but never used." severity="error" />
     </file>
     <file name="file-errors-broken.js">
-        <error message="Parsing error: Unexpected keyword or identifier." />
+        <error message="Parsing error: Unexpected token a" />
     </file>
 </checkstyle>

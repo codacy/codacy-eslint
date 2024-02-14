@@ -1,17 +1,17 @@
-import {Codacyrc, Parameter, ParameterSpec, Pattern} from "codacy-seed"
-import {ESLint, Linter} from "eslint"
-import {existsSync} from "fs-extra"
-import {cloneDeep, fromPairs, isEmpty, partition} from "lodash"
+import { Codacyrc, Parameter, ParameterSpec, Pattern } from "codacy-seed"
+import { ESLint, Linter } from "eslint"
+import { existsSync } from "fs-extra"
+import { cloneDeep, fromPairs, isEmpty, partition } from "lodash"
 import path from "path"
 
-import {isBlacklisted} from "./blacklist"
-import {DocGenerator} from "./docGenerator"
-import {defaultOptions} from "./eslintDefaultOptions"
-import {allRules, pluginsNames} from "./eslintPlugins"
-import {DEBUG, debug} from "./logging"
-import {patternIdToEslint} from "./model/patterns"
+import { isBlacklisted } from "./blacklist"
+import { DocGenerator } from "./docGenerator"
+import { defaultOptions } from "./eslintDefaultOptions"
+import { allRules, pluginsNames } from "./eslintPlugins"
+import { DEBUG, debug } from "./logging"
+import { patternIdToEslint } from "./model/patterns"
 
-export function createEslintConfig (
+export function createEslintConfig(
   srcDirPath: string,
   codacyrc: Codacyrc
 ): [ESLint.Options, string[]] {
@@ -24,7 +24,7 @@ export function createEslintConfig (
   return [options, files]
 }
 
-function generateFilesToAnalyze (
+function generateFilesToAnalyze(
   codacyrc: Codacyrc
 ): string[] {
   debug("files: creating")
@@ -44,16 +44,23 @@ function generateFilesToAnalyze (
   return files
 }
 
-function generateEslintOptions (
+function generateEslintOptions(
   srcDirPath: string,
   codacyrc: Codacyrc
 ): ESLint.Options {
   debug("options: creating")
 
   const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveAllCodacyPatterns() || []
-  const useGeneratedOptions = patterns.length || !existsEslintConfigInRepo(srcDirPath)
+  const existsEslintConfig = existsEslintConfigInRepoRoot(srcDirPath)
+  const useCodacyPatterns = patterns.length || !existsEslintConfig
+  const useDefaultPatterns = !patterns.length && !existsEslintConfig
 
   debug(`options: ${patterns.length} patterns in codacyrc`)
+
+  if (existsEslintConfig && !patterns.length) {
+    debug("options: using eslintrc from repo root")
+    return {}
+  }
 
   const options = cloneDeep(defaultOptions)
   options.cwd = srcDirPath
@@ -65,13 +72,13 @@ function generateEslintOptions (
     options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
   }
 
-  if (DEBUG && !useGeneratedOptions) {
+  if (DEBUG && useDefaultPatterns) {
     debug(`options: setting all ${patterns.length} patterns`)
     options.baseConfig.rules = convertPatternsToEslintRules(patterns)
-  } else if (!patterns.length) {
+  } else if (useDefaultPatterns) {
     debug("options: using eslintrc from repo")
     options.baseConfig.plugins = []
-  } else if (useGeneratedOptions) {
+  } else if (useCodacyPatterns) {
     //TODO: move this logic to a generic (or specific) plugin function
 
     // There are some plugins that their rules should only apply for
@@ -118,7 +125,7 @@ function generateEslintOptions (
   return options
 }
 
-function getPatternsUniquePrefixes (patterns: Pattern[]) {
+function getPatternsUniquePrefixes(patterns: Pattern[]) {
   const prefixes = patterns.map(item => {
     const patternId = patternIdToEslint(item.patternId)
     return patternId.substring(0, patternId.lastIndexOf("/"))
@@ -126,7 +133,7 @@ function getPatternsUniquePrefixes (patterns: Pattern[]) {
   return [...new Set(prefixes)]
 }
 
-function convertPatternsToEslintRules (patterns: Pattern[]): {
+function convertPatternsToEslintRules(patterns: Pattern[]): {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 } {
   const pairs = patterns.map((pattern: Pattern) => {
@@ -153,7 +160,7 @@ function convertPatternsToEslintRules (patterns: Pattern[]): {
   return fromPairs(pairs)
 }
 
-function existsEslintConfigInRepo (srcDirPath: string): boolean {
+function existsEslintConfigInRepoRoot(srcDirPath: string): boolean {
   const filenames = [
     ".eslintrc",
     ".eslintrc.js",
@@ -168,7 +175,7 @@ function existsEslintConfigInRepo (srcDirPath: string): boolean {
   return found
 }
 
-function retrieveAllCodacyPatterns (): Pattern[] {
+function retrieveAllCodacyPatterns(): Pattern[] {
   const patterns = []
   allRules
     .filter(([patternId, rule]) =>

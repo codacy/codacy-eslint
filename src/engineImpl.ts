@@ -68,8 +68,8 @@ async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.Lint
 
   let nIssues = 0
   for await (const lintResult of lintResults) {
-    //debug(`engine: specific config for "${lintResult.filePath}"`)
-    //debug(await eslint.calculateConfigForFile(lintResult.filePath))
+    // debug(`engine: specific config for "${lintResult.filePath}"`)
+    // debug(await eslint.calculateConfigForFile(lintResult.filePath))
     nIssues += lintResult.messages.length
   }
   debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
