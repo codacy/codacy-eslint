@@ -89,15 +89,16 @@ export class DocGenerator {
         category,
         subcategory,
         DocGenerator.generateParameters(patternId, meta?.schema),
-        this.isDefaultPattern(patternId, meta)
+        DocGenerator.isDefaultPattern(patternId, meta)
       )
     })
 
     return new Specification(toolName, toolVersion, patterns)
   }
 
-  private isDefaultPattern (patternId: string, meta: Rule.RuleMetaData): boolean {
+  static isDefaultPattern (patternId: string, meta: Rule.RuleMetaData): boolean {
     const defaultPrefixes = [
+      "@stylistic",
       "@typescript-eslint",
       "eslint-plugin",
       "security",

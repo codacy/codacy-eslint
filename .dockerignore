@@ -8,6 +8,7 @@
 !/package-lock.json
 !/tsconfig.json
 !/tsconfig.src.json
+!/entrypoint.sh
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories

@@ -3339,7 +3339,7 @@
     "parameters": [],
     "patternId": "@stylistic_quote-props",
     "title": "@stylistic: Quote props",
-    "description": "Require quotes around object literal property names",
+    "description": "Require quotes around object literal, type literal, interfaces and enums property names",
     "timeToFix": 5
   },
   {
@@ -3638,6 +3638,13 @@
     "patternId": "@stylistic_jsx-one-expression-per-line",
     "title": "@stylistic: Jsx one expression per line",
     "description": "Require one JSX element per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-pascal-case",
+    "title": "@stylistic: Jsx pascal case",
+    "description": "Enforce PascalCase for user-defined JSX components",
     "timeToFix": 5
   },
   {
@@ -4442,6 +4449,13 @@
     "patternId": "@typescript-eslint_prefer-enum-initializers",
     "title": "@typescript eslint: Prefer enum initializers",
     "description": "Require each enum member value to be explicitly initialized",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_prefer-find",
+    "title": "@typescript eslint: Prefer find",
+    "description": "Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result",
     "timeToFix": 5
   },
   {
@@ -7347,6 +7361,13 @@
     "patternId": "eslint-plugin_no-only-tests",
     "title": "Eslint plugin: No only tests",
     "description": "Disallow the test case property `only`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "eslint-plugin_no-property-in-node",
+    "title": "Eslint plugin: No property in node",
+    "description": "Disallow using `in` to narrow node types instead of looking at properties",
     "timeToFix": 5
   },
   {
@@ -11265,6 +11286,13 @@
   },
   {
     "parameters": [],
+    "patternId": "mocha_consistent-spacing-between-blocks",
+    "title": "Mocha: Consistent spacing between blocks",
+    "description": "Require consistent spacing between blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "monorepo_no-internal-import",
     "title": "Monorepo: No internal import",
     "timeToFix": 5
@@ -12012,6 +12040,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_max-expects",
+    "title": "Playwright: Max expects",
+    "description": "Enforces a maximum number assertion calls in a test body",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_max-nested-describe",
     "title": "Playwright: Max nested describe",
     "description": "Enforces a maximum depth to nested describe calls",
@@ -12026,9 +12061,30 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-commented-out-tests",
+    "title": "Playwright: No commented out tests",
+    "description": "Disallow commented out tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-conditional-expect",
+    "title": "Playwright: No conditional expect",
+    "description": "Disallow calling `expect` conditionally",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_no-conditional-in-test",
     "title": "Playwright: No conditional in test",
     "description": "Disallow conditional logic in tests",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-duplicate-hooks",
+    "title": "Playwright: No duplicate hooks",
+    "description": "Disallow duplicate setup and teardown hooks",
     "timeToFix": 5
   },
   {
@@ -12057,6 +12113,20 @@
     "patternId": "playwright_no-force-option",
     "title": "Playwright: No force option",
     "description": "Prevent usage of `{ force: true }` option.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-get-by-title",
+    "title": "Playwright: No get by title",
+    "description": "Disallows the usage of getByTitle()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-hooks",
+    "title": "Playwright: No hooks",
+    "description": "Disallow setup and teardown hooks",
     "timeToFix": 5
   },
   {
@@ -12115,6 +12185,20 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_no-standalone-expect",
+    "title": "Playwright: No standalone expect",
+    "description": "Disallow using `expect` outside of `test` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_no-unsafe-references",
+    "title": "Playwright: No unsafe references",
+    "description": "Prevent unsafe variable references in page.evaluate()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_no-useless-await",
     "title": "Playwright: No useless await",
     "description": "Disallow unnecessary awaits for Playwright methods",
@@ -12139,6 +12223,34 @@
     "patternId": "playwright_no-wait-for-timeout",
     "title": "Playwright: No wait for timeout",
     "description": "Prevent usage of page.waitForTimeout()",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-comparison-matcher",
+    "title": "Playwright: Prefer comparison matcher",
+    "description": "Suggest using the built-in comparison matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-equality-matcher",
+    "title": "Playwright: Prefer equality matcher",
+    "description": "Suggest using the built-in equality matchers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-hooks-in-order",
+    "title": "Playwright: Prefer hooks in order",
+    "description": "Prefer having hooks in a consistent order",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_prefer-hooks-on-top",
+    "title": "Playwright: Prefer hooks on top",
+    "description": "Suggest having hooks before any test cases",
     "timeToFix": 5
   },
   {
@@ -12193,6 +12305,13 @@
     "patternId": "playwright_prefer-web-first-assertions",
     "title": "Playwright: Prefer web first assertions",
     "description": "Prefer web first assertions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_require-hook",
+    "title": "Playwright: Require hook",
+    "description": "Require setup and teardown code to be within a hook",
     "timeToFix": 5
   },
   {
@@ -14960,6 +15079,156 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_destructuring-properties",
+    "title": "Sort: Destructuring properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "typeOrder",
+        "description": "typeOrder"
+      },
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_exports",
+    "title": "Sort: Exports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_export-members",
+    "title": "Sort: Export members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "separator",
+        "description": "separator"
+      },
+      {
+        "name": "typeOrder",
+        "description": "typeOrder"
+      },
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_imports",
+    "title": "Sort: Imports",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_import-members",
+    "title": "Sort: Import members",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_object-properties",
+    "title": "Sort: Object properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_type-properties",
+    "title": "Sort: Type properties",
+    "description": "Sorts TypeScript type properties alphabetically and case insensitive in ascending order.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_string-unions",
+    "title": "Sort: String unions",
+    "description": "Sorts TypeScript string unions alphabetically and case insensitive in ascending order.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "caseSensitive",
+        "description": "caseSensitive"
+      },
+      {
+        "name": "natural",
+        "description": "natural"
+      }
+    ],
+    "patternId": "sort_string-enums",
+    "title": "Sort: String enums",
+    "description": "Sorts TypeScript string enums alphabetically and case insensitive in ascending order.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "sort-destructure-keys_sort-destructure-keys",
     "title": "Sort destructure keys: Sort destructure keys",
@@ -14998,12 +15267,6 @@
     "patternId": "sort-keys-fix_sort-keys-fix",
     "title": "Sort keys fix: Sort keys fix",
     "description": "Require object keys to be sorted",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "sorting_sort-object-props",
-    "title": "Sorting: Sort object props",
     "timeToFix": 5
   },
   {

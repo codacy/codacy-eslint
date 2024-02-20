@@ -50,7 +50,7 @@ function generateEslintOptions(
 ): ESLint.Options {
   debug("options: creating")
 
-  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveAllCodacyPatterns() || []
+  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveRecommendedCodacyPatterns() || []
   const existsEslintConfig = existsEslintConfigInRepoRoot(srcDirPath)
   const useCodacyPatterns = patterns.length || !existsEslintConfig
   const useDefaultPatterns = !patterns.length && !existsEslintConfig
@@ -66,11 +66,6 @@ function generateEslintOptions(
   options.cwd = srcDirPath
   options.errorOnUnmatchedPattern = false
   options.useEslintrc = !patterns.length
-
-  if (!existsSync(`${srcDirPath}${path.sep}tsconfig.json`)) {
-    debug("options: use tsconfig from tool")
-    options.baseConfig.overrides[0].parserOptions.project = "/tsconfig.json"
-  }
 
   if (DEBUG && useDefaultPatterns) {
     debug(`options: setting all ${patterns.length} patterns`)
@@ -113,12 +108,15 @@ function generateEslintOptions(
     }
   }
 
+  // load only the plugins that are being used in loaded rules
   const prefixes = getPatternsUniquePrefixes(patterns)
-  prefixes.forEach((prefix) => {
-    pluginsNames.includes(prefix)
-      ? options.baseConfig.plugins.push(prefix)
-      : debug(`options: plugin ${prefix} not found`)
-  })
+  prefixes
+    .filter((prefix) => prefix !== "")
+    .forEach((prefix) => {
+      pluginsNames.includes(prefix)
+        ? options.baseConfig.plugins.push(prefix)
+        : debug(`options: plugin ${prefix} not found`)
+    })
 
   debug("options: finished")
 
@@ -183,6 +181,34 @@ function retrieveAllCodacyPatterns(): Pattern[] {
       && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       // problems with the path generated (win vs nix) for this specific pattern
       && (!DEBUG || patternId != "spellcheck_spell-checker")
+    )
+    .forEach(([patternId, rule]) => {
+      const pattern = new Pattern(
+        patternId,
+        DocGenerator.generateParameters(patternId, rule.meta?.schema)
+          .map((parameterSpec: ParameterSpec): Parameter => {
+            return new Parameter(
+              parameterSpec.name,
+              parameterSpec.default
+            )
+          })
+      )
+      patterns.push(pattern)
+    })
+
+  debug(`options: returning all (${patterns.length}) patterns`)
+  return patterns
+}
+
+function retrieveRecommendedCodacyPatterns(): Pattern[] {
+  const patterns = []
+  allRules
+    .filter(([patternId, rule]) =>
+      !isBlacklisted(patternId)
+      && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
+      // problems with the path generated (win vs nix) for this specific pattern
+      && (!DEBUG || patternId != "spellcheck_spell-checker")
+      && DocGenerator.isDefaultPattern(patternIdToEslint(patternId), rule.meta)
     )
     .forEach(([patternId, rule]) => {
       const pattern = new Pattern(

@@ -247,6 +247,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "/mskelton/eslint-plugin-sort/main/docs/rules/",
+    "sort"
+  )
+
+  await docGenerator.downloadDocs(
     "/mthadley/eslint-plugin-sort-destructure-keys/master/docs/rules/",
     "sort-destructure-keys"
   )
