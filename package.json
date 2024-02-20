@@ -258,7 +258,7 @@
     "eslint-plugin-jest-extended": "^2.0.0",
     "eslint-plugin-jest-formatting": "^3.1.0",
     "eslint-plugin-jira-ticket-todo-comment": "^1.0.5",
-    "eslint-plugin-jsdoc": "^48.0.4",
+    "eslint-plugin-jsdoc": "^48.1.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-jsonc": "^2.13.0",
     "eslint-plugin-jsx": "^0.1.0",
