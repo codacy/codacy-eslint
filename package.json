@@ -328,7 +328,7 @@
     "husky": "^9.0.10",
     "i18next": "^23.8.2",
     "lint-config-qiwi": "^0.0.1-security",
-    "lint-staged": "^15.2.1",
+    "lint-staged": "^15.2.2",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.8.0",
     "mocha": "^10.2.0",
