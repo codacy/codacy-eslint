@@ -358,7 +358,7 @@
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "typescript-eslint": "^0.0.1-alpha.0",
+    "typescript-eslint": "^7.0.2",
     "vee-validate": "^4.12.5",
     "vite": "^5.0.12",
     "vue": "^3.4.15",
