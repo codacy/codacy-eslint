@@ -99,8 +99,9 @@ export const defaultOptions: ESLint.Options = {
     plugins: [],
     parser: "@typescript-eslint/parser",
     parserOptions: {
+      allowInvalidAST: true,
       allowAutomaticSingleRunInference: true,
-      ecmaVersion: 2023,
+      ecmaVersion: "latest",
       errorOnTypeScriptSyntacticAndSemanticIssues: false,
       extraFileExtensions: [".json"]
     },
@@ -135,8 +136,8 @@ export const defaultOptions: ESLint.Options = {
       {
         files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
         parserOptions: {
-          project: true,
-          sourceType: "module"
+          project: "/tsconfig.json",
+          sourceType: "script"
         },
         rules: {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
