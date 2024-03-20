@@ -15,7 +15,7 @@ While typically these deprecated functions are kept in the codebase for a number
 of majors, eventually they are removed completely.
 
 This rule requires knowing which version of Jest you're using - see
-[this section of the readme](../../README.md#jest-version-setting) for details
+[this section of the readme](https://github.com/jest-community/eslint-plugin-jest/tree/master/README.md#jest-version-setting) for details
 on how that is obtained automatically and how you can explicitly provide a
 version if needed.
 

@@ -16,7 +16,7 @@ This rule reports APIs of Node.js built-in APIs on the basis of [Node.js v13.2.0
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/README.md#configured-nodejs-version-range)
 
 ### Options
 

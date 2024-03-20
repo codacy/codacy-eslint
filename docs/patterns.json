@@ -3135,6 +3135,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "unnamedParam",
+          "default": "always"
+        },
+        {
           "name": "ignoreJSX",
           "default": false
         }
@@ -17483,6 +17487,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "unnamedParam",
+          "default": "always"
+        },
         {
           "name": "ignoreJSX",
           "default": false

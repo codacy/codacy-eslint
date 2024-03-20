@@ -164,6 +164,8 @@ export const defaultOptions: ESLint.Options = {
         "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.json"],
         "rules": {
           // turn off other type-aware rules
+          "@typescript-eslint/consistent-return": "off",
+          "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
           "@typescript-eslint/internal/no-poorly-typed-ts-props": "off",
           "deprecation/deprecation": "off",
           "functional/prefer-tacit": "off",

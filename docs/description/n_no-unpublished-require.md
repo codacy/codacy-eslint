@@ -35,22 +35,22 @@ Then this rule warns `require()` expressions in \*published\* files if the `requ
 
 #### allowModules
 
-This can be configured in the rule options or as a shared setting [`settings.allowModules`](../shared-settings.md#allowmodules).
+This can be configured in the rule options or as a shared setting [`settings.allowModules`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#allowmodules).
 Please see the shared settings documentation for more information.
 
 #### resolvePaths
 
-This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](../shared-settings.md#resolvepaths).
+This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#resolvepaths).
 Please see the shared settings documentation for more information.
 
 #### convertPath
 
-This can be configured in the rule options or as a shared setting [`settings.convertPath`](../shared-settings.md#convertpath).
+This can be configured in the rule options or as a shared setting [`settings.convertPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#convertpath).
 Please see the shared settings documentation for more information.
 
 #### tryExtensions
 
-This can be configured in the rule options or as a shared setting [`settings.tryExtensions`](../shared-settings.md#tryextensions).
+This can be configured in the rule options or as a shared setting [`settings.tryExtensions`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#tryextensions).
 Please see the shared settings documentation for more information.
 
 ## 🔎 Implementation

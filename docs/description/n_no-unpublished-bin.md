@@ -36,7 +36,7 @@ If `npm` ignores the files in `bin` field, this rule warns the files.
 
 #### convertPath
 
-This can be configured in the rule options or as a shared setting [`settings.convertPath`](../shared-settings.md#convertpath).
+This can be configured in the rule options or as a shared setting [`settings.convertPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#convertpath).
 Please see the shared settings documentation for more information.
 
 ## 🔎 Implementation

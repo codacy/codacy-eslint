@@ -11,7 +11,7 @@ since: "v6.0.0"
 
 This rule reports ES2023 Intl API `NumberFormat.prototype.formatRangeToParts` as errors.
 
-This rule is silent by default because it's hard to know types. You need to configure [the aggressive mode](../#the-aggressive-mode) or TypeScript in order to enable this rule.
+This rule is silent by default because it's hard to know types. You need to configure [the aggressive mode](https://github.com/eslint-community/eslint-plugin-es-x/tree/master/docs/#the-aggressive-mode) or TypeScript in order to enable this rule.
 
 ## 💡 Examples
 

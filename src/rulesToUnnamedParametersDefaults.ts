@@ -27,6 +27,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>
   ["@stylistic/jsx-quotes", "prefer-double"],
   ["@stylistic/lines-between-class-members", "always"],
   ["max-nested-callbacks", 5],
+  ["@stylistic/multiline-ternary", "always"],
   ["newline-after-var", "always"],
   ["no-cond-assign", "except-parens"],
   ["no-inner-declarations", "functions"],
@@ -46,6 +47,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>
   ["@stylistic/spaced-comment", "always"],
   ["strict", "function"],
   ["@stylistic/wrap-iife", "outside"],
+  ["vue/multiline-ternary", "always"],
   ["yoda", "never"]
 ])
 

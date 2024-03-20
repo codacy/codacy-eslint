@@ -97,7 +97,7 @@ if(typeof a === "string"){}
 
 ## Environments
 
-For convenience, ESLint provides shortcuts that pre-define global variables exposed by popular libraries and runtime environments. This rule supports these environments, as listed in [Specifying Environments](../use/configure/language-options#specifying-environments).  A few examples are given below.
+For convenience, ESLint provides shortcuts that pre-define global variables exposed by popular libraries and runtime environments. This rule supports these environments, as listed in [Specifying Environments](https://github.com/eslint/eslint/tree/main/docs/src/use/configure/language-options#specifying-environments).  A few examples are given below.
 
 ### browser
 

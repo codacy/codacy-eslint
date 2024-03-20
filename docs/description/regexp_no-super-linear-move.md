@@ -164,7 +164,7 @@ This means that this rule might not be able to verify fixed regexes. This rule m
 
 ### `report: "certain" | "potential"`
 
-This option has the same function as the [`report` option of `regexp/no-super-linear-backtracking`](./no-super-linear-backtracking.html#report). The default value is `"certain"`.
+This option has the same function as the [`report` option of `regexp/no-super-linear-backtracking`](https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/no-super-linear-backtracking.html#report). The default value is `"certain"`.
 
 ### `ignoreSticky: boolean`
 

@@ -308,7 +308,7 @@ ${modules}
   }
 
   private inlineLinkedMarkdownFiles (text: string, docsBaseUrl: string): string {
-    const elements = text.match(/\[.+?\]\(\.{1,2}[^\)]+?\.?[a-z]+\)/g)
+    const elements = text.match(/\[.+?\]\(\.{1,2}[^)]+?\.?[a-z]+\)/g)
     if (!elements) return text
   
     let newText = text

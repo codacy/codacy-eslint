@@ -141,7 +141,7 @@ This rule reports the following deprecated API.
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/master/README.md#configured-nodejs-version-range)
 
 ### Options
 

@@ -46,22 +46,22 @@ import existingModule from "existing-module";
 
 #### allowModules
 
-This can be configured in the rule options or as a shared setting [`settings.allowModules`](../shared-settings.md#allowmodules).
+This can be configured in the rule options or as a shared setting [`settings.allowModules`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#allowmodules).
 Please see the shared settings documentation for more information.
 
 #### resolvePaths
 
-This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](../shared-settings.md#resolvepaths).
+This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#resolvepaths).
 Please see the shared settings documentation for more information.
 
 #### tsconfigPath
 
-This can be configured in the rule options or as a shared setting [`settings.tsconfigPath`](../shared-settings.md#tsconfigpath).
+This can be configured in the rule options or as a shared setting [`settings.tsconfigPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#tsconfigpath).
 Please see the shared settings documentation for more information.
 
 #### typescriptExtensionMap
 
-This can be configured in the rule options or as a shared setting [`settings.typescriptExtensionMap`](../shared-settings.md#typescriptextensionmap).
+This can be configured in the rule options or as a shared setting [`settings.typescriptExtensionMap`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#typescriptextensionmap).
 Please see the shared settings documentation for more information.
 
 ## 🔎 Implementation

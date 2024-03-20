@@ -20,11 +20,16 @@ npm install --legacy-peer-deps --omit=dev package-name
     -   Add a section similar to the following example:
         ```typescript
         await docGenerator.downloadDocs(
+          // package name
+          "eslint-plugin-xss",
           // path to .md pattern files within github
           `/Rantanen/eslint-plugin-xss/master/docs/rules/`,
-          // this is the pattern's prefix (e.g., xss/some-pattern-id)
-          "xss",
-          // (default) change to true if it should fail in case of missing .md files for any pattern
+          // prefix for tag relases (for example if tags are "v.1.0.0" you have to prefix tags with "v.")
+          // or "false" if package has no tags released
+          // (default) "v"
+          "v",
+          // change to true if it should fail in case of missing .md files for any pattern
+          // (default) false
           false
         )
         ```
@@ -33,9 +38,11 @@ npm install --legacy-peer-deps --omit=dev package-name
         ```typescript
         // make sure this one matches the correct name of the package
         const packageNames = [
-            "@angular-eslint/eslint-plugin",
-            "eslint-plugin-xss",
-            //(...)
+          //(...)
+          "@angular-eslint/eslint-plugin",
+          //(...)
+          "eslint-plugin-xss",
+          //(...)
         ]
         ```
 

@@ -22,7 +22,7 @@ For example, set `2020` to `parserOptions.ecmaVersion`.
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/README.md#configured-nodejs-version-range)
 
 ### Options
 

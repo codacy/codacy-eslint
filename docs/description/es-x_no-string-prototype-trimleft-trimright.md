@@ -11,7 +11,7 @@ since: "v5.1.0"
 
 This rule reports Annex B feature `String.prototype.{trimLeft,trimRight}` methods as errors.
 
-This rule is silent by default because it's hard to know types. You need to configure [the aggressive mode](../#the-aggressive-mode) or TypeScript in order to enable this rule.
+This rule is silent by default because it's hard to know types. You need to configure [the aggressive mode](https://github.com/eslint-community/eslint-plugin-es-x/tree/master/docs/#the-aggressive-mode) or TypeScript in order to enable this rule.
 
 ## 💡 Examples
 

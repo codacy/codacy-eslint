@@ -7,7 +7,7 @@
 Ensures an imported module can be resolved to a module on the local filesystem,
 as defined by standard Node `require.resolve` behavior.
 
-See [settings](../../README.md#settings) for customization options for the resolution (i.e.
+See [settings](https://github.com/un-es/eslint-plugin-i/tree/fork-release/README.md#settings) for customization options for the resolution (i.e.
 additional filetypes, `NODE_PATH`, etc.)
 
 This rule can also optionally report on unresolved modules in CommonJS `require('./foo')` calls and AMD `require(['./foo'], function (foo) {...})` and `define(['./foo'], function (foo) {...})`.
@@ -15,7 +15,7 @@ This rule can also optionally report on unresolved modules in CommonJS `require(
 To enable this, send `{ commonjs: true/false, amd: true/false }` as a rule option.
 Both are disabled by default.
 
-If you are using Webpack, see the section on [resolvers](../../README.md#resolvers).
+If you are using Webpack, see the section on [resolvers](https://github.com/un-es/eslint-plugin-i/tree/fork-release/README.md#resolvers).
 
 ## Rule Details
 
@@ -62,7 +62,7 @@ require(['./foo'], function (foo) { /*...*/ }) // reported if './foo' is not fou
 
 This rule has its own ignore list, separate from [`import/ignore`]. This is because you may want to know whether a module can be located, regardless of whether it can be parsed for exports: `node_modules`, CoffeeScript files, etc. are all good to resolve properly, but will not be parsed if configured as such via [`import/ignore`].
 
-To suppress errors from files that may not be properly resolved by your [resolver settings](../../README.md#resolver-plugins), you may add an `ignore` key with an array of `RegExp` pattern strings:
+To suppress errors from files that may not be properly resolved by your [resolver settings](https://github.com/un-es/eslint-plugin-i/tree/fork-release/README.md#resolver-plugins), you may add an `ignore` key with an array of `RegExp` pattern strings:
 
 ```js
 /*eslint import/no-unresolved: [2, { ignore: ['\\.img$'] }]*/
@@ -102,7 +102,7 @@ If you're using a module bundler other than Node or Webpack, you may end up with
 
 ## Further Reading
 
- - [Resolver plugins](../../README.md#resolvers)
+ - [Resolver plugins](https://github.com/un-es/eslint-plugin-i/tree/fork-release/README.md#resolvers)
  - [Node resolver](https://npmjs.com/package/eslint-import-resolver-node) (default)
  - [Webpack resolver](https://npmjs.com/package/eslint-import-resolver-webpack)
  - [`import/ignore`] global setting
