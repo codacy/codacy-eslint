@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
-    "@stylistic/ts",
+    "@stylistic",
     "simple-import-sort",
     "unused-imports"
   ],
@@ -39,9 +39,13 @@ module.exports = {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "unused-imports/no-unused-imports": "error",
-    "@stylistic/ts/indent": [1, 2],
-    "@stylistic/ts/semi": [1, "never", {"beforeStatementContinuationChars": "never"}],
-    '@typescript-eslint/no-var-requires': 'off'
+    "@stylistic/operator-linebreak": ["error", "before"],
+    "@stylistic/ts/indent": ["error", 2],
+    "@stylistic/indent-binary-ops": ["error", 2],
+    "@stylistic/ts/semi": ["error", "never", {"beforeStatementContinuationChars": "never"}],
+    "@stylistic/multiline-ternary": ["error", "always-multiline"],
+    "@stylistic/ts/object-curly-spacing": ["error", "always", { "objectsInObjects": false, "arraysInObjects": false }],
+    "@typescript-eslint/no-var-requires": "off"
   },
   overrides: [
     {

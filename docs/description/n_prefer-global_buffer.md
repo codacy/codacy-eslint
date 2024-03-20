@@ -67,5 +67,5 @@ const b = Buffer.alloc(16)
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/buffer.js)
-- [Test source](../../../tests/lib/rules/prefer-global/buffer.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/buffer.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/buffer.js)

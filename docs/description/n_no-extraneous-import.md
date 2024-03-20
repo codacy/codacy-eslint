@@ -41,5 +41,5 @@ Please see the shared settings documentation for more information.
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-extraneous-import.js)
-- [Test source](../../tests/lib/rules/no-extraneous-import.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-extraneous-import.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-extraneous-import.js)

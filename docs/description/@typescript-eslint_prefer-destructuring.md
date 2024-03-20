@@ -11,35 +11,35 @@ description: 'Require destructuring from arrays and/or objects.'
 This rule extends the base [`eslint/prefer-destructuring`](https://eslint.org/docs/latest/rules/prefer-destructuring) rule.
 It adds support for TypeScript's type annotations in variable declarations.
 
-<!-- tabs -->
+<!--tabs-->
 
-### `eslint/prefer-destructuring`
+#### `eslint/prefer-destructuring`
 
 ```ts
 const x: string = obj.x; // This is incorrect and the auto fixer provides following untyped fix.
 // const { x } = obj;
 ```
 
-### `@typescript-eslint/prefer-destructuring`
+#### `@typescript-eslint/prefer-destructuring`
 
 ```ts
 const x: string = obj.x; // This is correct by default. You can also forbid this by an option.
 ```
 
-<!-- /tabs -->
+<!--/tabs-->
 
 And it infers binding patterns more accurately thanks to the type checker.
 
-<!-- tabs -->
+<!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const x = ['a'];
 const y = x[0];
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const x = { 0: 'a' };
@@ -48,6 +48,8 @@ const y = x[0];
 
 It is correct when `enforceForRenamedProperties` is not true.
 Valid destructuring syntax is renamed style like `{ 0: y } = x` rather than `[y] = x` because `x` is not iterable.
+
+<!--/tabs-->
 
 ## Options
 
@@ -78,14 +80,17 @@ Examples with `{ enforceForDeclarationWithTypeAnnotation: true }`:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const x: string = obj.x;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const { x }: { x: string } = obj;
 ```
+
+<!--/tabs-->
+

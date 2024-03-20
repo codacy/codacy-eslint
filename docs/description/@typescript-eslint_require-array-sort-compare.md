@@ -23,7 +23,7 @@ This rule aims to ensure all calls of the native sort methods provide a `compare
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const array: any[];
@@ -35,7 +35,7 @@ array.sort();
 stringArray.sort();
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const array: any[];
@@ -46,6 +46,8 @@ array.sort((a, b) => a.localeCompare(b));
 
 userDefinedType.sort();
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -72,6 +74,8 @@ const two = '2';
 const three = '3';
 [one, two, three].sort();
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

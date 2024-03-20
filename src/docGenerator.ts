@@ -1,6 +1,6 @@
-import {EOL} from "node:os"
+import { EOL } from "node:os"
 
-import {RuleInfo, rules as rulesStylistic} from "@eslint-stylistic/metadata"
+import { RuleInfo, rules as rulesStylistic } from "@eslint-stylistic/metadata"
 import axios from "axios"
 import {
   DescriptionEntry,
@@ -10,19 +10,20 @@ import {
   Specification,
   writeFile
 } from "codacy-seed"
-import {Rule} from "eslint"
+import { Rule } from "eslint"
 import fs from "fs-extra"
-import {JSONSchema4} from "json-schema"
-import {flatMapDeep} from "lodash"
+import { JSONSchema4 } from "json-schema"
+import { flatMapDeep } from "lodash"
 import path from "path"
 
-import {isBlacklistedOnlyFromDocumentation} from "./blacklist"
-import {capitalize, patternTitle} from "./docGeneratorStringUtils"
-import {allRules} from "./eslintPlugins"
-import {patternIdToCodacy, translateLevelAndCategory} from "./model/patterns"
-import {fromSchemaArray} from "./namedParameters"
-import {rulesToUnnamedParametersDefaults} from "./rulesToUnnamedParametersDefaults"
-import {toolName, toolVersion} from "./toolMetadata"
+import { dependencies } from "../package.json"
+import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
+import { capitalize, patternTitle } from "./docGeneratorStringUtils"
+import { allRules, Plugin, pluginByPackageName } from "./eslintPlugins"
+import { patternIdToCodacy, translateLevelAndCategory } from "./model/patterns"
+import { fromSchemaArray } from "./namedParameters"
+import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
+import { toolName, toolVersion } from "./toolMetadata"
 
 export class DocGenerator {
   private rules: [string, Rule.RuleModule][]
@@ -76,8 +77,8 @@ export class DocGenerator {
 
   private generatePatterns (): Specification {
     const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
-      const meta = ruleModule?.meta
-      const type = meta?.type ? meta.type : meta?.docs?.category
+      const meta = ruleModule.meta
+      const type = meta?.type ?? meta?.docs?.category
       const [level, category, subcategory] = translateLevelAndCategory(
         patternId,
         type
@@ -97,17 +98,33 @@ export class DocGenerator {
   }
 
   static isDefaultPattern (patternId: string, meta: Rule.RuleMetaData): boolean {
-    const defaultPrefixes = [
-      "@stylistic",
-      "@typescript-eslint",
-      "eslint-plugin",
-      "security",
-      "security-node"
-    ]
-    const prefix = patternId.split("/")[0]
+    function prefixSplit (patternId: string): string {
+      const p = patternId.split("/")[0]
+      return p !== patternId ? p : ""
+    }
 
-    // ESLint core rules are also default but don't have a prefix
-    return meta?.docs?.recommended && (prefix === patternId || defaultPrefixes.includes(prefix))
+    // Structure of prefixes:
+    // {"prefix": "recommended"} all recommended rules are included
+    // {"prefix": "all"} all rules are included
+    const defaultPrefixes = [
+      { "": "recommended" }, // ESLint core rules don't have a prefix
+      { "@stylistic": "recommended" },
+      { "@typescript-eslint": "recommended" },
+      { "eslint-plugin": "recommended" }
+    ]
+    const securityPrefixes = [
+      { "no-unsanitized": "all" },
+      { "security": "recommended" },
+      { "security-node": "recommended" },
+      { "xss": "all" }
+    ]
+    const prefixes = [...defaultPrefixes, ...securityPrefixes]
+    const prefix = prefixSplit(patternId)
+
+    return prefixes.some((p) => 
+      p[prefix] === "all"
+      || p[prefix] === "recommended" && meta.docs?.recommended
+    )
   }
 
   private generateDescriptionEntries (): DescriptionEntry[] {
@@ -149,15 +166,34 @@ export class DocGenerator {
     return Array.isArray(objects) ? fromSchemaArray(patternId, objects) : []
   }
 
-  async createPatternDescriptionFile (url: URL, relativeUrl: string, prefix: string, pattern: string, rejectOnError: boolean = false) {
-    try {
-      const response = await axios.get(url.href)
-      const text = this.inlineLinkedMarkdownFiles(response.data, relativeUrl)
-      const filename = `${this.docsDescriptionDirectory}${path.sep}${patternIdToCodacy((prefix.length ? prefix + "/" : "") + pattern)}.md`
+  private convertMdxToMd (text: string): string {
+    return text
+      .replace(/import {?.*}? from ["'].*["'];?/g, "")
+      .replace(/<(\/)?Tabs>/g, "<!--$1tabs-->\n")
+      .replace(/<\/TabItem>/g, "")
+      .replace(/<TabItem value="(.*)">/g, "#### $1")
+      .replace(/{\/\* (.*) \*\/}/g, "<!-- $1 -->")
+      .replace(/\n{2,}/g, "\n\n")
+  }
 
-      await writeFile(filename, text)
+  async createPatternDescriptionFile (
+    plugin: Plugin,
+    pattern: string,
+    patternDocFilename: string,
+    rejectOnError: boolean
+  ) {
+    const url = (plugin.versionPrefix !== false
+      ? plugin.docsBaseUrl.href.replace(/main|master/, `${plugin.versionPrefix}${dependencies[plugin.packageName].replace("^", "")}`)
+      : plugin.docsBaseUrl.href)
+      + patternDocFilename
+    try {
+      const response = await axios.get(url)
+      const text = this.inlineLinkedMarkdownFiles(response.data, plugin.docsBaseUrl.href)
+      const filePath = `${this.docsDescriptionDirectory}/${patternIdToCodacy((plugin.name !== "eslint" ? plugin.name + "/" : "") + pattern)}.md`
+
+      await writeFile(filePath, plugin.name === "@typescript-eslint" ? this.convertMdxToMd(text) : text)
     } catch (error) {
-      const message = `Failed to retrieve docs for ${pattern} from ${url.pathname}`
+      const message = `Failed to retrieve docs for ${pattern} from ${url}`
       if (rejectOnError) {
         return Promise.reject(message)
       }
@@ -166,28 +202,33 @@ export class DocGenerator {
   }
 
   async downloadDocs (
+    packageName: string,
     relativeUrl: string,
-    prefix: string,
+    versionPrefix: string | boolean = "v",
     rejectOnError: boolean = false
   ): Promise<void> {
-    console.log(`Generate ${prefix.length ? prefix : "eslint"} description files`)
-    
-    relativeUrl = (!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl
+    const plugin: Plugin = pluginByPackageName(packageName)
 
-    const patterns = prefix.length
-      ? this.patternIdsWithoutPrefix(prefix)
+    console.log(`Generate ${plugin.name} description files`)
+
+    plugin.docsBaseUrl = new URL((!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl)
+    plugin.versionPrefix = versionPrefix
+
+    const patterns = plugin.name !== "eslint"
+      ? this.patternIdsWithoutPrefix(plugin.name)
       : this.eslintPatternIds()
 
-    const promises = prefix === "@stylistic"
+    const promises = plugin.name === "@stylistic"
       ? rulesStylistic
         .filter((rule: RuleInfo) => rule.ruleId.match(/^@stylistic\/[^/]+$/) !== null)
         .map((rule: RuleInfo) => {
-          const url = new URL(relativeUrl + rule.docsEntry)
-          return this.createPatternDescriptionFile(url, relativeUrl, prefix, rule.name, rejectOnError)
+          return this.createPatternDescriptionFile(plugin, rule.name, rule.docsEntry, rejectOnError)
         })
       : patterns.map((pattern: string) => {
-        const url = new URL(relativeUrl + pattern + ".md")
-        return this.createPatternDescriptionFile(url, relativeUrl, prefix, pattern, rejectOnError)
+        const patternDocFilename = plugin.name === "@typescript-eslint"
+          ? `${pattern}.mdx`
+          : `${pattern}.md`
+        return this.createPatternDescriptionFile(plugin, pattern, patternDocFilename, rejectOnError)
       })
     await Promise.all(promises)
   }
@@ -266,17 +307,17 @@ ${modules}
     return parsedUrl.toString()
   }
 
-  private inlineLinkedMarkdownFiles (text: string, relativeUrl: string): string {
-    const elements = text.match(/\[.+?\]\(\.{1,2}[^)]+?\.md\)/g)
+  private inlineLinkedMarkdownFiles (text: string, docsBaseUrl: string): string {
+    const elements = text.match(/\[.+?\]\(\.{1,2}[^\)]+?\.?[a-z]+\)/g)
     if (!elements) return text
   
     let newText = text
 
     elements.map(async (elem) => {
-      const urlMatch = elem.match(/\((.+?\.md)\)/)
+      const urlMatch = elem.match(/\((.+?\.?[a-z]+)\)/)
       if (!urlMatch) return
   
-      const fullUrl = this.convertFromGithubRawLink(relativeUrl + urlMatch[1])
+      const fullUrl = this.convertFromGithubRawLink(docsBaseUrl + urlMatch[1])
       newText = newText.replace(urlMatch[1], fullUrl)
     })
 

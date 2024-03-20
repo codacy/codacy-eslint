@@ -12,7 +12,7 @@ Prefer the newer ES6-style imports over `require()`.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const lib1 = require('lib1');
@@ -20,13 +20,13 @@ const { lib2 } = require('lib2');
 import lib3 = require('lib3');
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
-import * as lib1 from 'lib1';
-import { lib2 } from 'lib2';
-import * as lib3 from 'lib3';
+
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -38,17 +38,19 @@ With `{allow: ['/package\\.json$']}`:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 console.log(require('../data.json').version);
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 console.log(require('../package.json').version);
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -57,4 +59,4 @@ If only a subset of your project uses `require`s then you might consider using [
 
 ## Related To
 
-- [`no-var-requires`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-var-requires.md)
+- [`no-var-requires`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-var-requires.mdx)

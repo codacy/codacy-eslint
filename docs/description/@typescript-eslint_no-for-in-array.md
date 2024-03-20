@@ -19,7 +19,7 @@ You may have confused for-in with for-of, which iterates over the elements of th
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare const array: string[];
@@ -33,7 +33,7 @@ for (const i in array) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare const array: string[];
@@ -54,6 +54,8 @@ for (const [i, value] of array.entries()) {
   console.log(i, value);
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

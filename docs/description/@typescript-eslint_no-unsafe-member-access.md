@@ -18,7 +18,7 @@ This rule disallows member access on any variable that is typed as `any`.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare const anyVar: any;
@@ -41,7 +41,7 @@ arr[anyVar];
 nestedAny[anyVar];
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare const properlyTyped: { prop: { a: string } };
@@ -59,6 +59,8 @@ arr[idx];
 arr[idx++];
 ```
 
+<!--/tabs-->
+
 ## When Not To Use It
 
 If your codebase has many existing `any`s or areas of unsafe code, it may be difficult to enable this rule.
@@ -67,8 +69,8 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`no-explicit-any`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-explicit-any.md)
-- [`no-unsafe-argument`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-argument.md)
-- [`no-unsafe-assignment`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md)
-- [`no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-call.md)
-- [`no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-return.md)
+- [`no-explicit-any`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-explicit-any.mdx)
+- [`no-unsafe-argument`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-argument.mdx)
+- [`no-unsafe-assignment`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-assignment.mdx)
+- [`no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-call.mdx)
+- [`no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-return.mdx)

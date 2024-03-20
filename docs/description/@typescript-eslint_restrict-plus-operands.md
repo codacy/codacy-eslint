@@ -15,19 +15,21 @@ This rule reports when a `+` operation combines two values of different types, o
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 let foo = 1n + 1;
 let fn = (a: string, b: never) => a + b;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 let foo = 1n + 1n;
 let fn = (a: string, b: string) => a + b;
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -86,6 +88,8 @@ let fn = (a: number, b: any) => a + b;
 let fn = (a: string, b: any) => a + b;
 ```
 
+<!--/tabs-->
+
 ### `allowBoolean`
 
 Examples of code for this rule with `{ allowBoolean: true }`:
@@ -105,6 +109,8 @@ let fn = (a: string, b: unknown) => a + b;
 let fn = (a: number, b: boolean) => a + b;
 let fn = (a: string, b: boolean) => a + b;
 ```
+
+<!--/tabs-->
 
 ### `allowNullish`
 
@@ -130,6 +136,8 @@ let fn = (a: string, b: undefined) => a + b;
 let fn = (a: string, b: null) => a + b;
 ```
 
+<!--/tabs-->
+
 ### `allowNumberAndString`
 
 Examples of code for this rule with `{ allowNumberAndString: true }`:
@@ -150,6 +158,8 @@ let fn = (a: number, b: string) => a + b;
 let fn = (a: number, b: number | string) => a + b;
 ```
 
+<!--/tabs-->
+
 ### `allowRegExp`
 
 Examples of code for this rule with `{ allowRegExp: true }`:
@@ -167,6 +177,8 @@ let fn = (a: number, b: RegExp) => a + b;
 ```ts option='{ "allowRegExp": true }'
 let fn = (a: string, b: RegExp) => a + b;
 ```
+
+<!--/tabs-->
 
 ### `skipCompoundAssignments`
 
@@ -194,14 +206,16 @@ let bar = '';
 bar += 'test';
 ```
 
+<!--/tabs-->
+
 ## When Not To Use It
 
 If you don't mind a risk of `"[object Object]"` or incorrect type coercions in your values, then you will not need this rule.
 
 ## Related To
 
-- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md)
-- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
+- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.mdx)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.mdx)
 
 ## Further Reading
 

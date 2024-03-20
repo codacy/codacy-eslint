@@ -1,8 +1,8 @@
-import {ParameterSpec} from "codacy-seed"
-import {JSONSchema4, JSONSchema4Type} from "json-schema"
-import {flatMap, toPairs} from "lodash"
+import { ParameterSpec } from "codacy-seed"
+import { JSONSchema4, JSONSchema4Type } from "json-schema"
+import { flatMap, toPairs } from "lodash"
 
-import {rulesNamedParametersAndDefaults} from "./rulesToUnnamedParametersDefaults"
+import { rulesNamedParametersAndDefaults } from "./rulesToUnnamedParametersDefaults"
 
 export function fromSchemaArray (
   patternId: string,

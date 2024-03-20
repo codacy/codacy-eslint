@@ -67,5 +67,5 @@ process.exit(0)
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/process.js)
-- [Test source](../../../tests/lib/rules/prefer-global/process.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/process.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/process.js)

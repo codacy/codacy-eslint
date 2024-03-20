@@ -34,5 +34,5 @@ export default {
 
 ## :mag: Implementation
 
-- [Rule source](../../lib/rules/no-globals-in-created.js)
-- [Test source](../../lib/rules/__tests__/no-globals-in-created.test.js)
+- [Rule source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/no-globals-in-created.js)
+- [Test source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/__tests__/no-globals-in-created.test.js)

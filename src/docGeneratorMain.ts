@@ -1,4 +1,4 @@
-import {DocGenerator} from "./docGenerator"
+import { DocGenerator } from "./docGenerator"
 
 main()
 
@@ -12,319 +12,330 @@ async function main () {
   await docGenerator.createAllPatternsMultipleTestFiles()
 
   await docGenerator.downloadDocs(
-    "/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/",
-    "@angular-eslint"
+    "@angular-eslint/eslint-plugin",
+    "/angular-eslint/angular-eslint/master/packages/eslint-plugin/docs/rules/"    
   )
 
   await docGenerator.downloadDocs(
-    "/salesforce/eslint-plugin-lwc/master/docs/rules/",
-    "@lwc/lwc"
+    "@lwc/eslint-plugin-lwc",
+    "/salesforce/eslint-plugin-lwc/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/forcedotcom/eslint-plugin-aura/master/docs/rules/",
-    "@salesforce/aura"
+    "@salesforce/eslint-plugin-aura",
+    "/forcedotcom/eslint-plugin-aura/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/salesforce/eslint-plugin-lightning/master/docs/rules/",
-    "@salesforce/lightning"
+    "@salesforce/eslint-plugin-lightning",
+    "/salesforce/eslint-plugin-lightning/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "@shopify/eslint-plugin",
     "/Shopify/web-configs/main/packages/eslint-plugin/docs/rules/",
-    "@shopify"
+    "@shopify/eslint-plugin@"
   )
 
   await docGenerator.downloadDocs(
-    "/eslint-stylistic/eslint-stylistic/main/",
-    "@stylistic"
+    "@stylistic/eslint-plugin",
+    "/eslint-stylistic/eslint-stylistic/main/"
   )
 
   await docGenerator.downloadDocs(
-    "/typescript-eslint/typescript-eslint/main/packages/eslint-plugin/docs/rules/",
-    "@typescript-eslint"
+    "@typescript-eslint/eslint-plugin",
+    "/typescript-eslint/typescript-eslint/main/packages/eslint-plugin/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/ilyavolodin/eslint-plugin-backbone/master/docs/rules/",
-    "backbone"
+    "eslint-plugin-backbone",
+    "/ilyavolodin/eslint-plugin-backbone/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/amilajack/eslint-plugin-compat/main/docs/rules/",
-    "compat"
+    "eslint-plugin-compat",
+    "/amilajack/eslint-plugin-compat/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/cypress-io/eslint-plugin-cypress/master/docs/rules/",
-    "cypress"
+    "eslint-plugin-cypress",
+    "/cypress-io/eslint-plugin-cypress/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/ember-cli/eslint-plugin-ember/master/docs/rules/",
-    "ember"
+    "eslint-plugin-ember",
+    "/ember-cli/eslint-plugin-ember/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/DockYard/eslint-plugin-ember-suave/master/docs/rules/",
-    "ember-suave"
+    "eslint-plugin-ember-suave",
+    "/DockYard/eslint-plugin-ember-suave/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/eslint-community/eslint-plugin-es-x/master/docs/rules/",
-    "es-x"
+    "eslint-plugin-es-x",
+    "/eslint-community/eslint-plugin-es-x/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/eslint/eslint/main/docs/src/rules/",
+    "eslint",
+    "/eslint/eslint/main/docs/src/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-eslint-plugin",
+    "/eslint-community/eslint-plugin-eslint-plugin/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-functional",
+    "/jonaskello/eslint-plugin-functional/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-i18next",
+    "/edvardchen/eslint-plugin-i18next/next/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-import",
+    "/un-es/eslint-plugin-i/fork-release/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jasmine",
+    "/tlvince/eslint-plugin-jasmine/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jest",
+    "/jest-community/eslint-plugin-jest/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jest-dom",
+    "/testing-library/eslint-plugin-jest-dom/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jest-extended",
+    "/jest-community/eslint-plugin-jest-extended/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jest-formatting",
+    "/dangreenisrael/eslint-plugin-jest-formatting/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jsdoc",
+    "/gajus/eslint-plugin-jsdoc/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jsonc",
+    "/ota-meshi/eslint-plugin-jsonc/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-jsx-a11y",
+    "/jsx-eslint/eslint-plugin-jsx-a11y/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-lit",
+    "/43081j/eslint-plugin-lit/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-lodash",
+    "/wix-incubator/eslint-plugin-lodash/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-lodash-fp",
+    "/jfmengels/eslint-plugin-lodash-fp/master/docs/rules/",
+    false
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-meteor",
+    "/dferber90/eslint-plugin-meteor/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-mocha",
+    "/lo1tuma/eslint-plugin-mocha/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-n",
+    "/eslint-community/eslint-plugin-n/master/docs/rules/",
     ""
   )
 
   await docGenerator.downloadDocs(
-    "/eslint-community/eslint-plugin-eslint-plugin/main/docs/rules/",
-    "eslint-plugin"
-  )
-
-  await docGenerator.downloadDocs(
-    "/jonaskello/eslint-plugin-functional/master/docs/rules/",
-    "functional"
-  )
-
-  await docGenerator.downloadDocs(
-    "/edvardchen/eslint-plugin-i18next/next/docs/rules/",
-    "i18next"
-  )
-
-  await docGenerator.downloadDocs(
-    "/un-es/eslint-plugin-i/fork-release/docs/rules/",
-    "import"
-  )
-
-  await docGenerator.downloadDocs(
-    "/tlvince/eslint-plugin-jasmine/master/docs/rules/",
-    "jasmine"
-  )
-
-  await docGenerator.downloadDocs(
-    "/jest-community/eslint-plugin-jest/master/docs/rules/",
-    "jest"
-  )
-
-  await docGenerator.downloadDocs(
-    "/testing-library/eslint-plugin-jest-dom/main/docs/rules/",
-    "jest-dom"
-  )
-
-  await docGenerator.downloadDocs(
-    "/jest-community/eslint-plugin-jest-extended/main/docs/rules/",
-    "jest-extended"
-  )
-
-  await docGenerator.downloadDocs(
-    "/dangreenisrael/eslint-plugin-jest-formatting/master/docs/rules/",
-    "jest-formating"
-  )
-
-  await docGenerator.downloadDocs(
-    "/gajus/eslint-plugin-jsdoc/main/docs/rules/",
-    "jsdoc"
-  )
-
-  await docGenerator.downloadDocs(
-    "/ota-meshi/eslint-plugin-jsonc/master/docs/rules/",
-    "jsonc"
-  )
-
-  await docGenerator.downloadDocs(
-    "/jsx-eslint/eslint-plugin-jsx-a11y/main/docs/rules/",
-    "jsx-a11y"
-  )
-
-  await docGenerator.downloadDocs(
-    "/43081j/eslint-plugin-lit/master/docs/rules/",
-    "lit"
-  )
-
-  await docGenerator.downloadDocs(
-    "/wix-incubator/eslint-plugin-lodash/master/docs/rules/",
-    "lodash"
-  )
-
-  await docGenerator.downloadDocs(
-    "/jfmengels/eslint-plugin-lodash-fp/master/docs/rules/",
-    "lodash-fp"
-  )
-
-  await docGenerator.downloadDocs(
-    "/dferber90/eslint-plugin-meteor/master/docs/rules/",
-    "meteor"
-  )
-
-  await docGenerator.downloadDocs(
-    "/lo1tuma/eslint-plugin-mocha/master/docs/rules/",
-    "mocha"
-  )
-
-  await docGenerator.downloadDocs(
-    "/eslint-community/eslint-plugin-n/master/docs/rules/",
-    "n"
-  )
-
-  await docGenerator.downloadDocs(
+    "eslint-plugin-no-unsanitized",
     "/mozilla/eslint-plugin-no-unsanitized/master/docs/rules/",
-    "no-unsanitized"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/nuxt/eslint-plugin-nuxt/master/docs/rules/",
-    "nuxt"
+    "eslint-plugin-nuxt",
+    "/nuxt/eslint-plugin-nuxt/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/azat-io/eslint-plugin-perfectionist/main/docs/rules/",
-    "perfectionist"
+    "eslint-plugin-perfectionist",
+    "/azat-io/eslint-plugin-perfectionist/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/xjamundx/eslint-plugin-promise/master/docs/rules/",
-    "promise"
+    "eslint-plugin-promise",
+    "/xjamundx/eslint-plugin-promise/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/jsx-eslint/eslint-plugin-react/master/docs/rules/",
-    "react"
+    "eslint-plugin-react",
+    "/jsx-eslint/eslint-plugin-react/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/Intellicode/eslint-plugin-react-native/master/docs/rules/",
-    "react-native"
+    "eslint-plugin-react-native",
+    "/Intellicode/eslint-plugin-react-native/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-react-perf",
     "/cvazac/eslint-plugin-react-perf/master/docs/rules/",
-    "react-perf"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/DianaSuvorova/eslint-plugin-react-redux/master/docs/rules/",
-    "react-redux"
+    "eslint-plugin-react-redux",
+    "/DianaSuvorova/eslint-plugin-react-redux/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-redux-saga",
     "/pke/eslint-plugin-redux-saga/master/docs/rules/",
-    "redux-saga"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/ota-meshi/eslint-plugin-regexp/master/docs/rules/",
-    "regexp"
+    "eslint-plugin-regexp",
+    "/ota-meshi/eslint-plugin-regexp/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-rxjs",
     "/cartant/eslint-plugin-rxjs/main/docs/rules/",
-    "rxjs"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/cartant/eslint-plugin-rxjs-angular/main/docs/rules/",
-    "rxjs-angular"
+    "eslint-plugin-rxjs-angular",
+    "/cartant/eslint-plugin-rxjs-angular/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/eslint-community/eslint-plugin-security/main/docs/rules/",
-    "security"
+    "eslint-plugin-security",
+    "/eslint-community/eslint-plugin-security/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-security-node",
     "/gkouziik/eslint-plugin-security-node/master/docs/rules/",
-    "security-node"
+    ""
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-sonarjs",
     "/SonarSource/eslint-plugin-sonarjs/master/docs/rules/",
-    "sonarjs"
+    ""
   )
 
   await docGenerator.downloadDocs(
-    "/mskelton/eslint-plugin-sort/main/docs/rules/",
-    "sort"
+    "eslint-plugin-sort",
+    "/mskelton/eslint-plugin-sort/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/mthadley/eslint-plugin-sort-destructure-keys/master/docs/rules/",
-    "sort-destructure-keys"
+    "eslint-plugin-sort-destructure-keys",
+    "/mthadley/eslint-plugin-sort-destructure-keys/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/storybookjs/eslint-plugin-storybook/master/docs/rules/",
-    "storybook"
+    "eslint-plugin-storybook",
+    "/storybookjs/eslint-plugin-storybook/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-suitescript",
     "/acdvs/eslint-plugin-suitescript/master/docs/rules/",
-    "suitescript"
-  )
-
-
-  await docGenerator.downloadDocs(
-    "/francoismassart/eslint-plugin-tailwindcss/master/docs/rules/",
-    "tailwindcss"
+    "v."
   )
 
   await docGenerator.downloadDocs(
-    "/davidcalhoun/eslint-plugin-test-selectors/master/docs/rules/",
-    "test-selectors"
+    "eslint-plugin-tailwindcss",
+    "/francoismassart/eslint-plugin-tailwindcss/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/testing-library/eslint-plugin-testing-library/main/docs/rules/",
-    "test-library"
+    "eslint-plugin-test-selectors",
+    "/davidcalhoun/eslint-plugin-test-selectors/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/",
-    "typescript-sort-keys"
+    "eslint-plugin-testing-library",
+    "/testing-library/eslint-plugin-testing-library/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/sindresorhus/eslint-plugin-unicorn/main/docs/rules/",
-    "unicorn"
+    "eslint-plugin-typescript-sort-keys",
+    "/infctr/eslint-plugin-typescript-sort-keys/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-unicorn",
+    "/sindresorhus/eslint-plugin-unicorn/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-unused-imports",
     "/sweepline/eslint-plugin-unused-imports/master/docs/rules/",
-    "unused-imports"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/vuejs/eslint-plugin-vue/master/docs/rules/",
-    "vue"
+    "eslint-plugin-vue",
+    "/vuejs/eslint-plugin-vue/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/",
-    "vue-scoped-css"
+    "eslint-plugin-vue-scoped-css",
+    "/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/vue-a11y/eslint-plugin-vuejs-accessibility/main/docs/rules/",
-    "vuejs-accessibility"
+    "eslint-plugin-vuejs-accessibility",
+    "/vue-a11y/eslint-plugin-vuejs-accessibility/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
-    "/webdriverio/webdriverio/main/packages/eslint-plugin-wdio/docs/rules/",
-    "wdio"
+    "eslint-plugin-wdio",
+    "/webdriverio/webdriverio/main/packages/eslint-plugin-wdio/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-xss",
     "/Rantanen/eslint-plugin-xss/master/docs/rules/",
-    "xss"
+    false
   )
 
   await docGenerator.downloadDocs(
-    "/ota-meshi/eslint-plugin-yml/master/docs/rules/",
-    "yml"
+    "eslint-plugin-yml",
+    "/ota-meshi/eslint-plugin-yml/master/docs/rules/"
   )
 
 }

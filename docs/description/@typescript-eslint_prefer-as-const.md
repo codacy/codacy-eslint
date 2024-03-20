@@ -18,7 +18,7 @@ This rule reports when an `as` with an explicit literal type can be replaced wit
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 let bar: 2 = 2;
@@ -26,7 +26,7 @@ let foo = <'bar'>'bar';
 let foo = { bar: 'baz' as 'baz' };
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 let foo = 'bar';

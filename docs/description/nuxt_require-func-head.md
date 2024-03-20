@@ -34,5 +34,5 @@ export default {
 
 ## :mag: Implementation
 
-- [Rule source](../../lib/rules/require-func-head.js)
-- [Test source](../../lib/rules/__tests__/require-func-head.test.js)
+- [Rule source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/require-func-head.js)
+- [Test source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/__tests__/require-func-head.test.js)

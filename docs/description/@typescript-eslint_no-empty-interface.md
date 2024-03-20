@@ -15,7 +15,7 @@ This rule aims to ensure that only meaningful interfaces are declared in the cod
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // an empty interface
@@ -28,7 +28,7 @@ interface Bar extends Foo {}
 interface Baz {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // an interface with any number of members

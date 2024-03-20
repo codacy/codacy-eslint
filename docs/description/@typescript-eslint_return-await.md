@@ -127,6 +127,8 @@ async function validInTryCatch6() {
 }
 ```
 
+<!--/tabs-->
+
 ### `always`
 
 Requires that all returned promises are `await`ed.
@@ -171,6 +173,8 @@ async function validAlways3() {
 }
 ```
 
+<!--/tabs-->
+
 ### `never`
 
 Disallows all `await`ing any returned promises.
@@ -214,3 +218,6 @@ async function validNever3() {
   return 'value';
 }
 ```
+
+<!--/tabs-->
+

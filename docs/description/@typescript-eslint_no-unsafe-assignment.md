@@ -21,7 +21,7 @@ For example, it will error if you assign `Set<any>` to a variable declared as `S
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const x = 1 as any,
@@ -46,7 +46,7 @@ const x: Set<string[]> = new Set<any[]>();
 const x: Set<Set<Set<string>>> = new Set<Set<Set<any>>>();
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const x = 1,
@@ -89,8 +89,8 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`no-explicit-any`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-explicit-any.md)
-- [`no-unsafe-argument`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-argument.md)
-- [`no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-call.md)
-- [`no-unsafe-member-access`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md)
-- [`no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-return.md)
+- [`no-explicit-any`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-explicit-any.mdx)
+- [`no-unsafe-argument`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-argument.mdx)
+- [`no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-call.mdx)
+- [`no-unsafe-member-access`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-member-access.mdx)
+- [`no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unsafe-return.mdx)

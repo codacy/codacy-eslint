@@ -1,6 +1,6 @@
-import {equal} from "assert"
+import { equal } from "assert"
 
-import {capitalize, patternTitle} from "../docGeneratorStringUtils"
+import { capitalize, patternTitle } from "../docGeneratorStringUtils"
 
 describe("DocGeneratorStringUtils", () => {
   describe("capitalize", () => {

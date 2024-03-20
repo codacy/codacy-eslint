@@ -1,6 +1,14 @@
-import {Linter, Rule} from "eslint"
+import { Linter, Rule } from "eslint"
 
-import {isBlacklisted} from "./blacklist"
+import { isBlacklisted } from "./blacklist"
+
+export interface Plugin {
+  "packageName": string;
+  "name": string;
+  "rules": Rule.RuleModule[];
+  "docsBaseUrl"?: URL;
+  "versionPrefix"?: string | boolean;
+}
 
 const packageNames: string[] = [
   "@angular-eslint/eslint-plugin",
@@ -111,12 +119,18 @@ const packageNames: string[] = [
   "eslint-plugin-you-dont-need-lodash-underscore"
 ]
 
-const plugins = packageNames.map((packageName) => {
-  const rules: Rule.RuleModule = require(packageName).rules
+export const plugins = packageNames.map((packageName) => {
+  const rules: Rule.RuleModule[] = require(packageName).rules
   const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, "")
 
-  return {name, rules}
-})
+  return { packageName, name, rules }
+}) as Plugin[]
+
+export function pluginByPackageName (packageName: string): Plugin {
+  const plugin = plugins.find(plugin => plugin.packageName === packageName)
+  return plugin ?? { "packageName": "eslint", "name": "eslint", "rules": baseRules.map(([, rule]) => rule) as Rule.RuleModule[] }
+  
+}
 
 export const pluginsNames = plugins.map(plugin => plugin.name)
 
@@ -133,6 +147,6 @@ const pluginsRules = plugins
 export const allRules = baseRules
   .concat(pluginsRules)
   .filter(([patternId ]) =>
-    patternId &&
-    !isBlacklisted(patternId)
+    patternId
+    && !isBlacklisted(patternId)
   )

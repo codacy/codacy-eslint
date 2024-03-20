@@ -1,8 +1,4 @@
-# Require creating a `Promise` constructor before using it in an ES5 environment (`promise/no-native`)
-
-🚫 This rule is _disabled_ in the ✅ `recommended` config.
-
-<!-- end auto-generated rule header -->
+# In an ES5 environment, make sure to create a `Promise` constructor before using (no-native)
 
 Ensure that `Promise` is included fresh in each file instead of relying on the
 existence of a native promise implementation. Helpful if you want to use

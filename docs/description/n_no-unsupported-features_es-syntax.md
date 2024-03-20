@@ -136,5 +136,5 @@ For Example:
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/no-unsupported-features/es-syntax.js)
-- [Test source](../../../tests/lib/rules/no-unsupported-features/es-syntax.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/no-unsupported-features/es-syntax.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/no-unsupported-features/es-syntax.js)

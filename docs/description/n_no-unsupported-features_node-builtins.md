@@ -347,5 +347,5 @@ For example:
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/no-unsupported-features/node-builtins.js)
-- [Test source](../../../tests/lib/rules/no-unsupported-features/node-builtins.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/no-unsupported-features/node-builtins.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/no-unsupported-features/node-builtins.js)

@@ -11,7 +11,7 @@ import { allRules, pluginsNames } from "./eslintPlugins"
 import { DEBUG, debug } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
 
-export function createEslintConfig(
+export function createEslintConfig (
   srcDirPath: string,
   codacyrc: Codacyrc
 ): [ESLint.Options, string[]] {
@@ -24,7 +24,7 @@ export function createEslintConfig(
   return [options, files]
 }
 
-function generateFilesToAnalyze(
+function generateFilesToAnalyze (
   codacyrc: Codacyrc
 ): string[] {
   debug("files: creating")
@@ -44,28 +44,30 @@ function generateFilesToAnalyze(
   return files
 }
 
-function generateEslintOptions(
+function generateEslintOptions (
   srcDirPath: string,
   codacyrc: Codacyrc
 ): ESLint.Options {
   debug("options: creating")
 
-  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveRecommendedCodacyPatterns() || []
+  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveCodacyPatterns() || []
   const existsEslintConfig = existsEslintConfigInRepoRoot(srcDirPath)
   const useCodacyPatterns = patterns.length || !existsEslintConfig
   const useDefaultPatterns = !patterns.length && !existsEslintConfig
+  const baseOptions: ESLint.Options = {
+    "cwd": srcDirPath,
+    "errorOnUnmatchedPattern": false,
+    "useEslintrc": !patterns.length
+  }
 
   debug(`options: ${patterns.length} patterns in codacyrc`)
 
   if (existsEslintConfig && !patterns.length) {
     debug("options: using eslintrc from repo root")
-    return {}
+    return baseOptions
   }
 
-  const options = cloneDeep(defaultOptions)
-  options.cwd = srcDirPath
-  options.errorOnUnmatchedPattern = false
-  options.useEslintrc = !patterns.length
+  const options: ESLint.Options = Object.assign({}, baseOptions, cloneDeep(defaultOptions))
 
   if (DEBUG && useDefaultPatterns) {
     debug(`options: setting all ${patterns.length} patterns`)
@@ -93,11 +95,11 @@ function generateEslintOptions(
     if (storybookPatterns.length) {
       debug(`options: setting ${storybookPatterns.length} storybook patterns`)
       options.baseConfig.overrides.push({
-        files: [
+        "files": [
           "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
           "*.story.@(ts|tsx|js|jsx|mjs|cjs)"
         ],
-        rules: convertPatternsToEslintRules(storybookPatterns)
+        "rules": convertPatternsToEslintRules(storybookPatterns)
       })
     }
 
@@ -123,7 +125,7 @@ function generateEslintOptions(
   return options
 }
 
-function getPatternsUniquePrefixes(patterns: Pattern[]) {
+function getPatternsUniquePrefixes (patterns: Pattern[]) {
   const prefixes = patterns.map(item => {
     const patternId = patternIdToEslint(item.patternId)
     return patternId.substring(0, patternId.lastIndexOf("/"))
@@ -131,7 +133,7 @@ function getPatternsUniquePrefixes(patterns: Pattern[]) {
   return [...new Set(prefixes)]
 }
 
-function convertPatternsToEslintRules(patterns: Pattern[]): {
+function convertPatternsToEslintRules (patterns: Pattern[]): {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 } {
   const pairs = patterns.map((pattern: Pattern) => {
@@ -158,7 +160,7 @@ function convertPatternsToEslintRules(patterns: Pattern[]): {
   return fromPairs(pairs)
 }
 
-function existsEslintConfigInRepoRoot(srcDirPath: string): boolean {
+function existsEslintConfigInRepoRoot (srcDirPath: string): boolean {
   const filenames = [
     ".eslintrc",
     ".eslintrc.js",
@@ -173,7 +175,7 @@ function existsEslintConfigInRepoRoot(srcDirPath: string): boolean {
   return found
 }
 
-function retrieveAllCodacyPatterns(): Pattern[] {
+function retrieveCodacyPatterns (set: "recommended" | "all" = "recommended"): Pattern[] {
   const patterns = []
   allRules
     .filter(([patternId, rule]) =>
@@ -181,6 +183,7 @@ function retrieveAllCodacyPatterns(): Pattern[] {
       && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       // problems with the path generated (win vs nix) for this specific pattern
       && (!DEBUG || patternId != "spellcheck_spell-checker")
+      && (set === "recommended" && DocGenerator.isDefaultPattern(patternIdToEslint(patternId), rule.meta))
     )
     .forEach(([patternId, rule]) => {
       const pattern = new Pattern(
@@ -196,34 +199,6 @@ function retrieveAllCodacyPatterns(): Pattern[] {
       patterns.push(pattern)
     })
 
-  debug(`options: returning all (${patterns.length}) patterns`)
-  return patterns
-}
-
-function retrieveRecommendedCodacyPatterns(): Pattern[] {
-  const patterns = []
-  allRules
-    .filter(([patternId, rule]) =>
-      !isBlacklisted(patternId)
-      && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
-      // problems with the path generated (win vs nix) for this specific pattern
-      && (!DEBUG || patternId != "spellcheck_spell-checker")
-      && DocGenerator.isDefaultPattern(patternIdToEslint(patternId), rule.meta)
-    )
-    .forEach(([patternId, rule]) => {
-      const pattern = new Pattern(
-        patternId,
-        DocGenerator.generateParameters(patternId, rule.meta?.schema)
-          .map((parameterSpec: ParameterSpec): Parameter => {
-            return new Parameter(
-              parameterSpec.name,
-              parameterSpec.default
-            )
-          })
-      )
-      patterns.push(pattern)
-    })
-
-  debug(`options: returning all (${patterns.length}) patterns`)
+  debug(`options: returning ${set} (${patterns.length}) patterns`)
   return patterns
 }

@@ -14,8 +14,6 @@ Such as:
 var b = !!foo;
 var b = ~foo.indexOf(".");
 var n = +foo;
-var n = -(-foo);
-var n = foo - 0;
 var n = 1 * foo;
 var s = "" + foo;
 foo += ``;
@@ -26,8 +24,6 @@ Those can be replaced with the following code:
 ```js
 var b = Boolean(foo);
 var b = foo.indexOf(".") !== -1;
-var n = Number(foo);
-var n = Number(foo);
 var n = Number(foo);
 var n = Number(foo);
 var s = String(foo);
@@ -46,7 +42,7 @@ This rule has three main options and one override option to allow some coercions
 * `"number"` (`true` by default) - When this is `true`, this rule warns shorter type conversions for `number` type.
 * `"string"` (`true` by default) - When this is `true`, this rule warns shorter type conversions for `string` type.
 * `"disallowTemplateShorthand"` (`false` by default) - When this is `true`, this rule warns `string` type conversions using `${expression}` form.
-* `"allow"` (`empty` by default) - Each entry in this array can be one of `~`, `!!`, `+`, `- -`, `-`, or `*` that are to be allowed.
+* `"allow"` (`empty` by default) - Each entry in this array can be one of `~`, `!!`, `+` or `*` that are to be allowed.
 
 Note that operator `+` in `allow` list would allow `+foo` (number coercion) as well as `"" + foo` (string coercion).
 
@@ -91,8 +87,6 @@ Examples of **incorrect** code for the default `{ "number": true }` option:
 /*eslint no-implicit-coercion: "error"*/
 
 var n = +foo;
-var n = -(-foo);
-var n = foo - 0;
 var n = 1 * foo;
 ```
 

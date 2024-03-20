@@ -13,7 +13,7 @@ Using the operator any more than once on a single value does nothing.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const foo: { bar: number } | null = null;
@@ -32,7 +32,7 @@ function foo(bar?: { n: number }) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const foo: { bar: number } | null = null;
@@ -50,5 +50,7 @@ function foo(bar?: { n: number }) {
   return bar?.n;
 }
 ```
+
+<!--/tabs-->
 
 <!-- Intentionally Omitted: When Not To Use It -->

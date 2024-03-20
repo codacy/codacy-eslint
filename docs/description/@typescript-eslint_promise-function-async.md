@@ -23,7 +23,7 @@ Examples of code for this rule
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const arrowFunctionReturnsPromise = () => Promise.resolve('value');
@@ -37,7 +37,7 @@ function functionReturnsUnionWithPromiseImplicitly(p: boolean) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const arrowFunctionReturnsPromise = async () => Promise.resolve('value');
@@ -57,6 +57,8 @@ async function functionReturnsUnionWithPromiseImplicitly(p: boolean) {
   return p ? 'value' : Promise.resolve('value');
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -81,6 +83,8 @@ const returnsAny = () => ({}) as any;
 const returnsAny = async () => ({}) as any;
 ```
 
+<!--/tabs-->
+
 ### `allowedPromiseNames`
 
 For projects that use constructs other than the global built-in `Promise` for asynchronous code.
@@ -93,7 +97,6 @@ Examples of code with `{ "allowedPromiseNames": ["Bluebird"] }`:
 #### ❌ Incorrect
 
 ```ts option='{ "allowedPromiseNames": ["Bluebird"] }'
-import { Bluebird } from 'bluebird';
 
 const returnsBluebird = () => new Bluebird(() => {});
 ```
@@ -101,10 +104,11 @@ const returnsBluebird = () => new Bluebird(() => {});
 #### ✅ Correct
 
 ```ts option='{ "allowedPromiseNames": ["Bluebird"] }'
-import { Bluebird } from 'bluebird';
 
 const returnsBluebird = async () => new Bluebird(() => {});
 ```
+
+<!--/tabs-->
 
 ### `checkArrowFunctions`
 

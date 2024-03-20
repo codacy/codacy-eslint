@@ -17,7 +17,9 @@ This rule restricts the unary `-` operator to `number | bigint`.
 
 ## Examples
 
-### ❌ Incorrect
+<!--tabs-->
+
+#### ❌ Incorrect
 
 ```ts
 declare const a: string;
@@ -27,7 +29,7 @@ declare const b: {};
 -b;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 -42;
@@ -48,5 +50,7 @@ declare const d: any;
 declare const e: 1 | 2;
 -e;
 ```
+
+<!--/tabs-->
 
 <!-- Intentionally Omitted: When Not To Use It -->

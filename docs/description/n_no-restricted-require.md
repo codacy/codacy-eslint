@@ -120,5 +120,5 @@ const pick = require('lodash/pick');
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-restricted-require.js)
-- [Test source](../../tests/lib/rules/no-restricted-require.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-restricted-require.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-restricted-require.js)

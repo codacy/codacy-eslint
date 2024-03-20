@@ -12,7 +12,7 @@ functions are handled/awaited.
 
 :::tip
 `no-misused-promises` only detects code that provides Promises to incorrect _logical_ locations.
-See [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.md) for detecting unhandled Promise _statements_.
+See [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.mdx) for detecting unhandled Promise _statements_.
 :::
 
 ## Options
@@ -35,6 +35,8 @@ If you don't want to check conditionals, you can configure the rule with `"check
 Doing so prevents the rule from looking at code like `if (somePromise)`.
 
 Examples of code for this rule with `checksConditionals: true`:
+
+## Examples
 
 <!--tabs-->
 
@@ -229,7 +231,7 @@ const getData2 = async () => {
 return { foo: 42, ...(await getData2()) };
 ```
 
-<!--tabs-->
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -243,4 +245,4 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.md)
+- [`no-floating-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-floating-promises.mdx)

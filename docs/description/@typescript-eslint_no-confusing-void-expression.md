@@ -16,7 +16,7 @@ This rule prevents `void` type expressions from being used in misleading locatio
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // somebody forgot that `alert` doesn't return anything
@@ -36,7 +36,7 @@ function doSomething() {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // just a regular void function in a statement position
@@ -66,6 +66,8 @@ cond && console.log('true');
 cond || console.error('false');
 cond ? console.log('true') : console.error('false');
 ```
+
+<!--/tabs-->
 
 ## Options
 

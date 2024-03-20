@@ -67,5 +67,5 @@ const u = new URLSearchParams(s)
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/url-search-params.js)
-- [Test source](../../../tests/lib/rules/prefer-global/url-search-params.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/url-search-params.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/url-search-params.js)

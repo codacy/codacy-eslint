@@ -15,10 +15,8 @@ By default this rule prefers the `fields` style as it means JS doesn't have to s
 ## Options
 
 :::note
-
 This rule only checks for constant _literal_ values (string, template string, number, bigint, boolean, regexp, null). It does not check objects or arrays, because a readonly field behaves differently to a getter in those cases. It also does not check functions, as it is a common pattern to use readonly fields with arrow function values as auto-bound methods.
 This is because these types can be mutated and carry with them more complex implications about their usage.
-
 :::
 
 ### `"fields"`
@@ -60,10 +58,12 @@ class Mx {
 }
 ```
 
+<!--/tabs-->
+
 ### `"getters"`
 
 This style checks for any `readonly` fields that are assigned literal values, and requires them to be defined as getters instead.
-This style pairs well with the [`@typescript-eslint/prefer-readonly`](prefer-readonly.md) rule,
+This style pairs well with the [`@typescript-eslint/prefer-readonly`](prefer-readonly.mdx) rule,
 as it will identify fields that can be `readonly`, and thus should be made into getters.
 
 Examples of code with the `getters` style:
@@ -99,6 +99,8 @@ class Mx {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

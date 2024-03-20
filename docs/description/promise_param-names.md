@@ -1,8 +1,4 @@
-# Enforce consistent param names and ordering when creating new promises (`promise/param-names`)
-
-💼 This rule is enabled in the ✅ `recommended` config.
-
-<!-- end auto-generated rule header -->
+# Enforce consistent param names when creating new promises (param-names)
 
 Enforce standard parameter names for Promise constructors
 

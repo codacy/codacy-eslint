@@ -23,7 +23,7 @@ Any example below that uses `===` would be treated the same way if `==` was used
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare const someCondition: boolean;
@@ -31,7 +31,7 @@ if (someCondition === true) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare const someCondition: boolean;
@@ -46,6 +46,8 @@ declare const someStringBoolean: boolean | string;
 if (someStringBoolean === true) {
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -83,6 +85,8 @@ if (!someNullCondition) {
 }
 ```
 
+<!--/tabs-->
+
 ### `allowComparingNullableBooleansToFalse`
 
 Examples of code for this rule with `{ allowComparingNullableBooleansToFalse: false }`:
@@ -112,6 +116,8 @@ declare const someNullCondition: boolean | null;
 if (!(someNullCondition ?? true)) {
 }
 ```
+
+<!--/tabs-->
 
 ## Fixer
 

@@ -19,7 +19,7 @@ The following expressions are checked:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 function head<T>(items: T[]) {
@@ -47,7 +47,7 @@ function bar<T>(arg: string) {
 ].filter(t => t); // number[] is always truthy
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 function head<T>(items: T[]) {
@@ -70,6 +70,8 @@ function bar(arg?: string | null) {
 
 [0, 1, 2, 3].filter(t => t); // number can be truthy or falsy
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -116,4 +118,4 @@ if (condition) {
 ## Related To
 
 - ESLint: [no-constant-condition](https://eslint.org/docs/rules/no-constant-condition) - `no-unnecessary-condition` is essentially a stronger version of `no-constant-condition`, but requires type information.
-- [strict-boolean-expressions](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md) - a more opinionated version of `no-unnecessary-condition`. `strict-boolean-expressions` enforces a specific code style, while `no-unnecessary-condition` is about correctness.
+- [strict-boolean-expressions](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/strict-boolean-expressions.mdx) - a more opinionated version of `no-unnecessary-condition`. `strict-boolean-expressions` enforces a specific code style, while `no-unnecessary-condition` is about correctness.

@@ -50,8 +50,6 @@ switch (value) {
 
 Since `value` is a non-union type it requires the switch case to have a default clause only with `requireDefaultForNonUnion` enabled.
 
-<!--/tabs-->
-
 ## Examples
 
 When the switch doesn't have exhaustive cases, either filling them all out or adding a default will correct the rule's complaint.
@@ -60,7 +58,7 @@ Here are some examples of code working with a union of literals:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 type Day =
@@ -82,7 +80,7 @@ switch (day) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct (Exhaustive)
 
 ```ts
 type Day =
@@ -122,7 +120,7 @@ switch (day) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct (Defaulted)
 
 ```ts
 type Day =
@@ -152,7 +150,7 @@ Likewise, here are some examples of code working with an enum:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum Fruit {
@@ -170,7 +168,7 @@ switch (fruit) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct (Exhaustive)
 
 ```ts
 enum Fruit {
@@ -196,7 +194,7 @@ switch (fruit) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct (Defaulted)
 
 ```ts
 enum Fruit {

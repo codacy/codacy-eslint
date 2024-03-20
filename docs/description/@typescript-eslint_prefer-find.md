@@ -20,7 +20,7 @@ Therefore, when fixing errors from this rule, be sure that your `.filter()` call
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 [1, 2, 3].filter(x => x > 1)[0];
@@ -28,11 +28,13 @@ Therefore, when fixing errors from this rule, be sure that your `.filter()` call
 [1, 2, 3].filter(x => x > 1).at(0);
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 [1, 2, 3].find(x => x > 1);
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

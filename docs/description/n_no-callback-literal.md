@@ -31,5 +31,5 @@ callback(someVariable);
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-callback-literal.js)
-- [Test source](../../tests/lib/rules/no-callback-literal.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-callback-literal.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-callback-literal.js)

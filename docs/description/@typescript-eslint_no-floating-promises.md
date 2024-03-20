@@ -26,14 +26,14 @@ This rule also reports when an Array containing Promises is created and not prop
 
 :::tip
 `no-floating-promises` only detects unhandled Promise _statements_.
-See [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.md) for detecting code that provides Promises to _logical_ locations such as if statements.
+See [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.mdx) for detecting code that provides Promises to _logical_ locations such as if statements.
 :::
 
 ## Examples
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const promise = new Promise((resolve, reject) => resolve('value'));
@@ -51,7 +51,7 @@ Promise.reject('value').finally();
 [1, 2, 3].map(async x => x + 1);
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const promise = new Promise((resolve, reject) => resolve('value'));
@@ -71,6 +71,8 @@ await Promise.reject('value').finally(() => {});
 
 await Promise.all([1, 2, 3].map(async x => x + 1));
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -117,7 +119,7 @@ You might consider using `void`s and/or [ESLint disable comments](https://eslint
 
 ## Related To
 
-- [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.md)
+- [`no-misused-promises`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-misused-promises.mdx)
 
 ## Further Reading
 

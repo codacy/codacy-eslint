@@ -19,7 +19,7 @@ This rule suggests using a function type instead of an interface or object type 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface Example {
@@ -40,7 +40,7 @@ interface ReturnsSelf {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 type Example = () => string;
@@ -81,6 +81,8 @@ interface Overloaded {
 // this is equivelent to Overloaded interface.
 type Intersection = ((data: string) => number) & ((id: number) => string);
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

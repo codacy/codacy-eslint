@@ -23,7 +23,7 @@ A type is considered readonly if:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 function array1(arg: string[]) {} // array is not readonly
@@ -65,7 +65,7 @@ interface Foo {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 function array1(arg: readonly string[]) {}
@@ -130,6 +130,8 @@ interface Foo {
 }
 ```
 
+<!--/tabs-->
+
 ## Options
 
 ### `allow`
@@ -150,8 +152,8 @@ Examples of code for this rule with:
 {
   "allow": [
     "$",
-    { "source": "file", "name": "Foo" },
-    { "source": "lib", "name": "HTMLElement" },
+    { "from": "file", "name": "Foo" },
+    { "from": "lib", "name": "HTMLElement" },
     { "from": "package", "name": "Bar", "package": "bar-lib" }
   ]
 }
@@ -161,7 +163,7 @@ Examples of code for this rule with:
 
 #### ❌ Incorrect
 
-```ts option='{"allow":["$",{"source":"file","name":"Foo"},{"source":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
+```ts option='{"allow":["$",{"from":"file","name":"Foo"},{"from":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
 interface ThisIsMutable {
   prop: string;
 }
@@ -185,9 +187,7 @@ function fn2(arg: Wrapper) {}
 function fn3(arg: WrapperWithOther) {}
 ```
 
-```ts option='{"allow":["$",{"source":"file","name":"Foo"},{"source":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
-import { Foo } from 'some-lib';
-import { Bar } from 'incorrect-lib';
+```ts option='{"allow":["$",{"from":"file","name":"Foo"},{"from":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
 
 interface HTMLElement {
   prop: string;
@@ -205,7 +205,7 @@ function fn3(arg: Bar) {}
 
 #### ✅ Correct
 
-```ts option='{"allow":["$",{"source":"file","name":"Foo"},{"source":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
+```ts option='{"allow":["$",{"from":"file","name":"Foo"},{"from":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
 interface Foo {
   prop: string;
 }
@@ -222,8 +222,7 @@ function fn1(arg: Foo) {}
 function fn2(arg: Wrapper) {}
 ```
 
-```ts option='{"allow":["$",{"source":"file","name":"Foo"},{"source":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
-import { Bar } from 'bar-lib';
+```ts option='{"allow":["$",{"from":"file","name":"Foo"},{"from":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
 
 interface Foo {
   prop: string;
@@ -239,12 +238,13 @@ function fn2(arg: HTMLElement) {}
 function fn3(arg: Bar) {}
 ```
 
-```ts option='{"allow":["$",{"source":"file","name":"Foo"},{"source":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
-import { Foo } from './foo';
+```ts option='{"allow":["$",{"from":"file","name":"Foo"},{"from":"lib","name":"HTMLElement"},{"from":"package","name":"Bar","package":"bar-lib"}]}'
 
 // Works because Foo is still a local type - it has to be in the same package
 function fn(arg: Foo) {}
 ```
+
+<!--/tabs-->
 
 ### `checkParameterProperties`
 
@@ -295,7 +295,6 @@ Examples of code for this rule with `{ignoreInferredTypes: true}`:
 #### ❌ Incorrect
 
 ```ts option='{ "ignoreInferredTypes": true }'
-import { acceptsCallback, CallbackOptions } from 'external-dependency';
 
 acceptsCallback((options: CallbackOptions) => {});
 ```
@@ -318,7 +317,6 @@ export const acceptsCallback: AcceptsCallback;
 #### ✅ Correct
 
 ```ts option='{ "ignoreInferredTypes": true }'
-import { acceptsCallback } from 'external-dependency';
 
 acceptsCallback(options => {});
 ```
@@ -337,6 +335,8 @@ export const acceptsCallback: AcceptsCallback;
 ```
 
 </details>
+
+<!--/tabs-->
 
 ### `treatMethodsAsReadonly`
 

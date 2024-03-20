@@ -1,8 +1,4 @@
-# Require returning inside each `then()` to create readable and reusable Promise chains (`promise/always-return`)
-
-💼 This rule is enabled in the ✅ `recommended` config.
-
-<!-- end auto-generated rule header -->
+# Return inside each `then()` to create readable and reusable Promise chains (always-return)
 
 Ensure that inside a `then()` you make sure to `return` a new promise or value.
 See http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html (rule #5)

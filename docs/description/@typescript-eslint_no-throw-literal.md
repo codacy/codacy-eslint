@@ -17,7 +17,7 @@ This rule is aimed at maintaining consistency when throwing exception by disallo
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 throw 'error';
@@ -48,7 +48,7 @@ const foo = {
 throw foo.bar;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 throw new Error();
@@ -83,6 +83,8 @@ class CustomError extends Error {
 throw new CustomError();
 ```
 
+<!--/tabs-->
+
 ## Options
 
 This rule adds the following options:
@@ -106,4 +108,4 @@ const defaultOptions: Options = {
 };
 ```
 
-<!-- Intentionally omitted: When Not To Use It -->
+<!-- Intentionally Omitted: When Not To Use It -->

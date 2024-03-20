@@ -12,7 +12,7 @@ In other words, the use of forms such as `var foo = require("foo")` are banned. 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 var foo = require('foo');
@@ -20,13 +20,15 @@ const foo = require('foo');
 let foo = require('foo');
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 import foo = require('foo');
 require('foo');
-import foo from 'foo';
+
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -38,17 +40,19 @@ With `{allow: ['/package\\.json$']}`:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const foo = require('../data.json');
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const foo = require('../package.json');
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -57,4 +61,4 @@ If only a subset of your project uses `require`s then you might consider using [
 
 ## Related To
 
-- [`no-require-imports`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-require-imports.md)
+- [`no-require-imports`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-require-imports.mdx)

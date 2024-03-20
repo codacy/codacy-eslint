@@ -49,6 +49,8 @@ type Foo = {
 type Foo = Record<string, unknown>;
 ```
 
+<!--/tabs-->
+
 ### `index-signature`
 
 <!--tabs-->
@@ -70,6 +72,8 @@ type Foo = {
   [key: string]: unknown;
 };
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

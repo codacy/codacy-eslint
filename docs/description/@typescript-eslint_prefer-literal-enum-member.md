@@ -32,7 +32,7 @@ This rule reports when an enum member is given a value that is not a literal.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const str = 'Test';
@@ -45,7 +45,7 @@ enum Invalid {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 enum Valid {
@@ -69,7 +69,7 @@ Examples of code for the `{ "allowBitwiseExpressions": true }` option:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "allowBitwiseExpressions": true }'
 const x = 1;
@@ -84,7 +84,7 @@ enum Foo {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "allowBitwiseExpressions": true }'
 enum Foo {
@@ -97,6 +97,8 @@ enum Foo {
   G = ~1,
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

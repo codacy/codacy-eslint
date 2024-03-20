@@ -18,7 +18,7 @@ This rule reports when an `as` cast is doing the same job as a `!` would, and su
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const maybe = Math.random() > 0.5 ? '' : undefined;
@@ -27,7 +27,7 @@ const definitely = maybe as string;
 const alsoDefinitely = <string>maybe;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const maybe = Math.random() > 0.5 ? '' : undefined;
@@ -35,6 +35,8 @@ const maybe = Math.random() > 0.5 ? '' : undefined;
 const definitely = maybe!;
 const alsoDefinitely = maybe!;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

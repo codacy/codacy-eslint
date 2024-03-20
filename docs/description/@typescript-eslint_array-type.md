@@ -34,6 +34,8 @@ const x: string[] = ['a', 'b'];
 const y: readonly string[] = ['a', 'b'];
 ```
 
+<!--/tabs-->
+
 ### `"generic"`
 
 Always use `Array<T>` or `ReadonlyArray<T>` for all array types.
@@ -53,6 +55,8 @@ const y: readonly string[] = ['a', 'b'];
 const x: Array<string> = ['a', 'b'];
 const y: ReadonlyArray<string> = ['a', 'b'];
 ```
+
+<!--/tabs-->
 
 ### `"array-simple"`
 
@@ -82,6 +86,8 @@ const d: MyType[] = ['a', 'b'];
 const e: string[] = ['a', 'b'];
 const f: readonly string[] = ['a', 'b'];
 ```
+
+<!--/tabs-->
 
 ## Combination Matrix
 

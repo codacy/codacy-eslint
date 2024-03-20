@@ -16,7 +16,7 @@ This rule reports when a class defines a method named `new` or an interface defi
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare class C {
@@ -29,7 +29,7 @@ interface I {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare class C {
@@ -40,6 +40,8 @@ interface I {
   new (): C;
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

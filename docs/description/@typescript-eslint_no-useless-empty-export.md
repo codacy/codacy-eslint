@@ -20,7 +20,7 @@ This rule reports an `export {}` that doesn't do anything in a file already usin
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 export const value = 'Hello, world!';
@@ -32,7 +32,7 @@ import 'some-other-module';
 export {};
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 export const value = 'Hello, world!';
@@ -41,6 +41,8 @@ export const value = 'Hello, world!';
 ```ts
 import 'some-other-module';
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

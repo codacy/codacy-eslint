@@ -18,7 +18,7 @@ This rule enforces that functions do have an explicit return type annotation.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // Should indicate that no value is returned (void)
@@ -42,7 +42,7 @@ class Test {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // No return value should be expected (void)
@@ -65,6 +65,8 @@ class Test {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -115,6 +117,8 @@ node.addEventListener('click', function () {});
 
 const foo = arr.map(i => i * i);
 ```
+
+<!--/tabs-->
 
 ### `allowTypedFunctionExpressions`
 
@@ -174,6 +178,8 @@ functionWithObjectArg({
 });
 ```
 
+<!--/tabs-->
+
 ### `allowHigherOrderFunctions`
 
 Examples of code for this rule with `{ allowHigherOrderFunctions: true }`:
@@ -200,6 +206,8 @@ function fn() {
 }
 ```
 
+<!--/tabs-->
+
 ### `allowDirectConstAssertionInArrowFunctions`
 
 Examples of code for this rule with `{ allowDirectConstAssertionInArrowFunctions: true }`:
@@ -219,6 +227,8 @@ const func = (value: number) => ({ type: 'X', value }) as Action;
 const func = (value: number) => ({ foo: 'bar', value }) as const;
 const func = () => x as const;
 ```
+
+<!--/tabs-->
 
 ### `allowConciseArrowFunctionExpressionsStartingWithVoid`
 
@@ -241,6 +251,8 @@ const log = (message: string) => {
 ```ts option='{ "allowConciseArrowFunctionExpressionsStartingWithVoid": true }'
 var log = (message: string) => void console.log(message);
 ```
+
+<!--/tabs-->
 
 ### `allowFunctionsWithoutTypeParameters`
 
@@ -273,6 +285,8 @@ function allowedFunction(x: string) {
 
 const allowedArrow = (x: string) => x;
 ```
+
+<!--/tabs-->
 
 ### `allowedNames`
 
@@ -310,6 +324,8 @@ var bar = (function () {
   return 'bar';
 })();
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

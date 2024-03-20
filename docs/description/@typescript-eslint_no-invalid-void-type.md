@@ -17,7 +17,7 @@ Attempting to use a `void` type outside of a return type or generic type argumen
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 type PossibleValues = string | number | void;
@@ -38,7 +38,7 @@ class MyClass {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 type NoOp = () => void;
@@ -51,6 +51,8 @@ async function promiseMeSomething(): Promise<void> {}
 
 type stillVoid = void | never;
 ```
+
+<!--/tabs-->
 
 ## Options
 

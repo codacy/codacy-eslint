@@ -14,7 +14,7 @@ Useful when migrating from TSLint to ESLint. Once TSLint has been removed, this 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 /* tslint:disable */
@@ -26,13 +26,15 @@ someCode(); // tslint:disable-line
 // tslint:disable-next-line:rule1 rule2 rule3...
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // This is a comment that just happens to mention tslint
 /* This is a multiline comment that just happens to mention tslint */
 someCode(); // This is a comment that just happens to mention tslint
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

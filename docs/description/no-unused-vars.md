@@ -1,8 +1,6 @@
 ---
 title: no-unused-vars
 rule_type: problem
-related_rules:
-- no-useless-assignment
 ---
 
 
@@ -132,12 +130,12 @@ var global_var = 42;
 
 This rule takes one argument which can be a string or an object. The string settings are the same as those of the `vars` property (explained below).
 
-By default this rule is enabled with `all` option for caught errors and variables, and `after-used` for arguments.
+By default this rule is enabled with `all` option for variables and `after-used` for arguments.
 
 ```json
 {
     "rules": {
-        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "caughtErrors": "all", "ignoreRestSiblings": false }]
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
     }
 }
 ```
@@ -146,7 +144,7 @@ By default this rule is enabled with `all` option for caught errors and variable
 
 The `vars` option has two settings:
 
-* `all` checks all variables for usage, including those in the global scope. However, it excludes variables targeted by other options like `args` and `caughtErrors`. This is the default setting.
+* `all` checks all variables for usage, including those in the global scope. This is the default setting.
 * `local` checks only that locally-declared variables are used but will allow global variables to be unused.
 
 #### vars: local
@@ -166,7 +164,7 @@ some_unused_var = 42;
 
 ### varsIgnorePattern
 
-The `varsIgnorePattern` option specifies exceptions not to check for usage: variables whose names match a regexp pattern. For example, variables whose names contain `ignored` or `Ignored`. However, it excludes variables targeted by other options like `argsIgnorePattern` and `caughtErrorsIgnorePattern`.
+The `varsIgnorePattern` option specifies exceptions not to check for usage: variables whose names match a regexp pattern. For example, variables whose names contain `ignored` or `Ignored`.
 
 Examples of **correct** code for the `{ "varsIgnorePattern": "[iI]gnored" }` option:
 
@@ -283,12 +281,30 @@ The `caughtErrors` option is used for `catch` block arguments validation.
 
 It has two settings:
 
-* `all` - all named arguments must be used. This is the default setting.
-* `none` - do not check error objects.
+* `none` - do not check error objects. This is the default setting.
+* `all` - all named arguments must be used.
+
+#### caughtErrors: none
+
+Not specifying this rule is equivalent of assigning it to `none`.
+
+Examples of **correct** code for the `{ "caughtErrors": "none" }` option:
+
+::: correct
+
+```js
+/*eslint no-unused-vars: ["error", { "caughtErrors": "none" }]*/
+
+try {
+    //...
+} catch (err) {
+    console.error("errors");
+}
+```
+
+:::
 
 #### caughtErrors: all
-
-Not specifying this option is equivalent of assigning it to `all`.
 
 Examples of **incorrect** code for the `{ "caughtErrors": "all" }` option:
 
@@ -308,24 +324,6 @@ try {
 
 :::
 
-#### caughtErrors: none
-
-Examples of **correct** code for the `{ "caughtErrors": "none" }` option:
-
-::: correct
-
-```js
-/*eslint no-unused-vars: ["error", { "caughtErrors": "none" }]*/
-
-try {
-    //...
-} catch (err) {
-    console.error("errors");
-}
-```
-
-:::
-
 ### caughtErrorsIgnorePattern
 
 The `caughtErrorsIgnorePattern` option specifies exceptions not to check for usage: catch arguments whose names match a regexp pattern. For example, variables whose names begin with a string 'ignore'.
@@ -335,7 +333,7 @@ Examples of **correct** code for the `{ "caughtErrorsIgnorePattern": "^ignore" }
 ::: correct
 
 ```js
-/*eslint no-unused-vars: ["error", { "caughtErrors": "all", "caughtErrorsIgnorePattern": "^ignore" }]*/
+/*eslint no-unused-vars: ["error", { "caughtErrorsIgnorePattern": "^ignore" }]*/
 
 try {
     //...

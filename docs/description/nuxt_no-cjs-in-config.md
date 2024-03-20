@@ -36,5 +36,5 @@ export default {
 
 ## :mag: Implementation
 
-- [Rule source](../../lib/rules/no-cjs-in-config.js)
-- [Test source](../../lib/rules/__tests__/no-cjs-in-config.test.js)
+- [Rule source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/no-cjs-in-config.js)
+- [Test source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/__tests__/no-cjs-in-config.test.js)

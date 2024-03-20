@@ -1,6 +1,6 @@
 {
   "name": "eslint-8",
-  "version": "8.56.0",
+  "version": "8.57.0",
   "patterns": [
     {
       "patternId": "accessor-pairs",
@@ -1949,6 +1949,13 @@
       "enabled": false
     },
     {
+      "patternId": "@angular-eslint_consistent-component-styles",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@angular-eslint_contextual-decorator",
       "level": "Warning",
       "category": "BestPractice",
@@ -2108,7 +2115,7 @@
       "enabled": false
     },
     {
-      "patternId": "@angular-eslint_prefer-standalone-component",
+      "patternId": "@angular-eslint_prefer-standalone",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -3126,7 +3133,12 @@
       "patternId": "@stylistic_multiline-ternary",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ignoreJSX",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -3846,6 +3858,18 @@
       "category": "BestPractice",
       "parameters": [],
       "enabled": true
+    },
+    {
+      "patternId": "@typescript-eslint_consistent-return",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "treatUndefinedAsUnspecified",
+          "default": false
+        }
+      ],
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_consistent-type-assertions",
@@ -4660,6 +4684,13 @@
     },
     {
       "patternId": "@typescript-eslint_unified-signatures",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@typescript-eslint_use-unknown-in-catch-callback-variable",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -9932,28 +9963,28 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_array-bracket-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_array-element-newline",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_auto",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_comma-dangle",
@@ -9967,7 +9998,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_indent",
@@ -9995,7 +10026,7 @@
           "default": false
         }
       ],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_key-name-casing",
@@ -10023,14 +10054,14 @@
           "default": false
         }
       ],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_key-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_no-bigint-literals",
@@ -10121,7 +10152,7 @@
           "default": false
         }
       ],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_no-multi-str",
@@ -10156,7 +10187,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_no-octal-numeric-literals",
@@ -10233,14 +10264,14 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_object-curly-spacing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_object-property-newline",
@@ -10256,7 +10287,7 @@
           "default": false
         }
       ],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_quote-props",
@@ -10288,14 +10319,14 @@
           }
         }
       ],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_sort-keys",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": null
+      "enabled": false
     },
     {
       "patternId": "jsonc_space-unary-ops",
@@ -11801,7 +11832,7 @@
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "no-unsanitized_method",
@@ -11809,7 +11840,7 @@
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "nuxt_no-env-in-context",
@@ -11933,6 +11964,10 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
+        {
+          "name": "partition-by-comment",
+          "default": false
+        },
         {
           "name": "type",
           "default": "alphabetical"
@@ -12080,6 +12115,10 @@
         {
           "name": "ignore-case",
           "default": false
+        },
+        {
+          "name": "group-kind",
+          "default": "mixed"
         }
       ],
       "enabled": false
@@ -12104,6 +12143,10 @@
         {
           "name": "ignore-alias",
           "default": false
+        },
+        {
+          "name": "group-kind",
+          "default": "mixed"
         }
       ],
       "enabled": false
@@ -12527,6 +12570,13 @@
       "enabled": false
     },
     {
+      "patternId": "playwright_require-to-throw-message",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "playwright_require-top-level-describe",
       "level": "Warning",
       "category": "BestPractice",
@@ -12534,9 +12584,23 @@
       "enabled": false
     },
     {
+      "patternId": "playwright_valid-describe-callback",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "playwright_valid-expect",
       "level": "Error",
       "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "playwright_valid-expect-in-promise",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -12909,6 +12973,13 @@
           "default": true
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "react_checked-requires-onchange-or-readonly",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -13506,7 +13577,12 @@
       "patternId": "react_no-unknown-property",
       "level": "Error",
       "category": "ErrorProne",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "requireDataLowercase",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -15815,6 +15891,13 @@
       "enabled": false
     },
     {
+      "patternId": "tailwindcss_no-unnecessary-arbitrary-value",
+      "level": "Info",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "test-selectors_anchor",
       "level": "Error",
       "category": "ErrorProne",
@@ -17399,7 +17482,12 @@
       "patternId": "vue_multiline-ternary",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ignoreJSX",
+          "default": false
+        }
+      ],
       "enabled": false
     },
     {
@@ -19065,7 +19153,7 @@
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "xss_no-mixed-html",
@@ -19073,7 +19161,7 @@
       "category": "Security",
       "subcategory": "XSS",
       "parameters": [],
-      "enabled": false
+      "enabled": true
     },
     {
       "patternId": "yml_block-mapping-colon-indicator-newline",

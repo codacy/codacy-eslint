@@ -18,7 +18,7 @@ This rule reports any usage of `@ts-ignore`, including a fixer to replace with `
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // @ts-ignore
@@ -39,7 +39,7 @@ const isOptionEnabled = (key: string): boolean => {
 };
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // @ts-expect-error
@@ -59,6 +59,8 @@ const isOptionEnabled = (key: string): boolean => {
   return !!globalOptions[key];
 };
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

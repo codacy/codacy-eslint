@@ -1,11 +1,11 @@
-import {Codacyrc, Engine, ToolResult} from "codacy-seed"
-import {ESLint} from "eslint"
+import { Codacyrc, Engine, ToolResult } from "codacy-seed"
+import { ESLint } from "eslint"
 import fs from "fs"
 
-import {createEslintConfig} from "./configCreator"
-import {convertResults} from "./convertResults"
-import {DEBUG, debug} from "./logging"
-import {toolName} from "./toolMetadata"
+import { createEslintConfig } from "./configCreator"
+import { convertResults } from "./convertResults"
+import { DEBUG, debug } from "./logging"
+import { toolName } from "./toolMetadata"
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc

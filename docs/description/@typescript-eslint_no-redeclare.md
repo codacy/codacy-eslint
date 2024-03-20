@@ -6,8 +6,6 @@ description: 'Disallow variable redeclaration.'
 >
 > See **https://typescript-eslint.io/rules/no-redeclare** for documentation.
 
-import TypeScriptOverlap from "@site/src/components/TypeScriptOverlap";
-
 <TypeScriptOverlap />
 
 This rule extends the base [`eslint/no-redeclare`](https://eslint.org/docs/rules/no-redeclare) rule.
