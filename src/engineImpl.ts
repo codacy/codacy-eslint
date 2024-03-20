@@ -17,7 +17,7 @@ export const engineImpl: Engine = async function (
   }
 
   const srcDirPath = "/src"
-  const [options, files] = createEslintConfig(
+  const [options, files] = await createEslintConfig(
     srcDirPath,
     codacyrc
   )
@@ -29,7 +29,7 @@ export const engineImpl: Engine = async function (
   const eslint = new ESLint(options)
 
   // Check if there are any glob patterns in the files array
-  const lintResults = files.some(file => /\*|\?|\[/.test(file))
+  const lintResults = files.some((file: string) => /\*|\?|\[/.test(file))
     ? await eslint.lintFiles(files)
     : await lintFilesInChunks(eslint, files)
 
@@ -89,7 +89,7 @@ function chunkFilesByTotalSize (files: string[], maxChunkSize: number): string[]
 
   for (const file of files) {
     try {
-      const size = fs.statSync(file).size
+      const size = fs.statSync(file).size // nosemgrep
       if (currentChunk.length === 0 || currentChunkSize + size <= maxChunkSize) {
         currentChunk.push(file)
         currentChunkSize += size

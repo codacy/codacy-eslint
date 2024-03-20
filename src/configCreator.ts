@@ -7,17 +7,17 @@ import path from "path"
 import { isBlacklisted } from "./blacklist"
 import { DocGenerator } from "./docGenerator"
 import { defaultOptions } from "./eslintDefaultOptions"
-import { allRules, pluginsNames } from "./eslintPlugins"
+import { getAllRules, getPluginsName } from "./eslintPlugins"
 import { DEBUG, debug } from "./logging"
 import { patternIdToEslint } from "./model/patterns"
 
-export function createEslintConfig (
+export async function createEslintConfig (
   srcDirPath: string,
   codacyrc: Codacyrc
-): [ESLint.Options, string[]] {
+): Promise<[ESLint.Options, string[]]> {
   debug("config: creating")
 
-  const options = generateEslintOptions(srcDirPath, codacyrc)
+  const options = await generateEslintOptions(srcDirPath, codacyrc)
   const files = generateFilesToAnalyze(codacyrc)
 
   debug("config: finished")
@@ -44,13 +44,13 @@ function generateFilesToAnalyze (
   return files
 }
 
-function generateEslintOptions (
+async function generateEslintOptions (
   srcDirPath: string,
   codacyrc: Codacyrc
-): ESLint.Options {
+): Promise<ESLint.Options> {
   debug("options: creating")
 
-  const patterns = codacyrc.tools[0].patterns || DEBUG && retrieveCodacyPatterns() || []
+  const patterns = codacyrc.tools[0].patterns || DEBUG && await retrieveCodacyPatterns() || []
   const existsEslintConfig = existsEslintConfigInRepoRoot(srcDirPath)
   const useCodacyPatterns = patterns.length || !existsEslintConfig
   const useDefaultPatterns = !patterns.length && !existsEslintConfig
@@ -114,8 +114,8 @@ function generateEslintOptions (
   const prefixes = getPatternsUniquePrefixes(patterns)
   prefixes
     .filter((prefix) => prefix !== "")
-    .forEach((prefix) => {
-      pluginsNames.includes(prefix)
+    .forEach(async (prefix) => {
+      (await getPluginsName()).includes(prefix)
         ? options.baseConfig.plugins.push(prefix)
         : debug(`options: plugin ${prefix} not found`)
     })
@@ -175,15 +175,15 @@ function existsEslintConfigInRepoRoot (srcDirPath: string): boolean {
   return found
 }
 
-function retrieveCodacyPatterns (set: "recommended" | "all" = "recommended"): Pattern[] {
-  const patterns = []
-  allRules
+async function retrieveCodacyPatterns (set: "recommended" | "all" = "recommended"): Promise<Pattern[]> {
+  const patterns: Pattern[] = [];
+  (await getAllRules())
     .filter(([patternId, rule]) =>
       !isBlacklisted(patternId)
       && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       // problems with the path generated (win vs nix) for this specific pattern
       && (!DEBUG || patternId != "spellcheck_spell-checker")
-      && (set === "recommended" && DocGenerator.isDefaultPattern(patternIdToEslint(patternId), rule.meta))
+      && (set !== "recommended" || DocGenerator.isDefaultPattern(patternIdToEslint(patternId), rule.meta))
     )
     .forEach(([patternId, rule]) => {
       const pattern = new Pattern(

@@ -10,6 +10,13 @@ export interface Plugin {
   "versionPrefix"?: string | boolean;
 }
 
+// plugins that break the tool:
+//   "eslint-plugin-canonical"
+// plugins without rules (no point including them):
+//   "eslint-plugin-header"
+//   "eslint-plugin-html"
+//   "eslint-plugin-markdown"
+
 const packageNames: string[] = [
   "@angular-eslint/eslint-plugin",
   "@babel/eslint-plugin",
@@ -22,7 +29,6 @@ const packageNames: string[] = [
   "@typescript-eslint/eslint-plugin",
   "eslint-plugin-awscdk",
   "eslint-plugin-backbone",
-  //"eslint-plugin-canonical",
   "eslint-plugin-cdk",
   "eslint-plugin-chai-expect",
   "eslint-plugin-chai-friendly",
@@ -39,10 +45,6 @@ const packageNames: string[] = [
   "eslint-plugin-flowtype",
   "eslint-plugin-fp",
   "eslint-plugin-functional",
-  // do not add: no supported rules
-  //"eslint-plugin-header",
-  // do not add: no rules
-  //"eslint-plugin-html", 
   "eslint-plugin-i18n-json",
   "eslint-plugin-i18next",
   "eslint-plugin-import",
@@ -63,8 +65,6 @@ const packageNames: string[] = [
   "eslint-plugin-lodash",
   "eslint-plugin-lodash-fp",
   "eslint-plugin-meteor",
-  // do not add: no rules
-  //"eslint-plugin-markdown",
   "eslint-plugin-mocha",
   "eslint-plugin-monorepo",
   "eslint-plugin-n",
@@ -119,34 +119,51 @@ const packageNames: string[] = [
   "eslint-plugin-you-dont-need-lodash-underscore"
 ]
 
-export const plugins = packageNames.map((packageName) => {
-  const rules: Rule.RuleModule[] = require(packageName).rules
+async function getModuleRules (packageName: string) {
+  const module = await import(packageName)
+  return module.rules || []
+}
+
+const plugins = Promise.all(packageNames.map(async (packageName) => {
+  const rules = packageNames.includes(packageName) 
+    ? await getModuleRules(packageName) 
+    : []
   const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, "")
 
   return { packageName, name, rules }
-}) as Plugin[]
+})) as Promise<Plugin[]>
 
-export function pluginByPackageName (packageName: string): Plugin {
-  const plugin = plugins.find(plugin => plugin.packageName === packageName)
-  return plugin ?? { "packageName": "eslint", "name": "eslint", "rules": baseRules.map(([, rule]) => rule) as Rule.RuleModule[] }
-  
+export async function pluginByPackageName (packageName: string): Promise<Plugin> {
+  const defaultPlugin = { 
+    "packageName": "eslint",
+    "name": "eslint",
+    "rules": baseRules.map(([, rule]) => rule) as Rule.RuleModule[]
+  }
+
+  return (await plugins).find(plugin => plugin.packageName === packageName) ?? defaultPlugin
 }
 
-export const pluginsNames = plugins.map(plugin => plugin.name)
+export async function getPluginsName (): Promise<string[]> {
+  return (await plugins).map(plugin => plugin.name)
+}
 
 const baseRules = Array.from(new Linter().getRules().entries())
-const pluginsRules = plugins
-  .filter((plugin) => plugin.rules)
-  .flatMap((plugin) => Object.entries(plugin.rules)
-    .map(([patternId, rule]) => [
-      `${plugin.name}/${patternId}`,
-      rule
-    ])
-  ) as [string, Rule.RuleModule][]
+async function getPluginsRules (): Promise<[string, Rule.RuleModule][]> {
+  return (await plugins)
+    .filter((plugin) => plugin.rules)
+    .flatMap((plugin) => Object.entries(plugin.rules)
+      .map(([patternId, rule]) => [
+        `${plugin.name}/${patternId}`,
+        rule
+      ]) as [string, Rule.RuleModule][]
+    )
+}
 
-export const allRules = baseRules
-  .concat(pluginsRules)
-  .filter(([patternId ]) =>
-    patternId
-    && !isBlacklisted(patternId)
-  )
+export async function getAllRules (): Promise<[string, Rule.RuleModule][]> {
+  return baseRules
+    .concat(await getPluginsRules())
+    .filter(([patternId ]) =>
+      patternId
+      && !isBlacklisted(patternId)
+    )
+}

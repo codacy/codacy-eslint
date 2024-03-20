@@ -19,14 +19,14 @@ import path from "path"
 import { dependencies } from "../package.json"
 import { isBlacklistedOnlyFromDocumentation } from "./blacklist"
 import { capitalize, patternTitle } from "./docGeneratorStringUtils"
-import { allRules, Plugin, pluginByPackageName } from "./eslintPlugins"
+import { getAllRules, Plugin, pluginByPackageName } from "./eslintPlugins"
 import { patternIdToCodacy, translateLevelAndCategory } from "./model/patterns"
 import { fromSchemaArray } from "./namedParameters"
 import { rulesToUnnamedParametersDefaults } from "./rulesToUnnamedParametersDefaults"
 import { toolName, toolVersion } from "./toolMetadata"
 
 export class DocGenerator {
-  private rules: [string, Rule.RuleModule][]
+  private rules: Promise<[string, Rule.RuleModule][]>
 
   private githubBaseUrl = "https://raw.githubusercontent.com"
 
@@ -35,21 +35,22 @@ export class DocGenerator {
   private docsDescriptionDirectory = path.join(this.docsDirectory, "description")
 
   constructor () {
-    this.initializeRules()
+    this.rules = this.initializeRules()
   }
  
-  private initializeRules (): void {
-    // initialize rules without blacklisted and deprecated
-    this.rules = allRules
+  private async initializeRules (): Promise<[string, Rule.RuleModule][]> {
+    const rules = (await getAllRules())
       .filter(([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
         && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       )
-    console.log("Number of rules: ", this.rules.length)
+    console.log("Number of rules: ", rules.length)
+    return rules
   }
 
-  private getPatternIds (): string[] {
-    return this.rules.map(([patternId ]) => patternId)
+  private async getPatternIds (): Promise<string[]> {
+    const rules = await this.rules
+    return rules.map(([patternId ]) => patternId)
   }
 
   static generateParameters (
@@ -75,15 +76,16 @@ export class DocGenerator {
     return []
   }
 
-  private generatePatterns (): Specification {
-    const patterns = this.rules.flatMap(([patternId, ruleModule]) => {
+  private async generatePatterns (): Promise<Specification> {
+    const rules = await this.rules
+    const patterns = rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule.meta
       const type = meta?.type ?? meta?.docs?.category
       const [level, category, subcategory] = translateLevelAndCategory(
         patternId,
         type
       )
-
+  
       return new PatternSpec(
         patternIdToCodacy(patternId),
         level,
@@ -93,7 +95,7 @@ export class DocGenerator {
         DocGenerator.isDefaultPattern(patternId, meta)
       )
     })
-
+  
     return new Specification(toolName, toolVersion, patterns)
   }
 
@@ -103,11 +105,13 @@ export class DocGenerator {
       return p !== patternId ? p : ""
     }
 
-    // Structure of prefixes:
-    // {"prefix": "recommended"} all recommended rules are included
-    // {"prefix": "all"} all rules are included
+    // The following arrays represents groups of default rules.
+    // Each entry is an object where:
+    //   - The key is the prefix identifying the plugin name (e.g. '@stylistic', '@typescript-eslint', 'security')
+    //     ESLint core rules are represented by an empty prefix ("");
+    //   - The value is either 'recommended' or 'all', which determines whether all rules or only the recommended rules in the group are included.
     const defaultPrefixes = [
-      { "": "recommended" }, // ESLint core rules don't have a prefix
+      { "": "recommended" },
       { "@stylistic": "recommended" },
       { "@typescript-eslint": "recommended" },
       { "eslint-plugin": "recommended" }
@@ -118,6 +122,7 @@ export class DocGenerator {
       { "security-node": "recommended" },
       { "xss": "all" }
     ]
+
     const prefixes = [...defaultPrefixes, ...securityPrefixes]
     const prefix = prefixSplit(patternId)
 
@@ -127,9 +132,10 @@ export class DocGenerator {
     )
   }
 
-  private generateDescriptionEntries (): DescriptionEntry[] {
+  private async generateDescriptionEntries (): Promise<DescriptionEntry[]> {
     const descriptions: DescriptionEntry[] = []
-    this.rules.forEach(([patternId, ruleModule]) => {
+    const rules = await this.rules
+    rules.forEach(([patternId, ruleModule]) => {
       const meta = ruleModule?.meta
       const description = meta?.docs?.description
         ? capitalize(meta.docs.description)
@@ -141,7 +147,7 @@ export class DocGenerator {
           meta?.schema
         )
         .map((p) => new DescriptionParameter(p.name, p.name))
-
+  
       descriptions.push(new DescriptionEntry(
         patternIdToCodacy(patternId),
         patternTitle(patternId),
@@ -150,7 +156,7 @@ export class DocGenerator {
         descriptionParameters
       ))
     })
-
+  
     console.log("Number of descriptions: ", descriptions.length)
     return descriptions
   }
@@ -207,7 +213,7 @@ export class DocGenerator {
     versionPrefix: string | boolean = "v",
     rejectOnError: boolean = false
   ): Promise<void> {
-    const plugin: Plugin = pluginByPackageName(packageName)
+    const plugin: Plugin = await pluginByPackageName(packageName)
 
     console.log(`Generate ${plugin.name} description files`)
 
@@ -215,7 +221,7 @@ export class DocGenerator {
     plugin.versionPrefix = versionPrefix
 
     const patterns = plugin.name !== "eslint"
-      ? this.patternIdsWithoutPrefix(plugin.name)
+      ? await this.patternIdsWithoutPrefix(plugin.name)
       : this.eslintPatternIds()
 
     const promises = plugin.name === "@stylistic"
@@ -224,7 +230,7 @@ export class DocGenerator {
         .map((rule: RuleInfo) => {
           return this.createPatternDescriptionFile(plugin, rule.name, rule.docsEntry, rejectOnError)
         })
-      : patterns.map((pattern: string) => {
+      : (await patterns).map((pattern: string) => {
         const patternDocFilename = plugin.name === "@typescript-eslint"
           ? `${pattern}.mdx`
           : `${pattern}.md`
@@ -235,7 +241,7 @@ export class DocGenerator {
 
   async createDescriptionFile (): Promise<void> {
     console.log("Generate description.json")
-    const descriptions = this.generateDescriptionEntries()
+    const descriptions = await this.generateDescriptionEntries()
 
     if (!descriptions.length) return
     
@@ -248,7 +254,7 @@ export class DocGenerator {
 
   async createPatternsFile (): Promise<void> {
     console.log("Generate patterns.json")
-    const patterns = this.generatePatterns()
+    const patterns = await this.generatePatterns()
 
     if (!patterns.patterns.length) return
 
@@ -261,7 +267,9 @@ export class DocGenerator {
   async createAllPatternsMultipleTestFiles (): Promise<void> {
     console.log("Generate patterns.xml")
 
-    const modules = this.getPatternIds()
+    const patternIds = await this.getPatternIds()
+    
+    const modules = patternIds
       .map(patternId => `  <module name="${patternIdToCodacy(patternId)}" />`)
       .join("\n")
 
@@ -281,19 +289,21 @@ ${modules}
     ])
   }
 
-  private patternIdsWithoutPrefix (prefix: string): string[] {
+  private async patternIdsWithoutPrefix (prefix: string): Promise<string[]> {
     const longPrefix = prefix + "/"
 
-    return this
-      .getPatternIds()
+    const patternIds = await this.getPatternIds()
+    return patternIds
       .filter((patternId) => patternId.startsWith(longPrefix))
       .map((patternId) => patternId.substring(longPrefix.length))
   }
 
-  private eslintPatternIds (): string[] {
+  private async eslintPatternIds (): Promise<string[]> {
     // We take all the patterns except those that have slashes because
     // they come from third party plugins
-    return this.getPatternIds().filter((e) => !e.includes("/"))
+    const patternIds = await this.getPatternIds()
+    
+    return patternIds.filter((e) => !e.includes("/"))
   }
 
   private convertFromGithubRawLink (url: string): string {
