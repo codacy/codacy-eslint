@@ -17,7 +17,7 @@ This rule reports when a `String#match` call can be replaced with an equivalent 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 'something'.match(/thing/);
@@ -29,7 +29,7 @@ const search = /thing/;
 text.match(search);
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 /thing/.exec('something');
@@ -40,6 +40,8 @@ const text = 'something';
 const search = /thing/;
 search.exec(text);
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

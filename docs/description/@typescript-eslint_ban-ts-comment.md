@@ -55,6 +55,8 @@ if (false) {
 }
 ```
 
+<!--/tabs-->
+
 ### `allow-with-description`
 
 A value of `'allow-with-description'` for a particular directive means that this rule will report if it finds a directive that does not have a description following the directive (on the same line).
@@ -91,6 +93,8 @@ if (false) {
 }
 ```
 
+<!--/tabs-->
+
 ### `descriptionFormat`
 
 For each directive type, you can specify a custom format in the form of a regular expression. Only description that matches the pattern will be allowed.
@@ -114,6 +118,8 @@ const a = doSomething('hello');
 // @ts-expect-error: TS1234 because the library definition is wrong
 const a = doSomething('hello');
 ```
+
+<!--/tabs-->
 
 ### `minimumDescriptionLength`
 
@@ -140,6 +146,8 @@ if (false) {
   console.log('hello');
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

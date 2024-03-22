@@ -1,4 +1,4 @@
-import {Category, Level, SecuritySubcategory} from "codacy-seed"
+import { Category, Level, SecuritySubcategory } from "codacy-seed"
 
 const securityPlugins = [
   "scanjs-rules",

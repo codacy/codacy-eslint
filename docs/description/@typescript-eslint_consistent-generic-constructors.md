@@ -48,6 +48,8 @@ const set = new Set();
 const set: Set<string> = new Set<string>();
 ```
 
+<!--/tabs-->
+
 ### `type-annotation`
 
 <!--tabs-->
@@ -67,6 +69,8 @@ const set: Set<string> = new Set();
 const set = new Set();
 const set: Set<string> = new Set<string>();
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

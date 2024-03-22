@@ -67,5 +67,5 @@ console.log("hello")
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/console.js)
-- [Test source](../../../tests/lib/rules/prefer-global/console.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/console.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/console.js)

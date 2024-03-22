@@ -1,30 +1,30 @@
-import {deepEqual} from "assert"
-import {ParameterSpec} from "codacy-seed"
-import {JSONSchema4} from "json-schema"
+import { deepEqual } from "assert"
+import { ParameterSpec } from "codacy-seed"
+import { JSONSchema4 } from "json-schema"
 
-import {fromSchemaArray} from "../namedParameters"
+import { fromSchemaArray } from "../namedParameters"
 
 describe("namedParameters", () => {
   describe("fromSchemaArray", () => {
     it("should generate PatternParameters[]", () => {
       const schemaArray: JSONSchema4[] = [
         {
-          type: "object",
-          properties: {
-            getWithoutSet: {
-              type: "boolean",
-              default: false
+          "type": "object",
+          "properties": {
+            "getWithoutSet": {
+              "type": "boolean",
+              "default": false
             },
-            setWithoutGet: {
-              type: "boolean",
-              default: true
+            "setWithoutGet": {
+              "type": "boolean",
+              "default": true
             },
-            enforceForClassMembers: {
-              type: "boolean",
-              default: false
+            "enforceForClassMembers": {
+              "type": "boolean",
+              "default": false
             }
           },
-          additionalProperties: false
+          "additionalProperties": false
         }
       ]
       const expectedResult = [

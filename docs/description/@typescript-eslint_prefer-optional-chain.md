@@ -16,7 +16,7 @@ This rule reports on code where an `&&` operator can be safely replaced with `?.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 foo && foo.a && foo.a.b && foo.a.b.c;
@@ -41,7 +41,7 @@ foo &&
   foo.a.b.c.d.e;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 foo?.a?.b?.c;
@@ -64,7 +64,7 @@ Specifically the argument of the not operator (`!loose`) or a bare value in a lo
 
 ### `allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing`
 
-When this option is `true`, the rule will not provide an auto-fixer for cases where the return type of the expression would change. For example for the expression `!foo || foo.bar` the return type of the expression is `true | T`, however for the equivalent optional chain `foo?.bar` the return type of the expression is `undefined | T`. Thus changing the code from a logical expression to an optional chain expression has altered the type of the expression.
+When this option is `true`, the rule will provide an auto-fixer for cases where the return type of the expression would change. For example for the expression `!foo || foo.bar` the return type of the expression is `true | T`, however for the equivalent optional chain `foo?.bar` the return type of the expression is `undefined | T`. Thus changing the code from a logical expression to an optional chain expression has altered the type of the expression.
 
 In some cases this distinction _may_ matter - which is why these fixers are considered unsafe - they may break the build! For example in the following code:
 
@@ -97,7 +97,8 @@ declare const thing: any;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkAny: false`
+#### ✅ Correct
+ for `checkAny: false`
 
 ```ts option='{ "checkAny": false }'
 declare const thing: any;
@@ -121,7 +122,8 @@ declare const thing: unknown;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkUnknown: false`
+#### ✅ Correct
+ for `checkUnknown: false`
 
 ```ts option='{ "checkUnknown": false }'
 declare const thing: unknown;
@@ -145,7 +147,8 @@ declare const thing: string;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkString: false`
+#### ✅ Correct
+ for `checkString: false`
 
 ```ts option='{ "checkString": false }'
 declare const thing: string;
@@ -169,7 +172,8 @@ declare const thing: number;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkNumber: false`
+#### ✅ Correct
+ for `checkNumber: false`
 
 ```ts option='{ "checkNumber": false }'
 declare const thing: number;
@@ -193,7 +197,8 @@ declare const thing: boolean;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkBoolean: false`
+#### ✅ Correct
+ for `checkBoolean: false`
 
 ```ts option='{ "checkBoolean": false }'
 declare const thing: boolean;
@@ -217,7 +222,8 @@ declare const thing: bigint;
 thing && thing.toString();
 ```
 
-#### ✅ Correct for `checkBigInt: false`
+#### ✅ Correct
+ for `checkBigInt: false`
 
 ```ts option='{ "checkBigInt": false }'
 declare const thing: bigint;
@@ -240,7 +246,8 @@ declare const thing1: string | null;
 thing1 && thing1.toString();
 ```
 
-#### ✅ Correct for `requireNullish: true`
+#### ✅ Correct
+ for `requireNullish: true`
 
 ```ts option='{ "requireNullish": true }'
 declare const thing1: string | null;

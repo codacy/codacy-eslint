@@ -13,7 +13,7 @@ Using a `!` non-null assertion type operator in the left operand of a nullish co
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 foo! ?? bar;
@@ -29,7 +29,7 @@ x = foo();
 x! ?? '';
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 foo ?? bar;
@@ -42,6 +42,8 @@ foo() ?? bar;
 let x: string;
 x! ?? '';
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

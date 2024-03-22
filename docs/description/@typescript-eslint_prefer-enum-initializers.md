@@ -17,7 +17,7 @@ This rule recommends having each `enum` member value explicitly initialized.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum Status {
@@ -37,7 +37,7 @@ enum Color {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 enum Status {
@@ -56,6 +56,8 @@ enum Color {
   Blue = 'Blue',
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

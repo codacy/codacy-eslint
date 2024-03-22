@@ -77,6 +77,8 @@ interface T3 {
 }
 ```
 
+<!--/tabs-->
+
 ### `method`
 
 Examples of code with `method` option.
@@ -104,6 +106,8 @@ type T2 = {
   func(arg: boolean): void;
 };
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

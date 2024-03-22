@@ -1,8 +1,4 @@
-# Disallow wrapping values in `Promise.resolve` or `Promise.reject` when not needed (`promise/no-return-wrap`)
-
-💼 This rule is enabled in the ✅ `recommended` config.
-
-<!-- end auto-generated rule header -->
+# Avoid wrapping values in `Promise.resolve` or `Promise.reject` when not needed (no-return-wrap)
 
 Ensure that inside a `then()` or a `catch()` we always `return` or `throw` a raw
 value instead of wrapping in `Promise.resolve` or `Promise.reject`

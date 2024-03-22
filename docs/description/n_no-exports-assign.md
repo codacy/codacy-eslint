@@ -43,5 +43,5 @@ exports = {}
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-exports-assign.js)
-- [Test source](../../tests/lib/rules/no-exports-assign.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-exports-assign.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-exports-assign.js)

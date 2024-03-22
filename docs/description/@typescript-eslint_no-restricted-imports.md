@@ -6,7 +6,7 @@ description: 'Disallow specified modules when loaded by `import`.'
 >
 > See **https://typescript-eslint.io/rules/no-restricted-imports** for documentation.
 
-This rule extends the base [`eslint/no-restricted-imports`](https://eslint.org/docs/rules/no-restricted-imports) rule. It adds support for the type import (`import type X from "..."`, `import { type X } from "..."`) and `import x = require("...")` syntaxes.
+This rule extends the base [`eslint/no-restricted-imports`](https://eslint.org/docs/rules/no-restricted-imports) rule. It adds support for the type )` syntaxes.
 
 ## Options
 
@@ -51,21 +51,20 @@ Examples of code with the above config:
 #### ❌ Incorrect
 
 ```ts option='{"paths":[{"name":"import-foo","message":"Please use import-bar instead.","allowTypeImports":true},{"name":"import-baz","message":"Please use import-quux instead.","allowTypeImports":true}]}'
-import foo from 'import-foo';
+
 export { Foo } from 'import-foo';
 
-import baz from 'import-baz';
 export { Baz } from 'import-baz';
 ```
 
 #### ✅ Correct
 
 ```ts option='{"paths":[{"name":"import-foo","message":"Please use import-bar instead.","allowTypeImports":true},{"name":"import-baz","message":"Please use import-quux instead.","allowTypeImports":true}]}'
-import { foo } from 'other-module';
 
-import type foo from 'import-foo';
 export type { Foo } from 'import-foo';
 
-import type baz from 'import-baz';
 export type { Baz } from 'import-baz';
 ```
+
+<!--/tabs-->
+

@@ -53,5 +53,5 @@ export default {
 
 ## :mag: Implementation
 
-- [Rule source](../../lib/rules/no-env-in-hooks.js)
-- [Test source](../../lib/rules/__tests__/no-env-in-hooks.test.js)
+- [Rule source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/no-env-in-hooks.js)
+- [Test source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/__tests__/no-env-in-hooks.test.js)

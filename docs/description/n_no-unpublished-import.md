@@ -35,17 +35,17 @@ Then this rule warns `import` declarations in \*published\* files if the `import
 
 #### allowModules
 
-This can be configured in the rule options or as a shared setting [`settings.allowModules`](../shared-settings.md#allowmodules).
+This can be configured in the rule options or as a shared setting [`settings.allowModules`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#allowmodules).
 Please see the shared settings documentation for more information.
 
 #### resolvePaths
 
-This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](../shared-settings.md#resolvepaths).
+This can be configured in the rule options or as a shared setting [`settings.resolvePaths`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#resolvepaths).
 Please see the shared settings documentation for more information.
 
 #### convertPath
 
-This can be configured in the rule options or as a shared setting [`settings.convertPath`](../shared-settings.md#convertpath).
+This can be configured in the rule options or as a shared setting [`settings.convertPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#convertpath).
 Please see the shared settings documentation for more information.
 
 ### ignoreTypeImport
@@ -70,5 +70,5 @@ import type foo from "foo";
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-unpublished-import.js)
-- [Test source](../../tests/lib/rules/no-unpublished-import.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-unpublished-import.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-unpublished-import.js)

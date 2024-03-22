@@ -57,5 +57,5 @@ async function readData(filePath) {
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-promises/fs.js)
-- [Test source](../../../tests/lib/rules/prefer-promises/fs.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-promises/fs.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-promises/fs.js)

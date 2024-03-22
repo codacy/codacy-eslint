@@ -18,7 +18,7 @@ Examples of code with the default options:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 module foo {}
@@ -28,7 +28,7 @@ declare module foo {}
 declare namespace foo {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare module 'foo' {}
@@ -90,6 +90,8 @@ declare namespace foo {}
 declare module 'foo' {}
 ```
 
+<!--/tabs-->
+
 ### `allowDefinitionFiles`
 
 Examples of code for the `{ "allowDefinitionFiles": true }` option:
@@ -117,6 +119,8 @@ declare module 'foo' {}
 
 // anything inside a d.ts file
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

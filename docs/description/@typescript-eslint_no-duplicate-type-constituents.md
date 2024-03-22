@@ -16,7 +16,7 @@ For example, given `type A = string` and `type T = string | A`, this rule would 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 type T1 = 'A' | 'A';
@@ -32,7 +32,7 @@ type StringB = string;
 type T5 = StringA | StringB;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 type T1 = 'A' | 'B';
@@ -47,6 +47,8 @@ type StringA = string;
 type NumberB = number;
 type T5 = StringA | NumberB;
 ```
+
+<!--/tabs-->
 
 ## Options
 

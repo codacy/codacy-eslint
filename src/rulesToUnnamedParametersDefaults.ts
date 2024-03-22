@@ -1,4 +1,4 @@
-import {JSONSchema4Type} from "json-schema"
+import { JSONSchema4Type } from "json-schema"
 
 export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>([
   ["@stylistic/array-bracket-spacing", "never"],
@@ -27,6 +27,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>
   ["@stylistic/jsx-quotes", "prefer-double"],
   ["@stylistic/lines-between-class-members", "always"],
   ["max-nested-callbacks", 5],
+  ["@stylistic/multiline-ternary", "always"],
   ["newline-after-var", "always"],
   ["no-cond-assign", "except-parens"],
   ["no-inner-declarations", "functions"],
@@ -46,6 +47,7 @@ export const rulesToUnnamedParametersDefaults = new Map<string, JSONSchema4Type>
   ["@stylistic/spaced-comment", "always"],
   ["strict", "function"],
   ["@stylistic/wrap-iife", "outside"],
+  ["vue/multiline-ternary", "always"],
   ["yoda", "never"]
 ])
 
@@ -59,9 +61,9 @@ export class rulesNamedParametersAndDefaults {
       "Injecting this service is not allowed from this file."
     ],
     ["@stylistic/indent", "ArrayExpression", 1],
-    ["@stylistic/indent", "CallExpression", {arguments: 1}],
-    ["@stylistic/indent", "FunctionDeclaration", {parameters: 1, body: 1}],
-    ["@stylistic/indent", "FunctionExpression", {parameters: 1, body: 1}],
+    ["@stylistic/indent", "CallExpression", { "arguments": 1 }],
+    ["@stylistic/indent", "FunctionDeclaration", { "parameters": 1, "body": 1 }],
+    ["@stylistic/indent", "FunctionExpression", { "parameters": 1, "body": 1 }],
     ["@stylistic/indent", "ignoredNodes", []],
     ["@stylistic/indent", "ImportDeclaration", 1],
     ["@stylistic/indent", "MemberExpression", 1],
@@ -71,7 +73,7 @@ export class rulesNamedParametersAndDefaults {
     ["@stylistic/indent", "VariableDeclarator", 1],
     ["jsdoc/check-examples", "checkEslintrc", false],
     ["jsonc/sort-array-values", "pathPattern", "^$"],
-    ["jsonc/sort-array-values", "order", {type: "asc"}],
+    ["jsonc/sort-array-values", "order", { "type": "asc" }],
     ["jsdoc/no-missing-syntax", "contexts", []],
     ["@stylistic/padded-blocks", "allowSingleLineBlocks", true],
     ["@stylistic/quotes", "avoidEscape", false],

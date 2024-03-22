@@ -25,7 +25,7 @@ It will suggest instead pass the asserted type to `Array#reduce` as a generic ty
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 [1, 2, 3].reduce((arr, num) => arr.concat(num * 2), [] as number[]);
@@ -39,7 +39,7 @@ It will suggest instead pass the asserted type to `Array#reduce` as a generic ty
 );
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 [1, 2, 3].reduce<number[]>((arr, num) => arr.concat(num * 2), []);
@@ -52,6 +52,8 @@ It will suggest instead pass the asserted type to `Array#reduce` as a generic ty
   {},
 );
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

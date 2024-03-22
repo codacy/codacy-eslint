@@ -13,14 +13,14 @@ Otherwise, passing class methods around as values can remove type safety by fail
 This rule reports when a class method is referenced in an unbound manner.
 
 :::note Tip
-If you're working with `jest`, you can use [`eslint-plugin-jest`'s version of this rule](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md) to lint your test files, which knows when it's ok to pass an unbound method to `expect` calls.
+If you're working with `jest`, you can use [`eslint-plugin-jest`'s version of this rule](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.mdx) to lint your test files, which knows when it's ok to pass an unbound method to `expect` calls.
 :::
 
 ## Examples
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 class MyClass {
@@ -47,7 +47,7 @@ const arith = {
 const { double } = arith;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 class MyClass {
@@ -77,6 +77,8 @@ const arith = {
 const { double } = arith;
 ```
 
+<!--/tabs-->
+
 ## Options
 
 ### `ignoreStatic`
@@ -102,4 +104,4 @@ If your project dynamically changes `this` scopes around in a way TypeScript has
 One likely difficult pattern is if your code intentionally waits to bind methods after use, such as by passing a `scope: this` along with the method.
 You might consider using [ESLint disable comments](https://eslint.org/docs/latest/use/configure/rules#using-configuration-comments-1) for those specific situations instead of completely disabling this rule.
 
-If you're wanting to use `toBeCalled` and similar matches in `jest` tests, you can disable this rule for your test files in favor of [`eslint-plugin-jest`'s version of this rule](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md).
+If you're wanting to use `toBeCalled` and similar matches in `jest` tests, you can disable this rule for your test files in favor of [`eslint-plugin-jest`'s version of this rule](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.mdx).

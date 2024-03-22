@@ -14,7 +14,7 @@ It can also improve TypeScript type checking performance on larger codebases.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // Should indicate that no value is returned (void)
@@ -37,7 +37,7 @@ export class Test {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // A function with no return value (void)
@@ -64,6 +64,8 @@ function test() {
   return;
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -107,6 +109,8 @@ export const func = (value: any): number => value + 1;
 export const func = (value: number): number => value + 1;
 ```
 
+<!--/tabs-->
+
 ### `allowDirectConstAssertionInArrowFunctions`
 
 Examples of code for this rule with `{ allowDirectConstAssertionInArrowFunctions: false }`:
@@ -133,6 +137,8 @@ export const foo = () =>
   }) as const;
 export const bar = () => 1 as const;
 ```
+
+<!--/tabs-->
 
 ### `allowedNames`
 
@@ -182,6 +188,8 @@ export function foo(outer: string) {
   return function (inner: string): void {};
 }
 ```
+
+<!--/tabs-->
 
 ### `allowTypedFunctionExpressions`
 
@@ -236,6 +244,8 @@ type FooType = (bar: string) => void;
 export const foo: FooType = bar => {};
 ```
 
+<!--/tabs-->
+
 ## When Not To Use It
 
 If your project is not used by downstream consumers that are sensitive to API types, you can disable this rule.
@@ -246,4 +256,4 @@ If your project is not used by downstream consumers that are sensitive to API ty
 
 ## Related To
 
-- [explicit-function-return-type](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
+- [explicit-function-return-type](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.mdx)

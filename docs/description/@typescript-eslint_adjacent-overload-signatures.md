@@ -14,7 +14,7 @@ If Signatures placed elsewhere in the type are easier to be missed by future dev
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare namespace Foo {
@@ -51,7 +51,7 @@ export function bar(): void;
 export function foo(sn: string | number): void;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare namespace Foo {
@@ -87,6 +87,8 @@ export function foo(s: string): void;
 export function foo(n: number): void;
 export function foo(sn: string | number): void;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -96,4 +98,4 @@ You might consider using [ESLint disable comments](https://eslint.org/docs/lates
 
 ## Related To
 
-- [`unified-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/unified-signatures.md)
+- [`unified-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/unified-signatures.mdx)

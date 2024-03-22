@@ -40,5 +40,5 @@ export default {
 
 ## :mag: Implementation
 
-- [Rule source](../../lib/rules/no-this-in-fetch-data.js)
-- [Test source](../../lib/rules/__tests__/no-this-in-fetch-data.test.js)
+- [Rule source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/no-this-in-fetch-data.js)
+- [Test source](https://github.com/nuxt/eslint-plugin-nuxt/tree/master/lib/rules/__tests__/no-this-in-fetch-data.test.js)

@@ -58,5 +58,5 @@ fs.readFileSync(somePath).toString();
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-sync.js)
-- [Test source](../../tests/lib/rules/no-sync.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-sync.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-sync.js)

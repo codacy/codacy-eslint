@@ -28,7 +28,7 @@ The above code snippet should instead be written as `vegetable === Vegetable.Asp
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum Fruit {
@@ -50,7 +50,7 @@ declare let vegetable: Vegetable;
 vegetable === 'asparagus';
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 enum Fruit {

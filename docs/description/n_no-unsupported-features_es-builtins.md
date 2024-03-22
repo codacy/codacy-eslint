@@ -19,7 +19,7 @@ See also [TC39 finished proposals](https://github.com/tc39/proposals/blob/master
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/README.md#configured-nodejs-version-range)
 
 ### Options
 
@@ -170,5 +170,5 @@ For example:
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/no-unsupported-features/es-builtins.js)
-- [Test source](../../../tests/lib/rules/no-unsupported-features/es-builtins.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/no-unsupported-features/es-builtins.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/no-unsupported-features/es-builtins.js)

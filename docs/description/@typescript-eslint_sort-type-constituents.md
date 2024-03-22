@@ -20,7 +20,7 @@ This rule reports on any types that aren't sorted alphabetically.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 type T1 = B | A;
@@ -50,7 +50,7 @@ type T4 =
   | any;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 type T1 = A | B;
@@ -80,6 +80,8 @@ type T4 =
   | [1, 2, 4];
 ```
 
+<!--/tabs-->
+
 ## Options
 
 ### `checkIntersections`
@@ -102,6 +104,8 @@ type ExampleIntersection = B & A;
 type ExampleIntersection = A & B;
 ```
 
+<!--/tabs-->
+
 ### `checkUnions`
 
 Whether to check union types (`|`).
@@ -121,6 +125,8 @@ type ExampleUnion = B | A;
 ```ts option='{ "checkUnions": true }'
 type ExampleUnion = A | B;
 ```
+
+<!--/tabs-->
 
 ### `groupOrder`
 
@@ -155,6 +161,8 @@ type ExampleGroup = null | 123;
 ```ts option='{ "groupOrder": ["literal", "nullish" ]}'
 type ExampleGroup = 123 | null;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

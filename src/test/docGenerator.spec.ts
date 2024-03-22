@@ -1,7 +1,7 @@
 import * as fs from "node:fs"
 import path from "node:path"
 
-import {equal} from "assert"
+import { equal } from "assert"
 
 describe("DocGenerator", () => {
   describe("createdFiles", () => {

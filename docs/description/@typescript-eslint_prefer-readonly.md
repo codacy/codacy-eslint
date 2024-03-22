@@ -15,7 +15,7 @@ This rule reports on private members are marked as `readonly` if they're never m
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 class Container {
@@ -34,7 +34,7 @@ class Container {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 class Container {
@@ -59,6 +59,8 @@ class Container {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -96,6 +98,8 @@ class Container {
   private neverModifiedPrivate = 'unchanged';
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

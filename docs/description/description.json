@@ -1947,6 +1947,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_consistent-component-styles",
+    "title": "@angular eslint: Consistent component styles",
+    "description": "Ensures consistent usage of `styles`/`styleUrls`/`styleUrl` within Component metadata",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_contextual-decorator",
     "title": "@angular eslint: Contextual decorator",
     "description": "Ensures that classes use contextual decorators in its body",
@@ -2106,9 +2113,9 @@
   },
   {
     "parameters": [],
-    "patternId": "@angular-eslint_prefer-standalone-component",
-    "title": "@angular eslint: Prefer standalone component",
-    "description": "Ensures component `standalone` property is set to `true` in the component decorator",
+    "patternId": "@angular-eslint_prefer-standalone",
+    "title": "@angular eslint: Prefer standalone",
+    "description": "Ensures component, directive and pipe `standalone` property is set to `true` in the component decorator",
     "timeToFix": 5
   },
   {
@@ -3112,7 +3119,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "ignoreJSX",
+        "description": "ignoreJSX"
+      }
+    ],
     "patternId": "@stylistic_multiline-ternary",
     "title": "@stylistic: Multiline ternary",
     "description": "Enforce newlines between operands of ternary expressions",
@@ -3834,6 +3850,18 @@
     "patternId": "@typescript-eslint_consistent-indexed-object-style",
     "title": "@typescript eslint: Consistent indexed object style",
     "description": "Require or disallow the `Record` type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "treatUndefinedAsUnspecified",
+        "description": "treatUndefinedAsUnspecified"
+      }
+    ],
+    "patternId": "@typescript-eslint_consistent-return",
+    "title": "@typescript eslint: Consistent return",
+    "description": "Require `return` statements to either always or never specify values",
     "timeToFix": 5
   },
   {
@@ -4652,6 +4680,13 @@
     "patternId": "@typescript-eslint_unified-signatures",
     "title": "@typescript eslint: Unified signatures",
     "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_use-unknown-in-catch-callback-variable",
+    "title": "@typescript eslint: Use unknown in catch callback variable",
+    "description": "Enforce typing arguments in `.catch()` callbacks as `unknown`",
     "timeToFix": 5
   },
   {
@@ -7969,7 +8004,7 @@
     "parameters": [],
     "patternId": "functional_no-promise-reject",
     "title": "Functional: No promise reject",
-    "description": "Disallow try-catch[-finally] and try-finally patterns.",
+    "description": "Disallow rejecting promises.",
     "timeToFix": 5
   },
   {
@@ -11726,6 +11761,10 @@
   {
     "parameters": [
       {
+        "name": "partition-by-comment",
+        "description": "partition-by-comment"
+      },
+      {
         "name": "type",
         "description": "type"
       },
@@ -11872,6 +11911,10 @@
       {
         "name": "ignore-case",
         "description": "ignore-case"
+      },
+      {
+        "name": "group-kind",
+        "description": "group-kind"
       }
     ],
     "patternId": "perfectionist_sort-named-exports",
@@ -11896,6 +11939,10 @@
       {
         "name": "ignore-alias",
         "description": "ignore-alias"
+      },
+      {
+        "name": "group-kind",
+        "description": "group-kind"
       }
     ],
     "patternId": "perfectionist_sort-named-imports",
@@ -12323,6 +12370,13 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_require-to-throw-message",
+    "title": "Playwright: Require to throw message",
+    "description": "Require a message for `toThrow()`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_require-top-level-describe",
     "title": "Playwright: Require top level describe",
     "description": "Require test cases and hooks to be inside a `test.describe` block",
@@ -12330,9 +12384,23 @@
   },
   {
     "parameters": [],
+    "patternId": "playwright_valid-describe-callback",
+    "title": "Playwright: Valid describe callback",
+    "description": "Enforce valid `describe()` callback",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "playwright_valid-expect",
     "title": "Playwright: Valid expect",
     "description": "Enforce valid `expect()` usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "playwright_valid-expect-in-promise",
+    "title": "Playwright: Valid expect in promise",
+    "description": "Require promises that have expectations in their chain to be valid",
     "timeToFix": 5
   },
   {
@@ -12689,6 +12757,13 @@
     "patternId": "react_button-has-type",
     "title": "React: Button has type",
     "description": "Disallow usage of `button` elements without an explicit `type` attribute",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_checked-requires-onchange-or-readonly",
+    "title": "React: Checked requires onchange or readonly",
+    "description": "Enforce using `onChange` or `readonly` attribute when `checked` is used",
     "timeToFix": 5
   },
   {
@@ -13280,7 +13355,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "requireDataLowercase",
+        "description": "requireDataLowercase"
+      }
+    ],
     "patternId": "react_no-unknown-property",
     "title": "React: No unknown property",
     "description": "Disallow usage of unknown DOM property",
@@ -15534,6 +15614,13 @@
   },
   {
     "parameters": [],
+    "patternId": "tailwindcss_no-unnecessary-arbitrary-value",
+    "title": "Tailwindcss: No unnecessary arbitrary value",
+    "description": "Forbid using arbitrary values in classnames when an equivalent preset exists",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "test-selectors_anchor",
     "title": "Test selectors: Anchor",
     "description": "Requires test attributes on anchors.",
@@ -17112,7 +17199,16 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "unnamedParam",
+        "description": "unnamedParam"
+      },
+      {
+        "name": "ignoreJSX",
+        "description": "ignoreJSX"
+      }
+    ],
     "patternId": "vue_multiline-ternary",
     "title": "Vue: Multiline ternary",
     "description": "Enforce newlines between operands of ternary expressions in `<template>`",

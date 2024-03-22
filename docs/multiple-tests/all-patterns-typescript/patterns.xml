@@ -205,6 +205,7 @@
   <module name="@angular-eslint_component-class-suffix" />
   <module name="@angular-eslint_component-max-inline-declarations" />
   <module name="@angular-eslint_component-selector" />
+  <module name="@angular-eslint_consistent-component-styles" />
   <module name="@angular-eslint_contextual-decorator" />
   <module name="@angular-eslint_contextual-lifecycle" />
   <module name="@angular-eslint_directive-class-suffix" />
@@ -227,7 +228,7 @@
   <module name="@angular-eslint_no-queries-metadata-property" />
   <module name="@angular-eslint_pipe-prefix" />
   <module name="@angular-eslint_prefer-on-push-component-change-detection" />
-  <module name="@angular-eslint_prefer-standalone-component" />
+  <module name="@angular-eslint_prefer-standalone" />
   <module name="@angular-eslint_prefer-output-readonly" />
   <module name="@angular-eslint_relative-url-prefix" />
   <module name="@angular-eslint_require-localize-metadata" />
@@ -412,6 +413,7 @@
   <module name="@typescript-eslint_class-methods-use-this" />
   <module name="@typescript-eslint_consistent-generic-constructors" />
   <module name="@typescript-eslint_consistent-indexed-object-style" />
+  <module name="@typescript-eslint_consistent-return" />
   <module name="@typescript-eslint_consistent-type-assertions" />
   <module name="@typescript-eslint_consistent-type-definitions" />
   <module name="@typescript-eslint_consistent-type-exports" />
@@ -519,6 +521,7 @@
   <module name="@typescript-eslint_typedef" />
   <module name="@typescript-eslint_unbound-method" />
   <module name="@typescript-eslint_unified-signatures" />
+  <module name="@typescript-eslint_use-unknown-in-catch-callback-variable" />
   <module name="awscdk_require-bucket-encryption" />
   <module name="awscdk_require-bucket-private" />
   <module name="awscdk_no-public-ingress" />
@@ -1516,8 +1519,11 @@
   <module name="playwright_prefer-web-first-assertions" />
   <module name="playwright_require-hook" />
   <module name="playwright_require-soft-assertions" />
+  <module name="playwright_require-to-throw-message" />
   <module name="playwright_require-top-level-describe" />
+  <module name="playwright_valid-describe-callback" />
   <module name="playwright_valid-expect" />
+  <module name="playwright_valid-expect-in-promise" />
   <module name="playwright_valid-title" />
   <module name="prefer-arrow_prefer-arrow-functions" />
   <module name="prefer-object-spread_prefer-object-spread" />
@@ -1566,6 +1572,7 @@
   <module name="ramda_when-simplification" />
   <module name="react_boolean-prop-naming" />
   <module name="react_button-has-type" />
+  <module name="react_checked-requires-onchange-or-readonly" />
   <module name="react_default-props-match-prop-types" />
   <module name="react_destructuring-assignment" />
   <module name="react_display-name" />
@@ -1939,6 +1946,7 @@
   <module name="tailwindcss_no-arbitrary-value" />
   <module name="tailwindcss_no-contradicting-classname" />
   <module name="tailwindcss_no-custom-classname" />
+  <module name="tailwindcss_no-unnecessary-arbitrary-value" />
   <module name="test-selectors_anchor" />
   <module name="test-selectors_button" />
   <module name="test-selectors_input" />

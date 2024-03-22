@@ -1,16 +1,16 @@
-import {deepStrictEqual} from "assert"
-import {Linter, Rule} from "eslint"
+import { deepStrictEqual } from "assert"
+import { Linter, Rule } from "eslint"
 
-import {computeSuggestion} from "../computeSuggestion"
+import { computeSuggestion } from "../computeSuggestion"
 
 describe("computeSuggestion", () => {
-  const source =
-    "var foo = '';\n\nif(foo  === \"bar\") {\n  console.log('hey')\n}\n"
+  const source
+    = "var foo = '';\n\nif(foo  === \"bar\") {\n  console.log('hey')\n}\n"
   const line = 3
   it("should generate a suggestion using fix", () => {
     const fix: Rule.Fix = {
-      range: [21, 23],
-      text: " "
+      "range": [21, 23],
+      "text": " "
     }
 
     const result = computeSuggestion(source, line, undefined, fix, undefined)
@@ -21,17 +21,17 @@ describe("computeSuggestion", () => {
   it("should generate a suggestion using the first element of suggestions", () => {
     const suggestions: Linter.LintSuggestion[] = [
       {
-        desc: "First suggestion",
-        fix: {
-          range: [21, 23],
-          text: " "
+        "desc": "First suggestion",
+        "fix": {
+          "range": [21, 23],
+          "text": " "
         }
       },
       {
-        desc: "Second suggestion",
-        fix: {
-          range: [10, 12],
-          text: "hello"
+        "desc": "Second suggestion",
+        "fix": {
+          "range": [10, 12],
+          "text": "hello"
         }
       }
     ]
@@ -49,15 +49,15 @@ describe("computeSuggestion", () => {
   })
   it("should use fix when both fix and suggestions are defined", () => {
     const fix: Rule.Fix = {
-      range: [21, 23],
-      text: " "
+      "range": [21, 23],
+      "text": " "
     }
     const suggestions: Linter.LintSuggestion[] = [
       {
-        desc: "A suggestion",
-        fix: {
-          range: [10, 12],
-          text: "hello"
+        "desc": "A suggestion",
+        "fix": {
+          "range": [10, 12],
+          "text": "hello"
         }
       }
     ]
@@ -85,8 +85,8 @@ describe("computeSuggestion", () => {
   })
   it("should return undefined when the suggestion is multiline", () => {
     const fix: Rule.Fix = {
-      range: [21, 23],
-      text: " "
+      "range": [21, 23],
+      "text": " "
     }
     const result = computeSuggestion(source, line, 4, fix, [])
 
@@ -94,8 +94,8 @@ describe("computeSuggestion", () => {
   })
   it("should return undefined when the suggestion has wrong range", () => {
     const fix: Rule.Fix = {
-      range: [30, 21],
-      text: " "
+      "range": [30, 21],
+      "text": " "
     }
     const result = computeSuggestion(source, line, undefined, fix, [])
 
@@ -104,8 +104,8 @@ describe("computeSuggestion", () => {
   it("should return undefined when the suggestion index is out of the string range", () => {
     {
       const fix: Rule.Fix = {
-        range: [-1, 23],
-        text: " "
+        "range": [-1, 23],
+        "text": " "
       }
       const result = computeSuggestion(source, line, undefined, fix, undefined)
 
@@ -113,8 +113,8 @@ describe("computeSuggestion", () => {
     }
     {
       const fix: Rule.Fix = {
-        range: [21, source.length],
-        text: " "
+        "range": [21, source.length],
+        "text": " "
       }
       const result = computeSuggestion(source, line, undefined, fix, undefined)
       deepStrictEqual(result, undefined)

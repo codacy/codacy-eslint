@@ -16,7 +16,7 @@ This rule reports APIs of Node.js built-in APIs on the basis of [Node.js v13.2.0
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/README.md#configured-nodejs-version-range)
 
 ### Options
 
@@ -347,5 +347,5 @@ For example:
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/no-unsupported-features/node-builtins.js)
-- [Test source](../../../tests/lib/rules/no-unsupported-features/node-builtins.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/no-unsupported-features/node-builtins.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/no-unsupported-features/node-builtins.js)

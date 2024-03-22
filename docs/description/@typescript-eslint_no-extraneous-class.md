@@ -24,7 +24,7 @@ Those classes can generally be replaced with a standalone function.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 class StaticConstants {
@@ -42,7 +42,7 @@ class HelloWorldLogger {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 export const version = 42;
@@ -55,6 +55,8 @@ function logHelloWorld() {
   console.log('Hello, world!');
 }
 ```
+
+<!--/tabs-->
 
 ## Alternatives
 
@@ -98,6 +100,8 @@ export function util3() {
 }
 ```
 
+<!--/tabs-->
+
 ### Namespace Imports (Not Recommended)
 
 If you strongly prefer to have all constructs from a module available as properties of a single object, you can `import * as` the module.
@@ -122,7 +126,6 @@ export class Utilities {
 }
 
 // consumers.ts
-import { Utilities } from './utilities';
 
 Utilities.sayHello();
 ```
@@ -136,7 +139,6 @@ export function sayHello() {
 }
 
 // consumers.ts
-import * as utilities from './utilities';
 
 utilities.sayHello();
 ```
@@ -150,10 +152,11 @@ export function sayHello() {
 }
 
 // consumers.ts
-import { sayHello } from './utilities';
 
 sayHello();
 ```
+
+<!--/tabs-->
 
 ### Notes on Mutating Variables
 
@@ -192,6 +195,8 @@ export function incrementCount() {
 }
 ```
 
+<!--/tabs-->
+
 ## Options
 
 This rule normally bans classes that are empty (have no constructor or fields).
@@ -219,6 +224,8 @@ class NoFields {
 }
 ```
 
+<!--/tabs-->
+
 ### `allowEmpty`
 
 The `allowEmpty` option adds an exemption for classes that are entirely empty.
@@ -240,6 +247,8 @@ class NoFields {
 ```ts option='{ "allowEmpty": true }'
 class NoFields {}
 ```
+
+<!--/tabs-->
 
 ### `allowStaticOnly`
 
@@ -266,6 +275,8 @@ class NotEmptyClass {
 }
 ```
 
+<!--/tabs-->
+
 ### `allowWithDecorator`
 
 The `allowWithDecorator` option adds an exemption for classes that contain a member decorated with a `@` decorator.
@@ -288,6 +299,8 @@ class Constants {
   static readonly version = 42;
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

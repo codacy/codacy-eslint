@@ -141,7 +141,7 @@ This rule reports the following deprecated API.
 
 ### Configured Node.js version range
 
-[Configured Node.js version range](../../README.md#configured-nodejs-version-range)
+[Configured Node.js version range](https://github.com/eslint-community/eslint-plugin-n/tree/master/README.md#configured-nodejs-version-range)
 
 ### Options
 
@@ -367,5 +367,5 @@ new Buffer(); /*ERROR: 'buffer.Buffer' constructor was deprecated.*/
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/no-deprecated-api.js)
-- [Test source](../../tests/lib/rules/no-deprecated-api.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/no-deprecated-api.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/no-deprecated-api.js)

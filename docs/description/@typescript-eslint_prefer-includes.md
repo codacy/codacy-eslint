@@ -19,7 +19,7 @@ Additionally, this rule reports the tests of simple regular expressions in favor
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const str: string;
@@ -42,7 +42,7 @@ userDefined.indexOf(value) >= 0;
 /example/.test(str);
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const str: string;
@@ -71,5 +71,7 @@ declare const mismatchExample: {
 };
 mismatchExample.indexOf(value) >= 0;
 ```
+
+<!--/tabs-->
 
 <!-- Intentionally Omitted: When Not To Use It -->

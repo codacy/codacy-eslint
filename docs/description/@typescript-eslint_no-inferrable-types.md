@@ -14,7 +14,7 @@ Doing so adds unnecessary verbosity to code -making it harder to read- and in so
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const a: bigint = 10n;
@@ -42,7 +42,7 @@ class Foo {
 function fn(a: number = 5, b: boolean = true) {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const a = 10n;

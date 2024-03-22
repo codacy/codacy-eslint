@@ -3,11 +3,11 @@
 
 export const DEBUG: boolean = Boolean(process.env.DEBUG)
 export type LoggingMessageType =
-    | string
-    | number
-    | boolean
-    | object
-    | null
+  | string
+  | number
+  | boolean
+  | object
+  | null
 
 export function debug (msg: LoggingMessageType): void {
   if (!DEBUG) return
@@ -15,7 +15,7 @@ export function debug (msg: LoggingMessageType): void {
   switch (typeof msg) {
     case "object":
       console.log("\x1b[36m[DEBUG]\x1b[0m")
-      console.dir(msg, { depth: null })
+      console.dir(msg, { "depth": null })
       break
     case "string":
     case "number":

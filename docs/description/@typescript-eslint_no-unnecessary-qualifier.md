@@ -14,7 +14,7 @@ This rule reports when an enum or namespace qualifier is unnecessary.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum A {
@@ -30,7 +30,7 @@ namespace A {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 enum A {
@@ -45,6 +45,8 @@ namespace A {
   const x: B = 3;
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

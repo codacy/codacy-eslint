@@ -122,8 +122,8 @@ A read-only global variable can be a built-in ES global (e.g. `Array`), an envir
 (e.g. `window` in the browser environment), or a global variable defined as `readonly` in the configuration file
 or in a `/*global */` comment.
 
-* [Specifying Environments](../use/configure#specifying-environments)
-* [Specifying Globals](../use/configure#specifying-globals)
+* [Specifying Environments](https://github.com/eslint/eslint/tree/main/docs/src/use/configure#specifying-environments)
+* [Specifying Globals](https://github.com/eslint/eslint/tree/main/docs/src/use/configure#specifying-globals)
 
 Examples of **incorrect** code for this rule:
 
@@ -257,7 +257,7 @@ window.MyGlobalFunction = (function() {
 
 ### exported
 
-You can use `/* exported variableName */` block comments in the same way as in [`no-unused-vars`](./no-unused-vars). See the [`no-unused-vars` exported section](./no-unused-vars#exported) for details.
+You can use `/* exported variableName */` block comments in the same way as in [`no-unused-vars`](https://github.com/eslint/eslint/tree/main/docs/src/rules/no-unused-vars). See the [`no-unused-vars` exported section](https://github.com/eslint/eslint/tree/main/docs/src/rules/no-unused-vars#exported) for details.
 
 Examples of **correct** code for `/* exported variableName */` operation:
 

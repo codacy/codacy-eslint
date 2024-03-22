@@ -23,7 +23,7 @@ The following nodes are considered boolean expressions and their type is checked
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // nullable numbers are considered unsafe by default
@@ -55,7 +55,7 @@ while (obj) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```tsx
 // Using logical operator short-circuiting is allowed
@@ -84,6 +84,8 @@ function foo(bool?: boolean) {
 // `any` types should be cast to boolean explicitly
 const foo = (arg: any) => (Boolean(arg) ? 1 : 0);
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -187,4 +189,4 @@ If you prefer more succinct checks over more precise boolean logic, this rule mi
 
 ## Related To
 
-- [no-unnecessary-condition](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unnecessary-condition.md) - Similar rule which reports always-truthy and always-falsy values in conditions
+- [no-unnecessary-condition](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-unnecessary-condition.mdx) - Similar rule which reports always-truthy and always-falsy values in conditions

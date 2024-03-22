@@ -15,7 +15,7 @@ This allows transpilers to drop exports without knowing the types of the depende
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface ButtonProps {
@@ -29,7 +29,7 @@ class Button implements ButtonProps {
 export { Button, ButtonProps };
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 interface ButtonProps {
@@ -43,6 +43,8 @@ class Button implements ButtonProps {
 export { Button };
 export type { ButtonProps };
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -81,18 +83,20 @@ export { x };
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "fixMixedExportsWithInlineTypeSpecifier": true }'
 export { Button } from 'some-library';
 export type { ButtonProps } from 'some-library';
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "fixMixedExportsWithInlineTypeSpecifier": true }'
 export { Button, type ButtonProps } from 'some-library';
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

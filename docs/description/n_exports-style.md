@@ -111,5 +111,5 @@ exports.bar = 1
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/exports-style.js)
-- [Test source](../../tests/lib/rules/exports-style.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/exports-style.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/exports-style.js)

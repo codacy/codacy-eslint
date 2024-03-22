@@ -400,6 +400,8 @@ const Foo = class {
 };
 ```
 
+<!--/tabs-->
+
 ### Classes
 
 #### Public Instance Methods Before Public Static Fields
@@ -422,7 +424,7 @@ It doesn't apply to interfaces or type literals as accessibility and scope are n
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "default": ["public-instance-method", "public-static-field"] }'
 class Foo {
@@ -460,7 +462,7 @@ const Foo = class {
 };
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "default": ["public-instance-method", "public-static-field"] }'
 class Foo {
@@ -497,6 +499,8 @@ const Foo = class {
   public static E: string; // -> public static field
 };
 ```
+
+<!--/tabs-->
 
 #### Static Fields Before Instance Fields
 
@@ -516,7 +520,7 @@ It doesn't apply to interfaces or type literals as accessibility and scope are n
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "default": ["public-static-field", "static-field", "instance-field"] }'
 class Foo {
@@ -551,7 +555,7 @@ const foo = class {
 };
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "default": ["public-static-field", "static-field", "instance-field"] }'
 class Foo {
@@ -585,6 +589,8 @@ const foo = class {
 };
 ```
 
+<!--/tabs-->
+
 #### Class Declarations
 
 This config only specifies an order for classes: methods, then the constructor, then fields.
@@ -605,7 +611,7 @@ Default settings will be used for class declarations and all other syntax constr
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "classes": ["method", "constructor", "field"] }'
 class Foo {
@@ -620,7 +626,7 @@ class Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "classes": ["method", "constructor", "field"] }'
 class Foo {
@@ -634,6 +640,8 @@ class Foo {
   protected static E: string; // -> field
 }
 ```
+
+<!--/tabs-->
 
 #### Class Expressions
 
@@ -655,7 +663,7 @@ Default settings will be used for class declarations and all other syntax constr
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "classExpressions": ["method", "constructor", "field"] }'
 const foo = class {
@@ -670,7 +678,7 @@ const foo = class {
 };
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "classExpressions": ["method", "constructor", "field"] }'
 const foo = class {
@@ -684,6 +692,8 @@ const foo = class {
   protected static E: string; // -> field
 };
 ```
+
+<!--/tabs-->
 
 ### Interfaces
 
@@ -737,6 +747,8 @@ interface Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### Type Literals
 
 This config only specifies an order for type literals: signatures, then methods, then constructors, then fields.
@@ -789,11 +801,12 @@ type Foo = {
 };
 ```
 
+<!--/tabs-->
+
 ### Sorting Options
 
 #### Sorting Alphabetically Within Member Groups
 
-This config specifies that within each `memberTypes` group, members are in an alphabetic case-sensitive order.
 The default member order will be applied if `memberTypes` is not specified.
 You can see the default order in [Default Configuration](#default-configuration).
 
@@ -815,7 +828,7 @@ You can see the default order in [Default Configuration](#default-configuration)
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{"default":{"order":"alphabetically"}}'
 interface Foo {
@@ -829,7 +842,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{"default":{"order":"alphabetically"}}'
 interface Foo {
@@ -842,6 +855,8 @@ interface Foo {
   c(): void;
 }
 ```
+
+<!--/tabs-->
 
 #### Sorting Alphabetically Within Custom Member Groups
 
@@ -866,7 +881,7 @@ This config specifies that within each custom `memberTypes` group, members are i
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{"default":{"memberTypes":["method","field"],"order":"alphabetically"}}'
 interface Foo {
@@ -880,7 +895,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{"default":{"memberTypes":["method","field"],"order":"alphabetically"}}'
 interface Foo {
@@ -893,10 +908,11 @@ interface Foo {
   c: x;
 }
 ```
+
+<!--/tabs-->
 
 #### Sorting Alphabetically Case Insensitive Within Member Groups
 
-This config specifies that within each `memberTypes` group, members are in an alphabetic case-insensitive order.
 The default member order will be applied if `memberTypes` is not specified.
 You can see the default order in [Default Configuration](#default-configuration).
 
@@ -918,7 +934,7 @@ You can see the default order in [Default Configuration](#default-configuration)
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{"default":{"order":"alphabetically-case-insensitive"}}'
 interface Foo {
@@ -932,7 +948,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{"default":{"order":"alphabetically-case-insensitive"}}'
 interface Foo {
@@ -945,6 +961,8 @@ interface Foo {
   c(): void;
 }
 ```
+
+<!--/tabs-->
 
 #### Sorting Alphabetically Ignoring Member Groups
 
@@ -965,7 +983,7 @@ It ignores any member group types completely by specifying `"never"` for `member
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "default": { "memberTypes": "never", "order": "alphabetically" } }'
 interface Foo {
@@ -978,7 +996,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "default": { "memberTypes": "never", "order": "alphabetically" } }'
 interface Foo {
@@ -990,6 +1008,8 @@ interface Foo {
   (): Baz; // Order doesn't matter (no sortable identifier)
 }
 ```
+
+<!--/tabs-->
 
 #### Sorting Optional Members First or Last
 
@@ -1016,7 +1036,7 @@ This config places all optional members before all required members:
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "default": { "optionalityOrder": "optional-first", "order": "alphabetically" } }'
 interface Foo {
@@ -1026,7 +1046,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "default": { "optionalityOrder": "optional-first", "order": "alphabetically" } }'
 interface Foo {
@@ -1059,7 +1079,7 @@ This config places all required members before all optional members:
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "default": { "optionalityOrder": "required-first", "order": "alphabetically" } }'
 interface Foo {
@@ -1069,7 +1089,7 @@ interface Foo {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "default": { "optionalityOrder": "required-first", "order": "alphabetically" } }'
 interface Foo {

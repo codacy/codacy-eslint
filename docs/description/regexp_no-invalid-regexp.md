@@ -7,7 +7,7 @@ since: "v1.0.0"
 ---
 # regexp/no-invalid-regexp
 
-💼 This rule is enabled in the ✅ `plugin:regexp/recommended` config.
+💼 This rule is enabled in the following configs: 🟢 `flat/recommended`, 🔵 `recommended`.
 
 <!-- end auto-generated rule header -->
 
@@ -39,7 +39,7 @@ RegExp('=' + space + '+(\\w+)', 'u')
 
 ### Differences to ESLint's `no-invalid-regexp` rule
 
-This rule is almost functionally equivalent to ESLint's [no-invalid-regexp] rule. The only difference is that this rule doesn't validate flags (see [no-non-standard-flag](./no-non-standard-flag.html)).
+This rule is almost functionally equivalent to ESLint's [no-invalid-regexp] rule. The only difference is that this rule doesn't validate flags (https://github.com/ota-meshi/eslint-plugin-regexp/tree/master/docs/rules/see%20[no-non-standard-flag](./no-non-standard-flag.html)).
 
 There are two reasons we provide this rule:
 

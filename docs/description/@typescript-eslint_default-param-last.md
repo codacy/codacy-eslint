@@ -11,7 +11,7 @@ It adds support for optional parameters.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 /* eslint @typescript-eslint/default-param-last: "error" */
@@ -33,7 +33,7 @@ class Foo {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 /* eslint @typescript-eslint/default-param-last: "error" */
@@ -56,3 +56,6 @@ class Foo {
   ) {}
 }
 ```
+
+<!--/tabs-->
+

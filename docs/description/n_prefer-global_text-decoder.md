@@ -67,5 +67,5 @@ const u = new TextDecoder(s)
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/text-decoder.js)
-- [Test source](../../../tests/lib/rules/prefer-global/text-decoder.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/text-decoder.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/text-decoder.js)

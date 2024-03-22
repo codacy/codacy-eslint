@@ -67,5 +67,5 @@ const u = new TextEncoder(s)
 
 ## 🔎 Implementation
 
-- [Rule source](../../../lib/rules/prefer-global/text-encoder.js)
-- [Test source](../../../tests/lib/rules/prefer-global/text-encoder.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/lib/rules/prefer-global/text-encoder.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/tests/lib/rules/prefer-global/text-encoder.js)

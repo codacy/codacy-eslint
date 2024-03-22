@@ -51,6 +51,8 @@ interface T {
 }
 ```
 
+<!--/tabs-->
+
 ### `type`
 
 <!--tabs-->
@@ -68,6 +70,8 @@ interface T {
 ```ts option='"type"'
 type T = { x: number };
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

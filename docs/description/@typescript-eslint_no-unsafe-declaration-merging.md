@@ -27,7 +27,7 @@ foo.nums.push(1); // Runtime Error: Cannot read properties of undefined.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface Foo {}
@@ -35,7 +35,7 @@ interface Foo {}
 class Foo {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 interface Foo {}
@@ -48,6 +48,8 @@ enum Baz {}
 namespace Qux {}
 function Qux() {}
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

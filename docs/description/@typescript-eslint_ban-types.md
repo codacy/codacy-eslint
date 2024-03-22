@@ -18,7 +18,7 @@ Examples of code with the default options:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // use lower-case primitives for consistency
@@ -39,7 +39,7 @@ const curly1: {} = 1;
 const curly2: {} = { a: 'string' };
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // use lower-case primitives for consistency
@@ -59,6 +59,8 @@ const capitalObj: { a: string } = { a: 'string' };
 const curly1: number = 1;
 const curly2: Record<'a', string> = { a: 'string' };
 ```
+
+<!--/tabs-->
 
 ## Options
 

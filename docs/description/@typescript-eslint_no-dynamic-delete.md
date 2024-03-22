@@ -16,7 +16,7 @@ Using `Object`s with added and removed keys can cause occasional edge case bugs,
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // Can be replaced with the constant equivalents, such as container.aaa
@@ -29,7 +29,7 @@ delete container[name];
 delete container[name.toUpperCase()];
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const container: { [i: string]: number } = {
@@ -43,6 +43,8 @@ delete container.aaa;
 delete container[7];
 delete container['-Infinity'];
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

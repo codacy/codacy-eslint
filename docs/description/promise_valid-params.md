@@ -1,8 +1,4 @@
-# Enforces the proper number of arguments are passed to Promise functions (`promise/valid-params`)
-
-⚠️ This rule _warns_ in the ✅ `recommended` config.
-
-<!-- end auto-generated rule header -->
+# Ensures the proper number of arguments are passed to Promise functions (valid-params)
 
 Calling a Promise function with the incorrect number of arguments can lead to
 unexpected behavior or hard to spot bugs.

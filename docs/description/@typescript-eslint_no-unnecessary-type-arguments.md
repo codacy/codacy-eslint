@@ -22,7 +22,7 @@ This rule reports when an explicitly specified type argument is the default for 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 function f<T = number>() {}
@@ -46,7 +46,7 @@ interface I<T = number> {}
 class Impl implements I<number> {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 function f<T = number>() {}
@@ -73,6 +73,8 @@ class D extends C<string> {}
 interface I<T = number> {}
 class Impl implements I<string> {}
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

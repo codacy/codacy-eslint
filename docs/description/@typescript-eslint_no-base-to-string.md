@@ -17,7 +17,7 @@ This rule reports on stringified values that aren't primitives and don't define 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 // Passing an object or class instance to string concatenation:
@@ -32,7 +32,7 @@ value + '';
 ({}).toString();
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 // These types all have useful .toString()s
@@ -55,6 +55,8 @@ const literalWithToString = {
 
 `Value: ${literalWithToString}`;
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -80,8 +82,8 @@ If you don't mind a risk of `"[object Object]"` or incorrect type coercions in y
 
 ## Related To
 
-- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
-- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
+- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.mdx)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.mdx)
 
 ## Further Reading
 

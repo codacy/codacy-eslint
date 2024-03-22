@@ -161,5 +161,5 @@ function foo(err, callback) {
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/callback-return.js)
-- [Test source](../../tests/lib/rules/callback-return.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/callback-return.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/callback-return.js)

@@ -14,7 +14,7 @@ It is therefore redundant to `extend` from `any` or `unknown`.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface FooAny<T extends any> {}
@@ -34,7 +34,7 @@ const QuuxAny = <T extends any>() => {};
 function QuuzAny<T extends any>() {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 interface Foo<T> {}
@@ -49,6 +49,8 @@ const Quux = <T>() => {};
 
 function Quuz<T>() {}
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

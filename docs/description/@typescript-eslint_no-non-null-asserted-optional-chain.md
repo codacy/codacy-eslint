@@ -15,19 +15,21 @@ Using a `!` non-null assertion to assert the result of an `?.` optional chain ex
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 foo?.bar!;
 foo?.bar()!;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 foo?.bar;
 foo?.bar();
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

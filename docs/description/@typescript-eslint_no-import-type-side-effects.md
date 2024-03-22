@@ -12,11 +12,9 @@ Namely, it completely removes import declarations with a top-level `type` qualif
 The latter behavior does have one potentially surprising effect in that in certain cases TS can leave behind a "side effect" import at runtime:
 
 ```ts
-import { type A, type B } from 'mod';
 
 // is transpiled to
 
-import {} from 'mod';
 // which is the same as
 import 'mod';
 ```
@@ -29,39 +27,19 @@ This rule enforces that you use a top-level `type` qualifier for imports when it
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
-import { type A } from 'mod';
-import { type A as AA } from 'mod';
-import { type A, type B } from 'mod';
-import { type A as AA, type B as BB } from 'mod';
+
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
-import type { A } from 'mod';
-import type { A as AA } from 'mod';
-import type { A, B } from 'mod';
-import type { A as AA, B as BB } from 'mod';
 
-import T from 'mod';
-import type T from 'mod';
-
-import * as T from 'mod';
-import type * as T from 'mod';
-
-import { T } from 'mod';
-import type { T } from 'mod';
-import { T, U } from 'mod';
-import type { T, U } from 'mod';
-import { type T, U } from 'mod';
-import { T, type U } from 'mod';
-
-import type T, { U } from 'mod';
-import T, { type U } from 'mod';
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -69,6 +47,6 @@ If you're not using TypeScript 5.0's `verbatimModuleSyntax` option and your proj
 
 ## Related To
 
-- [`consistent-type-imports`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/consistent-type-imports.md)
-- [`import/consistent-type-specifier-style`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md)
+- [`consistent-type-imports`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/consistent-type-imports.mdx)
+- [`import/consistent-type-specifier-style`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.mdx)
 - [`import/no-duplicates` with `{"prefer-inline": true}`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md#inline-type-imports)

@@ -17,7 +17,7 @@ the recommended way to remove an element from an array is by using the
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare const arr: number[];
@@ -25,7 +25,7 @@ declare const arr: number[];
 delete arr[0];
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare const arr: number[];

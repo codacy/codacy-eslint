@@ -13,7 +13,7 @@ It uses type information to enforce that `Promise`s are only rejected with `Erro
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 Promise.reject('error');
@@ -29,7 +29,7 @@ new Promise((resolve, reject) => {
 });
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 Promise.reject(new Error());
@@ -48,3 +48,6 @@ new Promise((resolve, reject) => {
   return reject(new CustomError());
 });
 ```
+
+<!--/tabs-->
+

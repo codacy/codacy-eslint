@@ -16,7 +16,7 @@ This rule reports when function overload signatures can be replaced by a single 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 function x(x: number): void;
@@ -28,7 +28,7 @@ function y(): void;
 function y(...x: number[]): void;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 function x(x: number | string): void;
@@ -45,6 +45,8 @@ function f(...a: number[]): void;
 function f(...a: string[]): void;
 ```
 
+<!--/tabs-->
+
 ## Options
 
 ### `ignoreDifferentlyNamedParameters`
@@ -53,19 +55,21 @@ Examples of code for this rule with `ignoreDifferentlyNamedParameters`:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts option='{ "ignoreDifferentlyNamedParameters": true }'
 function f(a: number): void;
 function f(a: string): void;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts option='{ "ignoreDifferentlyNamedParameters": true }'
 function f(a: number): void;
 function f(b: string): void;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 
@@ -74,4 +78,4 @@ You can turn it off if you don't want to consistently keep them next to each oth
 
 ## Related To
 
-- [`adjacent-overload-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
+- [`adjacent-overload-signatures`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.mdx)

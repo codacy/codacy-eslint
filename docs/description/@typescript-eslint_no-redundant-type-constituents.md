@@ -26,7 +26,7 @@ Within `&` intersections:
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 type UnionAny = any | 'foo';
@@ -46,7 +46,7 @@ type IntersectionNumberLiteral = number & 1;
 type IntersectionStringLiteral = string & 'foo';
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 type UnionAny = any;
@@ -65,6 +65,8 @@ type IntersectionBooleanLiteral = false;
 type IntersectionNumberLiteral = 1;
 type IntersectionStringLiteral = 'foo';
 ```
+
+<!--/tabs-->
 
 ## Limitations
 

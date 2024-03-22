@@ -17,7 +17,7 @@ This rule disallows defining an enum with multiple members initialized to the sa
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum E {
@@ -33,7 +33,7 @@ enum E {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 enum E {
@@ -48,6 +48,8 @@ enum E {
   B = 'B',
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

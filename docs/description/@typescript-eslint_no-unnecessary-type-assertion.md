@@ -14,7 +14,7 @@ This rule reports when a type assertion does not change the type of an expressio
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const foo = 3;
@@ -36,12 +36,16 @@ const foo = 3 as Foo;
 ```
 
 ```ts
+const foo = 'foo' as const;
+```
+
+```ts
 function foo(x: number): number {
   return x!; // unnecessary non-null
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const foo = <number>3;
@@ -52,7 +56,7 @@ const foo = 3 as number;
 ```
 
 ```ts
-const foo = 'foo' as const;
+let foo = 'foo' as const;
 ```
 
 ```ts
@@ -60,6 +64,8 @@ function foo(x: number | undefined): number {
   return x!;
 }
 ```
+
+<!--/tabs-->
 
 ## Options
 

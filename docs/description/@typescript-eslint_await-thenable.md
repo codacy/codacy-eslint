@@ -16,7 +16,7 @@ While doing so is valid JavaScript, it is often a programmer error, such as forg
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 await 'value';
@@ -25,7 +25,7 @@ const createValue = () => 'value';
 await createValue();
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 await Promise.resolve('value');
@@ -33,6 +33,8 @@ await Promise.resolve('value');
 const createValue = async () => 'value';
 await createValue();
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

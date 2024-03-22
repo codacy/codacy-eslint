@@ -20,7 +20,7 @@ This rule flags confusing `!` assertions and suggests either removing them or wr
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface Foo {
@@ -33,7 +33,7 @@ const isEqualsBar = foo.bar! == 'hello';
 const isEqualsNum = 1 + foo.num! == 2;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 <!-- prettier-ignore -->
 ```ts
@@ -46,6 +46,8 @@ const foo: Foo = getFoo();
 const isEqualsBar = foo.bar == 'hello';
 const isEqualsNum = (1 + foo.num!) == 2;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

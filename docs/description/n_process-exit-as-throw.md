@@ -34,5 +34,5 @@ This rule itself never warn code.
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/process-exit-as-throw.js)
-- [Test source](../../tests/lib/rules/process-exit-as-throw.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/process-exit-as-throw.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/process-exit-as-throw.js)

@@ -12,11 +12,11 @@ This rule reports on values used in a template literal string that aren't string
 
 :::note
 
-This rule intentionally does not allow objects with a custom `toString()` method to be used in template literals, because the stringification result may not be user-friendly.
+The default settings of this rule intentionally do not allow objects with a custom `toString()` method to be used in template literals, because the stringification result may not be user-friendly.
 
 For example, arrays have a custom [`toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) method, which only calls `join()` internally, which joins the array elements with commas. This means that (1) array elements are not necessarily stringified to useful results (2) the commas don't have spaces after them, making the result not user-friendly. The best way to format arrays is to use [`Intl.ListFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat), which even supports adding the "and" conjunction where necessary.
-You must explicitly call `object.toString()` if you want to use this object in a template literal.
-The [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md) rule can be used to guard this case against producing `"[object Object]"` by accident.
+You must explicitly call `object.toString()` if you want to use this object in a template literal, or turn on the `allowArray` option to specifically allow arrays.
+The [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.mdx) rule can be used to guard this case against producing `"[object Object]"` by accident.
 
 :::
 
@@ -24,7 +24,7 @@ The [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const arg1 = [1, 2];
@@ -34,7 +34,7 @@ const arg2 = { name: 'Foo' };
 const msg2 = `arg2 = ${arg2 || null}`;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const arg = 'foo';
@@ -44,6 +44,8 @@ const msg2 = `arg = ${arg || 'default'}`;
 const stringWithKindProp: string & { _kind?: 'MyString' } = 'foo';
 const msg3 = `stringWithKindProp = ${stringWithKindProp}`;
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -111,11 +113,20 @@ const arg = 'something';
 const msg1 = typeof arg === 'string' ? arg : `arg = ${arg}`;
 ```
 
+### `allowArray`
+
+Examples of additional **correct** code for this rule with `{ allowArray: true }`:
+
+```ts option='{ "allowArray": true }' showPlaygroundButton
+const arg = ['foo', 'bar'];
+const msg1 = `arg = ${arg}`;
+```
+
 ## When Not To Use It
 
 If you're not worried about incorrectly stringifying non-string values in template literals, then you likely don't need this rule.
 
 ## Related To
 
-- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.md)
-- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
+- [`no-base-to-string`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-base-to-string.mdx)
+- [`restrict-plus-operands`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.mdx)

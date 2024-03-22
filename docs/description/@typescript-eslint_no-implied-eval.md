@@ -31,7 +31,7 @@ This rule aims to eliminate implied `eval()` through the use of `new Function()`
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 /* eslint @typescript-eslint/no-implied-eval: "error" */
@@ -59,7 +59,7 @@ setTimeout(fn(), 100);
 const fn = new Function('a', 'b', 'return a + b');
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 /* eslint @typescript-eslint/no-implied-eval: "error" */
@@ -95,6 +95,8 @@ class Foo {
 
 setTimeout(Foo.fn, 100);
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

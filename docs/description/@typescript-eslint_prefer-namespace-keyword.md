@@ -20,13 +20,13 @@ This rule reports when the `module` keyword is used instead of `namespace`.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 module Example {}
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 namespace Example {}

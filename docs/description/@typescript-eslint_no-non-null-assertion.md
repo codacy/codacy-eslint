@@ -14,7 +14,7 @@ It's generally better to structure program logic so that TypeScript understands 
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 interface Example {
@@ -25,7 +25,7 @@ declare const example: Example;
 const includesBaz = example.property!.includes('baz');
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 interface Example {
@@ -35,6 +35,8 @@ interface Example {
 declare const example: Example;
 const includesBaz = example.property?.includes('baz') ?? false;
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

@@ -51,7 +51,7 @@ It's important to note that this option does not only apply to members defined i
 
 #### `true`
 
-Example of a correct code when `ignoreClassesThatImplementAnInterface` is set to `true`:
+Example of correct code when `ignoreClassesThatImplementAnInterface` is set to `true`:
 
 ```ts option='{ "ignoreClassesThatImplementAnInterface": true }' showPlaygroundButton
 class X implements Y {
@@ -62,11 +62,11 @@ class X implements Y {
 
 #### `'public-fields'`
 
-Example of a incorrect code when `ignoreClassesThatImplementAnInterface` is set to `'public-fields'`:
+Example of incorrect code when `ignoreClassesThatImplementAnInterface` is set to `'public-fields'`:
 
 <!--tabs-->
 
-##### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 class X implements Y {
@@ -81,7 +81,7 @@ class X implements Y {
 }
 ```
 
-##### ✅ Correct
+#### ✅ Correct
 
 ```ts
 class X implements Y {
@@ -89,6 +89,8 @@ class X implements Y {
   property = () => {};
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

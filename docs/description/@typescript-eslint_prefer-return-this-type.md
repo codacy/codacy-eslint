@@ -40,7 +40,7 @@ cat.eat().meow();
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 class Foo {
@@ -56,7 +56,7 @@ class Foo {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 class Foo {
@@ -81,6 +81,8 @@ class Derived extends Base {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

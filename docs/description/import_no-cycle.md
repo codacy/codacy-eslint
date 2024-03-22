@@ -28,7 +28,7 @@ This rule ignores type-only imports in Flow and TypeScript syntax (`import type`
 
 ### Options
 
-By default, this rule only detects cycles for ES6 imports, but see the [`no-unresolved` options](./no-unresolved.md#options) as this rule also supports the same `commonjs` and `amd` flags. However, these flags only impact which import types are _linted_; the
+By default, this rule only detects cycles for ES6 imports, but see the [`no-unresolved` options](https://github.com/un-es/eslint-plugin-i/tree/fork-release/docs/rules/no-unresolved.md#options) as this rule also supports the same `commonjs` and `amd` flags. However, these flags only impact which import types are _linted_; the
 import/export infrastructure only registers `import` statements in dependencies, so
 cycles created by `require` within imported modules may not be detected.
 

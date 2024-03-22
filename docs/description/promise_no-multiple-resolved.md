@@ -1,6 +1,4 @@
-# Disallow creating new promises with paths that resolve multiple times (`promise/no-multiple-resolved`)
-
-<!-- end auto-generated rule header -->
+# Disallow creating new promises with paths that resolve multiple times (no-multiple-resolved)
 
 This rule warns of paths that resolve multiple times in executor functions that
 Promise constructors.

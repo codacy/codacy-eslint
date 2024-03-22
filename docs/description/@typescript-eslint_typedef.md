@@ -25,7 +25,7 @@ class ContainsText {
 }
 ```
 
-> To enforce type definitions existing on call signatures, use [`explicit-function-return-type`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md), or [`explicit-module-boundary-types`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md).
+> To enforce type definitions existing on call signatures, use [`explicit-function-return-type`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.mdx), or [`explicit-module-boundary-types`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.mdx).
 
 :::caution
 
@@ -83,6 +83,8 @@ for (const [key, val] of new Map([['key', 1]])) {
 }
 ```
 
+<!--/tabs-->
+
 ### `arrowParameter`
 
 Whether to enforce type annotations for parameters of arrow functions.
@@ -115,6 +117,8 @@ const mapper = {
 };
 ```
 
+<!--/tabs-->
+
 ### `memberVariableDeclaration`
 
 Whether to enforce type annotations on member variables of classes.
@@ -141,6 +145,8 @@ class ContainsText {
 }
 ```
 
+<!--/tabs-->
+
 ### `objectDestructuring`
 
 Whether to enforce type annotations on variables declared using object destructuring.
@@ -165,6 +171,8 @@ const [b, c]: [number, number] = Math.random() ? [1, 2] : [3, 4];
 for (const { key, val } of [{ key: 'key', val: 1 }]) {
 }
 ```
+
+<!--/tabs-->
 
 ### `parameter`
 
@@ -230,6 +238,8 @@ class Logger {
 }
 ```
 
+<!--/tabs-->
+
 ### `propertyDeclaration`
 
 Whether to enforce type annotations for properties of interfaces and types.
@@ -256,6 +266,8 @@ type Members = {
 };
 ```
 
+<!--/tabs-->
+
 ### `variableDeclaration`
 
 Whether to enforce type annotations for variable declarations, excluding array and object destructuring.
@@ -279,6 +291,8 @@ const text: string = 'text';
 let initialText: string = 'text';
 let delayedText: string;
 ```
+
+<!--/tabs-->
 
 ### `variableDeclarationIgnoreFunction`
 
@@ -307,6 +321,8 @@ class Foo {
   c: () => void = (): void => {};
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

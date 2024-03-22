@@ -28,4 +28,4 @@ define(['./lib.js'], function(lib) {});
 
 This rule was introduced in version 1.0.3
 
-- [Rule source](../../lib/rules/no-module-extensions.js)
+- [Rule source](https://github.com/acdvs/eslint-plugin-suitescript/tree/master/lib/rules/no-module-extensions.js)

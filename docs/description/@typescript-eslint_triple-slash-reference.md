@@ -32,8 +32,10 @@ globalThis.value;
 #### ✅ Correct
 
 ```ts option='{ "lib": "never" }'
-import { value } from 'code';
+
 ```
+
+<!--/tabs-->
 
 ### `path`
 
@@ -52,8 +54,10 @@ globalThis.value;
 #### ✅ Correct
 
 ```ts option='{ "path": "never" }'
-import { value } from 'code';
+
 ```
+
+<!--/tabs-->
 
 ### `types`
 
@@ -72,10 +76,10 @@ globalThis.value;
 #### ✅ Correct
 
 ```ts option='{ "types": "never" }'
-import { value } from 'code';
+
 ```
 
-<!-- /tabs -->
+<!--/tabs-->
 
 The `types` option may alternately be given a `"prefer-import"` value.
 Doing so indicates the rule should only report if there is already an `import` from the same location:
@@ -87,16 +91,16 @@ Doing so indicates the rule should only report if there is already an `import` f
 ```ts option='{ "types": "prefer-import" }'
 /// <reference types="code" />
 
-import { valueA } from 'code';
-
 globalThis.valueB;
 ```
 
 #### ✅ Correct
 
 ```ts option='{ "types": "prefer-import" }'
-import { valueA, valueB } from 'code';
+
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

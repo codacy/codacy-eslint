@@ -14,7 +14,7 @@ Mixing enum member types is generally considered confusing and a bad practice.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 enum Status {
@@ -24,7 +24,7 @@ enum Status {
 }
 ```
 
-### ✅ Correct (Explicit Numbers)
+#### ✅ Correct (Explicit Numbers)
 
 ```ts
 enum Status {
@@ -34,7 +34,7 @@ enum Status {
 }
 ```
 
-### ✅ Correct (Implicit Numbers)
+#### ✅ Correct (Implicit Numbers)
 
 ```ts
 enum Status {
@@ -44,7 +44,7 @@ enum Status {
 }
 ```
 
-### ✅ Correct (Strings)
+#### ✅ Correct (Strings)
 
 ```ts
 enum Status {
@@ -53,6 +53,8 @@ enum Status {
   Open = 'open',
 }
 ```
+
+<!--/tabs-->
 
 ## Iteration Pitfalls of Mixed Enum Member Values
 

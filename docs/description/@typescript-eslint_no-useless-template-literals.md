@@ -12,7 +12,7 @@ This rule reports template literals that can be simplified to a normal string li
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const ab1 = `${'a'}${'b'}`;
@@ -29,7 +29,7 @@ declare const intersectionWithString: string & { _brand: 'test-brand' };
 const wrappedIntersection = `${intersectionWithString}`;
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 const ab1 = 'ab';
@@ -54,4 +54,4 @@ When you want to allow string expressions inside template literals.
 
 ## Related To
 
-- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.md)
+- [`restrict-template-expressions`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/restrict-template-expressions.mdx)

@@ -61,28 +61,16 @@ console.log("hello");
 
 ```json
 {
-    "n/shebang": ["error", {
-        "convertPath": null,
-        "ignoreUnpublished": false,
-        "additionalExecutables": [],
-    }]
+    "n/shebang": ["error", {"convertPath": null}]
 }
 ```
 
 #### convertPath
 
-This can be configured in the rule options or as a shared setting [`settings.convertPath`](../shared-settings.md#convertpath).
+This can be configured in the rule options or as a shared setting [`settings.convertPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#convertpath).
 Please see the shared settings documentation for more information.
-
-#### ignoreUnpublished
-
-Allow for files that are not published to npm to be ignored by this rule.
-
-#### additionalExecutables
-
-Mark files as executable that are not referenced by the package.json#bin property
 
 ## 🔎 Implementation
 
-- [Rule source](../../lib/rules/shebang.js)
-- [Test source](../../tests/lib/rules/shebang.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/shebang.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/shebang.js)

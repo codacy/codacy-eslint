@@ -101,6 +101,8 @@ class Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### readonly
 
 Examples of code for the `{ "allow": ["readonly"] }` options:
@@ -146,6 +148,8 @@ class Foo {
   constructor(readonly name: string) {}
 }
 ```
+
+<!--/tabs-->
 
 ### private
 
@@ -193,6 +197,8 @@ class Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### protected
 
 Examples of code for the `{ "allow": ["protected"] }` options:
@@ -238,6 +244,8 @@ class Foo {
   constructor(protected name: string) {}
 }
 ```
+
+<!--/tabs-->
 
 ### public
 
@@ -285,6 +293,8 @@ class Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### private readonly
 
 Examples of code for the `{ "allow": ["private readonly"] }` options:
@@ -330,6 +340,8 @@ class Foo {
   constructor(private readonly name: string) {}
 }
 ```
+
+<!--/tabs-->
 
 ### protected readonly
 
@@ -377,6 +389,8 @@ class Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### public readonly
 
 Examples of code for the `{ "allow": ["public readonly"] }` options:
@@ -422,6 +436,8 @@ class Foo {
   constructor(public readonly name: string) {}
 }
 ```
+
+<!--/tabs-->
 
 ### `"parameter-property"`
 
@@ -479,6 +495,8 @@ class Foo {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

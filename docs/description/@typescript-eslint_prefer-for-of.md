@@ -16,7 +16,7 @@ This rule recommends a for-of loop when the loop index is only used to read from
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 declare const array: string[];
@@ -26,7 +26,7 @@ for (let i = 0; i < array.length; i++) {
 }
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 declare const array: string[];
@@ -40,5 +40,7 @@ for (let i = 0; i < array.length; i++) {
   console.log(i, array[i]);
 }
 ```
+
+<!--/tabs-->
 
 <!-- Intentionally Omitted: When Not To Use It -->

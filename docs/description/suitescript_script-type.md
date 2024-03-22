@@ -69,4 +69,4 @@ This rule was introduced in version 1.0.0.
 
 ## Source
 
-- [Rule source](../../lib/rules/script-type.js)
+- [Rule source](https://github.com/acdvs/eslint-plugin-suitescript/tree/master/lib/rules/script-type.js)

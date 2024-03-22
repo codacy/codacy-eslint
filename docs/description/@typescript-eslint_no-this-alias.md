@@ -13,7 +13,7 @@ or not managing scope well.
 
 <!--tabs-->
 
-### ❌ Incorrect
+#### ❌ Incorrect
 
 ```ts
 const self = this;
@@ -23,13 +23,15 @@ setTimeout(function () {
 });
 ```
 
-### ✅ Correct
+#### ✅ Correct
 
 ```ts
 setTimeout(() => {
   this.doWork();
 });
 ```
+
+<!--/tabs-->
 
 ## Options
 
@@ -73,6 +75,8 @@ class ComponentLike {
 }
 ```
 
+<!--/tabs-->
+
 ### `allowedNames`
 
 `no-this-alias` can alternately be used to allow only a specific list of names as `this` aliases.
@@ -101,6 +105,8 @@ class Example {
   }
 }
 ```
+
+<!--/tabs-->
 
 ## When Not To Use It
 

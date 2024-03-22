@@ -59,6 +59,8 @@ enum Foo {
 }
 ```
 
+<!--/tabs-->
+
 ### `typedefs`
 
 If this is `true`, this rule warns every reference to a type before the type declaration.
