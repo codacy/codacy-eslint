@@ -276,7 +276,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-perfectionist": "^2.7.0",
-    "eslint-plugin-playwright": "^1.5.3",
+    "eslint-plugin-playwright": "^1.6.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-prettier": "^5.1.3",
