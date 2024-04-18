@@ -465,7 +465,6 @@
   <module name="@typescript-eslint_no-restricted-imports" />
   <module name="@typescript-eslint_no-shadow" />
   <module name="@typescript-eslint_no-this-alias" />
-  <module name="@typescript-eslint_no-throw-literal" />
   <module name="@typescript-eslint_no-unnecessary-boolean-literal-compare" />
   <module name="@typescript-eslint_no-unnecessary-condition" />
   <module name="@typescript-eslint_no-unnecessary-qualifier" />
@@ -488,6 +487,7 @@
   <module name="@typescript-eslint_no-useless-template-literals" />
   <module name="@typescript-eslint_no-var-requires" />
   <module name="@typescript-eslint_non-nullable-type-assertion-style" />
+  <module name="@typescript-eslint_only-throw-error" />
   <module name="@typescript-eslint_parameter-properties" />
   <module name="@typescript-eslint_prefer-as-const" />
   <module name="@typescript-eslint_prefer-destructuring" />
@@ -712,6 +712,7 @@
   <module name="es-x_no-array-prototype-values" />
   <module name="es-x_no-array-prototype-with" />
   <module name="es-x_no-array-string-prototype-at" />
+  <module name="es-x_no-arraybuffer-prototype-transfer" />
   <module name="es-x_no-arrow-functions" />
   <module name="es-x_no-async-functions" />
   <module name="es-x_no-async-iteration" />
@@ -982,11 +983,6 @@
   <module name="functional_prefer-property-signatures" />
   <module name="functional_prefer-tacit" />
   <module name="functional_readonly-type" />
-  <module name="i18n-json_valid-json" />
-  <module name="i18n-json_valid-message-syntax" />
-  <module name="i18n-json_identical-keys" />
-  <module name="i18n-json_sorted-keys" />
-  <module name="i18n-json_identical-placeholders" />
   <module name="i18next_no-literal-string" />
   <module name="import_no-unresolved" />
   <module name="import_named" />
@@ -1092,6 +1088,7 @@
   <module name="jest_prefer-expect-resolves" />
   <module name="jest_prefer-hooks-in-order" />
   <module name="jest_prefer-hooks-on-top" />
+  <module name="jest_prefer-importing-jest-globals" />
   <module name="jest_prefer-lowercase-title" />
   <module name="jest_prefer-mock-promise-shorthand" />
   <module name="jest_prefer-snapshot-hint" />
@@ -1449,10 +1446,11 @@
   <module name="n_prefer-global_text-encoder" />
   <module name="n_prefer-global_url-search-params" />
   <module name="n_prefer-global_url" />
+  <module name="n_prefer-node-protocol" />
   <module name="n_prefer-promises_dns" />
   <module name="n_prefer-promises_fs" />
   <module name="n_process-exit-as-throw" />
-  <module name="n_shebang" />
+  <module name="n_hashbang" />
   <module name="no-only-tests_no-only-tests" />
   <module name="no-unsanitized_property" />
   <module name="no-unsanitized_method" />
@@ -1477,6 +1475,7 @@
   <module name="perfectionist_sort-object-types" />
   <module name="perfectionist_sort-objects" />
   <module name="perfectionist_sort-svelte-attributes" />
+  <module name="perfectionist_sort-intersection-types" />
   <module name="perfectionist_sort-union-types" />
   <module name="perfectionist_sort-vue-attributes" />
   <module name="playwright_expect-expect" />
@@ -1778,6 +1777,7 @@
   <module name="regexp_sort-flags" />
   <module name="regexp_strict" />
   <module name="regexp_unicode-escape" />
+  <module name="regexp_unicode-property" />
   <module name="regexp_use-ignore-case" />
   <module name="relay_graphql-syntax" />
   <module name="relay_compat-uses-vars" />
@@ -2000,12 +2000,14 @@
   <module name="unicorn_import-style" />
   <module name="unicorn_new-for-builtins" />
   <module name="unicorn_no-abusive-eslint-disable" />
+  <module name="unicorn_no-anonymous-default-export" />
   <module name="unicorn_no-array-callback-reference" />
   <module name="unicorn_no-array-for-each" />
   <module name="unicorn_no-array-method-this-argument" />
   <module name="unicorn_no-array-push-push" />
   <module name="unicorn_no-array-reduce" />
   <module name="unicorn_no-await-expression-member" />
+  <module name="unicorn_no-await-in-promise-methods" />
   <module name="unicorn_no-console-spaces" />
   <module name="unicorn_no-document-cookie" />
   <module name="unicorn_no-empty-file" />
@@ -2022,6 +2024,7 @@
   <module name="unicorn_no-null" />
   <module name="unicorn_no-object-as-default-parameter" />
   <module name="unicorn_no-process-exit" />
+  <module name="unicorn_no-single-promise-in-promise-methods" />
   <module name="unicorn_no-static-only-class" />
   <module name="unicorn_no-thenable" />
   <module name="unicorn_no-this-assignment" />
@@ -2464,6 +2467,7 @@
   <module name="you-dont-need-lodash-underscore_throttle" />
   <module name="you-dont-need-lodash-underscore_is-string" />
   <module name="you-dont-need-lodash-underscore_cast-array" />
+  <module name="you-dont-need-lodash-underscore_clone-deep" />
   <module name="you-dont-need-lodash-underscore_is-function" />
   <module name="you-dont-need-lodash-underscore_union-by" />
   <module name="you-dont-need-lodash-underscore_capitalize" />

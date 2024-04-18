@@ -714,6 +714,7 @@ function quux (foo) {}
  * @variation
  * @version
  * @yields
+ * @import
  * @internal
  * @overload
  * @satisfies
@@ -721,7 +722,7 @@ function quux (foo) {}
  */
 function quux (foo) {}
 // Settings: {"jsdoc":{"mode":"jsdoc"}}
-// Message: Invalid JSDoc tag name "internal".
+// Message: Invalid JSDoc tag name "import".
 
 /** 
  * @externs
@@ -1028,6 +1029,7 @@ function quux (foo) {}
  * @variation
  * @version
  * @yields
+ * @import
  * @internal
  * @overload
  * @satisfies

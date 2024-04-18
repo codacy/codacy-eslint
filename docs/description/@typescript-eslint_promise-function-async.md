@@ -97,6 +97,7 @@ Examples of code with `{ "allowedPromiseNames": ["Bluebird"] }`:
 #### ❌ Incorrect
 
 ```ts option='{ "allowedPromiseNames": ["Bluebird"] }'
+class Bluebird {}
 
 const returnsBluebird = () => new Bluebird(() => {});
 ```
@@ -104,6 +105,7 @@ const returnsBluebird = () => new Bluebird(() => {});
 #### ✅ Correct
 
 ```ts option='{ "allowedPromiseNames": ["Bluebird"] }'
+class Bluebird {}
 
 const returnsBluebird = async () => new Bluebird(() => {});
 ```

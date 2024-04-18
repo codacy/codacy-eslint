@@ -1,10 +1,10 @@
 # Replaces `x => f(x)` with just `f` (`functional/prefer-tacit`)
 
-⚠️🚫 This rule _warns_ in the 🎨 `stylistic` config. This rule is _disabled_ in the `disable-type-checked` config.
+⚠️ This rule _warns_ in the 🎨 `stylistic` config.
 
-💡 This rule is manually fixable by [editor suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
+💡 This rule is manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
 
-💭 This rule requires type information.
+💭 This rule requires [type information](https://typescript-eslint.io/linting/typed-linting).
 
 <!-- end auto-generated rule header -->
 
@@ -41,4 +41,60 @@ function f(x) {
 }
 
 const foo = [1, 2, 3].map(f);
+
+const bar = { f };
+const baz = [1, 2, 3].map((x) => bar.f(x)); // Allowed unless using `checkMemberExpressions`
+```
+
+## Options
+
+This rule accepts an options object of the following type:
+
+```ts
+type Options = {
+  checkMemberExpressions: boolean;
+};
+```
+
+### Default Options
+
+```ts
+type Options = {
+  checkMemberExpressions: false;
+};
+```
+
+### `checkMemberExpressions`
+
+If `true`, calls of member expressions are checked as well.
+If `false`, only calls of identifiers are checked.
+
+#### ❌ Incorrect
+
+<!-- eslint-skip -->
+
+```ts
+/* eslint functional/prefer-tacit: ["error", { "checkMemberExpressions": true }] */
+
+const bar = {
+  f(x) {
+    return x + 1;
+  },
+};
+
+const foo = [1, 2, 3].map((x) => bar.f(x));
+```
+
+#### ✅ Correct
+
+```ts
+/* eslint functional/prefer-tacit: ["error", { "checkMemberExpressions": true }] */
+
+const bar = {
+  f(x) {
+    return x + 1;
+  },
+};
+
+const foo = [1, 2, 3].map(bar.f.bind(bar));
 ```

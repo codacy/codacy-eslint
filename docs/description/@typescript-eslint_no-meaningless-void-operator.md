@@ -41,7 +41,7 @@ function bar(x: number) {
   void x; // discarding a number
   return 2;
 }
-void bar(); // discarding a number
+void bar(1); // discarding a number
 ```
 
 <!--/tabs-->

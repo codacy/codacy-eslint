@@ -279,7 +279,7 @@ class NotEmptyClass {
 
 ### `allowWithDecorator`
 
-The `allowWithDecorator` option adds an exemption for classes that contain a member decorated with a `@` decorator.
+The `allowWithDecorator` option adds an exemption for classes decorated with a `@` decorator.
 
 <!--tabs-->
 
@@ -294,8 +294,8 @@ class Constants {
 #### ✅ Correct
 
 ```ts option='{ "allowWithDecorator": true }'
+@logOnRead()
 class Constants {
-  @logOnRead()
   static readonly version = 42;
 }
 ```

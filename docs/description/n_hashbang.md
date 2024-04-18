@@ -1,4 +1,4 @@
-# Require correct usage of shebang (`n/shebang`)
+# Require correct usage of hashbang (`n/hashbang`)
 
 💼 This rule is enabled in the following [configs](https://github.com/eslint-community/eslint-plugin-n#-configs): ☑️ `flat/recommended`, 🟢 `flat/recommended-module`, ✅ `flat/recommended-script`, ☑️ `recommended`, 🟢 `recommended-module`, ✅ `recommended-script`.
 
@@ -6,8 +6,8 @@
 
 <!-- end auto-generated rule header -->
 
-When we make a CLI tool with Node.js, we add `bin` field to `package.json`, then we add a shebang the entry file.
-This rule suggests correct usage of shebang.
+When we make a CLI tool with Node.js, we add `bin` field to `package.json`, then we add a hashbang the entry file.
+This rule suggests correct usage of hashbang.
 
 ## 📖 Rule Details
 
@@ -16,13 +16,13 @@ Starting from the directory of the target file, it goes up ancestor directories 
 
 If `package.json` was not found, this rule does nothing.
 
-This rule checks `bin` field of `package.json`, then if a target file matches one of `bin` files, it checks whether or not there is a correct shebang.
-Otherwise it checks whether or not there is not a shebang.
+This rule checks `bin` field of `package.json`, then if a target file matches one of `bin` files, it checks whether or not there is a correct hashbang.
+Otherwise it checks whether or not there is not a hashbang.
 
 The following patterns are considered problems for files in `bin` field of `package.json`:
 
 ```js
-console.log("hello"); /*error This file needs shebang "#!/usr/bin/env node".*/
+console.log("hello"); /*error This file needs hashbang "#!/usr/bin/env node".*/
 ```
 
 ```js
@@ -40,7 +40,7 @@ console.log("hello");
 The following patterns are considered problems for other files:
 
 ```js
-#!/usr/bin/env node   /*error This file needs no shebang.*/
+#!/usr/bin/env node   /*error This file needs no hashbang.*/
 console.log("hello");
 ```
 
@@ -61,7 +61,11 @@ console.log("hello");
 
 ```json
 {
-    "n/shebang": ["error", {"convertPath": null}]
+    "n/hashbang": ["error", {
+        "convertPath": null,
+        "ignoreUnpublished": false,
+        "additionalExecutables": [],
+    }]
 }
 ```
 
@@ -70,7 +74,15 @@ console.log("hello");
 This can be configured in the rule options or as a shared setting [`settings.convertPath`](https://github.com/eslint-community/eslint-plugin-n/tree/master/docs/shared-settings.md#convertpath).
 Please see the shared settings documentation for more information.
 
+#### ignoreUnpublished
+
+Allow for files that are not published to npm to be ignored by this rule.
+
+#### additionalExecutables
+
+Mark files as executable that are not referenced by the package.json#bin property
+
 ## 🔎 Implementation
 
-- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/shebang.js)
-- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/shebang.js)
+- [Rule source](https://github.com/eslint-community/eslint-plugin-n/tree/master/lib/rules/hashbang.js)
+- [Test source](https://github.com/eslint-community/eslint-plugin-n/tree/master/tests/lib/rules/hashbang.js)

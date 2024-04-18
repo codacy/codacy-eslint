@@ -3,6 +3,12 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/88324e5ee7464c62abe07115b884c6a9)](https://app.codacy.com/gh/codacy/codacy-eslint/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CircleCI](https://circleci.com/gh/codacy/codacy-eslint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-eslint)
 
+## Manually upgrading packages / plugins / configs
+
+```shell
+npm run upgrade
+```
+
 ## Adding new packages / plugins / configs
 
 Install the package / plugin using npm:
@@ -20,9 +26,9 @@ npm install --legacy-peer-deps --omit=dev package-name
     -   Add a section similar to the following example:
         ```typescript
         await docGenerator.downloadDocs(
-          // package name
+          // plugin prefix (e.g., xss/some-pattern-id)
           "eslint-plugin-xss",
-          // path to .md pattern files within github
+          // path to .md patterns files within github
           `/Rantanen/eslint-plugin-xss/master/docs/rules/`,
           // prefix for tag relases (for example if tags are "v.1.0.0" you have to prefix tags with "v.")
           // or "false" if package has no tags released
@@ -36,7 +42,7 @@ npm install --legacy-peer-deps --omit=dev package-name
 
     -   In `src/eslintPlugins.ts` add a new value to the array with the name of the package/plugin:
         ```typescript
-        // make sure this one matches the correct name of the package
+        // make sure it matches the correct name of the package
         const packageNames = [
           //(...)
           "@angular-eslint/eslint-plugin",

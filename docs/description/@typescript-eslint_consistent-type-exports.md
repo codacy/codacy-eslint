@@ -81,23 +81,6 @@ export type { T };
 export { x };
 ```
 
-<!--tabs-->
-
-#### ❌ Incorrect
-
-```ts option='{ "fixMixedExportsWithInlineTypeSpecifier": true }'
-export { Button } from 'some-library';
-export type { ButtonProps } from 'some-library';
-```
-
-#### ✅ Correct
-
-```ts option='{ "fixMixedExportsWithInlineTypeSpecifier": true }'
-export { Button, type ButtonProps } from 'some-library';
-```
-
-<!--/tabs-->
-
 ## When Not To Use It
 
 If you use `--isolatedModules` the compiler would error if a type is not re-exported using `export type`.

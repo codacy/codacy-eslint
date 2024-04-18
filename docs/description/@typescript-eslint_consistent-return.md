@@ -9,6 +9,10 @@ description: 'Require `return` statements to either always or never specify valu
 This rule extends the base [`eslint/consistent-return`](https://eslint.org/docs/rules/consistent-return) rule.
 This version adds support for functions that return `void` or `Promise<void>`.
 
+:::danger warning
+If possible, it is recommended to use tsconfig's `noImplicitReturns` option rather than this rule. `noImplicitReturns` is powered by TS's type information and control-flow analysis so it has better coverage than this rule.
+:::
+
 <!--tabs-->
 
 #### ❌ Incorrect

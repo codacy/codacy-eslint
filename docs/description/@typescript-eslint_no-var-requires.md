@@ -42,13 +42,13 @@ With `{allow: ['/package\\.json$']}`:
 
 #### ❌ Incorrect
 
-```ts
+```ts option='{ "allow": ["/package.json$"] }'
 const foo = require('../data.json');
 ```
 
 #### ✅ Correct
 
-```ts
+```ts option='{ "allow": ["/package.json$"] }'
 const foo = require('../package.json');
 ```
 
