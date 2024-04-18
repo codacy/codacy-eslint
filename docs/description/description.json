@@ -4275,13 +4275,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-throw-literal",
-    "title": "@typescript eslint: No throw literal",
-    "description": "Disallow throwing literals as exceptions",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
     "title": "@typescript eslint: No unnecessary boolean literal compare",
     "description": "Disallow unnecessary equality comparisons against boolean literals",
@@ -4449,6 +4442,13 @@
     "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
     "title": "@typescript eslint: Non nullable type assertion style",
     "description": "Enforce non-null assertions over explicit type casts",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_only-throw-error",
+    "title": "@typescript eslint: Only throw error",
+    "description": "Disallow throwing non-`Error` values as exceptions",
     "timeToFix": 5
   },
   {
@@ -6143,6 +6143,13 @@
     "patternId": "es-x_no-array-string-prototype-at",
     "title": "Es x: No array string prototype at",
     "description": "Disallow the `{Array,String}.prototype.at()` methods.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-arraybuffer-prototype-transfer",
+    "title": "Es x: No arraybuffer prototype transfer",
+    "description": "Disallow the `ArrayBuffer.prototype.transfer` method.",
     "timeToFix": 5
   },
   {
@@ -8042,41 +8049,6 @@
   },
   {
     "parameters": [],
-    "patternId": "i18n-json_valid-json",
-    "title": "I18n json: Valid json",
-    "description": "Validates the JSON translation file",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "i18n-json_valid-message-syntax",
-    "title": "I18n json: Valid message syntax",
-    "description": "Validates message syntax for each translation key in the file.",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "i18n-json_identical-keys",
-    "title": "I18n json: Identical keys",
-    "description": "Verifies the key structure for the translation file matches the key structure specified in the options",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "i18n-json_sorted-keys",
-    "title": "I18n json: Sorted keys",
-    "description": "Ensure an order for the translation keys. (Recursive)",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "i18n-json_identical-placeholders",
-    "title": "I18n json: Identical placeholders",
-    "description": "Verifies the ICU message placeholders for the translations matches with the reference language file specified in the options",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "i18next_no-literal-string",
     "title": "I18next: No literal string",
     "description": "Disallow literal string",
@@ -8822,6 +8794,13 @@
     "patternId": "jest_prefer-hooks-on-top",
     "title": "Jest: Prefer hooks on top",
     "description": "Suggest having hooks before any test cases",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-importing-jest-globals",
+    "title": "Jest: Prefer importing jest globals",
+    "description": "Prefer importing Jest globals",
     "timeToFix": 5
   },
   {
@@ -11581,6 +11560,13 @@
   },
   {
     "parameters": [],
+    "patternId": "n_prefer-node-protocol",
+    "title": "N: Prefer node protocol",
+    "description": "Enforce using the `node:` protocol when importing Node.js builtin modules.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "n_prefer-promises_dns",
     "title": "N: [Prefer promises] Dns",
     "description": "Enforce `require(\"dns\").promises`",
@@ -11602,9 +11588,9 @@
   },
   {
     "parameters": [],
-    "patternId": "n_shebang",
-    "title": "N: Shebang",
-    "description": "Require correct usage of shebang",
+    "patternId": "n_hashbang",
+    "title": "N: Hashbang",
+    "description": "Require correct usage of hashbang",
     "timeToFix": 5
   },
   {
@@ -11833,6 +11819,10 @@
   {
     "parameters": [
       {
+        "name": "optionality-order",
+        "description": "optionality-order"
+      },
+      {
         "name": "type",
         "description": "type"
       },
@@ -12028,6 +12018,26 @@
     "patternId": "perfectionist_sort-svelte-attributes",
     "title": "Perfectionist: Sort svelte attributes",
     "description": "Enforce sorted Svelte attributes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "type",
+        "description": "type"
+      },
+      {
+        "name": "order",
+        "description": "order"
+      },
+      {
+        "name": "ignore-case",
+        "description": "ignore-case"
+      }
+    ],
+    "patternId": "perfectionist_sort-intersection-types",
+    "title": "Perfectionist: Sort intersection types",
+    "description": "Enforce sorted intersection types",
     "timeToFix": 5
   },
   {
@@ -14299,6 +14309,13 @@
   },
   {
     "parameters": [],
+    "patternId": "regexp_unicode-property",
+    "title": "Regexp: Unicode property",
+    "description": "Enforce consistent naming of unicode properties",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "regexp_use-ignore-case",
     "title": "Regexp: Use ignore case",
     "description": "Use the `i` flag if it simplifies the pattern",
@@ -16044,6 +16061,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-anonymous-default-export",
+    "title": "Unicorn: No anonymous default export",
+    "description": "Disallow anonymous functions and classes as the default export.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-array-callback-reference",
     "title": "Unicorn: No array callback reference",
     "description": "Prevent passing a function reference directly to iterator methods.",
@@ -16087,6 +16111,13 @@
     "patternId": "unicorn_no-await-expression-member",
     "title": "Unicorn: No await expression member",
     "description": "Disallow member access from await expression.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-await-in-promise-methods",
+    "title": "Unicorn: No await in promise methods",
+    "description": "Disallow using `await` in `Promise` method parameters.",
     "timeToFix": 5
   },
   {
@@ -16204,6 +16235,13 @@
     "patternId": "unicorn_no-process-exit",
     "title": "Unicorn: No process exit",
     "description": "Disallow `process.exit()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-single-promise-in-promise-methods",
+    "title": "Unicorn: No single promise in promise methods",
+    "description": "Disallow passing single-element arrays to `Promise` methods.",
     "timeToFix": 5
   },
   {
@@ -19471,6 +19509,12 @@
     "parameters": [],
     "patternId": "you-dont-need-lodash-underscore_cast-array",
     "title": "You dont need lodash underscore: Cast array",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "you-dont-need-lodash-underscore_clone-deep",
+    "title": "You dont need lodash underscore: Clone deep",
     "timeToFix": 5
   },
   {

@@ -170,8 +170,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-n",
-    "/eslint-community/eslint-plugin-n/master/docs/rules/",
-    ""
+    "/eslint-community/eslint-plugin-n/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(

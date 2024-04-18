@@ -16,6 +16,7 @@ export interface Plugin {
 //   "eslint-plugin-header"
 //   "eslint-plugin-html"
 //   "eslint-plugin-markdown"
+//   "eslint-plugin-vitest-globals"
 
 const packageNames: string[] = [
   "@angular-eslint/eslint-plugin",
@@ -45,7 +46,6 @@ const packageNames: string[] = [
   "eslint-plugin-flowtype",
   "eslint-plugin-fp",
   "eslint-plugin-functional",
-  "eslint-plugin-i18n-json",
   "eslint-plugin-i18next",
   "eslint-plugin-import",
   "eslint-plugin-import-alias",
@@ -119,11 +119,6 @@ const packageNames: string[] = [
   "eslint-plugin-you-dont-need-lodash-underscore"
 ]
 
-async function getModuleRules (packageName: string) {
-  const module = await import(packageName)
-  return module.rules || []
-}
-
 const plugins = Promise.all(packageNames.map(async (packageName) => {
   const rules = packageNames.includes(packageName) 
     ? await getModuleRules(packageName) 
@@ -132,6 +127,24 @@ const plugins = Promise.all(packageNames.map(async (packageName) => {
 
   return { packageName, name, rules }
 })) as Promise<Plugin[]>
+
+const baseRules = Array.from(new Linter().getRules().entries())
+
+async function getModuleRules (packageName: string) {
+  const module = await import(packageName)
+  return module.rules || []
+}
+
+async function getPluginsRules (): Promise<[string, Rule.RuleModule][]> {
+  return (await plugins)
+    .filter((plugin) => plugin.rules)
+    .flatMap((plugin) => Object.entries(plugin.rules)
+      .map(([patternId, rule]) => [
+        `${plugin.name}/${patternId}`,
+        rule
+      ]) as [string, Rule.RuleModule][]
+    )
+}
 
 export async function pluginByPackageName (packageName: string): Promise<Plugin> {
   const defaultPlugin = { 
@@ -145,18 +158,6 @@ export async function pluginByPackageName (packageName: string): Promise<Plugin>
 
 export async function getPluginsName (): Promise<string[]> {
   return (await plugins).map(plugin => plugin.name)
-}
-
-const baseRules = Array.from(new Linter().getRules().entries())
-async function getPluginsRules (): Promise<[string, Rule.RuleModule][]> {
-  return (await plugins)
-    .filter((plugin) => plugin.rules)
-    .flatMap((plugin) => Object.entries(plugin.rules)
-      .map(([patternId, rule]) => [
-        `${plugin.name}/${patternId}`,
-        rule
-      ]) as [string, Rule.RuleModule][]
-    )
 }
 
 export async function getAllRules (): Promise<[string, Rule.RuleModule][]> {

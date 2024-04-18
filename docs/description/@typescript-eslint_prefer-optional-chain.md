@@ -97,8 +97,7 @@ declare const thing: any;
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkAny: false`
+#### ✅ Correct for `checkAny: false`
 
 ```ts option='{ "checkAny": false }'
 declare const thing: any;
@@ -122,8 +121,7 @@ declare const thing: unknown;
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkUnknown: false`
+#### ✅ Correct for `checkUnknown: false`
 
 ```ts option='{ "checkUnknown": false }'
 declare const thing: unknown;
@@ -147,8 +145,7 @@ declare const thing: string;
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkString: false`
+#### ✅ Correct for `checkString: false`
 
 ```ts option='{ "checkString": false }'
 declare const thing: string;
@@ -172,8 +169,7 @@ declare const thing: number;
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkNumber: false`
+#### ✅ Correct for `checkNumber: false`
 
 ```ts option='{ "checkNumber": false }'
 declare const thing: number;
@@ -187,21 +183,34 @@ thing && thing.toString();
 
 When this option is `true` the rule will check operands that are typed as `boolean` when inspecting "loose boolean" operands.
 
+:::note
+
+This rule intentionally ignores the following case:
+
+```ts
+declare const x: false | { a: string };
+x && x.a;
+!x || x.a;
+```
+
+The boolean expression narrows out the non-nullish falsy cases - so converting the chain to `x?.a` would introduce a type error.
+
+:::
+
 <!--tabs-->
 
 #### ❌ Incorrect for `checkBoolean: true`
 
 ```ts option='{ "checkBoolean": true }'
-declare const thing: boolean;
+declare const thing: true;
 
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkBoolean: false`
+#### ✅ Correct for `checkBoolean: false`
 
 ```ts option='{ "checkBoolean": false }'
-declare const thing: boolean;
+declare const thing: true;
 
 thing && thing.toString();
 ```
@@ -222,8 +231,7 @@ declare const thing: bigint;
 thing && thing.toString();
 ```
 
-#### ✅ Correct
- for `checkBigInt: false`
+#### ✅ Correct for `checkBigInt: false`
 
 ```ts option='{ "checkBigInt": false }'
 declare const thing: bigint;
@@ -241,13 +249,12 @@ When this option is `true` the rule will skip operands that are not typed with `
 
 #### ❌ Incorrect for `requireNullish: true`
 
-```ts option='{ "requireNullish": true }'
+```ts option='{ "requireNullish": true }' skipValidation
 declare const thing1: string | null;
 thing1 && thing1.toString();
 ```
 
-#### ✅ Correct
- for `requireNullish: true`
+#### ✅ Correct for `requireNullish: true`
 
 ```ts option='{ "requireNullish": true }'
 declare const thing1: string | null;

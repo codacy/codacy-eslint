@@ -50,31 +50,30 @@ async function generateEslintOptions (
 ): Promise<ESLint.Options> {
   debug("options: creating")
 
-  const patterns = codacyrc.tools[0].patterns || DEBUG && await retrieveCodacyPatterns() || []
+  let patterns = codacyrc.tools[0].patterns || []
+  debug(`options: ${patterns.length} patterns in codacyrc`)
+
   const existsEslintConfig = existsEslintConfigInRepoRoot(srcDirPath)
-  const useCodacyPatterns = patterns.length || !existsEslintConfig
-  const useDefaultPatterns = !patterns.length && !existsEslintConfig
+  const useCodacyPatterns = patterns.length
+  const useRepoPatterns = !useCodacyPatterns
   const baseOptions: ESLint.Options = {
     "cwd": srcDirPath,
     "errorOnUnmatchedPattern": false,
-    "useEslintrc": !patterns.length
+    "useEslintrc": useRepoPatterns
   }
 
-  debug(`options: ${patterns.length} patterns in codacyrc`)
-
-  if (existsEslintConfig && !patterns.length) {
+  if (!DEBUG && useRepoPatterns) {
     debug("options: using eslintrc from repo root")
     return baseOptions
   }
 
   const options: ESLint.Options = Object.assign({}, baseOptions, cloneDeep(defaultOptions))
 
-  if (DEBUG && useDefaultPatterns) {
-    debug(`options: setting all ${patterns.length} patterns`)
+  if (DEBUG && useRepoPatterns && !existsEslintConfig) {
+    const patternsSet = "recommended"
+    patterns = await retrieveCodacyPatterns(patternsSet)
     options.baseConfig.rules = convertPatternsToEslintRules(patterns)
-  } else if (useDefaultPatterns) {
-    debug("options: using eslintrc from repo")
-    options.baseConfig.plugins = []
+    debug(`options: setting ${patternsSet} (${patterns.length}) patterns`)
   } else if (useCodacyPatterns) {
     //TODO: move this logic to a generic (or specific) plugin function
 

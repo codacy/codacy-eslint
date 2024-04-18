@@ -4,6 +4,7 @@
 
 * [Options](#user-content-informative-docs-options)
     * [`aliases`](#user-content-informative-docs-options-aliases)
+    * [`excludedTags`](#user-content-informative-docs-options-excludedtags)
     * [`uselessWords`](#user-content-informative-docs-options-uselesswords)
 * [Context and settings](#user-content-informative-docs-context-and-settings)
 * [Failing examples](#user-content-informative-docs-failing-examples)
@@ -46,6 +47,23 @@ The default `aliases` option is:
   "a": ["an", "our"]
 }
 ```
+
+<a name="user-content-informative-docs-options-excludedtags"></a>
+<a name="informative-docs-options-excludedtags"></a>
+### <code>excludedTags</code>
+
+Tags that should not be checked for valid contents.
+
+For example, with `{ excludedTags: ["category"] }`, the following comment would not be considered uninformative:
+
+```js
+/** @category Types */
+function computeTypes(node) {
+  // ...
+}
+```
+
+No tags are excluded by default.
 
 <a name="user-content-informative-docs-options-uselesswords"></a>
 <a name="informative-docs-options-uselesswords"></a>

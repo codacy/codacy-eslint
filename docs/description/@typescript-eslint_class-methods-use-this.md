@@ -68,7 +68,7 @@ Example of incorrect code when `ignoreClassesThatImplementAnInterface` is set to
 
 #### ❌ Incorrect
 
-```ts
+```ts option='{ "ignoreClassesThatImplementAnInterface": "public-fields" }'
 class X implements Y {
   method() {}
   property = () => {};
@@ -83,7 +83,7 @@ class X implements Y {
 
 #### ✅ Correct
 
-```ts
+```ts option='{ "ignoreClassesThatImplementAnInterface": "public-fields" }'
 class X implements Y {
   method() {}
   property = () => {};

@@ -4285,13 +4285,6 @@
       "enabled": true
     },
     {
-      "patternId": "@typescript-eslint_no-throw-literal",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
       "patternId": "@typescript-eslint_no-unnecessary-boolean-literal-compare",
       "level": "Warning",
       "category": "BestPractice",
@@ -4459,6 +4452,13 @@
       "patternId": "@typescript-eslint_non-nullable-type-assertion-style",
       "level": "Warning",
       "category": "BestPractice",
+      "parameters": [],
+      "enabled": true
+    },
+    {
+      "patternId": "@typescript-eslint_only-throw-error",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": true
     },
@@ -6171,6 +6171,13 @@
       "enabled": false
     },
     {
+      "patternId": "es-x_no-arraybuffer-prototype-transfer",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "es-x_no-arrow-functions",
       "level": "Error",
       "category": "ErrorProne",
@@ -7365,7 +7372,7 @@
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "eslint-plugin_fixer-return",
@@ -8109,41 +8116,6 @@
       "patternId": "functional_readonly-type",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "i18n-json_valid-json",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "i18n-json_valid-message-syntax",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "i18n-json_identical-keys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "i18n-json_sorted-keys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "i18n-json_identical-placeholders",
-      "level": "Error",
-      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -8916,6 +8888,13 @@
       "patternId": "jest_prefer-hooks-on-top",
       "level": "Warning",
       "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jest_prefer-importing-jest-globals",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -11767,6 +11746,13 @@
       "enabled": false
     },
     {
+      "patternId": "n_prefer-node-protocol",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "n_prefer-promises_dns",
       "level": "Warning",
       "category": "BestPractice",
@@ -11788,7 +11774,7 @@
       "enabled": false
     },
     {
-      "patternId": "n_shebang",
+      "patternId": "n_hashbang",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
@@ -12041,6 +12027,10 @@
       "category": "BestPractice",
       "parameters": [
         {
+          "name": "optionality-order",
+          "default": "ignore"
+        },
+        {
           "name": "type",
           "default": "alphabetical"
         },
@@ -12217,6 +12207,26 @@
     },
     {
       "patternId": "perfectionist_sort-svelte-attributes",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "type",
+          "default": "alphabetical"
+        },
+        {
+          "name": "order",
+          "default": "asc"
+        },
+        {
+          "name": "ignore-case",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-intersection-types",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [
@@ -14540,6 +14550,13 @@
       "enabled": false
     },
     {
+      "patternId": "regexp_unicode-property",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "regexp_use-ignore-case",
       "level": "Warning",
       "category": "BestPractice",
@@ -16327,6 +16344,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_no-anonymous-default-export",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_no-array-callback-reference",
       "level": "Error",
       "category": "ErrorProne",
@@ -16368,6 +16392,13 @@
     },
     {
       "patternId": "unicorn_no-await-expression-member",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-await-in-promise-methods",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -16485,6 +16516,13 @@
     },
     {
       "patternId": "unicorn_no-process-exit",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-single-promise-in-promise-methods",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -19840,6 +19878,13 @@
     },
     {
       "patternId": "you-dont-need-lodash-underscore_cast-array",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "you-dont-need-lodash-underscore_clone-deep",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
