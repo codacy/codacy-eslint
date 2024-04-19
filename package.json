@@ -317,7 +317,7 @@
     "eslint-plugin-vitest-globals": "^1.5.0",
     "eslint-plugin-vue": "^9.25.0",
     "eslint-plugin-vue-scoped-css": "^2.8.0",
-    "eslint-plugin-vuejs-accessibility": "^2.2.1",
+    "eslint-plugin-vuejs-accessibility": "^2.3.0",
     "eslint-plugin-wdio": "^8.24.12",
     "eslint-plugin-xss": "^0.1.12",
     "eslint-plugin-yml": "^1.14.0",
