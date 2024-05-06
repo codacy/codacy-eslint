@@ -104,7 +104,7 @@
     "@nx/eslint-plugin": "^18.3.1",
     "@nx/express": "^18.3.1",
     "@nx/jest": "^18.3.1",
-    "@nx/linter": "^18.3.1",
+    "@nx/linter": "^18.3.4",
     "@nx/nest": "^18.3.1",
     "@nx/next": "^18.3.1",
     "@nx/node": "^18.3.1",
