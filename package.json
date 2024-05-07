@@ -336,7 +336,7 @@
     "next": "^14.2.2",
     "npm": "^10.5.2",
     "npm-check-updates": "^16.14.18",
-    "nx": "^18.3.1",
+    "nx": "^19.0.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18.2.0",
