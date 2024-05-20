@@ -249,7 +249,7 @@ When this option is `true` the rule will skip operands that are not typed with `
 
 #### ❌ Incorrect for `requireNullish: true`
 
-```ts option='{ "requireNullish": true }' skipValidation
+```ts option='{ "requireNullish": true }'
 declare const thing1: string | null;
 thing1 && thing1.toString();
 ```

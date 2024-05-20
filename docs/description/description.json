@@ -2003,6 +2003,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@angular-eslint_no-duplicates-in-metadata-arrays",
+    "title": "@angular eslint: No duplicates in metadata arrays",
+    "description": "Ensures that metadata arrays do not contain duplicate entries.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@angular-eslint_no-empty-lifecycle-method",
     "title": "@angular eslint: No empty lifecycle method",
     "description": "Disallows declaring empty lifecycle methods",
@@ -2153,18 +2160,6 @@
     "patternId": "@angular-eslint_sort-lifecycle-methods",
     "title": "@angular eslint: Sort lifecycle methods",
     "description": "Ensures that lifecycle methods are declared in order of execution",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "locale",
-        "description": "locale"
-      }
-    ],
-    "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
-    "title": "@angular eslint: Sort ngmodule metadata arrays",
-    "description": "Ensures ASC alphabetical order for `NgModule` metadata arrays for easy visual scanning",
     "timeToFix": 5
   },
   {
@@ -2389,6 +2384,13 @@
     "patternId": "@lwc_lwc_valid-api",
     "title": "@lwc: [Lwc] Valid api",
     "description": "Validate api decorator usage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@lwc_lwc_valid-graphql-wire-adapter-callback-parameters",
+    "title": "@lwc: [Lwc] Valid graphql wire adapter callback parameters",
+    "description": "Validate graphql error callback parameter",
     "timeToFix": 5
   },
   {
@@ -3042,6 +3044,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@stylistic_line-comment-position",
+    "title": "@stylistic: Line comment position",
+    "description": "Enforce position of line comments",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@stylistic_linebreak-style",
     "title": "@stylistic: Linebreak style",
     "description": "Enforce consistent linebreak style",
@@ -3116,6 +3125,13 @@
     "patternId": "@stylistic_max-statements-per-line",
     "title": "@stylistic: Max statements per line",
     "description": "Enforce a maximum number of statements allowed per line",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_multiline-comment-style",
+    "title": "@stylistic: Multiline comment style",
+    "description": "Enforce a particular style for multiline comments",
     "timeToFix": 5
   },
   {
@@ -3610,6 +3626,13 @@
     "patternId": "@stylistic_jsx-first-prop-new-line",
     "title": "@stylistic: Jsx first prop new line",
     "description": "Enforce proper position of the first property in JSX",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@stylistic_jsx-function-call-newline",
+    "title": "@stylistic: Jsx function call newline",
+    "description": "Enforce line breaks before and after JSX elements when they are used as arguments to a function.",
     "timeToFix": 5
   },
   {
@@ -5076,7 +5099,7 @@
     "parameters": [],
     "patternId": "cypress_no-assigning-return-values",
     "title": "Cypress: No assigning return values",
-    "description": "Prevent assigning return values of cy calls",
+    "description": "Disallow assigning return values of `cy` calls",
     "timeToFix": 5
   },
   {
@@ -5088,49 +5111,56 @@
     ],
     "patternId": "cypress_unsafe-to-chain-command",
     "title": "Cypress: Unsafe to chain command",
-    "description": "Actions should be in the end of chains, not in the middle",
+    "description": "Disallow actions within chains",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_no-unnecessary-waiting",
     "title": "Cypress: No unnecessary waiting",
-    "description": "Prevent waiting for arbitrary time periods",
+    "description": "Disallow waiting for arbitrary time periods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cypress_no-async-before",
+    "title": "Cypress: No async before",
+    "description": "Disallow using `async`/`await` in Cypress `before` methods",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_no-async-tests",
     "title": "Cypress: No async tests",
-    "description": "Prevent using async/await in Cypress test cases",
+    "description": "Disallow using `async`/`await` in Cypress test cases",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_assertion-before-screenshot",
     "title": "Cypress: Assertion before screenshot",
-    "description": "Assert on the page state before taking a screenshot, so the screenshot is consistent",
+    "description": "Require screenshots to be preceded by an assertion",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_require-data-selectors",
     "title": "Cypress: Require data selectors",
-    "description": "Use data-* attributes to provide context to your selectors and insulate them from CSS or JS changes https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements",
+    "description": "Require `data-*` attribute selectors",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_no-force",
     "title": "Cypress: No force",
-    "description": "Disallow using of 'force: true' option for click and type calls",
+    "description": "Disallow using `force: true` with action commands",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "cypress_no-pause",
     "title": "Cypress: No pause",
-    "description": "Disallow using of 'cy.pause' calls",
+    "description": "Disallow using `cy.pause()` calls",
     "timeToFix": 5
   },
   {
@@ -7488,6 +7518,18 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "allowNonBoolean",
+        "description": "allowNonBoolean"
+      }
+    ],
+    "patternId": "eslint-plugin_require-meta-docs-recommended",
+    "title": "Eslint plugin: Require meta docs recommended",
+    "description": "Require rules to implement a `meta.docs.recommended` property",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "eslint-plugin_require-meta-docs-url",
     "title": "Eslint plugin: Require meta docs url",
@@ -7872,6 +7914,132 @@
     "parameters": [],
     "patternId": "flowtype_use-read-only-spread",
     "title": "Flowtype: Use read only spread",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_blocklist-elements",
+    "title": "Formatjs: Blocklist elements",
+    "description": "Disallow specific elements in ICU message format",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_enforce-default-message",
+    "title": "Formatjs: Enforce default message",
+    "description": "Enforce defaultMessage in message descriptor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_enforce-description",
+    "title": "Formatjs: Enforce description",
+    "description": "Enforce description in message descriptor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_enforce-id",
+    "title": "Formatjs: Enforce id",
+    "description": "Enforce (generated) ID in message descriptor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_enforce-placeholders",
+    "title": "Formatjs: Enforce placeholders",
+    "description": "Enforce that all messages with placeholders have enough passed-in values",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_enforce-plural-rules",
+    "title": "Formatjs: Enforce plural rules",
+    "description": "Enforce plural rules to always specify certain categories like `one`/`other`",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-camel-case",
+    "title": "Formatjs: No camel case",
+    "description": "Disallow camel case placeholders in message",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-complex-selectors",
+    "title": "Formatjs: No complex selectors",
+    "description": "Make sure a sentence is not too complex. \nComplexity is determined by how many strings are produced when we try to\nflatten the sentence given its selectors. For example:\n\"I have {count, plural, one{a dog} other{many dogs}}\"\nhas the complexity of 2 because flattening the plural selector\nresults in 2 sentences: \"I have a dog\" & \"I have many dogs\".\nDefault complexity limit is 20 \n(using Smartling as a reference: https://help.smartling.com/hc/en-us/articles/360008030994-ICU-MessageFormat)\n",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-emoji",
+    "title": "Formatjs: No emoji",
+    "description": "Disallow emojis in message",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-id",
+    "title": "Formatjs: No id",
+    "description": "Ban explicit ID from MessageDescriptor",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-invalid-icu",
+    "title": "Formatjs: No invalid icu",
+    "description": "Make sure ICU messages are formatted correctly with no bad select statements, plurals, etc.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-literal-string-in-jsx",
+    "title": "Formatjs: No literal string in jsx",
+    "description": "Disallow untranslated literal strings without translation.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-multiple-plurals",
+    "title": "Formatjs: No multiple plurals",
+    "description": "Disallow multiple plural rules in the same message",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-multiple-whitespaces",
+    "title": "Formatjs: No multiple whitespaces",
+    "description": "Prevents usage of multiple consecutive whitespaces in message",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-offset",
+    "title": "Formatjs: No offset",
+    "description": "Disallow offset in plural rules",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_no-useless-message",
+    "title": "Formatjs: No useless message",
+    "description": "Disallow unnecessary formatted message",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_prefer-formatted-message",
+    "title": "Formatjs: Prefer formatted message",
+    "description": "Prefer `FormattedMessage` component over `intl.formatMessage` if applicable.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "formatjs_prefer-pound-in-plural",
+    "title": "Formatjs: Prefer pound in plural",
+    "description": "Prefer using # to reference the count in the plural argument.",
     "timeToFix": 5
   },
   {
@@ -15964,6 +16132,13 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "unicorn_consistent-empty-array-spread",
+    "title": "Unicorn: Consistent empty array spread",
+    "description": "Prefer consistent types when spreading a ternary in an array literal.",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "checkArrowFunctions",
@@ -16164,6 +16339,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-invalid-fetch-options",
+    "title": "Unicorn: No invalid fetch options",
+    "description": "Disallow invalid options in `fetch()` and `new Request()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-invalid-remove-event-listener",
     "title": "Unicorn: No invalid remove event listener",
     "description": "Prevent calling `EventTarget#removeEventListener()` with the result of an expression.",
@@ -16181,6 +16363,13 @@
     "patternId": "unicorn_no-lonely-if",
     "title": "Unicorn: No lonely if",
     "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-magic-array-flat-depth",
+    "title": "Unicorn: No magic array flat depth",
+    "description": "Disallow a magic number as the `depth` argument in `Array#flat(…).`",
     "timeToFix": 5
   },
   {
@@ -16596,6 +16785,10 @@
       {
         "name": "checkInfinity",
         "description": "checkInfinity"
+      },
+      {
+        "name": "checkNaN",
+        "description": "checkNaN"
       }
     ],
     "patternId": "unicorn_prefer-number-properties",
@@ -16668,6 +16861,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_prefer-string-raw",
+    "title": "Unicorn: Prefer string raw",
+    "description": "Prefer using the `String.raw` tag to avoid escaping `\\`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_prefer-string-replace-all",
     "title": "Unicorn: Prefer string replace all",
     "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
@@ -16692,6 +16892,13 @@
     "patternId": "unicorn_prefer-string-trim-start-end",
     "title": "Unicorn: Prefer string trim start end",
     "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_prefer-structured-clone",
+    "title": "Unicorn: Prefer structured clone",
+    "description": "Prefer using `structuredClone` to create a deep clone.",
     "timeToFix": 5
   },
   {
@@ -16798,7 +17005,7 @@
     "parameters": [],
     "patternId": "unicorn_throw-new-error",
     "title": "Unicorn: Throw new error",
-    "description": "Require `new` when throwing an error.",
+    "description": "Require `new` when creating an error.",
     "timeToFix": 5
   },
   {

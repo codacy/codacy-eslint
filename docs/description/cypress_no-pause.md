@@ -1,16 +1,19 @@
-## Do not use `cy.pause` command
+# Disallow using `cy.pause()` calls (`cypress/no-pause`)
 
-It is recommended to remove [cy.pause](https://on.cypress.io/pause) command before committing the specs to avoid other developers getting unexpected results.
+<!-- end auto-generated rule header -->
+It is recommended to remove any [cy.pause](https://on.cypress.io/pause) commands before committing specs to avoid other developers getting unexpected results.
 
-Invalid:
+## Rule Details
+
+Examples of **incorrect** code for this rule:
 
 ```js
 cy.pause();
+cy.get('selector').pause();
 ```
 
-Valid:
+Examples of **correct** code for this rule:
 
 ```js
-// only the parent cy.pause command is detected
-cy.get('selector').pause();
+cy.get('selector')
 ```
