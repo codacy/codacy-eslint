@@ -454,13 +454,6 @@ function quux () {}
 // Message: Invalid name: empty name
 
 /**
- * @param {Object[]} employees
- * @param {string} [] - The name of an employee.
- */
-function quux () {}
-// Message: Invalid name: empty name
-
-/**
  * @param {string} [name=] - The name of an employee.
  */
 function quux () {}
@@ -887,5 +880,9 @@ function quux() {
 function quux() {
 
 }
+
+/**
+ * @import { TestOne, TestTwo } from "./types"
+ */
 ````
 

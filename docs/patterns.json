@@ -2005,6 +2005,13 @@
       "enabled": false
     },
     {
+      "patternId": "@angular-eslint_no-duplicates-in-metadata-arrays",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@angular-eslint_no-empty-lifecycle-method",
       "level": "Warning",
       "category": "BestPractice",
@@ -2156,18 +2163,6 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@angular-eslint_sort-ngmodule-metadata-arrays",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "locale",
-          "default": "en-US"
-        }
-      ],
       "enabled": false
     },
     {
@@ -2389,6 +2384,13 @@
     },
     {
       "patternId": "@lwc_lwc_valid-api",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "@lwc_lwc_valid-graphql-wire-adapter-callback-parameters",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
@@ -3052,6 +3054,13 @@
       "enabled": false
     },
     {
+      "patternId": "@stylistic_line-comment-position",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "@stylistic_linebreak-style",
       "level": "Info",
       "category": "CodeStyle",
@@ -3127,6 +3136,13 @@
           "default": 1
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "@stylistic_multiline-comment-style",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -3622,6 +3638,13 @@
       "category": "CodeStyle",
       "parameters": [],
       "enabled": false
+    },
+    {
+      "patternId": "@stylistic_jsx-function-call-newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": true
     },
     {
       "patternId": "@stylistic_jsx-indent",
@@ -5117,6 +5140,13 @@
       "enabled": false
     },
     {
+      "patternId": "cypress_no-async-before",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "cypress_no-async-tests",
       "level": "Error",
       "category": "ErrorProne",
@@ -5132,22 +5162,22 @@
     },
     {
       "patternId": "cypress_require-data-selectors",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "cypress_no-force",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
     {
       "patternId": "cypress_no-pause",
-      "level": "Error",
-      "category": "ErrorProne",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -7513,6 +7543,18 @@
       "enabled": false
     },
     {
+      "patternId": "eslint-plugin_require-meta-docs-recommended",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [
+        {
+          "name": "allowNonBoolean",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "eslint-plugin_require-meta-docs-url",
       "level": "Warning",
       "category": "BestPractice",
@@ -7943,6 +7985,132 @@
       "patternId": "flowtype_use-read-only-spread",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_blocklist-elements",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_enforce-default-message",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_enforce-description",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_enforce-id",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_enforce-placeholders",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_enforce-plural-rules",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-camel-case",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-complex-selectors",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-emoji",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-id",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-invalid-icu",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-literal-string-in-jsx",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-multiple-plurals",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-multiple-whitespaces",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-offset",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_no-useless-message",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_prefer-formatted-message",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "formatjs_prefer-pound-in-plural",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
@@ -16248,6 +16416,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_consistent-empty-array-spread",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_consistent-function-scoping",
       "level": "Warning",
       "category": "BestPractice",
@@ -16447,6 +16622,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_no-invalid-fetch-options",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_no-invalid-remove-event-listener",
       "level": "Error",
       "category": "ErrorProne",
@@ -16462,6 +16644,13 @@
     },
     {
       "patternId": "unicorn_no-lonely-if",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-magic-array-flat-depth",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -16882,6 +17071,10 @@
       "parameters": [
         {
           "name": "checkInfinity",
+          "default": false
+        },
+        {
+          "name": "checkNaN",
           "default": true
         }
       ],
@@ -16951,6 +17144,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_prefer-string-raw",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_prefer-string-replace-all",
       "level": "Warning",
       "category": "BestPractice",
@@ -16973,6 +17173,13 @@
     },
     {
       "patternId": "unicorn_prefer-string-trim-start-end",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_prefer-structured-clone",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],

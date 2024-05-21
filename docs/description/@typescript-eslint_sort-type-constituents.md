@@ -93,6 +93,28 @@ type T4 =
 
 ## Options
 
+### `caseSensitive`
+
+Whether to sort using case sensitive string comparisons.
+
+Examples of code with `{ "caseSensitive": true }`:
+
+<!--tabs-->
+
+#### ❌ Incorrect
+
+```ts option='{ "caseSensitive": true }'
+type T = 'DeletedAt' | 'DeleteForever';
+```
+
+#### ✅ Correct
+
+```ts option='{ "caseSensitive": true }'
+type T = 'DeleteForever' | 'DeletedAt';
+```
+
+<!--/tabs-->
+
 ### `checkIntersections`
 
 Whether to check intersection types (`&`).

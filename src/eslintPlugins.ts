@@ -44,6 +44,7 @@ const packageNames: string[] = [
   "eslint-plugin-eslint-plugin",
   "eslint-plugin-filenames",
   "eslint-plugin-flowtype",
+  "eslint-plugin-formatjs",
   "eslint-plugin-fp",
   "eslint-plugin-functional",
   "eslint-plugin-i18next",
@@ -117,6 +118,7 @@ const packageNames: string[] = [
   "eslint-plugin-xss",
   "eslint-plugin-yml",
   "eslint-plugin-you-dont-need-lodash-underscore"
+  
 ]
 
 const plugins = Promise.all(packageNames.map(async (packageName) => {
