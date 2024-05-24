@@ -166,7 +166,10 @@ function existsEslintConfigInRepoRoot (srcDirPath: string): boolean {
     ".eslintrc.cjs",
     ".eslintrc.yaml",
     ".eslintrc.yml",
-    ".eslintrc.json"
+    ".eslintrc.json",
+    "eslint.config.js",
+    "eslint.config.mjs",
+    "eslint.config.cjs"
   ]
   const found = filenames.some(filename => existsSync(srcDirPath + path.sep + filename))
   debug(`options: eslintrc config file ${found ? "" : "not "}found`)
