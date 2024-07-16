@@ -100,7 +100,7 @@
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nx/cypress": "^19.0.4",
-    "@nx/devkit": "^19.0.4",
+    "@nx/devkit": "^19.4.3",
     "@nx/eslint-plugin": "^19.0.4",
     "@nx/express": "^19.0.4",
     "@nx/jest": "^19.0.4",
