@@ -102,7 +102,7 @@
     "@nx/cypress": "^19.0.4",
     "@nx/devkit": "^19.0.4",
     "@nx/eslint-plugin": "^19.0.4",
-    "@nx/express": "^19.0.4",
+    "@nx/express": "^19.5.1",
     "@nx/jest": "^19.0.4",
     "@nx/linter": "^19.4.2",
     "@nx/nest": "^19.0.4",
