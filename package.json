@@ -92,7 +92,7 @@
     "@hapi/eslint-plugin": "^6.0.0",
     "@lwc/eslint-plugin-lwc": "^1.8.1",
     "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
+    "@mui/material": "^5.16.4",
     "@namely/eslint-config-namely": "^7.0.0",
     "@next/eslint-plugin-next": "^14.2.3",
     "@ngrx/eslint-plugin": "^17.2.0",
