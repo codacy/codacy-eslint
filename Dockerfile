@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.19 as builder
+FROM node:lts-alpine3.20 as builder
 
 COPY package.json package-lock.json ./
 
@@ -12,7 +12,7 @@ COPY tsconfig.json ./
 RUN npm run build:docs &&\
     npm run test
 
-FROM node:lts-alpine3.19
+FROM node:lts-alpine3.20
 
 COPY --from=builder --chown=docker:docker dist dist
 COPY --from=builder --chown=docker:docker docs docs
