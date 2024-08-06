@@ -329,7 +329,7 @@
     "graphql-ws": "^5.16.0",
     "gts": "^5.3.0",
     "husky": "^9.0.11",
-    "i18next": "^23.11.5",
+    "i18next": "^23.12.2",
     "lint-config-qiwi": "^0.0.1-security",
     "lint-staged": "^15.2.7",
     "lodash": "^4.17.21",
