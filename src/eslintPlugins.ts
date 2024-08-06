@@ -27,6 +27,7 @@ const packageNames: string[] = [
   "@shopify/eslint-plugin",
   "@stylistic/eslint-plugin",
   "@tanstack/eslint-plugin-query",
+  "@tailwindcss/forms",
   "@typescript-eslint/eslint-plugin",
   "eslint-plugin-awscdk",
   "eslint-plugin-backbone",
@@ -118,12 +119,12 @@ const packageNames: string[] = [
   "eslint-plugin-xss",
   "eslint-plugin-yml",
   "eslint-plugin-you-dont-need-lodash-underscore"
-  
+
 ]
 
 const plugins = Promise.all(packageNames.map(async (packageName) => {
-  const rules = packageNames.includes(packageName) 
-    ? await getModuleRules(packageName) 
+  const rules = packageNames.includes(packageName)
+    ? await getModuleRules(packageName)
     : []
   const name = packageName.replace(/(\/eslint-plugin$|eslint-plugin-)/, "")
 
@@ -149,7 +150,7 @@ async function getPluginsRules (): Promise<[string, Rule.RuleModule][]> {
 }
 
 export async function pluginByPackageName (packageName: string): Promise<Plugin> {
-  const defaultPlugin = { 
+  const defaultPlugin = {
     "packageName": "eslint",
     "name": "eslint",
     "rules": baseRules.map(([, rule]) => rule) as Rule.RuleModule[]
