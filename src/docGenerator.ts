@@ -81,7 +81,7 @@ export class DocGenerator {
     const patterns = rules.flatMap(([patternId, ruleModule]) => {
       const meta = ruleModule.meta
       const type = meta?.type ?? meta?.docs?.category
-      const [level, category, subcategory] = translateLevelAndCategory(
+      const [level, category, subcategory, scanType] = translateLevelAndCategory(
         patternId,
         type
       )
@@ -91,6 +91,7 @@ export class DocGenerator {
         level,
         category,
         subcategory,
+        scanType,
         DocGenerator.generateParameters(patternId, meta?.schema),
         DocGenerator.isDefaultPattern(patternId, meta)
       )

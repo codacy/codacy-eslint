@@ -3637,13 +3637,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@stylistic_jsx-indent",
-    "title": "@stylistic: Jsx indent",
-    "description": "Enforce JSX indentation",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@stylistic_jsx-indent-props",
     "title": "@stylistic: Jsx indent props",
     "description": "Enforce props indentation in JSX",
@@ -4078,6 +4071,13 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-empty-object-type",
+    "title": "@typescript eslint: No empty object type",
+    "description": "Disallow accidentally using the \"empty object\" type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-explicit-any",
     "title": "@typescript eslint: No explicit any",
     "description": "Disallow the `any` type",
@@ -4312,9 +4312,23 @@
   },
   {
     "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-parameter-property-assignment",
+    "title": "@typescript eslint: No unnecessary parameter property assignment",
+    "description": "Disallow unnecessary assignment of constructor property parameter",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "@typescript-eslint_no-unnecessary-qualifier",
     "title": "@typescript eslint: No unnecessary qualifier",
     "description": "Disallow unnecessary namespace qualifiers",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-template-expression",
+    "title": "@typescript eslint: No unnecessary template expression",
+    "description": "Disallow unnecessary template expressions",
     "timeToFix": 5
   },
   {
@@ -4336,6 +4350,13 @@
     "patternId": "@typescript-eslint_no-unnecessary-type-constraint",
     "title": "@typescript eslint: No unnecessary type constraint",
     "description": "Disallow unnecessary constraints on generic types",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unnecessary-type-parameters",
+    "title": "@typescript eslint: No unnecessary type parameters",
+    "description": "Disallow type parameters that only appear once",
     "timeToFix": 5
   },
   {
@@ -4371,6 +4392,13 @@
     "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
     "title": "@typescript eslint: No unsafe enum comparison",
     "description": "Disallow comparing an enum value with a non-enum value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "@typescript-eslint_no-unsafe-function-type",
+    "title": "@typescript eslint: No unsafe function type",
+    "description": "Disallow using the unsafe built-in Function type",
     "timeToFix": 5
   },
   {
@@ -4448,16 +4476,16 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-useless-template-literals",
-    "title": "@typescript eslint: No useless template literals",
-    "description": "Disallow unnecessary template literals",
+    "patternId": "@typescript-eslint_no-var-requires",
+    "title": "@typescript eslint: No var requires",
+    "description": "Disallow `require` statements except in import statements",
     "timeToFix": 5
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_no-var-requires",
-    "title": "@typescript eslint: No var requires",
-    "description": "Disallow `require` statements except in import statements",
+    "patternId": "@typescript-eslint_no-wrapper-object-types",
+    "title": "@typescript eslint: No wrapper object types",
+    "description": "Disallow using confusing built-in primitive class wrappers",
     "timeToFix": 5
   },
   {
@@ -4609,13 +4637,6 @@
   },
   {
     "parameters": [],
-    "patternId": "@typescript-eslint_prefer-ts-expect-error",
-    "title": "@typescript eslint: Prefer ts expect error",
-    "description": "Enforce using `@ts-expect-error` over `@ts-ignore`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "@typescript-eslint_promise-function-async",
     "title": "@typescript eslint: Promise function async",
     "description": "Require any function or method that returns a Promise to be marked async",
@@ -4632,7 +4653,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_require-await",
     "title": "@typescript eslint: Require await",
-    "description": "Disallow async functions which have no `await` expression",
+    "description": "Disallow async functions which do not return promises and have no `await` expression",
     "timeToFix": 5
   },
   {
@@ -4653,14 +4674,7 @@
     "parameters": [],
     "patternId": "@typescript-eslint_return-await",
     "title": "@typescript eslint: Return await",
-    "description": "Enforce consistent returning of awaited values",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_sort-type-constituents",
-    "title": "@typescript eslint: Sort type constituents",
-    "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
+    "description": "Enforce consistent awaiting of returned promises",
     "timeToFix": 5
   },
   {
@@ -5161,6 +5175,13 @@
     "patternId": "cypress_no-pause",
     "title": "Cypress: No pause",
     "description": "Disallow using `cy.pause()` calls",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "cypress_no-debug",
+    "title": "Cypress: No debug",
+    "description": "Disallow using `cy.debug()` calls",
     "timeToFix": 5
   },
   {
@@ -7024,6 +7045,13 @@
   },
   {
     "parameters": [],
+    "patternId": "es-x_no-regexp-duplicate-named-capturing-groups",
+    "title": "Es x: No regexp duplicate named capturing groups",
+    "description": "Disallow RegExp duplicate named capturing groups.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "es-x_no-regexp-lookbehind-assertions",
     "title": "Es x: No regexp lookbehind assertions",
     "description": "Disallow RegExp lookbehind assertions.",
@@ -7146,6 +7174,55 @@
     "patternId": "es-x_no-set",
     "title": "Es x: No set",
     "description": "Disallow the `Set` class.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-difference",
+    "title": "Es x: No set prototype difference",
+    "description": "Disallow the `Set.prototype.difference` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-intersection",
+    "title": "Es x: No set prototype intersection",
+    "description": "Disallow the `Set.prototype.intersection` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-isdisjointfrom",
+    "title": "Es x: No set prototype isdisjointfrom",
+    "description": "Disallow the `Set.prototype.isDisjointFrom` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-issubsetof",
+    "title": "Es x: No set prototype issubsetof",
+    "description": "Disallow the `Set.prototype.isSubsetOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-issupersetof",
+    "title": "Es x: No set prototype issupersetof",
+    "description": "Disallow the `Set.prototype.isSupersetOf` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-symmetricdifference",
+    "title": "Es x: No set prototype symmetricdifference",
+    "description": "Disallow the `Set.prototype.symmetricDifference` method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "es-x_no-set-prototype-union",
+    "title": "Es x: No set prototype union",
+    "description": "Disallow the `Set.prototype.union` method.",
     "timeToFix": 5
   },
   {
@@ -8910,6 +8987,62 @@
   },
   {
     "parameters": [],
+    "patternId": "jest_padding-around-after-all-blocks",
+    "title": "Jest: Padding around after all blocks",
+    "description": "Enforce padding around `afterAll` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-after-each-blocks",
+    "title": "Jest: Padding around after each blocks",
+    "description": "Enforce padding around `afterEach` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-all",
+    "title": "Jest: Padding around all",
+    "description": "Enforce padding around Jest functions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-before-all-blocks",
+    "title": "Jest: Padding around before all blocks",
+    "description": "Enforce padding around `beforeAll` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-before-each-blocks",
+    "title": "Jest: Padding around before each blocks",
+    "description": "Enforce padding around `beforeEach` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-describe-blocks",
+    "title": "Jest: Padding around describe blocks",
+    "description": "Enforce padding around `describe` blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-expect-groups",
+    "title": "Jest: Padding around expect groups",
+    "description": "Enforce padding around `expect` groups",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_padding-around-test-blocks",
+    "title": "Jest: Padding around test blocks",
+    "description": "Enforce padding around afterAll blocks",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jest_prefer-called-with",
     "title": "Jest: Prefer called with",
     "description": "Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
@@ -8969,6 +9102,13 @@
     "patternId": "jest_prefer-importing-jest-globals",
     "title": "Jest: Prefer importing jest globals",
     "description": "Prefer importing Jest globals",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jest_prefer-jest-mocked",
+    "title": "Jest: Prefer jest mocked",
+    "description": "Prefer `jest.mocked()` over `fn as jest.Mock`",
     "timeToFix": 5
   },
   {
@@ -9391,6 +9531,13 @@
   },
   {
     "parameters": [],
+    "patternId": "jsdoc_check-template-names",
+    "title": "Jsdoc: Check template names",
+    "description": "Checks that any `@template` names are actually used in the connected `@typedef` or type alias.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "jsdoc_check-types",
     "title": "Jsdoc: Check types",
     "description": "Reports invalid types.",
@@ -9401,6 +9548,13 @@
     "patternId": "jsdoc_check-values",
     "title": "Jsdoc: Check values",
     "description": "This rule checks the values for a handful of tags: `@version`, `@since`, `@license` and `@author`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_convert-to-jsdoc-comments",
+    "title": "Jsdoc: Convert to jsdoc comments",
+    "description": "Converts non-JSDoc comments preceding or following nodes into JSDoc ones",
     "timeToFix": 5
   },
   {
@@ -9772,6 +9926,13 @@
     "patternId": "jsdoc_require-returns-type",
     "title": "Jsdoc: Require returns type",
     "description": "Requires that `@returns` tag has `type` value.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-template",
+    "title": "Jsdoc: Require template",
+    "description": "Requires template tags for each generic type parameter",
     "timeToFix": 5
   },
   {
@@ -11642,6 +11803,10 @@
       {
         "name": "ignoreTypeImport",
         "description": "ignoreTypeImport"
+      },
+      {
+        "name": "ignorePrivate",
+        "description": "ignorePrivate"
       }
     ],
     "patternId": "n_no-unpublished-import",
@@ -11650,7 +11815,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignorePrivate",
+        "description": "ignorePrivate"
+      }
+    ],
     "patternId": "n_no-unpublished-require",
     "title": "N: No unpublished require",
     "description": "Disallow `require()` expressions which import private modules",
@@ -12632,91 +12802,105 @@
     "parameters": [],
     "patternId": "promise_param-names",
     "title": "Promise: Param names",
+    "description": "Enforce consistent param names and ordering when creating new promises.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-return-wrap",
     "title": "Promise: No return wrap",
+    "description": "Disallow wrapping values in `Promise.resolve` or `Promise.reject` when not needed.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_always-return",
     "title": "Promise: Always return",
+    "description": "Require returning inside each `then()` to create readable and reusable Promise chains.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_catch-or-return",
     "title": "Promise: Catch or return",
+    "description": "Enforce the use of `catch()` on un-returned promises.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_prefer-await-to-callbacks",
     "title": "Promise: Prefer await to callbacks",
+    "description": "Prefer `async`/`await` to the callback pattern.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_prefer-await-to-then",
     "title": "Promise: Prefer await to then",
+    "description": "Prefer `await` to `then()`/`catch()`/`finally()` for reading Promise values.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-native",
     "title": "Promise: No native",
+    "description": "Require creating a `Promise` constructor before using it in an ES5 environment.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-callback-in-promise",
     "title": "Promise: No callback in promise",
+    "description": "Disallow calling `cb()` inside of a `then()` (use [nodeify][] instead).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-promise-in-callback",
     "title": "Promise: No promise in callback",
+    "description": "Disallow using promises inside of callbacks.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-nesting",
     "title": "Promise: No nesting",
+    "description": "Disallow nested `then()` or `catch()` statements.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_avoid-new",
     "title": "Promise: Avoid new",
+    "description": "Disallow creating `new` promises outside of utility libs (use [pify][] instead).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-new-statics",
     "title": "Promise: No new statics",
+    "description": "Disallow calling `new` on a Promise static method.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-return-in-finally",
     "title": "Promise: No return in finally",
+    "description": "Disallow return statements in `finally()`.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_valid-params",
     "title": "Promise: Valid params",
-    "description": "Ensures the proper number of arguments are passed to Promise functions",
+    "description": "Enforces the proper number of arguments are passed to Promise functions.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "promise_no-multiple-resolved",
     "title": "Promise: No multiple resolved",
+    "description": "Disallow creating new promises with paths that resolve multiple times.",
     "timeToFix": 5
   },
   {
@@ -13315,6 +13499,13 @@
     "patternId": "react_jsx-props-no-spreading",
     "title": "React: Jsx props no spreading",
     "description": "Disallow JSX prop spreading",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_jsx-props-no-spread-multi",
+    "title": "React: Jsx props no spread multi",
+    "description": "Disallow JSX prop spreading the same identifier multiple times",
     "timeToFix": 5
   },
   {
@@ -15106,12 +15297,14 @@
     "parameters": [],
     "patternId": "simple-import-sort_imports",
     "title": "Simple import sort: Imports",
+    "description": "Automatically sort imports.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "simple-import-sort_exports",
     "title": "Simple import sort: Exports",
+    "description": "Automatically sort exports.",
     "timeToFix": 5
   },
   {
@@ -19035,6 +19228,12 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-aria-hidden-on-focusable",
+    "title": "Vuejs accessibility: No aria hidden on focusable",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "ignoreNonDOM",
@@ -19055,6 +19254,12 @@
     "parameters": [],
     "patternId": "vuejs-accessibility_no-redundant-roles",
     "title": "Vuejs accessibility: No redundant roles",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "vuejs-accessibility_no-role-presentation-on-focusable",
+    "title": "Vuejs accessibility: No role presentation on focusable",
     "timeToFix": 5
   },
   {
