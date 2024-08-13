@@ -1,4 +1,4 @@
-import { Category, Level, SecuritySubcategory, ScanType } from "codacy-seed"
+import { Category, Level, ScanType, SecuritySubcategory  } from "codacy-seed"
 
 const securityPlugins = [
   "scanjs-rules",
@@ -13,7 +13,7 @@ export function translateLevelAndCategory (
   type?: string
 ): [Level, Category, SecuritySubcategory?, ScanType?] {
   if (securityPlugins.some(plugin => patternId.startsWith(plugin + "/"))) {
-    return ["Warning", "Security", getSecuritySubcategory(patternId)]
+    return ["Warning", "Security", getSecuritySubcategory(patternId),"SCA"]
   }
 
   return [translateLevel(type), translateCategory(type), undefined]

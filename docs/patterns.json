@@ -12159,6 +12159,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -12167,6 +12168,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15277,6 +15279,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "Regex",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15285,6 +15288,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "Regex",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15292,6 +15296,7 @@
       "patternId": "security_detect-non-literal-require",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15300,6 +15305,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "InsecureStorage",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15307,6 +15313,7 @@
       "patternId": "security_detect-eval-with-expression",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15314,6 +15321,7 @@
       "patternId": "security_detect-pseudoRandomBytes",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15321,6 +15329,7 @@
       "patternId": "security_detect-possible-timing-attacks",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15329,6 +15338,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "CSRF",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15336,6 +15346,7 @@
       "patternId": "security_detect-buffer-noassert",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15343,6 +15354,7 @@
       "patternId": "security_detect-child-process",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15350,6 +15362,7 @@
       "patternId": "security_detect-disable-mustache-escape",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15358,6 +15371,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15365,6 +15379,7 @@
       "patternId": "security_detect-new-buffer",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15372,6 +15387,7 @@
       "patternId": "security_detect-bidi-characters",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15379,6 +15395,7 @@
       "patternId": "security-node_detect-absence-of-name-option-in-exrpress-session",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15386,6 +15403,7 @@
       "patternId": "security-node_detect-buffer-unsafe-allocation",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": false
     },
@@ -15393,6 +15411,7 @@
       "patternId": "security-node_detect-child-process",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15400,6 +15419,7 @@
       "patternId": "security-node_detect-crlf",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": false
     },
@@ -15407,6 +15427,7 @@
       "patternId": "security-node_detect-dangerous-redirects",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15414,6 +15435,7 @@
       "patternId": "security-node_detect-eval-with-expr",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15422,6 +15444,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15429,6 +15452,7 @@
       "patternId": "security-node_detect-improper-exception-handling",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15436,6 +15460,7 @@
       "patternId": "security-node_detect-insecure-randomness",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": false
     },
@@ -15443,6 +15468,7 @@
       "patternId": "security-node_detect-non-literal-require-calls",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15451,6 +15477,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15458,6 +15485,7 @@
       "patternId": "security-node_detect-option-multiplestatements-in-mysql",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15465,6 +15493,7 @@
       "patternId": "security-node_detect-option-rejectunauthorized-in-nodejs-httpsrequest",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15472,6 +15501,7 @@
       "patternId": "security-node_detect-option-unsafe-in-serialize-javascript-npm-package",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15479,6 +15509,7 @@
       "patternId": "security-node_detect-possible-timing-attacks",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15486,6 +15517,7 @@
       "patternId": "security-node_detect-runinthiscontext-method-in-nodes-vm",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": false
     },
@@ -15493,6 +15525,7 @@
       "patternId": "security-node_detect-security-missconfiguration-cookie",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15501,6 +15534,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": false
     },
@@ -15508,6 +15542,7 @@
       "patternId": "security-node_detect-unhandled-event-errors",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15515,6 +15550,7 @@
       "patternId": "security-node_detect-unhandled-async-errors",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15522,6 +15558,7 @@
       "patternId": "security-node_disable-ssl-across-node-server",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -15529,6 +15566,7 @@
       "patternId": "security-node_non-literal-reg-expr",
       "level": "Warning",
       "category": "Security",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -19596,6 +19634,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
@@ -19604,6 +19643,7 @@
       "level": "Warning",
       "category": "Security",
       "subcategory": "XSS",
+      "scanType": "SCA",
       "parameters": [],
       "enabled": true
     },
