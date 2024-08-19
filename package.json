@@ -346,7 +346,7 @@
     "react-dom": "^18.3.1",
     "react-hooks": "^1.0.1",
     "react-hot-loader": "^4.13.1",
-    "react-i18next": "^14.1.1",
+    "react-i18next": "^15.0.1",
     "react-native": "^0.74.1",
     "react-query": "^3.39.3",
     "react-redux": "^9.1.2",
