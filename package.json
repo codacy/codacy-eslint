@@ -373,7 +373,7 @@
     "vue-router": "^4.3.2",
     "vuetify": "^3.6.6",
     "vuex": "^4.1.0",
-    "webpack": "^5.91.0",
+    "webpack": "^5.95.0",
     "webpack-manifest-plugin": "^5.0.0",
     "ws": "^8.18.0",
     "xml2js": "^0.6.2",
