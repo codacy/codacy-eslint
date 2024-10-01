@@ -1,157 +1,175 @@
 ---
 title: sort-maps
-description: ESLint Plugin Perfectionist rule which enforce sorted element within JavaScript Map object
+description: Enforce sorted elements within JavaScript Map objects for a clear and predictable code structure. Use this ESLint rule to keep your Map elements organized
+shortDescription: Enforce sorted Map elements
+keywords:
+  - eslint
+  - sort maps
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - map elements sorting
+  - javascript map objects
 ---
 
-# sort-maps
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
+Enforce sorted elements within JavaScript Map object.
 
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+Sorting elements within JavaScript Map objects provides a clear and predictable structure to the codebase. This rule detects instances where Map elements are not sorted and raises linting errors, encouraging developers to arrange elements in the desired order.
 
-<!-- end auto-generated rule header -->
+By maintaining a consistent structure across Map objects, this rule improves readability and makes it easier to locate and understand key-value pairs.
 
-## 📖 Rule Details
+## Try it out
 
-Enforce sorted elements within JavaScript `Map` object.
+<CodeExample
+  alphabetical={dedent`
+    const products = new Map([
+      ['keyboard', { name: 'Keyboard', price: 50 }],
+      ['laptop', { name: 'Laptop', price: 1000 }],
+      ['monitor', { name: 'Monitor', price: 200 }],
+      ['mouse', { name: 'Mouse', price: 25 }],
+    ])
 
-Sorting Map elements provides a clear and predictable structure to the codebase, making it easier for developers to locate and understand the key-value pairs defined within a Map.
+    const categories = new Map([
+      ['accessories', { name: 'Accessories' }],
+      ['clothing', { name: 'Clothing' }],
+      ['electronics', { name: 'Electronics' }],
+      ['furniture', { name: 'Furniture' }],
+    ])
+  `}
+  lineLength={dedent`
+    const products = new Map([
+      ['keyboard', { name: 'Keyboard', price: 50 }],
+      ['monitor', { name: 'Monitor', price: 200 }],
+      ['laptop', { name: 'Laptop', price: 1000 }],
+      ['mouse', { name: 'Mouse', price: 25 }],
+    ])
 
-This rule detects instances where Map elements are not sorted in a specified order and raises a linting error. It encourages developers to rearrange the elements in the desired order, ensuring a consistent structure across Map objects.
+    const categories = new Map([
+      ['accessories', { name: 'Accessories' }],
+      ['electronics', { name: 'Electronics' }],
+      ['furniture', { name: 'Furniture' }],
+      ['clothing', { name: 'Clothing' }],
+    ])
+  `}
+  initial={dedent`
+    const products = new Map([
+      ['monitor', { name: 'Monitor', price: 200 }],
+      ['laptop', { name: 'Laptop', price: 1000 }],
+      ['mouse', { name: 'Mouse', price: 25 }],
+      ['keyboard', { name: 'Keyboard', price: 50 }],
+    ])
 
-## 💡 Examples
+    const categories = new Map([
+      ['electronics', { name: 'Electronics' }],
+      ['furniture', { name: 'Furniture' }],
+      ['clothing', { name: 'Clothing' }],
+      ['accessories', { name: 'Accessories' }],
+    ])
+  `}
+  client:load
+  lang="ts"
+/>
 
-::: code-group
-
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-let burritoRecipeMap = new Map([
-  ['tomatoes', 300],
-  ['bell pepper', 100],
-  ['corn', 150],
-  ['cheese', 200],
-  ['chicken fillet', 300],
-  ['beans', 150],
-])
-
-// ✅ Correct
-let burritoRecipeMap = new Map([
-  ['beans', 150],
-  ['bell pepper', 100],
-  ['cheese', 200],
-  ['chicken fillet', 300],
-  ['corn', 150],
-  ['tomatoes', 300],
-])
-```
-
-```js [Sorting by Line Length]
-// ❌ Incorrect
-let burritoRecipeMap = new Map([
-  ['tomatoes', 300],
-  ['bell pepper', 100],
-  ['corn', 150],
-  ['cheese', 200],
-  ['chicken fillet', 300],
-  ['beans', 150],
-])
-
-// ✅ Correct
-let burritoRecipeMap = new Map([
-  ['chicken fillet', 300],
-  ['bell pepper', 100],
-  ['tomatoes', 300],
-  ['cheese', 200],
-  ['beans', 150],
-  ['corn', 150],
-])
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
 
-## ⚙️ Usage
+Controls whether sorting should be case-sensitive or not.
 
-::: code-group
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-maps": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
-```
+## Usage
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-maps': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-maps': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-maps': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.5.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.5.0).
 
-This rule was introduced in v0.5.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-maps.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-maps.test.ts)

@@ -1,136 +1,175 @@
 ---
 title: sort-exports
-description: ESLint Plugin Perfectionist rule which enforce sorted exports
+description: Enforce a consistent order of exports to enhance code readability and maintainability. Use this ESLint rule to keep your exports well-organized
+shortDescription: Enforce sorted exports
+keywords:
+  - eslint
+  - sort exports
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - module exports sorting
 ---
 
-# sort-exports
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted exports.
 
-Sorting exports alphabetically or in a consistent order can enhance the readability and maintainability of your code. When exports are sorted, it becomes simpler to identify any missing or incorrect exports.
+Sorting exports in a consistent manner can greatly enhance the readability and maintainability of your codebase. By alphabetically ordering exports, developers can quickly identify and correct any missing or incorrect exports.
 
-## 💡 Examples
+This rule promotes a structured approach to exporting modules, which simplifies code management and improves the overall quality of the project.
 
-::: code-group
+## Try it out
 
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-export { readPackageJson } from './read-package-json'
-export { loadDotEnv } from './load-dot-env'
-export { getGitBranch } from './get-git-branch'
+<CodeExample
+  alphabetical={dedent`
+    export { createUser } from './actions/create-user'
+    export { deleteUser } from './actions/delete-user'
+    export { fetchUser } from './actions/fetch-user'
+    export { updateUser } from './actions/update-user'
+    export { Footer } from './components/Footer'
+    export { Header } from './components/Header'
+    export { MainContent } from './components/MainContent'
+    export { Sidebar } from './components/Sidebar'
+    export { calculateAge } from './utils/calculate-age'
+    export { debounce } from './utils/debounce'
+    export { formatDate } from './utils/format-date'
+    export { generateUUID } from './utils/generate-uuid'
+    export { parseQueryString } from './utils/parse-query-string'
+  `}
+  lineLength={dedent`
+    export { parseQueryString } from './utils/parse-query-string'
+    export { MainContent } from './components/MainContent'
+    export { calculateAge } from './utils/calculate-age'
+    export { generateUUID } from './utils/generate-uuid'
+    export { createUser } from './actions/create-user'
+    export { deleteUser } from './actions/delete-user'
+    export { updateUser } from './actions/update-user'
+    export { fetchUser } from './actions/fetch-user'
+    export { formatDate } from './utils/format-date'
+    export { Sidebar } from './components/Sidebar'
+    export { Footer } from './components/Footer'
+    export { Header } from './components/Header'
+    export { debounce } from './utils/debounce'
+  `}
+  initial={dedent`
+    export { MainContent } from './components/MainContent'
+    export { calculateAge } from './utils/calculateAge'
+    export { Sidebar } from './components/Sidebar'
+    export { deleteUser } from './actions/deleteUser'
+    export { Footer } from './components/Footer'
+    export { debounce } from './utils/debounce'
+    export { generateUUID } from './utils/generateUUID'
+    export { formatDate } from './utils/formatDate'
+    export { updateUser } from './actions/updateUser'
+    export { fetchUser } from './actions/fetchUser'
+    export { Header } from './components/Header'
+    export { createUser } from './actions/createUser'
+    export { parseQueryString } from './utils/parseQueryString'
+  `}
+  client:load
+  lang="ts"
+/>
 
-// ✅ Correct
-export { getGitBranch } from './get-git-branch'
-export { loadDotEnv } from './load-dot-env'
-export { readPackageJson } from './read-package-json'
-```
-
-<!-- prettier-ignore -->
-```js [Sorting by Line Length]
-// ❌ Incorrect
-export { readPackageJson } from './read-package-json'
-export { loadDotEnv } from './load-dot-env'
-export { getGitBranch } from './get-git-branch'
-
-// ✅ Correct
-export { readPackageJson } from './read-package-json'
-export { getGitBranch } from './get-git-branch'
-export { loadDotEnv } from './load-dot-env'
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
 
-## ⚙️ Usage
+Controls whether sorting should be case-sensitive or not.
 
-::: code-group
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-exports": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
-```
+## Usage
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-exports': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-exports': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-exports': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
 
-## 🚀 Version
+## Version
 
-This rule was introduced in v1.2.0.
+This rule was introduced in [v1.2.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v1.2.0).
 
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-exports.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-exports.test.ts)

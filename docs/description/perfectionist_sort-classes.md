@@ -1,263 +1,569 @@
 ---
 title: sort-classes
-description: ESLint Plugin Perfectionist rule which enforce sorted ES class members
+description: Maintain a consistent order of class members with this ESLint rule. Improve readability and make it easier to navigate through your class structures
+shortDescription: Enforce sorted classes
+keywords:
+  - eslint
+  - sort classes
+  - class methods order
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - class members sorting
 ---
 
-# sort-classes
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
+Enforce sorted class members.
 
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+Organizing class members in a consistent order improves both readability and maintainability.
 
-<!-- end auto-generated rule header -->
+This rule helps developers quickly locate class members and understand the overall structure of the class.
 
-## 📖 Rule Details
+By sorting class members systematically, confusion is minimized, and the code becomes more intuitive to navigate. This practice not only aids in individual productivity but also enhances team collaboration by establishing clear and predictable coding standards.
 
-Enforce sorted class members. By enforcing a consistent order, this rule improves code readability and maintainability. It helps developers quickly locate class members and understand the structure of the class.
+## Try it out
 
-Class members that are not sorted in a certain order can cause confusion and reduce code readability.
+<CodeExample
+  alphabetical={dedent`
+    class User {
+      constructor(username: string, email: string, isActive: boolean) {
+        this.username = username
+        this.email = email
+        this.isActive = isActive
+        this.roles = []
+      }
 
-## 💡 Examples
+      activate() {
+        this.isActive = true
+      }
 
-::: code-group
+      addRole(role: string) {
+        this.roles.push(role)
+      }
 
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-class Rectangle {
-  get area() {
-    return this.calcArea()
-  }
+      deactivate() {
+        this.isActive = false
+      }
 
-  calcPerimeter() {
-    return this.height * 2 + this.width * 2
-  }
+      getProfile() {
+        return {
+          username: this.username,
+          email: this.email,
+          isActive: this.isActive,
+          roles: this.roles,
+        }
+      }
 
-  calcArea() {
-    return this.height * this.width
-  }
+      removeRole(role: string) {
+        this.roles = this.roles.filter(r => r !== role)
+      }
 
-  constructor(height, width) {
-    this.height = height
-    this.width = width
-  }
-}
+      setEmail(newEmail: string) {
+        this.email = newEmail
+      }
+    }
+  `}
+  lineLength={dedent`
+    class User {
+      constructor(username: string, email: string, isActive: boolean) {
+        this.username = username
+        this.email = email
+        this.isActive = isActive
+        this.roles = []
+      }
 
-// ✅ Correct
-class Rectangle {
-  constructor(height, width) {
-    this.height = height
-    this.width = width
-  }
+      getProfile() {
+        return {
+          username: this.username,
+          email: this.email,
+          isActive: this.isActive,
+          roles: this.roles,
+        }
+      }
 
-  get area() {
-    return this.calcArea()
-  }
+      removeRole(role: string) {
+        this.roles = this.roles.filter(r => r !== role)
+      }
 
-  calcArea() {
-    return this.height * this.width
-  }
+      setEmail(newEmail: string) {
+        this.email = newEmail
+      }
 
-  calcPerimeter() {
-    return this.height * 2 + this.width * 2
-  }
-}
-```
+      addRole(role: string) {
+        this.roles.push(role)
+      }
 
-```js [Sorting by Line Length]
-// ❌ Incorrect
-class Rectangle {
-  get area() {
-    return this.calcArea()
-  }
+      deactivate() {
+        this.isActive = false
+      }
 
-  calcPerimeter() {
-    return this.height * 2 + this.width * 2
-  }
+      activate() {
+        this.isActive = true
+      }
+    }
+  `}
+  initial={dedent`
+    class User {
+      constructor(username: string, email: string, isActive: boolean) {
+        this.username = username
+        this.email = email
+        this.isActive = isActive
+        this.roles = []
+      }
 
-  calcArea() {
-    return this.height * this.width
-  }
+      addRole(role: string) {
+        this.roles.push(role)
+      }
 
-  constructor(height, width) {
-    this.height = height
-    this.width = width
-  }
-}
+      deactivate() {
+        this.isActive = false
+      }
 
-// ✅ Correct
-class Rectangle {
-  constructor(height, width) {
-    this.height = height
-    this.width = width
-  }
+      setEmail(newEmail: string) {
+        this.email = newEmail
+      }
 
-  calcPerimeter() {
-    return this.height * 2 + this.width * 2
-  }
+      activate() {
+        this.isActive = true
+      }
 
-  calcArea() {
-    return this.height * this.width
-  }
+      removeRole(role: string) {
+        this.roles = this.roles.filter(r => r !== role)
+      }
 
-  get area() {
-    return this.calcArea()
-  }
-}
-```
+      getProfile() {
+        return {
+          username: this.username,
+          email: this.email,
+          isActive: this.isActive,
+          roles: this.roles,
+        }
+      }
+    }
+  `}
+  client:load
+  lang="ts"
+/>
 
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-type Group =
-  | 'private-decorated-accessor-property'
-  | 'decorated-accessor-property'
-  | 'private-decorated-property'
-  | 'static-private-method'
-  | 'decorated-set-method'
-  | 'decorated-get-method'
-  | 'decorated-property'
-  | 'decorated-method'
-  | 'private-property'
-  | 'static-property'
-  | 'index-signature'
-  | 'private-method'
-  | 'static-method'
-  | 'constructor'
-  | 'get-method'
-  | 'set-method'
-  | 'property'
-  | 'unknown'
-  | 'method'
-
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  groups?: (Group | Group[])[]
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### partitionByComment
+
+<sub>default: `false`</sub>
+
+Allows you to use comments to separate the class members into logical groups. This can help in organizing and maintaining large enums by creating partitions within the enum based on comments.
+
+- `true` — All comments will be treated as delimiters, creating partitions.
+-	`false` — Comments will not be used as delimiters.
+- string — A glob pattern to specify which comments should act as delimiters.
 
 ### groups
 
-<sub>(default: `['property', 'constructor', 'method', 'unknown']`)</sub>
-
-You can set up a list of class members groups for sorting. Groups can be combined.
-
-If you use [one of the configs](/configs/) exported by this plugin, you get the following import grouping settings:
-
-```json
-{
-  "groups": [
-    "index-signature",
-    "static-property",
-    "private-property",
-    "property",
-    "constructor",
-    "static-method",
-    "private-method",
-    "static-private-method",
-    "method",
-    ["get-method", "set-method"],
-    "unknown"
+<sub>
+  default:
+  ```
+  [
+    'index-signature',
+    'static-property',
+    'protected-property',
+    'private-property',
+    'property',
+    'constructor',
+    'static-method',
+    'protected-method',
+    'private-method',
+    'method',
+    ['get-method', 'set-method'],
+    'unknown',
   ]
+  ```
+</sub>
+
+Allows you to specify a list of class member groups for sorting. Groups help organize class members into categories, prioritizing them during sorting. Multiple groups can be combined to achieve the desired sorting order.
+
+Predefined groups are characterized by a single selector and potentially multiple modifiers. You may enter modifiers in any order, but the selector must always come at the end.
+
+#### Constructors
+- Selector: `constructor`.
+- Modifiers: `protected`, `private`, `public`.
+- Example: `protected-constructor`, `private-constructor`, `public-constructor` or `constructor`.
+
+#### Methods and accessors
+- Method selectors: `get-method`, `set-method`, `method`.
+- Accessors selector: `accessor-property`.
+- Modifiers: `static`, `abstract`, `decorated`, `override`, `protected`, `private`, `public`.
+- Example: `private-static-accessor-property`, `protected-abstract-override-method` or `static-get-method`.
+
+The `abstract` modifier is incompatible with the `static`, `private` and `decorated` modifiers.
+`constructor`, `get-method` and `set-method` elements will also be matched as `method`.
+
+#### Properties
+- Selectors: `function-property`, `property`.
+- Modifiers: `static`, `declare`, `abstract`, `decorated`, `override`, `readonly`, `protected`, `private`, `public`.
+- Example: `readonly-decorated-property`.
+
+The `abstract` modifier is incompatible with the `static`, `private` and `decorated` modifiers.
+
+The `declare` modifier is incompatible with the `override` and `decorated` modifiers.
+
+The `function-property` selector will match properties whose values are defined functions or arrow-functions.
+As such, the `declare` and `abstract` modifiers are incompatible with this selector.
+
+#### Index-signatures
+- Selector: `index-signature`.
+- Modifiers: `static`, `readonly`.
+- Example: `static-readonly-index-signature`.
+
+#### Static-blocks
+- Selector: `static-block`.
+- Modifiers: No modifier available.
+- Example: `static-block`.
+
+#### Important notes
+
+##### Scope of the `private` modifier
+The `private` modifier will currently match any of the following:
+- Elements with the `private` keyword.
+- Elements with their name starting with `#`.
+
+##### Scope of the `public` modifier
+Elements that are not `protected` nor `private` will be matched with the `public` modifier, even if the keyword is not present.
+
+
+##### The `unknown` group
+Members that don’t fit into any group entered by the user will be placed in the `unknown` group.
+
+##### Behavior when multiple groups match an element
+
+The lists of selectors and modifiers above are both sorted by importance, from most to least important.
+In case of multiple groups matching an element, the following rules will be applied:
+
+1. Selector priority: `constructor`, `get-method` and `set-method` groups will always take precedence over `method` groups.
+2. If the selector is the same, the group with the most modifiers matching will be selected.
+3. If modifiers quantity is the same, order will be chosen based on modifier importance as listed above.
+
+Example 1:
+```ts
+abstract class Class {
+
+    protected abstract get field();
+
 }
 ```
 
-## ⚙️ Usage
+`field` can be matched by the following groups, from most to least important:
+- `abstract-protected-get-method` or `protected-abstract-get-method`.
+- `abstract-get-method`.
+- `protected-get-method`.
+- `get-method`.
+- `abstract-protected-method` or `protected-abstract-method`.
+- `abstract-method`.
+- `protected-method`.
+- `method`.
+- `unknown`.
 
-::: code-group
+Example 2: (The most important group is written in the comments)
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-classes": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "groups": [
-          "index-signature",
-          "static-property",
-          "private-property",
-          "property",
-          "constructor",
-          "static-method",
-          "private-method",
-          "method"
-        ]
-      }
-    ]
+```ts
+abstract class Example extends BaseExample {
+
+  // 'index-signature'
+  [key: string]: any;
+
+  // 'public-static-property'
+  static instance: Example;
+
+  // 'declare-protected-static-readonly-property'
+  declare protected static readonly value: string;
+
+  // 'protected-abstract-override-readonly-decorated-property'
+  @SomeDecorator
+  protected abstract override readonly _value: number;
+
+  // 'protected-property'
+  protected name: string;
+
+  // 'private-decorated-property'
+  @SomeDecorator
+  private _value: number;
+
+  // private-function-property
+  private arrowProperty = () => {};
+
+  // private-function-property
+  private functionProperty = function() {};
+
+  // 'private-property'
+  private name: string;
+
+  // 'public-property'
+  public description: string;
+
+  // 'public-decorated-property'
+  @SomeDecorator
+  public value: number;
+
+  // 'public-constructor'
+  constructor(value: number) {
+    this._value = value;
   }
+
+  // 'public-static-method'
+  static getInstance() {
+    return this.instance;
+  }
+
+  // 'protected-static-method'
+  protected static initialize() {
+    this.instance = new Example(0);
+  }
+
+  // 'private-static-method'
+  private static initialize() {
+    this.instance = new Example(0);
+  }
+
+  // 'protected-method'
+  protected calculate() {
+    return this._value * 2;
+  }
+
+  // 'private-method'
+  private calculate() {
+    return this._value * 2;
+  }
+
+  // 'public-decorated-method'
+  @SomeDecorator
+  public decoratedMethod() {
+    return this._value;
+  }
+
+  // 'public-method'
+  public display() {
+    console.log(this._value);
+  }
+
+  // 'public-decorated-get-method'
+  @SomeDecorator
+  get decoratedValue() {
+    return this._value;
+  }
+
+  // 'public-decorated-set-method'
+  @SomeDecorator
+  set decoratedValue(value: number) {
+    this._value = value;
+  }
+
+  // 'protected-decorated-get-method'
+  @SomeDecorator
+  protected get value() {
+    return this._value;
+  }
+
+  // 'private-decorated-get-method'
+  @SomeDecorator
+  private get value() {
+    return this._value;
+  }
+
+  // 'public-decorated-get-method'
+  @SomeDecorator
+  get value() {
+    return this._value;
+  }
+
+  // 'public-get-method'
+  get value() {
+    return this._value;
+  }
+
+  // 'public-set-method'
+  set value(value: number) {
+    this._value = value;
+  }
+
+  // 'protected-decorated-accessor-property'
+  @SomeDecorator
+  protected accessor _value: number;
+
+  // 'private-decorated-accessor-property'
+  @SomeDecorator
+  private accessor _value: number;
+
+  // 'static-block'
+  static {
+    console.log("I am a static block");
+  }
+
+  // 'public-decorated-accessor-property'
+  @SomeDecorator
+  public accessor value: number;
 }
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+### customGroups
 
-export default [
-  {
-    plugins: {
-      perfectionist,
-    },
-    rules: {
-      'perfectionist/sort-classes': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          groups: [
-            'index-signature',
-            'static-property',
-            'private-property',
-            'property',
-            'constructor',
-            'static-method',
-            'private-method',
-            'method',
-          ],
-        },
-      ],
-    },
-  },
-]
+<sub>default: `{}`</sub>
+
+You can define your own groups for class members using custom glob patterns for matching.
+
+Example:
+
+```js
+ {
+   groups: [
+     'index-signature',
+     'static-property',
+     'protected-property',
+     'private-property',
+     'property',
+     'constructor',
+     'static-method',
+     'protected-method',
+     'private-method',
+     'static-private-method',
+     'method',
+     ['get-method', 'set-method'],
+     'unknown',
++    'value',         // [!code ++]
+   ],
++  customGroups: {    // [!code ++]
++    value: 'value',  // [!code ++]
++  }                  // [!code ++]
+ }
 ```
 
-:::
+## Usage
 
-## 🚀 Version
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
 
-This rule was introduced in v0.11.0.
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-classes': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  partitionByComment: false,
+                  groups: [
+                    'index-signature',
+                    'static-property',
+                    'protected-property',
+                    'private-property',
+                    'property',
+                    'constructor',
+                    'static-method',
+                    'protected-method',
+                    'private-method',
+                    'method',
+                    ['get-method', 'set-method'],
+                    'unknown',
+                  ],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-classes': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                partitionByComment: false,
+                groups: [
+                  'index-signature',
+                  'static-property',
+                  'protected-property',
+                  'private-property',
+                  'property',
+                  'constructor',
+                  'static-method',
+                  'protected-method',
+                  'private-method',
+                  'method',
+                  ['get-method', 'set-method'],
+                  'unknown',
+                ],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-## 📚 Resources
+## Version
+
+This rule was introduced in [v0.11.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.11.0).
+
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-classes.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-classes.test.ts)

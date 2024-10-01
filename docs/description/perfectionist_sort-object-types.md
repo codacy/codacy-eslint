@@ -1,191 +1,268 @@
 ---
 title: sort-object-types
-description: ESLint Plugin Perfectionist rule which enforce sorted object types in TypeScript
+description: Standardize the order of members in a TypeScript object type for improved readability and maintainability. Use this ESLint rule to keep your object types well-organized
+shortDescription: Enforce sorted object types
+keywords:
+  - eslint
+  - sort object types
+  - eslint rule
+  - coding standards
+  - code quality
+  - typescript linting
+  - object type sorting
+  - typescript object types
+  - object type members sorting
+  - typescript object type members
 ---
 
-# sort-object-types
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted object types.
 
-This rule standardizes the order of members of an object type in a TypeScript. The order in which the members are defined within an object type does not affect the type system or the behavior of the code.
+This rule standardizes the order of members within an object type in TypeScript. By ensuring that the members are sorted, it enhances readability without affecting the type system or code behavior.
 
-:::info Important
+This practice promotes a clear and consistent structure, making it easier for developers to understand and maintain object types.
+
+<Important>
 If you use the [`adjacent-overload-signatures`](https://typescript-eslint.io/rules/adjacent-overload-signatures) rule from the [`@typescript-eslint/eslint-plugin`](https://typescript-eslint.io) plugin, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
-:::
+</Important>
 
-## 💡 Examples
+## Try it out
 
-::: code-group
+<CodeExample
+  alphabetical={dedent`
+    type Department = {
+      departmentName: string
+      employees: number
+      established: Date
+      head: string
+      location: string
+    }
 
-<!-- prettier-ignore -->
-```ts [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-type User = {
-  isBlocked: boolean
-  createdAt: Date
-  role: 'admin' | 'lead' | 'user'
-  username: string
-  email: string
-}
+    type Company = {
+      ceo: string
+      departments: Department[]
+      founded: Date
+      headquarters: string
+      industry: string
+      name: string
+    }
+  `}
+  lineLength={dedent`
+    type Department = {
+      departmentName: string
+      employees: number
+      established: Date
+      location: string
+      head: string
+    }
 
-// ✅ Correct
-type User = {
-  createdAt: Date
-  email: string
-  isBlocked: boolean
-  role: 'admin' | 'lead' | 'user'
-  username: string
-}
-```
+    type Company = {
+      departments: Department[]
+      headquarters: string
+      industry: string
+      founded: Date
+      name: string
+      ceo: string
+    }
+  `}
+  initial={dedent`
+    type Department = {
+      location: string
+      departmentName: string
+      employees: number
+      head: string
+      established: Date
+    }
 
-```ts [Sorting by Line Length]
-// ❌ Incorrect
-type User = {
-  isBlocked: boolean
-  createdAt: Date
-  role: 'admin' | 'lead' | 'user'
-  username: string
-  email: string
-}
+    type Company = {
+      ceo: string
+      departments: Department[]
+      headquarters: string
+      name: string
+      industry: string
+      founded: Date
+    }
+  `}
+  client:load
+  lang="ts"
+/>
 
-// ✅ Correct
-type User = {
-  role: 'admin' | 'lead' | 'user'
-  isBlocked: boolean
-  username: string
-  createdAt: Date
-  email: string
-}
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-type CustomGroup = string
-type Group = 'multiline' | CustomGroup
-
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  groups?: (Group | Group[])[]
-  'custom-groups'?: { [key: Group]: string[] | string }
-  'partition-by-new-line'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### partitionByNewLine
+
+<sub>default: `false`</sub>
+
+When `true`, the rule will not sort the members of an interface if there is an empty line between them. This can be useful for keeping logically separated groups of members in their defined order.
+
+```ts
+type User = {
+  // Group 1
+  firstName: string;
+  lastName: string;
+
+  // Group 2
+  age: number;
+  birthDate: Date;
+
+  // Group 3
+  address: {
+    street: string;
+    city: string;
+  };
+  phone?: string;
+};
+```
+
+In this example, the `partitionByNewLine` option will cause the rule to treat each group of members (separated by empty lines) independently, preserving their order within each group.
+
+### groupKind
+
+<sub>default: `'mixed'`</sub>
+
+Allows you to group type object keys by their kind, determining whether required values should come before or after optional values.
+
+- `mixed` — Do not group object keys by their kind; required values are sorted together optional values.
+- `required-first` — Group all required values before optional.
+- `optional-first` — Group all optional values before required.
 
 ### groups
 
-<sub>(default: `[]`)</sub>
+<sub>default: `[]`</sub>
 
-You can set up a list of type properties groups for sorting. Groups can be combined. There are predefined group: `'multiline'`.
+Allows you to specify a list of type properties groups for sorting. Groups help organize properties into categories, making your type definitions more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
 
-### custom-groups
+There are predefined group: `'multiline'`.
 
-<sub>(default: `{}`)</sub>
+Predefined Group:
 
-You can define your own groups for type properties attributes. The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern matching.
+- `'multiline'` — Properties with multiline definitions, such as methods or complex type declarations.
+- `'unknown'` — Properties that don’t fit into any other group.
+
+### customGroups
+
+<sub>default: `{}`</sub>
+
+You can define your own groups for type object members using custom glob patterns for matching.
 
 Example:
 
-```
-{
-  "custom-groups": {
-    "callback": "on*"
-  }
-}
-```
-
-### partition-by-new-line
-
-<sub>(default: `false`)</sub>
-
-When `true`, does not sort the object type's members if there is an empty string between them.
-
-## ⚙️ Usage
-
-::: code-group
-
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-object-types": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "always-on-top": ["id"]
-      }
-    ]
-  }
-}
+```js
+ {
+   groups: [
+     'multiline',
+     'unknown',
++    'callback',     // [!code ++]
+   ],
++  customGroups: {   // [!code ++]
++    callback: 'on*' // [!code ++]
++  }                 // [!code ++]
+ }
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+## Usage
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-object-types': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  partitionByNewLine: false,
+                  groups: [],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-object-types': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          'always-on-top': ['id'],
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-object-types': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                partitionByNewLine: false,
+                groups: [],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.11.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.11.0).
 
-This rule was introduced in v0.11.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-object-types.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-object-types.test.ts)

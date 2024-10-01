@@ -1,182 +1,217 @@
 ---
 title: sort-named-imports
-description: ESLint Plugin Perfectionist rule which enforce sorted named imports
+description: Enforce a standardized ordering of named imports for easier navigation and understanding of import statements. This ESLint rule helps keep your named imports organized
+shortDescription: Enforce sorted named imports
+keywords:
+  - eslint
+  - sort named imports
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - named imports sorting
 ---
 
-# sort-named-imports
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted named imports.
 
-It promotes a standardized ordering of named imports, making it easier for developers to navigate and understand the import statements within the codebase.
+Sorting named imports promotes a standardized ordering, making it easier for developers to navigate and understand import statements.
 
-:::info Important
+This rule ensures that named imports are consistently organized, enhancing the readability and maintainability of the code. By keeping imports sorted, developers can quickly locate necessary modules and maintain a clean code structure.
+
+<Important>
 If you use the [`sort-imports`](https://eslint.org/docs/latest/rules/sort-imports) rule, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
-:::
+</Important>
 
-## 💡 Examples
+## Try it out
 
-::: code-group
+<CodeExample
+  alphabetical={dedent`
+    import {
+      createContext,
+      useEffect,
+      useId,
+      useLayoutEffect,
+      useReducer,
+      useRef,
+      useState,
+    } from 'react'
 
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-import {
-  useLayoutEffect,
-  useRef,
-  useEffect,
-  useId,
-  useState,
-  createContext,
-  useReducer,
-} from 'react'
+    import {
+      createBrowserRouter,
+      Link,
+      Route,
+      RouterProvider,
+    } from 'react-router-dom'
 
-// ✅ Correct
-import {
-  createContext,
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useReducer,
-  useRef,
-  useState,
-} from 'react'
-```
+    import { useDispatch, useStore } from 'react-redux'
+  `}
+  lineLength={dedent`
+    import {
+      useLayoutEffect,
+      createContext,
+      useReducer,
+      useEffect,
+      useState,
+      useRef,
+      useId,
+    } from 'react'
 
-<!-- prettier-ignore -->
-```js [Sorting by Line Length]
-// ❌ Incorrect
-import {
-  useLayoutEffect,
-  useRef,
-  useEffect,
-  useId,
-  useState,
-  createContext,
-  useReducer,
-} from 'react'
+    import {
+      createBrowserRouter,
+      RouterProvider,
+      Route,
+      Link,
+    } from 'react-router-dom'
 
-// ✅ Correct
-import {
-  useLayoutEffect,
-  createContext,
-  useReducer,
-  useEffect,
-  useState,
-  useRef,
-  useId,
-} from 'react'
-```
+    import { useDispatch, useStore } from 'react-redux'
+  `}
+  initial={dedent`
+    import {
+      useReducer,
+      useRef,
+      createContext,
+      useEffect,
+      useLayoutEffect,
+      useId,
+      useState,
+    } from 'react'
 
-:::
+    import {
+      Route,
+      createBrowserRouter,
+      RouterProvider,
+      Link,
+    } from 'react-router-dom'
 
-## 🔧 Options
+    import { useStore, useDispatch } from 'react-redux'
+  `}
+  client:load
+  lang="ts"
+/>
+
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'group-kind'?: 'mixed' | 'values-first' | 'types-first'
-  'ignore-case'?: boolean
-  'ignore-alias'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### group-kind
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `'mixed'`)</sub>
+### ignoreCase
 
-Allows to group named imports by their kind, with value imports coming either before or after type imports.
+<sub>default: `true`</sub>
 
-- `mixed` - does not group named imports by their kind
-- `values-first` - groups all value imports before type imports
-- `types-first` - groups all type imports before value imports
+Controls whether sorting should be case-sensitive or not.
 
-### ignore-case
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-<sub>(default: `false`)</sub>
+### ignoreAlias
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `false`</sub>
 
-### ignore-alias
+Determines whether to use the import alias as the name for sorting instead of the exported name.
 
-<sub>(default: `true`)</sub>
+- `true` — Use the import alias for sorting.
+- `false` — Use the exported name for sorting.
 
-Use import alias as name instead of exported name.
+### groupKind
 
-## ⚙️ Usage
+<sub>default: `'mixed'`</sub>
 
-::: code-group
+Allows you to group named imports by their kind, determining whether value imports should come before or after type imports.
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-named-imports": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
-```
+- `mixed` — Do not group named imports by their kind; export statements are sorted together regardless of their type.
+- `values-first` — Group all value imports before type imports.
+- `types-first` — Group all type imports before value imports.
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+## Usage
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-named-imports': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreAlias: false,
+                  ignoreCase: true,
+                  groupKind: 'mixed',
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-named-imports': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-named-imports': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreAlias: false,
+                ignoreCase: true,
+                groupKind: 'mixed',
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.2.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.2.0).
 
-This rule was introduced in v0.2.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-named-imports.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-named-imports.test.ts)

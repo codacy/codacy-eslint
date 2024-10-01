@@ -1,159 +1,205 @@
 ---
 title: sort-named-exports
-description: ESLint Plugin Perfectionist rule which enforce sorted named exports
+description: Maintain a consistent and sorted order of named exports to improve code readability and maintainability. This ESLint rule ensures your named exports are well-organized
+shortDescription: Enforce sorted named exports
+keywords:
+  - eslint
+  - sort named exports
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - module exports sorting
+  - named exports sorting
 ---
 
-# sort-named-exports
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted named exports.
 
-Maintaining a consistent and sorted order of named exports can improve code readability.
+Maintaining a consistent and sorted order of named exports can significantly improve code readability.
 
-## 💡 Examples
+This rule ensures that named exports are organized in a predictable manner, making it easier for developers to navigate and manage exported modules. By adopting this practice, you enhance the maintainability and clarity of your codebase.
 
-::: code-group
+## Try it out
 
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-export {
-  defineConfig,
-  validateConfig,
-  merge,
-  baseConfig,
-} from './config'
+<CodeExample
+  alphabetical={dedent`
+    export {
+      calculateAge,
+      debounce,
+      formatDate,
+      generateUUID,
+      parseQueryString,
+      throttle,
+    } from './utils'
 
-// ✅ Correct
-export {
-  baseConfig,
-  defineConfig,
-  merge,
-  validateConfig,
-} from './config'
-```
+    export {
+      capitalizeFirstLetter,
+      generateRandomString,
+      isDateValid,
+      isEmailValid,
+      isEmpty,
+      isEqual,
+      isPhoneNumberValid,
+      parseDate,
+    } from './helpers'
+  `}
+  lineLength={dedent`
+    export {
+      parseQueryString,
+      calculateAge,
+      generateUUID,
+      formatDate,
+      debounce,
+      throttle,
+    } from './utils'
 
-<!-- prettier-ignore -->
-```js [Sorting by Line Length]
-// ❌ Incorrect
-export {
-  defineConfig,
-  validateConfig,
-  merge,
-  baseConfig,
-} from './config'
+    export {
+      capitalizeFirstLetter,
+      generateRandomString,
+      isPhoneNumberValid,
+      isEmailValid,
+      isDateValid,
+      parseDate,
+      isEmpty,
+      isEqual,
+    } from './helpers'
+  `}
+  initial={dedent`
+    export {
+      throttle,
+      calculateAge,
+      formatDate,
+      generateUUID,
+      debounce,
+      parseQueryString,
+    } from './utils'
 
-// ✅ Correct
-export {
-  validateConfig,
-  defineConfig,
-  baseConfig,
-  merge,
-} from './config'
-```
+    export {
+      isPhoneNumberValid,
+      parseDate,
+      isEmpty,
+      isEqual,
+      capitalizeFirstLetter,
+      isDateValid,
+      isEmailValid,
+      generateRandomString,
+    } from './helpers'
+  `}
+  client:load
+  lang="ts"
+/>
 
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'group-kind'?: 'mixed' | 'values-first' | 'types-first'
-  'ignore-case'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### group-kind
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `'mixed'`)</sub>
+### ignoreCase
 
-Allows to group named exports by their kind, with value exports coming either before or after type exports.
+<sub>default: `true`</sub>
 
-- `mixed` - does not group named exports by their kind
-- `values-first` - groups all value exports before type exports
-- `types-first` - groups all type exports before value exports
+Controls whether sorting should be case-sensitive or not.
 
-### ignore-case
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-<sub>(default: `false`)</sub>
+### groupKind
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `'mixed'`</sub>
 
-## ⚙️ Usage
+Allows you to group named exports by their kind, determining whether value exports should come before or after type exports.
 
-::: code-group
+- `mixed` — Do not group named exports by their kind; export statements are sorted together regardless of their type.
+- `values-first` — Group all value exports before type exports.
+- `types-first` — Group all type exports before value exports.
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-named-exports": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
-```
+## Usage
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-named-exports': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groupKind: 'mixed',
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-named-exports': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-named-exports': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groupKind: 'mixed',
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.4.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.4.0).
 
-This rule was introduced in v0.4.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-named-exports.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-named-exports.test.ts)

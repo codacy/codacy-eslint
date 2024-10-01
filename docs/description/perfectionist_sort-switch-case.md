@@ -1,0 +1,243 @@
+---
+title: sort-switch-case
+description: Ensure consistent and readable switch statements with the sort-switch-case ESLint rule. Automatically sort case clauses within switch statements to improve code clarity and maintainability
+shortDescription: Enforce sorted switch case statements
+keywords:
+  - eslint
+  - sort switch case
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - switch statements
+  - case sorting
+  - switch case order
+---
+
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
+
+Enforce sorted switch case statements.
+
+Switch statements with numerous cases can quickly become cumbersome and hard to navigate. With this rule, you can easily locate specific cases and ensure that your codebase adheres to a predictable and standardized format.
+
+This practice contributes to a more readable and maintainable codebase, allowing developers to quickly understand and modify the logic without getting lost in a jumble of unsorted case clauses.
+
+By integrating this rule into your ESLint configuration, you can focus on the functionality of your code, confident that your switch statements are consistently structured and easy to manage.
+
+## Try it out
+
+<CodeExample
+  alphabetical={dedent`
+    const userReducer = (state = initialState, action) => {
+      switch (action.type) {
+        case 'ADD_USER':
+          return {
+            ...state,
+            users: [...state.users, action.payload],
+          }
+        case 'DELETE_USER':
+          return {
+            ...state,
+            users: state.users.filter(user => user.id !== action.payload.id),
+          }
+        case 'FETCH_USER_ERROR':
+          return {
+            ...state,
+            loading: false,
+            error: action.payload,
+          }
+        case 'FETCH_USER_REQUEST':
+          return {
+            ...state,
+            loading: true,
+            error: null,
+          }
+        case 'FETCH_USER_SUCCESS':
+          return {
+            ...state,
+            loading: false,
+            currentUser: action.payload,
+          }
+        default:
+          return state
+      }
+    }
+  `}
+  lineLength={dedent`
+    const userReducer = (state = initialState, action) => {
+      switch (action.type) {
+        case 'FETCH_USER_REQUEST':
+          return {
+            ...state,
+            loading: true,
+            error: null,
+          }
+        case 'FETCH_USER_SUCCESS':
+          return {
+            ...state,
+            loading: false,
+            currentUser: action.payload,
+          }
+        case 'FETCH_USER_ERROR':
+          return {
+            ...state,
+            loading: false,
+            error: action.payload,
+          }
+        case 'DELETE_USER':
+          return {
+            ...state,
+            users: state.users.filter(user => user.id !== action.payload.id),
+          }
+        case 'ADD_USER':
+          return {
+            ...state,
+            users: [...state.users, action.payload],
+          }
+        default:
+          return state
+      }
+    }
+  `}
+  initial={dedent`
+    const userReducer = (state = initialState, action) => {
+      switch (action.type) {
+        case 'FETCH_USER_ERROR':
+          return {
+            ...state,
+            loading: false,
+            error: action.payload,
+          }
+        case 'FETCH_USER_SUCCESS':
+          return {
+            ...state,
+            loading: false,
+            currentUser: action.payload,
+          }
+        case 'DELETE_USER':
+          return {
+            ...state,
+            users: state.users.filter(user => user.id !== action.payload.id),
+          }
+        case 'FETCH_USER_REQUEST':
+          return {
+            ...state,
+            loading: true,
+            error: null,
+          }
+        case 'ADD_USER':
+          return {
+            ...state,
+            users: [...state.users, action.payload],
+          }
+        default:
+          return state
+      }
+    }
+  `}
+  client:load
+  lang="tsx"
+/>
+
+## Options
+
+This rule accepts an options object with the following properties:
+
+### type
+
+<sub>default: `'alphabetical'`</sub>
+
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
+
+### order
+
+<sub>default: `'asc'`</sub>
+
+Determines whether the sorted items should be in ascending or descending order.
+
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
+
+### ignoreCase
+
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+## Usage
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-switch-case': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-switch-case': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
+
+## Version
+
+This rule was introduced in [v3.0.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v3.0.0).
+
+## Resources
+
+- [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-switch-case.ts)
+- [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-switch-case.test.ts)
+

@@ -109,7 +109,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-jest",
-    "/jest-community/eslint-plugin-jest/master/docs/rules/"
+    "/jest-community/eslint-plugin-jest/refs/tags/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -129,7 +129,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-jsdoc",
-    "/gajus/eslint-plugin-jsdoc/main/docs/rules/"
+    "/gajus/eslint-plugin-jsdoc/refs/tags/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -186,7 +186,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-perfectionist",
-    "/azat-io/eslint-plugin-perfectionist/main/docs/rules/"
+    "/azat-io/eslint-plugin-perfectionist/refs/tags/main/docs/content/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -196,7 +196,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-react",
-    "/jsx-eslint/eslint-plugin-react/master/docs/rules/"
+    "/jsx-eslint/eslint-plugin-react/refs/tags/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -318,7 +318,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-vuejs-accessibility",
-    "/vue-a11y/eslint-plugin-vuejs-accessibility/main/docs/rules/"
+    "/vue-a11y/eslint-plugin-vuejs-accessibility/refs/tags/main/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
