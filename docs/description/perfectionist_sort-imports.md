@@ -1,0 +1,387 @@
+---
+title: sort-imports
+description: Maintain a consistent and sorted order of imports for improved code readability and organization. This ESLint rule helps manage import statements effectively
+shortDescription: Enforce sorted imports
+keywords:
+  - eslint
+  - sort imports
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - imports sorting
+  - import order
+---
+
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
+
+Enforce sorted imports.
+
+Maintaining a consistent and sorted order of imports is crucial for improving code readability and organization.
+
+This rule ensures that imports are easily locatable and quickly scannable, especially in modules with numerous import statements.
+
+By reducing the likelihood of errors caused by import conflicts and providing a clear structure, this rule helps developers manage imports efficiently and maintain a tidy codebase.
+
+<Important>
+If you use the [`sort-imports`](https://eslint.org/docs/latest/rules/sort-imports) rule or the [`order`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md) rule from the [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import) plugin, it is highly recommended to [disable them](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
+
+If you use the [`prettier-plugin-sort-imports`](https://github.com/trivago/prettier-plugin-sort-imports) plugin, remove them from the prettier config to avoid conflicts.
+
+</Important>
+
+Rule `perfectionist/sort-imports` works in a similar way to rule `import/order`, but with some differences:
+
+1. Supporting for new import types:
+  - `'side-effect'`
+  - `'style'`
+  - `'builtin-type'`
+  - `'internal-type'`
+  - `'parent-type'`
+  - `'sibling-type'`
+  - `'index-type'`
+2. Supporting for adding custom import groups
+3. Sorting not only alphabetically, but also naturally and by line length
+
+## Try it out
+
+<CodeExample
+  alphabetical={dedent`
+    import type { Response, Request } from 'express'
+
+    import bodyParser from 'body-parser'
+    import express from 'express'
+    import session from 'express-session'
+    import defaultsDeep from 'lodash/defaultsDeep'
+    import map from 'lodash/map'
+    import mongoose from 'mongoose'
+    import fs from 'node:fs/promises'
+    import path from 'node:path'
+    import passport from 'passport'
+
+    import initializePassport from '~/config/passport'
+    import logger from '~/middleware/logger'
+    import User from '~/models/User'
+    import authRoutes from '~/routes/auth'
+
+    import dbConfig from './db'
+  `}
+  lineLength={dedent`
+    import type { Response, Request } from 'express'
+
+    import defaultsDeep from 'lodash/defaultsDeep'
+    import session from 'express-session'
+    import bodyParser from 'body-parser'
+    import fs from 'node:fs/promises'
+    import mongoose from 'mongoose'
+    import passport from 'passport'
+    import express from 'express'
+    import path from 'node:path'
+    import map from 'lodash/map'
+
+    import initializePassport from '~/config/passport'
+    import logger from '~/middleware/logger'
+    import authRoutes from '~/routes/auth'
+    import User from '~/models/User'
+
+    import dbConfig from './db'
+  `}
+  initial={dedent`
+    import User from '~/models/User'
+    import bodyParser from 'body-parser'
+    import initializePassport from '~/config/passport'
+    import mongoose from 'mongoose'
+    import express from 'express'
+
+    import type { Response, Request } from 'express'
+    import passport from 'passport'
+    import path from 'node:path'
+    import defaultsDeep from 'lodash/defaultsDeep'
+    import logger from '~/middleware/logger'
+
+    import map from 'lodash/map'
+
+    import dbConfig from './db'
+    import session from 'express-session'
+    import fs from 'node:fs/promises'
+    import authRoutes from '~/routes/auth'
+  `}
+  client:load
+  lang="ts"
+/>
+
+## Options
+
+This rule accepts an options object with the following properties:
+
+### type
+
+<sub>default: `'alphabetical'`</sub>
+
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
+
+### order
+
+<sub>default: `'asc'`</sub>
+
+Determines whether the sorted items should be in ascending or descending order.
+
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
+
+### ignoreCase
+
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### internalPattern
+
+<sub>default: `['~/**']`</sub>
+
+Allows you to specify a pattern for identifying internal imports. This is useful for distinguishing your own modules from external dependencies.
+
+You can use glob patterns to define these internal imports.
+
+### newlinesBetween
+
+<sub>default: `'always'`</sub>
+
+Specifies how new lines should be handled between import groups.
+
+- `ignore` — Do not report errors related to new lines between import groups.
+- `always` — Enforce one new line between each group, and forbid new lines inside a group.
+- `never` — No new lines are allowed in the entire import section.
+
+### maxLineLength
+
+<sub>default: `undefined`</sub>
+
+Specifies a maximum line length for sorting imports. When the line length exceeds this number, sorting will be based only on the import name, excluding the elements.
+
+This option is only available when the type is set to `'line-length'`.
+
+### groups
+
+<sub>
+  default:
+  ```
+  [
+    'type',
+    ['builtin', 'external'],
+    'internal-type',
+    'internal',
+    ['parent-type', 'sibling-type', 'index-type'],
+    ['parent', 'sibling', 'index'],
+    'object',
+    'unknown',
+  ]
+  ```
+</sub>
+
+Allows you to set up a list of import groups for sorting. Groups help organize imports into meaningful categories, making your code more readable and maintainable. Multiple groups can be combined.
+
+There are a lot of predefined groups.
+
+Predefined Groups:
+
+- `'builtin'` — Node.js Built-in Modules.
+- `'external'` — External modules installed in the project.
+- `'internal'` — Your internal modules.
+- `'parent'` — Modules from the parent directory.
+- `'sibling'` — Modules from the same directory.
+- `'side-effect'` — Side effect imports.
+- `'side-effect-style'` — Side effect style imports.
+- `'index'` — Main file from the current directory.
+- `'object'` — TypeScript object imports.
+- `'style'` — Styles.
+- `'external-type'` — TypeScript type imports from external modules.
+- `'builtin-type'` — TypeScript type imports from built-in modules.
+- `'internal-type'` — TypeScript type imports from your internal modules.
+- `'parent-type'` — TypeScript type imports from the parent directory.
+- `'sibling-type'` — TypeScript type imports from the same directory.
+- `'index-type'` — TypeScript type imports from the main directory file.
+- `'unknown'` — Imports that don’t fit into any other group.
+
+Example:
+
+```ts
+// 'builtin' - Node.js Built-in Modules
+import path from 'path'
+// 'external' - External modules installed in the project
+import axios from 'axios'
+// 'internal' - Your internal modules
+import Button from '~/components/Button'
+// 'parent' - Modules from parent directory
+import formatNumber from '../utils/format-number'
+// 'sibling' - Modules from the same directory
+import config from './config'
+// 'side-effect' - Side effect imports
+import './set-production-env.js'
+// side-effect-style - Side effect style imports
+import './styles.scss'
+// 'index' - Main file from the current directory
+import main from '.'
+// 'object' - TypeScript object-imports
+import log = console.log
+// 'style' - Styles
+import styles from './index.module.css'
+// 'external-type' - TypeScript type imports
+import type { FC } from 'react'
+// 'builtin-type' - TypeScript type imports from Built-in Modules
+import type { Server } from 'http'
+// 'internal-type' - TypeScript type imports from your internal modules
+import type { User } from '~/users'
+// 'parent-type' - TypeScript type imports from parent directory
+import type { InputProps } from '../Input'
+// 'sibling-type' - TypeScript type imports from the same directory
+import type { Details } from './data'
+// 'index-type' - TypeScript type imports from main directory file
+import type { BaseOptions } from './index.d.ts'
+```
+
+### customGroups
+
+<sub>default: `{ value: {}, type: {} }`</sub>
+
+You can define your own groups for importing values of types using custom glob patterns for matching.
+
+Example:
+
+```js
+   groups: [
++    'react',                       // [!code ++]
+     'type',
+     ['builtin', 'external'],
++    'lodash',                      // [!code ++]
+     'internal-type',
+     'internal',
+     ['parent-type', 'sibling-type', 'index-type'],
+     ['parent', 'sibling', 'index'],
+     'object',
+     'unknown',
+   ],
++  customGroups: {                  // [!code ++]
++    value: {                       // [!code ++]
++     react: ['react', 'react-*'],  // [!code ++]
++     lodash: 'lodash',             // [!code ++]
++    },                             // [!code ++]
++    type: {                        // [!code ++]
++      react: ['react', 'react-*'], // [!code ++]
++    }                              // [!code ++]
++  },                               // [!code ++]
+ }
+```
+
+### environment
+
+<sub>default: `'node'`</sub>
+
+Specifies which environment’s built-in modules should be recognized. If you are using [Bun](https://bun.sh), change the value to `'bun'`.
+
+## Usage
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-imports': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  internalPattern: ['~/**'],
+                  newlinesBetween: 'always',
+                  maxLineLength: undefined,
+                  groups: [
+                    'type',
+                    ['builtin', 'external'],
+                    'internal-type',
+                    'internal',
+                    ['parent-type', 'sibling-type', 'index-type'],
+                    ['parent', 'sibling', 'index'],
+                    'object',
+                    'unknown',
+                  ],
+                  customGroups: { type: {}, value: {} },
+                  environment: 'node',
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-imports': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                internalPattern: ['~/**'],
+                newlinesBetween: 'always',
+                maxLineLength: undefined,
+                groups: [
+                  'type',
+                  ['builtin', 'external'],
+                  'internal-type',
+                  'internal',
+                  ['parent-type', 'sibling-type', 'index-type'],
+                  ['parent', 'sibling', 'index'],
+                  'object',
+                  'unknown',
+                ],
+                customGroups: { type: {}, value: {} },
+                environment: 'node',
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
+
+## Version
+
+This rule was introduced in [v0.9.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.9.0).
+
+## Resources
+
+- [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-imports.ts)
+- [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-imports.test.ts)

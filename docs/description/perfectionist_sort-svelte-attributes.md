@@ -1,0 +1,307 @@
+---
+title: sort-svelte-attributes
+description: Enforce sorting of attributes in Svelte elements for improved readability and maintainability. Use this ESLint rule to keep your Svelte components clean and organized
+shortDescription: Enforce sorted Svelte attributes
+keywords:
+  - eslint
+  - sort svelte attributes
+  - svelte props order
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - svelte attributes sorting
+  - svelte props sorting
+---
+
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
+
+Enforce sorted attributes in Svelte elements.
+
+Maintaining a consistent order of attributes in Svelte elements enhances readability and maintainability. This rule ensures that attributes are sorted, making the structure of your Svelte components more predictable and easier to manage.
+
+It's **safe**. The rule considers spread elements in an attributes list and does not break component functionality.
+
+<Important>
+If you use the [`sort-attributes`](https://sveltejs.github.io/eslint-plugin-svelte/rules/sort-attributes/) rule from the [`eslint-plugin-svelte`](https://sveltejs.github.io/eslint-plugin-svelte) plugin, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
+</Important>
+
+## Try it out
+
+<CodeExample
+  alphabetical={dedent`
+    <div
+      aria-labelledby="card-title"
+      class="card"
+      hidden={!show}
+      id="card"
+      role="region"
+    >
+      <h2 id="card-title">{title}</h2>
+      <button
+        aria-label="Card info"
+        class="button"
+        disabled={isActive ? null : true}
+        on:click={handleClick}
+        style="color: {color}; font-size: {size};"
+        type="button"
+      >
+        Get card info
+      </button>
+    </div>
+  `}
+  lineLength={dedent`
+    <div
+      aria-labelledby="card-title"
+      hidden={!show}
+      role="region"
+      class="card"
+      id="card"
+    >
+      <h2 id="card-title">{title}</h2>
+      <button
+        style="color: {color}; font-size: {size};"
+        disabled={isActive ? null : true}
+        on:click={handleClick}
+        aria-label="Card info"
+        class="button"
+        type="button"
+      >
+        Get card info
+      </button>
+    </div>
+  `}
+  initial={dedent`
+    <div
+      role="region"
+      class="card"
+      id="card"
+      aria-labelledby="card-title"
+      hidden={!show}
+    >
+      <h2 id="card-title">{title}</h2>
+      <button
+        style="color: {color}; font-size: {size};"
+        type="button"
+        aria-label="Card info"
+        on:click={handleClick}
+        class="button"
+        disabled={isActive ? null : true}
+      >
+        Get card info
+      </button>
+    </div>
+  `}
+  lang="svelte"
+  client:load
+/>
+
+## Options
+
+This rule accepts an options object with the following properties:
+
+### type
+
+<sub>default: `'alphabetical'`</sub>
+
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
+
+### order
+
+<sub>default: `'asc'`</sub>
+
+Determines whether the sorted items should be in ascending or descending order.
+
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
+
+### ignoreCase
+
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### groups
+
+<sub>default: `[]`</sub>
+
+Allows you to specify a list of Svelte attribute groups for sorting. Groups help organize attributes into categories, making your components more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
+
+There are predefined groups: `'multiline'`, `'shorthand'`, `'svelte-shorthand'`.
+
+Predefined Groups:
+
+- `'multiline'` — Attributes whose length exceeds one line, such as event handlers or functions.
+- `'shorthand'` — Shorthand attributes, which are used without a value, typically for boolean props.
+- `'svelte-shorthand'` — Svelte’s shorthand for replacing `name={name}` with `{name}`.
+- `'unknown'` — Svelte attributes that don’t fit into any other group.
+
+Example:
+
+```svelte
+<button
+  {/* 'multiline' - Props whose length exceeds one line */}
+  on:click={event => {
+    event.preventDefault()
+    fetchDate()
+  }}
+  {/* 'shorthand' - Shorthand property for props with `true` value */}
+  autofocus
+  {/* 'svelte-shorthand' - Svelte's shorthand for replacing name={name} with {name} */}
+  {disabled}
+>
+  Click me
+</button>
+```
+
+### customGroups
+
+<sub>default: `{}`</sub>
+
+You can define your own groups for Svelte attributes using custom glob patterns for matching.
+
+Example:
+
+```js
+ {
+   groups: [
++    ['this', 'bind-this'],                  // [!code ++]
+     'multiline',
++    'style-props',                          // [!code ++]
++    'class',                                // [!code ++]
++    ['bind-directives', 'use-directives'],  // [!code ++]
+     ['shorthand', 'svelte-shorthand'],
+   ],
++  customGroups: {                           // [!code ++]
++    'style-props': '--style-props',         // [!code ++]
++    'bind-directives': 'bind:*',            // [!code ++]
++    'use-directives': 'use:*',              // [!code ++]
++    'bind-this': 'bind:this',               // [!code ++]
++    class: 'class',                         // [!code ++]
++    this: 'this',                           // [!code ++]
++  },                                        // [!code ++]
+ }
+```
+
+## Usage
+
+In order to start using this rule, you need to install additional dependency:
+
+<CodeTabs
+  code={[
+    {
+      source: 'npm install --save-dev svelte-eslint-parser',
+      name: 'npm',
+      value: 'npm',
+    },
+    {
+      source: 'pnpm add --save-dev svelte-eslint-parser',
+      name: 'pnpm',
+      value: 'pnpm',
+    },
+    {
+      source: 'yarn add --dev svelte-eslint-parser',
+      name: 'yarn',
+      value: 'yarn',
+    },
+    {
+      source: 'bun install --dev svelte-eslint-parser',
+      name: 'bun',
+      value: 'bun',
+    },
+  ]}
+  type="package-manager"
+  client:load
+  lang="bash"
+/>
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+        import svelteParser from 'svelte-eslint-parser'
+
+        export default [
+          {
+            files: ['**/*.svelte'],
+            languageOptions: {
+              parser: svelteParser,
+            },
+          }, {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-svelte-attributes': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groups: [],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          overrides: [
+            {
+              files: ['*.svelte'],
+              parser: 'svelte-eslint-parser'
+            }
+          ],
+          rules: {
+            'perfectionist/sort-svelte-attributes': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groups: [],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
+
+## Version
+
+This rule was introduced in [v2.0.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v2.0.0).
+
+## Resources
+
+- [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-svelte-attributes.ts)
+- [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-svelte-attributes.test.ts)

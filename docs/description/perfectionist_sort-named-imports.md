@@ -1,0 +1,217 @@
+---
+title: sort-named-imports
+description: Enforce a standardized ordering of named imports for easier navigation and understanding of import statements. This ESLint rule helps keep your named imports organized
+shortDescription: Enforce sorted named imports
+keywords:
+  - eslint
+  - sort named imports
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - named imports sorting
+---
+
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
+
+Enforce sorted named imports.
+
+Sorting named imports promotes a standardized ordering, making it easier for developers to navigate and understand import statements.
+
+This rule ensures that named imports are consistently organized, enhancing the readability and maintainability of the code. By keeping imports sorted, developers can quickly locate necessary modules and maintain a clean code structure.
+
+<Important>
+If you use the [`sort-imports`](https://eslint.org/docs/latest/rules/sort-imports) rule, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
+</Important>
+
+## Try it out
+
+<CodeExample
+  alphabetical={dedent`
+    import {
+      createContext,
+      useEffect,
+      useId,
+      useLayoutEffect,
+      useReducer,
+      useRef,
+      useState,
+    } from 'react'
+
+    import {
+      createBrowserRouter,
+      Link,
+      Route,
+      RouterProvider,
+    } from 'react-router-dom'
+
+    import { useDispatch, useStore } from 'react-redux'
+  `}
+  lineLength={dedent`
+    import {
+      useLayoutEffect,
+      createContext,
+      useReducer,
+      useEffect,
+      useState,
+      useRef,
+      useId,
+    } from 'react'
+
+    import {
+      createBrowserRouter,
+      RouterProvider,
+      Route,
+      Link,
+    } from 'react-router-dom'
+
+    import { useDispatch, useStore } from 'react-redux'
+  `}
+  initial={dedent`
+    import {
+      useReducer,
+      useRef,
+      createContext,
+      useEffect,
+      useLayoutEffect,
+      useId,
+      useState,
+    } from 'react'
+
+    import {
+      Route,
+      createBrowserRouter,
+      RouterProvider,
+      Link,
+    } from 'react-router-dom'
+
+    import { useStore, useDispatch } from 'react-redux'
+  `}
+  client:load
+  lang="ts"
+/>
+
+## Options
+
+This rule accepts an options object with the following properties:
+
+### type
+
+<sub>default: `'alphabetical'`</sub>
+
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
+
+### order
+
+<sub>default: `'asc'`</sub>
+
+Determines whether the sorted items should be in ascending or descending order.
+
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
+
+### ignoreCase
+
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### ignoreAlias
+
+<sub>default: `false`</sub>
+
+Determines whether to use the import alias as the name for sorting instead of the exported name.
+
+- `true` — Use the import alias for sorting.
+- `false` — Use the exported name for sorting.
+
+### groupKind
+
+<sub>default: `'mixed'`</sub>
+
+Allows you to group named imports by their kind, determining whether value imports should come before or after type imports.
+
+- `mixed` — Do not group named imports by their kind; export statements are sorted together regardless of their type.
+- `values-first` — Group all value imports before type imports.
+- `types-first` — Group all type imports before value imports.
+
+## Usage
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-named-imports': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreAlias: false,
+                  ignoreCase: true,
+                  groupKind: 'mixed',
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-named-imports': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreAlias: false,
+                ignoreCase: true,
+                groupKind: 'mixed',
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
+
+## Version
+
+This rule was introduced in [v0.2.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.2.0).
+
+## Resources
+
+- [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-named-imports.ts)
+- [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-named-imports.test.ts)
