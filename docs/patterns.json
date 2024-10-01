@@ -12222,415 +12222,136 @@
       "enabled": false
     },
     {
-      "patternId": "perfectionist_sort-array-includes",
+      "patternId": "perfectionist_sort-variable-declarations",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "spread-last",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-astro-attributes",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-classes",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "groups",
-          "default": []
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-enums",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "partition-by-comment",
-          "default": false
-        },
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-exports",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-imports",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "groups",
-          "default": []
-        },
-        {
-          "name": "newlines-between",
-          "default": "always"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-interfaces",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "optionality-order",
-          "default": "ignore"
-        },
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "groups",
-          "default": []
-        },
-        {
-          "name": "partition-by-new-line",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-jsx-props",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-maps",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-named-exports",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "group-kind",
-          "default": "mixed"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-named-imports",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "ignore-alias",
-          "default": false
-        },
-        {
-          "name": "group-kind",
-          "default": "mixed"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-object-types",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "groups",
-          "default": []
-        },
-        {
-          "name": "partition-by-new-line",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-objects",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "partition-by-comment",
-          "default": false
-        },
-        {
-          "name": "partition-by-new-line",
-          "default": false
-        },
-        {
-          "name": "styled-components",
-          "default": true
-        },
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "perfectionist_sort-svelte-attributes",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
+      "parameters": [],
       "enabled": false
     },
     {
       "patternId": "perfectionist_sort-intersection-types",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        }
-      ],
+      "parameters": [],
       "enabled": false
     },
     {
-      "patternId": "perfectionist_sort-union-types",
+      "patternId": "perfectionist_sort-svelte-attributes",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "nullable-last",
-          "default": false
-        }
-      ],
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-astro-attributes",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
       "patternId": "perfectionist_sort-vue-attributes",
       "level": "Warning",
       "category": "BestPractice",
-      "parameters": [
-        {
-          "name": "type",
-          "default": "alphabetical"
-        },
-        {
-          "name": "order",
-          "default": "asc"
-        },
-        {
-          "name": "ignore-case",
-          "default": false
-        },
-        {
-          "name": "groups",
-          "default": []
-        }
-      ],
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-array-includes",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-named-imports",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-named-exports",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-object-types",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-union-types",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-switch-case",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-interfaces",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-jsx-props",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-classes",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-imports",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-exports",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-objects",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-enums",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "perfectionist_sort-maps",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -16858,6 +16579,13 @@
       "enabled": false
     },
     {
+      "patternId": "unicorn_no-length-as-slice-end",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "unicorn_no-lonely-if",
       "level": "Warning",
       "category": "BestPractice",
@@ -16875,6 +16603,13 @@
       "patternId": "unicorn_no-negated-condition",
       "level": "Warning",
       "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "unicorn_no-negation-in-equality-check",
+      "level": "Error",
+      "category": "ErrorProne",
       "parameters": [],
       "enabled": false
     },
@@ -17082,7 +16817,7 @@
       "parameters": [
         {
           "name": "checkFromLast",
-          "default": false
+          "default": true
         }
       ],
       "enabled": false
