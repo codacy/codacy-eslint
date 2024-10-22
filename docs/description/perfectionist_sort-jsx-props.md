@@ -1,198 +1,280 @@
 ---
 title: sort-jsx-props
-description: ESLint Plugin Perfectionist rule which enforce sorted JSX props within JSX elements
+description: Maintain order and readability of JSX props within your elements by sorting them consistently. Use this ESLint rule to enhance the maintainability of your code
+shortDescription: Enforce sorted JSX props
+keywords:
+  - eslint
+  - sort jsx props
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - jsx props sorting
+  - react props order
+  - react component props
+  - react
 ---
 
-# sort-jsx-props
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted JSX props within JSX elements.
 
-Maintaining a consistent and sorted order of JSX props can improve code readability, organization, and reduce potential errors caused by misplaced or unordered props.
+Ensure sorted JSX props within your elements to maintain order and readability. Navigating through numerous props can become challenging, especially as components grow in complexity. This rule enforces consistent sorting, making your code cleaner and easier to manage.
+
+This practice enhances the readability and maintainability of the code by providing a predictable organization of properties.
+It also sometimes reduces possible errors caused by misplaced or unordered props.
+
+<Important>
+  If you use the
+  [`jsx-sort-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+  rule from the
+  [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react)
+  plugin, it is highly recommended to [disable
+  it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1)
+  to avoid conflicts.
+</Important>
 
 It's **safe**. The rule considers spread elements in a props list and does not break component functionality.
 
-:::info Important
-If you use the [`jsx-sort-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md) rule from the [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react) plugin, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
-:::
+## Try it out
 
-## 💡 Examples
-
-::: code-group
-
-<!-- prettier-ignore -->
-```jsx [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-<Input
-  color="secondary"
-  name="username"
-  onChange={event => setUsername(event.target.value)}
-  full
-  placeholder={t['enter-username']}
-  size="l"
-  label={t.username}
-  end={<UserProfileIcon />}
+<CodeExample
+  alphabetical={dedent`
+    const AuthForm = ({ handleSubmit, setUsername, t }) => (
+      <form
+        action="/auth-user"
+        method="post"
+        onSubmit={handleSubmit}
+      >
+        <Input
+          color="secondary"
+          end={<UserProfileIcon />}
+          full
+          label={t.username}
+          name="user"
+          onChange={event => setUsername(event.target.value)}
+          placeholder={t['enter-username']}
+          size="l"
+        />
+        <Button
+          color="primary"
+          size="l"
+          type="submit"
+          variant="contained"
+        >
+          Submit
+        </Button>
+      </form>
+    )
+  `}
+  lineLength={dedent`
+    const AuthForm = ({ handleSubmit, setUsername, t }) => (
+      <form
+        onSubmit={handleSubmit}
+        action="/auth-user"
+        method="post"
+      >
+        <Input
+          onChange={event => setUsername(event.target.value)}
+          placeholder={t['enter-username']}
+          end={<UserProfileIcon />}
+          label={t.username}
+          color="secondary"
+          name="user"
+          size="l"
+          full
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          size="l"
+        >
+          Submit
+        </Button>
+      </form>
+    )
+  `}
+  initial={dedent`
+    const AuthForm = ({ handleSubmit, setUsername, t }) => (
+      <form
+        method="post"
+        onSubmit={handleSubmit}
+        action="/auth-user"
+      >
+        <Input
+          placeholder={t['enter-username']}
+          size="l"
+          end={<UserProfileIcon />}
+          full
+          onChange={event => setUsername(event.target.value)}
+          label={t.username}
+          name="user"
+          color="secondary"
+        />
+        <Button
+          size="l"
+          color="primary"
+          type="submit"
+          variant="contained"
+        >
+          Submit
+        </Button>
+      </form>
+    )
+  `}
+  client:load
+  lang="tsx"
 />
 
-// ✅ Correct
-<Input
-  color="secondary"
-  end={<UserProfileIcon />}
-  full
-  label={t.username}
-  name="username"
-  onChange={event => setUsername(event.target.value)}
-  placeholder={t['enter-username']}
-  size="l"
-/>
-```
-
-```jsx [Sorting by Line Length]
-// ❌ Incorrect
-<Input
-  color="secondary"
-  name="username"
-  onChange={event => setUsername(event.target.value)}
-  full
-  placeholder={t['enter-username']}
-  size="l"
-  label={t.username}
-  end={<UserProfileIcon />}
-/>
-
-// ✅ Correct
-<Input
-  onChange={event => setUsername(event.target.value)}
-  placeholder={t['enter-username']}
-  end={<UserProfileIcon />}
-  label={t.username}
-  color="secondary"
-  name="username"
-  size="l"
-  full
-/>
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-type CustomGroup = string
-type Group = 'multiline' | 'shorthand' | 'unknown' | CustomGroup
-
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  groups?: (Group | Group[])[]
-  'custom-groups': { [key: CustomGroup]: string[] | string }
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
+
+### ignorePattern
+
+<sub>default: `[]`</sub>
+
+Allows you to specify names or patterns for JSX elements that should be ignored by this rule. This can be useful if you have specific components that you do not want to sort.
+
+You can specify their names or a glob pattern to ignore, for example: `'Table*'` to ignore all object types whose names begin with the word Table.
 
 ### groups
 
-<sub>(default: `[]`)</sub>
+<sub>default: `[]`</sub>
 
-You can set up a list of JSX props groups for sorting. Groups can be combined. There are predefined groups: `'multiline'`, `'shorthand'`.
+Allows you to specify a list of JSX props groups for sorting. Groups help organize props into categories, making your components more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
 
-### custom-groups
+There are predefined groups: `'multiline'`, `'shorthand'`.
 
-<sub>(default: `{}`)</sub>
+Predefined Groups:
 
-You can define your own groups for JSX props. The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern matching.
+- `'multiline'` — Props with multiline values.
+- `'shorthand'` — Shorthand props, which are used without a value, typically for boolean props.
+- `'unknown'` — Props that don’t fit into any other group.
+
+### customGroups
+
+<sub>default: `{}`</sub>
+
+You can define your own groups for JSX props using custom glob patterns for matching.
 
 Example:
 
-```
-{
-  "custom-groups": {
-    "callback": "on*"
-  }
-}
-```
-
-## ⚙️ Usage
-
-::: code-group
-
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-jsx-props": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "groups": ["multiline", "unknown", "shorthand"]
-      }
-    ]
-  }
-}
+```js
+ {
+   groups: [
+     'multiline',
+     'unknown',
+     'shorthand',
++    'callback',     // [!code ++]
+   ],
++  customGroups: {   // [!code ++]
++    callback: 'on*' // [!code ++]
++  }                 // [!code ++]
+ }
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+## Usage
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-jsx-props': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  ignorePattern: [],
+                  groups: [],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-jsx-props': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          groups: ['multiline', 'unknown', 'shorthand'],
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-jsx-props': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                ignorePattern: [],
+                groups: [],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.2.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.2.0).
 
-This rule was introduced in v0.2.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-jsx-props.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-jsx-props.test.ts)

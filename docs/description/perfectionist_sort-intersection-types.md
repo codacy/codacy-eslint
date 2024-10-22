@@ -1,148 +1,229 @@
 ---
 title: sort-intersection-types
-description: ESLint Plugin Perfectionist rule which enforce sorted intersection types in TypeScript
+description: ESEnsure intersection types in TypeScript are sorted for cleaner and more maintainable code. This ESLint rule promotes a standardized ordering of intersection types
+shortDescription: Enforce sorted intersection types
+keywords:
+  - eslint
+  - sort intersection types
+  - eslint rule
+  - coding standards
+  - code quality
+  - typescript linting
+  - intersection types sorting
+  - typescript types
+  - typescript linting
+  - typescript-eslint
 ---
 
-# sort-intersection-types
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted intersection types in TypeScript.
 
-Adhering to the `sort-intersection-types` rule enables developers to ensure that intersection types are consistently sorted, resulting in cleaner and more maintainable code. This rule promotes a standardized ordering of intersection types, making it easier for developers to navigate and understand the structure of type intersections within the codebase.
+Adhering to the `sort-intersection-types` rule enables developers to ensure that intersection types are consistently sorted, resulting in cleaner and more maintainable code.
 
-:::info Important
+This rule promotes a standardized ordering of intersection types, making it easier for developers to navigate and understand the structure of type intersections within the codebase.
+
+<Important>
 If you use the [`sort-type-constituents`](https://typescript-eslint.io/rules/sort-type-constituents) rule from the [`@typescript-eslint/eslint-plugin`](https://typescript-eslint.io) plugin, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
-:::
+</Important>
 
-## 💡 Examples
+## Try it out
 
-::: code-group
+<CodeExample
+  alphabetical={dedent`
+    type Employee = Address & ContactInfo & PersonalInfo & {
+      employeeId: string
+      isActive: boolean
+    }
 
-<!-- prettier-ignore -->
-```ts [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-type NetworkState =
-  & Failed
-  & LoadedFromCache
-  & Success
-  & DataLoading
+    type TeamMember = Employee & {
+      teamId: string
+      name: string
+    }
+  `}
+  lineLength={dedent`
+    type Employee = {
+      employeeId: string
+      isActive: boolean
+    } & PersonalInfo & ContactInfo & Address
 
-// ✅ Correct
-type NetworkState =
-  & DataLoading
-  & Failed
-  & LoadedFromCache
-  & Success
-```
+    type TeamMember = {
+      teamId: string
+      name: string
+    } & Employee
+  `}
+  initial={dedent`
+    type Employee = Address & {
+      employeeId: string
+      isActive: boolean
+    } & PersonalInfo & ContactInfo
 
-<!-- prettier-ignore -->
-```ts [Sorting by Line Length]
-// ❌ Incorrect
-type NetworkState =
-  & Failed
-  & LoadedFromCache
-  & Success
-  & DataLoading
+    type TeamMember = {
+      teamId: string
+      name: string
+    } & Employee
+  `}
+  client:load
+  lang="ts"
+/>
 
-// ✅ Correct
-type NetworkState =
-  & LoadedFromCache
-  & DataLoading
-  & Success
-  & Failed
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
 
-## ⚙️ Usage
+Controls whether sorting should be case-sensitive or not.
 
-::: code-group
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-intersection-types": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
+### groups
+
+<sub>default: `[]`</sub>
+
+Allows you to specify a list of intersection type groups for sorting. Groups help organize types into categories, making your type definitions more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
+
+There are a lot of predefined groups.
+
+Predefined Groups:
+
+- `'conditional`' — Conditional types.
+- `'function`' — Function types.
+- `'import`' — Imported types.
+- `'intersection`' — Intersection types.
+- `'keyword`' — Keyword types.
+- `'literal`' — Literal types.
+- `'named`' — Named types.
+- `'object`' — Object types.
+- `'operator`' — Operator types.
+- `'tuple`' — Tuple types.
+- `'union`' — Union types.
+- `'nullish`' — Nullish types (`null` or `undefined`).
+- `'unknown`' — Types that don’t fit into any other group.
+
+Example:
+
+```ts
+type Example =
+  // 'conditional' — Conditional types.
+  & (A extends B ? C : D)
+  // 'function' — Function types.
+  & ((arg: T) => U)
+  // 'import' — Imported types.
+  & import('module').Type
+  // 'intersection' — Intersection types.
+  & (A & B)
+  // 'keyword' — Keyword types.
+  & any
+  // 'literal' — Literal types.
+  & 'literal'
+  & 42
+  // 'named' — Named types.
+  & SomeType
+  & AnotherType
+  // 'object' — Object types.
+  & { a: string; b: number; }
+  // 'operator' — Operator types.
+  & keyof T
+  // 'tuple' — Tuple types.
+  & [string, number]
+  // 'union' — Union types.
+  & (A | B)
+  // 'nullish' — Nullish types.
+  & null
+  & undefined;
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+## Usage
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-intersection-types': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groups: [],
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-intersection-types': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-intersection-types': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groups: [],
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v2.9.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v2.9.0).
 
-This rule was introduced in v2.9.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-intersection-types.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-intersection-types.test.ts)

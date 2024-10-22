@@ -12015,415 +12015,136 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "spread-last",
-        "description": "spread-last"
-      }
-    ],
-    "patternId": "perfectionist_sort-array-includes",
-    "title": "Perfectionist: Sort array includes",
-    "description": "Enforce sorted arrays before include method",
+    "parameters": [],
+    "patternId": "perfectionist_sort-variable-declarations",
+    "title": "Perfectionist: Sort variable declarations",
+    "description": "Enforce sorted variable declarations.",
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-astro-attributes",
-    "title": "Perfectionist: Sort astro attributes",
-    "description": "Enforce sorted Astro attributes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "groups",
-        "description": "groups"
-      }
-    ],
-    "patternId": "perfectionist_sort-classes",
-    "title": "Perfectionist: Sort classes",
-    "description": "Enforce sorted classes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "partition-by-comment",
-        "description": "partition-by-comment"
-      },
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      }
-    ],
-    "patternId": "perfectionist_sort-enums",
-    "title": "Perfectionist: Sort enums",
-    "description": "Enforce sorted TypeScript enums",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-exports",
-    "title": "Perfectionist: Sort exports",
-    "description": "Enforce sorted exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "groups",
-        "description": "groups"
-      },
-      {
-        "name": "newlines-between",
-        "description": "newlines-between"
-      }
-    ],
-    "patternId": "perfectionist_sort-imports",
-    "title": "Perfectionist: Sort imports",
-    "description": "Enforce sorted imports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "optionality-order",
-        "description": "optionality-order"
-      },
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "groups",
-        "description": "groups"
-      },
-      {
-        "name": "partition-by-new-line",
-        "description": "partition-by-new-line"
-      }
-    ],
-    "patternId": "perfectionist_sort-interfaces",
-    "title": "Perfectionist: Sort interfaces",
-    "description": "Enforce sorted interface properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-jsx-props",
-    "title": "Perfectionist: Sort jsx props",
-    "description": "Enforce sorted JSX props",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-maps",
-    "title": "Perfectionist: Sort maps",
-    "description": "Enforce sorted Map elements",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "group-kind",
-        "description": "group-kind"
-      }
-    ],
-    "patternId": "perfectionist_sort-named-exports",
-    "title": "Perfectionist: Sort named exports",
-    "description": "Enforce sorted named exports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "ignore-alias",
-        "description": "ignore-alias"
-      },
-      {
-        "name": "group-kind",
-        "description": "group-kind"
-      }
-    ],
-    "patternId": "perfectionist_sort-named-imports",
-    "title": "Perfectionist: Sort named imports",
-    "description": "Enforce sorted named imports",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "groups",
-        "description": "groups"
-      },
-      {
-        "name": "partition-by-new-line",
-        "description": "partition-by-new-line"
-      }
-    ],
-    "patternId": "perfectionist_sort-object-types",
-    "title": "Perfectionist: Sort object types",
-    "description": "Enforce sorted object types",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "partition-by-comment",
-        "description": "partition-by-comment"
-      },
-      {
-        "name": "partition-by-new-line",
-        "description": "partition-by-new-line"
-      },
-      {
-        "name": "styled-components",
-        "description": "styled-components"
-      },
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-objects",
-    "title": "Perfectionist: Sort objects",
-    "description": "Enforce sorted objects",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
-    "patternId": "perfectionist_sort-svelte-attributes",
-    "title": "Perfectionist: Sort svelte attributes",
-    "description": "Enforce sorted Svelte attributes",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      }
-    ],
+    "parameters": [],
     "patternId": "perfectionist_sort-intersection-types",
     "title": "Perfectionist: Sort intersection types",
-    "description": "Enforce sorted intersection types",
+    "description": "Enforce sorted intersection types.",
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "nullable-last",
-        "description": "nullable-last"
-      }
-    ],
-    "patternId": "perfectionist_sort-union-types",
-    "title": "Perfectionist: Sort union types",
-    "description": "Enforce sorted union types",
+    "parameters": [],
+    "patternId": "perfectionist_sort-svelte-attributes",
+    "title": "Perfectionist: Sort svelte attributes",
+    "description": "Enforce sorted Svelte attributes.",
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "type",
-        "description": "type"
-      },
-      {
-        "name": "order",
-        "description": "order"
-      },
-      {
-        "name": "ignore-case",
-        "description": "ignore-case"
-      },
-      {
-        "name": "groups",
-        "description": "groups"
-      }
-    ],
+    "parameters": [],
+    "patternId": "perfectionist_sort-astro-attributes",
+    "title": "Perfectionist: Sort astro attributes",
+    "description": "Enforce sorted Astro attributes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "perfectionist_sort-vue-attributes",
     "title": "Perfectionist: Sort vue attributes",
-    "description": "Enforce sorted Vue attributes",
+    "description": "Enforce sorted Vue attributes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-array-includes",
+    "title": "Perfectionist: Sort array includes",
+    "description": "Enforce sorted arrays before include method.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-named-imports",
+    "title": "Perfectionist: Sort named imports",
+    "description": "Enforce sorted named imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-named-exports",
+    "title": "Perfectionist: Sort named exports",
+    "description": "Enforce sorted named exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-object-types",
+    "title": "Perfectionist: Sort object types",
+    "description": "Enforce sorted object types.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-union-types",
+    "title": "Perfectionist: Sort union types",
+    "description": "Enforce sorted union types.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-switch-case",
+    "title": "Perfectionist: Sort switch case",
+    "description": "Enforce sorted switch cases.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-interfaces",
+    "title": "Perfectionist: Sort interfaces",
+    "description": "Enforce sorted interface properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-jsx-props",
+    "title": "Perfectionist: Sort jsx props",
+    "description": "Enforce sorted JSX props.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-classes",
+    "title": "Perfectionist: Sort classes",
+    "description": "Enforce sorted classes.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-imports",
+    "title": "Perfectionist: Sort imports",
+    "description": "Enforce sorted imports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-exports",
+    "title": "Perfectionist: Sort exports",
+    "description": "Enforce sorted exports.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-objects",
+    "title": "Perfectionist: Sort objects",
+    "description": "Enforce sorted objects.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-enums",
+    "title": "Perfectionist: Sort enums",
+    "description": "Enforce sorted TypeScript enums.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "perfectionist_sort-maps",
+    "title": "Perfectionist: Sort maps",
+    "description": "Enforce sorted Map elements.",
     "timeToFix": 5
   },
   {
@@ -16553,6 +16274,13 @@
   },
   {
     "parameters": [],
+    "patternId": "unicorn_no-length-as-slice-end",
+    "title": "Unicorn: No length as slice end",
+    "description": "Disallow using `.length` as the `end` argument of `{Array,String,TypedArray}#slice()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "unicorn_no-lonely-if",
     "title": "Unicorn: No lonely if",
     "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
@@ -16570,6 +16298,13 @@
     "patternId": "unicorn_no-negated-condition",
     "title": "Unicorn: No negated condition",
     "description": "Disallow negated conditions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "unicorn_no-negation-in-equality-check",
+    "title": "Unicorn: No negation in equality check",
+    "description": "Disallow negated expression in equality check.",
     "timeToFix": 5
   },
   {
@@ -16806,7 +16541,7 @@
     "parameters": [],
     "patternId": "unicorn_prefer-array-some",
     "title": "Unicorn: Prefer array some",
-    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast}(…)`.",
+    "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast,findIndex,findLastIndex}(…)`.",
     "timeToFix": 5
   },
   {
@@ -16900,7 +16635,7 @@
     "parameters": [],
     "patternId": "unicorn_prefer-includes",
     "title": "Unicorn: Prefer includes",
-    "description": "Prefer `.includes()` over `.indexOf()` and `Array#some()` when checking for existence or non-existence.",
+    "description": "Prefer `.includes()` over `.indexOf()`, `.lastIndexOf()`, and `Array#some()` when checking for existence or non-existence.",
     "timeToFix": 5
   },
   {

@@ -1,168 +1,229 @@
 ---
 title: sort-array-includes
-description: ESLint Plugin Perfectionist rule which enforce sorted array values if the `includes` method is immediately called after the array is created
+description: Ensure your arrays are sorted when using the includes method immediately after array creation. Improve readability and maintain consistent code with this ESLint rule
+shortDescription: Enforce sorted arrays before include method
+keywords:
+  - eslint
+  - sort array includes
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - array sorting
 ---
 
-# sort-array-includes
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted array values if the `includes` method is immediately called after the array is created.
 
-This rule aims to promote code readability and maintainability by enforcing a consistent ordering of values in arrays.
+By keeping arrays sorted, developers can quickly scan and verify the values, making the code more predictable and reducing the likelihood of errors. This practice simplifies debugging and enhances the overall clarity of the codebase.
 
-## 💡 Examples
 
-::: code-group
+## Try it out
 
-<!-- prettier-ignore -->
-```js [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-if ([
-  'maintainer',
-  'admin',
-  'developer',
-  'owner',
-  'observer'
-].includes(user.role)) {
-  return response.json({ allowed: true })
-}
+<CodeExample
+  alphabetical={dedent`
+    const getProductCategories = (product) => {
+      if ([
+        'Drone',
+        'Headphones',
+        'Keyboard',
+        'Laptop',
+        'Monitor',
+        'Mouse',
+        'Router',
+        'Smartphone',
+        'Smartwatch',
+        'Tablet',
+      ].includes(product.name)) {
+        return 'Electronics'
+      } else if ([
+        'Adapter',
+        'Case',
+        'Charger',
+        'Screen Protector',
+        'Cable',
+        'Battery',
+        'Memory Card',
+      ].includes(product.name)) {
+        return 'Accessories'
+      }
+      return 'Unknown'
+    }
+`}
+  lineLength={dedent`
+    const getProductCategories = (product) => {
+      if ([
+        'Smartphone',
+        'Smartwatch',
+        'Headphones',
+        'Keyboard',
+        'Monitor',
+        'Laptop',
+        'Router',
+        'Tablet',
+        'Drone',
+        'Mouse',
+      ].includes(product.name)) {
+        return 'Electronics'
+      } else if ([
+        'Screen Protector',
+        'Memory Card',
+        'Adapter',
+        'Charger',
+        'Battery',
+        'Cable',
+        'Case',
+      ].includes(product.name)) {
+        return 'Accessories'
+      }
+      return 'Unknown'
+    }
+`}
+  initial={dedent`
+    const getProductCategories = (product) => {
+      if ([
+        'Mouse',
+        'Drone',
+        'Smartphone',
+        'Keyboard',
+        'Tablet',
+        'Monitor',
+        'Laptop',
+        'Smartwatch',
+        'Router',
+        'Headphones',
+      ].includes(product.name)) {
+        return 'Electronics'
+      } else if ([
+        'Memory Card',
+        'Charger',
+        'Cable',
+        'Battery',
+        'Screen Protector',
+        'Case',
+        'Adapter',
+      ].includes(product.name)) {
+        return 'Accessories'
+      }
+      return 'Unknown'
+    }
+`}
+  client:load
+  lang="tsx"
+/>
 
-// ✅ Correct
-if ([
-  'admin',
-  'developer',
-  'maintainer',
-  'observer'
-  'owner',
-].includes(user.role)) {
-  return response.json({ allowed: true })
-}
-```
-
-```js [Sorting by Line Length]
-// ❌ Incorrect
-if ([
-  'maintainer',
-  'admin',
-  'developer',
-  'owner',
-  'observer'
-].includes(user.role)) {
-  return response.json({ allowed: true })
-}
-
-// ✅ Correct
-if ([
-  'maintainer',
-  'developer',
-  'observer'
-  'admin',
-  'owner',
-].includes(user.role)) {
-  return response.json({ allowed: true })
-}
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  'spread-last'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
 
-### spread-last
+Controls whether sorting should be case-sensitive or not.
 
-<sub>(default: `false`)</sub>
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-When `true` enforce spread elements in array to be last.
 
-## ⚙️ Usage
+### groupKind
 
-::: code-group
+<sub>default: `'literals-first'`</sub>
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-array-includes": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "spread-last": true
-      }
-    ]
-  }
-}
-```
+Allows you to group array elements by their kind, determining whether spread values should come before or after literal values.
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+- `mixed` — Do not group array elements by their kind; spread values are sorted together with literal values.
+- `literals-first` — Group all literal values before spread values.
+- `spread-first` — Group all spread values before literal values.
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+
+## Usage
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-array-includes': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groupKind: 'literals-first',
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-array-includes': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          spread-last: true,
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-array-includes': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groupKind: 'literals-first',
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.5.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.5.0).
 
-This rule was introduced in v0.5.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-array-includes.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-array-includes.test.ts)

@@ -1,155 +1,250 @@
 ---
 title: sort-union-types
-description: ESLint Plugin Perfectionist rule which enforce sorted union types in TypeScript
+description: Ensure union types in TypeScript are sorted for cleaner and more maintainable code. This ESLint rule promotes a standardized ordering of union types
+shortDescription: Enforce sorted union types
+keywords:
+  - eslint
+  - sort union types
+  - eslint rule
+  - coding standards
+  - code quality
+  - typescript linting
+  - union types sorting
+  - typescript types
+  - typescript linting
+  - typescript-eslint
+  - typescript union types
+  - typescript union type sorting
+  - typescript union type members
+  - typescript union type sorting
+  - typescript union type members sorting
 ---
 
-# sort-union-types
+import CodeExample from '../../components/CodeExample.svelte'
+import Important from '../../components/Important.astro'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
+Enforce sorted TypeScript union types.
 
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+Adhering to this rule ensures that union types are consistently sorted, resulting in cleaner and more maintainable code. By promoting a standardized ordering of union types, this rule makes it easier for developers to navigate and understand the structure of type unions within the codebase.
 
-<!-- end auto-generated rule header -->
+Consistently sorted union types enhance the overall clarity and organization of your code.
 
-## 📖 Rule Details
-
-Enforce sorted union types in TypeScript.
-
-Adhering to the `sort-union-types` rule enables developers to ensure that union types are consistently sorted, resulting in cleaner and more maintainable code. This rule promotes a standardized ordering of union types, making it easier for developers to navigate and understand the structure of type unions within the codebase.
-
-:::info Important
+<Important>
 If you use the [`sort-type-constituents`](https://typescript-eslint.io/rules/sort-type-constituents) rule from the [`@typescript-eslint/eslint-plugin`](https://typescript-eslint.io) plugin, it is highly recommended to [disable it](https://eslint.org/docs/latest/use/configure/rules#using-configuration-files-1) to avoid conflicts.
-:::
+</Important>
 
-## 💡 Examples
+## Try it out
 
-::: code-group
+<CodeExample
+  alphabetical={dedent`
+    type UserRole = 'admin' | 'editor' | 'guest' | 'user'
 
-<!-- prettier-ignore -->
-```ts [Alphabetical and Natural Sorting]
-// ❌ Incorrect
-type NetworkState =
-  | 'Failed'
-  | 'LoadedFromCache'
-  | 'Success'
-  | 'DataLoading'
+    type ResponseStatus =
+      | 'error'
+      | 'pending'
+      | 'success'
+      | 'timeout'
 
-// ✅ Correct
-type NetworkState =
-  | 'DataLoading'
-  | 'Failed'
-  | 'LoadedFromCache'
-  | 'Success'
-```
+    type InputType =
+      | 'email'
+      | 'number'
+      | 'password'
+      | 'tel'
+      | 'text'
+  `}
+  lineLength={dedent`
+    type UserRole = 'editor' | 'admin' | 'guest' | 'user'
 
-<!-- prettier-ignore -->
-```ts [Sorting by Line Length]
-// ❌ Incorrect
-type NetworkState =
-  | 'Failed'
-  | 'LoadedFromCache'
-  | 'Success'
-  | 'DataLoading'
+    type ResponseStatus =
+      | 'success'
+      | 'pending'
+      | 'timeout'
+      | 'error'
 
-// ✅ Correct
-type NetworkState =
-  | 'LoadedFromCache'
-  | 'DataLoading'
-  | 'Success'
-  | 'Failed'
-```
+    type InputType =
+      | 'password'
+      | 'number'
+      | 'email'
+      | 'text'
+      | 'tel'
+  `}
+  initial={dedent`
+    type UserRole = 'user' | 'guest' | 'admin' | 'editor'
 
-:::
+    type ResponseStatus =
+      | 'timeout'
+      | 'success'
+      | 'pending'
+      | 'error'
 
-## 🔧 Options
+    type InputType =
+      | 'password'
+      | 'tel'
+      | 'number'
+      | 'text'
+      | 'email'
+  `}
+  client:load
+  lang="ts"
+/>
+
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  'nullable-last'?: boolean
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
 
-### nullable-last
+Controls whether sorting should be case-sensitive or not.
 
-<sub>(default: `false`)</sub>
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
-When `true` requires the types `null` and `undefined` to be last.
+### groups
 
-## ⚙️ Usage
+<sub>default: `[]`</sub>
 
-::: code-group
+Allows you to specify a list of union type groups for sorting. Groups help organize types into categories, making your type definitions more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
 
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-union-types": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc"
-      }
-    ]
-  }
-}
+There are a lot of predefined groups.
+
+Predefined Groups:
+
+- `'conditional`' — Conditional types.
+- `'function`' — Function types.
+- `'import`' — Imported types.
+- `'intersection`' — Intersection types.
+- `'keyword`' — Keyword types.
+- `'literal`' — Literal types.
+- `'named`' — Named types.
+- `'object`' — Object types.
+- `'operator`' — Operator types.
+- `'tuple`' — Tuple types.
+- `'union`' — Union types.
+- `'nullish`' — Nullish types (`null` or `undefined`).
+- `'unknown`' — Types that don’t fit into any other group.
+
+Example:
+
+```ts
+type Example =
+  // 'conditional' — Conditional types.
+  | (A extends B ? C : D)
+  // 'function' — Function types.
+  | ((arg: T) => U)
+  // 'import' — Imported types.
+  | import('module').Type
+  // 'intersection' — Intersection types.
+  | (A & B)
+  // 'keyword' — Keyword types.
+  | any
+  // 'literal' — Literal types.
+  | 'literal'
+  | 42
+  // 'named' — Named types.
+  | SomeType
+  | AnotherType
+  // 'object' — Object types.
+  | { a: string; b: number; }
+  // 'operator' — Operator types.
+  | keyof T
+  // 'tuple' — Tuple types.
+  | [string, number]
+  // 'union' — Union types.
+  | (A | B)
+  // 'nullish' — Nullish types.
+  | null
+  | undefined;
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+## Usage
+
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+
+        export default [
+          {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-union-types': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groups: [],
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
     },
-    rules: {
-      'perfectionist/sort-union-types': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          rules: {
+            'perfectionist/sort-union-types': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groups: [],
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
     },
-  },
-]
-```
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-:::
+## Version
 
-## 🚀 Version
+This rule was introduced in [v0.4.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v0.4.0).
 
-This rule was introduced in v0.4.0.
-
-## 📚 Resources
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-union-types.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-union-types.test.ts)

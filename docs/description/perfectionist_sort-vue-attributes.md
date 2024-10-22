@@ -1,188 +1,316 @@
 ---
 title: sort-vue-attributes
-description: ESLint Plugin Perfectionist rule which enforce sorted attributes in Vue elements
+description: Enforce sorting of attributes in Vue components for improved readability and maintainability. Use this ESLint rule to keep your Vue components well-organized
+shortDescription: Enforce sorted Vue attributes
+keywords:
+  - eslint
+  - sort vue attributes
+  - eslint rule
+  - coding standards
+  - code quality
+  - vue linting
+  - vue components sorting
+  - vue attributes sorting
+  - vue elements sorting
+  - vue elements attributes
+  - vue elements order
+  - vue elements structure
 ---
 
-# sort-vue-attributes
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted attributes in Vue elements.
 
-## 💡 Examples
+Ensuring a consistent order of attributes in Vue elements is essential for readability and maintainability.
 
-::: code-group
+This rule enforces attribute sorting, making the structure of Vue components more predictable and easier to manage. By adopting this rule, developers can maintain a high standard of code organization and clarity in their Vue projects.
 
-```vue [Alphabetical and Natural Sorting]
-<!-- ❌ Incorrect -->
-<template>
-  <v-avatar
-    size="s"
-    color="info"
-    variant="circle"
-    name="Jonah Jameson"
-  ></v-avatar>
-</template>
+## Try it out
 
-<!-- ✅ Correct -->
-<template>
-  <v-avatar
-    color="info"
-    name="Jonah Jameson"
-    size="s"
-    variant="circle"
-  ></v-avatar>
-</template>
-```
+<CodeExample
+  alphabetical={dedent`
+    <template>
+      <form
+        class="form"
+        id="contact-form"
+        method="post"
+        novalidate
+        @submit.prevent="handleSubmit"
+      >
+        <label
+          class="form-label"
+          for="name"
+        >
+          Name
+        </label>
+        <input
+          class="form-input"
+          id="name"
+          placeholder="Enter your name"
+          required
+          type="text"
+          v-model="form.name"
+        />
+        <button
+          class="form-button"
+          :disabled="isSubmitting"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </template>
+  `}
+  lineLength={dedent`
+    <template>
+      <form
+        @submit.prevent="handleSubmit"
+        id="contact-form"
+        method="post"
+        class="form"
+        novalidate
+      >
+        <label
+          class="form-label"
+          for="name"
+        >
+          Name
+        </label>
+        <input
+          placeholder="Enter your name"
+          v-model="form.name"
+          class="form-input"
+          type="text"
+          id="name"
+          required
+        />
+        <button
+          :disabled="isSubmitting"
+          class="form-button"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </template>
+  `}
+  initial={dedent`
+    <template>
+      <form
+        @submit.prevent="handleSubmit"
+        class="form"
+        method="post"
+        novalidate
+        id="contact-form"
+      >
+        <label
+          for="name"
+          class="form-label"
+        >
+          Name
+        </label>
+        <input
+          v-model="form.name"
+          placeholder="Enter your name"
+          id="name"
+          type="text"
+          required
+          class="form-input"
+        />
+        <button
+          class="form-button"
+          type="submit"
+          :disabled="isSubmitting"
+        >
+          Submit
+        </button>
+      </form>
+    </template>
+  `}
+  lang="vue"
+  client:load
+/>
 
-```vue [Sorting by Line Length]
-<!-- ❌ Incorrect -->
-<template>
-  <v-avatar
-    size="s"
-    color="info"
-    variant="circle"
-    name="Jonah Jameson"
-  ></v-avatar>
-</template>
-
-<!-- ✅ Correct -->
-<template>
-  <v-avatar
-    name="Jonah Jameson"
-    variant="circle"
-    color="info"
-    size="s"
-  ></v-avatar>
-</template>
-```
-
-:::
-
-## 🔧 Options
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-type CustomGroup = string
-type Group = 'multiline' | 'shorthand' | 'unknown' | CustomGroup
-
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  groups?: (Group | Group[])[]
-  'custom-groups': { [key: CustomGroup]: string[] | string }
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
 ### groups
 
-<sub>(default: `[]`)</sub>
+<sub>default: `[]`</sub>
 
-You can set up a list of Vue attribute groups for sorting. Groups can be combined. There are predefined groups: `'multiline'`, `'shorthand'`.
+Allows you to specify a list of Vue attribute groups for sorting. Groups help organize attributes into categories, making your components more readable and maintainable. Multiple groups can be combined to achieve the desired sorting order.
 
-### custom-groups
+There are predefined groups: `'multiline'`, `'shorthand'`.
 
-<sub>(default: `{}`)</sub>
+Predefined Groups:
 
-You can define your own groups for Vue attributes. The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern matching.
+- `'multiline'` — Attributes with multiline values, such as event handlers or functions.
+- `'shorthand'` — Shorthand attributes, which are used without a value, typically for boolean props.
+- `'unknown'` — Vue attributes that don’t fit into any other group.
+
+### customGroups
+
+<sub>default: `{}`</sub>
+
+You can define your own groups for Vue attributes using custom glob patterns for matching.
 
 Example:
 
-```
-{
-  "custom-groups": {
-    "callback": "on*"
-  }
-}
-```
-
-## ⚙️ Usage
-
-:::info Important
-In order to start using this rule, you need to install additional dependencies:
-
-- `vue-eslint-parser`
-
-:::
-
-::: code-group
-
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-vue-attributes": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "groups": ["multiline", "unknown", "shorthand"]
-      }
-    ]
-  }
-}
+```js
+ {
+   groups: [
+     'multiline',
+     'unknown',
+     'shorthand',
++    'callback',     // [!code ++]
+   ],
++  customGroups: {   // [!code ++]
++    callback: 'on*' // [!code ++]
++  }                 // [!code ++]
+ }
 ```
 
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
+## Usage
 
-export default [
-  {
-    plugins: {
-      perfectionist,
+In order to start using this rule, you need to install additional dependency:
+
+<CodeTabs
+  code={[
+    {
+      source: 'npm install --save-dev vue-eslint-parser',
+      name: 'npm',
+      value: 'npm',
     },
-    rules: {
-      'perfectionist/sort-vue-attributes': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          groups: ['multiline', 'unknown', 'shorthand'],
-        },
-      ],
+    {
+      source: 'pnpm add --save-dev vue-eslint-parser',
+      name: 'pnpm',
+      value: 'pnpm',
     },
-  },
-]
-```
+    {
+      source: 'yarn add --dev vue-eslint-parser',
+      name: 'yarn',
+      value: 'yarn',
+    },
+    {
+      source: 'bun install --dev vue-eslint-parser',
+      name: 'bun',
+      value: 'bun',
+    },
+  ]}
+  type="package-manager"
+  client:load
+  lang="bash"
+/>
 
-:::
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+        import vueParser from 'vue-eslint-parser'
 
-## 🚀 Version
+        export default [
+          {
+            files: ['**/*.vue'],
+            languageOptions: {
+              parser: vueParser,
+            },
+          }, {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-vue-attributes': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groups: [],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          overrides: [
+            {
+              files: ['*.vue'],
+              parser: 'vue-eslint-parser'
+            }
+          ],
+          rules: {
+            'perfectionist/sort-vue-attributes': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groups: [],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
 
-This rule was introduced in v2.0.0.
+]}
+type="config-type"
+client:load
+lang="ts"
+/>
 
-## 📚 Resources
+## Version
+
+This rule was introduced in [v2.0.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v2.0.0).
+
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-vue-attributes.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-vue-attributes.test.ts)

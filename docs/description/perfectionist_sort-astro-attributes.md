@@ -1,142 +1,303 @@
 ---
 title: sort-astro-attributes
-description: ESLint Plugin Perfectionist rule which enforce sorted ES class members
+description: Enforce sorting of attributes in Astro elements for improved readability and maintainability. Keep your Astro components clean and organized with this ESLint rule
+shortDescription: Enforce sorted Astro attributes
+keywords:
+  - eslint
+  - sort astro attributes
+  - astro props order
+  - eslint rule
+  - coding standards
+  - code quality
+  - javascript linting
+  - astro attributes sorting
 ---
 
-# sort-astro-attributes
-
-💼 This rule is enabled in the following [configs](/configs/): `recommended-alphabetical`, `recommended-line-length`, `recommended-natural`.
-
-🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
-
-<!-- end auto-generated rule header -->
-
-## 📖 Rule Details
+import CodeExample from '../../components/CodeExample.svelte'
+import CodeTabs from '../../components/CodeTabs.svelte'
+import { dedent } from 'ts-dedent'
 
 Enforce sorted attributes in Astro elements.
 
+Maintaining a consistent order of attributes in Astro elements is crucial for readability and maintainability. This rule ensures that attributes are sorted, making the structure of your elements more predictable and easier to manage.
+
+Adopting this rule helps standardize code formatting across your project, facilitating better collaboration and reducing cognitive load for developers.
+
 It's **safe**. The rule considers spread elements in an attributes list and does not break component functionality.
 
-## 🔧 Options
+## Try it out
+
+<CodeExample
+  alphabetical={dedent`
+    ---
+    import { Image } from 'astro:assets'
+    import Typography from '~/components/Typography'
+    ---
+    <figure>
+      <Image
+        alt="Birds fly in the sky"
+        height="50"
+        src="/images/cover.jpg"
+        width="50"
+      />
+      <Typography
+        align="center"
+        bold
+        class="image-caption"
+        color="primary"
+        tag="figcaption"
+        variant="h2"
+      >
+        Birds
+      </Typography>
+    </figure>
+  `}
+  lineLength={dedent`
+    ---
+    import { Image } from 'astro:assets'
+    import Typography from '~/components/Typography'
+    ---
+    <figure>
+      <Image
+        alt="Birds fly in the sky"
+        src="/images/cover.jpg"
+        height="50"
+        width="50"
+      />
+      <Typography
+        class="image-caption"
+        tag="figcaption"
+        color="primary"
+        align="center"
+        variant="h2"
+        bold
+      >
+        Birds
+      </Typography>
+    </figure>
+  `}
+  initial={dedent`
+    ---
+    import { Image } from 'astro:assets'
+    import Typography from '~/components/Typography'
+    ---
+    <figure>
+      <Image
+        height="50"
+        alt="Birds fly in the sky"
+        width="50"
+        src="/images/cover.jpg"
+      />
+      <Typography
+        tag="figcaption"
+        class="image-caption"
+        align="center"
+        bold
+        variant="h2"
+        color="primary"
+      >
+        Birds
+      </Typography>
+    </figure>
+  `}
+  lang="astro"
+  client:load
+/>
+
+## Options
 
 This rule accepts an options object with the following properties:
 
-```ts
-type CustomGroup = string
-type Group =
-  | 'multiline'
-  | 'shorthand'
-  | 'astro-shorthand'
-  | 'unknown'
-  | CustomGroup
-
-interface Options {
-  type?: 'alphabetical' | 'natural' | 'line-length'
-  order?: 'asc' | 'desc'
-  'ignore-case'?: boolean
-  groups?: (Group | Group[])[]
-  'custom-groups': { [key: CustomGroup]: string[] | string }
-}
-```
-
 ### type
 
-<sub>(default: `'alphabetical'`)</sub>
+<sub>default: `'alphabetical'`</sub>
 
-- `alphabetical` - sort alphabetically.
-- `natural` - sort in natural order.
-- `line-length` - sort by code line length.
+Specifies the sorting method.
+
+- `'alphabetical'` — Sort items alphabetically (e.g., “a” < “b” < “c”).
+- `'natural'` — Sort items in a natural order (e.g., “item2” < “item10”).
+- `'line-length'` — Sort items by the length of the code line (shorter lines first).
 
 ### order
 
-<sub>(default: `'asc'`)</sub>
+<sub>default: `'asc'`</sub>
 
-- `asc` - enforce properties to be in ascending order.
-- `desc` - enforce properties to be in descending order.
+Determines whether the sorted items should be in ascending or descending order.
 
-### ignore-case
+- `'asc'` — Sort items in ascending order (A to Z, 1 to 9).
+- `'desc'` — Sort items in descending order (Z to A, 9 to 1).
 
-<sub>(default: `false`)</sub>
+### ignoreCase
 
-Only affects alphabetical and natural sorting. When `true` the rule ignores the case-sensitivity of the order.
+<sub>default: `true`</sub>
+
+Controls whether sorting should be case-sensitive or not.
+
+- `true` — Ignore case when sorting alphabetically or naturally (e.g., “A” and “a” are the same).
+- `false` — Consider case when sorting (e.g., “A” comes before “a”).
 
 ### groups
 
-<sub>(default: `[]`)</sub>
+<sub>default: `[]`</sub>
 
-You can set up a list of Astro attribute groups for sorting. Groups can be combined. There are predefined groups: `'multiline'`, `'shorthand'`, `'astro-shorthand'`.
+Allows you to specify a list of Astro attribute groups for sorting. Groups help organize attributes into categories, prioritizing them during sorting. Multiple groups can be combined to achieve the desired sorting order.
 
-### custom-groups
+There are predefined groups available: `'multiline'`, `'shorthand'`, `'astro-shorthand'`.
 
-<sub>(default: `{}`)</sub>
+Predefined Groups:
 
-You can define your own groups for Astro attributes. The [minimatch](https://github.com/isaacs/minimatch) library is used for pattern matching.
+- `'multiline'` — Attributes with multiline values.
+-	`'shorthand'` — Shorthand attributes, which are used without a value, typically for boolean props.
+-	`'astro-shorthand'` — Astro shorthand attributes, where the attribute name and value are the same.
+- `'unknown'` — Attributes that don’t fit into any other group.
 
 Example:
 
-```
-{
-  "custom-groups": {
-    "callback": "on*"
-  }
-}
+```astro
+<Form
+  {/* 'multiline' */}
+  onClick={event => {
+    event.preventDefault()
+    handleSubmit()
+  }}
+  {/* 'shorthand' */}
+  validate
+  {/* 'astro-shorthand' */}
+  {success}
+/>
 ```
 
-## ⚙️ Usage
+### customGroups
+
+<sub>default: `{}`</sub>
+
+You can define your own groups for Astro attributes using custom glob patterns for matching.
+
+Example:
+
+```js
+ {
+   groups: [
+     'multiline',
+     'unknown',
+     ['shorthand', 'astro-shorthand'],
++    'callback',     // [!code ++]
+   ],
++  customGroups: {   // [!code ++]
++    callback: 'on*' // [!code ++]
++  }                 // [!code ++]
+ }
+```
+
+## Usage
 
 In order to start using this rule, you need to install additional dependency:
 
-- `astro-eslint-parser`
-
-::: code-group
-
-```json [Legacy Config]
-// .eslintrc
-{
-  "plugins": ["perfectionist"],
-  "rules": {
-    "perfectionist/sort-astro-attributes": [
-      "error",
-      {
-        "type": "natural",
-        "order": "asc",
-        "groups": ["multiline", "unknown", ["shorthand", "astro-shorthand"]]
-      }
-    ]
-  }
-}
-```
-
-```js [Flat Config]
-// eslint.config.js
-import perfectionist from 'eslint-plugin-perfectionist'
-
-export default [
-  {
-    plugins: {
-      perfectionist,
+<CodeTabs
+  code={[
+    {
+      source: 'npm install --save-dev astro-eslint-parser',
+      name: 'npm',
+      value: 'npm',
     },
-    rules: {
-      'perfectionist/sort-astro-attributes': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          groups: ['multiline', 'unknown', ['shorthand', 'astro-shorthand']],
-        },
-      ],
+    {
+      source: 'pnpm add --save-dev astro-eslint-parser',
+      name: 'pnpm',
+      value: 'pnpm',
     },
-  },
-]
-```
+    {
+      source: 'yarn add --dev astro-eslint-parser',
+      name: 'yarn',
+      value: 'yarn',
+    },
+    {
+      source: 'bun install --dev astro-eslint-parser',
+      name: 'bun',
+      value: 'bun',
+    },
+  ]}
+  type="package-manager"
+  client:load
+  lang="bash"
+/>
 
-:::
+<CodeTabs
+  code={[
+    {
+      source: dedent`
+        // eslint.config.js
+        import perfectionist from 'eslint-plugin-perfectionist'
+        import astroParser from 'astro-eslint-parser'
 
-## 🚀 Version
+        export default [
+          {
+            files: ['**/*.astro'],
+            languageOptions: {
+              parser: astroParser,
+            },
+          }, {
+            plugins: {
+              perfectionist,
+            },
+            rules: {
+              'perfectionist/sort-astro-attributes': [
+                'error',
+                {
+                  type: 'alphabetical',
+                  order: 'asc',
+                  ignoreCase: true,
+                  groups: [],
+                  customGroups: {},
+                },
+              ],
+            },
+          },
+        ]
+      `,
+      name: 'Flat Config',
+      value: 'flat',
+    },
+    {
+      source: dedent`
+        // .eslintrc.js
+        module.exports = {
+          plugins: [
+            'perfectionist',
+          ],
+          overrides: [
+            {
+              files: ['*.astro'],
+              parser: 'astro-eslint-parser'
+            }
+          ],
+          rules: {
+            'perfectionist/sort-astro-attributes': [
+              'error',
+              {
+                type: 'alphabetical',
+                order: 'asc',
+                ignoreCase: true,
+                groups: [],
+                customGroups: {},
+              },
+            ],
+          },
+        }
+      `,
+      name: 'Legacy Config',
+      value: 'legacy',
+    },
+  ]}
+  type="config-type"
+  client:load
+  lang="ts"
+/>
 
-This rule was introduced in v2.0.0.
+## Version
 
-## 📚 Resources
+This rule was introduced in [v2.0.0](https://github.com/azat-io/eslint-plugin-perfectionist/releases/tag/v2.0.0).
+
+## Resources
 
 - [Rule source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/rules/sort-astro-attributes.ts)
 - [Test source](https://github.com/azat-io/eslint-plugin-perfectionist/blob/main/test/sort-astro-attributes.test.ts)

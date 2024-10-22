@@ -232,7 +232,7 @@ export class DocGenerator {
           return this.createPatternDescriptionFile(plugin, rule.name, rule.docsEntry, rejectOnError)
         })
       : (await patterns).map((pattern: string) => {
-        const patternDocFilename = plugin.name === "@typescript-eslint"
+        const patternDocFilename = plugin.name === "@typescript-eslint" || plugin.name === "perfectionist"
           ? `${pattern}.mdx`
           : `${pattern}.md`
         return this.createPatternDescriptionFile(plugin, pattern, patternDocFilename, rejectOnError)
