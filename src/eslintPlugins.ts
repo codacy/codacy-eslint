@@ -30,6 +30,7 @@ const packageNames: string[] = [
   "@tailwindcss/forms",
   "@typescript-eslint/eslint-plugin",
   "eslint-plugin-awscdk",
+  "eslint-plugin-angular",
   "eslint-plugin-backbone",
   "eslint-plugin-cdk",
   "eslint-plugin-chai-expect",

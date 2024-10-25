@@ -27,6 +27,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "@salesforce/eslint-plugin-aura",
+    "/EmmanuelDemey/eslint-plugin-angular/refs/heads/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
     "@salesforce/eslint-plugin-lightning",
     "/salesforce/eslint-plugin-lightning/master/docs/rules/"
   )
