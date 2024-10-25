@@ -221,6 +221,11 @@ export class DocGenerator {
     plugin.docsBaseUrl = new URL((!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl)
     plugin.versionPrefix = versionPrefix
 
+    //eslint-plugin-angular version don't start with 'v'
+    if (plugin.name == "angular"){
+      plugin.versionPrefix = false
+    }
+
     const patterns = plugin.name !== "eslint"
       ? await this.patternIdsWithoutPrefix(plugin.name)
       : this.eslintPatternIds()
