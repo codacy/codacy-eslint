@@ -1,3 +1,0 @@
-<module name="root">
-    <module name="jest_no-deprecated-functions" />
-</module>
