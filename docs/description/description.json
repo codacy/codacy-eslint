@@ -14050,6 +14050,90 @@
   },
   {
     "parameters": [],
+    "patternId": "react-native-a11y_has-accessibility-hint",
+    "title": "React native a11y: Has accessibility hint",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-accessibility-props",
+    "title": "React native a11y: Has accessibility props",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-actions",
+    "title": "React native a11y: Has valid accessibility actions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-component-type",
+    "title": "React native a11y: Has valid accessibility component type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-descriptors",
+    "title": "React native a11y: Has valid accessibility descriptors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-ignores-invert-colors",
+    "title": "React native a11y: Has valid accessibility ignores invert colors",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-live-region",
+    "title": "React native a11y: Has valid accessibility live region",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-role",
+    "title": "React native a11y: Has valid accessibility role",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-state",
+    "title": "React native a11y: Has valid accessibility state",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-states",
+    "title": "React native a11y: Has valid accessibility states",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-traits",
+    "title": "React native a11y: Has valid accessibility traits",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-accessibility-value",
+    "title": "React native a11y: Has valid accessibility value",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_has-valid-important-for-accessibility",
+    "title": "React native a11y: Has valid important for accessibility",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react-native-a11y_no-nested-touchables",
+    "title": "React native a11y: No nested touchables",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "react-perf_jsx-no-new-object-as-prop",
     "title": "React perf: Jsx no new object as prop",
     "description": "Prevent {...} as JSX prop value",
