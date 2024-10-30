@@ -84,6 +84,8 @@
     "@babel/preset-react": "^7.24.1",
     "@babel/register": "^7.23.7",
     "@babel/runtime": "^7.25.0",
+    "@cityelectricalfactors/eslint-config-base": "^1.0.3",
+    "@cityelectricalfactors/prettier": "^1.0.2",
     "@cloudbeds/eslint-config": "^2.10.1",
     "@emotion/eslint-plugin": "^11.11.0",
     "@eslint-stylistic/metadata": "^2.1.0",
