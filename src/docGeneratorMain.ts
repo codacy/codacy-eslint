@@ -211,6 +211,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-react-native-a11y",
+    "/FormidableLabs/eslint-plugin-react-native-a11y/refs/tags/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
     "eslint-plugin-react-perf",
     "/cvazac/eslint-plugin-react-perf/master/docs/rules/",
     false

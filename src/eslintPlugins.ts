@@ -85,6 +85,7 @@ const packageNames: string[] = [
   "eslint-plugin-react",
   "eslint-plugin-react-hooks",
   "eslint-plugin-react-native",
+  "eslint-plugin-react-native-a11y",
   "eslint-plugin-react-perf",
   "eslint-plugin-react-redux",
   "eslint-plugin-react-refresh",
