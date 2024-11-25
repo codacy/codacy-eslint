@@ -13530,6 +13530,13 @@
       "enabled": false
     },
     {
+      "patternId": "react_forward-ref-uses-ref",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "react_function-component-definition",
       "level": "Info",
       "category": "CodeStyle",
@@ -16275,7 +16282,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/Documents/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/heliorocha/dev/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

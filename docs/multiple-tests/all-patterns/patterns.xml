@@ -1687,6 +1687,7 @@
   <module name="react_forbid-elements" />
   <module name="react_forbid-foreign-prop-types" />
   <module name="react_forbid-prop-types" />
+  <module name="react_forward-ref-uses-ref" />
   <module name="react_function-component-definition" />
   <module name="react_hook-use-state" />
   <module name="react_iframe-missing-sandbox" />

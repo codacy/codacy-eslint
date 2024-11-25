@@ -11070,7 +11070,7 @@
     "parameters": [],
     "patternId": "jsx-a11y_no-access-key",
     "title": "Jsx a11y: No access key",
-    "description": "Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screenreader.",
+    "description": "Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screen reader.",
     "timeToFix": 5
   },
   {
@@ -13261,6 +13261,13 @@
     "patternId": "react_forbid-prop-types",
     "title": "React: Forbid prop types",
     "description": "Disallow certain propTypes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "react_forward-ref-uses-ref",
+    "title": "React: Forward ref uses ref",
+    "description": "Require all forwardRef components include a ref parameter",
     "timeToFix": 5
   },
   {
