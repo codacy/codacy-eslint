@@ -369,7 +369,7 @@
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.10.0",
     "vee-validate": "^4.12.8",
-    "vite": "^5.3.4",
+    "vite": "^5.4.11",
     "vue": "^3.4.38",
     "vue-eslint-parser": "^9.4.2",
     "vue-i18n": "^9.13.1",
