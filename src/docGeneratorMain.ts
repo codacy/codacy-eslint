@@ -54,6 +54,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-ava",
+    "/avajs/eslint-plugin-ava/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
     "eslint-plugin-backbone",
     "/ilyavolodin/eslint-plugin-backbone/master/docs/rules/"
   )

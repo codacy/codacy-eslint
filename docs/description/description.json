@@ -5076,6 +5076,195 @@
   },
   {
     "parameters": [],
+    "patternId": "ava_assertion-arguments",
+    "title": "Ava: Assertion arguments",
+    "description": "Enforce passing correct arguments to assertions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_hooks-order",
+    "title": "Ava: Hooks order",
+    "description": "Enforce test hook ordering.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_max-asserts",
+    "title": "Ava: Max asserts",
+    "description": "Enforce a limit on the number of assertions in a test.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-async-fn-without-await",
+    "title": "Ava: No async fn without await",
+    "description": "Ensure that async tests use `await`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-duplicate-modifiers",
+    "title": "Ava: No duplicate modifiers",
+    "description": "Ensure tests do not have duplicate modifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-identical-title",
+    "title": "Ava: No identical title",
+    "description": "Ensure no tests have the same title.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-ignored-test-files",
+    "title": "Ava: No ignored test files",
+    "description": "Ensure no tests are written in ignored files.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-import-test-files",
+    "title": "Ava: No import test files",
+    "description": "Ensure no test files are imported anywhere.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-incorrect-deep-equal",
+    "title": "Ava: No incorrect deep equal",
+    "description": "Disallow using `deepEqual` with primitives.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-inline-assertions",
+    "title": "Ava: No inline assertions",
+    "description": "Ensure assertions are not called from inline arrow functions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-nested-tests",
+    "title": "Ava: No nested tests",
+    "description": "Ensure no tests are nested.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-only-test",
+    "title": "Ava: No only test",
+    "description": "Ensure no `test.only()` are present.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-skip-assert",
+    "title": "Ava: No skip assert",
+    "description": "Ensure no assertions are skipped.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-skip-test",
+    "title": "Ava: No skip test",
+    "description": "Ensure no tests are skipped.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-todo-implementation",
+    "title": "Ava: No todo implementation",
+    "description": "Ensure `test.todo()` is not given an implementation function.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-todo-test",
+    "title": "Ava: No todo test",
+    "description": "Ensure no `test.todo()` is used.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_no-unknown-modifiers",
+    "title": "Ava: No unknown modifiers",
+    "description": "Disallow the use of unknown test modifiers.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_prefer-async-await",
+    "title": "Ava: Prefer async await",
+    "description": "Prefer using async/await instead of returning a Promise.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_prefer-power-assert",
+    "title": "Ava: Prefer power assert",
+    "description": "Enforce the use of the asserts that have no [power-assert](https://github.com/power-assert-js/power-assert) alternative.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_prefer-t-regex",
+    "title": "Ava: Prefer t regex",
+    "description": "Prefer using `t.regex()` to test regular expressions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_test-title-format",
+    "title": "Ava: Test title format",
+    "description": "Ensure test titles have a certain format.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_test-title",
+    "title": "Ava: Test title",
+    "description": "Ensure tests have a title.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_use-t-throws-async-well",
+    "title": "Ava: Use t throws async well",
+    "description": "Ensure that `t.throwsAsync()` and `t.notThrowsAsync()` are awaited.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_use-t-well",
+    "title": "Ava: Use t well",
+    "description": "Disallow the incorrect use of `t`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_use-t",
+    "title": "Ava: Use t",
+    "description": "Ensure test functions use `t` as their parameter.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_use-test",
+    "title": "Ava: Use test",
+    "description": "Ensure that AVA is imported with `test` as the variable name.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ava_use-true-false",
+    "title": "Ava: Use true false",
+    "description": "Ensure that `t.true()`/`t.false()` are used instead of `t.truthy()`/`t.falsy()`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "awscdk_require-bucket-encryption",
     "title": "Awscdk: Require bucket encryption",
     "description": "Encryption should be enabled for all S3 buckets",
