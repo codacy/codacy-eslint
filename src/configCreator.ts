@@ -24,10 +24,8 @@ export async function createEslintConfig (
   return [options, files]
 }
 
-function generateFilesToAnalyze (
-  codacyrc: Codacyrc
-): string[] {
-  debug("files: creating")
+function generateFilesToAnalyze(codacyrc: Codacyrc): string[] {
+  debug("files: creating");
 
   const defaultFilesToAnalyze = [
     "**/*.ts",
@@ -35,13 +33,27 @@ function generateFilesToAnalyze (
     "**/*.js",
     "**/*.jsx",
     "**/*.json"
-  ]
+  ];
+
   const files = codacyrc?.files && codacyrc.files.length
     ? codacyrc.files
-    : defaultFilesToAnalyze
+    : defaultFilesToAnalyze;
 
-  debug("files: finished")
-  return files
+  // Files to exclude
+  const excludedFiles = [
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml"
+  ];
+
+  // Filter out excluded files
+  const filteredFiles = files.filter(
+    file => !excludedFiles.some(excluded => file.endsWith(excluded))
+  );
+
+  debug("files: finished");
+  return filteredFiles;
 }
 
 async function generateEslintOptions (
