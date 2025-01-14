@@ -153,7 +153,7 @@
     "@types/node": "^20.12.12",
     "@types/node-fetch": "^2.6.11",
     "@types/simple-mock": "^0.8.6",
-    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/eslint-plugin-tslint": "^7.0.2",
     "@typescript-eslint/parser": "^7.10.0",
     "@typescript-eslint/utils": "^7.10.0",
