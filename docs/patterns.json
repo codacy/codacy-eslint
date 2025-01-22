@@ -3683,7 +3683,7 @@
         },
         {
           "name": "requireForBlockBody",
-          "default": false
+          "default": "always"
         }
       ],
       "enabled": false
