@@ -9,7 +9,6 @@
   <module name="array-callback-return" />
   <module name="array-element-newline" />
   <module name="arrow-body-style" />
-  <module name="arrow-parens" />
   <module name="arrow-spacing" />
   <module name="block-scoped-var" />
   <module name="block-spacing" />

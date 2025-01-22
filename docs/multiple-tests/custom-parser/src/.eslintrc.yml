@@ -23,7 +23,7 @@ rules:
     "@babel/new-cap": off
     array-bracket-spacing: [error, never]
     arrow-spacing: error
-    arrow-parens: error
+    arrow-parens: off
     block-spacing: [error, always]
     brace-style: error
     comma-dangle: [error, always-multiline]
