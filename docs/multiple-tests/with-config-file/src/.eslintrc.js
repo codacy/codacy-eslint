@@ -17,11 +17,11 @@ module.exports = {
     // https://eslint.org/docs/rules/
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
-    'arrow-parens': 'off',
+    'arrow-parens': 'error',
     'arrow-spacing': 'error',
     'block-scoped-var': 'error',
     'block-spacing': 'error',
-    'brace-style': 'off',
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'capitalized-comments': ['error', 'always', {
       line: {
         // Ignore all lines that have less characters than 20 and all lines that
