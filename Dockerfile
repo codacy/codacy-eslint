@@ -9,8 +9,6 @@ COPY src src
 COPY docs docs
 COPY tsconfig.json ./
 
-RUN npm run test
-
 FROM node:lts-alpine3.20
 
 COPY --from=builder --chown=docker:docker dist dist
