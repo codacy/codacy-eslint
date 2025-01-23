@@ -12,7 +12,6 @@
   <module name="arrow-spacing" />
   <module name="block-scoped-var" />
   <module name="block-spacing" />
-  <module name="brace-style" />
   <module name="callback-return" />
   <module name="camelcase" />
   <module name="capitalized-comments" />
