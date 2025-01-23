@@ -11,7 +11,6 @@ COPY tsconfig.json ./
 
 FROM node:lts-alpine3.20
 
-COPY --from=builder --chown=docker:docker dist dist
 COPY --from=builder --chown=docker:docker docs docs
 COPY --from=builder node_modules node_modules
 COPY  --chown=docker:docker tsconfig.src.json tsconfig.json
