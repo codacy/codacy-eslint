@@ -77,7 +77,7 @@
       "parameters": [
         {
           "name": "requireForBlockBody",
-          "default": "always"
+          "default": false
         }
       ],
       "enabled": false
@@ -3683,7 +3683,7 @@
         },
         {
           "name": "requireForBlockBody",
-          "default": "always"
+          "default": false
         }
       ],
       "enabled": false
