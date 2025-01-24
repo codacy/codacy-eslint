@@ -50,6 +50,7 @@
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/switch-exhaustiveness-check": "off",
     "@typescript-eslint/unbound-method": "off",
-    "deprecation/deprecation": "off"
+    "arrow-parens": "off"
+    
   }
 }
