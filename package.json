@@ -383,5 +383,8 @@
     "ws": "^8.18.0",
     "xml2js": "^0.6.2",
     "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
   }
 }
