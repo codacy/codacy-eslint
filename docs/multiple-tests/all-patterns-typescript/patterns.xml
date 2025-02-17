@@ -2064,7 +2064,6 @@
   <module name="sort-imports-es6-autofix_sort-imports-es6" />
   <module name="sort-keys-custom-order-fix_sort-keys-custom-order-fix" />
   <module name="sort-keys-fix_sort-keys-fix" />
-  <module name="spellcheck_spell-checker" />
   <module name="storybook_await-interactions" />
   <module name="storybook_context-in-play-function" />
   <module name="storybook_csf-component" />

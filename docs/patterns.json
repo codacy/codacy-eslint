@@ -17723,7 +17723,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/zavoloklom/Projects/zavoloklom/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
