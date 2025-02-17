@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="4.3">
   <file name="with-config-file.js">
-    <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="1" severity="info" />
+    <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="1" severity="warning" />
     <error message="Use the global form of 'use strict'." source="strict" line="3" severity="warning" />
     <error message="Unexpected var, use let or const instead." source="no-var" line="3" severity="warning" />
-    <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="4" severity="info" />
+    <error message="Expected exception block, space or tab after '//' in comment." source="spaced-comment" line="4" severity="warning" />
     <error message="Getter is not present for setter 'a'." source="accessor-pairs" line="5" severity="warning" />
     <error message="Missing trailing comma." source="comma-dangle" line="7" severity="info" />
     <error message="Unexpected var, use let or const instead." source="no-var" line="10" severity="warning" />

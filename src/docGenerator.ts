@@ -42,7 +42,6 @@ export class DocGenerator {
     const rules = (await getAllRules())
       .filter(([patternId, rule]) =>
         !isBlacklistedOnlyFromDocumentation(patternId)
-        && !(rule?.meta?.deprecated && rule.meta.deprecated === true)
       )
     console.log("Number of rules: ", rules.length)
     return rules
@@ -303,7 +302,6 @@ ${modules}
     // We take all the patterns except those that have slashes because
     // they come from third party plugins
     const patternIds = await this.getPatternIds()
-    
     return patternIds.filter((e) => !e.includes("/"))
   }
 
