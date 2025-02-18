@@ -2677,18 +2677,6 @@
       "enabled": false
     },
     {
-      "patternId": "wrap-iife",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "functionPrototypeMethods",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "wrap-regex",
       "level": "Info",
       "category": "CodeStyle",

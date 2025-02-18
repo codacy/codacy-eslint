@@ -285,7 +285,6 @@
   <module name="valid-jsdoc" />
   <module name="valid-typeof" />
   <module name="vars-on-top" />
-  <module name="wrap-iife" />
   <module name="wrap-regex" />
   <module name="yield-star-spacing" />
   <module name="yoda" />

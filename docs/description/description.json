@@ -2674,18 +2674,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "functionPrototypeMethods",
-        "description": "functionPrototypeMethods"
-      }
-    ],
-    "patternId": "wrap-iife",
-    "title": "Wrap iife",
-    "description": "Require parentheses around immediate `function` invocations",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "wrap-regex",
     "title": "Wrap regex",
