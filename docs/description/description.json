@@ -70,18 +70,6 @@
   {
     "parameters": [
       {
-        "name": "requireForBlockBody",
-        "description": "requireForBlockBody"
-      }
-    ],
-    "patternId": "arrow-parens",
-    "title": "Arrow parens",
-    "description": "Require parentheses around arrow function arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
         "name": "before",
         "description": "before"
       },
@@ -107,18 +95,6 @@
     "patternId": "block-spacing",
     "title": "Block spacing",
     "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "brace-style",
-    "title": "Brace style",
-    "description": "Enforce consistent brace style for blocks",
     "timeToFix": 5
   },
   {
@@ -207,18 +183,6 @@
     "patternId": "complexity",
     "title": "Complexity",
     "description": "Enforce a maximum cyclomatic complexity allowed in a program",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "enforceForClassMembers",
-        "description": "enforceForClassMembers"
-      }
-    ],
-    "patternId": "computed-property-spacing",
-    "title": "Computed property spacing",
-    "description": "Enforce consistent spacing inside computed property brackets",
     "timeToFix": 5
   },
   {
@@ -491,30 +455,6 @@
     "patternId": "implicit-arrow-linebreak",
     "title": "Implicit arrow linebreak",
     "description": "Enforce the location of arrow function bodies",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "indent",
-    "title": "Indent",
-    "description": "Enforce consistent indentation",
     "timeToFix": 5
   },
   {
@@ -4757,18 +4697,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "@typescript-eslint_brace-style",
-    "title": "@typescript eslint: Brace style",
-    "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_class-literal-property-style",
     "title": "@typescript eslint: Class literal property style",
@@ -4918,30 +4846,6 @@
     "patternId": "@typescript-eslint_func-call-spacing",
     "title": "@typescript eslint: Func call spacing",
     "description": "Require or disallow spacing between function identifiers and their invocations",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
     "timeToFix": 5
   },
   {

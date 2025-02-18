@@ -17,7 +17,15 @@ const blacklistRegexes: RegExp[] = [
   /functional\/prefer-immutable-types/,
   /functional\/type-declaration-immutability/,
   /unused-imports\/.*-ts/,
-  /yml\/sort-sequence-values/
+  /yml\/sort-sequence-values/,
+  /(?<=^|\s)arrow-parens(?=\s|$)/,
+  /(?<=^|\s)indent(?=\s|$)/,
+  /(?<=^|\s)computed-property-spacing(?=\s|$)/,
+  /(?<=^|\s)brace-style(?=\s|$)/,
+  /(?=\s|$)lines-between-class-members(?=\s|$)/,
+  /@typescript-eslint\/brace-style/,
+  /@typescript-eslint\/indent/,
+  /(?=\s|$)wrap-iife(?=\s|$)/
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [

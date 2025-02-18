@@ -71,18 +71,6 @@
       "enabled": false
     },
     {
-      "patternId": "arrow-parens",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "requireForBlockBody",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "arrow-spacing",
       "level": "Info",
       "category": "CodeStyle",
@@ -110,18 +98,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "brace-style",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowSingleLine",
-          "default": false
-        }
-      ],
       "enabled": false
     },
     {
@@ -208,18 +184,6 @@
         {
           "name": "unnamedParam",
           "default": 4
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "computed-property-spacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "enforceForClassMembers",
-          "default": true
         }
       ],
       "enabled": false
@@ -494,30 +458,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "indent",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "SwitchCase",
-          "default": 0
-        },
-        {
-          "name": "flatTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "offsetTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "ignoreComments",
-          "default": false
-        }
-      ],
       "enabled": false
     },
     {
@@ -4768,18 +4708,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_brace-style",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "allowSingleLine",
-          "default": false
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_class-literal-property-style",
       "level": "Error",
       "category": "ErrorProne",
@@ -4929,30 +4857,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_indent",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "SwitchCase",
-          "default": 0
-        },
-        {
-          "name": "flatTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "offsetTernaryExpressions",
-          "default": false
-        },
-        {
-          "name": "ignoreComments",
-          "default": false
-        }
-      ],
       "enabled": false
     },
     {
