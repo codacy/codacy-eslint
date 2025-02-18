@@ -70,18 +70,6 @@
   {
     "parameters": [
       {
-        "name": "requireForBlockBody",
-        "description": "requireForBlockBody"
-      }
-    ],
-    "patternId": "arrow-parens",
-    "title": "Arrow parens",
-    "description": "Require parentheses around arrow function arguments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
         "name": "before",
         "description": "before"
       },
@@ -107,18 +95,6 @@
     "patternId": "block-spacing",
     "title": "Block spacing",
     "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "brace-style",
-    "title": "Brace style",
-    "description": "Enforce consistent brace style for blocks",
     "timeToFix": 5
   },
   {
@@ -207,18 +183,6 @@
     "patternId": "complexity",
     "title": "Complexity",
     "description": "Enforce a maximum cyclomatic complexity allowed in a program",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "enforceForClassMembers",
-        "description": "enforceForClassMembers"
-      }
-    ],
-    "patternId": "computed-property-spacing",
-    "title": "Computed property spacing",
-    "description": "Enforce consistent spacing inside computed property brackets",
     "timeToFix": 5
   },
   {
@@ -494,30 +458,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "indent",
-    "title": "Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "indent-legacy",
     "title": "Indent legacy",
@@ -621,18 +561,6 @@
     "patternId": "lines-around-directive",
     "title": "Lines around directive",
     "description": "Require or disallow newlines around directives",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "exceptAfterSingleLine",
-        "description": "exceptAfterSingleLine"
-      }
-    ],
-    "patternId": "lines-between-class-members",
-    "title": "Lines between class members",
-    "description": "Require or disallow an empty line between class members",
     "timeToFix": 5
   },
   {
@@ -2746,18 +2674,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "functionPrototypeMethods",
-        "description": "functionPrototypeMethods"
-      }
-    ],
-    "patternId": "wrap-iife",
-    "title": "Wrap iife",
-    "description": "Require parentheses around immediate `function` invocations",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "wrap-regex",
     "title": "Wrap regex",
@@ -4757,18 +4673,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "allowSingleLine",
-        "description": "allowSingleLine"
-      }
-    ],
-    "patternId": "@typescript-eslint_brace-style",
-    "title": "@typescript eslint: Brace style",
-    "description": "Enforce consistent brace style for blocks",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_class-literal-property-style",
     "title": "@typescript eslint: Class literal property style",
@@ -4921,30 +4825,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [
-      {
-        "name": "SwitchCase",
-        "description": "SwitchCase"
-      },
-      {
-        "name": "flatTernaryExpressions",
-        "description": "flatTernaryExpressions"
-      },
-      {
-        "name": "offsetTernaryExpressions",
-        "description": "offsetTernaryExpressions"
-      },
-      {
-        "name": "ignoreComments",
-        "description": "ignoreComments"
-      }
-    ],
-    "patternId": "@typescript-eslint_indent",
-    "title": "@typescript eslint: Indent",
-    "description": "Enforce consistent indentation",
-    "timeToFix": 5
-  },
-  {
     "parameters": [],
     "patternId": "@typescript-eslint_init-declarations",
     "title": "@typescript eslint: Init declarations",
@@ -5004,22 +4884,6 @@
     "patternId": "@typescript-eslint_lines-around-comment",
     "title": "@typescript eslint: Lines around comment",
     "description": "Require empty lines around comments",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [
-      {
-        "name": "exceptAfterSingleLine",
-        "description": "exceptAfterSingleLine"
-      },
-      {
-        "name": "exceptAfterOverload",
-        "description": "exceptAfterOverload"
-      }
-    ],
-    "patternId": "@typescript-eslint_lines-between-class-members",
-    "title": "@typescript eslint: Lines between class members",
-    "description": "Require or disallow an empty line between class members",
     "timeToFix": 5
   },
   {
