@@ -22,7 +22,7 @@ const blacklistRegexes: RegExp[] = [
   /(?<=^|\s)indent(?=\s|$)/,
   /(?<=^|\s)computed-property-spacing(?=\s|$)/,
   /(?<=^|\s)brace-style(?=\s|$)/,
-  /(?=\s|$)lines-between-class-members(?=\s|$)/,
+  /(?<!@stylistic\/)lines-between-class-members/,
   /@typescript-eslint\/brace-style/,
   /@typescript-eslint\/indent/,
   /(?=\s|$)wrap-iife(?=\s|$)/

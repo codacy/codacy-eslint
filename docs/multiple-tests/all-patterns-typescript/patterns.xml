@@ -58,7 +58,6 @@
   <module name="linebreak-style" />
   <module name="lines-around-comment" />
   <module name="lines-around-directive" />
-  <module name="lines-between-class-members" />
   <module name="logical-assignment-operators" />
   <module name="max-classes-per-file" />
   <module name="max-depth" />
@@ -527,7 +526,6 @@
   <module name="@typescript-eslint_key-spacing" />
   <module name="@typescript-eslint_keyword-spacing" />
   <module name="@typescript-eslint_lines-around-comment" />
-  <module name="@typescript-eslint_lines-between-class-members" />
   <module name="@typescript-eslint_max-params" />
   <module name="@typescript-eslint_member-delimiter-style" />
   <module name="@typescript-eslint_member-ordering" />
