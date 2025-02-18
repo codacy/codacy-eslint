@@ -9,7 +9,7 @@ COPY src src
 COPY docs docs
 COPY tsconfig.json ./
 
-RUN npm run build &&\
+RUN npm run build:docs  &&\
     npm run test
 
 FROM node:lts-alpine3.21
