@@ -116,6 +116,7 @@ const packageNames: string[] = [
   "eslint-plugin-unicorn",
   "eslint-plugin-unused-imports",
   "eslint-plugin-vue",
+  "eslint-plugin-vuetify",
   "eslint-plugin-vue-scoped-css",
   "eslint-plugin-vuejs-accessibility",
   "eslint-plugin-wdio",

@@ -328,6 +328,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-vuetify",
+    "/vuetifyjs/eslint-plugin-vuetify/refs/heads/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
     "eslint-plugin-vue-scoped-css",
     "/future-architect/eslint-plugin-vue-scoped-css/master/docs/rules/"
   )
