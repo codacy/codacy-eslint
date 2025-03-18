@@ -5328,69 +5328,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_no-unsafe-argument",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-assignment",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-call",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-function-type",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-member-access",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-return",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": true
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-unary-minus",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_no-unused-expressions",
       "level": "Warning",
       "category": "BestPractice",
@@ -19606,6 +19543,20 @@
       "enabled": false
     },
     {
+      "patternId": "vue_max-props",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_max-template-depth",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_multi-word-component-names",
       "level": "Warning",
       "category": "BestPractice",
@@ -19726,6 +19677,13 @@
     },
     {
       "patternId": "vue_no-deprecated-data-object-declaration",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_no-deprecated-delete-set",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
@@ -20541,6 +20499,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_prefer-use-template-ref",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_prop-name-casing",
       "level": "Warning",
       "category": "BestPractice",
@@ -20556,6 +20521,13 @@
     },
     {
       "patternId": "vue_require-component-is",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_require-default-export",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
@@ -20709,6 +20681,13 @@
       "enabled": false
     },
     {
+      "patternId": "vue_restricted-component-names",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "vue_return-in-computed-property",
       "level": "Error",
       "category": "ErrorProne",
@@ -20740,6 +20719,13 @@
       "patternId": "vue_singleline-html-element-content-newline",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "vue_slot-name-casing",
+      "level": "Warning",
+      "category": "BestPractice",
       "parameters": [],
       "enabled": false
     },
