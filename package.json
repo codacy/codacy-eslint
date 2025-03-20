@@ -346,7 +346,7 @@
     "mini-css-extract-plugin": "^2.9.0",
     "mocha": "^10.4.0",
     "mongoose": "^8.12.1",
-    "next": "^14.2.20",
+    "next": "^15.2.3",
     "npm": "^10.8.0",
     "npm-check-updates": "^16.14.20",
     "nx": "^19.0.4",
