@@ -1,5 +1,5 @@
 ---
-description: 'Disallow async functions which have no `await` expression.'
+description: 'Disallow async functions which do not return promises and have no `await` expression.'
 ---
 
 > 🛑 This file is source code, not the primary documentation location! 🛑
@@ -7,7 +7,7 @@ description: 'Disallow async functions which have no `await` expression.'
 > See **https://typescript-eslint.io/rules/require-await** for documentation.
 
 This rule extends the base [`eslint/require-await`](https://eslint.org/docs/rules/require-await) rule.
-It uses type information to add support for `async` functions that return a `Promise`.
+It uses type information to allow promise-returning functions to be marked as `async` without containing an `await` expression.
 
 ## Examples
 

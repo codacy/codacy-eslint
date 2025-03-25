@@ -17524,7 +17524,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/Documents/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/pedro.pereira/work/codacy/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",

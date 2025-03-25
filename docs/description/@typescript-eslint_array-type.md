@@ -38,7 +38,8 @@ const y: readonly string[] = ['a', 'b'];
 
 ### `"generic"`
 
-Always use `Array<T>` or `ReadonlyArray<T>` for all array types.
+Always use `Array<T>`, `ReadonlyArray<T>`, or `Readonly<Array<T>>` for all array types.
+`readonly T[]` will be modified to `ReadonlyArray<T>` and `Readonly<T[]>` will be modified to `Readonly<Array<T>`.
 
 <!--tabs-->
 
@@ -47,6 +48,7 @@ Always use `Array<T>` or `ReadonlyArray<T>` for all array types.
 ```ts option='{ "default": "generic" }'
 const x: string[] = ['a', 'b'];
 const y: readonly string[] = ['a', 'b'];
+const z: Readonly<string[]> = ['a', 'b'];
 ```
 
 #### ✅ Correct
@@ -54,6 +56,7 @@ const y: readonly string[] = ['a', 'b'];
 ```ts option='{ "default": "generic" }'
 const x: Array<string> = ['a', 'b'];
 const y: ReadonlyArray<string> = ['a', 'b'];
+const z: Readonly<Array<string>> = ['a', 'b'];
 ```
 
 <!--/tabs-->
