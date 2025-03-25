@@ -18,6 +18,7 @@ The following nodes are considered boolean expressions and their type is checked
 - Operands of logical binary operators (`lhs || rhs` and `lhs && rhs`).
   - Right-hand side operand is ignored when it's not a descendant of another boolean expression.
     This is to allow usage of boolean operators for their short-circuiting behavior.
+- Asserted argument of an assertion function (`assert(arg)`).
 
 ## Examples
 
@@ -53,6 +54,11 @@ let obj = {};
 while (obj) {
   obj = getObj();
 }
+
+// assertion functions without an `is` are boolean contexts.
+declare function assert(value: unknown): asserts value;
+let maybeString = Math.random() > 0.5 ? '' : undefined;
+assert(maybeString);
 ```
 
 #### ✅ Correct

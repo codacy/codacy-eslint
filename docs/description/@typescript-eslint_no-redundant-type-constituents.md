@@ -92,3 +92,7 @@ If you strongly feel a preference for these unnecessary type constituents, this 
 - [Intersection Types](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types)
 - [Bottom Types](https://en.wikipedia.org/wiki/Bottom_type)
 - [Top Types](https://en.wikipedia.org/wiki/Top_type)
+
+## Related To
+
+- [no-duplicate-type-constituents](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/no-duplicate-type-constituents.mdx)

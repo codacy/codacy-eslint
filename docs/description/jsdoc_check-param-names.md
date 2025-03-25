@@ -620,7 +620,7 @@ function quux (foo) {
 /**
  * @param barr This is the description of bar. Oops, we misspelled "bar" as "barr".
  */
-declare function foo(bar: number) {}
+declare function foo(bar: number)
 // Message: Expected @param names to be "bar". Got "barr".
 
 /**
@@ -657,6 +657,30 @@ function quux (foo) {
 }
 // "jsdoc/check-param-names": ["error"|"warn", {"disableMissingParamChecks":true}]
 // Message: @param "bar" does not match an existing function parameter.
+
+export interface B {
+    /**
+     * @param paramA Something something
+     */
+    methodB(paramB: string): void
+};
+// Message: Expected @param names to be "paramB". Got "paramA".
+
+interface A {
+  /**
+   * @param params Values for the placeholders
+   */
+  getText(key: string, ...params: string[]): string
+}
+// Message: Expected @param names to be "key, ...params". Got "params".
+
+/**
+ * @param arg Arg
+ */
+export function fn(...[type, arg]: FnArgs): void {
+  // ...
+}
+// Message: Expected @param name to be "type". Got "arg".
 ````
 
 
@@ -1087,5 +1111,13 @@ function quux (foo, bar) {
 function quux (foo, bar) {
 }
 // "jsdoc/check-param-names": ["error"|"warn", {"disableMissingParamChecks":true}]
+
+/**
+ * @param type Type
+ * @param arg Arg
+ */
+export function fn(...[type, arg]: FnArgs): void {
+  // ...
+}
 ````
 
