@@ -6,6 +6,11 @@ description: 'Disallow certain types.'
 >
 > See **https://typescript-eslint.io/rules/ban-types** for documentation.
 
+:::danger Deprecated
+**This rule is deprecated** and will be removed in typescript-eslint@v8.
+See _**[Replacement of `ban-types`](/blog/announcing-typescript-eslint-v8-beta#replacement-of-ban-types)**_ for more details.
+:::
+
 Some built-in types have aliases, while some types are considered dangerous or harmful.
 It's often a good idea to ban certain types to help with consistency and safety.
 

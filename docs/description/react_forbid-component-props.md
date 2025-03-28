@@ -44,7 +44,7 @@ Examples of **correct** code for this rule:
 ### `forbid`
 
 An array specifying the names of props that are forbidden. The default value of this option is `['className', 'style']`.
-Each array element can either be a string with the property name or object specifying the property name, an optional
+Each array element can either be a string with the property name or object specifying the property name or glob string, an optional
 custom message, and a component allowlist:
 
 ```js
@@ -62,6 +62,55 @@ Use `disallowedFor` as an exclusion list to warn on props for specific component
   "propName": "someProp",
   "disallowedFor": ["SomeComponent", "AnotherComponent"],
   "message": "Avoid using someProp for SomeComponent and AnotherComponent"
+}
+```
+
+For `propNamePattern` glob string patterns:
+
+```js
+{
+  "propNamePattern": '**-**',
+  "allowedFor": ['div'],
+  "message": "Avoid using kebab-case except div"
+}
+```
+
+```js
+{
+  "propNamePattern": '**-**',
+  "allowedForPatterns": ["*Component"],
+  "message": "Avoid using kebab-case except components that match the `*Component` pattern"
+}
+```
+
+Use `allowedForPatterns` for glob string patterns:
+
+```js
+{
+  "propName": "someProp",
+  "allowedForPatterns": ["*Component"],
+  "message": "Avoid using `someProp` except components that match the `*Component` pattern"
+}
+```
+
+Use `disallowedForPatterns` for glob string patterns:
+
+```js
+{
+  "propName": "someProp",
+  "disallowedForPatterns": ["*Component"],
+  "message": "Avoid using `someProp` for components that match the `*Component` pattern"
+}
+```
+
+Combine several properties to cover more cases:
+
+```js
+{
+  "propName": "someProp",
+  "allowedFor": ['div'],
+  "allowedForPatterns": ["*Component"],
+  "message": "Avoid using `someProp` except `div` and components that match the `*Component` pattern"
 }
 ```
 

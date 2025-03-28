@@ -10571,7 +10571,7 @@
     "parameters": [],
     "patternId": "jest_padding-around-test-blocks",
     "title": "Jest: Padding around test blocks",
-    "description": "Enforce padding around afterAll blocks",
+    "description": "Enforce padding around `test` and `it` blocks",
     "timeToFix": 5
   },
   {
