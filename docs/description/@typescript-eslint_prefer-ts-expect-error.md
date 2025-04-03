@@ -6,6 +6,16 @@ description: 'Enforce using `@ts-expect-error` over `@ts-ignore`.'
 >
 > See **https://typescript-eslint.io/rules/prefer-ts-expect-error** for documentation.
 
+:::danger Deprecated
+
+This rule has been deprecated in favor of [`@typescript-eslint/ban-ts-comment`](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin/docs/rules/ban-ts-comment.mdx).
+This rule (`@typescript-eslint/prefer-ts-expect-error`) will be removed in a future major version of typescript-eslint.
+
+When it was first created, `@typescript-eslint/ban-ts-comment` rule was only responsible for suggesting to remove `@ts-ignore` directive.
+It was later updated to suggest replacing `@ts-ignore` with `@ts-expect-error` directive, so that it replaces `@typescript-eslint/prefer-ts-expect-error` entirely.
+
+:::
+
 TypeScript allows you to suppress all errors on a line by placing a comment starting with `@ts-ignore` or `@ts-expect-error` immediately before the erroring line.
 The two directives work the same, except `@ts-expect-error` causes a type error if placed before a line that's not erroring in the first place.
 

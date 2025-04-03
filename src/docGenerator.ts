@@ -215,6 +215,11 @@ export class DocGenerator {
   ): Promise<void> {
     const plugin: Plugin = await pluginByPackageName(packageName)
 
+    if(plugin.packageName === "@babel/eslint-plugin") console.log(`${plugin.versionPrefix}${dependencies[plugin.packageName].replace("^", "")}`)
+
+    // Babel documentation is non existent, rules should be the same as eslint
+    if (plugin.packageName === "@babel/eslint-plugin") plugin.packageName = "eslint"
+
     console.log(`Generate ${plugin.name} description files`)
 
     plugin.docsBaseUrl = new URL((!relativeUrl.startsWith("https://") ? this.githubBaseUrl : "") + relativeUrl)

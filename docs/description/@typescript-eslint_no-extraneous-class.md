@@ -40,6 +40,8 @@ class HelloWorldLogger {
     console.log('Hello, world!');
   }
 }
+
+abstract class Foo {}
 ```
 
 #### ✅ Correct
@@ -53,6 +55,10 @@ export function isProduction() {
 
 function logHelloWorld() {
   console.log('Hello, world!');
+}
+
+abstract class Foo {
+  abstract prop: string;
 }
 ```
 

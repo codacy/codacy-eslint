@@ -5317,69 +5317,6 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-argument",
-    "title": "@typescript eslint: No unsafe argument",
-    "description": "Disallow calling a function with a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-assignment",
-    "title": "@typescript eslint: No unsafe assignment",
-    "description": "Disallow assigning a value with type `any` to variables and properties",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-call",
-    "title": "@typescript eslint: No unsafe call",
-    "description": "Disallow calling a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
-    "title": "@typescript eslint: No unsafe declaration merging",
-    "description": "Disallow unsafe declaration merging",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
-    "title": "@typescript eslint: No unsafe enum comparison",
-    "description": "Disallow comparing an enum value with a non-enum value",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-function-type",
-    "title": "@typescript eslint: No unsafe function type",
-    "description": "Disallow using the unsafe built-in Function type",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-member-access",
-    "title": "@typescript eslint: No unsafe member access",
-    "description": "Disallow member access on a value with type `any`",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-return",
-    "title": "@typescript eslint: No unsafe return",
-    "description": "Disallow returning a value with type `any` from a function",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "@typescript-eslint_no-unsafe-unary-minus",
-    "title": "@typescript eslint: No unsafe unary minus",
-    "description": "Require unary negation to take a number",
-    "timeToFix": 5
-  },
-  {
     "parameters": [
       {
         "name": "allowShortCircuit",
@@ -10634,7 +10571,7 @@
     "parameters": [],
     "patternId": "jest_padding-around-test-blocks",
     "title": "Jest: Padding around test blocks",
-    "description": "Enforce padding around afterAll blocks",
+    "description": "Enforce padding around `test` and `it` blocks",
     "timeToFix": 5
   },
   {

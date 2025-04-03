@@ -94,6 +94,11 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "@babel/eslint-plugin",
+    "/eslint/eslint/main/docs/src/rules/"
+  )
+
+  await docGenerator.downloadDocs(
     "eslint-plugin-eslint-plugin",
     "/eslint-community/eslint-plugin-eslint-plugin/main/docs/rules/"
   )
@@ -105,7 +110,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-i18next",
-    "/edvardchen/eslint-plugin-i18next/next/docs/rules/"
+    "/edvardchen/eslint-plugin-i18next/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -329,7 +334,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-vuetify",
-    "/vuetifyjs/eslint-plugin-vuetify/refs/heads/master/docs/rules/"
+    "/vuetifyjs/eslint-plugin-vuetify/refs/tags/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(
@@ -357,6 +362,34 @@ async function main () {
     "eslint-plugin-yml",
     "/ota-meshi/eslint-plugin-yml/master/docs/rules/"
   )
+
+  await docGenerator.downloadDocs(
+    "@tanstack/eslint-plugin-query",
+    "/TanStack/query/refs/tags/master/docs/eslint/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-flowtype",
+    "/gajus/eslint-plugin-flowtype/refs/tags/master/.README/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-fp",
+    "/jfmengels/eslint-plugin-fp/refs/tags/master/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-playwright",
+    "/playwright-community/eslint-plugin-playwright/refs/tags/main/docs/rules/"
+  )
+
+  await docGenerator.downloadDocs(
+    "eslint-plugin-turbo",
+    "/vercel/turborepo/refs/tags/main/packages/eslint-plugin-turbo/docs/rules/"
+  )
+
+
+  
 
 }
 
