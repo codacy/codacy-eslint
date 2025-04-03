@@ -126,6 +126,11 @@ export class DocGenerator {
     const prefixes = [...defaultPrefixes, ...securityPrefixes]
     const prefix = prefixSplit(patternId)
 
+    // Exclude "@typescript-eslint/no-unsafe-*" as defaults for now
+    if (patternId.startsWith("@typescript-eslint/no-unsafe-")) {
+      return false
+    }
+
     return prefixes.some((p) => 
       p[prefix] === "all"
       || p[prefix] === "recommended" && meta.docs?.recommended

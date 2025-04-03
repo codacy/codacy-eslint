@@ -5332,35 +5332,35 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-assignment",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-call",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-enum-comparison",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-function-type",
@@ -5374,14 +5374,14 @@
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-return",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-unary-minus",
