@@ -25,8 +25,7 @@ const blacklistRegexes: RegExp[] = [
   /(?<!@stylistic\/)lines-between-class-members/,
   /@typescript-eslint\/brace-style/,
   /@typescript-eslint\/indent/,
-  /(?<=^|\s)wrap-iife(?=\s|$)/,
-  /@typescript-eslint\/no-unsafe-/
+  /(?<=^|\s)wrap-iife(?=\s|$)/
   
 ]
 

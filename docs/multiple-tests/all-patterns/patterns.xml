@@ -582,6 +582,15 @@
   <module name="@typescript-eslint_no-unnecessary-type-assertion" />
   <module name="@typescript-eslint_no-unnecessary-type-constraint" />
   <module name="@typescript-eslint_no-unnecessary-type-parameters" />
+  <module name="@typescript-eslint_no-unsafe-argument" />
+  <module name="@typescript-eslint_no-unsafe-assignment" />
+  <module name="@typescript-eslint_no-unsafe-call" />
+  <module name="@typescript-eslint_no-unsafe-declaration-merging" />
+  <module name="@typescript-eslint_no-unsafe-enum-comparison" />
+  <module name="@typescript-eslint_no-unsafe-function-type" />
+  <module name="@typescript-eslint_no-unsafe-member-access" />
+  <module name="@typescript-eslint_no-unsafe-return" />
+  <module name="@typescript-eslint_no-unsafe-unary-minus" />
   <module name="@typescript-eslint_no-unused-expressions" />
   <module name="@typescript-eslint_no-unused-vars" />
   <module name="@typescript-eslint_no-use-before-define" />
