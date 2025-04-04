@@ -83,7 +83,7 @@
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
     "@babel/register": "^7.23.7",
-    "@babel/runtime": "^7.25.0",
+    "@babel/runtime": "^7.26.10",
     "@cityelectricalfactors/eslint-config-base": "^1.0.3",
     "@cityelectricalfactors/prettier": "^1.0.2",
     "@cloudbeds/eslint-config": "^2.10.1",
