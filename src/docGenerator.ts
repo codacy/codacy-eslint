@@ -84,6 +84,11 @@ export class DocGenerator {
         patternId,
         type
       )
+
+      //TCE-1254 develop parameters for prettier
+      const patternParameters = patternId === "prettier/prettier"
+      ? [new ParameterSpec("singleQuote", true)]
+      : DocGenerator.generateParameters(patternId, meta?.schema);
   
       return new PatternSpec(
         patternIdToCodacy(patternId),
@@ -91,7 +96,7 @@ export class DocGenerator {
         category,
         subcategory,
         scanType,
-        DocGenerator.generateParameters(patternId, meta?.schema),
+        patternParameters,
         DocGenerator.isDefaultPattern(patternId, meta)
       )
     })
@@ -146,19 +151,22 @@ export class DocGenerator {
         ? capitalize(meta.docs.description)
         : undefined
       const timeToFix = 5
-      const descriptionParameters = DocGenerator
-        .generateParameters(
-          patternId,
-          meta?.schema
-        )
-        .map((p) => new DescriptionParameter(p.name, p.name))
+    
+      //TCE-1254 develop parameters for prettier
+      const descriptionParameters = patternId === "prettier/prettier"
+          ? [new ParameterSpec("singleQuote", true)]
+          : DocGenerator.generateParameters(patternId, meta?.schema);
+
+      const mapDescriptionParameters = descriptionParameters.map(
+        (p) => new DescriptionParameter(p.name, p.name)
+      );
   
       descriptions.push(new DescriptionEntry(
         patternIdToCodacy(patternId),
         patternTitle(patternId),
         description,
         timeToFix,
-        descriptionParameters
+        mapDescriptionParameters
       ))
     })
   
