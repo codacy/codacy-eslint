@@ -14407,7 +14407,12 @@
       "patternId": "prettier_prettier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "singleQuote",
+          "default": true
+        }
+      ],
       "enabled": false
     },
     {
