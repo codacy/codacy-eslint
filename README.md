@@ -1,5 +1,8 @@
 # Codacy ESLint
 
+## creating new commits
+- adding things here to create a new commit
+
 ## Adding new plugins / configs
 
 1.  Install the package using npm:
