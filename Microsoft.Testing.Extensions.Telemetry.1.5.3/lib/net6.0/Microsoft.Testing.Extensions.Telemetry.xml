@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Testing.Extensions.Telemetry</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Testing.Extensions.Telemetry.AppInsightsProvider">
+            <summary>
+            Allows to log telemetry events via AppInsights.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Testing.Extensions.Telemetry.Resources.ExtensionResources.AddAppInsightsTelemetryProviderInvalidBuilder">
+            <summary>AppInsights telemetry provider can only be registered onto Microsoft.Testing.Platform.Builder.TestApplicationBuilder builders</summary>
+        </member>
+    </members>
+</doc>
