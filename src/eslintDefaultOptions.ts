@@ -109,15 +109,15 @@ export const defaultOptions: ESLint.Options = {
     "settings": {
       "node": {
         "paths": ["/src"],
-        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
-        "tryExtensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"]
+        "extensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"],
+        "tryExtensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"]
       },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"]
       },
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts", ".node"]
+          "extensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"]
         },
         "typescript": {
           "alwaysTryTypes": true
@@ -132,7 +132,7 @@ export const defaultOptions: ESLint.Options = {
     "overrides": [
       // TypeScript-specific rules
       {
-        "files": ["*.ts", "*.tsx", "*.mts", "*.cts"],
+        "files": ["*.ts", "*.tsx"],
         "parserOptions": {
           "project": "/tsconfig.json",
           "sourceType": "script"
@@ -159,7 +159,7 @@ export const defaultOptions: ESLint.Options = {
       },
       // JavaScript-specific rules
       {
-        "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.json"],
+        "files": ["*.js", "*.jsx"],
         // https://github.com/typescript-eslint/typescript-eslint/blob/e44a1a280f08f9fd0d29f74e5c3e73b7b64a9606/packages/eslint-plugin/src/configs/disable-type-checked.ts#L12
         "extends": ["plugin:@typescript-eslint/disable-type-checked"],
         "rules": {
@@ -212,24 +212,25 @@ export const defaultOptions: ESLint.Options = {
       },
       // JSON-specific rules
       {
-        "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.ts", "*.tsx", "*.mts", "*.cts"],
+        "files": ["*.js", "*.jsx", "*.mjs", "*.ts", "*.tsx", "*.jsm", "*.vue"],
         "rules": {
           "json/json": "off"
         }
+      },
+      //JSX with Babel
+      //https://www.npmjs.com/package/@babel/eslint-parser
+      //"When should I use @babel/eslint-parser?"
+      {
+        "files": ["**/*.jsx"],
+        "parser": "@babel/eslint-parser",
+        "parserOptions": {
+          "babelOptions": {
+            "presets": ["@babel/preset-env"]
+          },
+          "requireConfigFile": false
+        }
       }
-      // JSX with Babel
-      // https://www.npmjs.com/package/@babel/eslint-parser
-      // "When should I use @babel/eslint-parser?"
-      // {
-      //   "files": ["**/*.jsx"],
-      //   "parser": "@babel/eslint-parser",
-      //   "parserOptions": {
-      //     "babelOptions": {
-      //       "presets": ["@babel/preset-env"]
-      //     },
-      //     "requireConfigFile": false
-      //   }
-      // }
     ]
   }
+}
 }
