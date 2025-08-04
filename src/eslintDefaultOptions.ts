@@ -121,8 +121,6 @@ export const defaultOptions: ESLint.Options = {
         },
         "typescript": {
           "alwaysTryTypes": true
-        },
-        "webpack": true
       },
       "jest": {
         "version": 29
