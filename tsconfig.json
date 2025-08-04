@@ -12,11 +12,20 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": false,
+    "strict": true,                     // enable full strict mode to catch unsafe any's early
+    "noImplicitAny": true,              // specifically force explicit typing
+    "strictNullChecks": true,           // stricter null checking, reduces unsafe usage
+    "strictFunctionTypes": true,        // better function type safety
+    "strictBindCallApply": true,        // stricter checks on bind/call/apply
+    "noImplicitReturns": true,          // catch missing return statements
+    "noFallthroughCasesInSwitch": true, // safer switch-case checks
     "target": "ES6"
   },
   "include": [
-    "src/**/*.ts",
-    "package.json"
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }

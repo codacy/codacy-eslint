@@ -102,8 +102,7 @@ export const defaultOptions: ESLint.Options = {
       "allowInvalidAST": true,
       "allowAutomaticSingleRunInference": true,
       "ecmaVersion": "latest",
-      "errorOnTypeScriptSyntacticAndSemanticIssues": false,
-      "extraFileExtensions": [".json"]
+      "errorOnTypeScriptSyntacticAndSemanticIssues": false
     },
     "root": true,
     "settings": {
@@ -218,8 +217,6 @@ export const defaultOptions: ESLint.Options = {
         }
       },
       //JSX with Babel
-      //https://www.npmjs.com/package/@babel/eslint-parser
-      //"When should I use @babel/eslint-parser?"
       {
         "files": ["**/*.jsx"],
         "parser": "@babel/eslint-parser",
