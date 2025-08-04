@@ -8,6 +8,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@stylistic/ts/disable-legacy",
     "plugin:@stylistic/ts/all-extends",
     "prettier"
