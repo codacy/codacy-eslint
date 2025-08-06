@@ -102,21 +102,22 @@ export const defaultOptions: ESLint.Options = {
       "allowInvalidAST": true,
       "allowAutomaticSingleRunInference": true,
       "ecmaVersion": "latest",
-      "errorOnTypeScriptSyntacticAndSemanticIssues": false
+      "errorOnTypeScriptSyntacticAndSemanticIssues": false,
+      "extraFileExtensions": [".json"]
     },
     "root": true,
     "settings": {
       "node": {
         "paths": ["/src"],
-        "extensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"],
-        "tryExtensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"]
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"],
+        "tryExtensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".node", ".mjs", ".cjs", ".mts", ".cts"]
       },
       "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"]
       },
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx", ".jsm", ".vue", ".mjs", ".ts", ".tsx"]
+          "extensions": [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts", ".node"]
         },
         "typescript": {
           "alwaysTryTypes": true
@@ -125,13 +126,13 @@ export const defaultOptions: ESLint.Options = {
         "version": 29
       },
       "react": {
-        "version": "18.2.0"
+        "version": "19.1.1"
       }
     },
     "overrides": [
       // TypeScript-specific rules
       {
-        "files": ["*.ts", "*.tsx"],
+        "files": ["*.ts", "*.tsx", "*.mts", "*.cts"],
         "parserOptions": {
           "project": "/tsconfig.json",
           "sourceType": "script"
@@ -158,7 +159,7 @@ export const defaultOptions: ESLint.Options = {
       },
       // JavaScript-specific rules
       {
-        "files": ["*.js", "*.jsx"],
+        "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.json"],
         // https://github.com/typescript-eslint/typescript-eslint/blob/e44a1a280f08f9fd0d29f74e5c3e73b7b64a9606/packages/eslint-plugin/src/configs/disable-type-checked.ts#L12
         "extends": ["plugin:@typescript-eslint/disable-type-checked"],
         "rules": {
@@ -211,12 +212,12 @@ export const defaultOptions: ESLint.Options = {
       },
       // JSON-specific rules
       {
-        "files": ["*.js", "*.jsx", "*.mjs", "*.ts", "*.tsx", "*.jsm", "*.vue"],
+        "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.ts", "*.tsx", "*.mts", "*.cts"],
         "rules": {
           "json/json": "off"
         }
       },
-      //JSX with Babel
+      // JSX with Babel
       {
         "files": ["**/*.jsx"],
         "parser": "@babel/eslint-parser",
@@ -229,5 +230,4 @@ export const defaultOptions: ESLint.Options = {
       }
     ]
   }
-}
-}
+}}

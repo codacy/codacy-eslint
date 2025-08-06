@@ -8,7 +8,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@stylistic/ts/disable-legacy",
     "plugin:@stylistic/ts/all-extends",
     "prettier"
@@ -26,10 +25,7 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2022,
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-    sourceType: 'module'
+    project: true
   },
   plugins: [
     "@typescript-eslint",
