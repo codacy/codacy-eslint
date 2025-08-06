@@ -138,6 +138,7 @@ export const defaultOptions: ESLint.Options = {
           "project": null,
           "sourceType": "script"
         },
+        "extends": ["plugin:@typescript-eslint/disable-type-checked"],
         "rules": {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
           "constructor-super": "off",
@@ -155,7 +156,11 @@ export const defaultOptions: ESLint.Options = {
           "no-this-before-super": "off",
           "no-undef": "off",
           "no-unreachable": "off",
-          "no-unsafe-negation": "off"
+          "no-unsafe-negation": "off",
+          "no-unsafe-return": "off",
+          "no-unsafe-member-access": "off",
+          "no-unsafe-assignment": "off",
+          "no-unsafe-argument": "off"
         }
       },
       // JavaScript-specific rules
