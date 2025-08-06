@@ -135,7 +135,7 @@ export const defaultOptions: ESLint.Options = {
       {
         "files": ["*.ts", "*.tsx", "*.mts", "*.cts"],
         "parserOptions": {
-          "project": "/tsconfig.json",
+          "project": null,
           "sourceType": "script"
         },
         "rules": {
