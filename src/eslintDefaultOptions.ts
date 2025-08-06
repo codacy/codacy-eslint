@@ -121,12 +121,13 @@ export const defaultOptions: ESLint.Options = {
         },
         "typescript": {
           "alwaysTryTypes": true
+      }
       },
       "jest": {
         "version": 29
       },
       "react": {
-        "version": "19.1.1"
+        "version": "18.2.0"
       }
     },
     "overrides": [
@@ -230,4 +231,4 @@ export const defaultOptions: ESLint.Options = {
       }
     ]
   }
-}}
+}
