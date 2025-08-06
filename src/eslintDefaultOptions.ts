@@ -121,8 +121,7 @@ export const defaultOptions: ESLint.Options = {
         },
         "typescript": {
           "alwaysTryTypes": true
-        },
-        "webpack": true
+      }
       },
       "jest": {
         "version": 29
@@ -218,20 +217,21 @@ export const defaultOptions: ESLint.Options = {
         "rules": {
           "json/json": "off"
         }
-      }
+      },
       // JSX with Babel
-      // https://www.npmjs.com/package/@babel/eslint-parser
-      // "When should I use @babel/eslint-parser?"
-      // {
-      //   "files": ["**/*.jsx"],
-      //   "parser": "@babel/eslint-parser",
-      //   "parserOptions": {
-      //     "babelOptions": {
-      //       "presets": ["@babel/preset-env"]
-      //     },
-      //     "requireConfigFile": false
-      //   }
-      // }
+      {
+        "files": ["**/*.jsx"],
+        "parser": "@babel/eslint-parser",
+        "parserOptions": {
+          "babelOptions": {
+            "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ]
+          },
+          "requireConfigFile": false
+        }
+      }
     ]
   }
 }

@@ -4,8 +4,5 @@
   ],
   "extends": [
     "plugin:security-node/recommended"
-  ],
-  "rules": {
-    "security-node/non-literal-reg-expr": "warn"
-  }
+  ]
 }
