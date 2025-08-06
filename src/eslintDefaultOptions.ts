@@ -121,7 +121,7 @@ export const defaultOptions: ESLint.Options = {
         },
         "typescript": {
           "alwaysTryTypes": true
-      }
+        },
       },
       "jest": {
         "version": 29
@@ -216,20 +216,6 @@ export const defaultOptions: ESLint.Options = {
         "files": ["*.js", "*.jsx", "*.mjs", "*.cjs", "*.ts", "*.tsx", "*.mts", "*.cts"],
         "rules": {
           "json/json": "off"
-        }
-      },
-      // JSX with Babel
-      {
-        "files": ["**/*.jsx"],
-        "parser": "@babel/eslint-parser",
-        "parserOptions": {
-          "babelOptions": {
-            "presets": [
-              "@babel/preset-env",
-              "@babel/preset-react"
-            ]
-          },
-          "requireConfigFile": false
         }
       }
     ]
