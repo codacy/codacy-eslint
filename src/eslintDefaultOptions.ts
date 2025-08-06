@@ -224,7 +224,10 @@ export const defaultOptions: ESLint.Options = {
         "parser": "@babel/eslint-parser",
         "parserOptions": {
           "babelOptions": {
-            "presets": ["@babel/preset-env"]
+            "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ]
           },
           "requireConfigFile": false
         }
