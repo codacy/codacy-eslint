@@ -7,7 +7,6 @@ export const defaultOptions: ESLint.Options = {
       "browser": true,
       "node": true,
       "commonjs": true,
-      "es6": true,
       "es2022": true,
       "worker": true,
       "amd": true,
