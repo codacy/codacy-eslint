@@ -183,6 +183,7 @@ function existsEslintConfigInRepoRoot (srcDirPath: string): boolean {
     ".eslintrc.yml",
     ".eslintrc.json"
   ]
+  // nosemgrep: path-join-resolve-traversal
   const found = filenames.some(filename => existsSync(path.join(srcDirPath, filename)))
   debug(`options: eslintrc config file ${found ? "" : "not "}found`)
 

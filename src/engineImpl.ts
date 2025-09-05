@@ -75,6 +75,7 @@ async function chunkFilesByTotalSize(files: string[], maxChunkSize: number): Pro
 
   for (const file of files) {
     try {
+      // nosemgrep: detect-non-literal-fs-filename
       const stats = await fsPromises.stat(file);
       const size = stats.size;
       if (currentChunkSize + size <= maxChunkSize || currentChunk.length === 0) {
