@@ -31,7 +31,8 @@
     "test": "mocha",
     "preupgrade": "npx npm-check-updates -u -x @teambit/react.eslint-config-bit-react,eslint && npx npm-check-updates -u -t minor eslint,eslint-plugin-lodash",
     "upgrade": "npm install --legacy-peer-deps --omit=dev",
-    "postupgrade": "npm run build:docs"
+    "postupgrade": "npm run build:docs",
+    "postinstall": "npx update-browserslist-db@latest"
   },
   "husky": {
     "hooks": {
@@ -104,7 +105,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nx/cypress": "^19.0.4",
     "@nx/devkit": "^19.5.1",
-    "@nx/eslint-plugin": "^19.0.4",
+    "@nx/eslint-plugin": "^21.4.0",
     "@nx/express": "^19.5.1",
     "@nx/jest": "^19.0.4",
     "@nx/linter": "^19.4.2",
