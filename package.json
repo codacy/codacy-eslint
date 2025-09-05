@@ -31,7 +31,8 @@
     "test": "mocha",
     "preupgrade": "npx npm-check-updates -u -x @teambit/react.eslint-config-bit-react,eslint && npx npm-check-updates -u -t minor eslint,eslint-plugin-lodash",
     "upgrade": "npm install --legacy-peer-deps --omit=dev",
-    "postupgrade": "npm run build:docs"
+    "postupgrade": "npm run build:docs",
+    "postinstall": "npx update-browserslist-db@latest"
   },
   "husky": {
     "hooks": {
