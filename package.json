@@ -31,7 +31,8 @@
     "test": "mocha",
     "preupgrade": "npx npm-check-updates -u -x @teambit/react.eslint-config-bit-react,eslint && npx npm-check-updates -u -t minor eslint,eslint-plugin-lodash",
     "upgrade": "npm install --legacy-peer-deps --omit=dev",
-    "postupgrade": "npm run build:docs"
+    "postupgrade": "npm run build:docs",
+    "postinstall": "npx update-browserslist-db@latest"
   },
   "husky": {
     "hooks": {
@@ -80,7 +81,7 @@
     "@babel/plugin-transform-object-assign": "^7.24.7",
     "@babel/plugin-transform-object-rest-spread": "^7.24.5",
     "@babel/plugin-transform-runtime": "^7.24.3",
-    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.24.1",
     "@babel/register": "^7.23.7",
     "@babel/runtime": "^7.25.0",
@@ -104,7 +105,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nx/cypress": "^19.0.4",
     "@nx/devkit": "^19.5.1",
-    "@nx/eslint-plugin": "^19.0.4",
+    "@nx/eslint-plugin": "^21.4.0",
     "@nx/express": "^19.5.1",
     "@nx/jest": "^19.0.4",
     "@nx/linter": "^19.4.2",
@@ -166,7 +167,7 @@
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^13.0.0",
     "assets-webpack-plugin": "^7.1.1",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.21",
     "axios": "^1.7.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.7.0",
@@ -346,7 +347,7 @@
     "mini-css-extract-plugin": "^2.9.0",
     "mocha": "^10.4.0",
     "mongoose": "^8.12.1",
-    "next": "^14.2.20",
+    "next": "^15.4.6",
     "npm": "^10.8.0",
     "npm-check-updates": "^16.14.20",
     "nx": "^19.0.4",

@@ -79,7 +79,8 @@ async function generateEslintOptions (
     return baseOptions
   }
 
-  const options: ESLint.Options = Object.assign({}, baseOptions, cloneDeep(defaultOptions))
+  const options: ESLint.Options = { ...baseOptions, ...defaultOptions }
+
 
   if (DEBUG && useRepoPatterns && !existsEslintConfig) {
     const patternsSet = "recommended"
@@ -123,13 +124,15 @@ async function generateEslintOptions (
 
   // load only the plugins that are being used in loaded rules
   const prefixes = getPatternsUniquePrefixes(patterns)
-  prefixes
-    .filter((prefix) => prefix !== "")
-    .forEach(async (prefix) => {
-      (await getPluginsName()).includes(prefix)
-        ? options.baseConfig.plugins.push(prefix)
-        : debug(`options: plugin ${prefix} not found`)
-    })
+  const pluginNames = await getPluginsName();
+  for (const prefix of prefixes) {
+    if (!prefix) continue;
+    if (pluginNames.includes(prefix)) {
+      options.baseConfig.plugins.push(prefix);
+    } else {
+      debug(`options: plugin ${prefix} not found`);
+    }
+  }
 
   debug("options: finished")
 
@@ -153,10 +156,10 @@ function convertPatternsToEslintRules (patterns: Pattern[]): {
       return [patternId, "error"]
     }
 
-    const [unnamedParameters, namedParameters] = partition(
+    const [unnamedParameters, namedParameters]: [Parameter[], Parameter[]] = partition(
       pattern.parameters,
       (p) => p.name === "unnamedParam"
-    )
+    );
     const namedOptions = fromPairs(namedParameters.map((p) => [p.name, p.value]))
     const unnamedOptions = unnamedParameters.map((p) => p.value)
 
@@ -180,7 +183,8 @@ function existsEslintConfigInRepoRoot (srcDirPath: string): boolean {
     ".eslintrc.yml",
     ".eslintrc.json"
   ]
-  const found = filenames.some(filename => existsSync(srcDirPath + path.sep + filename))
+  // nosemgrep: path-join-resolve-traversal
+  const found = filenames.some(filename => existsSync(path.join(srcDirPath, filename)))
   debug(`options: eslintrc config file ${found ? "" : "not "}found`)
 
   return found

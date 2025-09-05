@@ -6,6 +6,7 @@ import { createEslintConfig } from "./configCreator"
 import { convertResults } from "./convertResults"
 import { DEBUG, debug } from "./logging"
 import { toolName } from "./toolMetadata"
+import fsPromises from "fs/promises";
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
@@ -40,14 +41,8 @@ export const engineImpl: Engine = async function (
 }
 
 async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
-  //-- without chunks
-  //return await eslint.lintFiles(files)
-
-  //const nFilesPerChunk = 10
-  //const chunksOfFiles = chunkFilesByCount(files, nFilesPerChunk)
-
   const maxTotalSizePerChunk = 8167 // size in bytes (8KB)
-  const chunksOfFiles = chunkFilesByTotalSize(files, maxTotalSizePerChunk)
+  const chunksOfFiles = await chunkFilesByTotalSize(files, maxTotalSizePerChunk)
 
   return lintFilesChunkByChunk(eslint, chunksOfFiles)
 }
@@ -68,44 +63,34 @@ async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.Lint
 
   let nIssues = 0
   for await (const lintResult of lintResults) {
-    // debug(`engine: specific config for "${lintResult.filePath}"`)
-    // debug(await eslint.calculateConfigForFile(lintResult.filePath))
     nIssues += lintResult.messages.length
   }
   debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
 }
 
-/*
-const chunkFilesByCount = (files: string[], size: number) =>
-  Array.from({ length: Math.ceil(files.length / size) }, (, i: number) =>
-  files.slice(i * size, i * size + size)
-  )
-*/
-
-function chunkFilesByTotalSize (files: string[], maxChunkSize: number): string[][] {
-  const chunks: string[][] = []
-  let currentChunk: string[] = []
-  let currentChunkSize = 0
+async function chunkFilesByTotalSize(files: string[], maxChunkSize: number): Promise<string[][]> {
+  const chunks: string[][] = [];
+  let currentChunk: string[] = [];
+  let currentChunkSize = 0;
 
   for (const file of files) {
     try {
-      const size = fs.statSync(file).size // nosemgrep
-      if (currentChunk.length === 0 || currentChunkSize + size <= maxChunkSize) {
-        currentChunk.push(file)
-        currentChunkSize += size
+      // nosemgrep
+      const stats = await fsPromises.stat(file);
+      const size = stats.size;
+      if (currentChunkSize + size <= maxChunkSize || currentChunk.length === 0) {
+        currentChunk.push(file);
+        currentChunkSize += size;
       } else {
-        chunks.push(currentChunk)
-        currentChunk = [file]
-        currentChunkSize = size
+        chunks.push(currentChunk);
+        currentChunk = [file];
+        currentChunkSize = size;
       }
-    } catch (error) {
-      console.error(`engine: error while getting file size for "${file}": ${error.message}`)
+    } catch (err: any) {
+      console.error(`engine: failed to stat "${file}": ${err.message}`);
     }
   }
 
-  if (currentChunk.length > 0) {
-    chunks.push(currentChunk)
-  }
-
-  return chunks
+  if (currentChunk.length > 0) chunks.push(currentChunk);
+  return chunks;
 }
