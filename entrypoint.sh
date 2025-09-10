@@ -1,10 +1,7 @@
 #!/bin/sh
-#using the maximum available memory for the container minus 1000MB for other processes
-max_ram=$((6000000000 / 1024 / 1024))
-old_space_size=$((max_ram - 1000))
 
 exec node \
-  --max-old-space-size="$old_space_size" \
-  --max-semi-space-size=32 \
+  --max-old-space-size=2048 \
+  --max-semi-space-size=128 \
   --optimize_for_size \
   /dist/src/index.js

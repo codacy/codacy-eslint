@@ -41,7 +41,7 @@ export const engineImpl: Engine = async function (
 }
 
 async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
-  const maxTotalSizePerChunk = 8167 // size in bytes (8KB)
+  const maxTotalSizePerChunk = 5 * 1024 * 1024; // size in bytes (5MB)
   const chunksOfFiles = await chunkFilesByTotalSize(files, maxTotalSizePerChunk)
 
   return lintFilesChunkByChunk(eslint, chunksOfFiles)
@@ -51,7 +51,8 @@ async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][])
   debug("engine: linting chunks started")
   const lintResults = []
   for (const chunkOfFiles of chunksOfFiles) {
-    lintResults.push(...await eslint.lintFiles(chunkOfFiles))
+    const chunkResults = await eslint.lintFiles(chunkOfFiles)
+    lintResults.push.apply(lintResults, chunkResults)
   }
   debug("engine: linting chunks finished")
 
@@ -61,10 +62,7 @@ async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][])
 async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
   if (!DEBUG) return
 
-  let nIssues = 0
-  for await (const lintResult of lintResults) {
-    nIssues += lintResult.messages.length
-  }
+  let nIssues = lintResults.reduce((acc, r) => acc + r.messages.length, 0)
   debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
 }
 
