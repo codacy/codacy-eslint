@@ -27,8 +27,8 @@ export function convertResults(eslintResults: ESLint.LintResult[]): ToolResult[]
       if (!m.ruleId || isBlacklisted(m.ruleId)) continue
 
       const patternId = patternIdToCodacy(m.ruleId)
-      const suggestion =
-        hasSuggestions
+      const suggestion
+        = hasSuggestions
           ? computeSuggestion(source!, m.line, m.endLine, m.fix, m.suggestions)
           : undefined
 

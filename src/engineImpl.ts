@@ -62,7 +62,7 @@ async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][])
 async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
   if (!DEBUG) return
 
-  let nIssues = lintResults.reduce((acc, r) => acc + r.messages.length, 0)
+  const nIssues = lintResults.reduce((acc, r) => acc + r.messages.length, 0)
   debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
 }
 
