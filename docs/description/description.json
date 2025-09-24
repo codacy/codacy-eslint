@@ -6898,6 +6898,13 @@
   },
   {
     "parameters": [],
+    "patternId": "ember_no-builtin-form-components",
+    "title": "Ember: No builtin form components",
+    "description": "Disallow usage of built-in form components",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
     "patternId": "ember_no-capital-letters-in-routes",
     "title": "Ember: No capital letters in routes",
     "description": "Disallow routes with uppercased letters in router.js",
@@ -7410,6 +7417,13 @@
     "patternId": "ember_prefer-ember-test-helpers",
     "title": "Ember: Prefer ember test helpers",
     "description": "Enforce usage of `@ember/test-helpers` methods over native window methods",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "ember_require-async-inverse-relationship",
+    "title": "Ember: Require async inverse relationship",
+    "description": "Require inverse to be specified in @belongsTo and @hasMany decorators",
     "timeToFix": 5
   },
   {
