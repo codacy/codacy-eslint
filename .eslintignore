@@ -3,3 +3,4 @@ dist/*
 build/*
 bin/*
 docs/tests/*
+www/*
