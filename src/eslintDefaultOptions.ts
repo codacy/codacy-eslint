@@ -94,7 +94,9 @@ export const defaultOptions: ESLint.Options = {
       "vendor/",
       "tsconfig.json",
       ".eslintrc*",
-      "www/"
+      "**/lib*/**",
+      "**/test*/**",
+      "**/example*/**"
     ],
     "plugins": [],
     "parser": "@typescript-eslint/parser",
