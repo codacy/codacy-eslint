@@ -41,5 +41,5 @@ export default Component.extend({
 
 ## Related
 
-- [jquery-ember-run](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/jquery-ember-run.md)
-- [no-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/no-jquery.md)
+- [jquery-ember-run](https://github.com/ember-cli/eslint-plugin-ember/tree/refs/tags/master/docs/rules/jquery-ember-run.md)
+- [no-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/refs/tags/master/docs/rules/no-jquery.md)

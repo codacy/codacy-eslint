@@ -13,7 +13,7 @@ In addition, all files in the `mirage` directory will be excluded from this rule
 
 This rule can be used with `eslint --fix` to automatically fix some occurrences.
 To be auto-fixed, `Ember` must be imported.
-Ideally, you should also be using [new-module-imports](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/new-module-imports.md); otherwise, the fixed code will look like `Ember.get(this, fooProperty')` instead of `get(this, 'fooProperty')`.
+Ideally, you should also be using [new-module-imports](https://github.com/ember-cli/eslint-plugin-ember/tree/refs/tags/master/docs/rules/new-module-imports.md); otherwise, the fixed code will look like `Ember.get(this, fooProperty')` instead of `get(this, 'fooProperty')`.
 
 ## Examples
 

@@ -75,5 +75,5 @@ Codemods that could help:
 
 ## Related
 
-- [jquery-ember-run](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/jquery-ember-run.md)
-- [no-global-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/master/docs/rules/no-global-jquery.md)
+- [jquery-ember-run](https://github.com/ember-cli/eslint-plugin-ember/tree/refs/tags/master/docs/rules/jquery-ember-run.md)
+- [no-global-jquery](https://github.com/ember-cli/eslint-plugin-ember/tree/refs/tags/master/docs/rules/no-global-jquery.md)

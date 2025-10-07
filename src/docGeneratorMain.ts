@@ -75,7 +75,7 @@ async function main () {
 
   await docGenerator.downloadDocs(
     "eslint-plugin-ember",
-    "/ember-cli/eslint-plugin-ember/master/docs/rules/"
+    "/ember-cli/eslint-plugin-ember/refs/tags/master/docs/rules/"
   )
 
   await docGenerator.downloadDocs(

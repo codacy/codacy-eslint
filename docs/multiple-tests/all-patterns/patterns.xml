@@ -811,6 +811,7 @@
   <module name="ember_no-at-ember-render-modifiers" />
   <module name="ember_no-attrs-in-components" />
   <module name="ember_no-attrs-snapshot" />
+  <module name="ember_no-builtin-form-components" />
   <module name="ember_no-capital-letters-in-routes" />
   <module name="ember_no-classic-classes" />
   <module name="ember_no-classic-components" />
@@ -874,6 +875,7 @@
   <module name="ember_order-in-models" />
   <module name="ember_order-in-routes" />
   <module name="ember_prefer-ember-test-helpers" />
+  <module name="ember_require-async-inverse-relationship" />
   <module name="ember_require-computed-macros" />
   <module name="ember_require-computed-property-dependencies" />
   <module name="ember_require-fetch-import" />

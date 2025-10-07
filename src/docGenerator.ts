@@ -201,10 +201,18 @@ export class DocGenerator {
     patternDocFilename: string,
     rejectOnError: boolean
   ) {
-    const url = (plugin.versionPrefix !== false
-      ? plugin.docsBaseUrl.href.replace(/main|master/, `${plugin.versionPrefix}${dependencies[plugin.packageName].replace("^", "")}`)
-      : plugin.docsBaseUrl.href)
-      + patternDocFilename
+    let version = dependencies[plugin.packageName].replace("^", "");
+
+    // special-case for eslint-plugin-ember
+    if (plugin.packageName === "eslint-plugin-ember") {
+      version = `${version}-eslint-plugin-ember`;
+    }
+
+    const url =
+    (plugin.versionPrefix !== false
+    ? plugin.docsBaseUrl.href.replace(/main|master/, `${plugin.versionPrefix}${version}`)
+    : plugin.docsBaseUrl.href) + patternDocFilename;
+
     try {
       const response = await axios.get(url)
       const text = this.inlineLinkedMarkdownFiles(response.data, plugin.docsBaseUrl.href)
