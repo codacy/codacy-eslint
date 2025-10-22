@@ -7,27 +7,65 @@ Converts single line or non-JSDoc, multiline comments into JSDoc comments.
 Note that this rule is experimental. As usual with fixers, please confirm
 the results before committing.
 
+<a name="user-content-convert-to-jsdoc-comments-fixer"></a>
+<a name="convert-to-jsdoc-comments-fixer"></a>
+## Fixer
+
+Converts comments into JSDoc comments.
+
 <a name="user-content-convert-to-jsdoc-comments-options"></a>
 <a name="convert-to-jsdoc-comments-options"></a>
 ## Options
+
+A single options object has the following properties.
+
+<a name="user-content-convert-to-jsdoc-comments-options-allowedprefixes"></a>
+<a name="convert-to-jsdoc-comments-options-allowedprefixes"></a>
+### <code>allowedPrefixes</code>
+
+An array of prefixes to allow at the beginning of a comment.
+
+Defaults to `['@ts-', 'istanbul ', 'c8 ', 'v8 ', 'eslint', 'prettier-']`.
+
+Supplying your own value overrides the defaults.
+
+<a name="user-content-convert-to-jsdoc-comments-options-contexts"></a>
+<a name="convert-to-jsdoc-comments-options-contexts"></a>
+### <code>contexts</code>
+
+The contexts array which will be checked for preceding content.
+
+Can either be strings or an object with a `context` string and an optional, default `false` `inlineCommentBlock` boolean.
+
+Defaults to `ArrowFunctionExpression`, `FunctionDeclaration`,
+`FunctionExpression`, `TSDeclareFunction`.
+
+<a name="user-content-convert-to-jsdoc-comments-options-contextsafter"></a>
+<a name="convert-to-jsdoc-comments-options-contextsafter"></a>
+### <code>contextsAfter</code>
+
+The contexts array which will be checked for content on the same line after.
+
+Can either be strings or an object with a `context` string and an optional, default `false` `inlineCommentBlock` boolean.
+
+Defaults to an empty array.
+
+<a name="user-content-convert-to-jsdoc-comments-options-contextsbeforeandafter"></a>
+<a name="convert-to-jsdoc-comments-options-contextsbeforeandafter"></a>
+### <code>contextsBeforeAndAfter</code>
+
+The contexts array which will be checked for content before and on the same
+line after.
+
+Can either be strings or an object with a `context` string and an optional, default `false` `inlineCommentBlock` boolean.
+
+Defaults to `VariableDeclarator`, `TSPropertySignature`, `PropertyDefinition`.
 
 <a name="user-content-convert-to-jsdoc-comments-options-enablefixer"></a>
 <a name="convert-to-jsdoc-comments-options-enablefixer"></a>
 ### <code>enableFixer</code>
 
 Set to `false` to disable fixing.
-
-<a name="user-content-convert-to-jsdoc-comments-options-lineorblockstyle"></a>
-<a name="convert-to-jsdoc-comments-options-lineorblockstyle"></a>
-### <code>lineOrBlockStyle</code>
-
-What style of comments to which to apply JSDoc conversion.
-
-- `block` - Applies to block-style comments (`/* ... */`)
-- `line` - Applies to line-style comments (`// ...`)
-- `both` - Applies to both block and line-style comments
-
-Defaults to `both`.
 
 <a name="user-content-convert-to-jsdoc-comments-options-enforcejsdoclinestyle"></a>
 <a name="convert-to-jsdoc-comments-options-enforcejsdoclinestyle"></a>
@@ -50,41 +88,18 @@ be converted to `multi` style JSDoc comments.)
 
 Defaults to `multi`.
 
-<a name="user-content-convert-to-jsdoc-comments-options-allowedprefixes"></a>
-<a name="convert-to-jsdoc-comments-options-allowedprefixes"></a>
-### <code>allowedPrefixes</code>
+<a name="user-content-convert-to-jsdoc-comments-options-lineorblockstyle"></a>
+<a name="convert-to-jsdoc-comments-options-lineorblockstyle"></a>
+### <code>lineOrBlockStyle</code>
 
-An array of prefixes to allow at the beginning of a comment.
+What style of comments to which to apply JSDoc conversion.
 
-Defaults to `['@ts-', 'istanbul ', 'c8 ', 'v8 ', 'eslint', 'prettier-']`.
+- `block` - Applies to block-style comments (`/* ... */`)
+- `line` - Applies to line-style comments (`// ...`)
+- `both` - Applies to both block and line-style comments
 
-Supplying your own value overrides the defaults.
+Defaults to `both`.
 
-<a name="user-content-convert-to-jsdoc-comments-options-contexts"></a>
-<a name="convert-to-jsdoc-comments-options-contexts"></a>
-### <code>contexts</code>
-
-The contexts which will be checked for preceding content.
-
-Defaults to `ArrowFunctionExpression`, `FunctionDeclaration`,
-`FunctionExpression`, `TSDeclareFunction`.
-
-<a name="user-content-convert-to-jsdoc-comments-options-contextsafter"></a>
-<a name="convert-to-jsdoc-comments-options-contextsafter"></a>
-### <code>contextsAfter</code>
-
-The contexts which will be checked for content on the same line after.
-
-Defaults to an empty array.
-
-<a name="user-content-convert-to-jsdoc-comments-options-contextsbeforeandafter"></a>
-<a name="convert-to-jsdoc-comments-options-contextsbeforeandafter"></a>
-### <code>contextsBeforeAndAfter</code>
-
-The contexts which will be checked for content before and on the same
-line after.
-
-Defaults to `VariableDeclarator`, `TSPropertySignature`, `PropertyDefinition`.
 
 |||
 |---|---|
@@ -100,7 +115,7 @@ Defaults to `VariableDeclarator`, `TSPropertySignature`, `PropertyDefinition`.
 
 The following patterns are considered problems:
 
-````js
+````ts
 // A single line comment
 function quux () {}
 // "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single"}]
@@ -118,7 +133,7 @@ function quux () {}
 
 // A single line comment
 function quux () {}
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"lineOrBlockStyle":"line","enforceJsdocLineStyle":"single"}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single","lineOrBlockStyle":"line"}]
 // Message: Line comments should be JSDoc-style.
 
 /* A single line comment */
@@ -128,7 +143,7 @@ function quux () {}
 
 /* A single line comment */
 function quux () {}
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"lineOrBlockStyle":"block","enforceJsdocLineStyle":"single"}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single","lineOrBlockStyle":"block"}]
 // Message: Block comments should be JSDoc-style.
 
 // A single line comment
@@ -160,21 +175,21 @@ export class User {
 // Message: Block comments should be JSDoc-style.
 
 /* A single line comment */ function quux () {}
-// Settings: {"jsdoc":{"minLines":0,"maxLines":0}}
+// Settings: {"jsdoc":{"maxLines":0,"minLines":0}}
 // "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single"}]
 // Message: Block comments should be JSDoc-style.
 
 var a = []; // Test comment
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsBeforeAndAfter":[],"contextsAfter":["VariableDeclarator"]}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsAfter":["VariableDeclarator"],"contextsBeforeAndAfter":[]}]
 // Message: Line comments should be JSDoc-style.
 
 var a = []; // Test comment
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsBeforeAndAfter":[],"contextsAfter":[{"context":"VariableDeclarator","inlineCommentBlock":true}]}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsAfter":[{"context":"VariableDeclarator","inlineCommentBlock":true}],"contextsBeforeAndAfter":[]}]
 // Message: Line comments should be JSDoc-style.
 
 var a = []; // Test comment
-// Settings: {"jsdoc":{"minLines":0,"maxLines":0}}
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsBeforeAndAfter":[],"contextsAfter":[{"context":"VariableDeclarator","inlineCommentBlock":true}]}]
+// Settings: {"jsdoc":{"maxLines":0,"minLines":0}}
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsAfter":[{"context":"VariableDeclarator","inlineCommentBlock":true}],"contextsBeforeAndAfter":[]}]
 // Message: Line comments should be JSDoc-style.
 
 // Test comment
@@ -211,7 +226,7 @@ var a = []; // Test comment
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /** A single line comment */
 function quux () {}
 // "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single"}]
@@ -230,11 +245,11 @@ function quux () {}
 
 /* A single line comment */
 function quux () {}
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"lineOrBlockStyle":"line","enforceJsdocLineStyle":"single"}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single","lineOrBlockStyle":"line"}]
 
 // A single line comment
 function quux () {}
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"lineOrBlockStyle":"block","enforceJsdocLineStyle":"single"}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"enforceJsdocLineStyle":"single","lineOrBlockStyle":"block"}]
 
 // @ts-expect-error
 function quux () {}
@@ -245,6 +260,6 @@ function quux () {}
 
 // Test comment
 var a = [];
-// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsBeforeAndAfter":[],"contextsAfter":["VariableDeclarator"]}]
+// "jsdoc/convert-to-jsdoc-comments": ["error"|"warn", {"contextsAfter":["VariableDeclarator"],"contextsBeforeAndAfter":[]}]
 ````
 

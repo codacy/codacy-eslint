@@ -6,6 +6,7 @@
 * [Options](#user-content-check-tag-names-options)
     * [`definedTags`](#user-content-check-tag-names-options-definedtags)
     * [`enableFixer`](#user-content-check-tag-names-options-enablefixer)
+    * [`inlineTags`](#user-content-check-tag-names-options-inlinetags)
     * [`jsxTags`](#user-content-check-tag-names-options-jsxtags)
     * [`typed`](#user-content-check-tag-names-options-typed)
 * [Context and settings](#user-content-check-tag-names-context-and-settings)
@@ -145,7 +146,7 @@ template
 
 And for [Closure](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler),
 when `settings.jsdoc.mode` is set to `closure`, one may use the following (in
-addition to the jsdoc and TypeScript tags–though replacing `returns` with
+addition to the JSDoc and TypeScript tags–though replacing `returns` with
 `return`):
 
 ```
@@ -203,15 +204,27 @@ tag to `false`:
 }
 ```
 
+Also checks for unknown inline tags, with the following being permitted by default
+(see the `inlineTags` option):
+
+```
+link
+linkcode
+linkplain
+tutorial
+```
+
 <a name="user-content-check-tag-names-fixer"></a>
 <a name="check-tag-names-fixer"></a>
 ## Fixer
 
-(Todo)
+Auto-removes types that are redundant with the [`typed` option](#user-content-typed).
 
 <a name="user-content-check-tag-names-options"></a>
 <a name="check-tag-names-options"></a>
 ## Options
+
+A single options object has the following properties.
 
 <a name="user-content-check-tag-names-options-definedtags"></a>
 <a name="check-tag-names-options-definedtags"></a>
@@ -231,6 +244,14 @@ The format is as follows:
 ### <code>enableFixer</code>
 
 Set to `false` to disable auto-removal of types that are redundant with the [`typed` option](#user-content-typed).
+
+<a name="user-content-check-tag-names-options-inlinetags"></a>
+<a name="check-tag-names-options-inlinetags"></a>
+### <code>inlineTags</code>
+
+List of tags to allow inline.
+
+Defaults to array of `'link', 'linkcode', 'linkplain', 'tutorial'`
 
 <a name="user-content-check-tag-names-options-jsxtags"></a>
 <a name="check-tag-names-options-jsxtags"></a>
@@ -304,6 +325,7 @@ static
 this
 ```
 
+
 <a name="user-content-check-tag-names-context-and-settings"></a>
 <a name="check-tag-names-context-and-settings"></a>
 ## Context and settings
@@ -313,7 +335,7 @@ this
 |Context|everywhere|
 |Tags|N/A|
 |Recommended|true|
-|Options|`definedTags`, `enableFixer`, `jsxTags`, `typed`|
+|Options|`definedTags`, `enableFixer`, `inlineTags`, `jsxTags`, `typed`|
 |Settings|`tagNamePreference`, `mode`|
 
 <a name="user-content-check-tag-names-failing-examples"></a>
@@ -322,7 +344,7 @@ this
 
 The following patterns are considered problems:
 
-````js
+````ts
 /** @type {string} */let a;
 // "jsdoc/check-tag-names": ["error"|"warn", {"typed":true}]
 // Message: '@type' is redundant when using a type system.
@@ -765,6 +787,13 @@ function quux () {
 }
 // Settings: {"jsdoc":{"tagNamePreference":{"todo":{"message":"Please don't use todo"}}}}
 // Message: Please don't use todo
+
+/**
+ * An {@inline sth} tag in the description and {@another} with a {@link}.
+ * @param {SomeType} name And an {@inlineTag} inside a tag description.
+ * @param {AnotherType} anotherName And yet {@another}
+ */
+// Message: Invalid JSDoc inline tag name "inline"
 ````
 
 
@@ -775,7 +804,7 @@ function quux () {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /** @default 0 */
 let a;
 // "jsdoc/check-tag-names": ["error"|"warn", {"typed":true}]
@@ -1121,5 +1150,12 @@ interface WebTwain {
  * A comment related to the module
  */
 // "jsdoc/check-tag-names": ["error"|"warn", {"typed":true}]
+
+/**
+ * An {@inline sth} tag in the description and {@another} with a {@link}.
+ * @param {SomeType} name And an {@inlineTag} inside a tag description.
+ * @param {AnotherType} anotherName And yet {@another}
+ */
+// "jsdoc/check-tag-names": ["error"|"warn", {"inlineTags":["inline","another","inlineTag","link"]}]
 ````
 

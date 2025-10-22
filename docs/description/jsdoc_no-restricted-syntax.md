@@ -23,9 +23,15 @@ structures, (whether or not you add a specific `comment` condition).
 Note that if your parser supports comment AST (as [jsdoc-eslint-parser](https://github.com/brettz9/jsdoc-eslint-parser)
 is designed to do), you can just use ESLint's rule.
 
+For an alternative to this rule, see the
+[Advanced](https://github.com/gajus/eslint-plugin-jsdoc/tree/refs/tags/main/docs/rules/docs/advanced.md#forbidding-structures) docs under
+creating your own rules and forbidding structures.
+
 <a name="user-content-no-restricted-syntax-options"></a>
 <a name="no-restricted-syntax-options"></a>
 ## Options
+
+A single options object has the following properties.
 
 <a name="user-content-no-restricted-syntax-options-contexts"></a>
 <a name="no-restricted-syntax-options-contexts"></a>
@@ -34,16 +40,21 @@ is designed to do), you can just use ESLint's rule.
 Set this to an array of strings representing the AST context (or an object with
 `context` and `comment` properties) where you wish the rule to be applied.
 
-Use the `message` property to indicate the specific error to be shown when an
-error is reported for that context being found.
+`context` defaults to `any` and `comment` defaults to no specific comment context.
 
-Set to `"any"` if you want the rule to apply to any jsdoc block throughout
+Use the `message` property to indicate the specific error to be shown when an
+error is reported for that context being found. Defaults to
+`"Syntax is restricted: {{context}}"`, or with a comment, to
+`"Syntax is restricted: {{context}} with {{comment}}"`.
+
+Set to `"any"` if you want the rule to apply to any JSDoc block throughout
 your files (as is necessary for finding function blocks not attached to a
 function declaration or expression, i.e., `@callback` or `@function` (or its
 aliases `@func` or `@method`) (including those associated with an `@interface`).
 
 See the ["AST and Selectors"](#user-content-eslint-plugin-jsdoc-advanced-ast-and-selectors)
-section of our README for more on the expected format.
+section of our Advanced docs for more on the expected format.
+
 
 <a name="user-content-no-restricted-syntax-context-and-settings"></a>
 <a name="no-restricted-syntax-context-and-settings"></a>
@@ -62,7 +73,7 @@ section of our README for more on the expected format.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  *
  */
@@ -271,7 +282,7 @@ function quux () {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  *
  */

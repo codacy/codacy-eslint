@@ -8,20 +8,22 @@
     * [Rest Element (`RestElement`) insertions](#user-content-require-param-fixer-rest-element-restelement-insertions)
     * [Object Rest Property insertions](#user-content-require-param-fixer-object-rest-property-insertions)
 * [Options](#user-content-require-param-options)
-    * [`enableFixer`](#user-content-require-param-options-enablefixer)
-    * [`enableRootFixer`](#user-content-require-param-options-enablerootfixer)
-    * [`enableRestElementFixer`](#user-content-require-param-options-enablerestelementfixer)
-    * [`checkRestProperty`](#user-content-require-param-options-checkrestproperty)
     * [`autoIncrementBase`](#user-content-require-param-options-autoincrementbase)
-    * [`unnamedRootBase`](#user-content-require-param-options-unnamedrootbase)
-    * [`exemptedBy`](#user-content-require-param-options-exemptedby)
-    * [`checkTypesPattern`](#user-content-require-param-options-checktypespattern)
-    * [`contexts`](#user-content-require-param-options-contexts)
     * [`checkConstructors`](#user-content-require-param-options-checkconstructors)
-    * [`checkGetters`](#user-content-require-param-options-checkgetters)
-    * [`checkSetters`](#user-content-require-param-options-checksetters)
     * [`checkDestructured`](#user-content-require-param-options-checkdestructured)
     * [`checkDestructuredRoots`](#user-content-require-param-options-checkdestructuredroots)
+    * [`checkGetters`](#user-content-require-param-options-checkgetters)
+    * [`checkRestProperty`](#user-content-require-param-options-checkrestproperty)
+    * [`checkSetters`](#user-content-require-param-options-checksetters)
+    * [`checkTypesPattern`](#user-content-require-param-options-checktypespattern)
+    * [`contexts`](#user-content-require-param-options-contexts)
+    * [`enableFixer`](#user-content-require-param-options-enablefixer)
+    * [`enableRestElementFixer`](#user-content-require-param-options-enablerestelementfixer)
+    * [`enableRootFixer`](#user-content-require-param-options-enablerootfixer)
+    * [`exemptedBy`](#user-content-require-param-options-exemptedby)
+    * [`ignoreWhenAllParamsMissing`](#user-content-require-param-options-ignorewhenallparamsmissing)
+    * [`interfaceExemptsParamsCheck`](#user-content-require-param-options-interfaceexemptsparamscheck)
+    * [`unnamedRootBase`](#user-content-require-param-options-unnamedrootbase)
     * [`useDefaultObjectProperties`](#user-content-require-param-options-usedefaultobjectproperties)
 * [Context and settings](#user-content-require-param-context-and-settings)
 * [Failing examples](#user-content-require-param-failing-examples)
@@ -55,7 +57,7 @@ function quux ({foo: bar, baz: bax = 5}) {
 }
 ```
 
-...the fixed jsdoc will be:
+...the fixed JSDoc will be:
 
 ```js
 /**
@@ -81,7 +83,7 @@ function quux ([foo, bar]) {
 }
 ```
 
-..the fixed jsdoc will be:
+..the fixed JSDoc will be:
 
 ```js
 /**
@@ -107,7 +109,7 @@ function quux ({foo}, {bar}, {baz}) {
 }
 ```
 
-...the default jsdoc that would be added if the fixer is enabled would be:
+...the default JSDoc that would be added if the fixer is enabled would be:
 
 ```js
 /**
@@ -132,7 +134,7 @@ And one can have the count begin at another number (e.g., `1`) by changing
 ### Rest Element (<code>RestElement</code>) insertions
 
 The fixer will automatically report/insert
-[jsdoc repeatable parameters](https://jsdoc.app/tags-param.html#multiple-types-and-repeatable-parameters)
+[JSDoc repeatable parameters](https://jsdoc.app/tags-param.html#multiple-types-and-repeatable-parameters)
 if missing.
 
 ```js
@@ -145,7 +147,7 @@ function baar ([a, ...extra]) {
 }
 ```
 
-..becomes:
+...becomes:
 
 ```js
 /**
@@ -208,7 +210,7 @@ function quux ({num, ...extra}) {
 }
 ```
 
-You may wish to manually note in your jsdoc for `extra` that this is a
+You may wish to manually note in your JSDoc for `extra` that this is a
 rest property, however, as jsdoc
 [does not appear](https://github.com/jsdoc/jsdoc/issues/1773)
 to currently support syntax or output to distinguish rest properties from
@@ -220,28 +222,47 @@ function signature, it may appear that there is an actual property named
 <a name="require-param-options"></a>
 ## Options
 
-An options object accepts the following optional properties:
+A single options object has the following properties.
 
-<a name="user-content-require-param-options-enablefixer"></a>
-<a name="require-param-options-enablefixer"></a>
-### <code>enableFixer</code>
+<a name="user-content-require-param-options-autoincrementbase"></a>
+<a name="require-param-options-autoincrementbase"></a>
+### <code>autoIncrementBase</code>
 
-Whether to enable the fixer. Defaults to `true`.
+Numeric to indicate the number at which to begin auto-incrementing roots.
+Defaults to `0`.
 
-<a name="user-content-require-param-options-enablerootfixer"></a>
-<a name="require-param-options-enablerootfixer"></a>
-### <code>enableRootFixer</code>
+<a name="user-content-require-param-options-checkconstructors"></a>
+<a name="require-param-options-checkconstructors"></a>
+### <code>checkConstructors</code>
 
-Whether to enable the auto-adding of incrementing roots (see the "Fixer"
-section). Defaults to `true`. Has no effect if `enableFixer` is set to
-`false`.
+A value indicating whether `constructor`s should be checked. Defaults to
+`true`.
 
-<a name="user-content-require-param-options-enablerestelementfixer"></a>
-<a name="require-param-options-enablerestelementfixer"></a>
-### <code>enableRestElementFixer</code>
+<a name="user-content-require-param-options-checkdestructured"></a>
+<a name="require-param-options-checkdestructured"></a>
+### <code>checkDestructured</code>
 
-Whether to enable the rest element fixer (see
-"Rest Element (`RestElement`) insertions"). Defaults to `true`.
+Whether to require destructured properties. Defaults to `true`.
+
+<a name="user-content-require-param-options-checkdestructuredroots"></a>
+<a name="require-param-options-checkdestructuredroots"></a>
+### <code>checkDestructuredRoots</code>
+
+Whether to check the existence of a corresponding `@param` for root objects
+of destructured properties (e.g., that for `function ({a, b}) {}`, that there
+is something like `@param myRootObj` defined that can correspond to
+the `{a, b}` object parameter).
+
+If `checkDestructuredRoots` is `false`, `checkDestructured` will also be
+implied to be `false` (i.e., the inside of the roots will not be checked
+either, e.g., it will also not complain if `a` or `b` do not have their own
+documentation). Defaults to `true`.
+
+<a name="user-content-require-param-options-checkgetters"></a>
+<a name="require-param-options-checkgetters"></a>
+### <code>checkGetters</code>
+
+A value indicating whether getters should be checked. Defaults to `false`.
 
 <a name="user-content-require-param-options-checkrestproperty"></a>
 <a name="require-param-options-checkrestproperty"></a>
@@ -298,49 +319,11 @@ function quux ({num, ...extra}) {
 }
 ```
 
-<a name="user-content-require-param-options-autoincrementbase"></a>
-<a name="require-param-options-autoincrementbase"></a>
-### <code>autoIncrementBase</code>
+<a name="user-content-require-param-options-checksetters"></a>
+<a name="require-param-options-checksetters"></a>
+### <code>checkSetters</code>
 
-Numeric to indicate the number at which to begin auto-incrementing roots.
-Defaults to `0`.
-
-<a name="user-content-require-param-options-unnamedrootbase"></a>
-<a name="require-param-options-unnamedrootbase"></a>
-### <code>unnamedRootBase</code>
-
-An array of root names to use in the fixer when roots are missing. Defaults
-to `['root']`. Note that only when all items in the array besides the last
-are exhausted will auto-incrementing occur. So, with
-`unnamedRootBase: ['arg', 'config']`, the following:
-
-```js
-function quux ({foo}, [bar], {baz}) {
-}
-```
-
-...will get the following jsdoc block added:
-
-```js
-/**
-* @param arg
-* @param arg.foo
-* @param config0
-* @param config0."0" (`bar`)
-* @param config1
-* @param config1.baz
-*/
-```
-
-<a name="user-content-require-param-options-exemptedby"></a>
-<a name="require-param-options-exemptedby"></a>
-### <code>exemptedBy</code>
-
-Array of tags (e.g., `['type']`) whose presence on the document block
-avoids the need for a `@param`. Defaults to an array with
-`inheritdoc`. If you set this array, it will overwrite the default,
-so be sure to add back `inheritdoc` if you wish its presence to cause
-exemption of the rule.
+A value indicating whether setters should be checked. Defaults to `false`.
 
 <a name="user-content-require-param-options-checktypespattern"></a>
 <a name="require-param-options-checktypespattern"></a>
@@ -361,7 +344,7 @@ export const bboxToObj = function ({x, y, width, height}) {
 ```
 
 By default `checkTypesPattern` is set to
-`/^(?:[oO]bject|[aA]rray|PlainObject|Generic(?:Object|Array))$/u`,
+`/^(?:[oO]bject|[aA]rray|PlainObject|Generic(?:Object|Array))$/v`,
 meaning that destructuring will be required only if the type of the `@param`
 (the text between curly brackets) is a match for "Object" or "Array" (with or
 without initial caps), "PlainObject", or "GenericObject", "GenericArray" (or
@@ -371,8 +354,8 @@ parameters.
 
 Note that the `/` delimiters are optional, but necessary to add flags.
 
-Defaults to using (only) the `u` flag, so to add your own flags, encapsulate
-your expression as a string, but like a literal, e.g., `/^object$/ui`.
+Defaults to using (only) the `v` flag, so to add your own flags, encapsulate
+your expression as a string, but like a literal, e.g., `/^object$/vi`.
 
 You could set this regular expression to a more expansive list, or you
 could restrict it such that even types matching those strings would not
@@ -383,52 +366,147 @@ need destructuring.
 ### <code>contexts</code>
 
 Set this to an array of strings representing the AST context (or an object with
-`context` and `comment` properties) where you wish the rule to be applied.
-Overrides the default contexts (see below). May be useful for adding such as
+optional `context` and `comment` properties) where you wish the rule to be applied.
+
+`context` defaults to `any` and `comment` defaults to no specific comment context.
+
+Overrides the default contexts (`ArrowFunctionExpression`, `FunctionDeclaration`,
+`FunctionExpression`). May be useful for adding such as
 `TSMethodSignature` in TypeScript or restricting the contexts
 which are checked.
 
 See the ["AST and Selectors"](#user-content-eslint-plugin-jsdoc-advanced-ast-and-selectors)
-section of our README for more on the expected format.
+section of our Advanced docs for more on the expected format.
 
-<a name="user-content-require-param-options-checkconstructors"></a>
-<a name="require-param-options-checkconstructors"></a>
-### <code>checkConstructors</code>
+<a name="user-content-require-param-options-enablefixer"></a>
+<a name="require-param-options-enablefixer"></a>
+### <code>enableFixer</code>
 
-A value indicating whether `constructor`s should be checked. Defaults to
-`true`.
+Whether to enable the fixer. Defaults to `true`.
 
-<a name="user-content-require-param-options-checkgetters"></a>
-<a name="require-param-options-checkgetters"></a>
-### <code>checkGetters</code>
+<a name="user-content-require-param-options-enablerestelementfixer"></a>
+<a name="require-param-options-enablerestelementfixer"></a>
+### <code>enableRestElementFixer</code>
 
-A value indicating whether getters should be checked. Defaults to `false`.
+Whether to enable the rest element fixer.
 
-<a name="user-content-require-param-options-checksetters"></a>
-<a name="require-param-options-checksetters"></a>
-### <code>checkSetters</code>
+The fixer will automatically report/insert
+[JSDoc repeatable parameters](https://jsdoc.app/tags-param.html#multiple-types-and-repeatable-parameters)
+if missing.
 
-A value indicating whether setters should be checked. Defaults to `false`.
+```js
+/**
+  * @param {GenericArray} cfg
+  * @param {number} cfg."0"
+ */
+function baar ([a, ...extra]) {
+  //
+}
+```
 
-<a name="user-content-require-param-options-checkdestructured"></a>
-<a name="require-param-options-checkdestructured"></a>
-### <code>checkDestructured</code>
+...becomes:
 
-Whether to require destructured properties. Defaults to `true`.
+```js
+/**
+  * @param {GenericArray} cfg
+  * @param {number} cfg."0"
+  * @param {...any} cfg."1"
+ */
+function baar ([a, ...extra]) {
+  //
+}
+```
 
-<a name="user-content-require-param-options-checkdestructuredroots"></a>
-<a name="require-param-options-checkdestructuredroots"></a>
-### <code>checkDestructuredRoots</code>
+Note that the type `any` is included since we don't know of any specific
+type to use.
 
-Whether to check the existence of a corresponding `@param` for root objects
-of destructured properties (e.g., that for `function ({a, b}) {}`, that there
-is something like `@param myRootObj` defined that can correspond to
-the `{a, b}` object parameter).
+Defaults to `true`.
 
-If `checkDestructuredRoots` is `false`, `checkDestructured` will also be
-implied to be `false` (i.e., the inside of the roots will not be checked
-either, e.g., it will also not complain if `a` or `b` do not have their own
-documentation). Defaults to `true`.
+<a name="user-content-require-param-options-enablerootfixer"></a>
+<a name="require-param-options-enablerootfixer"></a>
+### <code>enableRootFixer</code>
+
+Whether to enable the auto-adding of incrementing roots.
+
+The default behavior of `true` is for "root" to be auto-inserted for missing
+roots, followed by a 0-based auto-incrementing number.
+
+So for:
+
+```js
+function quux ({foo}, {bar}, {baz}) {
+}
+```
+
+...the default JSDoc that would be added if the fixer is enabled would be:
+
+```js
+/**
+* @param root0
+* @param root0.foo
+* @param root1
+* @param root1.bar
+* @param root2
+* @param root2.baz
+*/
+```
+
+Has no effect if `enableFixer` is set to `false`.
+
+<a name="user-content-require-param-options-exemptedby"></a>
+<a name="require-param-options-exemptedby"></a>
+### <code>exemptedBy</code>
+
+Array of tags (e.g., `['type']`) whose presence on the document block
+avoids the need for a `@param`. Defaults to an array with
+`inheritdoc`. If you set this array, it will overwrite the default,
+so be sure to add back `inheritdoc` if you wish its presence to cause
+exemption of the rule.
+
+<a name="user-content-require-param-options-ignorewhenallparamsmissing"></a>
+<a name="require-param-options-ignorewhenallparamsmissing"></a>
+### <code>ignoreWhenAllParamsMissing</code>
+
+Set to `true` to ignore reporting when all params are missing. Defaults to
+`false`.
+
+<a name="user-content-require-param-options-interfaceexemptsparamscheck"></a>
+<a name="require-param-options-interfaceexemptsparamscheck"></a>
+### <code>interfaceExemptsParamsCheck</code>
+
+Set if you wish TypeScript interfaces to exempt checks for the existence of
+`@param`'s.
+
+Will check for a type defining the function itself (on a variable
+declaration) or if there is a single destructured object with a type.
+Defaults to `false`.
+
+<a name="user-content-require-param-options-unnamedrootbase"></a>
+<a name="require-param-options-unnamedrootbase"></a>
+### <code>unnamedRootBase</code>
+
+An array of root names to use in the fixer when roots are missing. Defaults
+to `['root']`. Note that only when all items in the array besides the last
+are exhausted will auto-incrementing occur. So, with
+`unnamedRootBase: ['arg', 'config']`, the following:
+
+```js
+function quux ({foo}, [bar], {baz}) {
+}
+```
+
+...will get the following JSDoc block added:
+
+```js
+/**
+* @param arg
+* @param arg.foo
+* @param config0
+* @param config0."0" (`bar`)
+* @param config1
+* @param config1.baz
+*/
+```
 
 <a name="user-content-require-param-options-usedefaultobjectproperties"></a>
 <a name="require-param-options-usedefaultobjectproperties"></a>
@@ -436,6 +514,7 @@ documentation). Defaults to `true`.
 
 Set to `true` if you wish to expect documentation of properties on objects
 supplied as default values. Defaults to `false`.
+
 
 <a name="user-content-require-param-context-and-settings"></a>
 <a name="require-param-context-and-settings"></a>
@@ -447,7 +526,7 @@ supplied as default values. Defaults to `false`.
 | Tags     | `param` |
 | Aliases  | `arg`, `argument` |
 |Recommended | true|
-| Options  |`autoIncrementBase`, `checkConstructors`, `checkDestructured`, `checkDestructuredRoots`, `checkGetters`, `checkRestProperty`, `checkSetters`, `checkTypesPattern`, `contexts`, `enableFixer`, `enableRestElementFixer`, `enableRootFixer`, `exemptedBy`, `unnamedRootBase`, `useDefaultObjectProperties`|
+| Options  |`autoIncrementBase`, `checkConstructors`, `checkDestructured`, `checkDestructuredRoots`, `checkGetters`, `checkRestProperty`, `checkSetters`, `checkTypesPattern`, `contexts`, `enableFixer`, `enableRestElementFixer`, `enableRootFixer`, `exemptedBy`, `ignoreWhenAllParamsMissing`, `interfaceExemptsParamsCheck`, `unnamedRootBase`, `useDefaultObjectProperties`|
 | Settings | `ignoreReplacesDocs`, `overrideReplacesDocs`, `augmentsExtendsReplacesDocs`, `implementsReplacesDocs`|
 
 <a name="user-content-require-param-failing-examples"></a>
@@ -456,7 +535,7 @@ supplied as default values. Defaults to `false`.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  *
  */
@@ -1162,6 +1241,69 @@ class A {
   }
 }
 // Message: Missing JSDoc @param "root1" declaration.
+
+/**
+ * Some desc.
+ * @param a
+ */
+function quux (a, b) {}
+// "jsdoc/require-param": ["error"|"warn", {"ignoreWhenAllParamsMissing":true}]
+// Message: Missing JSDoc @param "b" declaration.
+
+/**
+ * Some test function type.
+ */
+export type Test = (foo: number) => string;
+// "jsdoc/require-param": ["error"|"warn", {"contexts":["TSFunctionType"]}]
+// Message: Missing JSDoc @param "foo" declaration.
+
+/**
+ *
+ */
+const quux = function quux (foo) {
+};
+// "jsdoc/require-param": ["error"|"warn", {"interfaceExemptsParamsCheck":true}]
+// Message: Missing JSDoc @param "foo" declaration.
+
+/**
+ *
+ */
+function quux ({
+  abc,
+  def
+}) {
+}
+// "jsdoc/require-param": ["error"|"warn", {"interfaceExemptsParamsCheck":true}]
+// Message: Missing JSDoc @param "root0" declaration.
+
+/**
+ * @param foo
+ * @param baz
+ * @returns {number}
+ */
+function quux (foo, bar, baz) {
+  return foo + bar + baz;
+}
+// Message: Missing JSDoc @param "bar" declaration.
+
+/**
+ * @example
+ * ```ts
+ * app.use(checkResourceOwnership({ entryPoint: 'seller_product' }));
+ * ```
+ *
+ * @example
+ * ```ts
+ * app.use(checkResourceOwnership({ entryPoint: 'service_zone' }));
+ * ```
+ *
+ * @param options - configuration
+ * @param options.entryPoint
+ * @param options.filterField
+ * @param options.paramIdField
+ */
+export const checkResourceOwnership = ({ entryPoint, filterField, paramIdField, resourceId = () => '' }) => {};
+// Message: Missing JSDoc @param "options.resourceId" declaration.
 ````
 
 
@@ -1172,7 +1314,7 @@ class A {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @param foo
  */
@@ -1804,5 +1946,48 @@ function a (b) {}
 function sumDestructure(this: unknown, { a, b }: { a: number, b: number }) {
   return a + b;
 }
+
+/**
+ *
+ */
+const inner = (c: number, d: string): void => {
+  console.log(c);
+  console.log(d);
+};
+// Settings: {"jsdoc":{"contexts":["VariableDeclaration"]}}
+
+/**
+ * Some desc.
+ */
+function quux (a, b) {}
+// "jsdoc/require-param": ["error"|"warn", {"ignoreWhenAllParamsMissing":true}]
+
+/**
+ * Test function with param.
+ * @param foo - Test param.
+ */
+function myFunction(foo: string): void;
+/**
+ * Test function without param.
+ */
+function myFunction(): void;
+function myFunction(foo?: string) {}
+
+/**
+ *
+ */
+const quux: FunctionInterface = function quux (foo) {
+};
+// "jsdoc/require-param": ["error"|"warn", {"interfaceExemptsParamsCheck":true}]
+
+/**
+ *
+ */
+function quux ({
+  abc,
+  def
+}: FunctionInterface) {
+}
+// "jsdoc/require-param": ["error"|"warn", {"interfaceExemptsParamsCheck":true}]
 ````
 

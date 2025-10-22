@@ -5,7 +5,7 @@
 Checks to see that `@template` tags are present for any detected type
 parameters.
 
-Currently checks `ClassDeclaration`, `FunctionDeclaration`,
+Currently checks `ClassDeclaration`, `FunctionDeclaration`, `TSDeclareFunction`,
 `TSInterfaceDeclaration` or `TSTypeAliasDeclaration` such as:
 
 ```ts
@@ -29,6 +29,18 @@ letters are templates.
 <a name="require-template-options"></a>
 ## Options
 
+A single options object has the following properties.
+
+<a name="user-content-require-template-options-exemptedby"></a>
+<a name="require-template-options-exemptedby"></a>
+### <code>exemptedBy</code>
+
+Array of tags (e.g., `['type']`) whose presence on the document
+block avoids the need for a `@template`. Defaults to an array with
+`inheritdoc`. If you set this array, it will overwrite the default,
+so be sure to add back `inheritdoc` if you wish its presence to cause
+exemption of the rule.
+
 <a name="user-content-require-template-options-requireseparatetemplates"></a>
 <a name="require-template-options-requireseparatetemplates"></a>
 ### <code>requireSeparateTemplates</code>
@@ -44,13 +56,14 @@ templates of this format:
 
 Defaults to `false`.
 
+
 |||
 |---|---|
 |Context|everywhere|
 |Tags|`template`|
-|Recommended|true|
+|Recommended|false|
 |Settings||
-|Options|`requireSeparateTemplates`|
+|Options|`exemptedBy`, `requireSeparateTemplates`|
 
 <a name="user-content-require-template-failing-examples"></a>
 <a name="require-template-failing-examples"></a>
@@ -58,7 +71,7 @@ Defaults to `false`.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  *
  */
@@ -211,6 +224,18 @@ export default class <NumType> {
  * @returns {[D, V | undefined]}
  */
 // Message: Missing @template D
+
+/**
+ * @param bar
+ * @param baz
+ * @returns
+ */
+function foo<T>(bar: T, baz: number): T;
+function foo<T>(bar: T, baz: boolean): T;
+function foo<T>(bar: T, baz: number | boolean): T {
+  return bar;
+}
+// Message: Missing @template T
 ````
 
 
@@ -221,7 +246,7 @@ export default class <NumType> {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @template D
  * @template V
@@ -354,5 +379,25 @@ export default class <NumType> {
  * @callback
  * @returns {[Something | undefined]}
  */
+
+/**
+ * @template {string | Buffer} [T=string, U=number]
+ * @typedef {object} Dirent
+ * @property {T} name name
+ * @property {U} aNumber number
+ * @property {string} parentPath path
+ */
+
+/**
+ * @type {Something}
+ */
+type Pairs<D, V> = [D, V | undefined];
+// "jsdoc/require-template": ["error"|"warn", {"exemptedBy":["type"]}]
+
+/**
+ * @inheritdoc
+ * @typedef {[D, V | undefined]} Pairs
+ */
+// "jsdoc/require-template": ["error"|"warn", {"exemptedBy":["inheritdoc"]}]
 ````
 

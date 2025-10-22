@@ -4,9 +4,9 @@
 
 * [Fixer](#user-content-require-description-complete-sentence-fixer)
 * [Options](#user-content-require-description-complete-sentence-options)
-    * [`tags`](#user-content-require-description-complete-sentence-options-tags)
     * [`abbreviations`](#user-content-require-description-complete-sentence-options-abbreviations)
     * [`newlineBeforeCapsAssumesBadSentenceEnd`](#user-content-require-description-complete-sentence-options-newlinebeforecapsassumesbadsentenceend)
+    * [`tags`](#user-content-require-description-complete-sentence-options-tags)
 * [Context and settings](#user-content-require-description-complete-sentence-context-and-settings)
 * [Failing examples](#user-content-require-description-complete-sentence-failing-examples)
 * [Passing examples](#user-content-require-description-complete-sentence-passing-examples)
@@ -39,6 +39,24 @@ letter will be capitalized.
 <a name="require-description-complete-sentence-options"></a>
 ## Options
 
+A single options object has the following properties.
+
+<a name="user-content-require-description-complete-sentence-options-abbreviations"></a>
+<a name="require-description-complete-sentence-options-abbreviations"></a>
+### <code>abbreviations</code>
+
+You can provide an `abbreviations` options array to avoid such strings of text
+being treated as sentence endings when followed by dots. The `.` is not
+necessary at the end of the array items.
+
+<a name="user-content-require-description-complete-sentence-options-newlinebeforecapsassumesbadsentenceend"></a>
+<a name="require-description-complete-sentence-options-newlinebeforecapsassumesbadsentenceend"></a>
+### <code>newlineBeforeCapsAssumesBadSentenceEnd</code>
+
+When `false` (the new default), we will not assume capital letters after
+newlines are an incorrect way to end the sentence (they may be proper
+nouns, for example).
+
 <a name="user-content-require-description-complete-sentence-options-tags"></a>
 <a name="require-description-complete-sentence-options-tags"></a>
 ### <code>tags</code>
@@ -64,21 +82,6 @@ its "description" (e.g., for `@returns {someType} some description`, the
 description is `some description` while for `@some-tag xyz`, the description
 is `xyz`).
 
-<a name="user-content-require-description-complete-sentence-options-abbreviations"></a>
-<a name="require-description-complete-sentence-options-abbreviations"></a>
-### <code>abbreviations</code>
-
-You can provide an `abbreviations` options array to avoid such strings of text
-being treated as sentence endings when followed by dots. The `.` is not
-necessary at the end of the array items.
-
-<a name="user-content-require-description-complete-sentence-options-newlinebeforecapsassumesbadsentenceend"></a>
-<a name="require-description-complete-sentence-options-newlinebeforecapsassumesbadsentenceend"></a>
-### <code>newlineBeforeCapsAssumesBadSentenceEnd</code>
-
-When `false` (the new default), we will not assume capital letters after
-newlines are an incorrect way to end the sentence (they may be proper
-nouns, for example).
 
 <a name="user-content-require-description-complete-sentence-context-and-settings"></a>
 <a name="require-description-complete-sentence-context-and-settings"></a>
@@ -98,7 +101,7 @@ nouns, for example).
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * foo.
  */
@@ -438,7 +441,7 @@ function quux () {}
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @param foo - Foo.
  */

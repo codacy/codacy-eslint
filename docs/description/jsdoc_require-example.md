@@ -4,13 +4,13 @@
 
 * [Fixer](#user-content-require-example-fixer)
 * [Options](#user-content-require-example-options)
-    * [`exemptedBy`](#user-content-require-example-options-exemptedby)
-    * [`exemptNoArguments`](#user-content-require-example-options-exemptnoarguments)
-    * [`contexts`](#user-content-require-example-options-contexts)
     * [`checkConstructors`](#user-content-require-example-options-checkconstructors)
     * [`checkGetters`](#user-content-require-example-options-checkgetters)
     * [`checkSetters`](#user-content-require-example-options-checksetters)
+    * [`contexts`](#user-content-require-example-options-contexts)
     * [`enableFixer`](#user-content-require-example-options-enablefixer)
+    * [`exemptedBy`](#user-content-require-example-options-exemptedby)
+    * [`exemptNoArguments`](#user-content-require-example-options-exemptnoarguments)
 * [Context and settings](#user-content-require-example-context-and-settings)
 
 
@@ -31,37 +31,7 @@ report a missing example description after this is added.
 <a name="require-example-options"></a>
 ## Options
 
-This rule has an object option.
-
-<a name="user-content-require-example-options-exemptedby"></a>
-<a name="require-example-options-exemptedby"></a>
-### <code>exemptedBy</code>
-
-Array of tags (e.g., `['type']`) whose presence on the document
-block avoids the need for an `@example`. Defaults to an array with
-`inheritdoc`. If you set this array, it will overwrite the default,
-so be sure to add back `inheritdoc` if you wish its presence to cause
-exemption of the rule.
-
-<a name="user-content-require-example-options-exemptnoarguments"></a>
-<a name="require-example-options-exemptnoarguments"></a>
-### <code>exemptNoArguments</code>
-
-Boolean to indicate that no-argument functions should not be reported for
-missing `@example` declarations.
-
-<a name="user-content-require-example-options-contexts"></a>
-<a name="require-example-options-contexts"></a>
-### <code>contexts</code>
-
-Set this to an array of strings representing the AST context (or an object with
-`context` and `comment` properties) where you wish the rule to be applied.
-(e.g., `ClassDeclaration` for ES6
-classes). Overrides the default contexts (see below). Set to `"any"` if you
-want the rule to apply to any jsdoc block throughout your files.
-
-See the ["AST and Selectors"](#user-content-eslint-plugin-jsdoc-advanced-ast-and-selectors)
-section of our README for more on the expected format.
+A single options object has the following properties.
 
 <a name="user-content-require-example-options-checkconstructors"></a>
 <a name="require-example-options-checkconstructors"></a>
@@ -82,12 +52,47 @@ A value indicating whether getters should be checked. Defaults to `false`.
 
 A value indicating whether setters should be checked. Defaults to `false`.
 
+<a name="user-content-require-example-options-contexts"></a>
+<a name="require-example-options-contexts"></a>
+### <code>contexts</code>
+
+Set this to an array of strings representing the AST context (or an object with
+optional `context` and `comment` properties) where you wish the rule to be applied.
+(e.g., `ClassDeclaration` for ES6 classes).
+
+`context` defaults to `any` and `comment` defaults to no specific comment context.
+
+Overrides the default contexts (`ArrowFunctionExpression`, `FunctionDeclaration`,
+`FunctionExpression`). Set to `"any"` if you want the rule to apply to any
+JSDoc block throughout your files.
+
+See the ["AST and Selectors"](#user-content-eslint-plugin-jsdoc-advanced-ast-and-selectors)
+section of our Advanced docs for more on the expected format.
+
 <a name="user-content-require-example-options-enablefixer"></a>
 <a name="require-example-options-enablefixer"></a>
 ### <code>enableFixer</code>
 
 A boolean on whether to enable the fixer (which adds an empty `@example` block).
 Defaults to `true`.
+
+<a name="user-content-require-example-options-exemptedby"></a>
+<a name="require-example-options-exemptedby"></a>
+### <code>exemptedBy</code>
+
+Array of tags (e.g., `['type']`) whose presence on the document
+block avoids the need for an `@example`. Defaults to an array with
+`inheritdoc`. If you set this array, it will overwrite the default,
+so be sure to add back `inheritdoc` if you wish its presence to cause
+exemption of the rule.
+
+<a name="user-content-require-example-options-exemptnoarguments"></a>
+<a name="require-example-options-exemptnoarguments"></a>
+### <code>exemptNoArguments</code>
+
+Boolean to indicate that no-argument functions should not be reported for
+missing `@example` declarations.
+
 
 <a name="user-content-require-example-context-and-settings"></a>
 <a name="require-example-context-and-settings"></a>
@@ -107,7 +112,7 @@ Defaults to `true`.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  *
  */
@@ -234,6 +239,15 @@ function quux (someParam) {
 }
 // "jsdoc/require-example": ["error"|"warn", {"enableFixer":false}]
 // Message: Missing JSDoc @example declaration.
+
+/**
+ * Returns a Promise...
+ *
+ * @param {number} ms - The number of ...
+ */
+const sleep = (ms: number): Promise<unknown> => {};
+// "jsdoc/require-example": ["error"|"warn", {"contexts":["any"]}]
+// Message: Missing JSDoc @example declaration.
 ````
 
 
@@ -244,7 +258,7 @@ function quux (someParam) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  *
  */

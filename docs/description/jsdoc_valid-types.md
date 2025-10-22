@@ -3,6 +3,7 @@
 # <code>valid-types</code>
 
 * [Options](#user-content-valid-types-options)
+    * [`allowEmptyNamepaths`](#user-content-valid-types-options-allowemptynamepaths)
 * [Context and settings](#user-content-valid-types-context-and-settings)
 * [Failing examples](#user-content-valid-types-failing-examples)
 * [Passing examples](#user-content-valid-types-passing-examples)
@@ -57,7 +58,7 @@ text after the tag name) checked:
     TypeScript)
 1. Name(path)-pointing tags requiring namepath: `@alias`, `@augments`,
     `@extends` (JSDoc only), `@lends`, `@memberof`, `@memberof!`, `@mixes`, `@requires`, `@this`
-    (jsdoc only)
+    (JSDoc only)
 1. Name(path)-pointing tags (which may have value without namepath or their
     namepath can be expressed elsewhere on the block): `@listens`, `@fires`,
     `@emits`.
@@ -92,13 +93,20 @@ value). See the setting for more details.
 <a name="valid-types-options"></a>
 ## Options
 
-- `allowEmptyNamepaths` (default: true) - Set to `false` to bulk disallow
-  empty name paths with namepath groups 2 and 4 (these might often be
-  expected to have an accompanying name path, though they have some
-  indicative value without one; these may also allow names to be defined
-  in another manner elsewhere in the block); you can use
-  `settings.jsdoc.structuredTags` with the `required` key set to "name" if you
-  wish to require name paths on a tag-by-tag basis.
+A single options object has the following properties.
+
+<a name="user-content-valid-types-options-allowemptynamepaths"></a>
+<a name="valid-types-options-allowemptynamepaths"></a>
+### <code>allowEmptyNamepaths</code>
+
+Set to `false` to bulk disallow
+empty name paths with namepath groups 2 and 4 (these might often be
+expected to have an accompanying name path, though they have some
+indicative value without one; these may also allow names to be defined
+in another manner elsewhere in the block); you can use
+`settings.jsdoc.structuredTags` with the `required` key set to "name" if you
+wish to require name paths on a tag-by-tag basis. Defaults to `true`.
+
 
 <a name="user-content-valid-types-context-and-settings"></a>
 <a name="valid-types-context-and-settings"></a>
@@ -120,7 +128,7 @@ value). See the setting for more details.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @param {Array<string} foo
  */
@@ -225,7 +233,18 @@ function quux() {
 /**
  * @typedef {string} UserStr%ng
  */
-// Message: Syntax error in namepath: UserStr%ng
+// Message: Syntax error in name: UserStr%ng
+
+/**
+ * @typedef {string} module:abc/def
+ */
+// Message: Syntax error in name: module:abc/def
+
+/**
+ * @typedef {string} module:abc/def
+ */
+// Settings: {"jsdoc":{"mode":"typescript"}}
+// Message: Syntax error in name: module:abc/def
 
 /**
  * @this
@@ -495,6 +514,15 @@ function quux (items) {
  * @param {SomeType} aName An inline {@link} tag without content.
  */
 // Message: Inline tag "link" missing content
+
+/**
+ * With reserved word in type
+ * @param {Array<import>} foo
+ */
+function quux() {
+
+}
+// Message: Syntax error in type: Array<import>
 ````
 
 
@@ -505,7 +533,7 @@ function quux (items) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @param {Array<string>} foo
  */
@@ -884,5 +912,85 @@ function quux() {
 /**
  * @import { TestOne, TestTwo } from "./types"
  */
+
+/**
+ * @returns {@link SomeType}
+ */
+
+/**
+ * @template {string} Selector
+ * @template {keyof GlobalEventHandlersEventMap} TEventType
+ * @template {Element} [TElement=import('typed-query-selector/parser').ParseSelector<Selector, HTMLElement>]
+ * @param {Selector} selector
+ * @param {TEventType} type
+ * @param {import('delegate-it').DelegateEventHandler<GlobalEventHandlersEventMap[TEventType], TElement>} callback
+ * @param {Omit<AddEventListenerOptions, 'once' | 'signal'>} [options]
+ * @returns {void}
+ */
+export function onGlobalEvent (selector, type, callback, options) {
+  delegate(document, selector, type, callback, options)
+}
+
+/**
+ * Even if added to `structuredTags` as in our recommended config,
+ *   we don't want `valid-types` to report since
+ *   `jsdoc/require-next-type` already does this.
+ * @next
+ */
+function a () {}
+// Settings: {"jsdoc":{"structuredTags":{"next":{"required":["type"]}}}}
+
+/**
+ * With reserved word in name
+ * @typedef {SomeType} import
+ */
+
+/**
+ * With reserved word in namepath
+ * @param {SomeType} import
+ */
+
+/**
+ * @param readonly
+ */
+
+/**
+ * @param {boolean} readonly
+ */
+
+/**
+ * @param {object} params
+ * @param {boolean} params.readonly
+ */
+
+/**
+ * An object interface
+ * @typedef  {Object} FooBar
+ * @property {boolean} readonly
+ * @property {boolean} private
+ * @property {boolean} public
+ * @property {boolean} constant
+ */
+
+/**
+ * @param {object} props
+ * @param {string} props.is
+ */
+
+class Test {
+  /**
+   * @returns {this}
+   */
+  method() { return this; }
+}
+
+/**
+ * @typedef {Object} module:src/core/Player~mediaFormat
+ */
+// Settings: {"jsdoc":{"mode":"jsdoc"}}
+
+let SettingName = /** @type {const} */ ({
+  THEME: `theme`,
+})
 ````
 

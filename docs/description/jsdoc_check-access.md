@@ -26,7 +26,7 @@ Also reports:
 |---|---|
 |Context|everywhere|
 |Tags|`@access`|
-|Recommended|false|
+|Recommended|true|
 |Settings||
 |Options||
 
@@ -36,7 +36,7 @@ Also reports:
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @access foo
  */
@@ -96,7 +96,7 @@ function quux (foo) {
 function quux (foo) {
 
 }
-// Message: At most one access-control tag may be present on a jsdoc block.
+// Message: At most one access-control tag may be present on a JSDoc block.
 
 /**
  * @access public
@@ -106,7 +106,7 @@ function quux (foo) {
 
 }
 // Settings: {"jsdoc":{"ignorePrivate":true}}
-// Message: At most one access-control tag may be present on a jsdoc block.
+// Message: At most one access-control tag may be present on a JSDoc block.
 
 /**
  * @public
@@ -115,7 +115,7 @@ function quux (foo) {
 function quux (foo) {
 
 }
-// Message: At most one access-control tag may be present on a jsdoc block.
+// Message: At most one access-control tag may be present on a JSDoc block.
 
 /**
  * @public
@@ -125,7 +125,7 @@ function quux (foo) {
 
 }
 // Settings: {"jsdoc":{"ignorePrivate":true}}
-// Message: At most one access-control tag may be present on a jsdoc block.
+// Message: At most one access-control tag may be present on a JSDoc block.
 
 /**
  * @public
@@ -134,7 +134,7 @@ function quux (foo) {
 function quux (foo) {
 
 }
-// Message: At most one access-control tag may be present on a jsdoc block.
+// Message: At most one access-control tag may be present on a JSDoc block.
 ````
 
 
@@ -145,7 +145,7 @@ function quux (foo) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  *
  */
