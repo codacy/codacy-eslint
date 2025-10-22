@@ -5,22 +5,25 @@
 
 
 This rule checks for multi-line-style comments which fail to meet the
-criteria of a jsdoc block, namely that it should begin with two and only two
-asterisks, but which appear to be intended as jsdoc blocks due to the presence
+criteria of a JSDoc block, namely that it should begin with two and only two
+asterisks, but which appear to be intended as JSDoc blocks due to the presence
 of whitespace followed by whitespace or asterisks, and
-an at-sign (`@`) and some non-whitespace (as with a jsdoc block tag).
+an at-sign (`@`) and some non-whitespace (as with a JSDoc block tag).
+
+Exceptions are made for ESLint directive comments (which may use `@` in
+rule names).
 
 <a name="user-content-fixer"></a>
 <a name="fixer"></a>
 ## Fixer
 
-(TODO)
+Repairs badly-formed blocks missing two initial asterisks.
 
 <a name="user-content-options"></a>
 <a name="options"></a>
 ## Options
 
-Takes an optional options object with the following.
+A single options object has the following properties.
 
 <a name="user-content-options-ignore"></a>
 <a name="options-ignore"></a>
@@ -40,6 +43,7 @@ A boolean (defaulting to `false`) which if `true` will prevent all
 JSDoc-like blocks with more than two initial asterisks even those without
 apparent tag content.
 
+
 <a name="user-content-context-and-settings"></a>
 <a name="context-and-settings"></a>
 ## Context and settings
@@ -57,7 +61,7 @@ apparent tag content.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /*
  * @param foo
  */
@@ -117,7 +121,7 @@ function quux (foo) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @property foo
  */
@@ -170,5 +174,7 @@ function quux (foo) {
 }
 
 /***/
+
+/* eslint-disable @stylistic/max-len  */
 ````
 

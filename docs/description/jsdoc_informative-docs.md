@@ -27,6 +27,8 @@ This rule requires all docs comments contain at least one word not already in th
 <a name="informative-docs-options"></a>
 ## Options
 
+A single options object has the following properties.
+
 <a name="user-content-informative-docs-options-aliases"></a>
 <a name="informative-docs-options-aliases"></a>
 ### <code>aliases</code>
@@ -84,6 +86,7 @@ The default `uselessWords` option is:
 ["a", "an", "i", "in", "of", "s", "the"]
 ```
 
+
 <a name="user-content-informative-docs-context-and-settings"></a>
 <a name="informative-docs-context-and-settings"></a>
 ## Context and settings
@@ -102,7 +105,7 @@ The default `uselessWords` option is:
 
 The following patterns are considered problems:
 
-````js
+````ts
 /** the  */
 let myValue = 3;
 // Message: This description only repeats the name it describes.
@@ -278,7 +281,7 @@ let emoji;
  */
 export function packageNameFromPath(path) {
   const base = basename(path);
-  return /^vd+(.d+)?$/.exec(base) || /^tsd.d/.exec(base) ? basename(dirname(path)) : base;
+  return /^v\d+(\.\d+)?$/.exec(base) || /^ts\d\.\d/.exec(base) ? basename(dirname(path)) : base;
 }
 // Message: This description only repeats the name it describes.
 
@@ -287,7 +290,7 @@ export function packageNameFromPath(path) {
  */
 export default function packageNameFromPath(path) {
   const base = basename(path);
-  return /^vd+(.d+)?$/.exec(base) || /^tsd.d/.exec(base) ? basename(dirname(path)) : base;
+  return /^v\d+(\.\d+)?$/.exec(base) || /^ts\d\.\d/.exec(base) ? basename(dirname(path)) : base;
 }
 // Message: This description only repeats the name it describes.
 ````
@@ -300,7 +303,7 @@ export default function packageNameFromPath(path) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**   */
 let myValue = 3;
 

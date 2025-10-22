@@ -19,28 +19,36 @@ Markdown and you therefore do not wish for it to be accidentally interpreted
 as such by the likes of Visual Studio Code or if you wish to view it escaped
 within it or your documentation.
 
+`@example` tag content will not be checked.
+
 <a name="user-content-text-escaping-fixer"></a>
 <a name="text-escaping-fixer"></a>
 ## Fixer
 
-(TODO)
+Auto-escapes certain HTML or Markdown characters that are input within block and
+tag descriptions.
 
 <a name="user-content-text-escaping-options"></a>
 <a name="text-escaping-options"></a>
 ## Options
+
+A single options object has the following properties.
 
 <a name="user-content-text-escaping-options-escapehtml"></a>
 <a name="text-escaping-options-escapehtml"></a>
 ### <code>escapeHTML</code>
 
 This option escapes all `<` and `&` characters (except those followed by
-whitespace which are treated as literals by Visual Studio Code).
+whitespace which are treated as literals by Visual Studio Code). Defaults to
+`false`.
 
 <a name="user-content-text-escaping-options-escapemarkdown"></a>
 <a name="text-escaping-options-escapemarkdown"></a>
 ### <code>escapeMarkdown</code>
 
 This option escapes the first backtick (`` ` ``) in a paired sequence.
+Defaults to `false`.
+
 
 <a name="user-content-text-escaping-context-and-settings"></a>
 <a name="text-escaping-context-and-settings"></a>
@@ -60,7 +68,7 @@ This option escapes the first backtick (`` ` ``) in a paired sequence.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * Some things to escape: <a> and &gt; and `test`
  */
@@ -127,7 +135,7 @@ The following patterns are considered problems:
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * Some things to escape: &lt;a> and &gt; and `test`
  */
@@ -173,5 +181,21 @@ The following patterns are not considered problems:
  * to escape
  */
 // "jsdoc/text-escaping": ["error"|"warn", {"escapeHTML":true}]
+
+/**
+ * @example
+ * ```
+ * Some things to escape: <a> and &gt; and &#xabc; and `test`
+ * ```
+ */
+// "jsdoc/text-escaping": ["error"|"warn", {"escapeHTML":true}]
+
+/**
+ * @example
+ * ```
+ * Some things to escape: <a> and &gt; and &#xabc; and `test`
+ * ```
+ */
+// "jsdoc/text-escaping": ["error"|"warn", {"escapeMarkdown":true}]
 ````
 

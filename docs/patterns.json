@@ -6973,6 +6973,13 @@
       "enabled": false
     },
     {
+      "patternId": "ember_no-builtin-form-components",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "ember_no-capital-letters-in-routes",
       "level": "Error",
       "category": "ErrorProne",
@@ -7487,6 +7494,13 @@
     },
     {
       "patternId": "ember_prefer-ember-test-helpers",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "ember_require-async-inverse-relationship",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],

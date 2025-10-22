@@ -8,3 +8,4 @@ tsconfig.tsbuildinfo
 .codarcyrc
 /tests
 .eslintcache
+.codacy/

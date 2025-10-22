@@ -18,8 +18,8 @@
 > **NOTE**: This rule only works in ESLint 7. For ESLint 9, please see our
 > [processors](https://github.com/gajus/eslint-plugin-jsdoc/tree/refs/tags/main/docs/processors.md) section.
 
-Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules. Also
-has options to lint the default values of optional `@param`/`@arg`/`@argument`
+Ensures that (JavaScript) samples within `@example` tags adhere to ESLint rules.
+Also has options to lint the default values of optional `@param`/`@arg`/`@argument`
 and `@property`/`@prop` tags or the values of `@default`/`@defaultvalue` tags.
 
 <a name="user-content-check-examples-options"></a>
@@ -56,7 +56,7 @@ syntax highlighting). The following options determine whether a given
   exists or matches, the whole matching expression will be used.
   An example might be ````"^```(?:js|javascript)([\\s\\S]*)```\s*$"````
   to only match explicitly fenced JavaScript blocks. Defaults to only
-  using the `u` flag, so to add your own flags, encapsulate your
+  using the `v` flag, so to add your own flags, encapsulate your
   expression as a string, but like a literal, e.g., ````/```js.*```/gi````.
   Note that specifying a global regular expression (i.e., with `g`) will
   allow independent linting of matched blocks within a single `@example`.
@@ -64,7 +64,7 @@ syntax highlighting). The following options determine whether a given
   non-lintable examples (has priority over `exampleCodeRegex`). An example
   might be ```"^`"``` to avoid linting fenced blocks which may indicate
   a non-JavaScript language. See `exampleCodeRegex` on how to add flags
-  if the default `u` is not sufficient.
+  if the default `v` is not sufficient.
 
 If neither is in use, all examples will be matched. Note also that even if
 `captionRequired` is not set, any initial `<caption>` will be stripped out
@@ -162,37 +162,40 @@ by decreasing precedence:
 <a name="check-examples-options-for-determining-eslint-rule-applicability-allowinlineconfig-nodefaultexamplerules-matchingfilename-configfile-checkeslintrc-and-baseconfig-rules-disabled-by-default-unless-nodefaultexamplerules-is-set-to-true"></a>
 ### Rules Disabled by Default Unless <code>noDefaultExampleRules</code> is Set to <code>true</code>
 
-* `eol-last` - Insisting that a newline "always" be at the end is less likely
-  to be desired in sample code as with the code file convention.
+* `eol-last` (and `@stylistic/eol-last`) - Insisting that a newline "always"
+  be at the end is less likely to be desired in sample code as with the code
+  file convention.
 * `no-console` - This rule is unlikely to have inadvertent temporary debugging
   within examples.
-* `no-multiple-empty-lines` - This rule may be problematic for projects which
+* `no-multiple-empty-lines` (and `@stylistic/no-multiple-empty-lines`) - This
+  rule may be problematic for projects which
   use an initial newline just to start an example. Also, projects may wish to
   use extra lines within examples just for easier illustration
   purposes.
 * `no-undef` - Many variables in examples will be `undefined`.
-* `no-unused-vars` - It is common to define variables for clarity without
+* `no-unused-vars` (and `@typescript-eslint/no-unused-vars`) - It is common to define variables for clarity without
   always using them within examples.
-* `padded-blocks` - It can generally look nicer to pad a little even if one's
-  code follows more stringency as far as block padding.
-* `jsdoc/require-file-overview` - Shouldn't check example for jsdoc blocks.
-* `jsdoc/require-jsdoc` - Wouldn't expect jsdoc blocks within jsdoc blocks.
+* `padded-blocks` (and `@stylistic/padded-blocks`) - It can generally look
+  nicer to pad a little even if one's code follows more stringency as far
+  as block padding.
+* `jsdoc/require-file-overview` - Shouldn't check example for JSDoc blocks.
+* `jsdoc/require-jsdoc` - Wouldn't expect JSDoc blocks within JSDoc blocks.
 * `import/no-unresolved` - One wouldn't generally expect example paths to
   resolve relative to the current JavaScript file as one would with real code.
 * `import/unambiguous` - Snippets in examples are likely too short to always
   include full import/export info.
-* `node/no-missing-import` - See `import/no-unresolved`.
-* `node/no-missing-require` -  See `import/no-unresolved`.
+* `node/no-missing-import` (and `n/no-missing-import`) - See `import/no-unresolved`.
+* `node/no-missing-require` (and `n/no-missing-require`) -  See `import/no-unresolved`.
 
 For `checkDefaults`, `checkParams`, and `checkProperties`, the following
 expression-oriented rules will be used by default as well:
 
-* `quotes` - Will insist on "double".
-* `semi` - Will insist on "never".
+* `quotes` (and `@stylistic/quotes`) - Will insist on "double".
+* `semi` (and `@stylistic/semi`) - Will insist on "never".
 * `strict` - Disabled.
 * `no-empty-function` - Disabled.
 * `no-new` - Disabled.
-* `no-unused-expressions` - Disabled.
+* `no-unused-expressions` (and `@typescript-eslint/no-unused-expressions`) - Disabled.
 * `chai-friendly/no-unused-expressions` - Disabled.
 
 <a name="user-content-check-examples-options-for-determining-eslint-rule-applicability-allowinlineconfig-nodefaultexamplerules-matchingfilename-configfile-checkeslintrc-and-baseconfig-options-for-checking-other-than-example-checkdefaults-checkparams-or-checkproperties"></a>
@@ -220,7 +223,7 @@ expression-oriented rules will be used by default as well:
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @example alert('hello')
  */
@@ -563,7 +566,7 @@ const functionName = function (paramOne, paramTwo,
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @example ```js
  alert('hello');

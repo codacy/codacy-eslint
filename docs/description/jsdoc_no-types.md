@@ -15,30 +15,41 @@ This rule reports types being used on `@param` or `@returns`.
 The rule is intended to prevent the indication of types on tags where
 the type information would be redundant with TypeScript.
 
+When `contexts` are supplied, will also strip `@property` when on a
+`ClassDeclaration`.
+
 <a name="user-content-no-types-fixer"></a>
 <a name="no-types-fixer"></a>
 ## Fixer
 
-(TODO)
+Strips any types that are found.
 
 <a name="user-content-no-types-options"></a>
 <a name="no-types-options"></a>
 ## Options
+
+A single options object has the following properties.
 
 <a name="user-content-no-types-options-contexts"></a>
 <a name="no-types-options-contexts"></a>
 ### <code>contexts</code>
 
 Set this to an array of strings representing the AST context (or an object with
-`context` and `comment` properties) where you wish the rule to be applied.
-Overrides the default contexts (see below). Set to `"any"` if you want
-the rule to apply to any jsdoc block throughout your files (as is necessary
+optional `context` and `comment` properties) where you wish the rule to be applied.
+
+`context` defaults to `any` and `comment` defaults to no specific comment context.
+
+Overrides the default contexts (`ArrowFunctionExpression`, `FunctionDeclaration`,
+`FunctionExpression`, `TSDeclareFunction`, `TSMethodSignature`,
+`ClassDeclaration`). Set to `"any"` if you want
+the rule to apply to any JSDoc block throughout your files (as is necessary
 for finding function blocks not attached to a function declaration or
 expression, i.e., `@callback` or `@function` (or its aliases `@func` or
 `@method`) (including those associated with an `@interface`).
 
 See the ["AST and Selectors"](#user-content-eslint-plugin-jsdoc-advanced-ast-and-selectors)
-section of our README for more on the expected format.
+section of our Advanced docs for more on the expected format.
+
 
 <a name="user-content-no-types-context-and-settings"></a>
 <a name="no-types-context-and-settings"></a>
@@ -58,7 +69,7 @@ section of our README for more on the expected format.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @param {number} foo
  */
@@ -137,6 +148,33 @@ export interface B {
   methodB(paramB: string): void
 }
 // Message: Types are not permitted on @param.
+
+/**
+ * @class
+ * @property {object} x
+ */
+class Example {
+  x: number;
+}
+// Message: Types are not permitted on @property in the supplied context.
+
+/**
+ * Returns a Promise...
+ *
+ * @param {number} ms - The number of ...
+ */
+const sleep = (ms: number): Promise<unknown> => {};
+// "jsdoc/no-types": ["error"|"warn", {"contexts":["any"]}]
+// Message: Types are not permitted on @param.
+
+/**
+ * Returns a Promise...
+ *
+ * @param {number} ms - The number of ...
+ */
+export const sleep = (ms: number): Promise<unknown> => {};
+// "jsdoc/no-types": ["error"|"warn", {"contexts":["any"]}]
+// Message: Types are not permitted on @param.
 ````
 
 
@@ -147,7 +185,7 @@ export interface B {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @param foo
  */

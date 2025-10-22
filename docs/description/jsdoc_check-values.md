@@ -34,6 +34,8 @@ This rule checks the values for a handful of tags:
 <a name="check-values-options"></a>
 ## Options
 
+A single options object has the following properties.
+
 <a name="user-content-check-values-options-allowedauthors"></a>
 <a name="check-values-options-allowedauthors"></a>
 ### <code>allowedAuthors</code>
@@ -46,22 +48,22 @@ be checked for.
 ### <code>allowedLicenses</code>
 
 An array of allowable license values or `true` to allow any license text.
-If present as an array, will be used in place of SPDX identifiers.
+If present as an array, will be used in place of [SPDX identifiers](https://spdx.org/licenses/).
 
 <a name="user-content-check-values-options-licensepattern"></a>
 <a name="check-values-options-licensepattern"></a>
 ### <code>licensePattern</code>
 
-A string to be converted into a `RegExp` (with `u` flag) and whose first
+A string to be converted into a `RegExp` (with `v` flag) and whose first
 parenthetical grouping, if present, will match the portion of the license
 description to check (if no grouping is present, then the whole portion
-matched will be used). Defaults to `/([^\n\r]*)/gu`, i.e., the SPDX expression
+matched will be used). Defaults to `/([^\n\r]*)/gv`, i.e., the SPDX expression
 is expected before any line breaks.
 
 Note that the `/` delimiters are optional, but necessary to add flags.
 
-Defaults to using the `u` flag, so to add your own flags, encapsulate
-your expression as a string, but like a literal, e.g., `/^mit$/ui`.
+Defaults to using the `v` flag, so to add your own flags, encapsulate
+your expression as a string, but like a literal, e.g., `/^mit$/vi`.
 
 <a name="user-content-check-values-options-numericonlyvariation"></a>
 <a name="check-values-options-numericonlyvariation"></a>
@@ -69,6 +71,7 @@ your expression as a string, but like a literal, e.g., `/^mit$/ui`.
 
 Whether to enable validation that `@variation` must be a number. Defaults to
 `false`.
+
 
 <a name="user-content-check-values-context-and-settings"></a>
 <a name="check-values-context-and-settings"></a>
@@ -88,7 +91,7 @@ Whether to enable validation that `@variation` must be a number. Defaults to
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @version
  */
@@ -270,7 +273,7 @@ function quux (foo) {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @version 3.4.1
  */
@@ -430,5 +433,10 @@ function quux (foo) {
 /**
  * @import * as Linters from "eslint"
  */
+
+/** @import { ReactNode } from 'react' */
+
+/** @type {ReactNode} */
+export const TEST = null
 ````
 

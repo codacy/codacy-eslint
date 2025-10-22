@@ -3,6 +3,10 @@
 # <code>require-returns-check</code>
 
 * [Options](#user-content-require-returns-check-options)
+    * [`exemptAsync`](#user-content-require-returns-check-options-exemptasync)
+    * [`exemptGenerators`](#user-content-require-returns-check-options-exemptgenerators)
+    * [`noNativeTypes`](#user-content-require-returns-check-options-nonativetypes)
+    * [`reportMissingReturnForUndefinedTypes`](#user-content-require-returns-check-options-reportmissingreturnforundefinedtypes)
 * [Context and settings](#user-content-require-returns-check-context-and-settings)
 * [Failing examples](#user-content-require-returns-check-failing-examples)
 * [Passing examples](#user-content-require-returns-check-passing-examples)
@@ -17,33 +21,59 @@ Will also report `@returns {void}` and `@returns {undefined}` if `exemptAsync`
 is set to `false` and a non-`undefined` value is returned or a resolved value
 is found. Also reports if `@returns {never}` is discovered with a return value.
 
+Will report if native types are specified for `@returns` on an async function.
+
 Will also report if multiple `@returns` tags are present.
 
 <a name="user-content-require-returns-check-options"></a>
 <a name="require-returns-check-options"></a>
 ## Options
 
-- `exemptGenerators`- Because a generator might be labeled as having a
-  `IterableIterator` `@returns` value (along with an iterator type
-  corresponding to the type of any `yield` statements), projects might wish to
-  leverage `@returns` in generators even without a` return` statement. This
-  option is therefore `true` by default in `typescript` mode (in "jsdoc" mode,
-  one might be more likely to take advantage of `@yields`). Set it to `false`
-  if you wish for a missing `return` to be flagged regardless.
-- `exemptAsync` - By default, functions which return a `Promise` that are not
-    detected as resolving with a non-`undefined` value and `async` functions
-    (even ones that do not explicitly return a value, as these are returning a
-    `Promise` implicitly) will be exempted from reporting by this rule.
-    If you wish to insist that only `Promise`'s which resolve to
-    non-`undefined` values or `async` functions with explicit `return`'s will
-    be exempted from reporting (i.e., that `async` functions can be reported
-    if they lack an explicit (non-`undefined`) `return` when a `@returns` is
-    present), you can set `exemptAsync` to `false` on the options object.
-- `reportMissingReturnForUndefinedTypes` - If `true` and no return or
-    resolve value is found, this setting will even insist that reporting occur
-    with `void` or `undefined` (including as an indicated `Promise` type).
-    Unlike `require-returns`, with this option in the rule, one can
-     *discourage* the labeling of `undefined` types. Defaults to `false`.
+A single options object has the following properties.
+
+<a name="user-content-require-returns-check-options-exemptasync"></a>
+<a name="require-returns-check-options-exemptasync"></a>
+### <code>exemptAsync</code>
+
+By default, functions which return a `Promise` that are not
+detected as resolving with a non-`undefined` value and `async` functions
+(even ones that do not explicitly return a value, as these are returning a
+`Promise` implicitly) will be exempted from reporting by this rule.
+If you wish to insist that only `Promise`'s which resolve to
+non-`undefined` values or `async` functions with explicit `return`'s will
+be exempted from reporting (i.e., that `async` functions can be reported
+if they lack an explicit (non-`undefined`) `return` when a `@returns` is
+present), you can set `exemptAsync` to `false` on the options object.
+
+<a name="user-content-require-returns-check-options-exemptgenerators"></a>
+<a name="require-returns-check-options-exemptgenerators"></a>
+### <code>exemptGenerators</code>
+
+Because a generator might be labeled as having a
+`IterableIterator` `@returns` value (along with an iterator type
+corresponding to the type of any `yield` statements), projects might wish to
+leverage `@returns` in generators even without a `return` statement. This
+option is therefore `true` by default in `typescript` mode (in "jsdoc" mode,
+one might be more likely to take advantage of `@yields`). Set it to `false`
+if you wish for a missing `return` to be flagged regardless.
+
+<a name="user-content-require-returns-check-options-nonativetypes"></a>
+<a name="require-returns-check-options-nonativetypes"></a>
+### <code>noNativeTypes</code>
+
+Whether to check that async functions do not
+indicate they return non-native types. Defaults to `true`.
+
+<a name="user-content-require-returns-check-options-reportmissingreturnforundefinedtypes"></a>
+<a name="require-returns-check-options-reportmissingreturnforundefinedtypes"></a>
+### <code>reportMissingReturnForUndefinedTypes</code>
+
+If `true` and no return or
+resolve value is found, this setting will even insist that reporting occur
+with `void` or `undefined` (including as an indicated `Promise` type).
+Unlike `require-returns`, with this option in the rule, one can
+*discourage* the labeling of `undefined` types. Defaults to `false`.
+
 
 <a name="user-content-require-returns-check-context-and-settings"></a>
 <a name="require-returns-check-context-and-settings"></a>
@@ -54,7 +84,7 @@ Will also report if multiple `@returns` tags are present.
 |Context|`ArrowFunctionExpression`, `FunctionDeclaration`, `FunctionExpression`|
 |Tags|`returns`|
 |Aliases|`return`|
-|Options|`exemptAsync`, `exemptGenerators`, `reportMissingReturnForUndefinedTypes`|
+|Options|`exemptAsync`, `exemptGenerators`, `noNativeTypes`, `reportMissingReturnForUndefinedTypes`|
 |Recommended|true|
 
 <a name="user-content-require-returns-check-failing-examples"></a>
@@ -63,7 +93,7 @@ Will also report if multiple `@returns` tags are present.
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @returns
  */
@@ -186,7 +216,7 @@ function quux() {
 
 /**
  * Description.
- * @returns {string}
+ * @returns {SomeType}
  */
 async function foo() {
   return new Promise(resolve => resolve());
@@ -381,6 +411,15 @@ function foo() {
   }
 }
 // Message: JSDoc @returns declaration present but return expression not available in function.
+
+/**
+ * @returns {number}
+ */
+async function quux (foo) {
+
+}
+// "jsdoc/require-returns-check": ["error"|"warn", {"exemptAsync":false}]
+// Message: Function is async or otherwise returns a Promise but the return type is a native type.
 ````
 
 
@@ -391,7 +430,7 @@ function foo() {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @returns Foo.
  */
@@ -986,6 +1025,18 @@ const quux = (someVar) => {
  */
 function foo() {
   while (true) {
+    const n = Math.random();
+    if (n < 0.5) {
+      return n;
+    }
+  }
+}
+
+/**
+ * @returns {number}
+ */
+function foo() {
+  for (;;) {
     const n = Math.random();
     if (n < 0.5) {
       return n;

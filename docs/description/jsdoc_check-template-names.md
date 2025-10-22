@@ -40,7 +40,7 @@ or
 
 The following patterns are considered problems:
 
-````js
+````ts
 /**
  * @template D
  * @template V
@@ -224,7 +224,7 @@ export default class <NumType> {
 
 The following patterns are not considered problems:
 
-````js
+````ts
 /**
  * @template D
  * @template V
@@ -372,5 +372,44 @@ export function mapGroupBy(array, callbackFn) {
  * @function
  * @param {[D, V | undefined]} someParam
  */
+
+/**
+ * @template {string} U
+ */
+export class User {
+  /**
+   * @type {U}
+   */
+  name;
+}
+
+/**
+ * @template {string} U
+ */
+export class User {
+  /**
+   * @param {U} name
+   */
+  constructor(name) {
+    this.name = name;
+  }
+  methodToIgnore() {}
+}
+
+/**
+ * @template [ChannelDataType=undefined]
+ * @param {string} messageType - A key used for sending and receiving messages.
+ * @returns {MessageChannel<ChannelDataType>} A channel that can create messages of its
+ * own type.
+ */
+export function createMessageChannel(messageType) {
+  // Note: It should also infer the type if the new channel is returned
+  // directly rather than returned as a typed variable.
+
+  /** @type {MessageChannel<ChannelDataType>} */
+  const messageChannel = new MessageChannel(messageType);
+
+  return messageChannel;
+}
 ````
 
