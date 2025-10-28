@@ -6898,13 +6898,6 @@
   },
   {
     "parameters": [],
-    "patternId": "ember_no-builtin-form-components",
-    "title": "Ember: No builtin form components",
-    "description": "Disallow usage of built-in form components",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
     "patternId": "ember_no-capital-letters-in-routes",
     "title": "Ember: No capital letters in routes",
     "description": "Disallow routes with uppercased letters in router.js",
@@ -7417,13 +7410,6 @@
     "patternId": "ember_prefer-ember-test-helpers",
     "title": "Ember: Prefer ember test helpers",
     "description": "Enforce usage of `@ember/test-helpers` methods over native window methods",
-    "timeToFix": 5
-  },
-  {
-    "parameters": [],
-    "patternId": "ember_require-async-inverse-relationship",
-    "title": "Ember: Require async inverse relationship",
-    "description": "Require inverse to be specified in @belongsTo and @hasMany decorators",
     "timeToFix": 5
   },
   {
@@ -11038,7 +11024,12 @@
     "timeToFix": 5
   },
   {
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "innerIndent",
+        "description": "innerIndent"
+      }
+    ],
     "patternId": "jsdoc_check-alignment",
     "title": "Jsdoc: Check alignment",
     "description": "Reports invalid alignment of JSDoc block asterisks.",
@@ -11085,7 +11076,7 @@
     ],
     "patternId": "jsdoc_check-examples",
     "title": "Jsdoc: Check examples",
-    "description": "Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.",
+    "description": "@deprecated - Use `getJsdocProcessorPlugin` processor; ensures that (JavaScript) samples within `@example` tags adhere to ESLint rules.",
     "timeToFix": 5
   },
   {
@@ -11115,7 +11106,7 @@
     "parameters": [],
     "patternId": "jsdoc_check-param-names",
     "title": "Jsdoc: Check param names",
-    "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
+    "description": "Checks for dupe `@param` names, that nested param names have roots, and that parameter names in function declarations match JSDoc param names.",
     "timeToFix": 5
   },
   {
@@ -11150,7 +11141,7 @@
     "parameters": [],
     "patternId": "jsdoc_check-types",
     "title": "Jsdoc: Check types",
-    "description": "Reports invalid types.",
+    "description": "Reports types deemed invalid (customizable and with defaults, for preventing and/or recommending replacements).",
     "timeToFix": 5
   },
   {
@@ -11171,14 +11162,21 @@
     "parameters": [],
     "patternId": "jsdoc_empty-tags",
     "title": "Jsdoc: Empty tags",
-    "description": "Expects specific tags to be empty of any content.",
+    "description": "Checks tags that are expected to be empty (e.g., `@abstract` or `@async`), reporting if they have content",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_escape-inline-tags",
+    "title": "Jsdoc: Escape inline tags",
+    "description": "Reports use of JSDoc tags in non-tag positions (in the default \"typescript\" mode).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_implements-on-classes",
     "title": "Jsdoc: Implements on classes",
-    "description": "Reports an issue with any non-constructor function using `@implements`.",
+    "description": "Prohibits use of `@implements` on non-constructor functions (to enforce the tag only being used on classes/constructors).",
     "timeToFix": 5
   },
   {
@@ -11193,6 +11191,13 @@
     "patternId": "jsdoc_informative-docs",
     "title": "Jsdoc: Informative docs",
     "description": "This rule reports doc comments that only restate their attached name.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_lines-before-block",
+    "title": "Jsdoc: Lines before block",
+    "description": "Enforces minimum number of newlines before JSDoc comment blocks",
     "timeToFix": 5
   },
   {
@@ -11213,21 +11218,21 @@
     "parameters": [],
     "patternId": "jsdoc_multiline-blocks",
     "title": "Jsdoc: Multiline blocks",
-    "description": "Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.",
+    "description": "Controls how and whether JSDoc blocks can be expressed as single or multiple line blocks.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_no-bad-blocks",
     "title": "Jsdoc: No bad blocks",
-    "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.",
+    "description": "This rule checks for multi-line-style comments which fail to meet the criteria of a JSDoc block.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_no-blank-block-descriptions",
     "title": "Jsdoc: No blank block descriptions",
-    "description": "Detects and removes extra lines of a blank block description",
+    "description": "If tags are present, this rule will prevent empty lines in the block description. If no tags are present, this rule will prevent extra empty lines in the block description.",
     "timeToFix": 5
   },
   {
@@ -11260,6 +11265,7 @@
     "parameters": [],
     "patternId": "jsdoc_no-multi-asterisks",
     "title": "Jsdoc: No multi asterisks",
+    "description": "Prevents use of multiple asterisks at the beginning of lines.",
     "timeToFix": 5
   },
   {
@@ -11273,14 +11279,35 @@
     "parameters": [],
     "patternId": "jsdoc_no-types",
     "title": "Jsdoc: No types",
-    "description": "This rule reports types being used on `@param` or `@returns`.",
+    "description": "This rule reports types being used on `@param` or `@returns` (redundant with TypeScript).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_no-undefined-types",
     "title": "Jsdoc: No undefined types",
-    "description": "Checks that types in jsdoc comments are defined.",
+    "description": "Besides some expected built-in types, prohibits any types not specified as globals or within `@typedef`.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_prefer-import-tag",
+    "title": "Jsdoc: Prefer import tag",
+    "description": "Prefer `@import` tags to inline `import()` statements.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_reject-any-type",
+    "title": "Jsdoc: Reject any type",
+    "description": "Reports use of `any` or `*` type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_reject-function-type",
+    "title": "Jsdoc: Reject function type",
+    "description": "Reports use of `Function` type",
     "timeToFix": 5
   },
   {
@@ -11307,7 +11334,7 @@
     ],
     "patternId": "jsdoc_require-description",
     "title": "Jsdoc: Require description",
-    "description": "Requires that all functions have a description.",
+    "description": "Requires that all functions (and potentially other contexts) have a description.",
     "timeToFix": 5
   },
   {
@@ -11342,7 +11369,7 @@
     ],
     "patternId": "jsdoc_require-example",
     "title": "Jsdoc: Require example",
-    "description": "Requires that all functions have examples.",
+    "description": "Requires that all functions (and potentially other contexts) have examples.",
     "timeToFix": 5
   },
   {
@@ -11356,7 +11383,7 @@
     "parameters": [],
     "patternId": "jsdoc_require-hyphen-before-param-description",
     "title": "Jsdoc: Require hyphen before param description",
-    "description": "Requires a hyphen before the `@param` description.",
+    "description": "Requires a hyphen before the `@param` description (and optionally before `@property` descriptions).",
     "timeToFix": 5
   },
   {
@@ -11386,17 +11413,39 @@
         "description": "exemptEmptyFunctions"
       },
       {
+        "name": "exemptOverloadedImplementations",
+        "description": "exemptOverloadedImplementations"
+      },
+      {
         "name": "fixerMessage",
         "description": "fixerMessage"
       },
       {
         "name": "require",
         "description": "require"
+      },
+      {
+        "name": "skipInterveningOverloadedDeclarations",
+        "description": "skipInterveningOverloadedDeclarations"
       }
     ],
     "patternId": "jsdoc_require-jsdoc",
     "title": "Jsdoc: Require jsdoc",
-    "description": "Require JSDoc comments",
+    "description": "Checks for presence of JSDoc comments, on functions and potentially other contexts (optionally limited to exports).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-next-description",
+    "title": "Jsdoc: Require next description",
+    "description": "Requires a description for `@next` tags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-next-type",
+    "title": "Jsdoc: Require next type",
+    "description": "Requires a type for `@next` tags",
     "timeToFix": 5
   },
   {
@@ -11432,7 +11481,7 @@
     ],
     "patternId": "jsdoc_require-param",
     "title": "Jsdoc: Require param",
-    "description": "Requires that all function parameters are documented.",
+    "description": "Requires that all function parameters are documented with a `@param` tag.",
     "timeToFix": 5
   },
   {
@@ -11446,14 +11495,14 @@
     "parameters": [],
     "patternId": "jsdoc_require-param-name",
     "title": "Jsdoc: Require param name",
-    "description": "Requires that all function parameters have names.",
+    "description": "Requires that all `@param` tags have names.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-param-type",
     "title": "Jsdoc: Require param type",
-    "description": "Requires that each `@param` tag has a `type` value.",
+    "description": "Requires that each `@param` tag has a type value (in curly brackets).",
     "timeToFix": 5
   },
   {
@@ -11474,14 +11523,14 @@
     "parameters": [],
     "patternId": "jsdoc_require-property-name",
     "title": "Jsdoc: Require property name",
-    "description": "Requires that all function `@property` tags have names.",
+    "description": "Requires that all `@property` tags have names.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-property-type",
     "title": "Jsdoc: Require property type",
-    "description": "Requires that each `@property` tag has a `type` value.",
+    "description": "Requires that each `@property` tag has a type value (in curly brackets).",
     "timeToFix": 5
   },
   {
@@ -11505,7 +11554,7 @@
     ],
     "patternId": "jsdoc_require-returns",
     "title": "Jsdoc: Require returns",
-    "description": "Requires that returns are documented.",
+    "description": "Requires that returns are documented with `@returns`.",
     "timeToFix": 5
   },
   {
@@ -11521,35 +11570,63 @@
     ],
     "patternId": "jsdoc_require-returns-check",
     "title": "Jsdoc: Require returns check",
-    "description": "Requires a return statement in function body if a `@returns` tag is specified in jsdoc comment.",
+    "description": "Requires a return statement in function body if a `@returns` tag is specified in JSDoc comment(and reports if multiple `@returns` tags are present).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-returns-description",
     "title": "Jsdoc: Require returns description",
-    "description": "Requires that the `@returns` tag has a `description` value.",
+    "description": "Requires that the `@returns` tag has a `description` value (not including `void`/`undefined` type returns).",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-returns-type",
     "title": "Jsdoc: Require returns type",
-    "description": "Requires that `@returns` tag has `type` value.",
+    "description": "Requires that `@returns` tag has type value (in curly brackets).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-tags",
+    "title": "Jsdoc: Require tags",
+    "description": "Requires tags be present, optionally for specific contexts",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-template",
     "title": "Jsdoc: Require template",
-    "description": "Requires template tags for each generic type parameter",
+    "description": "Requires `@template` tags be present when type parameters are used.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-template-description",
+    "title": "Jsdoc: Require template description",
+    "description": "Requires a description for `@template` tags",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_require-throws",
     "title": "Jsdoc: Require throws",
-    "description": "Requires that throw statements are documented.",
+    "description": "Requires that throw statements are documented with `@throws` tags.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-throws-description",
+    "title": "Jsdoc: Require throws description",
+    "description": "Requires a description for `@throws` tags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-throws-type",
+    "title": "Jsdoc: Require throws type",
+    "description": "Requires a type for `@throws` tags",
     "timeToFix": 5
   },
   {
@@ -11577,7 +11654,7 @@
     ],
     "patternId": "jsdoc_require-yields",
     "title": "Jsdoc: Require yields",
-    "description": "Requires yields are documented.",
+    "description": "Requires yields are documented with `@yields` tags.",
     "timeToFix": 5
   },
   {
@@ -11593,27 +11670,77 @@
     ],
     "patternId": "jsdoc_require-yields-check",
     "title": "Jsdoc: Require yields check",
-    "description": "Requires a yield statement in function body if a `@yields` tag is specified in jsdoc comment.",
+    "description": "Ensures that if a `@yields` is present that a `yield` (or `yield` with a value) is present in the function body (or that if a `@next` is present that there is a yield with a return value present).",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-yields-description",
+    "title": "Jsdoc: Require yields description",
+    "description": "Requires a description for `@yields` tags",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_require-yields-type",
+    "title": "Jsdoc: Require yields type",
+    "description": "Requires a type for `@yields` tags",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_sort-tags",
     "title": "Jsdoc: Sort tags",
-    "description": "Sorts tags by a specified sequence according to tag name.",
+    "description": "Sorts tags by a specified sequence according to tag name, optionally adding line breaks between tag groups.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_tag-lines",
     "title": "Jsdoc: Tag lines",
-    "description": "Enforces lines (or no lines) between tags.",
+    "description": "Enforces lines (or no lines) before, after, or between tags.",
     "timeToFix": 5
   },
   {
     "parameters": [],
     "patternId": "jsdoc_text-escaping",
     "title": "Jsdoc: Text escaping",
+    "description": "Auto-escape certain characters that are input within block and tag descriptions.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_ts-method-signature-style",
+    "title": "Jsdoc: Ts method signature style",
+    "description": "Prefers either function properties or method signatures",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_ts-no-empty-object-type",
+    "title": "Jsdoc: Ts no empty object type",
+    "description": "Warns against use of the empty object type",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_ts-no-unnecessary-template-expression",
+    "title": "Jsdoc: Ts no unnecessary template expression",
+    "description": "Catches unnecessary template expressions such as string expressions within a template literal.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_ts-prefer-function-type",
+    "title": "Jsdoc: Ts prefer function type",
+    "description": "Prefers function types over call signatures when there are no other properties.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "jsdoc_type-formatting",
+    "title": "Jsdoc: Type formatting",
+    "description": "Formats JSDoc type values.",
     "timeToFix": 5
   },
   {
@@ -11625,7 +11752,7 @@
     ],
     "patternId": "jsdoc_valid-types",
     "title": "Jsdoc: Valid types",
-    "description": "Requires all types to be valid JSDoc or Closure compiler types without syntax errors.",
+    "description": "Requires all types/namepaths to be valid JSDoc, Closure compiler, or TypeScript types (configurable in settings).",
     "timeToFix": 5
   },
   {

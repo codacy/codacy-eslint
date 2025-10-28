@@ -6973,13 +6973,6 @@
       "enabled": false
     },
     {
-      "patternId": "ember_no-builtin-form-components",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "ember_no-capital-letters-in-routes",
       "level": "Error",
       "category": "ErrorProne",
@@ -7494,13 +7487,6 @@
     },
     {
       "patternId": "ember_prefer-ember-test-helpers",
-      "level": "Warning",
-      "category": "BestPractice",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "ember_require-async-inverse-relationship",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -11203,7 +11189,12 @@
       "patternId": "jsdoc_check-alignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "innerIndent",
+          "default": 1
+        }
+      ],
       "enabled": false
     },
     {
@@ -11337,6 +11328,13 @@
       "enabled": false
     },
     {
+      "patternId": "jsdoc_escape-inline-tags",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsdoc_implements-on-classes",
       "level": "Warning",
       "category": "BestPractice",
@@ -11352,6 +11350,13 @@
     },
     {
       "patternId": "jsdoc_informative-docs",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_lines-before-block",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -11441,6 +11446,27 @@
     },
     {
       "patternId": "jsdoc_no-undefined-types",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_prefer-import-tag",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_reject-any-type",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_reject-function-type",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -11552,14 +11578,36 @@
           "default": false
         },
         {
+          "name": "exemptOverloadedImplementations",
+          "default": false
+        },
+        {
           "name": "fixerMessage",
           "default": ""
         },
         {
           "name": "require",
           "default": {}
+        },
+        {
+          "name": "skipInterveningOverloadedDeclarations",
+          "default": true
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-next-description",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-next-type",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
       "enabled": false
     },
     {
@@ -11702,6 +11750,13 @@
       "enabled": false
     },
     {
+      "patternId": "jsdoc_require-tags",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsdoc_require-template",
       "level": "Warning",
       "category": "BestPractice",
@@ -11709,7 +11764,28 @@
       "enabled": false
     },
     {
+      "patternId": "jsdoc_require-template-description",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsdoc_require-throws",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-throws-description",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-throws-type",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -11760,6 +11836,20 @@
       "enabled": false
     },
     {
+      "patternId": "jsdoc_require-yields-description",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_require-yields-type",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "jsdoc_sort-tags",
       "level": "Warning",
       "category": "BestPractice",
@@ -11775,6 +11865,41 @@
     },
     {
       "patternId": "jsdoc_text-escaping",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_ts-method-signature-style",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_ts-no-empty-object-type",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_ts-no-unnecessary-template-expression",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_ts-prefer-function-type",
+      "level": "Warning",
+      "category": "BestPractice",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "jsdoc_type-formatting",
       "level": "Warning",
       "category": "BestPractice",
       "parameters": [],
@@ -17606,7 +17731,7 @@
         },
         {
           "name": "langDir",
-          "default": "/Users/davidmarinho/Documents/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
