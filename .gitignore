@@ -11,3 +11,4 @@ tsconfig.tsbuildinfo
 .codacy/
 .junie/
 .github/instructions/codacy.instructions.md
+.github/copilot-instructions.md
