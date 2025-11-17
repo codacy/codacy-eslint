@@ -9,3 +9,5 @@ tsconfig.tsbuildinfo
 /tests
 .eslintcache
 .codacy/
+.junie/
+.github/instructions/codacy.instructions.md
