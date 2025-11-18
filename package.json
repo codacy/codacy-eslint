@@ -345,7 +345,7 @@
     "eslint-plugin-yml": "^1.14.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.14.0",
     "extract-css-chunks-webpack-plugin": "^4.10.0",
-    "glob": "^10.3.15",
+    "glob": "^11.1.0",
     "graphql-ws": "^5.16.0",
     "gts": "^5.3.0",
     "hermes-eslint": "^0.32.1",
