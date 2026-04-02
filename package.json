@@ -356,7 +356,7 @@
     "laravel-mix": "^6.0.49",
     "lint-config-qiwi": "^0.0.1-security",
     "lint-staged": "^15.2.7",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "mini-css-extract-plugin": "^2.9.0",
     "mocha": "^10.4.0",
     "mongoose": "^8.12.1",
