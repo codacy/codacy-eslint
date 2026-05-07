@@ -32,7 +32,9 @@ function generateFilesToAnalyze(codacyrc: Codacyrc): string[] {
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "**/*.json"
+    "**/*.mjs",
+    "**/*.jsm",
+    "**/*.vue",
   ];
 
   const files = codacyrc?.files && codacyrc.files.length
