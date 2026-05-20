@@ -1,0 +1,9 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "plugins": ["newline-destructuring"],
+  "rules": {
+    "newline-destructuring/newline": ["error", { "items": 2 }]
+  }
+}

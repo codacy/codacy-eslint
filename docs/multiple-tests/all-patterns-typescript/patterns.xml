@@ -1724,6 +1724,7 @@
   <module name="n_hashbang" />
   <module name="n_no-hide-core-modules" />
   <module name="n_shebang" />
+  <module name="newline-destructuring_newline" />
   <module name="no-only-tests_no-only-tests" />
   <module name="no-unsanitized_property" />
   <module name="no-unsanitized_method" />

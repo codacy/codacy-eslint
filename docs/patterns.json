@@ -13948,6 +13948,13 @@
       "enabled": false
     },
     {
+      "patternId": "newline-destructuring_newline",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [],
+      "enabled": false
+    },
+    {
       "patternId": "no-only-tests_no-only-tests",
       "level": "Error",
       "category": "ErrorProne",

@@ -72,6 +72,7 @@ const packageNames: string[] = [
   "eslint-plugin-mocha",
   "eslint-plugin-monorepo",
   "eslint-plugin-n",
+  "eslint-plugin-newline-destructuring",
   "eslint-plugin-no-only-tests",
   "eslint-plugin-no-unsanitized",
   "eslint-plugin-nuxt",

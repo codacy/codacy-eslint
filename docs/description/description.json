@@ -13704,6 +13704,12 @@
     "timeToFix": 5
   },
   {
+    "parameters": [],
+    "patternId": "newline-destructuring_newline",
+    "title": "Newline destructuring: Newline",
+    "timeToFix": 5
+  },
+  {
     "parameters": [
       {
         "name": "block",
