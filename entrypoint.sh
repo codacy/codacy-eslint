@@ -1,7 +1,6 @@
 #!/bin/sh
 
 exec node \
-  --max-old-space-size=2048 \
-  --max-semi-space-size=128 \
-  --optimize_for_size \
+  --max-old-space-size=4608 \
+  --max-semi-space-size=64 \
   /dist/src/index.js
