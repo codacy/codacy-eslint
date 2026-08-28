@@ -48,7 +48,7 @@ export const engineImpl: Engine = async function (
   return results.map((r) => r.relativeTo(srcDirPath))
 }
 
-async function expandFiles (srcDirPath: string, filesOrGlobs: string[]): Promise<string[]> {
+export async function expandFiles (srcDirPath: string, filesOrGlobs: string[]): Promise<string[]> {
   const hasGlobs = filesOrGlobs.some((file: string) => /\*|\?|\[/.test(file))
   if (!hasGlobs) return filesOrGlobs
 
@@ -84,7 +84,7 @@ async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][])
   return results
 }
 
-async function chunkFilesByTotalSize(files: string[], maxChunkSize: number): Promise<string[][]> {
+export async function chunkFilesByTotalSize(files: string[], maxChunkSize: number): Promise<string[][]> {
   const chunks: string[][] = [];
   let currentChunk: string[] = [];
   let currentChunkSize = 0;
