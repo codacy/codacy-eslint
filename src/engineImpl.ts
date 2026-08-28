@@ -30,40 +30,35 @@ export const engineImpl: Engine = async function (
   const eslint = new ESLint(options)
 
   // Check if there are any glob patterns in the files array
-  const lintResults = files.some((file: string) => /\*|\?|\[/.test(file))
-    ? await eslint.lintFiles(files)
+  const results = files.some((file: string) => /\*|\?|\[/.test(file))
+    ? convertResults(await eslint.lintFiles(files))
     : await lintFilesInChunks(eslint, files)
 
-  await debugAndCountLintIssues(eslint, lintResults)
+  debug(`engine: ${results.length} issues/errors found`)
 
   debug("engine: finished")
-  return convertResults(lintResults).map((r) => r.relativeTo(srcDirPath))
+  return results.map((r) => r.relativeTo(srcDirPath))
 }
 
-async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ESLint.LintResult[]> {
+async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ToolResult[]> {
   const maxTotalSizePerChunk = 5 * 1024 * 1024; // size in bytes (5MB)
   const chunksOfFiles = await chunkFilesByTotalSize(files, maxTotalSizePerChunk)
 
   return lintFilesChunkByChunk(eslint, chunksOfFiles)
 }
 
-async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][]): Promise<ESLint.LintResult[]> {
+async function lintFilesChunkByChunk (eslint: ESLint, chunksOfFiles: string[][]): Promise<ToolResult[]> {
   debug("engine: linting chunks started")
-  const lintResults = []
+  const results: ToolResult[] = []
+  let filesLinted = 0
   for (const chunkOfFiles of chunksOfFiles) {
     const chunkResults = await eslint.lintFiles(chunkOfFiles)
-    lintResults.push.apply(lintResults, chunkResults)
+    filesLinted += chunkResults.length
+    results.push(...convertResults(chunkResults))
   }
-  debug("engine: linting chunks finished")
+  debug(`engine: linting chunks finished, ${filesLinted} files linted`)
 
-  return lintResults
-}
-
-async function debugAndCountLintIssues (eslint: ESLint, lintResults: ESLint.LintResult[]): Promise<void> {
-  if (!DEBUG) return
-
-  const nIssues = lintResults.reduce((acc, r) => acc + r.messages.length, 0)
-  debug(`engine: ${lintResults.length} files linted and ${nIssues} issues found`)
+  return results
 }
 
 async function chunkFilesByTotalSize(files: string[], maxChunkSize: number): Promise<string[][]> {
