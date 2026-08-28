@@ -1,12 +1,20 @@
 import { Codacyrc, Engine, ToolResult } from "codacy-seed"
 import { ESLint } from "eslint"
 import fs from "fs"
+import { glob } from "glob"
 
 import { createEslintConfig } from "./configCreator"
 import { convertResults } from "./convertResults"
 import { DEBUG, debug } from "./logging"
 import { toolName } from "./toolMetadata"
 import fsPromises from "fs/promises";
+
+const GLOB_EXPANSION_IGNORE = [
+  "**/node_modules/**",
+  "**/dist/**",
+  "**/build/**",
+  "**/.git/**"
+]
 
 export const engineImpl: Engine = async function (
   codacyrc?: Codacyrc
@@ -18,26 +26,41 @@ export const engineImpl: Engine = async function (
   }
 
   const srcDirPath = "/src"
-  const [options, files] = await createEslintConfig(
+  const [options, filesOrGlobs] = await createEslintConfig(
     srcDirPath,
     codacyrc
   )
 
-  debug(`engine: list of ${files.length} files (or globs) to process in "${srcDirPath}" and options used`)
-  debug(files)
+  debug(`engine: list of ${filesOrGlobs.length} files (or globs) to process in "${srcDirPath}" and options used`)
+  debug(filesOrGlobs)
   debug(options)
 
   const eslint = new ESLint(options)
 
-  // Check if there are any glob patterns in the files array
-  const results = files.some((file: string) => /\*|\?|\[/.test(file))
-    ? convertResults(await eslint.lintFiles(files))
-    : await lintFilesInChunks(eslint, files)
+  // Expand any glob patterns up front so every run (default full-repo globs
+  // included) goes through the same chunked, memory-bounded lint path.
+  const files = await expandFiles(srcDirPath, filesOrGlobs)
+  const results = await lintFilesInChunks(eslint, files)
 
   debug(`engine: ${results.length} issues/errors found`)
 
   debug("engine: finished")
   return results.map((r) => r.relativeTo(srcDirPath))
+}
+
+async function expandFiles (srcDirPath: string, filesOrGlobs: string[]): Promise<string[]> {
+  const hasGlobs = filesOrGlobs.some((file: string) => /\*|\?|\[/.test(file))
+  if (!hasGlobs) return filesOrGlobs
+
+  const expanded = await glob(filesOrGlobs, {
+    cwd: srcDirPath,
+    nodir: true,
+    dot: true,
+    ignore: GLOB_EXPANSION_IGNORE
+  })
+
+  debug(`engine: expanded globs to ${expanded.length} files`)
+  return expanded
 }
 
 async function lintFilesInChunks (eslint: ESLint, files: string[]): Promise<ToolResult[]> {
