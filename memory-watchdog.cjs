@@ -10,21 +10,33 @@
 const CHECK_INTERVAL_MS = 5000;
 const THRESHOLD = 0.9;
 
-const limitBytes =
+function isValidLimit(value) {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+const constrained =
   typeof process.constrainedMemory === "function"
     ? process.constrainedMemory()
-    : require("node:os").totalmem();
+    : undefined;
+const totalMem = require("node:os").totalmem();
+const limitBytes = isValidLimit(constrained) ? constrained : totalMem;
 
-const timer = setInterval(() => {
-  const { rss } = process.memoryUsage();
-  if (rss > limitBytes * THRESHOLD) {
-    process.stderr.write(
-      `memory-watchdog: RSS ${Math.floor(rss / 1024 / 1024)}MB exceeded ${Math.floor(
-        THRESHOLD * 100
-      )}% of cgroup limit ${Math.floor(limitBytes / 1024 / 1024)}MB, exiting\n`
-    );
-    process.exit(137);
-  }
-}, CHECK_INTERVAL_MS);
+if (isValidLimit(limitBytes)) {
+  const timer = setInterval(() => {
+    const { rss } = process.memoryUsage();
+    if (rss > limitBytes * THRESHOLD) {
+      process.stderr.write(
+        `memory-watchdog: RSS ${Math.floor(rss / 1024 / 1024)}MB exceeded ${Math.floor(
+          THRESHOLD * 100
+        )}% of cgroup limit ${Math.floor(limitBytes / 1024 / 1024)}MB, exiting\n`
+      );
+      process.exit(137);
+    }
+  }, CHECK_INTERVAL_MS);
 
-timer.unref();
+  timer.unref();
+} else {
+  // Neither the cgroup limit nor os.totalmem() gave a usable value —
+  // disable the watchdog rather than risk killing a healthy process.
+  process.stderr.write("memory-watchdog: no valid memory limit found, disabled\n");
+}
