@@ -19,6 +19,7 @@ COPY --from=builder --chown=docker:docker docs docs
 COPY --from=builder node_modules node_modules
 COPY  --chown=docker:docker tsconfig.src.json tsconfig.json
 COPY entrypoint.sh entrypoint.sh
+COPY compute-heap.mjs compute-heap.mjs
 
 RUN adduser -u 2004 -D docker &&\
     chmod +x entrypoint.sh
