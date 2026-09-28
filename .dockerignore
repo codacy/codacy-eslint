@@ -9,6 +9,7 @@
 !/tsconfig.json
 !/tsconfig.src.json
 !/entrypoint.sh
+!/compute-heap.mjs
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories
