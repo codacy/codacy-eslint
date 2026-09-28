@@ -7,4 +7,5 @@ EOF
 exec node \
   --max-old-space-size="${HEAP_MB}" \
   --max-semi-space-size="${SEMI_MB}" \
+  -r /memory-watchdog.cjs \
   /dist/src/index.js
