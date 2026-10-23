@@ -132,7 +132,7 @@ export class DocGenerator {
     const prefix = prefixSplit(patternId)
 
     // Exclude "@typescript-eslint/no-unsafe-*" as defaults for now
-    if (patternId.startsWith("@typescript-eslint/no-unsafe-")) {
+    if (patternId.startsWith("@typescript-eslint/no-unsafe-") || patternId.startsWith("security/detect-object-injection")) {
       return false
     }
 
