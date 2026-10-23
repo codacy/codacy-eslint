@@ -5328,27 +5328,6 @@
       "enabled": false
     },
     {
-      "patternId": "@typescript-eslint_no-unsafe-argument",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-assignment",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-call",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
       "patternId": "@typescript-eslint_no-unsafe-declaration-merging",
       "level": "Error",
       "category": "ErrorProne",
@@ -5364,20 +5343,6 @@
     },
     {
       "patternId": "@typescript-eslint_no-unsafe-function-type",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-member-access",
-      "level": "Error",
-      "category": "ErrorProne",
-      "parameters": [],
-      "enabled": false
-    },
-    {
-      "patternId": "@typescript-eslint_no-unsafe-return",
       "level": "Error",
       "category": "ErrorProne",
       "parameters": [],
@@ -17731,7 +17696,7 @@
         },
         {
           "name": "langDir",
-          "default": "node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
+          "default": "/Users/davidmarinho/Documents/dev/codacy-eslint/node_modules/eslint-plugin-spellcheck/rules/utils/dicts"
         },
         {
           "name": "skipWords",
