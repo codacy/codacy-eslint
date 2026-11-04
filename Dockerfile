@@ -2,7 +2,7 @@ FROM node:lts-alpine3.21 AS builder
 
 COPY package.json package-lock.json ./
 
-RUN npm install --legacy-peer-deps --omit=dev &&\
+RUN npm install --ignore-scripts --legacy-peer-deps --omit=dev &&\
     npm cache clean --force
 
 COPY src src
