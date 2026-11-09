@@ -25,16 +25,21 @@ const blacklistRegexes: RegExp[] = [
   /(?<!@stylistic\/)lines-between-class-members/,
   /@typescript-eslint\/brace-style/,
   /@typescript-eslint\/indent/,
-  /(?<=^|\s)wrap-iife(?=\s|$)/,
-  /@typescript-eslint\/no-unsafe-argument/,
-  /@typescript-eslint\/no-unsafe-assignment/,
-  /@typescript-eslint\/no-unsafe-call/,
-  /@typescript-eslint\/no-unsafe-member-access/,
-  /@typescript-eslint\/no-unsafe-return/
+  /(?<=^|\s)wrap-iife(?=\s|$)/
 ]
 
 const documentationBlacklistRegexes: RegExp[] = [
   /@shopify\/no-debugger/
+]
+
+// Patterns that remain available (documented and configurable)
+// but whose results are never reported, due to excessive noise
+const suppressedResultsRegexes: RegExp[] = [
+  /^@typescript-eslint\/no-unsafe-argument$/,
+  /^@typescript-eslint\/no-unsafe-assignment$/,
+  /^@typescript-eslint\/no-unsafe-call$/,
+  /^@typescript-eslint\/no-unsafe-member-access$/,
+  /^@typescript-eslint\/no-unsafe-return$/
 ]
 
 function testRegex (regexes: RegExp[], value: string): boolean {
@@ -43,6 +48,10 @@ function testRegex (regexes: RegExp[], value: string): boolean {
 
 export function isBlacklisted (ruleId: string): boolean {
   return testRegex(blacklistRegexes, ruleId)
+}
+
+export function isResultSuppressed (ruleId: string): boolean {
+  return testRegex(suppressedResultsRegexes, ruleId)
 }
 
 // Removes a pattern from the documentation
