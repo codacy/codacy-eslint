@@ -17054,7 +17054,7 @@
       "subcategory": "CommandInjection",
       "scanType": "SCA",
       "parameters": [],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "security_detect-new-buffer",
