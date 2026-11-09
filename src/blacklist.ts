@@ -33,12 +33,27 @@ const documentationBlacklistRegexes: RegExp[] = [
   /@shopify\/no-debugger/
 ]
 
+// Patterns that remain available (documented and configurable)
+// but whose results are never reported, due to excessive noise
+const suppressedResultsRegexes: RegExp[] = [
+  /^@typescript-eslint\/no-unsafe-argument$/,
+  /^@typescript-eslint\/no-unsafe-assignment$/,
+  /^@typescript-eslint\/no-unsafe-call$/,
+  /^@typescript-eslint\/no-unsafe-member-access$/,
+  /^@typescript-eslint\/no-unsafe-return$/
+]
+
 function testRegex (regexes: RegExp[], value: string): boolean {
   return regexes.some((regex) => regex.test(value))
 }
 
 export function isBlacklisted (ruleId: string): boolean {
   return testRegex(blacklistRegexes, ruleId)
+}
+
+// Keeps the pattern but drops any issue it reports
+export function isResultSuppressed (ruleId: string): boolean {
+  return testRegex(suppressedResultsRegexes, ruleId)
 }
 
 // Removes a pattern from the documentation
