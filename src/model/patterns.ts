@@ -5,6 +5,7 @@ const securityPlugins = [
   "security",
   "security-node",
   "no-unsanitized",
+  "node-security",
   "xss"
 ]
 

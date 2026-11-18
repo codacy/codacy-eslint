@@ -1,0 +1,189 @@
+---
+title: no-arbitrary-file-access
+description: Prevents file system access with unsanitized user input to protect against path traversal attacks.
+tags: ['security', 'node']
+category: security
+severity: medium
+cwe: CWE-22
+owasp: 'A01:2021'
+autofix: false
+---
+
+> **Keywords:** path traversal, CWE-22, file access, LFI, directory traversal, fs, readFile, security
+
+<!-- @rule-summary -->
+
+Prevents file system access with unsanitized user input to protect against path traversal attacks.
+<!-- @/rule-summary -->
+
+Prevents file system access with unsanitized user input to protect against path traversal attacks.
+
+⚠️ This rule **errors** by default in the `recommended` config.
+
+## Quick Summary
+
+| Aspect            | Details                                                                                    |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| **CWE Reference** | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) (Improper Limitation of Pathname) |
+| **OWASP**         | [A01:2021 Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)  |
+| **Severity**      | High                                                                                       |
+| **Category**      | Security                                                                                   |
+
+## Rule Details
+
+Path traversal vulnerabilities allow attackers to access files outside the intended directory using sequences like `../`. This rule detects `fs.*` calls where the path comes from user input.
+
+The sink is the `fs` module however it is reached: `fs.readFile`, `fs.promises.readFile`,
+a default, namespace or named import from `fs/promises` (`import fsp from 'fs/promises'`,
+`import { readFile } from 'node:fs/promises'`), `require('fs').promises`, and `fs` imported
+under another name.
+
+**Smart Detection:** This rule recognizes safe patterns including:
+
+- `path.basename()` sanitization
+- `path.join()` whose request-derived parts all pass through `path.basename()` —
+  one basename argument does not clear the others: `path.join(ROOT, req.query.folder, name)`
+  still escapes `ROOT` with `folder = '../../etc'`
+- `startsWith()` validation guards
+
+## Examples
+
+### ❌ Incorrect
+
+```typescript
+// A request-derived path
+fs.readFileSync(req.query.file, 'utf8');
+
+// `process.argv` is user input too
+fs.readFileSync(process.argv[2], 'utf8');
+
+// Destructured from the request — the same value as `req.query.file`
+const { file } = req.query;
+fs.readFileSync(file, 'utf8');
+
+// Assigned after the declaration
+let target;
+target = req.query.file;
+await fsp.readFile(target);
+
+// A safe-sounding parameter, filled with request input by a caller in this file
+function readSafe(safePath) {
+  return fs.readFileSync(safePath);
+}
+readSafe(req.query.file);
+
+// Spread into a join, or iterated — every element of a request array is request input
+fs.readFileSync(path.join('/srv/files', ...req.body.segments));
+for (const file of req.body.files) fs.readFileSync(file);
+
+// A helper reached as a method — `{ load(file) {} }`, `{ 'load': … }`,
+// `exports.load = …` or a class method — is judged by its callers too
+exports.load = (file) => fs.readFileSync(file);
+exports.load(req.query.file);
+
+// A basename result overwritten later is no longer a basename
+let name = path.basename(req.query.file);
+name = req.query.raw;
+fs.readFileSync(name);
+```
+
+Aliases are followed to any depth (`const a2 = a1; const a3 = a2; …`), not a
+fixed number of hops; a cycle of aliases terminates.
+
+### ✅ Correct
+
+```typescript
+fs.readFileSync('./config.json');
+```
+
+## Error Message Format
+
+The rule provides **LLM-optimized error messages** (Compact 2-line format) with actionable security guidance:
+
+```text
+🔒 CWE-22 OWASP:A01 CVSS:7.5 | Path Traversal detected | HIGH [SOC2,PCI-DSS,HIPAA,ISO27001]
+   Fix: Review and apply the recommended fix | https://owasp.org/Top10/A01_2021/
+```
+
+### Message Components
+
+| Component                 | Purpose                | Example                                                                                                                                                                                                                                                     |
+| :------------------------ | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Risk Standards**        | Security benchmarks    | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) [OWASP:A01](https://owasp.org/Top10/A01_2021-Injection/) [CVSS:7.5](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV%3AN%2FAC%3AL%2FPR%3AN%2FUI%3AN%2FS%3AU%2FC%3AH%2FI%3AH%2FA%3AH) |
+| **Issue Description**     | Specific vulnerability | `Path Traversal detected`                                                                                                                                                                                                                                   |
+| **Severity & Compliance** | Impact assessment      | `HIGH [SOC2,PCI-DSS,HIPAA,ISO27001]`                                                                                                                                                                                                                        |
+| **Fix Instruction**       | Actionable remediation | `Follow the remediation steps below`                                                                                                                                                                                                                        |
+| **Technical Truth**       | Official reference     | [OWASP Top 10](https://owasp.org/Top10/A01_2021-Injection/)                                                                                                                                                                                                 |
+
+## Known False Negatives
+
+The following patterns are **not detected** due to static analysis limitations:
+
+### Indirect User Input
+
+**Why**: Data flow through multiple variables not traced.
+
+```typescript
+// ❌ NOT DETECTED - Indirect flow
+const userPath = getPathFromRequest(req);
+fs.readFileSync(userPath);
+```
+
+**Mitigation**: Apply validation at the source.
+
+### Custom File Wrappers
+
+**Why**: Wrapper functions around fs not analyzed.
+
+```typescript
+// ❌ NOT DETECTED - Custom wrapper
+function readUserFile(path) {
+  return fs.readFileSync(path); // Called with user input elsewhere
+}
+```
+
+**Mitigation**: Apply rule to wrapper implementations.
+
+### Paths This Rule Cannot Attribute To A Source
+
+**Why**: This rule reports "file path from user input", so it stays silent when
+there is no visible input to point at — a bare global, an unresolved import, a
+parameter no call site in the file fills in. Reporting those said something
+untrue and duplicated `detect-non-literal-fs-filename` at a second severity.
+
+```typescript
+// ❌ NOT DETECTED - nothing here names a source
+fs.readFile(userFile, cb);
+```
+
+**Mitigation**: [`detect-non-literal-fs-filename`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-non-literal-fs-filename.md)
+owns these; the two rules partition rather than overlap. `process.argv` is on
+this rule's side of that split, which is the handoff that rule's own docs
+describe. `process.env` is **not** reported: that delegation is conditional on
+treating the environment as attacker-controlled, and an env var is normally
+operator configuration — `fs.readFileSync(process.env.CA_BUNDLE)` is an operator
+pointing a client at a certificate, not a traversal.
+
+## When Not To Use It
+
+- In CLI tools where file paths come from command-line arguments, if you treat
+  `process.argv` as trusted (this rule does not — it reports those paths)
+- In build scripts processing known file trees
+- When using a file access abstraction layer with built-in validation
+
+## Further Reading
+
+- [OWASP Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)
+- [CWE-22: Path Traversal](https://cwe.mitre.org/data/definitions/22.html)
+- [Node.js fs Security](https://nodejs.org/api/fs.html#file-system-flags)
+
+## Related Rules
+
+- [detect-non-literal-fs-filename](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-non-literal-fs-filename.md)
+- no-unsafe-copy-from (planned) (in eslint-plugin-postgresql-security)
+
+---
+
+**Category:** Security  
+**Type:** Problem  
+**Recommended:** Yes

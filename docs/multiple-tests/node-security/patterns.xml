@@ -1,0 +1,8 @@
+<module name="root">
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value=".*\.json" />
+    </module>
+    <module name="node-security_no-weak-hash-algorithm" />
+    <module name="node-security_no-ecb-mode" />
+    <module name="node-security_no-self-signed-certs" />
+</module>

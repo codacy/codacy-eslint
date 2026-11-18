@@ -13703,6 +13703,660 @@
     "timeToFix": 5
   },
   {
+    "parameters": [
+      {
+        "name": "allowLiteralStrings",
+        "description": "allowLiteralStrings"
+      },
+      {
+        "name": "allowLiteralSpawn",
+        "description": "allowLiteralSpawn"
+      },
+      {
+        "name": "additionalMethods",
+        "description": "additionalMethods"
+      },
+      {
+        "name": "taintSources",
+        "description": "taintSources"
+      },
+      {
+        "name": "reportUnresolvedCommands",
+        "description": "reportUnresolvedCommands"
+      }
+    ],
+    "patternId": "node-security_detect-child-process",
+    "title": "Node security: Detect child process",
+    "description": "Detects child_process usage that may allow command injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowLiteralStrings",
+        "description": "allowLiteralStrings"
+      },
+      {
+        "name": "additionalEvalFunctions",
+        "description": "additionalEvalFunctions"
+      },
+      {
+        "name": "strategy",
+        "description": "strategy"
+      }
+    ],
+    "patternId": "node-security_detect-eval-with-expression",
+    "title": "Node security: Detect eval with expression",
+    "description": "Detects strings turned into running code — eval(variable), the Function constructor, and the vm / vm2 sinks that are mistaken for sandboxes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "taintSources",
+        "description": "taintSources"
+      },
+      {
+        "name": "reportUnresolvedPaths",
+        "description": "reportUnresolvedPaths"
+      },
+      {
+        "name": "reportWholeProcessValues",
+        "description": "reportWholeProcessValues"
+      },
+      {
+        "name": "allowLiterals",
+        "description": "allowLiterals"
+      },
+      {
+        "name": "additionalMethods",
+        "description": "additionalMethods"
+      }
+    ],
+    "patternId": "node-security_detect-non-literal-fs-filename",
+    "title": "Node security: Detect non literal fs filename",
+    "description": "Detects variable in filename argument of fs calls, which might allow an attacker to access anything on your system",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowDynamicImport",
+        "description": "allowDynamicImport"
+      },
+      {
+        "name": "taintSources",
+        "description": "taintSources"
+      },
+      {
+        "name": "reportUnresolvedSpecifiers",
+        "description": "reportUnresolvedSpecifiers"
+      }
+    ],
+    "patternId": "node-security_no-unsafe-dynamic-require",
+    "title": "Node security: No unsafe dynamic require",
+    "description": "Prevent unsafe dynamic require() calls that could enable code injection",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "bufferMethods",
+        "description": "bufferMethods"
+      },
+      {
+        "name": "boundsCheckFunctions",
+        "description": "boundsCheckFunctions"
+      },
+      {
+        "name": "bufferTypes",
+        "description": "bufferTypes"
+      },
+      {
+        "name": "trustedSanitizers",
+        "description": "trustedSanitizers"
+      },
+      {
+        "name": "trustedAnnotations",
+        "description": "trustedAnnotations"
+      },
+      {
+        "name": "untrustedSources",
+        "description": "untrustedSources"
+      },
+      {
+        "name": "bufferParameterNames",
+        "description": "bufferParameterNames"
+      },
+      {
+        "name": "strictMode",
+        "description": "strictMode"
+      },
+      {
+        "name": "reportUnvalidatedIndices",
+        "description": "reportUnvalidatedIndices"
+      }
+    ],
+    "patternId": "node-security_no-buffer-overread",
+    "title": "Node security: No buffer overread",
+    "description": "Detects buffer access beyond bounds",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_no-deprecated-buffer",
+    "title": "Node security: No deprecated buffer",
+    "description": "Disallow the deprecated `new Buffer()` constructor and `Buffer()` factory call.",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "wireNames",
+        "description": "wireNames"
+      },
+      {
+        "name": "requestRootNames",
+        "description": "requestRootNames"
+      },
+      {
+        "name": "countNames",
+        "description": "countNames"
+      }
+    ],
+    "patternId": "node-security_no-unsafe-buffer-alloc",
+    "title": "Node security: No unsafe buffer alloc",
+    "description": "Disallow `Buffer.allocUnsafe()` and `Buffer.allocUnsafeSlow()`, which return uninitialized memory",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "ignoreInTests",
+        "description": "ignoreInTests"
+      },
+      {
+        "name": "fsMethods",
+        "description": "fsMethods"
+      }
+    ],
+    "patternId": "node-security_no-toctou-vulnerability",
+    "title": "Node security: No toctou vulnerability",
+    "description": "Detects Time-of-Check-Time-of-Use vulnerabilities",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "archiveFunctions",
+        "description": "archiveFunctions"
+      },
+      {
+        "name": "pathValidationFunctions",
+        "description": "pathValidationFunctions"
+      },
+      {
+        "name": "safeLibraries",
+        "description": "safeLibraries"
+      },
+      {
+        "name": "archiveEntryFields",
+        "description": "archiveEntryFields"
+      },
+      {
+        "name": "archiveModules",
+        "description": "archiveModules"
+      },
+      {
+        "name": "reportWithoutArchiveContext",
+        "description": "reportWithoutArchiveContext"
+      }
+    ],
+    "patternId": "node-security_no-zip-slip",
+    "title": "Node security: No zip slip",
+    "description": "Detects zip slip/archive extraction vulnerabilities",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_no-arbitrary-file-access",
+    "title": "Node security: No arbitrary file access",
+    "description": "Prevent file access from user input",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "tempPaths",
+        "description": "tempPaths"
+      },
+      {
+        "name": "ignoreFiles",
+        "description": "ignoreFiles"
+      }
+    ],
+    "patternId": "node-security_no-data-in-temp-storage",
+    "title": "Node security: No data in temp storage",
+    "description": "Prevent sensitive data in temp directories",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      },
+      {
+        "name": "reportUnresolvedUrls",
+        "description": "reportUnresolvedUrls"
+      }
+    ],
+    "patternId": "node-security_no-ssrf",
+    "title": "Node security: No ssrf",
+    "description": "Flags HTTP calls whose URL argument is a user-input-named identifier or reads off a request object — a heuristic prompt for code review, not a proof of SSRF",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requireModuleEvidence",
+        "description": "requireModuleEvidence"
+      }
+    ],
+    "patternId": "node-security_no-shell-injection",
+    "title": "Node security: No shell injection",
+    "description": "Disallow string concatenation or template expressions in shell command arguments (CWE-78)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "extraCommandRunners",
+        "description": "extraCommandRunners"
+      }
+    ],
+    "patternId": "node-security_no-dynamic-command-string",
+    "title": "Node security: No dynamic command string",
+    "description": "Disallow dynamically assembled command strings passed to a shell flag or to a command-runner that does not escape (CWE-77)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "requestRootNames",
+        "description": "requestRootNames"
+      },
+      {
+        "name": "extraRequestRoots",
+        "description": "extraRequestRoots"
+      }
+    ],
+    "patternId": "node-security_no-env-injection",
+    "title": "Node security: No env injection",
+    "description": "Disallow writing process.env under a key the caller controls, which can overwrite PATH, NODE_OPTIONS or LD_PRELOAD (CWE-99)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_no-dynamic-algorithm-selection",
+    "title": "Node security: No dynamic algorithm selection",
+    "description": "Disallow dynamic algorithm names in Node.js crypto functions (CWE-327)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_detect-suspicious-dependencies",
+    "title": "Node security: Detect suspicious dependencies",
+    "description": "Detect typosquatting in package names",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "packageManager",
+        "description": "packageManager"
+      }
+    ],
+    "patternId": "node-security_lock-file",
+    "title": "Node security: Lock file",
+    "description": "Ensure package lock file exists for the configured package manager",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_no-dynamic-dependency-loading",
+    "title": "Node security: No dynamic dependency loading",
+    "description": "Prevent runtime dependency injection with dynamic paths",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_require-dependency-integrity",
+    "title": "Node security: Require dependency integrity",
+    "description": "Require SRI (Subresource Integrity) for CDN resources",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_require-secure-credential-storage",
+    "title": "Node security: Require secure credential storage",
+    "description": "Enforce secure storage patterns for credentials",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "sensitiveProperties",
+        "description": "sensitiveProperties"
+      },
+      {
+        "name": "additionalSensitiveProperties",
+        "description": "additionalSensitiveProperties"
+      }
+    ],
+    "patternId": "node-security_require-secure-deletion",
+    "title": "Node security: Require secure deletion",
+    "description": "Require secure data deletion patterns",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_require-storage-encryption",
+    "title": "Node security: Require storage encryption",
+    "description": "Require encryption for persistent storage",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowContexts",
+        "description": "allowContexts"
+      },
+      {
+        "name": "allowPatterns",
+        "description": "allowPatterns"
+      }
+    ],
+    "patternId": "node-security_no-dynamic-require",
+    "title": "Node security: No dynamic require",
+    "description": "Forbid `require()` calls with expressions",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_no-cryptojs",
+    "title": "Node security: No cryptojs",
+    "description": "Disallow deprecated crypto-js library (use native crypto instead)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-cryptojs-weak-random",
+    "title": "Node security: No cryptojs weak random",
+    "description": "Disallow crypto-js WordArray.random() (CVE-2020-36732)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-deprecated-cipher-method",
+    "title": "Node security: No deprecated cipher method",
+    "description": "Disallow deprecated crypto.createCipher/createDecipher methods (use createCipheriv/createDecipheriv instead)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-ecb-mode",
+    "title": "Node security: No ecb mode",
+    "description": "Disallow ECB encryption mode (use GCM or CBC instead)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "minIterations",
+        "description": "minIterations"
+      }
+    ],
+    "patternId": "node-security_no-insecure-key-derivation",
+    "title": "Node security: No insecure key derivation",
+    "description": "Disallow PBKDF2 with insufficient iterations (< 100,000)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-insecure-rsa-padding",
+    "title": "Node security: No insecure rsa padding",
+    "description": "Disallow RSA PKCS#1 v1.5 padding (CVE-2023-46809 Marvin Attack)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      },
+      {
+        "name": "secretWords",
+        "description": "secretWords"
+      },
+      {
+        "name": "correlationIdWords",
+        "description": "correlationIdWords"
+      }
+    ],
+    "patternId": "node-security_no-math-random-crypto",
+    "title": "Node security: No math random crypto",
+    "description": "Disallow Math.random() for cryptographic purposes",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-self-signed-certs",
+    "title": "Node security: No self signed certs",
+    "description": "Disallow rejectUnauthorized: false in TLS options",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-sha1-hash",
+    "title": "Node security: No sha1 hash",
+    "description": "Disallow sha1() from crypto-hash package (use sha256 or sha512)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-static-iv",
+    "title": "Node security: No static iv",
+    "description": "Disallow static or hardcoded initialization vectors (IVs)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "secretPatterns",
+        "description": "secretPatterns"
+      },
+      {
+        "name": "untrustedSources",
+        "description": "untrustedSources"
+      },
+      {
+        "name": "reportUnverifiedComparisons",
+        "description": "reportUnverifiedComparisons"
+      },
+      {
+        "name": "reportLiteralComparands",
+        "description": "reportLiteralComparands"
+      },
+      {
+        "name": "nonSecretWords",
+        "description": "nonSecretWords"
+      },
+      {
+        "name": "nonSecretTails",
+        "description": "nonSecretTails"
+      }
+    ],
+    "patternId": "node-security_no-timing-unsafe-compare",
+    "title": "Node security: No timing unsafe compare",
+    "description": "Disallow timing-unsafe comparison of secrets",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "additionalWeakCiphers",
+        "description": "additionalWeakCiphers"
+      },
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-weak-cipher-algorithm",
+    "title": "Node security: No weak cipher algorithm",
+    "description": "Disallow weak cipher algorithms (DES, 3DES, RC4, Blowfish)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "minPrimeBits",
+        "description": "minPrimeBits"
+      },
+      {
+        "name": "additionalWeakCurves",
+        "description": "additionalWeakCurves"
+      },
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-weak-dh-parameters",
+    "title": "Node security: No weak dh parameters",
+    "description": "Disallow Diffie-Hellman and ECDH parameters below a safe strength",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "additionalWeakAlgorithms",
+        "description": "additionalWeakAlgorithms"
+      },
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      },
+      {
+        "name": "nonCryptographicNames",
+        "description": "nonCryptographicNames"
+      },
+      {
+        "name": "securityUseNames",
+        "description": "securityUseNames"
+      },
+      {
+        "name": "reportUnclassifiedHashes",
+        "description": "reportUnclassifiedHashes"
+      }
+    ],
+    "patternId": "node-security_no-weak-hash-algorithm",
+    "title": "Node security: No weak hash algorithm",
+    "description": "Disallow weak hash algorithms (MD5, SHA1, MD4)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [],
+    "patternId": "node-security_prefer-native-crypto",
+    "title": "Node security: Prefer native crypto",
+    "description": "Prefer native crypto over third-party libraries",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_require-aead-tag-verification",
+    "title": "Node security: Require aead tag verification",
+    "description": "Require AEAD decryption to verify the authentication tag (setAuthTag + final)",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-unbounded-decompression",
+    "title": "Node security: No unbounded decompression",
+    "description": "Require a maxOutputLength ceiling on zlib one-shot decompression",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_no-insecure-http-parser",
+    "title": "Node security: No insecure http parser",
+    "description": "Disallow insecureHTTPParser: true on Node HTTP servers and clients",
+    "timeToFix": 5
+  },
+  {
+    "parameters": [
+      {
+        "name": "allowInTests",
+        "description": "allowInTests"
+      }
+    ],
+    "patternId": "node-security_require-stream-error-handler",
+    "title": "Node security: Require stream error handler",
+    "description": "Require an 'error' listener on streams passed to .pipe(), which does not forward errors",
+    "timeToFix": 5
+  },
+  {
     "parameters": [],
     "patternId": "nuxt_no-env-in-context",
     "title": "Nuxt: No env in context",
