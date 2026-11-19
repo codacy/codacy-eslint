@@ -14759,6 +14759,7 @@
             "api_key",
             "api-key",
             "auth",
+            "authorization",
             "credential",
             "bearer",
             "jwt",
@@ -14783,6 +14784,10 @@
             "auth_token",
             "auth-token",
             "authToken",
+            "apiToken",
+            "sessionToken",
+            "idToken",
+            "csrfToken",
             "encryption_key",
             "encryption-key",
             "encryptionKey"

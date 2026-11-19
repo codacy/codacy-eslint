@@ -292,7 +292,7 @@
     "eslint-plugin-n": "^17.7.0",
     "eslint-plugin-no-only-tests": "^3.1.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
-    "eslint-plugin-node-security": "^6.0.4",
+    "eslint-plugin-node-security": "^6.0.6",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-perfectionist": "^3.2.0",
