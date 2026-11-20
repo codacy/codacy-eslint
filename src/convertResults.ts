@@ -1,7 +1,7 @@
 import { FileError, Issue, ToolResult } from "codacy-seed"
 import { ESLint } from "eslint"
 
-import { isBlacklisted } from "./blacklist"
+import { isBlacklisted, isResultSuppressed } from "./blacklist"
 import { computeSuggestion } from "./computeSuggestion"
 import { patternIdToCodacy } from "./model/patterns"
 
@@ -24,7 +24,7 @@ export function convertResults(eslintResults: ESLint.LintResult[]): ToolResult[]
     const hasSuggestions = process.env.SUGGESTIONS === "true" && typeof source === "string"
 
     for (const m of messages) {
-      if (!m.ruleId || isBlacklisted(m.ruleId)) continue
+      if (!m.ruleId || isBlacklisted(m.ruleId) || isResultSuppressed(m.ruleId)) continue
 
       const patternId = patternIdToCodacy(m.ruleId)
       const suggestion
