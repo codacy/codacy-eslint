@@ -360,7 +360,7 @@
     "mini-css-extract-plugin": "^2.9.0",
     "mocha": "^10.4.0",
     "mongoose": "^8.12.1",
-    "newrelic": "^13.6.5",
+    "newrelic": "^14.3.3",
     "next": "^15.4.6",
     "npm": "^10.8.0",
     "npm-check-updates": "^16.14.20",
