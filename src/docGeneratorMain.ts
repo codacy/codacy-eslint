@@ -196,6 +196,12 @@ async function main () {
   )
 
   await docGenerator.downloadDocs(
+    "eslint-plugin-node-security",
+    "/ofri-peretz/eslint/main/packages/eslint-plugin-node-security/docs/rules/",
+    "eslint-plugin-node-security@"
+  )
+
+  await docGenerator.downloadDocs(
     "eslint-plugin-nuxt",
     "/nuxt/eslint-plugin-nuxt/master/docs/rules/"
   )

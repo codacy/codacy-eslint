@@ -13967,6 +13967,1082 @@
       "enabled": true
     },
     {
+      "patternId": "node-security_detect-child-process",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowLiteralStrings",
+          "default": false
+        },
+        {
+          "name": "allowLiteralSpawn",
+          "default": false
+        },
+        {
+          "name": "additionalMethods",
+          "default": []
+        },
+        {
+          "name": "taintSources",
+          "default": [
+            "req",
+            "request",
+            "ctx",
+            "event",
+            "process"
+          ]
+        },
+        {
+          "name": "reportUnresolvedCommands",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_detect-eval-with-expression",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowLiteralStrings",
+          "default": false
+        },
+        {
+          "name": "additionalEvalFunctions",
+          "default": []
+        },
+        {
+          "name": "strategy",
+          "default": "auto"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_detect-non-literal-fs-filename",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "InsecureStorage",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "taintSources",
+          "default": [
+            "process"
+          ]
+        },
+        {
+          "name": "reportUnresolvedPaths",
+          "default": false
+        },
+        {
+          "name": "reportWholeProcessValues",
+          "default": false
+        },
+        {
+          "name": "allowLiterals",
+          "default": false
+        },
+        {
+          "name": "additionalMethods",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-unsafe-dynamic-require",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowDynamicImport",
+          "default": false
+        },
+        {
+          "name": "taintSources",
+          "default": [
+            "req",
+            "request",
+            "ctx",
+            "event",
+            "process"
+          ]
+        },
+        {
+          "name": "reportUnresolvedSpecifiers",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-buffer-overread",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "bufferMethods",
+          "default": [
+            "readUInt8",
+            "readInt8",
+            "readUInt16LE",
+            "readUInt16BE",
+            "readInt16LE",
+            "readInt16BE",
+            "readUInt32LE",
+            "readUInt32BE",
+            "readInt32LE",
+            "readInt32BE",
+            "readBigUInt64LE",
+            "readBigUInt64BE",
+            "readBigInt64LE",
+            "readBigInt64BE",
+            "readFloatLE",
+            "readFloatBE",
+            "readDoubleLE",
+            "readDoubleBE",
+            "readUIntLE",
+            "readUIntBE",
+            "readIntLE",
+            "readIntBE",
+            "writeUInt8",
+            "writeUInt16LE",
+            "writeUInt32LE",
+            "slice",
+            "subarray",
+            "copy"
+          ]
+        },
+        {
+          "name": "boundsCheckFunctions",
+          "default": [
+            "validateIndex",
+            "checkBounds",
+            "safeIndex",
+            "validateBufferIndex"
+          ]
+        },
+        {
+          "name": "bufferTypes",
+          "default": [
+            "Buffer",
+            "Uint8Array",
+            "ArrayBuffer",
+            "DataView"
+          ]
+        },
+        {
+          "name": "trustedSanitizers",
+          "default": []
+        },
+        {
+          "name": "trustedAnnotations",
+          "default": []
+        },
+        {
+          "name": "untrustedSources",
+          "default": [
+            "req",
+            "request",
+            "event",
+            "ctx",
+            "context"
+          ]
+        },
+        {
+          "name": "bufferParameterNames",
+          "default": [
+            "buf",
+            "buffer",
+            "bytes"
+          ]
+        },
+        {
+          "name": "strictMode",
+          "default": false
+        },
+        {
+          "name": "reportUnvalidatedIndices",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-deprecated-buffer",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-unsafe-buffer-alloc",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "wireNames",
+          "default": [
+            "chunk",
+            "chunks",
+            "buffer",
+            "buf",
+            "payload",
+            "frame",
+            "packet",
+            "raw",
+            "message",
+            "msg"
+          ]
+        },
+        {
+          "name": "requestRootNames",
+          "default": [
+            "req",
+            "request",
+            "ctx",
+            "event"
+          ]
+        },
+        {
+          "name": "countNames",
+          "default": [
+            "length",
+            "len",
+            "size",
+            "count",
+            "n",
+            "num",
+            "total",
+            "capacity",
+            "bytelength"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-toctou-vulnerability",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "ignoreInTests",
+          "default": true
+        },
+        {
+          "name": "fsMethods",
+          "default": [
+            "fs.existsSync",
+            "fs.statSync",
+            "fs.accessSync",
+            "fs.exists",
+            "fs.stat",
+            "fs.access"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-zip-slip",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "archiveFunctions",
+          "default": [
+            "extract",
+            "extractAll",
+            "extractAllTo",
+            "unzip",
+            "untar",
+            "extractArchive"
+          ]
+        },
+        {
+          "name": "pathValidationFunctions",
+          "default": [
+            "validatePath",
+            "sanitizePath",
+            "checkPath",
+            "safePath"
+          ]
+        },
+        {
+          "name": "safeLibraries",
+          "default": [
+            "yauzl",
+            "safe-archive-extract",
+            "tar-stream",
+            "unzipper"
+          ]
+        },
+        {
+          "name": "archiveEntryFields",
+          "default": [
+            "name",
+            "path",
+            "fileName",
+            "entryName",
+            "filename"
+          ]
+        },
+        {
+          "name": "archiveModules",
+          "default": [
+            "adm-zip",
+            "unzipper",
+            "yauzl",
+            "yazl",
+            "tar",
+            "tar-fs",
+            "tar-stream",
+            "extract-zip",
+            "node-stream-zip",
+            "jszip",
+            "archiver",
+            "decompress",
+            "unzip-stream",
+            "zip-stream",
+            "gunzip-maybe",
+            "7zip-min",
+            "node-7z"
+          ]
+        },
+        {
+          "name": "reportWithoutArchiveContext",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-arbitrary-file-access",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-data-in-temp-storage",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "InsecureStorage",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "tempPaths",
+          "default": [
+            "/tmp",
+            "/var/tmp",
+            "temp/",
+            "/temp"
+          ]
+        },
+        {
+          "name": "ignoreFiles",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-ssrf",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": true
+        },
+        {
+          "name": "reportUnresolvedUrls",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-shell-injection",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "requireModuleEvidence",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-dynamic-command-string",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "extraCommandRunners",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-env-injection",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "requestRootNames",
+          "default": [
+            "req",
+            "request",
+            "ctx",
+            "event"
+          ]
+        },
+        {
+          "name": "extraRequestRoots",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-dynamic-algorithm-selection",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_detect-suspicious-dependencies",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_lock-file",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "packageManager",
+          "default": "any"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-dynamic-dependency-loading",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-dependency-integrity",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-secure-credential-storage",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "InsecureStorage",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-secure-deletion",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "sensitiveProperties",
+          "default": [
+            "password",
+            "passwd",
+            "pwd",
+            "passphrase",
+            "secret",
+            "token",
+            "jwt",
+            "bearer",
+            "credential",
+            "api key",
+            "secret key",
+            "private key",
+            "signing key",
+            "encryption key",
+            "access key",
+            "session id",
+            "ssn",
+            "credit card",
+            "card number",
+            "cvv"
+          ]
+        },
+        {
+          "name": "additionalSensitiveProperties",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-storage-encryption",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "InsecureStorage",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-dynamic-require",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowContexts",
+          "default": []
+        },
+        {
+          "name": "allowPatterns",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-cryptojs",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-cryptojs-weak-random",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-deprecated-cipher-method",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-ecb-mode",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-insecure-key-derivation",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "minIterations",
+          "default": 100000
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-insecure-rsa-padding",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-math-random-crypto",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": true
+        },
+        {
+          "name": "secretWords",
+          "default": [
+            "token",
+            "tokens",
+            "key",
+            "keys",
+            "secret",
+            "secrets",
+            "password",
+            "passwd",
+            "salt",
+            "iv",
+            "nonce",
+            "seed",
+            "hash",
+            "cipher",
+            "auth",
+            "session",
+            "csrf",
+            "otp",
+            "pin",
+            "code",
+            "codes",
+            "verify",
+            "signature",
+            "credential",
+            "jwt",
+            "encryption",
+            "apikey",
+            "passphrase",
+            "mnemonic"
+          ]
+        },
+        {
+          "name": "correlationIdWords",
+          "default": [
+            "request",
+            "req",
+            "correlation",
+            "trace",
+            "span",
+            "transaction",
+            "txn",
+            "message",
+            "msg",
+            "event",
+            "job",
+            "run",
+            "task",
+            "batch",
+            "element",
+            "node",
+            "row",
+            "record",
+            "instance",
+            "component",
+            "widget",
+            "dom",
+            "operation",
+            "call",
+            "invocation",
+            "frame",
+            "render"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-self-signed-certs",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-sha1-hash",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-static-iv",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-timing-unsafe-compare",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "secretPatterns",
+          "default": [
+            "token",
+            "secret",
+            "password",
+            "hash",
+            "signature",
+            "mac",
+            "hmac",
+            "digest",
+            "apiKey",
+            "api_key",
+            "api-key",
+            "auth",
+            "authorization",
+            "credential",
+            "bearer",
+            "jwt",
+            "csrf",
+            "nonce",
+            "ssn",
+            "social_security",
+            "social-security",
+            "pii",
+            "private_key",
+            "private-key",
+            "privateKey",
+            "access_token",
+            "access-token",
+            "accessToken",
+            "refresh_token",
+            "refresh-token",
+            "refreshToken",
+            "session_id",
+            "session-id",
+            "sessionId",
+            "auth_token",
+            "auth-token",
+            "authToken",
+            "apiToken",
+            "sessionToken",
+            "idToken",
+            "csrfToken",
+            "encryption_key",
+            "encryption-key",
+            "encryptionKey"
+          ]
+        },
+        {
+          "name": "untrustedSources",
+          "default": [
+            "req",
+            "request",
+            "ctx",
+            "event"
+          ]
+        },
+        {
+          "name": "reportUnverifiedComparisons",
+          "default": false
+        },
+        {
+          "name": "reportLiteralComparands",
+          "default": false
+        },
+        {
+          "name": "nonSecretWords",
+          "default": [
+            "author",
+            "authors",
+            "authored",
+            "authoring",
+            "authorship",
+            "hashtag",
+            "hashtags"
+          ]
+        },
+        {
+          "name": "nonSecretTails",
+          "default": [
+            "count",
+            "counts",
+            "limit",
+            "limits",
+            "usage",
+            "total",
+            "size",
+            "length",
+            "price",
+            "cost",
+            "quota",
+            "address",
+            "addresses",
+            "index",
+            "rank",
+            "percent",
+            "path",
+            "paths",
+            "pathname",
+            "pathnames",
+            "endpoint",
+            "endpoints",
+            "route",
+            "routes",
+            "hostname",
+            "host",
+            "port",
+            "origin",
+            "kind",
+            "kinds",
+            "type",
+            "types",
+            "flag",
+            "flags",
+            "category"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-weak-cipher-algorithm",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "additionalWeakCiphers",
+          "default": []
+        },
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-weak-dh-parameters",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "minPrimeBits",
+          "default": 2048
+        },
+        {
+          "name": "additionalWeakCurves",
+          "default": []
+        },
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-weak-hash-algorithm",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "additionalWeakAlgorithms",
+          "default": []
+        },
+        {
+          "name": "allowInTests",
+          "default": false
+        },
+        {
+          "name": "nonCryptographicNames",
+          "default": [
+            "sha",
+            "etag",
+            "cachekey",
+            "cachebuster",
+            "thumbprint",
+            "x5t"
+          ]
+        },
+        {
+          "name": "securityUseNames",
+          "default": [
+            "password",
+            "passwd",
+            "secret",
+            "secrets",
+            "token",
+            "tokens",
+            "signature",
+            "signing",
+            "signed",
+            "sign",
+            "hmac",
+            "credential",
+            "credentials",
+            "certificate",
+            "cert",
+            "certs",
+            "apikey",
+            "privatekey",
+            "secretkey",
+            "signingkey",
+            "encryptionkey",
+            "session",
+            "csrf",
+            "salt",
+            "jwt",
+            "nonce",
+            "integrity",
+            "auth",
+            "authorization",
+            "authenticate",
+            "otp",
+            "mfa",
+            "totp",
+            "passphrase",
+            "pincode",
+            "mnemonic",
+            "seedphrase",
+            "masterkey",
+            "securityanswer",
+            "recoverycode",
+            "backupcode"
+          ]
+        },
+        {
+          "name": "reportUnclassifiedHashes",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_prefer-native-crypto",
+      "level": "Warning",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "scanType": "SCA",
+      "parameters": [],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-aead-tag-verification",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-unbounded-decompression",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_no-insecure-http-parser",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": false
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "node-security_require-stream-error-handler",
+      "level": "Warning",
+      "category": "Security",
+      "scanType": "SCA",
+      "parameters": [
+        {
+          "name": "allowInTests",
+          "default": true
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "nuxt_no-env-in-context",
       "level": "Info",
       "category": "CodeStyle",

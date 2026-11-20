@@ -1,0 +1,440 @@
+---
+title: detect-non-literal-fs-filename
+description: Detects variable in filename argument of fs calls, which might allow an attacker to access anything on your system
+tags: ['security', 'node']
+category: security
+severity: high
+cwe: CWE-22
+autofix: false
+---
+
+> **Keywords:** path traversal, CWE-22, security, ESLint rule, file system, fs module, directory traversal, file access, auto-fix, LLM-optimized, code security
+
+<!-- @rule-summary -->
+
+Detects variable in filename argument of fs calls, which might allow an attacker to access anything on your system
+<!-- @/rule-summary -->
+
+**CWE:** [CWE-22](https://cwe.mitre.org/data/definitions/22.html)  
+**OWASP Mobile:** [OWASP Mobile Top 10](https://owasp.org/www-project-mobile-top-10/)
+
+Detects variable in filename argument of fs calls, which might allow an attacker to access anything on your system. This rule is part of [`eslint-plugin-node-security`](https://www.npmjs.com/package/eslint-plugin-node-security) and provides LLM-optimized error messages with fix suggestions.
+
+**🚨 Security rule** | **💡 Provides LLM-optimized guidance** | **⚠️ Set to warn in `recommended`**
+
+## Quick Summary
+
+| Aspect            | Details                                                                   |
+| ----------------- | ------------------------------------------------------------------------- |
+| **CWE Reference** | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) (Path Traversal) |
+| **Severity**      | High (security vulnerability)                                             |
+| **Auto-Fix**      | ⚠️ Suggests fixes (manual application)                                    |
+| **Category**      | Security                                                                  |
+| **ESLint MCP**    | ✅ Optimized for ESLint MCP integration                                   |
+| **Best For**      | Node.js applications, file processing systems, file upload handlers       |
+
+## Value & investment case
+
+> Why this rule pays for itself. Framework: [`cicd-impact/philosophy.md`](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/philosophy.md).
+
+| Dimension                    | Value                                                                                                                                                                                                                                              |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CWE**                      | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) — Improper Limitation of a Pathname to a Restricted Directory (Path Traversal)                                                                                                            |
+| **Feedback-loop tier**       | Editor / pre-commit (sub-second) — cheapest layer per the [feedback-loop hierarchy](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/philosophy.md#the-feedback-loop-hierarchy--why-a-high-end-static-analyzer-is-the-highest-leverage-investment)                          |
+| **Defensive-layer leverage** | ~10× cheaper than unit-test · ~1,000× cheaper than production rollback · 10,000+× cheaper than customer disclosure ([cost-ratio anchors](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/philosophy.md#deliverability-axis--quality-risk-and-ma-diligence))                |
+| **Niche relevance**          | **Critical:** infra/devtools, B2B SaaS handling user uploads, fintech (document storage) · **High:** healthtech (medical-record file access), marketplaces · **Medium:** B2C                                                                       |
+| **Investor-frame impact**    | Path traversal → unauthorized file access (configs, source code, secrets) or unauthorized writes (overwriting system files). Single bug class that often escalates to full system compromise; catch at lint-time is the cheapest possible defense. |
+
+**Read also:** [`philosophy.md` §investor-frame](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/philosophy.md#the-investor-frame--engineering-efficiency-as-a-portfolio-metric) · [`niche-presets.json`](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/data/niche-presets.json) · [`analyzer-evaluation-framework.md`](https://github.com/ofri-peretz/eslint/tree/main/cicd-impact/analyzer-evaluation-framework.md)
+
+## Vulnerability and Risk
+
+**Vulnerability:** Using non-literal (dynamic) values for filesystem operations (like opening, reading, or writing files) without strict validation allows users to control file paths.
+
+**Risk:** Attackers can manipulate file paths to access files outside the intended directory (Path Traversal), overwriting critical system files, or disclosing sensitive information (like configuration files or source code).
+
+## Rule Details
+
+This rule detects dangerous use of Node.js fs methods with dynamic paths that can lead to path traversal attacks (also known as directory traversal).
+
+### Traversal needs a path to traverse _out of_
+
+CWE-22 is about escaping a directory the code chose, by extending or
+redirecting a path that has other, fixed parts. `path.join('/uploads',
+userFile)` is that shape: `../../etc/passwd` walks out of `/uploads`. A tainted
+value used **entire** is not:
+
+```ts
+// Not reported — twilio-node src/base/RequestClient.ts:128
+agentOpts.ca = fs.readFileSync(process.env.TWILIO_CA_BUNDLE);
+```
+
+There is no base directory to escape and nothing to append to. Whoever sets
+`TWILIO_CA_BUNDLE` names a file outright — and anyone who can set a variable in
+the process environment already chooses which files the process opens, with or
+without this line. Reporting it as traversal describes a mechanism that is not
+present.
+
+So a taint source reaching an fs path reports only when it has been **composed
+into** a path: a template with literal text around it, a `+` concatenation, or
+a `path.join` / `path.resolve` with more than one argument.
+
+```ts
+fs.readFileSync(process.env.CA); // silent — whole value
+fs.readFileSync(path.resolve(process.env.CA)); // silent — normalised, still whole
+fs.readFileSync('/etc/app/' + process.env.NAME); // reported — a prefix to escape
+fs.cpSync(path.join(__dirname, 'packages', argv[2])); // reported — a base plus a segment
+```
+
+A value read back through a `const` counts as the value itself, destructured or
+not: `const [, , name] = process.argv` followed by
+`path.join(__dirname, name)` is reported exactly like
+`path.join(__dirname, process.argv[2])`, and `const { CA } = process.env`
+followed by `fs.readFileSync(CA)` is as silent as `process.env.CA`. However long
+the concatenation or the chain of `const` aliases, the taint is found.
+
+A guard clause clears the path after it wherever the two share a statement
+list — a function body, a nested block, or the top level of a CLI script — and
+a guard placed before a callback is created covers that callback:
+
+```ts
+const name = process.argv[2];
+if (!ALLOWED.includes(name)) throw new Error('unknown file');
+fs.readFileSync('/srv/data/' + name); // silent — allowlisted above
+```
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#f8fafc',
+    'primaryTextColor': '#1e293b',
+    'primaryBorderColor': '#334155',
+    'lineColor': '#475569',
+    'c0': '#f8fafc',
+    'c1': '#f1f5f9',
+    'c2': '#e2e8f0',
+    'c3': '#cbd5e1'
+  }
+}}%%
+flowchart TD
+    A[🔍 Detect fs Call] --> B{Dynamic Path?}
+    B -->|Yes| C[🚨 Path Traversal Risk]
+    B -->|No| D[✅ Literal Path - Safe]
+
+    C --> E{Contains ../ ?}
+    E -->|Yes| F[⚠️ Obvious Traversal]
+    E -->|No| G[⚠️ Potential Traversal]
+
+    F --> H[💡 Suggest path.resolve + validation]
+    G --> H
+
+    H --> I[📝 LLM-Optimized Guidance]
+```
+
+## Error Message Format
+
+The rule provides **LLM-optimized error messages** (Compact 2-line format) with actionable security guidance:
+
+```text
+🔒 CWE-22 OWASP:A01 CVSS:7.5 | Path Traversal detected | HIGH [SOC2,PCI-DSS,HIPAA,ISO27001]
+   Fix: Review and apply the recommended fix | https://owasp.org/Top10/A01_2021/
+```
+
+### Message Components
+
+| Component                 | Purpose                | Example                                                                                                                                                                                                                                                     |
+| :------------------------ | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Risk Standards**        | Security benchmarks    | [CWE-22](https://cwe.mitre.org/data/definitions/22.html) [OWASP:A01](https://owasp.org/Top10/A01_2021-Injection/) [CVSS:7.5](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV%3AN%2FAC%3AL%2FPR%3AN%2FUI%3AN%2FS%3AU%2FC%3AH%2FI%3AH%2FA%3AH) |
+| **Issue Description**     | Specific vulnerability | `Path Traversal detected`                                                                                                                                                                                                                                   |
+| **Severity & Compliance** | Impact assessment      | `HIGH [SOC2,PCI-DSS,HIPAA,ISO27001]`                                                                                                                                                                                                                        |
+| **Fix Instruction**       | Actionable remediation | `Follow the remediation steps below`                                                                                                                                                                                                                        |
+| **Technical Truth**       | Official reference     | [OWASP Top 10](https://owasp.org/Top10/A01_2021-Injection/)                                                                                                                                                                                                 |
+
+## Configuration
+
+| Option              | Type       | Default | Description                                           |
+| ------------------- | ---------- | ------- | ----------------------------------------------------- |
+| `allowLiterals`     | `boolean`  | `false` | Silence hardcoded paths, including `../../etc/passwd` |
+| `additionalMethods` | `string[]` | `[]`    | Additional fs methods to check                        |
+
+## How the fs module is recognised
+
+The rule resolves the binding rather than matching one spelling of it, so all
+of these are checked — `fs`, `node:fs`, `fs/promises` and `node:fs/promises`:
+
+```typescript
+import fs from 'fs'; // default import, any local name
+import * as fileSystem from 'node:fs'; // namespace import
+import { readFile } from 'fs/promises'; // named import, renamed or not
+const { readdir } = require('node:fs'); // destructured require
+fs.promises.readFile(p); // the promises sub-object
+```
+
+A bare `fs.readFile(...)` in a file that imports nothing is still reported, on
+the assumption that `fs` names the module.
+
+Bindings are resolved across the whole file before any call is judged, so a
+`require` placed below its call site still counts — statement order is not a
+security property.
+
+## Examples
+
+### ❌ Incorrect
+
+```typescript
+// Path traversal - HIGH risk
+const { readFile } = require('fs');
+readFile(userPath, callback); // Attacker can access ../../../etc/passwd
+
+// Directory traversal - HIGH risk
+fs.readdir(userDir, callback); // Can list any directory
+
+// File creation - HIGH risk
+fs.writeFile(userFile, data, callback); // Can write anywhere
+```
+
+### ✅ Correct
+
+```typescript
+fs.readFile('/path/to/file.txt', callback);
+```
+
+## Path Traversal Prevention
+
+### Basic Protection
+
+```typescript
+const path = require('path');
+
+// ❌ Vulnerable
+fs.readFile(userInput, callback);
+
+// ✅ Protected
+const safePath = path.resolve(SAFE_DIR, userInput);
+// The separator matters: a bare startsWith(SAFE_DIR) lets /safe-dir-evil through.
+if (!safePath.startsWith(SAFE_DIR + path.sep)) {
+  return callback(new Error('Invalid path'));
+}
+fs.readFile(safePath, callback);
+```
+
+### Advanced Protection
+
+```typescript
+function securePath(baseDir: string, userPath: string): string {
+  const root = path.resolve(baseDir);
+  const resolved = path.resolve(root, userPath);
+
+  // Containment by path.relative, not startsWith: `resolved.startsWith(root)`
+  // accepts `/safe-dir-evil/file` for a root of `/safe-dir`.
+  const rel = path.relative(root, resolved);
+  if (rel.startsWith('..') || path.isAbsolute(rel)) {
+    throw new Error('Path traversal detected');
+  }
+
+  return resolved;
+}
+
+// A symlink inside the root can still point outside it. Where links are
+// possible, compare real paths of what exists (fs.realpathSync), and check
+// again at open time if the tree can change underneath you.
+```
+
+## Common Attack Vectors
+
+| Attack            | Example Input                   | Result               |
+| ----------------- | ------------------------------- | -------------------- |
+| Basic traversal   | `../../../etc/passwd`           | Access system files  |
+| Windows traversal | `....\\....\\windows\\system32` | Access Windows files |
+| Encoded traversal | `%2e%2e%2f%2e%2e%2fetc/passwd`  | URL-encoded attack   |
+| Unicode traversal | `..\\u002f..\\u002fetc/passwd`  | Unicode bypass       |
+
+## Method-Specific Guidance
+
+### File Reading (`readFile`, `readFileSync`)
+
+- Use `path.basename()` to strip directory components
+- Combine with safe base directory
+- Validate file extensions if needed
+
+### File Writing (`writeFile`, `writeFileSync`)
+
+- Same as reading, but consider separate write directories
+- Check disk space and file size limits
+- Validate file types on upload
+
+### Directory Operations (`readdir`, `stat`)
+
+- Always resolve and validate directory paths
+- Check directory existence and permissions
+- Consider rate limiting for directory listings
+
+### Stream Operations (`createReadStream`, `createWriteStream`)
+
+- Apply same path validation as regular file operations
+- Be careful with relative paths in streams
+- Validate stream destinations
+
+## Security Best Practices
+
+### Directory Structure
+
+```
+project/
+├── uploads/        # User uploads (read-only from here)
+├── public/         # Public files
+├── temp/          # Temporary files
+└── user-data/     # User-specific data
+```
+
+### Path Validation
+
+```typescript
+class SecurePath {
+  constructor(private baseDir: string) {}
+
+  resolve(userPath: string): string {
+    if (userPath.includes('\0')) throw new Error('Invalid path');
+    const root = fs.realpathSync(this.baseDir);
+    const resolved = path.resolve(root, userPath);
+
+    // `startsWith(this.baseDir)` would accept a sibling such as
+    // `/srv/data-evil` for `/srv/data`; path.relative cannot be fooled that way.
+    const inside = (target: string) => {
+      const rel = path.relative(root, target);
+      return !rel.startsWith('..') && !path.isAbsolute(rel);
+    };
+    if (!inside(resolved)) throw new Error('Path traversal attempt');
+
+    // Follow symlinks for paths that exist, and check the real target too.
+    if (fs.existsSync(resolved) && !inside(fs.realpathSync(resolved))) {
+      throw new Error('Symlink escapes the base directory');
+    }
+
+    return resolved;
+  }
+}
+```
+
+## Migration Guide
+
+### Phase 1: Discovery
+
+```javascript
+{
+  rules: {
+    'node-security/detect-non-literal-fs-filename': 'warn'
+  }
+}
+```
+
+### Phase 2: Implementation
+
+```typescript
+// Add security utilities
+const SECURE_PATHS = {
+  uploads: path.join(__dirname, 'uploads'),
+  public: path.join(__dirname, 'public'),
+  temp: path.join(__dirname, 'temp')
+};
+
+// Replace unsafe calls
+fs.readFile(userPath) → fs.readFile(securePath.resolve(userPath))
+```
+
+### Phase 3: Testing
+
+```typescript
+// Test path traversal attempts
+const attacks = [
+  '../../../etc/passwd',
+  '..\\..\\windows\\system32',
+  '....//....//etc/passwd',
+];
+
+for (const attack of attacks) {
+  expect(() => securePath.resolve(attack)).toThrow();
+}
+```
+
+## Comparison with Alternatives
+
+| Feature                      | detect-non-literal-fs-filename | eslint-plugin-security | eslint-plugin-node |
+| ---------------------------- | ------------------------------ | ---------------------- | ------------------ |
+| **Path Traversal Detection** | ✅ Yes                         | ⚠️ Limited             | ⚠️ Limited         |
+| **CWE Reference**            | ✅ CWE-22 included             | ⚠️ Limited             | ⚠️ Limited         |
+| **LLM-Optimized**            | ✅ Yes                         | ❌ No                  | ❌ No              |
+| **ESLint MCP**               | ✅ Optimized                   | ❌ No                  | ❌ No              |
+| **Fix Suggestions**          | ✅ Detailed                    | ⚠️ Basic               | ⚠️ Basic           |
+
+## Related Rules
+
+- [`detect-eval-with-expression`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-eval-with-expression.md) - Prevents code injection via eval()
+- [`detect-child-process`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-child-process.md) - Prevents command injection
+- [`detect-object-injection`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-object-injection.md) - Prevents prototype pollution
+- [`detect-non-literal-regexp`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/detect-non-literal-regexp.md) - Prevents ReDoS attacks
+
+## Known False Negatives
+
+The following patterns are **not detected** due to static analysis limitations:
+
+### A whole tainted value used as the entire path
+
+`fs.readFileSync(process.env.X)` is silent by design — see _Traversal needs a
+path to traverse out of_ above. If your threat model treats the environment or
+`process.argv` as attacker-controlled _and_ you want every fs call driven by
+them flagged regardless of shape, that is `no-arbitrary-file-access`'s
+question, not this rule's.
+
+### Path from Variable
+
+**Why**: Path strings from variables not traced.
+
+```typescript
+// ❌ NOT DETECTED - Path from variable
+const filePath = userInput;
+fs.readFile(filePath);
+```
+
+**Mitigation**: Validate and sanitize all paths.
+
+### Indirect Path Construction
+
+**Why**: Complex path building not analyzed.
+
+```typescript
+// ❌ NOT DETECTED - Indirect
+const path = buildPath(base, userInput);
+fs.readFile(path);
+```
+
+**Mitigation**: Use path whitelisting.
+
+### Custom FS Wrappers
+
+**Why**: FS wrappers not recognized.
+
+```typescript
+// ❌ NOT DETECTED - Wrapper
+fileManager.read(userPath);
+```
+
+**Mitigation**: Apply rule to wrapper implementations.
+
+## Further Reading
+
+- **[OWASP Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)** - Path traversal attack guide
+- **[Node.js File System Security](https://nodejs.org/api/fs.html#file-system)** - Node.js fs module security
+- **[CWE-22: Path Traversal](https://cwe.mitre.org/data/definitions/22.html)** - Official CWE entry
+- **[ESLint MCP Setup](https://eslint.org/docs/latest/use/mcp)** - Enable AI assistant integration
+
+## ⚙️ Options
+
+| Option                     | Type       | Default       | Description                                                                                                                                                                                                                                                                                                                                |
+| -------------------------- | ---------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `taintSources`             | `string[]` | `["process"]` | Identifier roots treated as attacker-reachable. Default: ['process'] (process.argv and process.env). Request roots (req/request/ctx/event) are deliberately NOT included — no-arbitrary-file-access owns those, and listing them here would double-report one line at two severities. Add them only if you run this rule without that one. |
+| `reportUnresolvedPaths`    | `boolean`  | `false`       | Report paths whose provenance cannot be resolved. Restores the pre-inversion behaviour; measured at 7% precision on real code.                                                                                                                                                                                                             |
+| `reportWholeProcessValues` | `boolean`  | `false`       | Report process.argv / process.env used as the whole path (fs.readFileSync(process.argv[2])). Off by default: whoever sets argv or the environment already chooses which files the process opens. True matches eslint-plugin-security.                                                                                                      |
+| `allowLiterals`            | `boolean`  | `false`       | Silence hardcoded paths altogether. With the default (false) a literal reports only when it traverses (a `..` segment) into a sensitive location such as `../../etc/passwd`; a relative literal like `../config.json` never reports — measured as this rule's largest FP class on real code.                                               |
+| `additionalMethods`        | `string[]` | `[]`          | Additional fs methods to check                                                                                                                                                                                                                                                                                                             |

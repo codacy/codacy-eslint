@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="node-security.js">
+        <error source="node-security_no-weak-hash-algorithm" line="5" message="🔒 CWE-327 OWASP:A04-Cryptographic CVSS:7.5 | Use of weak hash algorithm: MD5. MD5 is cryptographically broken and unsuitable for security purposes. | CRITICAL [PCI-DSS,HIPAA,ISO27001,NIST-CSF]&#10;   Fix: Replace with sha256: crypto.createHash(&quot;sha256&quot;).update(data). If this hash is an identifier rather than a security control — an EVALSHA key, an ETag, a cache key — store it under one of the nonCryptographicNames instead. | https://owasp.org/www-community/vulnerabilities/Weak_Cryptography" severity="warning" />
+        <error source="node-security_no-ecb-mode" line="9" message="🔒 CWE-327 OWASP:A04-Cryptographic CVSS:7.5 | ECB mode encrypts identical plaintext blocks to identical ciphertext, leaking data patterns. Famous example: the &quot;ECB penguin&quot;. | HIGH [PCI-DSS,HIPAA,ISO27001,NIST-CSF]&#10;   Fix: Use GCM mode for authenticated encryption: crypto.createCipheriv(&quot;aes-256-gcm&quot;, key, iv) | https://blog.cloudflare.com/why-are-some-images-more-secure-than-others/" severity="warning" />
+        <error source="node-security_no-self-signed-certs" line="14" message="🔒 CWE-295 OWASP:A02-Security CVSS:7.4 | rejectUnauthorized: false disables TLS certificate validation, enabling man-in-the-middle attacks. Any certificate will be accepted, including self-signed and expired ones. | CRITICAL&#10;   Fix: Remove rejectUnauthorized: false or set it to true | https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html" severity="warning" />
+    </file>
+</checkstyle>

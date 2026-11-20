@@ -1,0 +1,174 @@
+---
+title: no-dynamic-require
+description: Forbid require() calls with non-literal arguments
+tags: ['security', 'node']
+category: security
+severity: critical
+autofix: false
+cwe: CWE-94
+---
+
+> **Keywords:** dynamic require, CommonJS, static analysis, bundler, ESLint rule, webpack, LLM-optimized
+
+<!-- @rule-summary -->
+
+Forbid require() calls with non-literal arguments
+<!-- @/rule-summary -->
+
+Forbid `require()` calls with non-literal arguments. This rule is part of [`eslint-plugin-node-security`](https://www.npmjs.com/package/eslint-plugin-node-security).
+
+## Quick Summary
+
+| Aspect         | Details                                 |
+| -------------- | --------------------------------------- |
+| **Severity**   | Warning (architecture)                  |
+| **Auto-Fix**   | ❌ No (requires architecture change)    |
+| **Category**   | Security                                |
+| **ESLint MCP** | ✅ Optimized for ESLint MCP integration |
+| **Best For**   | Bundler optimization, static analysis   |
+
+## Rule Details
+
+Dynamic `require()` calls prevent static analysis and break tree-shaking in bundlers.
+
+The loader reads only its first argument, so that is the one judged: `require(path.join(dir, name), 'utf8')` loads `name` exactly as `require(path.join(dir, name))` does, and is reported the same way.
+
+### Why This Matters
+
+| Issue                  | Impact                   | Solution         |
+| ---------------------- | ------------------------ | ---------------- |
+| 📦 **Bundle size**     | Can't tree-shake         | Static imports   |
+| 🔍 **Static analysis** | Tools can't analyze deps | Literal paths    |
+| 🔒 **Security**        | Arbitrary module loading | Explicit imports |
+
+## Examples
+
+### ❌ Incorrect
+
+```typescript
+const moduleName = getModuleName();
+const mod = require(moduleName); // Dynamic
+
+const plugin = require(`./plugins/${name}`); // Template literal
+
+const handler = require(path.join(__dirname, name)); // Computed
+```
+
+### ✅ Correct
+
+```typescript
+// Static requires
+const mod = require('./module');
+
+// Dynamic import (when truly needed)
+const mod = await import(`./plugins/${name}`);
+
+// Explicit mapping
+const plugins = {
+  a: require('./plugins/a'),
+  b: require('./plugins/b'),
+};
+const plugin = plugins[name];
+```
+
+## Configuration Examples
+
+### Basic Usage
+
+```javascript
+{
+  rules: {
+    'node-security/no-dynamic-require': 'warn'
+  }
+}
+```
+
+## Related Rules
+
+- [`no-commonjs`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/no-commonjs.md) - Prevent CommonJS usage
+- [`no-unsafe-dynamic-require`](https://github.com/ofri-peretz/eslint/tree/main/packages/eslint-plugin-node-security/docs/rules/no-unsafe-dynamic-require.md) - Security-focused variant
+
+## Further Reading
+
+- **[Webpack Dynamic Imports](https://webpack.js.org/guides/code-splitting/#dynamic-imports)** - Code splitting guide
+
+## Known False Negatives
+
+The following patterns are **not detected** due to static analysis limitations:
+
+### Dynamic Variable References
+
+**Why**: Static analysis cannot trace values stored in variables or passed through function parameters.
+
+```typescript
+// ❌ NOT DETECTED - Value from variable
+const value = externalSource();
+processValue(value); // Variable origin not tracked
+```
+
+**Mitigation**: Implement runtime validation and review code manually. Consider using TypeScript branded types for validated inputs.
+
+### Wrapped or Aliased Functions
+
+**Why**: Custom wrapper functions or aliased methods are not recognized by the rule.
+
+```typescript
+// ❌ NOT DETECTED - Custom wrapper
+function myWrapper(data) {
+  return internalApi(data); // Wrapper not analyzed
+}
+myWrapper(unsafeInput);
+```
+
+**Mitigation**: Apply this rule's principles to wrapper function implementations. Avoid aliasing security-sensitive functions.
+
+### Cross-Module Data Flow
+
+**Why**: ESLint rules analyze one file at a time. Values imported from other modules cannot be traced.
+
+```typescript
+// ❌ NOT DETECTED - Value from import
+import { getValue } from './helpers';
+processValue(getValue()); // Cross-file not tracked
+```
+
+**Mitigation**: Apply the same rule to imported modules. Use module boundaries and explicit exports.
+
+## ⚙️ Options
+
+| Option          | Type       | Default | Description                                                                                                                                                                                                                                      |
+| --------------- | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `allowContexts` | `string[]` | `[]`    | Allow dynamic requires in files whose path marks a context — a substring test on the linted file path: test (.test., .spec., /**tests**/), config (config, webpack, rollup), build (build, scripts, tools), runtime (runtime, dynamic).          |
+| `allowPatterns` | `string[]` | `[]`    | Regex patterns matched against the source text of the require argument; a match suppresses the report. A pattern that is an invalid regex or matches a catastrophic-backtracking shape falls back to a case-insensitive literal substring match. |
+
+### `allowContexts`
+
+Each context names a kind of file, recognised by a **substring of the linted file's
+path**. In a file that matches a listed context, the rule reports nothing.
+
+| Context   | The path contains                   | Example                    |
+| --------- | ----------------------------------- | -------------------------- |
+| `test`    | `.test.`, `.spec.` or `/__tests__/` | `src/loader.test.ts`       |
+| `config`  | `config`, `webpack` or `rollup`     | `webpack.config.js`        |
+| `build`   | `build`, `scripts` or `tools`       | `scripts/build-plugins.js` |
+| `runtime` | `runtime` or `dynamic`              | `src/runtime/loader.ts`    |
+
+It is a substring test, not a path-segment test: `src/configure.ts` matches `config`
+and `src/rebuild.ts` matches `build`. Prefer `allowPatterns` when the exemption is about
+the specifier rather than about the file.
+
+## Not a finding
+
+The question is whether a specifier can _change_, not whether it is spelled as a literal.
+Resolution runs through ESLint's scope analysis, so all of these are silent:
+
+| Code                                             | Why it is silent                                             |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| ``require(`b`)``                                 | A template with no interpolation is a literal.               |
+| ``const d = 'debounce'; require(`lodash/${d}`)`` | Every interpolated part resolves to a constant.              |
+| `require(__dirname + '/utils')`                  | `__dirname` is where the module sits on disk, fixed at load. |
+| `require.resolve('eslint/package.json')`         | A lookup against the dependency tree.                        |
+
+**If it fires**, the specifier reaches a name this file cannot resolve — a parameter, an
+import, a variable written more than once. That is genuinely unknowable here, which is
+exactly the case the rule exists for.

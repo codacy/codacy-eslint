@@ -1,0 +1,203 @@
+---
+title: no-dynamic-command-string
+description: Detects dynamically assembled command strings handed to a shell flag (bash -c) or to a command-runner that does not escape (execaCommand, $.raw)
+tags: ['security', 'node']
+category: security
+severity: critical
+cwe: CWE-77
+autofix: false
+---
+
+> **Keywords:** command injection, CWE-77, argument injection, shell flag, bash -c, spawn, execFile, execa, execaCommand, zx, $.raw, ESLint rule, LLM-optimized
+
+<!-- @rule-summary -->
+
+Detects dynamically assembled command strings handed to a shell flag (bash -c) or to a command-runner that does not escape (execaCommand, $.raw)
+<!-- @/rule-summary -->
+
+**CWE:** [CWE-77](https://cwe.mitre.org/data/definitions/77.html) (Command Injection)
+**OWASP:** [A03:2021 – Injection](https://owasp.org/Top10/A03_2021-Injection/)
+
+## Quick Summary
+
+| Aspect            | Details                                                  |
+| ----------------- | -------------------------------------------------------- |
+| **CWE Reference** | [CWE-77](https://cwe.mitre.org/data/definitions/77.html) |
+| **Severity**      | Critical                                                 |
+| **Auto-Fix**      | ❌ None — the safe form is a different call shape        |
+| **Detection**     | structural-api                                           |
+| **Recommended**   | `error`                                                  |
+
+## Rule Details
+
+"We use `spawn` with an argument array, so we're safe from command injection" is true — right up to the two shapes below, both of which pass that review.
+
+### 1. The shell-flag escape hatch
+
+```js
+spawn('bash', ['-c', `kill -9 ${pid}`]);
+```
+
+The array is real, but its second element is handed to `bash`, which parses it as a command line all over again. `;`, `&&`, backticks and `$()` in `pid` all execute. The parameterization is decorative.
+
+The command flags are tracked **per interpreter**, because they do not mean the same thing everywhere:
+
+| Interpreter                                   | Flags that make the next argv element a command string |
+| --------------------------------------------- | ------------------------------------------------------ |
+| `sh`, `bash`, `zsh`, `dash`, `ksh`, `busybox` | `-c`                                                   |
+| `cmd`, `cmd.exe`                              | `/c`, `/C`, `/k`, `/K`                                 |
+| `powershell`, `pwsh`                          | `-Command`, `-c`, `-EncodedCommand`, `-e`, `-ec`       |
+
+`spawn('bash', ['-e', script])` is therefore **not** a finding: to a POSIX shell `-e` is `set -e`, and the next element is a script path, not a command string.
+
+A POSIX option cluster that contains `c` is the same flag wherever the `c`
+sits — `-lc`, `-euc` and `-ce` all make the next element the command string —
+while a long option such as `--norc` is not a cluster.
+
+A command string read from a `const` object literal (`SCRIPTS.build`) is static
+only when the file can see the last write of that key: a later spread
+(`{ build: 'npm run build', ...overrides }`), a later computed key the file
+cannot name, or a later duplicate of the key may replace the literal, and the
+read is then reported like any other runtime value.
+
+### 2. Command-runner libraries that take a whole command line
+
+```js
+await execaCommand(`git clone ${url}`);
+await $.raw`git clone ${url}`;
+```
+
+execa's and zx's **tagged-template** forms escape interpolated values — that is their headline feature. `execaCommand`, `execaCommandSync` and `$.raw` are the documented escape hatches that do not.
+
+### How this differs from the neighbouring rules
+
+| Rule                            | CWE        | Shape                                                                                   |
+| ------------------------------- | ---------- | --------------------------------------------------------------------------------------- |
+| `no-shell-injection`            | CWE-78     | `exec()` / `execSync()` with a concatenated command string                              |
+| `detect-child-process`          | CWE-78     | broad, medium-confidence net over all `child_process` usage                             |
+| **`no-dynamic-command-string`** | **CWE-77** | **the command string is re-parsed by a shell the argument array was supposed to avoid** |
+
+## Examples
+
+### ❌ Incorrect
+
+```javascript
+// Interpolated command line behind an argument array
+spawn('bash', ['-c', `kill -9 ${pid}`]);
+execFile('/bin/sh', ['-c', 'rm -rf ' + target]);
+spawnSync('zsh', ['-c', userCommand]);
+
+// Windows interpreters
+spawn('cmd.exe', ['/c', `del ${file}`]);
+spawn('powershell', ['-Command', `Remove-Item ${file}`]);
+
+// The flag does not have to be first
+spawn('bash', ['--login', '-c', `deploy ${env}`]);
+
+// Command-runners that do not escape
+await execaCommand(`git clone ${url}`);
+execaCommandSync('git clone ' + url);
+await $.raw`git clone ${url}`;
+```
+
+### ✅ Correct
+
+```javascript
+// Invoke the program directly with its own argument array
+spawn('kill', ['-9', String(pid)]);
+execFile('git', ['clone', repoUrl]);
+
+// A shell with a fully static command line is not a finding
+spawn('bash', ['-c', 'ls -la']);
+
+// -e is errexit to a POSIX shell, not a command flag
+spawn('bash', ['-e', deployScript]);
+
+// The escaping forms of the same libraries
+await $`git clone ${url}`;
+await execa`git clone ${url}`;
+execa('git', ['clone', url]);
+```
+
+### What counts as written out
+
+A command string is not "assembled" when every value in it is written in this
+file: a literal, a `const` bound to one, a property of a `const` object literal,
+a template or `+` built only from those — or a **parameter that only literals
+reach**:
+
+```javascript
+// Not reported: commandPath is file-local, never exported or passed on, and
+// its only caller passes the literal 'axe'.
+function commandPath(command) {
+  return spawnSync('sh', ['-lc', `command -v ${command}`]);
+}
+const axe = commandPath('axe');
+```
+
+All of these must hold, or it is still reported: the function is a `function`
+declaration or a `const` function expression, not exported where it is declared
+or by name; every reference to it is a direct call; every call passes a string
+literal (or a resolvable `const`) in that position, with no spread before it;
+there is at least one call; and the parameter is a plain identifier that is
+never reassigned. Methods, callbacks and cross-file callers are not followed.
+
+## Options
+
+| Option                | Type       | Default | Description                                                                                                                  |
+| --------------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `extraCommandRunners` | `string[]` | `[]`    | Extra functions that accept a full command line without escaping. Added to the built-in runners, not a replacement for them. |
+
+```json
+{
+  "rules": {
+    "node-security/no-dynamic-command-string": [
+      "error",
+      { "extraCommandRunners": ["runShell"] }
+    ]
+  }
+}
+```
+
+## When Not To Use It
+
+Build scripts and local developer tooling that only ever run on a trusted machine with trusted input have no attacker in the loop. Prefer scoping the rule off for those directories (an ESLint config override) over disabling it repo-wide — `scripts/` grows into CI, and CI input is not always trusted.
+
+## Known False Negatives
+
+The following patterns are **not detected** due to static analysis limitations:
+
+### Command String Built Earlier
+
+**Why**: The rule checks the shape of the argument in the call. A fully assembled literal-looking variable is caught (an identifier counts as assembled), but a shell binary held in a variable is not.
+
+```typescript
+// ❌ NOT DETECTED — the interpreter is not a literal
+const shell = '/bin/bash';
+spawn(shell, ['-c', command]);
+```
+
+### shell: true On A Safe-Looking Call
+
+**Why**: The `{ shell: true }` option is covered by `detect-child-process`, not repeated here.
+
+```typescript
+// ❌ NOT DETECTED BY THIS RULE — enable detect-child-process
+spawn('git', ['clone', url], { shell: true });
+```
+
+### Runners Outside The Known Set
+
+**Why**: The command-runner is matched by name.
+
+```typescript
+// ❌ NOT DETECTED — until added to extraCommandRunners
+shellRunner.run(`git clone ${url}`);
+```
+
+## Further Reading
+
+- [CWE-77: Improper Neutralization of Special Elements used in a Command](https://cwe.mitre.org/data/definitions/77.html)
+- [OWASP: OS Command Injection Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [execa: `execaCommand` escaping caveats](https://github.com/sindresorhus/execa)
+- [Node.js `child_process` documentation](https://nodejs.org/api/child_process.html)
